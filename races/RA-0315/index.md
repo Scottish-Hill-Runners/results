@@ -9,4 +9,4 @@ web: www.lochaberac.co.uk
 ---
 [![](http://scottishhillracing.co.uk/Graphics/Ads/NevisCycles-banner.jpg "Nevis Cycles, Fort William")](http://www.neviscycles.com)
 
-Contact: [Ben Thompson](http://www.scottishhillracing.co.uk/RunnerDetails.aspx?RunnerID=R9508) on Tel: 07833 687278 or ben@neviscycles.com
+Contact: Ben Thompson on Tel: 07833 687278 or ben@neviscycles.com

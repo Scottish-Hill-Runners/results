@@ -7,7 +7,7 @@ record: Mark Kinch, 0:41:32 (1995)
 femaleRecord: Sarah Rowell, 0:51:16 (1995)
 web: fellrunner.org.uk/races.php?id=1800
 ---
-\* Not in Scotland, but not far across the border, and a good companion race to the [Three Shires](http://www.scottishhillracing.co.uk/RaceDetails.aspx?RaceID=RA-0260) to make a weekend of it.
+\* Not in Scotland, but not far across the border, and a good companion race to the [Three Shires](http://www.scottishhillracing.co.uk//RA-0260) to make a weekend of it.
 
 The race is more or less an out and back, following the final descent of the Borrowdale Fell Race, and starting in the games field for Borrowdale Shepherds Meet.
 

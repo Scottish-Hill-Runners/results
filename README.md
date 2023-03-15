@@ -17,6 +17,8 @@ If the race is held twice in the same year, add a suffix to distinguish them; e.
 
 In addition, a blurb about the race is expected to be found in an `index.md` file. This must start with some required information about the race (`title`, `venue`, `distance`, `climb`), and other optional fields. The file uses CommonMark format (<https://spec.commonmark.org/0.30/>).
 
+The races folder currently contains sample data, extracted from Chris Upson's web site. These results are incomplete, and inaccurate in places (in particular, club membership is always for the runner's latest club, rather than their club on the day of the race). These results need to be updated from the official SHR archives.
+
 ## Club information
 
 Club information is yet to be added. It will likely take the form of a directory `clubs` containing a file for each "interesting" club (e.g. having a web site or other

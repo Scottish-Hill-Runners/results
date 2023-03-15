@@ -11,6 +11,6 @@ web: carnethy.com/glamaig
 
 [Entry Lists](https://www.sientries.co.uk/list.php?event_id=5509 "Click here to view the entry list")
 
-[Mark Rigby](http://www.scottishhillracing.co.uk/RunnerDetails.aspx?RunnerID=R3640) held the 'unbeatable' Glamaig record for 15 years from 1997 to 2012 with a time of 44:41. Finlay Wild has now twice run faster.
+Mark Rigby held the 'unbeatable' Glamaig record for 15 years from 1997 to 2012 with a time of 44:41. Finlay Wild has now twice run faster.
 
 The descent is probably the roughest of any hill race in Scotland.

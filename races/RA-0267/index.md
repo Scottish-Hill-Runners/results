@@ -9,7 +9,7 @@ web: www.killinoutdoor.co.uk/tarmachan_hill_race.html
 ---
 [![](http://scottishhillracing.co.uk/Graphics/Ads/Killin-sidebar.jpg "Killin Outdoor Centre")](http://www.killinoutdoor.co.uk/)
 
-The route is the same as [Killin Highland Games](http://www.scottishhillracing.co.uk/RaceDetails.aspx?RaceID=RA-0221) held first Wednesday in August.
+The route is the same as [Killin Highland Games](http://www.scottishhillracing.co.uk//RA-0221) held first Wednesday in August.
 
 Entry fee £5
 
@@ -17,4 +17,4 @@ A short race with a bit of everything. The route is well marked. From the playin
 
 The 2nd race of the LochTayside weekend .Registration at the Maclaren hall, Killin 9.30am to 10.30 am. The race starts in the park behind the Maclaren hall.
 
-Race organiser details are the same as for [Meall nan Tarmachan](http://www.scottishhillracing.co.uk/RaceDetails.aspx?RaceID=RA-0246)
+Race organiser details are the same as for [Meall nan Tarmachan](http://www.scottishhillracing.co.uk//RA-0246)

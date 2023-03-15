@@ -16,7 +16,7 @@ Results: [2008](http://www.bofra.co.uk/AlvaResults2008.php) | [2007](http://www.
 [Kenny Stuart - King of the Mountains](http://www.mudsweatandtears.co.uk/2009/08/27/kenny-stuart-king-of-the-mountains/)
 
 **Kenny Stuart**  
-The record for Alva dates back to 1981, and is held by the legendary Kenny Stuart of Keswick AC. Kenny still holds the records for [Ben Nevis](RaceDetails.aspx?RaceID=RA-0098) (1984), Skiddaw (1984) and [Snowdon](http://snowdonrace.com/saesneg/index_saesneg_yras_recordiau_dynion.htm) (1985), as well as the super-long [Ennerdale Horseshoe](http://www.richardeastman.co.uk/cfra/page.php?page=calendar) (1985) and shorter races like [Eildons](RaceDetails.aspx?RaceID=RA-0065), Latrigg, Lingmell and Wansfell (all 1984).
+The record for Alva dates back to 1981, and is held by the legendary Kenny Stuart of Keswick AC. Kenny still holds the records for [Ben Nevis](/RA-0098) (1984), Skiddaw (1984) and [Snowdon](http://snowdonrace.com/saesneg/index_saesneg_yras_recordiau_dynion.htm) (1985), as well as the super-long [Ennerdale Horseshoe](http://www.richardeastman.co.uk/cfra/page.php?page=calendar) (1985) and shorter races like [Eildons](/RA-0065), Latrigg, Lingmell and Wansfell (all 1984).
 
 Kenny's road race personal bests:
 

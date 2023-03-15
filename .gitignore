@@ -4,6 +4,8 @@ node_modules
 /lib
 /src/routes/RA*
 /src/routes/races
+/src/routes/+layout.js
+/src/routes/+layout.js.map
 /.svelte-kit
 /package
 .env

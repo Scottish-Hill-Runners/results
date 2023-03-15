@@ -17,7 +17,7 @@ Sponsored by [**Fyne Ales**](http://www.fyneales.com/)
 
 This race was created in 1987 by Andy Dytch and Bobby Shields. In 1988 it was used as a Scottish Championship race - where Alan Farningham (who had already won the championship) climbed The Cobbler at the end by mistake, instead of Beinn Narnain. In 1989 it was used as a British Championship race in very bad weather. The terrain is steep, wild and rough with complex navigation in places.
 
-The race was run in 1990, 1991 and finally 1992 - won by [Colin Valentine](http://www.scottishhillracing.co.uk/RunnerDetails.aspx?RunnerID=R2765) on a shortened course due to bad weather - before being abandoned for 15 years.
+The race was run in 1990, 1991 and finally 1992 - won by Colin Valentine on a shortened course due to bad weather - before being abandoned for 15 years.
 
 The race was resurrected in 2007 by Westerlands CCC.
 
