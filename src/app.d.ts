@@ -7,6 +7,19 @@ declare global {
 		// interface PageData {}
 		// interface Platform {}
 	}
+
+	interface Result {
+		raceId: string,
+		year: string,
+		position: number,
+		surname: string,
+		forename: string,
+		club: string,
+		category: string,
+		time: string
+  	}
+  
+	type FrontMatter = { [key: string]: any }
 }
 
 export {};

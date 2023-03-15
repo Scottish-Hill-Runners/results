@@ -1,0 +1,114 @@
+RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
+1,Alexander,Sam,Westerlands,M,1:10:43
+2,Richmond,Kenny,Shettleston Harriers,M40,1:12:22
+3,Sutherland,Mark,Westerlands,M,1:13:18
+4,Chepelin,Oleg,HBT,M,1:14:06
+5,Feltbower,Steve,Ochil Hill Runners,M,1:15:27
+6,Cope,David,Howgill Harriers,M,1:16:06
+7,Bellamy,Gwyn,Westerlands,M,1:16:35
+8,Braby,Liam,Carnethy,M,1:17:11
+9,Johnston,Fergus,Carnethy,M,1:17:39
+10,Harris,Mark,Fife AC,M40,1:18:01
+11,Callan,Thomas,Westerlands,M,1:19:52
+12,Mackie,Peter,Shettleston Harriers,M,1:20:06
+13,Smith,Alan,Deeside Runners,M50,1:20:31
+14,Cooper,David,Unattached,M,1:20:48
+15,Macdonald,Steve,Lochaber AC,M,1:21:09
+16,Henry,Peter,Deeside Runners,M,1:21:50
+17,Anderson,Adam,Hartfell HRC,M40,1:24:32
+18,Monk,Stephen,Lochaber AC,M,1:25:43
+19,Macmillan,Gavin,Lochaber AC,M,1:26:11
+20,Munro,Graham,Lochaber AC,M40,1:26:46
+21,Barton,Neill,Dark Peak,M,1:26:57
+22,Upson,Chris,Westerlands,M50,1:27:13
+23,Sanderson,Stuart,Penicuik Harriers,M50,1:27:40
+24,Whitelaw,Mark,Hartfell HRC,M40,1:28:38
+25,Kennedy,Ali,Lochaber AC,M50,1:28:52
+26,Campbell,Chris,Carnethy,M,1:30:05
+27,Gray,Euan,Lochaber AC,M,1:30:34
+28,Archer,Steve,Ochil Hill Runners,M40,1:30:38
+29,MacKinnon,Barrie,Lochaber AC,M,1:31:14
+30,Houston,Val,Westerlands,F50,1:31:37
+31,O`Neill,Owen,Westerlands,M,1:32:19
+32,Hardie,James,Carnethy,M,1:32:31
+33,Hale,Gordon,Unattached,M,1:32:56
+34,Scott,Rory,Fife AC,M,1:32:58
+35,Walsh,David,Dunoon Hill Runners,M40,1:33:02
+36,Leslie,Kerstin,Annan & District AC,F,1:33:16
+37,Smith,Bruce,Carnethy,M50,1:33:24
+38,Blackhall,Keith,Lochaber AC,M40,1:33:33
+39,Duncan,Eric,Highland Hill Runners,M40,1:33:37
+40,Heggie,Alastair,Carnethy,M,1:33:49
+41,Price,Aron,Westerlands,M,1:34:06
+42,Maclean,Robert,Lochaber AC,M40,1:34:09
+43,Wheeler,Mark,Hamilton Harriers,M,1:34:50
+44,Galloway,Mike,Dundee Hawkhill,M50,1:34:55
+45,Blackhall,Amanda,Lochaber AC,F40,1:35:01
+46,MacEwan,John,Ochil Hill Runners,M40,1:36:00
+47,Davidson,Gregor,Lochaber AC,M,1:36:01
+48,Lynch,Mike,Carnethy,M40,1:36:34
+49,Weir,Jonathan,Unattached,M,1:36:55
+50,Cruickshanks,Ross,Shettleston Harriers,M,1:37:00
+51,Ritchie,Hilary,Fife AC,F50,1:37:02
+52,Brooks,Mike,Penicuik Harriers,M50,1:37:40
+53,Roberts,Clive,Fife AC,M50,1:37:44
+54,Stewart,Andrew,Unattached,M,1:37:58
+55,Peters,Steven,Dundee Road Runners,M,1:39:16
+56,Leitch,John,North Ayrshire AC,M,1:39:39
+57,Wilson,Colin,Lomond Hill Runners,M50,1:39:52
+58,Twigg,Martin,HBT,M40,1:39:53
+59,Fox,Simon,Fife AC,M50,1:42:05
+60,Connor,Julia,Unattached,F40,1:42:09
+61,Brennan,Brian,Westerlands,M60,1:42:19
+62,Bowman,Angus,Lomond Hill Runners,M50,1:42:56
+63,Wilson,Joan,Lomond Hill Runners,F50,1:43:56
+64,Thompson,Kevin,Unattached,M40,1:43:58
+65,Hughes,Nick,Unattached,M,1:44:28
+66,Gilmour,Mairi,Westerlands,F,1:44:45
+67,Shaw,Trevor,Lochtayside,M50,1:44:55
+68,Cameron,Ross,Unattached,M40,1:44:57
+69,Scott,Tom,Fife AC,M60,1:45:00
+70,Osborn,David,Lomond Hill Runners,M50,1:45:03
+71,Edwards,Colin,Ochil Hill Runners,M40,1:45:22
+72,Holdham,Jenna,Unattached,F,1:46:00
+73,Somerville,Elaine,Bellahouston RR,F40,1:46:10
+74,Davidson,Hayley,Unattached,F,1:46:14
+75,MacDonald,Brian,Lochaber AC,M,1:46:18
+76,Street,Thomas,Kilbarchan,M40,1:46:51
+77,Blackley,Lisa,Unattached,F,1:47:30
+78,Almond,Kim,Harmeny AC,F40,1:47:39
+79,Legge,Sarah,Fife AC,F40,1:47:47
+80,Beedie,Iain,Lomond Hill Runners,M40,1:47:53
+81,Bull,Matthew,Westerlands,M,1:48:32
+82,Bellshaw,Sara,Lochaber AC,F,1:48:37
+83,Slezas,Michael,Lochaber AC,M,1:48:44
+84,McCowat,Paul,Milburn Harriers,M,1:50:56
+85,McWhinnie,Jim,Fife AC,M50,1:51:20
+86,Scott,Jocelyn,Fife AC,F60,1:52:32
+87,Simpson,Heather,Westerlands,F,1:52:33
+88,Carr,Paul,Unattached,M,1:52:34
+89,Britton,Liz,Dark Peak,F,1:52:51
+90,MacKinnon,Vikki,Lochaber AC,F,1:53:00
+91,Walker,Sean,Carnethy,M40,1:53:15
+92,Hamilton,Jim,Lochaber AC,M50,1:53:27
+93,Johnston,Stephen,Milburn Harriers,M50,1:54:34
+94,Forte,Phil,Dundee Hawkhill,M50,1:54:47
+95,Jablonski,Derek,Lomond Hill Runners,M50,1:56:01
+96,Reynolds,Colin,Carnegie Harriers,M40,1:56:08
+97,Masson,Rebecca,Lochaber AC,F,1:56:09
+98,Douglas,George,Westerlands,M50,1:56:46
+99,Macdonald,Sanders,North Highland Harriers,M,1:56:50
+100,Cooke,Leanne,Westerlands,F,2:01:30
+101,Sinclair,David,Perth Road Runners,M,2:02:12
+102,Pescod,Louise,Lochaber AC,F40,2:03:50
+103,Bowman,Jean,Lomond Hill Runners,F50,2:04:09
+104,Walsh,Stig,Lothian,M40,2:05:35
+105,Davidson,Stewart,Fife AC,M60,2:06:30
+106,Gardiner,Fiona,Lochaber AC,F40,2:06:34
+107,Fitzpatrick,Bryan,Dunoon Hill Runners,M40,2:07:42
+108,Bradley,Siobhan,Lochaber AC,F,2:08:02
+109,Cowper,Stephen,Milburn Harriers,M50,2:11:28
+110,Cameron,Cheryl,Lomond Hill Runners,F40,2:12:26
+111,Fitzpatrick,Kieron,Dunoon Hill Runners,M,2:13:27
+112,Fraser,Ronald,Dundee Road Runners,M50,2:19:04
+113,MacMaster,Nicola,Lochaber AC,F,2:39:22

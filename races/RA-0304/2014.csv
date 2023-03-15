@@ -1,0 +1,87 @@
+RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
+1,Symonds,Joe,Shettleston Harriers,M,0:36:21
+2,Normand,Andrew,Carnethy,M,0:38:00
+3,Sullivan,Matthew,Shettleston Harriers,M,0:38:18
+4,Eiser,Dave,Ochil Hill Runners,M,0:38:34
+5,Halsall,Steve,Keswick AC,M,0:38:41
+6,Ewen,Alastair,Bellahouston RR,M40,0:38:49
+7,Foster,George,Keswick AC,M,0:39:09
+8,Stewart,Gregor,Westerlands,M,0:39:13
+9,Bellamy,Gwyn,Westerlands,M,0:39:34
+10,Gilmore,Iain,Carnethy,M,0:40:03
+11,O`Neill,Owen,Westerlands,M,0:40:10
+12,Winter,Stephen,Shettleston Harriers,M,0:40:24
+13,Stewart,Iain,Westerlands,M,0:40:52
+14,Callender,James,Westerlands,M,0:42:20
+15,Mackie,Peter,Shettleston Harriers,M,0:42:21
+16,Williams,Phil,Central AC,M40,0:42:24
+17,White,David,Kilmarnock Harriers,M40,0:42:48
+18,Arnott,Luke,Westerlands,M40,0:43:05
+19,Glencorse,Colin,Kilmarnock Harriers,M40,0:43:06
+20,Gilmore,Neil,Carnethy,M50,0:43:28
+21,Baxter,Grant,Ochil Hill Runners,M40,0:43:42
+22,Greenhalgh,Chris,Giffnock North,M40,0:44:48
+23,Gilmore,Andrew,Highland Hill Runners,M,0:44:49
+24,Gardner,Simon,Westerlands,M,0:45:00
+25,Brown,Gareth,North Ayrshire AC,M,0:45:21
+26,Coombs,Richard,Ochil Hill Runners,M40,0:45:35
+27,Ritchie,John,Helensburgh AAC,M,0:45:40
+28,Saltums,Arnis,Westerlands,M,0:45:48
+29,Smith,Gavin,HBT,M,0:46:10
+30,Cowper,Stephen,Milburn Harriers,M40,0:46:23
+31,Clements,Gordon,Bellahouston RR,M40,0:46:55
+32,Robinson,Madeline,Helensburgh AAC,F,0:46:57
+33,Cowan,David,Fife AC,M50,0:47:09
+34,Houston,Val,Westerlands,F50,0:47:25
+35,Gorgas,Steffen,Westerlands,M40,0:47:58
+36,MacDonald,Grant,Garscube Harriers,M,0:47:59
+37,Underwood,Matt,Fusion Triathlon,M,0:48:09
+38,Brown,Jamie,HBT,M,0:48:12
+39,Cunningham,Lindsay,Milburn Harriers,M40,0:48:23
+40,MacLeod,Murdo,Westerlands,M60,0:48:39
+41,Finlay,Alayne,Ochil Hill Runners,F,0:49:11
+42,McCaffrey,Gordon,Westerlands,M50,0:49:30
+43,Dickson,David,Westerlands,M50,0:49:54
+44,Hetherington,Michelle,Carnethy,F40,0:50:06
+45,Wheeler,Mark,Hamilton Harriers,M,0:50:15
+46,Brodie,Stuart,Ochil Hill Runners,M,0:50:24
+47,Watkinson,Bob,Ochil Hill Runners,M50,0:50:44
+48,Fitzpatrick,Pat,Ochil Hill Runners,M60,0:50:52
+49,Pugh,Roderick,Kilmarnock Harriers,M50,0:51:18
+50,Kelsall,Fiona,Ochil Hill Runners,F40,0:51:50
+51,Walker,Sarah,Westerlands,F,0:52:03
+52,Sheridan,Bob,Deeside Runners,M40,0:52:10
+53,Fleming,Rod,Westerlands,M,0:53:07
+54,Munro,Frazer,Helensburgh AAC,M40,0:53:30
+55,Gardiner,Paula,Westerlands,F40,0:53:36
+56,Duncan,David,Ochil Hill Runners,M50,0:53:58
+57,McLaughlin,John,Garscube Harriers,M40,0:54:06
+58,Lymburn,Eric,Unattached,M50,0:54:08
+59,Gilligan,Steven,Westerlands,M,0:54:10
+60,Johnston,Stephen,Milburn Harriers,M50,0:54:12
+61,Mahoney,Lorna,Westerlands,F40,0:54:30
+62,Semple,Hamilton,Westerlands,M60,0:54:58
+63,Hamer,John,Westerlands,M50,0:55:33
+64,McKeown,Stephen,Milburn Harriers,M40,0:56:31
+65,Bulloch,Gordon,Westerlands,M,0:57:01
+66,Weir,Jonathan,Unattached,M,0:57:09
+67,Bowie,Tom,Unattached,M60,0:57:15
+68,Douglas,George,Westerlands,M40,0:58:01
+69,Shields,Robert,Milburn Harriers,M60,0:58:10
+70,Evans,Ros,Westerlands,F60,0:58:15
+71,MacPherson,Helen,Westerlands,F50,0:58:21
+72,Evans,Malcolm,Westerlands,M60,0:59:05
+73,Runner,Unknown,Unattached,F,0:59:10
+74,Provan,Jamie,Westerlands,M,1:01:30
+75,Blackley,Lisa,Unattached,F,1:01:33
+76,King,Alex,Ochil Hill Runners,M50,1:03:39
+77,Dunn,Michael,Strathaven Striders,M50,1:04:10
+78,Buchanan,Dawn,Westerlands,F40,1:05:12
+79,Hutchinson,Fiona,Westerlands,F60,1:10:48
+80,Porteous,Colin,Westerlands,M60,1:10:55
+81,Sloan,Liz,Deeside Runners,F40,1:11:15
+82,McLaughlin,Kieran,Garscube Harriers,M,1:15:20
+83,McLaughlin,Pat,Westerlands,F60,1:17:32
+84,McManus,Ian,Irvine RC,M70,1:25:32
+85,Taylor,Sharon,Westerlands,F50,1:25:57
+86,Benny,Graham,Westerlands,M60,1:26:10

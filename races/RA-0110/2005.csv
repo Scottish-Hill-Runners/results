@@ -1,0 +1,106 @@
+RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
+1,Watson,Cameron,Lomond Hill Runners,M,0:51:32
+2,Naylor,Donald,HBT,M,0:52:42
+3,Whitehead,Dan,Deeside Runners,M,0:54:26
+4,Cummins,Dave,Highland Hill Runners,M,0:54:27
+5,Blake,Henry,Highland Hill Runners,M,0:54:32
+6,Crowe,Des,Penicuik Harriers,M40,0:55:14
+7,Hepburn,John,Lochaber AC,M40,0:55:15
+8,Keith,Alec,Inverness Harriers,M,0:55:34
+9,Mudge,Angela,Carnethy,F,0:55:48
+10,McDonald,Dennis,Cosmics,M40,0:57:57
+11,Williamson,Jason,Cosmics,M,0:58:07
+12,Simpson,Stuart,Stornoway AC,M,0:58:18
+13,Fallon,Steven,Carnethy,M40,0:58:31
+14,Paterson,Ewan,Highland Hill Runners,M50,0:59:00
+15,Pottinger,Adrian,Highland Hill Runners,M,0:59:31
+16,Stevenson,John,Ochil Hill Runners,M40,0:59:50
+17,Williams,Francis,INVOC,M,0:59:59
+18,Thin,Jamie,HBT,M,1:00:25
+19,Hirst,David,Deeside Runners,M40,1:00:58
+20,Simpson,Geoff,HBT,M40,1:01:03
+21,Ritchie,Paul,Carnethy,M,1:01:05
+22,Rathjen,Jon,HBT,M,1:01:08
+23,Speight,Neil,Highland Hill Runners,M,1:01:35
+24,Cairns,George,Lochaber AC,M,1:01:50
+25,Anderson,Laurie,Lomond Hill Runners,M40,1:01:05
+26,Love,Craig,Dundee Hawkhill,M,1:02:59
+27,Stewart,Gordon,Highland Hill Runners,M40,1:03:00
+28,Arnott,Neil,Carnegie Harriers,M,1:03:08
+29,MacBeath,Niall,Lochaber AC,M,1:03:13
+30,Gorgas,Steffen,Westerlands,M,1:03:14
+31,Robertson,Keith,Cosmics,M,1:03:18
+32,Wells,Steve,Highland Hill Runners,M40,1:03:40
+33,Blair-Fish,John,Carnethy,M50,1:03:51
+34,Bass,Owen,Solway,M40,1:04:05
+35,Cant,Stephen,Lochaber AC,M,1:04:12
+36,Fraser,Swaz,Westerlands,M,1:04:48
+37,Miles,Gavin,Deeside Runners,M,1:06:37
+38,Blackwood,Ian,Unattached,M,1:05:12
+39,McFarlane,Paul,Greenock Glenpark Harriers,M,1:05:12
+40,Bannerman,Ross,East Sutherland,M,1:05:31
+41,Boa,William,Lochaber AC,M,1:05:52
+42,Pryde,Gordon,Lomond Hill Runners,M40,1:06:16
+43,Borrowman,Paul,HIMBA,M,1:06:20
+44,Mclean,Martin,Unattached,M40,1:06:28
+45,Waterhouse,Bob,Carnethy,M50,1:06:32
+46,James,Mick,Carnethy,M,1:07:10
+47,Donnelly,John,Westerlands,M40,1:07:36
+48,Summers,K,Unattached,M40,1:07:42
+49,MacMahon,Ken,Westerlands,M,1:07:46
+50,Macnab,Graham,Lochaber AC,M40,1:07:53
+51,Irvine,Hamish,Highland Hill Runners,M40,1:07:58
+52,Holliday,Kevin,Cosmics,M,1:08:05
+53,Miller,Alice,Unattached,F,1:08:12
+54,Balfour,Eddie,Moorfoot Runners,M40,1:08:28
+55,Irvine,Gill,Highland Hill Runners,F40,1:09:35
+56,Burns,Keith,Carnethy,M50,1:09:36
+57,Larmour,Colin,Cosmics,M40,1:09:45
+58,Preece,Ben,Deeside Runners,M50,1:09:50
+59,Diver,Michael,Clydesdale Harriers,M,1:10:02
+60,McNulty,Ian,Dundee Hawkhill,M,1:10:32
+61,Sinclair,Cathy,Fife AC,F40,1:10:39
+62,Wolly,Mark,Highland Hill Runners,M50,1:12:04
+63,Love,Charlie,Dundee Hawkhill,M50,1:12:07
+64,Larkin,Peter,Cosmics,M40,1:12:38
+65,Shaw,Lyndsey,Lochaber AC,F,1:13:05
+66,Carline,Ashley,Unattached,M,1:13:22
+67,Powell,Karen,Carnethy,F,1:13:41
+68,Burt,Louise,Fife AC,F40,1:13:42
+69,MacLean,Sandra,Unattached,F,1:13:48
+70,Wilson,Ian,Cosmics,M,1:14:11
+71,Noble,Lois,Cosmics,F40,1:14:13
+72,Taylor,Colin,Cosmics,M40,1:14:24
+73,Jones,Graham,Unattached,M,1:14:34
+74,Kirkwood,Gilly,Unattached,F40,1:14:42
+75,Bowman,Angus,Lomond Hill Runners,M40,1:14:44
+76,Cowie,Gordon,Moray Road Runners,M50,1:14:48
+77,Heyer,Dagmar,Inverness Harriers,F,1:15:03
+78,Brennan,Brian,Westerlands,M50,1:15:40
+79,Jones,Russell,Unattached,M50,1:15:46
+80,Dunn,John,Rannoch,M40,1:15:47
+81,Graham,Alan,Cosmics,M50,1:16:11
+82,Farrar,Shelley,Unattached,F40,1:16:37
+83,O`Sullivan,Sean,Deeside Runners,M,1:16:42
+84,Gatehouse,Richard,Lomond Hill Runners,M50,1:16:52
+85,Provan,Louise,Fife AC,F,1:18:03
+86,Rathjen,Sandra,HBT,F,1:18:17
+87,Drury,Chris,Keith & District AAC,M40,1:18:31
+88,Wright,Nicki,Unattached,F40,1:19:01
+89,Cromar,Steve,Dundee Hawkhill,M50,1:19:19
+90,Stapley,Tony,Portobello,M60,1:19:56
+91,Nimmo,Anne,Carnethy,F50,1:20:12
+92,McIvor,Mandy,Inverness Harriers,F40,1:21:07
+93,Diffey,John,Cairngorm Runners,M50,1:21:32
+94,Gow,Elizabeth,Lochaber AC,F,1:21:41
+95,Stewart,Elaine,Cosmics,F40,1:22:03
+96,Dougan,John,Lochaber AC,M50,1:22:06
+97,Cowie,Lyn,Moray Road Runners,F50,1:22:09
+98,Lowes,Hayley,Forres Harriers,F,1:22:12
+99,Ness,Joanna,Lochaber AC,F40,1:23:03
+100,Bannerman,Roxy,East Sutherland,F,1:24:49
+101,Thin,Joanne,Carnethy,F,1:25:03
+102,Munro,Eleanor,Keith & District AAC,F,1:25:14
+103,Piper,Claire,Highland Hill Runners,F,1:30:25
+104,Kirkwood,Susan,Unattached,F,1:30:37
+105,Bowman,Jean,Lomond Hill Runners,F40,1:37:03

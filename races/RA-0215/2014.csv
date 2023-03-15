@@ -1,0 +1,88 @@
+RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
+1,Gristwood,Graham,Ochil Hill Runners,M,3:10:41
+2,Anthony,Alasdair,Ochil Hill Runners,M,3:21:43
+3,Gay,Dan,HBT,M,3:22:34
+4,Richmond,Kenny,Shettleston Harriers,M40,3:24:31
+5,Harris,Mark,Fife AC,M40,3:28:54
+6,Smith,Tom,Lochaber AC,M40,3:31:02
+7,Paris,Jasmin,Carnethy,F,3:37:17
+8,Normand,Andrew,Carnethy,M,3:37:24
+9,Naylor,Donald,HBT,M40,3:38:24
+10,Eiser,Dave,Ochil Hill Runners,M,3:39:55
+11,Cummins,Dave,Highland Hill Runners,M40,3:41:16
+12,Topalian,Stanley,Westerlands,M,3:42:42
+13,Winter,Stephen,Shettleston Harriers,M,3:47:25
+14,Mackie,Peter,Shettleston Harriers,M,3:47:36
+15,Bannerman,Ross,East Sutherland,M40,3:47:44
+16,Patton,Simon,Dark Peak,M40,3:51:29
+17,Lennox,Gordon,Inverness Harriers,M,3:53:34
+18,Smith,Alan,Deeside Runners,M50,3:53:41
+19,Riach,David,Westerlands,M40,3:54:43
+20,Gay,Jon,Lochaber AC,M40,3:56:52
+21,Gristwood,Fanni,Ochil Hill Runners,F,4:00:52
+22,Provan,Stephanie,Deeside Runners,F,4:01:59
+23,Mackenzie,Donald,Lomond Hill Runners,M40,4:03:08
+24,Reid,Michael,Carnethy,M,4:05:09
+25,White,David,Kilmarnock Harriers,M40,4:05:54
+26,Boyd,Nicol,Unattached,M,4:06:22
+27,Knox,Jonny,Anster Haddies,M40,4:06:54
+28,Baum,Diane,Lochaber AC,F,4:08:57
+29,Paterson,Robbie,Moray Road Runners,M,4:09:52
+30,Murray,Keith,Teviotdale Harriers,M50,4:11:49
+31,Weir,David,Forres Harriers,M50,4:12:09
+32,Cox,Andrew,Moorfoot Runners,M,4:13:14
+33,Bain,Andy,Deeside Runners,M40,4:13:55
+34,Watson,Dan,Lochtayside,M40,4:14:50
+35,Connaghan,John,Shettleston Harriers,M40,4:17:19
+36,Darling,Christopher,Lomond Hill Runners,M,4:17:35
+37,Arnott,Luke,Westerlands,M40,4:17:47
+38,MacDonald,Iain,Forres Harriers,M40,4:22:06
+39,Wilson,Stewart,Highland Hill Runners,M40,4:22:25
+40,Kerridge,Donald,Deeside Runners,M40,4:25:47
+41,Malcolm,John,Carnethy,M,4:31:57
+42,Gilmore,Neil,Carnethy,M50,4:32:21
+43,Bird,Sharon,Carnethy,F,4:32:46
+44,Rogers,David,Westerlands,M50,4:34:55
+45,McVey,Alex,Carnethy,M,4:35:50
+46,Pugh,Roderick,Kilmarnock Harriers,M50,4:37:31
+47,Braby,Liam,Carnethy,M,4:40:49
+48,Oldham,Veronique,Cosmics,F40,4:41:03
+49,Cowan,David,Fife AC,M50,4:45:12
+50,Payne,Lina,Deeside Runners,F40,4:45:19
+51,Hartree,Mark,Carnethy,M40,4:45:56
+52,McClelland,Morag,HBT,F,4:50:07
+53,Moffat,John,Highland Hill Runners,M50,4:50:52
+54,Clark,David,Cosmics,M40,4:51:01
+55,Houston,Val,Westerlands,F50,4:52:07
+56,Bryan-Jones,Kirsty,Dark Peak,F40,4:53:44
+57,Brooks,Mike,Penicuik Harriers,M40,4:55:18
+58,Love,Craig,Dundee Hawkhill,M40,4:56:11
+59,McCaffrey,Gordon,Westerlands,M60,4:56:37
+60,Hannah,Andrew,Unattached,M40,4:57:40
+61,Duncan,David,Ochil Hill Runners,M50,4:58:54
+62,Quigley,James,Unattached,M,5:00:45
+63,Renville,Alan,Carnethy,M40,5:03:14
+64,MacLeod,Murdo,Westerlands,M60,5:07:17
+65,Turner,Dave,Lomond Hill Runners,M40,5:08:51
+66,Kelly,Graham,Westerlands,M40,5:11:51
+67,Mitchell,Dave,Dundee Hawkhill,M50,5:12:34
+68,Donnelly,John,Westerlands,M50,5:15:37
+69,Allison,Bob,Fife AC,M50,5:16:12
+70,Worsley,Steven,Inverness Harriers,M50,5:18:22
+71,Douglas,Andrew,Deeside Runners,M40,5:22:22
+72,Fisher,Catriona,Westerlands,F,5:24:11
+73,Ingram,Richard,Cosmics,M40,5:24:18
+74,Nicoll,Grahame,Tayside Orienteers,M50,5:25:34
+75,Brunton,Val,Westerlands,F40,5:27:17
+76,Nash,Simon,Ochil Hill Runners,M50,5:31:25
+77,Wise,Helen,Carnethy,F,5:32:07
+78,Smith,Linda,Moray Road Runners,F50,5:32:28
+79,Bryan-Jones,Gareth,Ochil Hill Runners,M70,5:34:48
+80,Chen,Chee Kong,Metro Aberdeen,M,5:44:42
+81,Beedie,Iain,Lomond Hill Runners,M40,5:47:41
+82,Blackley,Lisa,Unattached,F,5:56:18
+83,Kerridge,Jane,Deeside Runners,F60,5:56:18
+84,Hamer,John,Westerlands,M50,5:58:37
+85,Stewart,Elaine,Cosmics,F50,5:58:42
+86,Andrews,Guy,Unattached,M40,6:09:43
+87,Houette,Olivier,Unattached,M40,6:11:20

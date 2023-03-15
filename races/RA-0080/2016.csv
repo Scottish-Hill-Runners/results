@@ -1,0 +1,109 @@
+RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
+1,Symonds,Joe,Shettleston Harriers,M,0:51:29
+2,Strain,Murray,HBT,M,0:51:35
+3,Waldie,James,HBT,M,0:51:54
+4,Martyn,Tom,HBT,M,0:52:02
+5,Alexander,Sam,Westerlands,M,0:52:15
+6,Naylor,Donald,HBT,M40,0:53:03
+7,Tullie,Douglas,HBT,M,0:53:10
+8,Richmond,Kenny,Shettleston Harriers,M40,0:54:26
+9,Halsall,Steve,Keswick AC,M,0:54:30
+10,Feltbower,Steve,Ochil Hill Runners,M,0:55:18
+11,Johnston,Mark,Carnethy,M40,0:57:07
+12,Callan,Thomas,Westerlands,M,0:57:12
+13,Wiseman,Bob,Ochil Hill Runners,M,0:57:26
+14,Johnston,Fergus,Carnethy,M,0:58:19
+15,Hensman,Will,Central AC,M,0:58:57
+16,Knox,Jonny,Anster Haddies,M50,0:59:09
+17,Reeve,Andrew,HBT,M,0:59:13
+18,Mackie,Peter,Shettleston Harriers,M,0:59:37
+19,Wallace,David,Ochil Hill Runners,M40,0:59:40
+20,Winter,Stephen,Shettleston Harriers,M40,0:59:59
+21,Theaker,Damien,Westerlands,M50,1:00:52
+22,Gristwood,Fanni,Ochil Hill Runners,F,1:01:32
+23,Harris,Tom,Fife AC,M,1:01:43
+24,Robinson,Madeline,Helensburgh AAC,F,1:01:48
+25,Walsh,Chris,HBT,M,1:01:54
+26,Callender,James,Westerlands,M,1:02:03
+27,McGregor,Colin,Braes o'Fife Mountaineering Club,M40,1:02:11
+28,Tulloch,Oliver,St Albans Striders,M,1:03:04
+29,Freshwater,Craig,HBT,M,1:03:15
+30,Marshall,Brian,HELP,M40,1:03:44
+31,Stewart,Munro,Dundee Hawkhill,M,1:03:57
+32,Brown,Gareth,North Ayrshire AC,M,1:04:28
+33,Warnock,Robert,Wee County Harriers,M50,1:05:34
+34,Baugh,Mark,Ochil Hill Runners,M40,1:05:39
+35,Henderson,Walter,Shettleston Harriers,M40,1:05:51
+36,O`Neill,Owen,Westerlands,M,1:06:05
+37,Willox,Gage,Glasgow Uni H&H,M,1:06:07
+38,Simpson,Peter,Carnegie Harriers,M50,1:06:12
+39,Wilson,Rob,Penicuik Harriers,M40,1:07:08
+40,Upson,Chris,Westerlands,M50,1:07:42
+41,Buchanan,Catriona,Ochil Hill Runners,F,1:07:58
+42,Strachan,Scott,Kinross Road Runners,M40,1:08:34
+43,McLure,Neil,Carnegie Harriers,M40,1:08:40
+44,Price,Aron,Westerlands,M,1:08:58
+45,Buchanan,Hugh,Central AC,M50,1:09:18
+46,Duffy,John,Shettleston Harriers,M50,1:09:48
+47,McKiddie,Christopher,Westerlands,M,1:09:53
+48,Cowan,David,Fife AC,M50,1:09:54
+49,McCaffrey,Gordon,Westerlands,M50,1:10:04
+50,Black,Ali,Carnethy,M,1:10:11
+51,Ashworth,James,Ochil Hill Runners,M,1:10:31
+52,Dickson,David,Westerlands,M50,1:10:45
+53,McCallum,Alasdair,Norham RC,M50,1:10:56
+54,Sword,Lawrence,Unattached,M40,1:10:59
+55,Kelly,Graham,Westerlands,M40,1:11:47
+56,McCulloch,Angus,Kinross Road Runners,M40,1:11:59
+57,Hetherington,Michelle,Carnethy,F50,1:12:02
+58,Affleck,Zander,Glasgow Uni H&H,M,1:12:25
+59,Cairns,Gillian,Penicuik Harriers,F,1:12:53
+60,Boyer,Alistair,Westerlands,M,1:13:30
+61,Evenden,Raymond,Unattached,M40,1:13:34
+62,Edward,Iain,Lomond Hill Runners,M,1:13:36
+63,Nisbet,Stephen,North Ayrshire AC,M,1:13:52
+64,Edwards,Colin,Ochil Hill Runners,M40,1:13:55
+65,Adin,Aritz,Westerlands,M,1:14:13
+66,Atkin,David,Westerlands,M50,1:14:19
+67,MacLeod,Murdo,Westerlands,M60,1:14:27
+68,Reid,Don,Westerlands,M50,1:14:54
+69,Lomas,Paul,Unattached,M40,1:15:07
+70,Sinclair,David,Perth Road Runners,M,1:15:31
+71,Flores,Leyre,Westerlands,F,1:15:37
+72,Entwistle,Marie,Deeside Runners,F,1:15:50
+73,Millar,Jonathan,Carnegie Harriers,M,1:15:55
+74,Crane,Russell,Westerlands,M,1:15:55
+75,Eadie,Gordon,Carnethy,M50,1:16:03
+76,Bowman,Angus,Lomond Hill Runners,M50,1:16:31
+77,Pugh,Roderick,Kilmarnock Harriers,M60,1:17:00
+78,Mitchell,Neill,Fife AC,M40,1:17:07
+79,Johnston,Stephen,Milburn Harriers,M50,1:17:16
+80,Gilmour,Mairi,Westerlands,F,1:17:33
+81,Osborn,David,Lomond Hill Runners,M50,1:18:03
+82,Comrie,Fiona,North Ayrshire AC,F40,1:18:04
+83,Schreiber,Jo,Girvan Harriers,F50,1:18:11
+84,Fish,Derek,Carnegie Harriers,M40,1:18:21
+85,Brennan,Brian,Westerlands,M60,1:18:49
+86,Brotherston,Chris,Bellahouston RR,M,1:18:59
+87,Gall,Allan,Central AC,M,1:18:59
+88,McInroy,Ross,Helensburgh AAC,M60,1:19:05
+89,Menhennet,Christine,Westerlands,F50,1:19:11
+90,Midgley,Peter,Westerlands,M50,1:20:35
+91,Dehn,Yvonne,Anster Haddies,M,1:21:01
+92,Blackley,Lisa,Unattached,F,1:21:10
+93,Hunter,Lynn,Kinross Road Runners,F40,1:21:34
+94,Mathieson,Shelley,Unattached,F,1:22:14
+95,Wilson,Andrea,Penicuik Harriers,F40,1:22:37
+96,Caldwell,Christine,Wee County Harriers,F40,1:24:44
+97,Hunter,Findlay,Kinross Road Runners,M,1:26:10
+98,Knox,Tracy,Anster Haddies,F50,1:26:24
+99,Downie,Chris,Penicuik Harriers,M50,1:26:27
+100,Bowman,Jean,Lomond Hill Runners,F50,1:29:28
+101,Polak,Jo,Highland Hill Runners,F50,1:29:38
+102,Murdoch,Lucy,Unattached,F40,1:31:19
+103,Drysdale,David,Wee County Harriers,M,1:33:36
+104,Vigrow,Alan,Dundee Hawkhill,M50,1:34:11
+105,Hunter,Neil,Kinross Road Runners,M40,1:35:10
+106,Houston,Alison,Kinross Road Runners,F60,1:38:09
+107,Mallett,Patrick,Lomond Hill Runners,M50,1:53:30
+108,McManus,Ian,Irvine RC,M70,2:13:16

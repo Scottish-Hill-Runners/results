@@ -1,0 +1,103 @@
+RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
+1,Naylor,Donald,HBT,M40,0:18:37
+2,Faulkner,Paul,Carnethy,M40,0:18:54
+3,Whiteside,Iain,Carnethy,M,0:19:15
+4,Gilmore,Andrew,Highland Hill Runners,M,0:19:16
+5,Bellamy,Gwyn,Westerlands,M,0:19:22
+6,Galloway,Samuel,Corstorphine,M,0:19:28
+7,Waters,Chris,HBT,M,0:19:37
+8,Gilmore,Iain,Carnethy,M,0:20:36
+9,Ewen,Alastair,Bellahouston RR,M40,0:20:40
+10,Procter,Lee,Helm Hill Runners,M,0:20:44
+11,Addison,Anthony,Corstorphine,M,0:20:52
+12,Fallon,Steven,Carnethy,M50,0:20:53
+13,Cox,Andrew,Moorfoot Runners,M,0:21:06
+14,Nash,Graham,Carnethy,M40,0:21:10
+15,Baxter,Grant,Ochil Hill Runners,M40,0:21:12
+16,Gilmore,Neil,Carnethy,M50,0:21:21
+17,Thin,Jamie,HBT,M40,0:21:31
+18,Andrew,Mike,Carnethy,M50,0:21:32
+19,McAdam,Bruce,Carnethy,M,0:21:44
+20,Morgan,Charlotte,Carnethy,F,0:22:00
+21,Hardie,James,Carnethy,M,0:22:12
+22,Smith,Gavin,HBT,M,0:22:20
+23,Malcolm,John,Carnethy,M,0:22:21
+24,McVey,Alex,Carnethy,M,0:22:24
+25,Rowland,Ian,Dunbar RC,M50,0:22:28
+26,Busby,Chris,Carnethy,M,0:22:30
+27,Gardner,Simon,Westerlands,M,0:22:32
+28,Campbell,Donald,Unattached,M,0:22:45
+29,Berrill,David,Lothian,M,0:22:47
+30,Gardner,Peter,HBT,M,0:22:50
+31,Stevenson,John,Ochil Hill Runners,M50,0:23:02
+32,McKechanie,Eilis,HBT,F,0:23:07
+33,Wilson,Diane,Dromore AC,F40,0:23:14
+34,O`Neil,Sarah,HBT,F,0:23:39
+35,Robinson,Madeline,Helensburgh AAC,F,0:23:48
+36,Partridge,Colin,Lothian,M,0:23:52
+37,Mitchell,Stuart,Carnethy,M,0:24:01
+38,Brown,Jamie,HBT,M,0:24:04
+39,Davis,Duncan,Carnethy,M40,0:24:11
+40,Young,Paul,Lothian,M40,0:24:24
+41,Gibson,Fraser,Carnethy,M,0:24:34
+42,Campbell,Callum,HBT,M,0:24:36
+43,Brodie,Stuart,Ochil Hill Runners,M,0:24:40
+44,Anderson,Laurie,Lomond Hill Runners,M50,0:24:41
+45,Waterhouse,Bob,Carnethy,M60,0:24:49
+46,Mahoney,Lorna,Westerlands,F40,0:24:59
+47,Wilson,Brian,Newcastle AC,M40,0:25:01
+48,Rogers,David,Westerlands,M50,0:25:02
+49,Duncan,David,Ochil Hill Runners,M50,0:25:13
+50,Fraser,Mitchell,Edinburgh RC,M40,0:25:17
+51,MacQueen,Douglas,Carnethy,M,0:25:19
+52,Finn,Rupert,Carnethy,M40,0:25:26
+53,Shepherd,Andrew,Carnethy,M50,0:25:27
+54,Cameron,Alan,Corstorphine,M40,0:25:28
+55,Hughes,Ian,Calderglen Harriers,M40,0:25:30
+56,Hartree,Mark,Carnethy,M40,0:25:32
+57,Cameron,Gordon,Carnethy,M50,0:25:34
+58,Sword,Lawrence,Unattached,M40,0:25:51
+59,Reid,Don,Westerlands,M50,0:26:04
+60,Newman,Roslin,HBT,F,0:26:07
+61,Hetherington,Michelle,Carnethy,F50,0:26:29
+62,Shaw,Trevor,Lochtayside,M50,0:26:40
+63,Godfrey,Kevin,Lothian,M40,0:26:42
+64,Cairns,Gillian,Penicuik Harriers,F,0:26:49
+65,Bowman,Angus,Lomond Hill Runners,M50,0:27:10
+66,Moffat,Alan,Lothian,M,0:27:11
+67,Leary,Paul,Rochdale Harriers,M50,0:27:12
+68,Laverty,Steven,HBT,M,0:27:14
+69,Gibson,Willie,Carnethy,M50,0:27:34
+70,MacVarish,Christine,Lothian,F40,0:27:35
+71,Inkster,Berit,Edinburgh RC,F,0:27:39
+72,Brennan,Brian,Westerlands,M50,0:27:42
+73,Lyons,Bob,Carnethy,M50,0:27:45
+74,Duff,Bill,Falkland Trail Runners,M60,0:27:54
+75,Maass,Digby,Carnethy,M60,0:28:04
+76,Ross,Calum,Falkirk Victoria Harriers,M50,0:28:10
+77,Greens,Michael,Penicuik Harriers,M,0:28:23
+78,Gunn-Russell,Kenny,Harmeny AC,M50,0:28:24
+79,Downie,Chris,Penicuik Harriers,M50,0:28:32
+80,Wilson,Andrea,Penicuik Harriers,F40,0:29:01
+81,Mearns,Kenny,Lothian,M50,0:29:34
+82,McAlpine,Roddy,Unattached,M50,0:29:38
+83,Campbell,Ian,HBT,M40,0:29:59
+84,Forbes,Denise,Jog Scotland,F40,0:30:04
+85,Provan,Jamie,Westerlands,M,0:30:16
+86,McPherson,Hugh,Tinto Hill Runners,M60,0:30:23
+87,Howie,Brian,Carnethy,M60,0:30:36
+88,O`Brien,Paul,Corstorphine,M50,0:30:39
+89,Kemp,Sadie,Penicuik Harriers,F,0:30:42
+90,Lambie,Dougie,Unattached,M50,0:30:47
+91,Robertson,Alan,Lothian,M60,0:31:07
+92,Coltman,Alan,Teviotdale Harriers,M40,0:31:54
+93,Bowman,Jean,Lomond Hill Runners,F50,0:32:01
+94,Loffill,Elizabeth,Westerlands,F,0:32:16
+95,Ingham,Cali,Carnethy,F60,0:32:59
+96,McHarg,Andrew,Unattached,M,0:34:11
+97,Gauld,Bill,Carnethy,M80,0:34:43
+98,Fairley,Bill,Carnegie Harriers,M70,0:35:40
+99,Benny,Graham,Westerlands,M60,0:39:11
+100,McLaughlin,Pat,Westerlands,F60,0:40:04
+101,Taylor,Sharon,Westerlands,F50,0:40:13
+102,McManus,Ian,Irvine RC,M70,0:40:50

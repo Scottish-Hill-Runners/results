@@ -1,6 +1,9 @@
 .DS_Store
 node_modules
 /build
+/lib
+/src/routes/RA*
+/src/routes/races
 /.svelte-kit
 /package
 .env
@@ -8,3 +11,7 @@ node_modules
 !.env.example
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+unused.ts
+pre-build.js
+pre-build.js.map
+.vscode

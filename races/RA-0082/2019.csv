@@ -1,0 +1,91 @@
+RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
+1,Sinclair,Rob,Highland Hill Runners,M,1:56:29
+2,Owens,Tom,Shettleston Harriers,M,2:02:39
+3,Greig,Kyle,Metro Aberdeen,M,2:04:59
+4,Lennon,Eoin,Carnethy,M,2:07:54
+5,Alexander,Sam,Westerlands,M,2:13:33
+6,Newsom,John,Inverness Harriers,M,2:14:35
+7,McAlinden,Niall,Westerlands,M,2:17:19
+8,Wagner,Stefan,Cosmics,M40,2:17:49
+9,Carter,Justin,Cambuslang Harriers,M40,2:19:10
+10,Williamson,Clyde,Cosmics,M,2:21:28
+11,Campbell,Donald,Highland Hill Runners,M,2:21:57
+12,Brian,Tom,Metro Aberdeen,M,2:22:25
+13,Stephen,Jill,HBT,F,2:23:29
+14,Winter,Stephen,Shettleston Harriers,M40,2:24:44
+15,Pringle,Stuart,Deeside Runners,M40,2:28:45
+16,McDougall,Stephen,Carnethy,M,2:29:34
+17,Muir,Jonny,Carnethy,M,2:29:56
+18,Ward,Jon,Moray Road Runners,M,2:30:05
+19,Stewart,Mike,Keith & District AAC,M50,2:30:17
+20,Collins,Ted,Forres Harriers,M,2:31:26
+21,Ramsay,Lawrence,Moray Road Runners,M,2:31:39
+22,Callender,James,Westerlands,M,2:31:45
+23,Morrison,Catriona,Highland Hill Runners,F40,2:32:03
+24,Walmsley,Dan,Highland Hill Runners,M40,2:32:55
+25,Paterson,Robbie,Moray Road Runners,M,2:34:53
+26,Rogan,Paul,Moray Road Runners,M50,2:38:21
+27,Willis,Jake,Lochaber AC,M40,2:38:45
+28,Ashworth,James,Ochil Hill Runners,M40,2:38:58
+29,Mitchell,Scott,Unattached,M,2:39:58
+30,Dashper,Wayne,Moray Road Runners,M40,2:40:49
+31,Freshwater,Craig,HBT,M,2:41:53
+32,Svisdal,Odin,Unattached,M40,2:42:45
+33,Gamble,Jon,Metro Aberdeen,M,2:43:19
+34,Henderson,Walter,Shettleston Harriers,M50,2:43:21
+35,Matthews,Steve,Dundee Hawkhill,M40,2:44:00
+36,Buchan,Steve,Metro Aberdeen,M40,2:44:13
+37,Gillies,Jenny,Spey Runners,F,2:44:24
+38,Wingrove,Scuz,Cosmics,F40,2:44:35
+39,Campbell,Rachael,Highland Hill Runners,F,2:44:54
+40,Ball,Duncan,Penicuik Harriers,M50,2:45:09
+41,Oldham,Veronique,Cosmics,F50,2:46:16
+42,Macdonald,Matthew,Lochaber AC,M,2:51:56
+43,Hurst,Harry,Forres Harriers,M,2:59:59
+44,Williamson,Jason,Cosmics,M40,3:00:45
+45,Cameron,Hilary,Forres Harriers,F40,3:01:13
+46,Winn,Mike,Unattached,M40,3:02:27
+47,Inglis,Andrew,Cosmics,M,3:02:51
+48,Angus,Gerald,Keith & District AAC,M50,3:03:58
+49,Caldwell,Christine,Wee County Harriers,F40,3:04:11
+50,McFadzean,Peter,Deeside Runners,M40,3:05:06
+51,Baxter,Ros,Deeside Runners,F40,3:06:01
+52,Maclean,Robert,Lochaber AC,M50,3:09:52
+53,Younie,Shane,Unattached,M,3:10:39
+54,Smith,Lynn,Cosmics,F50,3:10:57
+55,Wilson,Euan,Insch Trail Running Club,M,3:11:51
+56,Naughton,David,Deveron Harriers,M40,3:14:32
+57,Frazer,Bob,Unattached,M40,3:15:34
+58,Low,Matthew,Dundee Road Runners,M,3:16:11
+59,Bentley,Andy,Spey Runners,M40,3:16:28
+60,Gordon,Andrew,Cosmics,M50,3:19:09
+61,Troon,Alistair,Unattached,M40,3:20:23
+62,Maltman,Iain,Unattached,M,3:20:41
+63,Campbell,Graeme,Inverness Harriers,M50,3:26:10
+64,Martin,Keith,Harmeny AC,M50,3:26:33
+65,Morrison,Sandy,Carnethy,M,3:28:53
+66,Antczak,Steven,Unattached,M40,3:29:54
+67,White,David,Helm Hill Runners,M40,3:30:07
+68,Aubrey,Kathleen,Helm Hill Runners,F50,3:30:07
+69,Dales,Mike,Perth Road Runners,M50,3:30:32
+70,Ferguson,Allan,Forfar Road Runners,M,3:33:21
+71,Garrett,Blair,Calder Valley,M,3:33:46
+72,Little,Rachel,Insch Trail Running Club,F,3:37:03
+73,Robertson,Hugh,Insch Trail Running Club,M40,3:37:21
+74,Anderson,Lauren,Deeside Runners,F,3:38:11
+75,Athanasiadis,Andreas,Unattached,M50,3:38:41
+76,Sinclair,William,Unattached,M,3:42:10
+77,Thomson,Iain,Strathearn Harriers,M70,3:42:16
+78,Broadhurst,Lorna,Harmeny AC,F50,3:43:22
+79,Manson,Fiona,Perth Road Runners,F50,3:46:12
+80,Mackie,Eugene,Highland Hill Runners,M,3:46:19
+81,Walker,Grant,Unattached,M,3:46:20
+82,Yuill,Andre,Deeside Runners,M,3:46:27
+83,Gates,Dan,Glasgow Tri Club,M40,3:48:56
+84,Main,Gordon,Nairn Road Runners,M60,3:51:09
+85,Day,Marc,Unattached,M40,3:55:31
+86,Munro,Eleanor,Keith & District AAC,F40,3:58:54
+87,Dawson,Stewart,Unattached,M40,4:05:26
+88,Munro,Mike,Spey Runners,M,4:05:26
+89,Campbell,Rod,Cosmics,M70,4:08:22
+90,Simpson,Marianne,Spey Runners,F50,4:19:33

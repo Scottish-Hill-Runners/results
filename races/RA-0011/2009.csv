@@ -1,0 +1,119 @@
+RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
+1,Simpson,Robbie,Deeside Runners,MU23,0:22:15
+2,Rodgers,David,Lochaber AC,M40,0:23:00
+3,Smith,Tom,Lochaber AC,M,0:23:53
+4,Price,Philip,Team Cruachan,M,0:24:10
+5,Watt,Ruari,Lochaber AC,M,0:24:20
+6,Weir,David,Forres Harriers,M40,0:24:58
+7,Hepburn,John,Lochaber AC,M40,0:25:36
+8,Sedgwick,Nick,Lochaber AC,M,0:25:59
+9,Whyte,Ken,Lochaber AC,M50,0:26:10
+10,Cameron,Stephen,Unattached,M,0:26:24
+11,Meekin,Nicola,Lochaber AC,F,0:26:28
+12,Gunn,Tarquin,Lochaber AC,M,0:26:41
+13,Scott,Dawn,Lochaber AC,F,0:26:47
+14,Mitchell,Craig,Vegan Runners,M,0:26:55
+15,Gorman,Manny,Westerlands,M,0:27:01
+16,Bannerman,Ross,East Sutherland,M,0:27:09
+17,Taylor,Ewan,PH Racing,M,0:27:14
+18,Tibbets,Ben,Unattached,M,0:27:19
+19,Gill,Stephen,Keith & District AAC,M,0:27:21
+20,MacLean,Paul,Lochaber AC,M,0:27:24
+21,Martin,Geoff,Unattached,M,0:27:29
+22,Simpson,Geoff,HBT,M40,0:27:43
+23,Shaw,Mark,Jura AC,M40,0:27:51
+24,Munro,Graham,Lochaber AC,M40,0:27:55
+25,Bass,Owen,Solway,M40,0:27:58
+26,Brooks,Graham,Lochaber AC,M50,0:28:03
+27,Rumgay,Ken,Lochaber AC,M40,0:28:10
+28,Garrick,William,2 SCOTS,M,0:28:16
+29,Dent,Alan,Lochaber AC,M50,0:28:20
+30,Macdonald,Richard,Lochaber AC,M40,0:28:25
+31,Dale,Andy,Loch Eck Orienteers,M40,0:28:45
+32,Kennedy,Ali,Lochaber AC,M40,0:28:50
+33,Stevenson,John,Ochil Hill Runners,M40,0:28:52
+34,Stuart,Mike,Keith & District AAC,M40,0:28:58
+35,Axon,Simon,HBT,M40,0:29:13
+36,Wilson,Stewart,Highland Hill Runners,M40,0:29:31
+37,Henderson,Julia,Helensburgh AAC,F,0:30:04
+38,Muir,Neil,Unattached,M,0:30:11
+39,Maitland,John,Lochaber AC,M40,0:30:21
+40,Orr,David,Lochaber AC,M,0:30:23
+41,Forster,Nix,Lochaber AC,F40,0:30:27
+42,Wardner,Matthew,Lochaber AC,M40,0:30:37
+43,Bannerman,Roxy,East Sutherland,F,0:30:39
+44,Cameron,Ali,Lochaber AC,M,0:30:41
+45,Shirley,John,Unattached,M50,0:30:58
+46,Whitehead,Jonathan,Carnethy,M50,0:31:10
+47,Blackhall,Amanda,Lochaber AC,F,0:31:12
+48,Duncan,David,Ochil Hill Runners,M50,0:31:17
+49,Cant,Stephen,Lochaber AC,M,0:31:19
+50,Nicholl,Karen,Strathearn Harriers,F,0:31:29
+51,Hemm,Michael,Unattached,M,0:31:39
+52,O`Brien,Paul,Corstorphine,M50,0:31:57
+53,O`Kane,John,Lochaber AC,M40,0:31:59
+54,Anderson,John,Mid Argyll Tri & Cycle Club,M40,0:32:02
+55,Denny,Colin,Lochaber AC,M40,0:32:30
+56,Murdoch,Ray,Lochaber AC,M60,0:32:31
+57,Bowman,Angus,Lomond Hill Runners,M50,0:32:33
+58,O`Brien,Phyllis,HBT,F40,0:32:38
+59,Rose,Lizzie,Keith & District AAC,F,0:32:45
+60,Tighe,Mick,Lochaber AC,M50,0:32:51
+61,Munro,Craig,Jog Scotland,M,0:32:53
+62,MacEwan,Linda,Lochaber AC,F40,0:33:04
+63,Molero,Luis,Lauderdale Limpers,M,0:33:06
+64,Forster,Damian,Lochaber AC,M40,0:33:16
+65,Marden,Steve,Highland Hill Runners,M40,0:33:18
+66,Campbell,Jenny,Unattached,F,0:33:22
+67,Pearce,Emma,Lochaber AC,F40,0:33:34
+68,Corner,Graham,Lochaber AC,M,0:33:36
+69,Provan,Louise,Fife AC,F,0:33:38
+70,Ness,Joanna,Lochaber AC,F40,0:33:45
+71,Shaw,Lyndsey,Lochaber AC,F,0:33:51
+72,Orr,Ernie,Lochaber AC,M60,0:34:23
+73,Chalmers,Lettie,Lochaber AC,F,0:34:31
+74,Shepherd,Alastair,Lochaber AC,M,0:34:41
+75,Stapley,Tony,Portobello,M60,0:34:42
+76,Smith,Ian,Highland Hill Runners,M,0:34:56
+77,Gibbs,Phil,Unattached,M50,0:35:02
+78,Daynes,Ed,Lochaber AC,M40,0:35:18
+79,Scott,Bill,Lochaber AC,M50,0:35:20
+80,Bell,David,Lothian,M40,0:35:27
+81,Dowell,Finlay,Irvine RC,M40,0:35:42
+82,Finlayson,Richard,Lochaber AC,M,0:35:45
+83,Weir,Jonathan,Unattached,M,0:35:54
+84,Finnimore,Andrew,Lochaber AC,M50,0:36:04
+85,Muir,Claire,Lochaber AC,F,0:36:53
+86,Gray,Kate,Lochaber AC,F50,0:37:09
+87,Smith,Tilly,Deeside Runners,F40,0:37:21
+88,Treasurer,Claire,Lochaber AC,F,0:37:30
+89,Ford,Dave,Lochaber AC,M50,0:37:40
+90,Stewart,Alan,Lochaber AC,M,0:37:43
+91,MacLennan,Lynn,Lochaber AC,F40,0:37:56
+92,Ross,Susan Jane,Lochaber AC,F40,0:38:16
+93,Rowan,Arlene,Lochaber AC,F,0:38:24
+94,Hepburn,Jackie,Lochaber AC,F40,0:38:33
+95,MacBeath,Niall,Lochaber AC,M40,0:38:42
+96,Bass,Ursula,Deeside Runners,F40,0:38:42
+97,Low,Duncan,Unattached,M,0:39:27
+98,Dougan,John,Lochaber AC,M50,0:39:29
+99,Rumgay,Clare,Lochaber AC,F,0:39:57
+100,Bradley,Siobhan,Lochaber AC,F,0:40:14
+101,Morrison,Ellen,Lochaber AC,F,0:41:05
+102,Adams,Ian,Lochaber AC,M40,0:41:07
+103,Murdoch,Elma,Lochaber AC,F50,0:41:16
+104,Paul,Brenda,Westerlands,F,0:41:22
+105,Bowman,Jean,Lomond Hill Runners,F40,0:41:24
+106,Tighe,Katharine,Lochaber AC,F50,0:42:00
+107,Ford,Jenny,Lochaber AC,F50,0:43:26
+108,Johnston,Alison,HBT,F40,0:43:47
+109,Fyfe,Susan,Lochaber AC,F40,0:44:39
+110,Wardner,Mhari,Lochaber AC,F,0:44:49
+111,Hamilton,Jim,Lochaber AC,M,0:45:07
+112,Hervo,Sandra,Unattached,F,0:45:35
+113,Fitzpatrick,Lynne,Lochaber AC,F,0:46:17
+114,Jackson,Jenna,Lochaber AC,F,0:47:35
+115,Cant,Ailsa,Lochaber AC,F,0:47:40
+116,Kennedy,Teresa,Lochaber AC,F40,0:49:01
+117,Feeney,Elvire,Lochaber AC,F40,0:53:02
+118,Stewart,Kate,Lochaber AC,F,0:54:46

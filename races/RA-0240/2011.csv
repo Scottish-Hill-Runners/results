@@ -1,0 +1,78 @@
+RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
+1,Whitehead,Dan,Deeside Runners,M,0:31:56
+2,Bartlett,Graeme,Forres Harriers,M,0:33:04
+3,Greig,Kyle,Metro Aberdeen,M,0:33:30
+4,Mitchell,John,Cosmics,M,0:33:48
+5,Espie,James,Deeside Runners,M,0:33:53
+6,Harper,Kevin,Cosmics,M,0:34:05
+7,Brookes,Rob,Cosmics,M,0:34:10
+8,Gorman,Manny,Westerlands,M,0:34:13
+9,Abrahams,Ben,Cosmics,M,0:34:59
+10,Stewart,Mike,Keith & District AAC,M40,0:35:44
+11,Tivendale,Drew,Deeside Runners,M,0:35:51
+12,Malcolm,Stuart,Highland Hill Runners,M,0:35:56
+13,Murdoch,Paul,Keith & District AAC,M,0:36:01
+14,Russell,Colin,Cosmics,M,0:36:45
+15,Drysdale,Scott,Unattached,M,0:36:57
+16,Henry,Peter,Deeside Runners,M,0:37:40
+17,Forrester,Gregor,Unattached,M,0:37:48
+18,Terwey,Stephen,Stonehaven RC,M,0:37:52
+19,Sealy,Alan,Deeside Runners,M40,0:38:10
+20,Bain,Andy,Deeside Runners,M40,0:38:16
+21,French,George,Garioch Road Runners,M,0:38:39
+22,Angus,Gerald,Keith & District AAC,M40,0:38:50
+23,Inglis,Andrew,Cosmics,M,0:38:51
+24,Gough,Nicholas,Unattached,M,0:39:43
+25,McRonald,Andrew,Garioch Road Runners,M,0:39:43
+26,Addy,Stephen,Cosmics,M,0:39:59
+27,Drummond,Fraser,Newburgh Dunes RC,M,0:40:04
+28,Unknown,Unknown,Unknown,M,0:40:06
+29,Addy,Stephen,Cosmics,M,0:40:07
+30,Larmour,Colin,Cosmics,M40,0:40:22
+31,Taylor,Steven,Keith & District AAC,M,0:40:28
+32,Oldham,Veronique,Cosmics,F40,0:40:36
+33,Wood,Oliver,Garioch Road Runners,M,0:40:45
+34,Stanbridge,Micah,Carnethy,M,0:41:06
+35,Leel,Cameron,Garioch Road Runners,M,0:41:25
+36,Brown,Joseph,Cosmics,M40,0:41:47
+37,Thomson,Gary,Garioch Road Runners,M,0:42:13
+38,Hodgson,Ian,North York Moors AC,M40,0:42:31
+39,Clark,David,Garioch Road Runners,M40,0:42:33
+40,Manning,Bruce,Cosmics,M60,0:42:35
+41,Delaney,Liz,Cosmics,F,0:42:45
+42,Wright,Hazel,Deeside Runners,F,0:43:49
+43,Kelly,Craig,Garioch Road Runners,M,0:43:50
+44,Cran,Ian,Garioch Road Runners,M50,0:44:15
+45,Black,Corri,Cosmics,F40,0:44:27
+46,Walker,Andrew,Cosmics,M40,0:44:32
+47,Williams,Rupert,Cosmics,M50,0:44:38
+48,Clark,Lesley,Cosmics,F,0:44:44
+49,Gaff,Melanie,Wester Ross Athletics,F,0:44:53
+50,Duncan,David,Ochil Hill Runners,M50,0:45:04
+51,Verbiest,Dirk,Garioch Road Runners,M50,0:45:35
+52,Redgwell,Nicola,Garioch Road Runners,F40,0:45:38
+53,Campbell,Liz,Unattached,F,0:45:59
+54,Mackay,Mike,Unattached,M40,0:46:30
+55,Dewhurst,David,Garioch Road Runners,M40,0:46:32
+56,Kirk,David,Grampian Orienteers,M40,0:47:30
+57,Bryce,Murray,Cosmics,M50,0:47:36
+58,McCombie,Jill,Unattached,F40,0:47:40
+59,Reid,Paul,Unattached,M,0:48:06
+60,Thompson,Jeff,Unattached,M50,0:48:25
+61,Wright,Francis,Cosmics,M40,0:48:27
+62,Stewart,Elaine,Cosmics,F50,0:49:02
+63,Watt,Mike,The Darkside,M40,0:49:12
+64,known,not,Unknown,M,0:49:26
+65,Collins,Moira,Deeside Runners,F50,0:49:44
+66,Eaton,Jane,The Darkside,F40,0:50:36
+67,Simpson,Sandra,Fat Bobs Running Club,F40,0:51:14
+68,Drysdale,Christine,Garioch Road Runners,F,0:51:20
+69,Munro,Eleanor,Keith & District AAC,F40,0:51:57
+70,Khan,Mohammed,Dumfries RC,M,0:52:27
+71,O`Sullivan,Sarah,Cosmics,F,0:53:07
+72,Wood,Nicola,Unattached,F,0:54:07
+73,Larmour,Pauline,Cosmics,F40,0:54:16
+74,French,Isla,Garioch Road Runners,F,0:55:53
+75,Newman,Paul,Unattached,M,0:57:26
+76,Craig,Jude,Unattached,F50,0:57:27
+77,Bryant,Margaret,Garioch Road Runners,F50,0:58:57

@@ -1,0 +1,115 @@
+RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
+1,Rees,Logan,Fife AC,MJ,0:34:18
+2,Harris,Adam,Unattached,M,0:34:47
+3,Bonnyman,Brian,Westerlands,M40,0:34:48
+4,Harris,Mark,Fife AC,M40,0:35:16
+5,Smith,Alan,Deeside Runners,M50,0:35:47
+6,Russell,Chris,Falkland Trail Runners,M40,0:36:04
+7,Nash,Graham,Carnethy,M40,0:36:27
+8,Clarke,Daniel,Fife AC,M,0:36:31
+9,Bowden,James,HBT,M,0:36:32
+10,Askham,John,HELP,M,0:36:32
+11,Knox,Jonny,Anster Haddies,M40,0:36:32
+12,Mackenzie,Donald,Lomond Hill Runners,M40,0:36:39
+13,Millar,David,Ochil Hill Runners,M,0:36:41
+14,Cox,Alistair,Tinto Hill Runners,M,0:36:46
+15,Traynor,James,Carnegie Harriers,M,0:37:10
+16,Kemp,Alan,Kinross Road Runners,M,0:37:41
+17,Cross,Daniel,Hyde Park,M,0:37:43
+18,Martin,Neil,Lomond Hill Runners,M40,0:37:58
+19,MacDonald,Alistair,Dundee Hawkhill,M40,0:38:17
+20,Irvine,Robin,Unattached,M,0:38:23
+21,Hastie,Neil,HELP,M40,0:38:25
+22,Duffy,John,Shettleston Harriers,M40,0:38:29
+23,Rees,Tristan,Fife AC,MJ,0:38:31
+24,Pryde,Gordon,Lomond Hill Runners,M50,0:38:33
+25,Thomson,Brian,Fife AC,M40,0:38:36
+26,Cowan,David,Fife AC,M50,0:38:40
+27,King,Andrew,Lothian,M,0:39:07
+28,Simpson,Peter,Carnegie Harriers,M50,0:39:11
+29,Knox,Thomas,Anster Haddies,M,0:39:13
+30,MacPherson,Vince,Fife AC,M,0:39:21
+31,Taylor,Luke,Highland Hill Runners,MJ,0:39:26
+32,Harris,Tom,Fife AC,MJ,0:39:34
+33,Turner,Simon,Tinto Hill Runners,M,0:39:35
+34,King,Steven,Carnegie Harriers,M40,0:39:40
+35,Rees,Roger,Fife AC,M40,0:39:43
+36,Alexander,Mark,Ballymena Runners,M40,0:39:43
+37,McClelland,Peter,HBT,M,0:39:46
+38,Roberts,Clive,Fife AC,M50,0:39:50
+39,Johnson,Nick,Fife AC,M,0:39:52
+40,Cruickshank,Brian,Falkland Trail Runners,M40,0:40:05
+41,MacDonald,Mike,Unattached,M,0:40:09
+42,Poolman,Ian,Glenrothes Tri Club,M,0:40:13
+43,Anderson,Laurie,Lomond Hill Runners,M50,0:40:43
+44,Sleggs,Paul,HBT,M,0:42:22
+45,Shepherd,David,Fife AC,M40,0:42:29
+46,Hill,Christopher,British Military Fitness,M40,0:42:40
+47,Hood,Alasdair,Fife AC,M50,0:42:45
+48,Millar,Neil,Fife AC,M40,0:42:48
+49,Davie,Kevin,Carnegie Harriers,M,0:42:52
+50,Tabbarer,Ian,East Fife Tri,M,0:42:56
+51,Fernando,Sam,Fife AC,MJ,0:42:58
+52,MacPherson,John,HBT,M,0:43:00
+53,McCloy,David,Unattached,M40,0:43:02
+54,Taylor,Gordie,Lochaber AC,M50,0:43:06
+55,Holden,Joe,Lomond Hill Runners,M60,0:43:18
+56,Brown,Jamie,HBT,M,0:43:40
+57,Duffy,Sean,Unattached,M,0:44:07
+58,Wedderburn,Patrick,Unattached,,0:44:12
+59,McLeod,Ben,Fife AC,M,0:44:14
+60,Forte,Phil,Dundee Hawkhill,M50,0:44:17
+61,Calothis,Marinos,Westerlands,M40,0:44:23
+62,Sinclair,Melanie,Unattached,F40,0:44:25
+63,Brannigan,Allan,Carnegie Harriers,M50,0:44:32
+64,Smith,Brian,Fife AC,M50,0:44:36
+65,Irvine,Ray,Unattached,M40,0:44:44
+66,Ritchie,Hilary,Fife AC,F50,0:44:46
+67,Velzian,Laura,Highland Hill Runners,F40,0:44:48
+68,McWhinnie,Jim,Fife AC,M50,0:44:53
+69,Harley,Susan,Falkland Trail Runners,F40,0:44:58
+70,Cumming,Mike,Fife AC,M,0:44:59
+71,Landels,Brian,Lomond Hill Runners,M50,0:45:03
+72,Duff,Bill,Falkland Trail Runners,M60,0:45:06
+73,Stavert,Andrew,Portobello,M50,0:45:10
+74,Richardson,Neville,Unattached,M,0:45:29
+75,Sim,Andrew,Carnegie Harriers,M40,0:45:38
+76,Osborn,David,Lomond Hill Runners,M50,0:45:44
+77,Ledlie,Colin,Carnethy,M40,0:45:55
+78,Martin,Kim,Unattached,F,0:46:03
+79,Wilson,Colin,Lomond Hill Runners,M50,0:46:11
+80,Diver,Michael,Clydesdale Harriers,M40,0:46:21
+81,Maguire,Kirsty,Fife AC,F,0:46:38
+82,McLure,Neil,Carnegie Harriers,M40,0:46:47
+83,Somerville,Gordon,Carnegie Harriers,M50,0:46:51
+84,Sinclair,Adam,Carnegie Harriers,M,0:47:01
+85,Howie,Brian,Carnethy,M60,0:47:12
+86,Macaulay,Allan,Carnegie Harriers,M50,0:47:18
+87,Fernando,Ruwan,Fife AC,M40,0:47:26
+88,Ledlie,Max,Carnethy,MJ,0:47:27
+89,Maass,Digby,Carnethy,M60,0:47:29
+90,McWhinnie,Janet,Fife AC,F40,0:48:17
+91,Wilson,Joan,Lomond Hill Runners,F50,0:48:52
+92,Duncan,David,Ochil Hill Runners,M50,0:49:22
+93,Martin,Margaret,Fife AC,F50,0:50:00
+94,Paterson,Maurice,Fife AC,M,0:50:20
+95,Frodsham,Mike,Fife AC,M60,0:51:19
+96,Ward,Ausrine,Kirkintilloch Olympians,F,0:51:44
+97,Fraser,Vivien,Kirkintilloch Olympians,F40,0:51:44
+98,Knox,Lizzie,Anster Haddies,FJ,0:52:27
+99,Coltman,Alan,Teviotdale Harriers,M40,0:52:28
+100,Cromar,Steve,Dundee Hawkhill,M70,0:52:29
+101,Greer,Stephen,Carnegie Harriers,M50,0:52:55
+102,Knox,Tracy,Anster Haddies,F50,0:53:07
+103,Fairley,Bill,Carnegie Harriers,M70,0:53:57
+104,Dick,Callum,Lomond Hill Runners,M50,0:54:27
+105,Melville,Carole,Fife AC,F70,0:54:49
+106,Francis,David,Fife AC,M60,0:54:50
+107,Ritchie,Wendy,Fife AC,F40,0:55:38
+108,Beveridge,Bob,Lomond Hill Runners,M70,0:57:00
+109,Lee,Rosemary,Falkland Trail Runners,F50,0:57:23
+110,Milton,John,Lomond Hill Runners,M70,0:57:46
+111,Fraser,Ronald,Dundee Road Runners,M50,1:03:15
+112,Ellison,David,Fife AC,M60,1:03:57
+113,Thornton,Bob,Fife AC,M50,1:07:21
+114,Whisler,Sue,Fife AC,F50,1:07:54

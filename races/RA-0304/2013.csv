@@ -1,0 +1,92 @@
+RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
+1,Parrish,David,Dumfries RC,M,0:37:38
+2,Harris,Adam,Unattached,M,0:38:04
+3,Stewart,Gregor,Westerlands,M,0:38:38
+4,Eiser,Dave,Ochil Hill Runners,M,0:38:46
+5,Gilmore,Andrew,Highland Hill Runners,M,0:39:15
+6,Smith,Alan,Deeside Runners,M50,0:39:26
+7,Bellamy,Gwyn,Westerlands,M,0:39:43
+8,Henderson,David,Greenock Glenpark Harriers,M,0:39:56
+9,MacDonald,Grant,Garscube Harriers,M,0:40:37
+10,Fallon,Steven,Carnethy,M50,0:40:39
+11,Winter,Stephen,Shettleston Harriers,M,0:40:48
+12,Gilmore,Iain,Carnethy,M,0:41:08
+13,O`Neill,Owen,Westerlands,M,0:41:14
+14,Fraser,Gary,Ochil Hill Runners,M40,0:41:18
+15,Baxter,Grant,Ochil Hill Runners,M40,0:41:33
+16,Stevenson,John,Ochil Hill Runners,M50,0:42:16
+17,Harper,Peter,Westerlands,M40,0:42:23
+18,McLaughlin,Danny,Greenock Glenpark Harriers,M50,0:43:25
+19,Gilmore,Neil,Carnethy,M50,0:43:30
+20,Gilkison,Alan,Westerlands,M40,0:43:34
+21,Ewen,Alastair,Bellahouston RR,M,0:43:43
+22,Mackie,Peter,Shettleston Harriers,M,0:43:47
+23,McCall,Andrew,Greenock Glenpark Harriers,M,0:43:49
+24,Clements,Gordon,Bellahouston RR,M40,0:44:00
+25,Burt,Cameron,Westerlands,M,0:44:16
+26,Monaghan,Paul,Greenock Glenpark Harriers,M40,0:44:47
+27,Whiteford,Kenny,Unattached,M40,0:45:22
+28,Coates,James,Unattached,M,0:45:30
+29,Woods,Ben,Unattached,M,0:45:35
+30,Upson,Chris,Westerlands,M40,0:45:36
+31,Anderson,Russell,Moorfoot Runners,M50,0:45:59
+32,Cowper,Stephen,Milburn Harriers,M40,0:46:03
+33,Provan,Jamie,Westerlands,M,0:46:13
+34,Beck,Richard,Dumfries RC,M,0:46:15
+35,Giarchi,Karl,Helensburgh AAC,M40,0:46:18
+36,Cunningham,Lindsay,Milburn Harriers,M40,0:46:42
+37,Reid,Don,Westerlands,M50,0:46:44
+38,Caldwell,Mark,Ayr Seaforth,M40,0:47:38
+39,Saltums,Arnis,Westerlands,M,0:47:50
+40,Underwood,Matt,Fusion Triathlon,M,0:48:10
+41,Murray,Alasdair,Kilmarnock Harriers,M40,0:48:26
+42,Adam,Sarah,Westerlands,F,0:49:06
+43,Shaw,Trevor,Lochtayside,M40,0:49:21
+44,Pugh,Roderick,Kilmarnock Harriers,M50,0:49:24
+45,Kravcovs,Robert,Westerlands,M,0:49:28
+46,Donnelly,John,Westerlands,M40,0:49:38
+47,Finlay,Alayne,Ochil Hill Runners,F,0:49:41
+48,Fitzpatrick,Pat,Ochil Hill Runners,M60,0:49:52
+49,Dickson,David,Westerlands,M50,0:49:54
+50,Wheeler,Mark,Hamilton Harriers,M,0:49:55
+51,McCaffrey,Gordon,Westerlands,M50,0:49:59
+52,MacLeod,Murdo,Westerlands,M60,0:50:06
+53,Houston,Val,Westerlands,F40,0:50:17
+54,Bulloch,Gordon,Westerlands,M,1:00:17
+55,McLean,Herbie,Lochtayside,M60,0:51:06
+56,Hulme,Martin,Corstorphine,M60,0:51:11
+57,McCloy,David,Unattached,M40,0:51:28
+58,Duncan,David,Ochil Hill Runners,M50,0:51:46
+59,Robinson,Madeline,Helensburgh AAC,F,0:51:47
+60,Semple,Hamilton,Westerlands,M50,0:51:54
+61,Munro,Frazer,Kinross Road Runners,M40,0:52:13
+62,Hetherington,Michelle,Carnethy,F40,0:52:14
+63,Kelsall,Fiona,Ochil Hill Runners,F40,0:52:24
+64,Brodie,Stuart,Ochil Hill Runners,M,0:52:46
+65,Johnston,Stephen,Milburn Harriers,M50,0:52:52
+66,Brennan,Brian,Westerlands,M50,0:52:56
+67,Menhennet,Christine,Westerlands,F50,0:52:58
+68,Douglas,George,Westerlands,M40,0:53:32
+69,Quinn,John,Westerlands,M50,0:53:39
+70,Howie,Jamie,Bellahouston RR,M,0:53:49
+71,Leinster,Kenny,Calderglen Harriers,M50,0:54:02
+72,Stakes,David,Unattached,M50,0:54:16
+73,Barbour,Alastair,Unattached,M,0:54:24
+74,Hamer,John,Westerlands,M40,0:55:05
+75,Gilligan,Steven,Westerlands,M,0:55:22
+76,Coyle,Shaun,Westerlands,M50,0:55:30
+77,Stewart,George,Calderglen Harriers,M50,0:56:47
+78,Gillespie,Gaynor,Westerlands,F40,0:57:14
+79,Furse,Chris,Westerlands,M40,0:58:21
+80,Gaughan,Gregory,Unattached,M,0:58:27
+81,Polak,Jo,Highland Hill Runners,F50,0:58:53
+82,Hutchinson,John,Westerlands,M60,0:59:16
+83,Douglas,Colin,Helensburgh AAC,M40,0:59:24
+84,MacPherson,Helen,Westerlands,F50,1:00:05
+85,Howat,Gordon,Helensburgh AAC,M,1:00:33
+86,Rogerson,Emma,Bellahouston Harriers,F,1:00:34
+87,Machan,Andrew,Greenock Glenpark Harriers,M,1:01:50
+88,Shields,Robert,Milburn Harriers,M60,1:02:57
+89,Runner,Unknown,Unattached,F,1:03:14
+90,McLaughlin,Pat,Westerlands,F60,1:12:54
+91,McFarlane,Max,Kilbarchan,M60,1:16:09

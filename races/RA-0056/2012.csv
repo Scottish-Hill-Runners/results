@@ -1,0 +1,89 @@
+RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
+1,Aggleton,Hugh,MDC,M,1:07:58
+2,Faulkner,Paul,Carnethy,M,1:09:08
+3,Sanderson,Philip,Elswick Harriers,M40,1:10:09
+4,Fulton,David,HBT,M,1:10:35
+5,Stewart,Iain,Westerlands,M,1:11:26
+6,Bennett,Lee,Northumberland FR,M40,1:11:43
+7,Hutchinson,Charles,HBT,M,1:13:03
+8,Winter,Chris,Northumberland FR,M,1:14:49
+9,Millar,David,Ochil Hill Runners,M,1:15:21
+10,Jones,Gary,Northumberland FR,M,1:15:32
+11,Fletcher,Adam,Alnwick Harriers,M40,1:16:40
+12,Simpson,Peter,Carnegie Harriers,M50,1:16:58
+13,Cox,Andrew,Moorfoot Runners,M,1:17:31
+14,Mykura,Jill,Carnethy,F,1:17:36
+15,Crombie,Bruce,Alnwick Harriers,M,1:18:32
+16,Baty,John,North Shields Poly,M40,1:19:30
+17,Gilmore,Andrew,Highland Hill Runners,M,1:21:07
+18,Sims,Andrew,HBT,M,1:22:18
+19,Horsfall,Brian,Wakefield Harriers,M40,1:22:47
+20,Morris,Neil,Low Fell Running Club,M40,1:23:36
+21,Gilmore,Neil,Carnethy,M40,1:24:22
+22,Grove,Matthew,Carnethy,M40,1:24:41
+23,McCall,Tim,Norham RC,M50,1:25:13
+24,Rooney,Edmund,Lauderdale Limpers,M50,1:25:16
+25,McCall,Colin,Gala Harriers,M,1:26:11
+26,Humphries,Phil,Carnethy,M40,1:27:46
+27,Davie,Kevin,Carnegie Harriers,M,1:27:53
+28,Charles,Andrew,Durham Fell Runners,M50,1:27:58
+29,Connor,Julia,Unattached,F,1:28:13
+30,Runciman,George,Lauderdale Limpers,M50,1:29:55
+31,Bowman,Angus,Lomond Hill Runners,M50,1:30:12
+32,Sleggs,Paul,HBT,M,1:30:26
+33,Symington,Stuart,Dunbar RC,M50,1:30:28
+34,Pikett,William,Norham RC,M40,1:30:29
+35,Walker,Ewan,Norham RC,M,1:30:35
+36,Fagan,Rachel,Gala Harriers,F,1:30:36
+37,Brydon,Derrick,Gala Harriers,M40,1:30:37
+38,Stankiewicz,Rob,Norham RC,M50,1:31:01
+39,Paul,Alastair,Northumberland FR,M50,1:31:27
+40,Davinson,Mark,Derwentside AC,M,1:32:05
+41,McCallum,Alasdair,Norham RC,M40,1:32:16
+42,Henry,Graham,Portobello,M40,1:32:18
+43,Lawrence,Will,Northumberland FR,M50,1:32:31
+44,Mitchell,Neill,Fife AC,M40,1:32:33
+45,Robertson,Ally,Carnethy,M,1:32:43
+46,Tunstall,Denise,Durham Fell Runners,F40,1:32:55
+47,McLean,Graham,Corstorphine,M50,1:33:12
+48,O`Brien,Phyllis,HBT,F50,1:33:41
+49,Forsyth,Catherine,Unattached,F,1:33:42
+50,Collins,Trevor,Carnethy,M50,1:33:56
+51,Middleton,Andy,Elswick Harriers,M,1:33:57
+52,Stephens,Rob,Northumberland FR,M50,1:34:43
+53,Duff,Bill,Falkland Trail Runners,M60,1:35:04
+54,Gilmore,Iain,Carnethy,M,1:35:52
+55,McWilliams,Glen,Northumberland FR,M50,1:36:13
+56,Tough,Colin,Gala Harriers,M40,1:36:36
+57,Sinclair,Melanie,Unattached,F,1:38:35
+58,Reynolds,Colin,Carnegie Harriers,M40,1:39:27
+59,Law,David,Corstorphine,M50,1:40:51
+60,Rutherford,Craig,Norham RC,M,1:41:54
+61,Marsh,Duncan,Dark Peak,M40,1:42:53
+62,MacPherson,Helen,Westerlands,F50,1:43:02
+63,Curry,Steve,Elswick Harriers,M50,1:43:36
+64,Dunn,Nicola,Carnethy,F40,1:44:24
+65,Jones,Mike,Norham RC,M40,1:44:35
+66,Peberdy,Bridget,Alnwick Harriers,F50,1:44:56
+67,Martin,Kim,Unattached,F,1:45:04
+68,Cochrane,Sheila,Unattached,F40,1:45:06
+69,Jardin,David,Elswick Harriers,M40,1:45:49
+70,Drozdowicz,Marie Louise,Elswick Harriers,F50,1:45:54
+71,Warner,Mark,HBT,M40,1:46:46
+72,Broadhurst,Lorna,Harmeny AC,F50,1:46:56
+73,Walker,Peter,Carnethy,M40,1:47:29
+74,Fleming,Morna,Pitreavie,F50,1:47:51
+75,Reynolds,Lesley,Carnegie Harriers,F40,1:48:28
+76,Duncan,David,Ochil Hill Runners,M50,1:48:43
+77,Craig,Carrie,HBT,F,1:48:48
+78,Smith,Janice,HBT,F50,1:49:10
+79,Stoddart,Kirsty,Harmeny AC,F40,1:49:41
+80,Sommerville,Jim,Holmfirth Harriers,M60,1:51:42
+81,Cockburn,John,Alnwick Harriers,M60,1:53:05
+82,Atwell,Kevin,Northumberland FR,M50,1:53:05
+83,MacKenzie,Becky,Unattached,F,1:53:54
+84,McKenzie,Forbes,Unattached,M,1:57:59
+85,Whewell,Peter,North York Moors AC,M60,2:03:04
+86,Hay,Debz,Anster Haddies,F40,2:05:32
+87,Shaw,Hilary,Saltwell Harriers,F50,2:15:28
+88,Hay,George,Anster Haddies,M40,2:27:29

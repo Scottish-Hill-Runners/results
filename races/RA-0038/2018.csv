@@ -1,0 +1,125 @@
+RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
+1,Cooper,Kieran,St Andrews University,M,0:29:46
+2,Connaghan,John,Shettleston Harriers,M40,0:29:48
+3,Boyne,Grant,Shettleston Harriers,M,0:30:39
+4,Thurlbeck,Alastair,Shettleston Harriers,M,0:30:55
+5,Anderson,Moray,Corstorphine,M40,0:30:59
+6,Jackson,Andy,Shettleston Harriers,M,0:31:33
+7,Bellamy,Gwyn,Westerlands,M,0:31:44
+8,Callender,James,Westerlands,M,0:32:18
+9,Marshall,Brian,HELP,M40,0:33:04
+10,Anderson,Micky,Unattached,M50,0:33:08
+11,Hyett,Graeme,Inverclyde AC,M,0:33:19
+12,Pender,Iain,Shettleston Harriers,M,0:33:30
+13,Frost,Hamish,Unattached,M,0:34:14
+14,Smith,Alan,Deeside Runners,M50,0:34:33
+15,Rankin,Christina,Kilbarchan,F,0:35:24
+16,Bradshaw,Peter,North Ayrshire AC,M,0:35:42
+17,Smith,Bruce,Carnethy,M50,0:35:59
+18,Black,Ali,Carnethy,M,0:36:02
+19,McKiddie,Christopher,Westerlands,M,0:36:24
+20,Chrisp,Sam,Unattached,M,0:36:35
+21,Upson,Chris,Westerlands,M50,0:36:42
+22,Crewe,Ruth,Westerlands,F,0:36:45
+23,McQueen,Craig,Troon Tortoises,M40,0:36:54
+24,Murphy,Craig,Girvan Harriers,M50,0:36:57
+25,Fitzpatrick,Bryan,Dunoon Hill Runners,M,0:37:37
+26,Dickson,David,Westerlands,M60,0:37:39
+27,Wheeler,Mark,Hamilton Harriers,M40,0:37:42
+28,Reid,Don,Westerlands,M60,0:38:04
+29,Edenborough,Calum,Unattached,M,0:38:08
+30,MacNab,Peter,Westerlands,M,0:38:18
+31,Brodie,Stuart,Ochil Hill Runners,M,0:38:24
+32,McCallum,Alasdair,Norham RC,M50,0:38:27
+33,Campbell,Donald,Unattached,M40,0:38:38
+34,Caldwell,Mark,Ayr Seaforth,M40,0:38:59
+35,Smith,Jon,Unattached,M40,0:39:03
+36,Orderley,Alexander,North Ayrshire AC,M,0:39:05
+37,Comrie,Fiona,North Ayrshire AC,F40,0:39:08
+38,Nisbet,Stephen,North Ayrshire AC,M,0:39:10
+39,Stewart,Roger,Unattached,M40,0:39:14
+40,Hughes,Ian,Calderglen Harriers,M40,0:39:26
+41,Jones,Davie,Ayr Seaforth,M40,0:39:52
+42,Highgate,Gavin,Kilbarchan,M40,0:40:13
+43,Matthew,Billy,Unattached,M40,0:40:14
+44,Easton,Ian,Westerlands,M40,0:40:19
+45,James,Margo,Westerlands,F50,0:40:21
+46,Page,Michael,Ochil Hill Runners,M,0:40:24
+47,Pugh,Roderick,Kilmarnock Harriers,M60,0:40:32
+48,Atkin,David,Westerlands,M60,0:40:38
+49,Meldrum,Alasdair,Ayr Seaforth,M40,0:40:39
+50,Maher,Stephen,North Ayrshire AC,M40,0:40:41
+51,MacLeod,Murdo,Westerlands,M60,0:40:41
+52,Adams,Bruce,Unattached,M60,0:40:41
+53,McCabe,John,Troon Tortoises,M50,0:40:43
+54,Furse,Chris,Westerlands,M50,0:40:49
+55,Noakes,Lucie,Dunoon Hill Runners,F,0:40:58
+56,Mallet,Damien,Inverclyde AC,M40,0:40:59
+57,Brown,Ryan,Greenock Glenpark Harriers,M,0:41:13
+58,McGill,Harry,Greenock Glenpark Harriers,M,0:41:13
+59,McIntosh,Toni,Ayr Seaforth,F,0:41:25
+60,Dunn,Michael,Unattached,M60,0:41:29
+61,Thompson,Kevin,Unattached,M40,0:41:33
+62,Kelly,Graham,Westerlands,M40,0:41:39
+63,Boyer,Alistair,Westerlands,M,0:42:55
+64,Weir,Jonathan,Unattached,M40,0:43:21
+65,Finch,Tom,Westerlands,M,0:43:31
+66,Fitzpatrick,Pat,Ochil Hill Runners,M60,0:43:38
+67,Carr,Alfie,Glasgow Uni H&H,M,0:43:46
+68,Downie,Tim,Ayr Seaforth,M60,0:43:52
+69,Brennan,Brian,Westerlands,M60,0:44:03
+70,Dance,Rachel,Unattached,F,0:44:20
+71,Bailey,Eleanor,Unattached,F,0:44:23
+72,Cornall,Matilda,Glasgow Uni H&H,F,0:44:25
+73,Reis,Rodrigo,Shettleston Harriers,M,0:44:31
+74,Craig,Stephen,Garscube Harriers,M,0:44:34
+75,McCalmont,Adam,Unattached,M,0:44:48
+76,Morrison,Ian,Ayr Seaforth,M50,0:45:16
+77,Duncan,David,Ochil Hill Runners,M60,0:46:07
+78,Mcgill,Callum,Unattached,M,0:46:13
+79,Midgley,Peter,Westerlands,M60,0:46:22
+80,Mckay,Marianne,Greenock Glenpark Harriers,F40,0:46:35
+81,Thom,Raymond,Unattached,M,0:46:42
+82,McColm,Stuart,Ayr Seaforth,M40,0:47:33
+83,Mills,Daniel,Unattached,M,0:47:35
+84,Blair,Andrew,Unattached,M,0:47:40
+85,Ruddick,Jenn,Westerlands,F,0:47:45
+86,Fullwood,Andrew,Westerlands,M50,0:48:29
+87,Coleman,Mark,Unattached,M,0:48:57
+88,Ferguson,Donna,Unattached,F40,0:49:19
+89,Rogerson,Emma,Bellahouston Harriers,F,0:49:22
+90,Green,Angie,Unattached,F40,0:49:26
+91,Lotter,Cornelius,Ron`s Runners,M40,0:49:34
+92,McNally,Gavin,Unattached,M,0:49:39
+93,Waddington,Michael,Ron`s Runners,M40,0:49:58
+94,Noble,Anne,Troon Tortoises,F50,0:50:20
+95,Pettigrew,Megan,North Ayrshire AC,F,0:50:24
+96,Harris,Mark,Kilbarchan,M40,0:50:35
+97,Robertson,Karen,Kilmarnock Harriers,F50,0:51:32
+98,Brown,Kevin,Ochil Hill Runners,M,0:51:42
+99,Butterworth,Chris,Unattached,M40,0:52:47
+100,Crozier,Jason,Unattached,M40,0:52:51
+101,Milliken,Steven,Unattached,M,0:52:58
+102,Bennie,Rhona,Westerlands,F40,0:53:04
+103,Ridout,David,Ron`s Runners,M60,0:53:34
+104,McClymont,Alan,Unattached,M40,0:53:50
+105,Weir,Kenny,Unattached,M60,0:55:04
+106,Rhodes,Susan,Irvine RC,F50,0:55:47
+107,Gibson,Fiona,Troon Tortoises,F,0:55:51
+108,Mckinney,Stephen,Unattached,M,0:55:55
+109,McBain,Gordon,Troon Tortoises,M40,0:56:32
+110,Craig,Alison,Unattached,F40,0:57:43
+111,Adams,Karen,Ayr Seaforth,F40,0:57:50
+112,Rowley,James,Law & District,M70,0:57:56
+113,Stewart,Carole,Unattached,F40,0:58:06
+114,Crosby,Wendy,Ron`s Runners,F50,0:59:48
+115,Marshall,Helen,Ron`s Runners,F50,1:00:02
+116,Cavani,Michelle,Unattached,F40,1:00:15
+117,Davies,Fiona,Troon Tortoises,F40,1:01:15
+118,Cunningham,Abby,Ayr Seaforth,F40,1:01:42
+119,Convery,Nicola,Unattached,F,1:04:34
+120,Lamont,Claire,Bellahouston Harriers,F,1:04:45
+121,Nicol,Robert,Irvine RC,M70,1:06:08
+122,McManus,Ian,Irvine RC,M70,1:06:46
+123,Fraser,Lorna,Ayr Seaforth,F40,1:11:35
+124,Cox,Rachel,Ron`s Runners,F40,1:18:24

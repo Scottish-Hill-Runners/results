@@ -1,0 +1,112 @@
+RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
+1,Adkin,Jacob,Keswick AC,M,0:26:16
+2,Brown,Ewan,Corstorphine,M,0:27:02
+3,Anthony,Alasdair,Ochil Hill Runners,M40,0:28:08
+4,Waldie,James,HBT,M,0:28:36
+5,Vejmelka,Daniel,Unattached,M,0:29:10
+6,Braby,Liam,Carnethy,M,0:29:27
+7,Dunn,James,HBT,M,0:29:41
+8,Malcolm,Gregor,Edinburgh Uni H&H,M,0:29:53
+9,Henderson,Jonny,HBT,M,0:30:11
+10,Whitlie,Stewart,Carnethy,M50,0:30:26
+11,Luetchford,Alex,HBT,M,0:30:35
+12,Gardner,Peter,HBT,M,0:30:52
+13,Cox,Andrew,Moorfoot Runners,M,0:31:00
+14,Crawford,Ewan,HBT,M,0:31:01
+15,Smith,Gavin,HBT,M,0:31:06
+16,Wolfe,Hamish,Carnethy,M,0:31:24
+17,Freshwater,Craig,HBT,M,0:31:42
+18,Muir,Jonny,Carnethy,M,0:31:47
+19,Shekleton,Nigel,Carnethy,M,0:32:28
+20,Thin,Jamie,HBT,M50,0:32:33
+21,Brown,Andrew,Norham RC,M,0:32:38
+22,Stephen,Jill,HBT,F,0:32:43
+23,Owen,Rob,Carnethy,M,0:33:02
+24,Philip,Daryl,HBT,M,0:33:34
+25,Gilmore,Neil,Carnethy,M50,0:33:51
+26,Pender,Iain,Shettleston Harriers,M,0:33:54
+27,Cruickshanks,Ross,Shettleston Harriers,M,0:33:55
+28,Hanna,David,Carnethy,M,0:33:56
+29,Crowe,Des,Penicuik Harriers,M50,0:33:58
+30,Diver,Michael,HBT,M,0:34:03
+31,Sims,Andrew,HBT,M40,0:34:06
+32,Curry,Matthew,Carnethy,M,0:34:21
+33,Diver,Michael,Clydesdale Harriers,M50,0:34:25
+34,Donoghue,James,Unattached,M,0:34:29
+35,Frankland,Amy,Edinburgh Uni H&H,F,0:35:03
+36,Love,Scott,PH Racing,M,0:35:03
+37,Walling,Craig,HBT,M,0:35:19
+38,Henry,Robert,Musselburgh AC,M40,0:35:33
+39,Greens,Michael,Penicuik Harriers,M,0:35:35
+40,Bareford,Michael,HBT,M40,0:35:36
+41,Dillen,Chris,Interlopers,M40,0:36:08
+42,Jackson,Gary,Eden Runners,M40,0:36:26
+43,Wilson,Rob,Penicuik Harriers,M40,0:36:28
+44,Matthews,Dave,HBT,M,0:36:32
+45,McCallum,Mark,Unattached,M40,0:36:33
+46,Gardiner,Douglas,Carnethy,M40,0:36:40
+47,O`Neil,Sarah,HBT,F,0:36:49
+48,Hindle,Alistair,HBT,M40,0:36:50
+49,Dunlop,Alasdair,Carnethy,M40,0:36:55
+50,Cairns,Gillian,Penicuik Harriers,F40,0:37:09
+51,Reid,Don,Westerlands,M60,0:37:10
+52,Curtis,Briony,HBT,F,0:37:14
+53,Wolfe,Patrick,Unattached,M50,0:37:19
+54,Weir,Jonathan,Unattached,M40,0:37:22
+55,Turnbull,Les,Norham RC,M60,0:37:26
+56,Darwin-Clements,Daniel,HBT,M,0:37:29
+57,Lye,Mary,Carnethy,F40,0:37:35
+58,Williamson,Coll,HBT,M,0:37:59
+59,Barnes,Stephanie,HBT,F,0:38:04
+60,Rhynes,Mark,HBT,M,0:38:11
+61,Rogers,James,HBT,M,0:38:14
+62,Magill,Cat,HBT,F,0:38:18
+63,Twigg,Martin,HBT,M50,0:38:37
+64,Cormack,Wade,HBT,M,0:39:07
+65,Campbell-Krause,Adrian,HBT,M,0:39:35
+66,Glass,Jennie,Deeside Runners,F,0:39:45
+67,Cameron,Gordon,Carnethy,M60,0:39:51
+68,Costello,Kerry,Portobello,M40,0:40:02
+69,McDonnell,Clare,Carnethy,F,0:40:09
+70,Hill,Christopher,Unattached,M50,0:40:21
+71,Jones,Mike,Norham RC,M50,0:40:22
+72,Hamlen,Robert,Unattached,M,0:40:23
+73,Clements,Dave,Edinburgh AC,M40,0:40:25
+74,Duncan,Andy,Musselburgh AC,M40,0:40:50
+75,Elder,Alan,Moorfoot Runners,M50,0:40:55
+76,McKay,Michael,Unattached,M50,0:40:59
+77,Maley,Stephen,Portobello,M,0:41:03
+78,Malcom-Smith,Mike,Musselburgh AC,M50,0:41:31
+79,Fraser,Billy,Northumberland FR,M50,0:41:45
+80,Lockie,Paul,Teviotdale Harriers,M50,0:42:07
+81,O`Brien,Phyllis,HBT,F50,0:42:13
+82,Wood,Douglas,Teviotdale Harriers,M50,0:42:58
+83,Adam,Richard,Unattached,M40,0:43:10
+84,Kemp,Sadie,Penicuik Harriers,F40,0:43:55
+85,Hobbs,Gordon,Unattached,M40,0:44:05
+86,Anderson,Andrew,Dunbar RC,M50,0:44:09
+87,Bruce,Catriona,HBT,F40,0:44:19
+88,McAdam,Sarah,Portobello,F,0:44:21
+89,Duncan,David,Ochil Hill Runners,M60,0:44:30
+90,Law,David,Corstorphine,M50,0:44:46
+91,Essetly,Richard,Unattached,M50,0:45:01
+92,MacEwen,Alex,Edinburgh AC,M60,0:45:39
+93,Walker,Sean,Carnethy,M40,0:45:49
+94,Tyler,Caroline,Norham RC,F50,0:45:54
+95,Humphries,Hannah,Norham RC,F40,0:45:56
+96,Taylor,Lucy,HBT,F,0:46:01
+97,Hopley,Marianne,Portobello,M,0:46:30
+98,Ross,Fiona,Unattached,F,0:46:50
+99,Thin,Joanne,Carnethy,F50,0:46:56
+100,Downie,Chris,Penicuik Harriers,M50,0:47:08
+101,Horsburgh,Jill,Linlithgow Harriers,F50,0:47:09
+102,McPherson,Hugh,Tinto Hill Runners,M60,0:47:17
+103,Coltman,Alan,Teviotdale Harriers,M50,0:47:26
+104,Heathcote,Rachel,HBT,F,0:47:35
+105,Howie,Brian,Carnethy,M60,0:47:40
+106,Warner,Mark,HBT,M50,0:48:09
+107,Kechagias,Antonis,Unattached,M40,0:48:39
+108,Stevenson,Eric,Edinburgh AC,M60,0:48:55
+109,Fraser,Ronald,Dundee Road Runners,M50,0:50:54
+110,Knox,Bill,Teviotdale Harriers,M60,0:51:19
+111,Gauld,Bill,Carnethy,M60,1:03:02

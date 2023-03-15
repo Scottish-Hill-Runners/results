@@ -1,0 +1,94 @@
+RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
+1,Gristwood,Graham,Ochil Hill Runners,M,0:48:46
+2,Normand,Andrew,Carnethy,M,0:48:46
+3,Campbell,Ross,Highland Hill Runners,M,0:51:08
+4,Rees,Logan,Fife AC,M,0:51:30
+5,Gilmore,Andrew,Highland Hill Runners,M,0:51:51
+6,Gilmore,Iain,Carnethy,M,0:51:52
+7,Bannerman,Ross,East Sutherland,M40,0:52:31
+8,Fulton,David,HBT,M,0:52:41
+9,Smith,Alan,Deeside Runners,M50,0:53:15
+10,Cox,Andrew,Moorfoot Runners,M,0:53:16
+11,Crowe,Des,Penicuik Harriers,M50,0:53:28
+12,Hammond,John,Carnethy,M,0:53:46
+13,Nash,Graham,Carnethy,M40,0:53:50
+14,Mackie,Peter,Shettleston Harriers,M,0:54:37
+15,Denovan,John,Tartan Warrior,M,0:55:14
+16,Fraser,Gary,Ochil Hill Runners,M40,0:55:17
+17,Mardall,Nick,Deeside Runners,M40,0:55:18
+18,Gilmore,Neil,Carnethy,M50,0:57:17
+19,Baxter,Grant,Ochil Hill Runners,M40,0:57:35
+20,Weir,Nick,Carnegie Harriers,M40,0:58:06
+21,Coombs,Richard,Ochil Hill Runners,M40,0:58:25
+22,Norwood,Tim,Corstorphine,M,0:58:27
+23,Inman,Jason,Ochil Hill Runners,M40,0:59:06
+24,Rees,Roger,Fife AC,M40,0:59:22
+25,Manson,Alan,Ochil Hill Runners,M50,0:59:27
+26,Darling,Christopher,Lomond Hill Runners,M,0:59:33
+27,Buckden,David,Unattached,M,0:59:44
+28,Preiss,Alastair,Ochil Hill Runners,M40,1:00:42
+29,Bowden,James,HBT,M,1:00:45
+30,Houston,Val,Westerlands,F40,1:00:50
+31,Higginbottom,Jacqui,Carnethy,F40,1:01:17
+32,Anderson,Laurie,Lomond Hill Runners,M50,1:01:31
+33,Pryde,Gordon,Lomond Hill Runners,M50,1:01:38
+34,Roberts,Jeff,Carnethy,M,1:02:32
+35,Allan,Craig,Unattached,M,1:02:59
+36,Davis,Duncan,Carnethy,M40,1:03:01
+37,Belleni,Lawrence,Unattached,M,1:03:03
+38,Elliot,Mike,Unattached,M,1:03:07
+39,McCallum,Mark,Unattached,M,1:04:10
+40,Arthur,John,Fusion Triathlon,M40,1:04:15
+41,Barbour,Hamish,Bellahouston RR,M50,1:04:25
+42,Munro,Frazer,Kinross Road Runners,M40,1:04:53
+43,McGavock,Russell,Unattached,M,1:04:58
+44,Templeman,Simon,Ochil Hill Runners,M40,1:05:14
+45,Lee,Doug,Westerlands,M50,1:05:21
+46,Galloway,Stewart,Unattached,M40,1:05:31
+47,Fleming,Rod,Westerlands,M,1:06:05
+48,Sleggs,Paul,HBT,M,1:06:11
+49,Hulme,Martin,Corstorphine,M60,1:06:13
+50,McCloy,David,Unattached,M40,1:06:25
+51,Semple,Hamilton,Westerlands,M50,1:06:34
+52,Bowman,Angus,Lomond Hill Runners,M50,1:06:47
+53,Connor,Julia,Unattached,F40,1:06:54
+54,Macdougall,Colin,Tinto Hill Runners,M40,1:06:57
+55,Roberts,Nigel,Stirling Tri Club,M50,1:07:31
+56,Lye,Mary,Carnethy,F,1:07:32
+57,Duncan,David,Ochil Hill Runners,M50,1:07:39
+58,James,Margo,Westerlands,F50,1:08:14
+59,Wilson,Joan,Lomond Hill Runners,F50,1:08:37
+60,Gardiner,Paula,Westerlands,F40,1:08:45
+61,Wilson,Colin,Lomond Hill Runners,M50,1:08:59
+62,Scott,David,Unattached,M,1:09:10
+63,Cunningham,Lindsay,Milburn Harriers,M40,1:09:14
+64,Stakes,David,Unattached,M50,1:09:54
+65,Quinn,John,Westerlands,M50,1:10:25
+66,Johnston,Stephen,Milburn Harriers,M50,1:11:23
+67,McGavock,Ronnie,Bellahouston RR,M50,1:11:44
+68,Caborn,David,Unattached,M50,1:11:52
+69,Baxter,Katy,Ochil Hill Runners,F40,1:11:58
+70,Quigley,Joda,Tartan Warrior,F,1:12:51
+71,Douglas,George,Westerlands,M40,1:12:58
+72,Maass,Digby,Carnethy,M60,1:13:47
+73,Fischer,Christine,Unattached,F,1:16:08
+74,Couper,Stephen,Unattached,M,1:16:12
+75,Ledlie,Colin,Carnethy,M40,1:16:39
+76,Ross,Alan,Unattached,M,1:17:35
+77,Law,David,Corstorphine,M50,1:18:00
+78,Wise,Helen,Carnethy,F,1:18:03
+79,Stubbs,Dave,Unattached,M40,1:18:06
+80,Gillespie,Gaynor,Westerlands,F40,1:18:53
+81,Fisher,David,Unattached,M50,1:19:08
+82,Gillan,William,Unattached,M50,1:19:13
+83,Cheetham,Andy,IMRA,M,1:19:50
+84,Davidson,Stewart,Fife AC,M60,1:20:38
+85,Gayle,Vernon,Forth Valley Orienteers,M40,1:22:15
+86,Cheetham,Bronagh,IMRA,F,1:22:16
+87,Godfrey,Kevin,Lothian,M40,1:22:17
+88,Butler,Thomas,Ochil Hill Runners,M40,1:22:23
+89,McAlpine,Roddy,Unattached,M50,1:26:49
+90,McNee,Lucy,Ochil Hill Runners,F40,1:27:39
+91,Davidson,Chris,Perth Tri Club,M,1:33:37
+92,Coyle,Caroline,Unattached,F,1:33:37
+93,Fairley,Bill,Carnegie Harriers,M70,1:41:54

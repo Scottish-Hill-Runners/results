@@ -1,0 +1,91 @@
+RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
+1,Haines,Hector,HBT,M,0:15:46
+2,Tullie,Douglas,HBT,M,0:16:09
+3,O`Boyle,Seamus,CNOC,M,0:17:22
+4,Gilmore,Andrew,Highland Hill Runners,M,0:17:38
+5,Wiseman,Bob,Ochil Hill Runners,M,0:17:43
+6,Johnston,Fergus,Carnethy,M,0:17:53
+7,Callender,James,Westerlands,M,0:18:08
+8,Bland,Gavin,Borrowdale Fell Runners,M40,0:18:17
+9,Foss,Luke,Law & District,M18,0:18:42
+10,Morgan,Charlotte,Carnethy,F,0:18:45
+11,Robertson,Ally,Carnethy,M,0:18:54
+12,Cox,Andrew,Moorfoot Runners,M,0:18:58
+13,Geoghegan,Michael,Portobello,M,0:19:03
+14,Scott,Fraser,Lomond Hill Runners,M,0:19:09
+15,Smith,Bruce,Carnethy,M40,0:19:16
+16,Gilmore,Iain,Carnethy,M18,0:19:22
+17,O`Neill,Owen,Westerlands,M,0:19:36
+18,Tullie,John,Teviotdale Harriers,M50,0:19:42
+19,Bowden,James,HBT,M,0:19:48
+20,Colquhoun,Neil,Edinburgh Uni H&H,M,0:19:49
+21,Davis,Matt,Carnethy,M40,0:19:53
+22,Brooks,Mike,Penicuik Harriers,M40,0:20:15
+23,Pryde,Gordon,Lomond Hill Runners,M50,0:20:27
+24,Gilmore,Neil,Carnethy,M40,0:20:29
+25,McDonald,A,Unattached,M,0:20:31
+26,Jarvis,James,HBT,M40,0:20:36
+27,Shepherd,Andrew,Carnethy,M50,0:20:46
+28,Walkinshaw,Alick,Tinto Hill Runners,M50,0:20:53
+29,Semple,Craig,Unattached,M40,0:21:07
+30,Reid,Don,Westerlands,M50,0:21:08
+31,Maxwell,Kirstin,Gala Harriers,F,0:21:29
+32,Riddell,Duncan,Westerlands,M40,0:21:42
+33,Ryan,John,Carnethy,M,0:21:46
+34,Balfour,Eddie,Moorfoot Runners,M40,0:21:55
+35,Stewart,Alister,Tinto Hill Runners,M40,0:21:58
+36,Bennet,Sandy,Unattached,M40,0:22:08
+37,Short,Ruaridh,Edinburgh Uni H&H,M,0:22:16
+38,Davie,Kevin,Carnegie Harriers,M,0:22:19
+39,Patterson,Robert,Unattached,M,0:22:21
+40,Paul,Alastair,Northumberland FR,M50,0:22:28
+41,Harding,Rebecca,HBT,F,0:22:32
+42,Wright,Graham,HBT,M50,0:22:39
+43,Ward,Stewart,Tinto Hill Runners,M40,0:22:44
+44,Anderson,Russell,Moorfoot Runners,M50,0:22:49
+45,Wesencraft,David,Unattached,M40,0:23:01
+46,Reynolds,Colin,Carnegie Harriers,M40,0:23:17
+47,Dunn,Gavin,Tinto Hill Runners,M,0:23:47
+48,Blair-Fish,John,Carnethy,M60,0:23:52
+49,Linsefors,Sanna,Sweden,F,0:24:10
+50,Whitehead,Jonathan,Carnethy,M50,0:24:11
+51,Ledlie,Colin,Carnethy,M40,0:24:15
+52,Huntley,Chris,Tinto Hill Runners,M50,0:25:13
+53,Morris,Robin,Lothian,M60,0:25:18
+54,Sinclair,Melanie,Unattached,F40,0:25:31
+55,Hatton,P,Unattached,M40,0:25:41
+56,Cranston,Robert,Teviotdale Harriers,M40,0:25:45
+57,Butler,Thomas,Ochil Hill Runners,M40,0:25:46
+58,McAdam,Pauline,Teviotdale Harriers,F50,0:25:47
+59,Struthers,Mairi,Tinto Hill Runners,F,0:25:48
+60,Baker,Duncan,HBT,M40,0:25:55
+61,Dalitz,Rod,Carnethy,M60,0:26:05
+62,Sloan,Robin,Carnethy,M60,0:26:08
+63,Drain,Alex,Troon Tortoises,M50,0:26:27
+64,McPherson,Hugh,Tinto Hill Runners,M60,0:26:30
+65,Maxwell,Karen,Gala Harriers,F18,0:27:22
+66,Reid,Kenny,Tinto Hill Runners,M50,0:27:37
+67,Macdougall,Ken,Tinto Hill Runners,M40,0:28:18
+68,McCallum,K,Unattached,M40,0:28:49
+69,Maxwell,Susie,Penicuik Harriers,F40,0:29:05
+70,Oddie,Maureen,IOM Vets,F50,0:29:07
+71,Stapley,Tony,Portobello,M60,0:30:32
+72,Boal,John,Garscube Harriers,M60,0:30:52
+73,Brown,David,Tinto Hill Runners,M40,0:31:00
+74,Jenkins,Mesha,Tinto Hill Runners,F40,0:31:39
+75,Boal,Ann,Garscube Harriers,F50,0:32:18
+76,Bennet,Bill,Penicuik Harriers,M60,0:32:35
+77,Reid,Gillian,Unattached,F40,0:32:57
+78,Lloyd,Gillian,Unattached,F,0:32:58
+79,Lloyd,Simon,Unattached,M,0:33:00
+80,Scullard,Derek,Unattached,M50,0:33:07
+81,Ward,Steven,Unattached,M,0:33:12
+82,Forrest,Margaret,Carnethy,F50,0:33:27
+83,Loudon,Kirsty,Penicuik Harriers,F40,0:34:27
+84,Mourne,Pip,Tinto Hill Runners,F40,0:34:47
+85,Tingling,Warren,Unattached,M40,0:35:01
+86,Gray,Robin,Unattached,M,0:36:40
+87,Boal,Cameron,Unattached,M,0:37:19
+88,Lyon,Sean,Unattached,M40,0:39:51
+89,Thomson,M,Unattached,F40,0:42:43
+90,Lyon,Vicki,Penicuik Harriers,F,0:45:36

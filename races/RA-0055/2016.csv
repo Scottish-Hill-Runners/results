@@ -1,0 +1,108 @@
+RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
+1,Martyn,Tom,HBT,M,0:37:41
+2,Naylor,Donald,HBT,M40,0:38:52
+3,Gilmore,Iain,Carnethy,M,0:40:23
+4,King,Andrew,Lothian,M,0:40:47
+5,Addie,James,Dunbar RC,M,0:41:17
+6,Hammond,John,Carnethy,M,0:41:48
+7,Millar,David,Ochil Hill Runners,M40,0:41:58
+8,Donnelly,Colin,Cambuslang Harriers,M50,0:42:17
+9,Muir,Jonny,Carnethy,M,0:42:30
+10,Ross,Kent,Unattached,M40,0:42:37
+11,Craighead,Scott,Carnethy,M,0:42:48
+12,Hart,Al,HBT,M40,0:43:09
+13,Reeve,Andrew,HBT,M,0:43:10
+14,Buchanan,Peter,Portobello,M50,0:43:13
+15,Hardie,James,Carnethy,M,0:43:18
+16,Gardner,Peter,HBT,M,0:43:32
+17,Griffin,Tim,Unattached,M40,0:43:54
+18,Heap,John,Hallamshire Harriers,M40,0:44:21
+19,Gilmore,Neil,Carnethy,M50,0:44:27
+20,Rowland,Ian,Dunbar RC,M50,0:44:31
+21,Williamson,Nick,Dunbar RC,M40,0:44:33
+22,McDonald,Alistair,Morpeth Harriers,M,0:44:48
+23,Freshwater,Craig,HBT,M,0:44:52
+24,Stephen,Jill,HBT,F,0:44:56
+25,James,Mark,Carnethy,M50,0:45:01
+26,McMullan,George,Norham RC,M40,0:45:29
+27,Tinning,Chris,Carnethy,M40,0:45:51
+28,Boustred,Chris,Carnethy,M,0:45:56
+29,Mykura,Jill,Carnethy,F40,0:46:06
+30,Rathjen,Jon,HBT,M40,0:46:22
+31,Taylor,Craig,Portobello,M40,0:46:24
+32,Gardiner,Douglas,Carnethy,M40,0:46:25
+33,Wyatt,Neal,Dunbar RC,M40,0:46:33
+34,Duncan,Eric,Highland Hill Runners,M40,0:46:39
+35,Crane,Steve,Portobello,M50,0:46:45
+36,Lyall,Marcus,Unattached,M,0:47:12
+37,Lye,Mary,Carnethy,F40,0:47:18
+38,MacQueen,Douglas,Carnethy,M,0:47:29
+39,Hogg,Alan,Carnethy,M50,0:47:39
+40,Wright,Megan,HBT,F40,0:47:42
+41,Inglis,Alan,Teviotdale Harriers,M40,0:47:46
+42,Tindley,Georgia,HBT,F,0:48:04
+43,Peebles,Murray,Dunbar RC,M,0:48:07
+44,Cameron,Gordon,Carnethy,M50,0:48:21
+45,Davis,Duncan,Carnethy,M40,0:48:43
+46,Murphy,Lee,Carnethy,M40,0:48:46
+47,Wilson,Andrew,Carnethy,M,0:48:49
+48,Twist,Gary,Unattached,M,0:48:55
+49,Fraser,Doug,Musselburgh AC,M40,0:49:05
+50,Hartree,Mark,Carnethy,M40,0:49:35
+51,Hadfield,Richard,Portobello,M40,0:49:42
+52,Hardy,Mark,Carnethy,M,0:49:49
+53,Telford,Roger,HELP,M40,0:49:56
+54,Anderson,Rhona,Dunbar RC,F50,0:50:02
+55,McInnes,Graham,HELP,M40,0:50:21
+56,Western,Mark,Falkland Trail Runners,M50,0:50:27
+57,Western,Mary,Carnegie Harriers,F50,0:50:41
+58,Anderson,Laurie,Lomond Hill Runners,M50,0:50:46
+59,Owens,Phil,Portobello,M,0:50:55
+60,Holmes,Martin,Unattached,M50,0:52:07
+61,Rosbottom,Anne,Wirral AC,F40,0:52:10
+62,Shearer,Colin,The Bicycleworks,M50,0:52:23
+63,McKiddie,Christopher,Westerlands,M,0:52:41
+64,Astley-Jones,Adrian,Unattached,M40,0:53:03
+65,Weir,Robbie,Chirnside Chasers,M,0:53:05
+66,O'Craoy,Connor,Unattached,M,0:53:07
+67,Skelhorn,Andy,Macclesfield Harriers,M50,0:53:23
+68,Wright,Fiona,Portobello,F40,0:53:27
+69,Duncan,Andy,Musselburgh AC,M40,0:53:48
+70,Doig,Lindsay,Carnethy,F,0:53:53
+71,Kilpatrick,Deborah,Ochil Hill Runners,F,0:54:52
+72,Hartree,Finlay,Carnethy,M,0:54:59
+73,Hoppe,Michael,HELP,M,0:55:00
+74,Kennedy,Mark,Portobello,M50,0:55:12
+75,Healy,Sarah,Musselburgh AC,F,0:55:21
+76,Bouchier,Shane,Carnethy,M40,0:55:26
+77,Russell,David,Unattached,M40,0:55:28
+78,Blackley,Lisa,Unattached,F,0:55:34
+79,Mitchell,Darren,Portobello,M,0:56:08
+80,Downie,Chris,Penicuik Harriers,M50,0:56:10
+81,Falconer,Helen,Portobello,F,0:56:20
+82,McKinley,Norrie,HELP,M40,0:56:35
+83,Stavert,Andrew,Portobello,M50,0:56:54
+84,Harding,Tim,Unattached,M50,0:57:01
+85,MacDonald,Martin,HELP,M50,0:57:19
+86,Lockie,Paul,Teviotdale Harriers,M40,0:57:30
+87,Ridyard,Alison,HBT,F40,0:57:41
+88,Tait,Jamie,Unattached,M,0:57:50
+89,Maass,Digby,Carnethy,M60,0:57:51
+90,Guy,Craig,Unattached,M,0:57:55
+91,Napier,Alan,Unattached,M,0:58:03
+92,Mearns,Kenny,Lothian,M50,0:58:04
+93,MacInnes,Garry,Carnethy,M50,0:58:19
+94,Marshal,Sheena,Unattached,F,0:58:32
+95,Howie,Brian,Carnethy,M60,0:58:33
+96,Elliott,Billy,Carnethy,M50,0:59:04
+97,Redpath,Owen,Musselburgh AC,M,0:59:11
+98,Elliott,Dorothy,Carnethy,F40,0:59:33
+99,Middler,Lessel,Unattached,M60,1:00:01
+100,McNeillage,Alison,HBT,F40,1:00:23
+101,Leigh,Kay,Unattached,F,1:00:51
+102,Simpson,Alan,Portobello,M60,1:01:32
+103,Chandler,Richard,Carnethy,M50,1:01:57
+104,Campbell,Ian,HBT,M50,1:02:08
+105,Grant,Andy,Unattached,M60,1:02:27
+106,Deighbour,Tim,Jog Scotland,M50,1:10:15
+107,Russell,Robert,Unattached,M70,1:10:37

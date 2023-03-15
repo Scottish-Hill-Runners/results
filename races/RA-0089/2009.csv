@@ -1,0 +1,97 @@
+RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
+1,Simpson,Robbie,Deeside Runners,MJ,0:28:42
+2,Rodgers,David,Lochaber AC,M40,0:29:08
+3,Wright,Andrew,PH Racing,M,0:29:13
+4,Donnelly,Colin,Cambuslang Harriers,M40,0:29:32
+5,Gorman,Manny,Westerlands,M40,0:31:27
+6,Williamson,Matt,Blane Runners,M,0:32:00
+7,Waldie,James,HBT,MJ,0:32:23
+8,Burns,Stephen,Lochaber AC,M,0:32:26
+9,Woods,John,Morpeth Harriers,M,0:32:50
+10,Smith,Alan,Deeside Runners,M40,0:32:52
+11,Riach,David,Westerlands,M40,0:33:11
+12,Nash,Graham,Carnethy,M40,0:33:19
+13,Hepburn,John,Lochaber AC,M40,0:33:32
+14,Upson,Chris,Westerlands,M40,0:33:50
+15,MacLean,Paul,Lochaber AC,M,0:33:53
+16,Malcolm,Stuart,Highland Hill Runners,M40,0:34:01
+17,McLoone,Stephen,Greenock Glenpark Harriers,M40,0:34:27
+18,Carroll,Bradley,Unattached,M,0:35:12
+19,Hansen,Jacob,FIF Hillerød,M,0:35:50
+20,Bass,Owen,Solway,M40,0:35:53
+21,Jarvis,James,HBT,M,0:36:05
+22,Kelly,Graham,Westerlands,M40,0:36:07
+23,Larsen,Mads,FIF Hillerød,M,0:36:09
+24,Rogers,David,Westerlands,M40,0:36:34
+25,Stevenson,John,Ochil Hill Runners,M40,0:36:48
+26,Brooks,Graham,Lochaber AC,M50,0:36:53
+27,Brydie,Chris,Unattached,M,0:36:54
+28,Dixon,Mike,CBNSC,M40,0:37:03
+29,Forrest,Stuart,Highland Hill Runners,M,0:37:26
+30,Devine,John,Unattached,M,0:37:39
+31,Irvine,Hamish,Highland Hill Runners,M40,0:38:06
+32,Duncan,David,Ochil Hill Runners,M50,0:38:07
+33,Buckden,David,Unattached,M,0:38:07
+34,MacBeath,Niall,Lochaber AC,M40,0:38:19
+35,Irvine,Gill,Highland Hill Runners,F40,0:38:21
+36,Calder,Dave,Westerlands,M40,0:38:36
+37,Homewood,Ellen,Westerlands,F,0:38:37
+38,Armitage,Rachel,Inverness Harriers,FJ,0:38:39
+39,MacLeod,Murdo,Westerlands,M50,0:38:47
+40,Hunter,Alan,Ochil Hill Runners,M40,0:39:50
+41,Macnab,Graham,Lochaber AC,M40,0:39:52
+42,Hague,Peter,Cairngorm Runners,M40,0:40:18
+43,O`Rourke,Alan,Greenock Glenpark Harriers,M,0:40:24
+44,Semple,Hamilton,Westerlands,M50,0:40:25
+45,Paul,Alastair,Northumberland FR,M50,0:40:27
+46,Henderson,Iain,Lochaber AC,M,0:40:32
+47,Brennan,Brian,Westerlands,M50,0:40:35
+48,Wilson,Colin,Lomond Hill Runners,M40,0:40:36
+49,Waldie,John,Cornwall AC,M40,0:40:38
+50,Slimon,Cathy,Highland Hill Runners,F,0:40:42
+51,Hall,Jim,Badenoch,M50,0:40:44
+52,MacSween,Alastair,Wee County Harriers,M40,0:42:19
+53,Simpson,Jane,Bellahouston RR,F,0:42:19
+54,Harrington,Mick,Greenock Glenpark Harriers,M40,0:42:29
+55,Williamson,Dermot,Garscube Harriers,M50,0:43:08
+56,Mott,Andrew,Westerlands,M,0:43:29
+57,Weir,Jonathan,Unattached,M,0:43:42
+58,Robertson,David,Unattached,M40,0:43:50
+59,Stewart,Jim,Lochaber AC,M50,0:43:51
+60,Fisher,Catriona,Westerlands,F,0:43:52
+61,MacIntyre,Calum,East Sutherland,MJ,0:44:00
+62,Rogan,Kirstie,Moray Road Runners,FJ,0:44:07
+63,Ferguson,Allan,Forfar Road Runners,M,0:44:26
+64,Berrie,Peter,Lochaber AC,M50,0:44:35
+65,Jelly,Ewan,Perth Road Runners,M,0:44:59
+66,Molero,Luis,Lauderdale Limpers,M,0:45:12
+67,Wilson,Joan,Lomond Hill Runners,F40,0:45:21
+68,O`Kane,John,Lochaber AC,M40,0:45:33
+69,Campbell,Ian,HBT,M40,0:46:02
+70,Clark,Chris,Keswick AC,M50,0:46:15
+71,Smith,Tilly,Deeside Runners,F40,0:46:28
+72,Calder,Muffy,Westerlands,F50,0:47:15
+73,Campbell,Steven,Greenock Glenpark Harriers,M,0:47:23
+74,Coyle,Caroline,Unattached,F,0:47:35
+75,Macpherson,Angus,Unattached,M50,0:47:57
+76,Clark,Kim,Keswick AC,F40,0:48:34
+77,Burn,Stewart,Forres Harriers,M50,0:48:41
+78,Porteous,Peter,Unattached,M60,0:49:32
+79,Ross,Susan Jane,Lochaber AC,F40,0:49:37
+80,Martin,Ciaran,Dulwich Park Runners,M,0:49:49
+81,Jardine,Jimmy,Lochaber AC,M60,0:50:04
+82,Beck,Lesley,Unattached,F40,0:51:27
+83,Kitson,Aileen,Lochaber AC,F50,0:52:40
+84,McGlone,Laura,Unattached,FJ,0:52:40
+85,McManus,Ian,Irvine RC,M60,0:52:58
+86,Spittle,Julie,Cairngorm Runners,F40,0:53:25
+87,Hogg,Sharon,Unattached,F,0:53:25
+88,Craig,Jude,Unattached,M40,0:55:09
+89,Johnston,Alison,HBT,F40,0:55:12
+90,MacIntyre,Anne,Kinross Road Runners,F50,0:56:46
+91,Guigou,Gabriel,Unattached,M,0:57:17
+92,Digby,Olivia,Unattached,FJ,0:58:38
+93,Benny,Graham,Westerlands,M60,1:00:09
+94,Hall,Jeremy,Unattached,M,1:00:09
+95,Fox,Sandra,Unattached,F,1:02:40
+96,Sharp,George,Unattached,M70,1:26:02

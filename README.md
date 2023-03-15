@@ -1,38 +1,39 @@
-# create-svelte
+# SHR result site builder
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+This is the build project for the SHR results site. This site builder is distinct from the public result site itself. Here you will find the raw results data for hill races plus some information about the races themselves, together with some program code that converts the raw data into an optimised web site.
 
-## Creating a project
+The entire public site is re-built every time any results are added or updated (i.e., committed to the master branch). Normally, a commit will trigger the re-build steps automatically, but a re-build can be manually performed using the command `npm build`.
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Results
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+The results for each hill race event are stored in the `races` folder, and there is a sub-folder for each race. The name of the sub-folder is the race id. If you are entering the first results for a new race, just choose the next available race id, keeping to the same format (`RA-nnnn`).
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+The results for each year are in a file of the form `yyyy.csv`. The columns must be
+`RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime` (case-sensitive).
 
-## Developing
+If the race was run on a shortened course then you can place an asterisk (`*`) after the year to indicate this. For example, `2017*.csv`. Filters will be provided to allow users to exclude these when sorting.
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+If the race is held twice in the same year, add a suffix to distinguish them; e.g. `2018-s.csv` (for summer) and `2018-w.csv` (for winter).
 
-```bash
-npm run dev
+In addition, a blurb about the race is expected to be found in an `index.md` file. This must start with some required information about the race (`title`, `venue`, `distance`, `climb`), and other optional fields. The file uses CommonMark format (<https://spec.commonmark.org/0.30/>).
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+## Club information
 
-## Building
+Club information is yet to be added. It will likely take the form of a directory `clubs` containing a file for each "interesting" club (e.g. having a web site or other
+contact details). Views will be provided to select results by club.
 
-To create a production version of your app:
+## Other files
 
-```bash
-npm run build
-```
+`package.json`, `package-lock.json`, `svelte.config.js`, `tsconfig.js`, `vite.config.ts`, `src/app.html` and `src/error.html` are configuration files for the various build tools.
 
-You can preview the production build with `npm run preview`.
+`src/pre-build.ts` is a script that performs an initial translation of results data into a form suitable for the rest of the build pipeline.
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+`routes/+page.svelte` is the landing page for the public site.
+
+`src/lib` contains components used by the site builder.
+
+The `static` folder contains any data that needs to be copied to the final site without further processing, such as image files and icons.
+
+## Process for updating results
+
+TODO.

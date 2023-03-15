@@ -1,0 +1,115 @@
+RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
+1,Wild,Finlay,Lochaber AC,M,0:33:19
+2,Yells,John,Lochaber AC,M,0:34:29
+3,McAlinden,Niall,Westerlands,M,0:36:40
+4,Fisher,Sam,Howgill Harriers,M,0:36:47
+5,Austin,Marc,Howgill Harriers,M,0:37:14
+6,Harvey,Dougie,Lochaber AC,M,0:37:45
+7,Stewart,Gregor,Westerlands,M,0:37:53
+8,Richmond,Kenny,Shettleston Harriers,M40,0:38:14
+9,Beresford,Will,Westerlands,M,0:38:20
+10,Carter,Justin,Cambuslang Harriers,M40,0:38:59
+11,Cope,David,Howgill Harriers,M,0:39:04
+12,McPartlin,Donald,Garscube Harriers,M,0:39:21
+13,Freshwater,Craig,HBT,M,0:39:32
+14,Traill,Steven,Lochaber AC,M,0:40:04
+15,Bowden,James,HBT,M,0:40:13
+16,Hamlin,Robert,Westerlands,M,0:40:33
+17,Dytch,Ewan,Unattached,M,0:40:52
+18,Warman,Julian,HBT,M50,0:40:57
+19,MacInnes,Alasdair,Westerlands,M,0:40:59
+20,Stephen,Jill,HBT,F,0:41:00
+21,Murphy,Ben,HBT,M,0:41:11
+22,MacLeod,James,Garscube Harriers,M,0:41:15
+23,Cornock,Paul,Shettleston Harriers,M,0:41:22
+24,Godwin,Adam,Rossendale,M,0:41:23
+25,Mackellaig,Iain,Lochaber AC,M50,0:41:24
+26,Macdonald,Matthew,Lochaber AC,M,0:41:30
+27,Callender,James,Westerlands,M,0:41:59
+28,MacKenzie,Fraser,Lochaber AC,M,0:42:13
+29,Glencorse,Colin,Kilmarnock Harriers,M40,0:42:32
+30,McCall,Andrew,Greenock Glenpark Harriers,M,0:42:59
+31,Marshall,Brian,HELP,M40,0:43:01
+32,Campbell,Alan,Unattached,M40,0:43:14
+33,O`Neill,Owen,Westerlands,M,0:43:16
+34,Matthews,Robert,Westerlands,M,0:43:17
+35,Harper,Paul,Unattached,M,0:43:35
+36,Riggans,Liam,Carnethy,M,0:43:51
+37,Drysdale,Simon,Lochaber AC,M,0:43:59
+38,Brown,Gareth,North Ayrshire AC,M,0:44:04
+39,MacKintosh,Hugh,Lochaber AC,M50,0:44:41
+40,Chetwin,Derek,Matlock AC,M,0:45:19
+41,McCaffrey,Gordon,Westerlands,M60,0:45:24
+42,Dickson,David,Westerlands,M60,0:45:27
+43,Fulton,David,HBT,M,0:45:36
+44,Lorimer,Hayden,HBT,M40,0:45:46
+45,McKiddie,Christopher,Westerlands,M,0:45:54
+46,Weir,Jonathan,Unattached,M40,0:45:55
+47,McLaughlin,Danny,Greenock Glenpark Harriers,M60,0:46:13
+48,Bayliss,Simon,Steel City Striders,M50,0:46:31
+49,Reid,Don,Westerlands,M60,0:46:33
+50,McGeoch,Ross,Bellahouston RR,M40,0:46:35
+51,Poulter,Alwyn,Unattached,M,0:46:53
+52,Finch,Tom,Westerlands,M,0:47:03
+53,Wheeler,Mark,Hamilton Harriers,M40,0:47:10
+54,Normand,Ivor,HBT,M50,0:47:13
+55,Watson,Dan,Lochtayside,M50,0:47:24
+56,Simpson,Stuart,Stornoway AC,M40,0:47:26
+57,Maclean,Robert,Lochaber AC,M50,0:47:31
+58,Roper,Marc,Westerlands,M50,0:47:45
+59,Berry,Alex,Westerlands,F,0:47:50
+60,Butler,Chris,Westerlands,M,0:48:40
+61,Dunn,Michael,Greenock Glenpark Harriers,M60,0:48:44
+62,Edwards,Barry,Bellahouston RR,M,0:48:45
+63,Furse,Chris,Westerlands,M50,0:48:48
+64,McEwan,Iain,Helensburgh AAC,M40,0:49:04
+65,Kelly,Graham,Westerlands,M50,0:49:15
+66,Brodie,Stuart,Ochil Hill Runners,M,0:49:18
+67,Edwards,Colin,Ochil Hill Runners,M40,0:49:32
+68,Adams,Elizabeth,Westerlands,F,0:49:33
+69,Crawford,Ross,Unattached,M40,0:49:40
+70,Atkin,David,Westerlands,M60,0:49:42
+71,Walker,Neil,Unattached,M40,0:49:55
+72,King,Gordon ,Clyderunners,M60,0:50:06
+73,MacDonald,Elsie,Garscube Harriers,F,0:50:41
+74,Lampard,Stuart,Unattached,M50,0:50:43
+75,Craig,Stephen,Garscube Harriers,M,0:50:54
+76,Shaw,Trevor,Lochtayside,M50,0:51:13
+77,Brennan,Brian,Westerlands,M60,0:51:24
+78,Pugh,Roderick,Kilmarnock Harriers,M60,0:51:04
+79,Johnston,Stephen,Milburn Harriers,M50,0:51:46
+80,Cunningham,Kerry,Westerlands,F,0:51:51
+81,Pettigrew,Iain,Ayr Seaforth,M50,0:52:20
+82,Fileman,Megan,Westerlands,F,0:52:30
+83,MacLeod,Murdo,Westerlands,M60,0:52:49
+84,Fullwood,Andrew,Westerlands,M50,0:53:18
+85,Bowman,Angus,Lomond Hill Runners,M60,0:53:23
+86,O'Rourke,Michael,Unattached,M,0:53:36
+87,Boyer,Alistair,Westerlands,M,0:53:59
+88,Eadsforth,Holly,Westerlands,F,0:54:27
+89,Murray,Alicia,Unattached,F,0:54:31
+90,Fitzpatrick,Pat,Ochil Hill Runners,M60,0:54:34
+91,Duncan,David,Ochil Hill Runners,M60,0:54:53
+92,Matthews,Luci,Westerlands,F,0:55:19
+93,Forte,Phil,Dundee Hawkhill,M60,0:55:22
+94,Douglas,George,Westerlands,M50,0:55:41
+95,Crawford,Eddie,Arrochar MRT,M40,0:56:03
+96,Gray,Laura,Garscube Harriers,F,0:56:13
+97,Gall,Allan,Central AC,M60,0:56:28
+98,McAdam,Chloe,Garscube Harriers,F,0:56:35
+99,Bruce,Duncan,North Ayrshire AC,M40,0:56:40
+100,Farquhar,Angus,Westerlands,M50,0:58:00
+101,Stakes,David,Unattached,M50,0:58:22
+102,Urquhart,William,Unattached,M50,0:58:58
+103,Fleming,Rod,Westerlands,M,0:59:12
+104,McGreevy,Kay,British Military Fitness,F50,0:59:22
+105,Hamer,John,Westerlands,M50,0:59:38
+106,Kennedy,Ewen,Westerlands,M,0:59:40
+107,McArthur,Claire,Hamilton Harriers,F40,1:00:03
+108,O'Brien,Audrey,Westerlands,F40,1:00:19
+109,Fraser,Ronald,Dundee Road Runners,M50,1:01:28
+110,Duff,Bill,Falkland Trail Runners,M70,1:01:33
+111,Bray,Stella,Westerlands,F,1:02:57
+112,McBeath,Kenneth,Unattached,M,1:04:57
+113,Davidson,Stewart,Fife AC,M60,1:08:48
+114,Fowler,Rosalind,Unattached,F40,1:10:32

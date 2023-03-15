@@ -1,0 +1,485 @@
+RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
+1,Jebb,Rob,Helm Hill Runners,M,0:47:59
+2,Lennox,Jethro,Shettleston Harriers,M,0:48:32
+3,Fraser,Scott,HBT,M,0:48:51
+4,Anthony,Alasdair,Ochil Hill Runners,M,0:49:50
+5,Donnelly,Morgan,Borrowdale Fell Runners,M,0:50:02
+6,Davies,Jim,Borrowdale Fell Runners,M40,0:51:34
+7,Marshall,Brian,HELP,M,0:51:47
+8,Wellock,Ian,HBT,M,0:52:19
+9,Strain,Murray,HBT,M,0:52:37
+10,Tresidder,Es,Lochaber AC,M,0:52:40
+11,Whitlie,Stewart,Carnethy,M40,0:53:37
+12,Schofield,Andrew,Borrowdale Fell Runners,M,0:54:10
+13,Ward,Ray,HBT,M,0:54:16
+14,Thin,Jamie,HBT,M,0:54:28
+15,Peachey,Simon,Cosmics,M,0:54:38
+16,Campbell,Ruairidh,Arbroath Footers,M,0:54:40
+17,Robertshaw,Andrew,Otley AC,M,0:54:47
+18,Watson,Cameron,Lomond Hill Runners,M,0:54:52
+19,Rodwell,Damon,Border Search and Rescue,M,0:55:02
+20,Patterson,Malcolm,Shettleston Harriers,M40,0:55:27
+21,Richmond,Kenny,Shettleston Harriers,M,0:55:35
+22,Gorman,Manny,Westerlands,M,0:55:49
+23,Davis,Adrian,Lomond Hill Runners,M40,0:56:02
+24,Scott,Nigel,Westerlands,M,0:56:04
+25,Mudge,Angela,Carnethy,F,0:56:09
+26,Upson,Chris,Westerlands,M40,0:56:26
+27,Smith,Tom,Lochaber AC,M,0:56:33
+28,Smith,Alan,Deeside Runners,M40,0:57:12
+29,Cunningham,Richie,Carnegie Harriers,M,0:57:18
+30,Ward,Adam,Carnethy,M40,0:57:32
+31,Hepburn,John,Lochaber AC,M40,0:57:37
+32,Wiseman,Bob,Ochil Hill Runners,M,0:57:38
+33,Jones,Huw,HBT,M,0:57:38
+34,Spenceley,Andy,Carnethy,M40,0:57:43
+35,Simpson,Stuart,Stornoway AC,M,0:58:00
+36,Sanderson,Stuart,Penicuik Harriers,M40,0:58:04
+37,Kitchin,Andy,Edinburgh RC,M40,0:58:06
+38,Faulkner,Paul,Carnethy,M,0:58:06
+39,McQueen,James,Eryri Harriers,M,0:58:09
+40,MacInnes,Garry,Carnethy,M40,0:58:18
+41,Whitelaw,Mark,Hartfell HRC,M,0:58:21
+42,Ascroft,Jon,Carnethy,M,0:58:21
+43,Fettes,Paul,Ochil Hill Runners,M,0:58:29
+44,White,Natalie,Kendal AC,F,0:58:41
+45,Gallagher,Ronnie,Carnethy,M40,0:58:43
+46,Bennet,Sandy,Unattached,M40,0:58:44
+47,Martin,Richard,Carnethy,M,0:58:47
+48,Fallon,Steven,Carnethy,M40,0:58:51
+49,Carroll,Peter,Unattached,M40,0:59:00
+50,Winn,Jackie,Ellenborough AC,M50,0:59:04
+51,McDonald,Dennis,Cosmics,M40,0:59:07
+52,Walser,Tobias,Heriot Watt,M,0:59:10
+53,Morgan,Chris,Unattached,M,0:59:17
+54,Holt,Jack,Clayton Le Moors,M50,0:59:30
+55,Kemp,Benjamin,Portobello,M,0:59:32
+56,Vecqueray,Richard,Eden Runners,M,0:59:55
+57,Stevenson,John,Ochil Hill Runners,M40,1:00:07
+58,Mitchell,Craig,Vegan Runners,M,1:00:20
+59,Cruickshank,Brian,Falkland Trail Runners,M40,1:00:25
+60,Smith,Bruce,Carnethy,M40,1:00:36
+61,Mykura,Jill,Carnethy,F,1:00:42
+62,McManus,Mark,Larne AC,M,1:00:44
+63,Munro,Graham,Lochaber AC,M,1:00:47
+64,Anderson,Russell,Moorfoot Runners,M40,1:00:50
+65,Pryce,Carl,Cosmics,M40,1:01:18
+66,Oliphant,Crawford,Carnethy,M,1:01:20
+67,Anderson,Adam,Hartfell HRC,M,1:01:24
+68,Birnie,Andy,Bellahouston RR,M,1:01:26
+69,Spencer,Dan,Larne AC,M,1:01:32
+70,Scott,Tom,Fife AC,M50,1:01:35
+71,Arnott,Neil,Carnegie Harriers,M,1:01:44
+72,Monro,Robert,Shettleston Harriers,M,1:01:56
+73,Britton,James,Carnethy,M,1:02:00
+74,MacMahon,Ken,Westerlands,M,1:02:01
+75,Barrie,Stewart,HBT,M40,1:02:05
+76,Burt,Cameron,Westerlands,M,1:02:05
+77,Davies,Chris,Carnethy,M,1:02:05
+78,Stephenson,Olly,Carnethy,M,1:02:11
+79,Neild,Paul,Bowland Fell Runners,M,1:02:21
+80,Anderson,Laurie,Lomond Hill Runners,M40,1:02:24
+81,Welsh,Ali,Bowland Fell Runners,M40,1:02:29
+82,Brunton,Alastair,Shettleston Harriers,M,1:02:30
+83,Houston,Ross,Central AC,M,1:02:37
+84,Atkinson,Ian,Helm Hill Runners,M,1:02:43
+85,Kay,John,Fife AC,M40,1:02:48
+86,Spedding,David,Keswick AC,M60,1:02:54
+87,Wombwell,Stephen,Beacon Runners,M40,1:02:57
+88,Edwards,Andy,Blane Runners,M,1:03:00
+89,Mestecky,Phil,Strathearn Harriers,M,1:03:02
+90,Hulme,Martin,Corstorphine,M50,1:03:03
+91,Taylor,Sharon,Helm Hill Runners,F,1:03:04
+92,Rumgay,Ken,Lochaber AC,M40,1:03:09
+93,Nicholas,Ed,HBT,M,1:03:11
+94,Hensman,Will,Central AC,M,1:03:13
+95,Scott,David,Ochil Hill Runners,M50,1:03:14
+96,Buchanan,Peter,Portobello,M40,1:03:15
+97,Longhurst,Gary,Unattached,M40,1:03:20
+98,MacDonald,Gio,Carnethy,M40,1:03:29
+99,Howett,Andrew,Carnethy,M,1:03:33
+100,Gordon,Claire,HBT,F,1:03:34
+101,Blair-Fish,John,Carnethy,M50,1:03:37
+102,Morton,Richard,Edinburgh RC,M,1:03:45
+103,Hutt,Colin,Unattached,M40,1:03:49
+104,Sym,Digby,Strathearn Harriers,M40,1:03:56
+105,James,Mick,Carnethy,M40,1:04:00
+106,Macleod,Stuart,Unattached,M,1:04:00
+107,Harrison,James,Corstorphine,M,1:04:01
+108,MacBeath,Niall,Lochaber AC,M,1:04:05
+109,Fleming,Peter,Unattached,M,1:04:08
+110,Love,Craig,Dundee Hawkhill,M,1:04:11
+111,Gorgas,Steffen,Westerlands,M,1:04:18
+112,Raw,Aly,Bingley Harriers,F40,1:04:18
+113,Scott,Dawn,Lochaber AC,F,1:04:27
+114,MacAllister,James,Unattached,M,1:04:34
+115,Bouchier,Shane,Carnethy,M,1:04:34
+116,Simmons,David,Lothian,M40,1:04:36
+117,Kennedy,Stephen,Larne AC,M,1:04:39
+118,Glencorse,Colin,Kilmarnock Harriers,M,1:04:42
+119,Jenkins,Kate,Gala Harriers,F,1:05:06
+120,Hall,Simon,Unattached,M40,1:05:10
+121,Pryde,Gordon,Lomond Hill Runners,M40,1:05:21
+122,Barr,Tom,HBT,M,1:05:30
+123,Jones,Gary,Northumberland FR,M,1:05:38
+124,Rathjen,Jon,HBT,M,1:05:43
+125,Gay,Jon,Lochaber AC,M,1:05:46
+126,Maxwell,Fiona,Shettleston Harriers,F40,1:05:49
+127,Kerr,Robbie,Edinburgh Uni H&H,MJ,1:05:52
+128,Turner,Robert,Edinburgh AC,M,1:06:00
+129,Stout,Russell,Carnethy,M,1:06:04
+130,Valentine,Kenny,Carnethy,M,1:06:09
+131,Fairgrieve,Andy,Annan & District AC,M40,1:06:13
+132,Owens,Garry,Northumberland FR,M50,1:06:20
+133,Ward,Claire,HBT,F,1:06:27
+134,Gore,Martin,Lasswade,M,1:06:33
+135,Macgillivray,Nigel,West Lothian Triathlon,M,1:06:33
+136,Colquhoun,Lucy,Moorfoot Runners,F,1:06:38
+137,Popham,Frank,Fife AC,M,1:06:40
+138,Coppelov,Michael,Unattached,M,1:06:47
+139,Law,David,Corstorphine,M40,1:06:47
+140,Donnelly,John,Westerlands,M40,1:06:47
+141,Robertson,Shona,Shettleston Harriers,F,1:06:48
+142,Hindle,Neil,Unattached,M50,1:06:49
+143,McCann,Phil,Mourne Runners,M,1:06:52
+144,Brannan,Tosh,Lothian,M40,1:06:53
+145,Maxwell,Bill,Shettleston Harriers,M40,1:06:55
+146,Heron,Gregor,Carnethy,M,1:06:57
+147,Thompson,William,Larne AC,M40,1:07:00
+148,Anthony,Eilidh,HBT,F,1:07:03
+149,McQuater,Rob,Westerlands,M,1:07:04
+150,Begley,Tommy,Irvine RC,M,1:07:07
+151,Foster,Dale,Otley AC,M,1:07:11
+152,Murisier,Fabien,Carnethy,M,1:07:23
+153,Paton,Derek,Carnethy,M,1:07:25
+154,Diver,Michael,Clydesdale Harriers,M40,1:07:27
+155,Kerr,Hugh,Central AC,M40,1:07:29
+156,Nash,Rupert,HBT,M,1:07:30
+157,Beech,John,Unattached,M50,1:07:33
+158,Larmour,Colin,Cosmics,M40,1:07:42
+159,Speight,Chris,Helm Hill Runners,M40,1:07:42
+160,Durn,Chris,Carnethy,M40,1:07:43
+161,Coles,Rob,Cosmics,M50,1:07:44
+162,Davis,Geoff,Northumberland FR,M40,1:07:55
+163,Shannon,Alwynne,Mourne Runners,F40,1:07:59
+164,Wilson,Sam,Oban AC,M,1:07:59
+165,MacLeod,Murdo,Westerlands,M50,1:08:01
+166,King,Steven,Carnegie Harriers,M,1:08:06
+167,Fowler,Nigel,Fife AC,M,1:08:07
+168,Strachan,Paul,Westerlands,M50,1:08:09
+169,Houston,Val,Westerlands,F40,1:08:09
+170,Kelly,Graham,Westerlands,M,1:08:10
+171,Macnab,Graham,Lochaber AC,M40,1:08:10
+172,Wilson,Rob,Penicuik Harriers,M,1:08:21
+173,Blackhall,Keith,Lochaber AC,M,1:08:24
+174,Cannon,Russell,Helm Hill Runners,M40,1:08:29
+175,Wales,Steve,Run-4-It,M,1:08:32
+176,Tompsett,Gary,Strathaven Striders,M40,1:08:38
+177,Taylor,Nat,Girvan Harriers,M50,1:08:40
+178,Atkin,David,Westerlands,M40,1:08:42
+179,Ross,Graeme,Carnethy,M,1:08:45
+180,Jarvis,James,HBT,M,1:08:46
+181,Galloway,Mike,Dundee Hawkhill,M40,1:08:46
+182,Cash,Rebecca,Borrowdale Fell Runners,F,1:08:56
+183,Legge,Sarah,Fife AC,F,1:08:58
+184,Heron,Tony,Todmorden Harriers,M,1:09:00
+185,May,Gavin,Unattached,M,1:09:10
+186,Clelland,Steven,Shettleston Harriers,M,1:09:10
+187,Murray,Alasdair,Kilmarnock Harriers,M,1:09:12
+188,Cockburn,Alan,Carnegie Harriers,M40,1:09:13
+189,Bertulis,Tom,Westerlands,M,1:09:17
+190,Murray,Helen,Lothian,F40,1:09:21
+191,Nutter,Mark,Clayton Le Moors,M40,1:09:22
+192,Shiell,Dougie,Unattached,M40,1:09:23
+193,Gilmore,Neil,Carnethy,M40,1:09:24
+194,Semple,Hamilton,Westerlands,M50,1:09:25
+195,Glenn,Nat,North Belfast Harriers,M40,1:09:29
+196,Stephenson,Rob,Cheshire Hash House Harriers,M40,1:09:29
+197,Irving,Roger,Hartfell HRC,M40,1:09:30
+198,Standish,Chris,Calder Valley,M,1:09:30
+199,Bowie,Tom,Unattached,M60,1:09:41
+200,Cameron,Gordon,Carnethy,M40,1:09:42
+201,Reid,Michael,Aegon RC,M,1:10:03
+202,Kennedy,Ali,Lochaber AC,M40,1:10:03
+203,Wilson,Colin,Lomond Hill Runners,M40,1:10:11
+204,Morris,Robin,Lothian,M50,1:10:14
+205,Whittingham,Bryan,Fife AC,M,1:10:21
+206,Hunter,Stuart,Cosmics,M40,1:10:23
+207,Nelson,Scott,Lothian,M,1:10:28
+208,Brennan,Brian,Westerlands,M50,1:10:32
+209,Knowles,Stuart,Fife AC,M50,1:10:38
+210,Robinson,Michael,Midlothian Velo Sportif,M,1:10:39
+211,Howie,Brian,Carnethy,M50,1:10:42
+212,Jerram,Rigby,Kendal AC,M40,1:10:43
+213,Murgatroyd,Ian,Solway,M40,1:10:47
+214,Sandford,Anne,Mourne Runners,F40,1:10:48
+215,Telfer,John,Northumberland FR,M40,1:11:00
+216,Taylor,Evan,Larne AC,M,1:11:03
+217,Brereton,Kevin,Anster Haddies,M40,1:11:05
+218,Hood,Alasdair,Fife AC,M40,1:11:06
+219,Hainsworth,Paul,Northumberland FR,M40,1:11:11
+220,Sinclair,Cathy,Fife AC,F40,1:11:14
+221,Magee,Billy,Larne AC,M60,1:11:16
+222,McInroy,Ross,Helensburgh AAC,M50,1:11:17
+223,Stein,Uwe,Unattached,M,1:11:19
+224,Duffy,John,Shettleston Harriers,M40,1:11:27
+225,Fielding,Michael,Unattached,M,1:11:35
+226,Ross,Tom,Fife AC,M60,1:11:43
+227,Mayfield,Keith,Portobello,M40,1:11:54
+228,Leinster,Kenny,Calderglen Harriers,M40,1:11:59
+229,Veitch,David,Lasswade,M,1:12:04
+230,Murdoch,George,Carnegie Harriers,M40,1:12:05
+231,Kitson,Alec,Lochaber AC,M50,1:12:06
+232,McCann,Tish,Mourne Runners,F40,1:12:11
+233,Provan,Louise,Fife AC,F,1:12:13
+234,Rowley,James,Law & District,M50,1:12:18
+235,Cummings,Alan,Lasswade,M40,1:12:25
+236,Bowman,Angus,Lomond Hill Runners,M50,1:12:30
+237,Shaw,Richard,Fife AC,M50,1:12:33
+238,Pugh,Roderick,Kilmarnock Harriers,M50,1:12:33
+239,Ward,Sally,Dark Peak,F40,1:12:36
+240,Eadie,Gordon,Carnethy,M40,1:12:37
+241,Dallinson,John,Northumberland FR,M50,1:12:37
+242,Devine,Philip,Kendal AC,M40,1:12:37
+243,Robson,John,Annan & District AC,M50,1:12:38
+244,Parker,David,Shettleston Harriers,M40,1:12:38
+245,Moore,John,Irvine RC,M40,1:12:38
+246,Broadley,Drew,Lochaber AC,M50,1:12:53
+247,Birnie,Emma,Bellahouston RR,F,1:12:58
+248,Copeland,Barry,Stonehaven RC,M,1:13:04
+249,Fox,Simon,Fife AC,M40,1:13:11
+250,Preston,Christine,Todmorden Harriers,F40,1:13:14
+251,Bush,Richard,Carnethy,M40,1:13:17
+252,Moon,Richard,Unattached,M,1:13:17
+253,Wiseman,Sarah,Ochil Hill Runners,F,1:13:18
+254,Daglish,Graham,Elvet Striders,M50,1:13:19
+255,Hamilton,Anita,Cosmics,F50,1:13:28
+256,Collins,Trevor,Carnethy,M50,1:13:34
+257,Colegrave,John,Cosmics,M50,1:13:40
+258,Adams,Keith,Westerlands,M50,1:13:40
+259,Liddle,Craig,Lomond Hill Runners,M40,1:13:44
+260,Allan,Geoff,Carnethy,M,1:13:44
+261,Campbell,Neil,Carnethy,M40,1:13:45
+262,May,Timothy,ESOC,M40,1:13:47
+263,Burt,Louise,Fife AC,F40,1:13:52
+264,Bell,David,Lothian,M40,1:13:58
+265,Jablonski,Derek,Lomond Hill Runners,M40,1:14:07
+266,Thompson,Fabienne,Perth Road Runners,F40,1:14:14
+267,Erskine,Alec,Cosmics,M40,1:14:18
+268,Osborn,David,Lomond Hill Runners,M40,1:14:20
+269,Graham,Alan,Lomond Hill Runners,M50,1:14:23
+270,Scott,Cameron,Carnethy,M40,1:14:28
+271,Jones,Graham,Unattached,M,1:14:30
+272,Preston,John,Unattached,M40,1:14:32
+273,Forrest,Anna,Ambleside,F,1:14:36
+274,Robertson,Jane,Westerlands,F40,1:14:50
+275,Love,Charlie,Dundee Hawkhill,M60,1:14:57
+276,Turnbull,Paul,Unattached,M,1:14:59
+277,Sendlhofer,Britta,Ambleside,F,1:15:14
+278,Smith,Malcolm,Ochil Hill Runners,M50,1:15:16
+279,Boyd,Lisa,Carnethy,F,1:15:15
+280,Blackhall,Amanda,Lochaber AC,F,1:15:21
+281,Cross,Jon,Ochil Hill Runners,M,1:15:26
+282,Hunter,Mary,Portobello,F40,1:15:31
+283,Robertson,Derek,Ochil Hill Runners,M,1:15:35
+284,Mathieson,Stuart,Bellahouston RR,M,1:15:39
+285,Johnston,Gordon,Norham RC,M,1:15:42
+286,Forster,Nix,Lochaber AC,F,1:15:43
+287,Ledlie,Colin,Carnethy,M40,1:15:49
+288,Macrae,Donald,Unattached,MJ,1:16:04
+289,Doyle,Tim,Penicuik Harriers,M40,1:16:08
+290,McWhinnie,Jim,Fife AC,M40,1:16:09
+291,Anderson,Derek,Unattached,M40,1:16:15
+292,Till,Dave,Skye & Lochalsh RC,M40,1:16:27
+293,Dunn,Michael,Strathaven Striders,M50,1:16:30
+294,MacFarlane,Stuart,Unattached,M40,1:16:33
+295,Walker,Robert,Penicuik Harriers,M40,1:16:34
+296,MacEwan,Linda,Lochaber AC,F40,1:16:36
+297,Appleby,Paul,Northumberland FR,M40,1:16:37
+298,Curtis,Briony,HBT,F,1:16:43
+299,Adams,Ian,Lochaber AC,M40,1:16:44
+300,Bloor,Robert,Lothian,M40,1:16:58
+301,McDonald,Jon,Carnegie Harriers,M40,1:16:59
+302,Heaney,Jonathan,North Shields Poly,M,1:17:02
+303,Hawkins,Ian,Fife AC,M40,1:17:02
+304,Murdoch,Bob,Unattached,M,1:17:09
+305,Gow,Elizabeth,Lochaber AC,F,1:17:10
+306,Gordon,Nick,Solway,M40,1:17:19
+307,Dalitz,Rod,Carnethy,M50,1:17:31
+308,Bagnall,Andrew,Unattached,M,1:17:42
+309,Allison,Bob,Fife AC,M40,1:17:48
+310,Milmoe,Michael,Forres Harriers,M50,1:17:54
+311,MacDonald,Deborah,HBT,F40,1:18:02
+312,Ryder,James,Unattached,M,1:18:03
+313,Lees,George,Beacon Runners,M40,1:18:06
+314,Alexander,Jim,Lothian,M40,1:18:20
+315,O`Connor,Michael,Carnethy,M,1:18:22
+316,Wilkinson,Graham,Northumberland FR,M,1:18:26
+317,Sloan,Robin,Carnethy,M50,1:18:29
+318,Lavender,Jack,Carnethy,M,1:18:32
+319,Thornley,Gavin,Carnethy,M40,1:18:35
+320,Adams,David,Hamilton Harriers,M60,1:18:37
+321,Johnstone,Derek,Cosmics,M40,1:18:40
+322,Stewart,Elaine,Cosmics,F40,1:18:44
+323,Scott,Alan,Unattached,M,1:18:48
+324,Cox,Graeme,Unattached,M40,1:18:57
+325,Smithard,Phil,Carnegie Harriers,M50,1:18:59
+326,Wilson,Joan,Lomond Hill Runners,F40,1:19:00
+327,Earle,Murray,Unattached,M,1:19:10
+328,Reed,Peter,Northumberland FR,M50,1:19:11
+329,Eunson,Paul,Portobello,M40,1:19:14
+330,Kirk,Katherine,ESOC,F,1:19:19
+331,Sebastien,Penet,Unattached,M,1:19:20
+332,McGlennon,Chris,Unattached,M,1:19:21
+333,Ferguson,Peter,Highland Hill Runners,M50,1:19:27
+334,Boocock,Katy,Highland Hill Runners,F40,1:19:30
+335,Kaushal,Jason,Holmfirth Harriers,M40,1:19:41
+336,Henty,Chris,Carnethy,M,1:19:42
+337,Bennet,Lynne,Unattached,F,1:19:42
+338,Reid,Colin,Cosmics,M,1:19:43
+339,Dawson,Mandy,Northumberland FR,F40,1:19:44
+340,Dowell,Finlay,Irvine RC,M40,1:19:48
+341,Coe,John,Unattached,M,1:19:49
+342,Scott,Elspeth,Westerlands,F40,1:19:52
+343,Johnston,Stephen,Milburn Harriers,M40,1:19:56
+344,Crowe,Kate,Penicuik Harriers,F40,1:19:58
+345,Strain,Kirsten,East Lothian Orienteers,F,1:20:07
+346,Hind,Alasdair,Penicuik Harriers,M,1:20:12
+347,Irving,John,Dundee Road Runners,M,1:20:15
+348,Gatehouse,Richard,Lomond Hill Runners,M50,1:20:22
+349,Francis,David,Fife AC,M50,1:20:34
+350,Drain,Alex,Troon Tortoises,M50,1:20:44
+351,Orr,Ernie,Lochaber AC,M60,1:20:57
+352,Dobson,Judith,Kinross Road Runners,F40,1:21:08
+353,Smith,Janice,HBT,F50,1:21:10
+354,Stakes,David,Unattached,M40,1:21:11
+355,Davis,Susan,Northumberland FR,F40,1:21:15
+356,McManus,John,Larne AC,M,1:21:17
+357,Daniels,Ken,Carnegie Harriers,M60,1:21:19
+358,Jenkins,Allan,Unattached,M50,1:21:20
+359,Wellings,John,Unattached,M50,1:21:23
+360,Ross,Susan Jane,Lochaber AC,F,1:21:38
+361,McManus,Ian,Irvine RC,M60,1:21:41
+362,Spenceley,Hilary,Carnethy,F40,1:21:51
+363,Maxwell,Susie,Penicuik Harriers,F,1:22:17
+364,Carrigan,Derek,Unattached,M,1:22:19
+365,Sim,Andrew,Carnegie Harriers,M,1:22:34
+366,Davies,Jane,Borrowdale Fell Runners,F,1:22:44
+367,Grant,Michael,Unattached,M,1:22:47
+368,Scott,Eli,Carnethy,F,1:22:49
+369,McCain,Fred,Carnethy,M50,1:22:51
+370,Johnston,Diana,Dundee Road Runners,F40,1:23:00
+371,Downie,Chris,Penicuik Harriers,M40,1:23:07
+372,Macmillan,Kenneth,Moorfoot Runners,M40,1:23:13
+373,Taylor,Jamie,Carnethy,M50,1:23:16
+374,Walker,Peter,Carnethy,M40,1:23:25
+375,Baillie,James,Fife AC,M40,1:23:27
+376,Calder,Gavin,Edinburgh Tri Club,M,1:23:29
+377,Stapley,Tony,Portobello,M60,1:23:36
+378,Godfrey,Philip,Unattached,M,1:23:40
+379,Jones,Stewart,Northumberland FR,M40,1:23:42
+380,Hailey,Lucy,Carnethy,F,1:23:57
+381,Crane,Calvin,Lothian,M50,1:23:58
+382,Cromar,Steve,Dundee Hawkhill,M60,1:24:04
+383,Richardson,Matt,Lothian,M,1:24:07
+384,MacDonald,Nicky,Lochaber AC,F,1:24:13
+385,Wright,Andrew,Fife AC,M60,1:24:25
+386,Henderson,David,Larne AC,M50,1:24:27
+387,Meikle,Karen,Carnethy,F40,1:24:28
+388,Leslie,Graham,Unattached,M50,1:24:33
+389,Jackson,Ian,Carnethy,M50,1:24:45
+390,Spence,Brian,Larne AC,M40,1:24:57
+391,Coltman,Alan,Teviotdale Harriers,M40,1:24:59
+392,Sim,Helena,Carnegie Harriers,F40,1:25:02
+393,Schreiber,Jo,Girvan Harriers,F40,1:25:05
+394,Wadsley,Luke,Unattached,M,1:25:11
+395,Fawthrop,Nigel,Carnethy,M40,1:25:16
+396,Thin,Joanne,Carnethy,F40,1:25:17
+397,MacDonald,Anne,Kinross Road Runners,F40,1:25:24
+398,Simpson,Alan,Portobello,M50,1:25:25
+399,Orr,Johnston,Westerlands,M,1:25:26
+400,Tipple,David,Unattached,M,1:25:27
+401,Keith,Alastair,Unattached,M,1:25:29
+402,Bateman,Anthony,HBT,M,1:25:33
+403,Kerr,Mary,Central AC,F40,1:25:41
+404,Grainger,Moira,Fife AC,F40,1:25:50
+405,Boyle,David,Bellahouston RR,M,1:26:16
+406,Brooks,Mark,Edinburgh Tri Club,M,1:26:45
+407,Maclean,David,Carnegie Harriers,M,1:26:52
+408,Ritchie,Hilary,Fife AC,F40,1:26:59
+409,McAdam,Pauline,Teviotdale Harriers,F50,1:27:07
+410,McWhinnie,Janet,Fife AC,F40,1:27:13
+411,Barnfather,Ewan,Strathaven Striders,M,1:27:16
+412,Smith,Tilly,Deeside Runners,F40,1:27:17
+413,Ross,Mary,Interlopers,F,1:27:22
+414,Low,Sandy,Carnethy,M40,1:27:28
+415,Longhurst,Louise,Forth Valley Orienteers,F40,1:27:44
+416,Lennox,Chris,Law & District,M50,1:27:49
+417,Cox,Byron,HBT,M40,1:27:54
+418,Amour,Dick,Highland Hill Runners,M60,1:28:02
+419,Rampen,Win,Carnethy,M50,1:28:17
+420,Winning,Jim,Lomond Hill Runners,M50,1:28:21
+421,Ramsay,Charlie,Carnethy,M60,1:28:31
+422,Morrison,Ellen,Lochaber AC,F,1:28:41
+423,Bracegirdle,Innes,Fife AC,F50,1:28:49
+424,Gauld,Bill,Carnethy,M70,1:28:57
+425,Rose,Nigel,Carnethy,M60,1:28:59
+426,Lawlor,Katherine,Dundee Road Runners,F,1:29:03
+427,Laidlaw,Anita,Fife AC,F,1:29:17
+428,Ballantyne,Quentin,Unattached,M40,1:29:17
+429,Ross,Ross,Lochaber AC,M,1:29:18
+430,Ascroft,Lorna,Carnethy,F,1:29:34
+431,Robson,Jean,Annan & District AC,F40,1:29:38
+432,Edmondson,Linda,Wrekin Road Runners,F40,1:29:49
+433,Billcliffe,Louise,Northumberland FR,F40,1:30:25
+434,Kitson,Aileen,Lochaber AC,F50,1:30:42
+435,Bennet,Bill,Penicuik Harriers,M70,1:30:46
+436,Brownlee,David,Unattached,M40,1:30:56
+437,Wall,Dick,HBT,M50,1:31:31
+438,Brearley,Kenneth,Strathaven Striders,M40,1:31:36
+439,Armstrong,George,HELP,M60,1:31:40
+440,Hodge,Margaret,Unattached,F40,1:31:45
+441,McManus,James,Unattached,M40,1:31:51
+442,Thomas,Kate,Clydeside Orienteers,F40,1:32:25
+443,Anderson,Adam,Dumfries RC,M60,1:32:43
+444,Turnbull,Drew,Westerlands,M60,1:33:33
+445,Lees,Shan,Beacon Runners,F40,1:33:49
+446,Strain,Sheila,HBT,F50,1:33:50
+447,Stewart,Laura,Carnegie Harriers,F,1:34:08
+448,Lemoncello,Phyllis,Fife AC,F50,1:34:10
+449,Ingham,Cali,Carnethy,F50,1:34:11
+450,Bowman,Jean,Lomond Hill Runners,F40,1:34:12
+451,McLaughlin,Pat,Westerlands,F50,1:34:24
+452,Pether-Smith,Kate,Fife AC,F,1:34:38
+453,Taylor,Cameron,Bellahouston RR,M,1:34:49
+454,Seaman,Emily,Carnethy,F,1:35:03
+455,Coon,John,Unattached,M50,1:35:57
+456,Nicol,Robert,Irvine RC,M60,1:36:12
+457,Taylor,Anthony,Unattached,M,1:36:20
+458,Richmond,John,Bushfield Joggers,M,1:36:27
+459,Noble,Alastair,Girvan Harriers,M50,1:36:42
+460,Richards,Iain,Unattached,M40,1:36:54
+461,Meikle,David,Unattached,M40,1:37:10
+462,Paul,Brenda,Westerlands,F,1:37:11
+463,Pearson,Mike,Moorfoot Runners,M60,1:37:13
+464,Matko,Tom,Unattached,M,1:39:14
+465,McNaught,Sally,Unattached,F,1:41:09
+466,MacCalman,Sandy,Kinross Road Runners,M60,1:41:13
+467,Fleming,Morna,Pitreavie,F50,1:41:13
+468,Andrew,Stuart,North Highland Harriers,M40,1:41:23
+469,Crockard,Rosie,Milburn Harriers,F40,1:42:01
+470,Mckenzie,James,Milburn Harriers,M40,1:42:48
+471,Rumgay,Clare,Lochaber AC,F,1:43:32
+472,Duffy,Peter,Northern Vets,M70,1:46:26
+473,White,Steve,Unattached,M50,1:48:24
+474,Benny,Graham,Westerlands,M50,1:49:27
+475,Spivey,Colin,Unattached,M40,1:50:45
+476,Forrest,Margaret,Carnethy,F40,1:50:46
+477,McManus,Patrick,Unattached,M60,1:59:46
+478,Hamilton,Iain,Beith Harriers,M60,1:59:53
+479,Kilpatrick,Lyn,Lochaber AC,F40,2:06:40
+480,Smith,Sharon,Lochaber AC,F,2:08:05
+481,Jardine,Jimmy,Lochaber AC,M60,2:08:06
+482,Hervo,Sandra,Unattached,F,2:10:35
+483,Kennedy,Teresa,Lochaber AC,F40,2:10:35
+484,Cation,Frank,Fife AC,M40,2:27:22

@@ -1,0 +1,100 @@
+RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
+1,Harris,Mark,Fife AC,M40,0:19:09
+2,Crowe,Jamie,Central AC,MJ,0:19:24
+3,Campbell,Graeme,Ochil Hill Runners,M,0:19:31
+4,Rawlinson,Stephen,Lochtayside,M,0:20:08
+5,Oliver,Huw,Northumberland FR,M,0:20:14
+6,Schofield,Andrew,Borrowdale Fell Runners,M40,0:20:22
+7,Knox,Jonny,Anster Haddies,M40,0:20:30
+8,Fallon,Steven,Carnethy,M40,0:20:31
+9,Leslie,Nick,Ochil Hill Runners,M40,0:20:58
+10,Gilmore,Andrew,Highland Hill Runners,M,0:21:02
+11,Simpson,Peter,Carnegie Harriers,M50,0:21:16
+12,Smith,Alan,Deeside Runners,M50,0:21:34
+13,Millar,David,Ochil Hill Runners,M,0:21:42
+14,Moreland,Ross,Falkland Trail Runners,M,0:21:50
+15,Cassells,Derek,Carnegie Harriers,M,0:21:52
+16,Stacey,Mark,St Andrews University,M,0:22:00
+17,Bennet,Sandy,Unattached,M40,0:22:16
+18,Scott,Fraser,Lomond Hill Runners,M,0:22:17
+19,King,Steven,Carnegie Harriers,M40,0:22:20
+20,Johns,Andy,Kinross Road Runners,M40,0:22:39
+21,Laing,Martin,Unattached,M50,0:22:41
+22,Ward,Peter,Unattached,M,0:22:42
+23,Harrington,Patrick,Carnethy,M,0:22:44
+24,Rathjen,Jon,HBT,M40,0:22:46
+25,Gilmore,Neil,Carnethy,M40,0:22:47
+26,Morgan,Charlotte,Carnethy,F,0:22:50
+27,Anderson,Russell,Moorfoot Runners,M50,0:22:54
+28,Martin,Neil,Lomond Hill Runners,M40,0:23:00
+29,Gilmore,Iain,Carnethy,MJ,0:23:01
+30,Harris,Tom,Fife AC,MJ,0:23:02
+31,Gordon,Claire,HBT,F,0:23:14
+32,Love,Craig,Dundee Hawkhill,M40,0:23:22
+33,Elder,Callum,Perth Road Runners,M,0:23:28
+34,Cooper,Brian,Perth Road Runners,M,0:23:32
+35,Cowan,David,Fife AC,M40,0:23:34
+36,McClelland,Peter,HBT,M,0:23:54
+37,Evans,Neah,Westerlands,F,0:23:58
+38,Cameron,Gordon,Carnethy,M50,0:24:03
+39,McKinney,Stuart,Central AC,MJ,0:24:04
+40,Anderson,Laurie,Lomond Hill Runners,M50,0:24:08
+41,Roberts,Clive,Fife AC,M50,0:24:09
+42,Popham,Frank,Fife AC,M,0:24:18
+43,Muir,Colin,Carnethy,M,0:24:22
+44,Weir,Jonathan,Unattached,M,0:24:30
+45,Sleggs,Paul,HBT,M,0:24:34
+46,Waterhouse,Bob,Carnethy,M60,0:24:36
+47,Diver,Michael,Clydesdale Harriers,M40,0:24:44
+48,Lynch,Mike,Carnethy,M40,0:24:46
+49,Higginbottom,Jacqui,Carnethy,F40,0:24:52
+50,Wilkie,Martin,Unattached,M,0:25:18
+51,Wilson,Colin,Lomond Hill Runners,M50,0:25:19
+52,Robertson,Ally,Carnethy,M,0:25:23
+53,MacLeod,Murdo,Westerlands,M60,0:25:24
+54,Grace,Paul,Perth Road Runners,M40,0:25:40
+55,Ritchie,Hilary,Fife AC,F40,0:25:45
+56,Bowman,Angus,Lomond Hill Runners,M50,0:25:47
+57,Wilson,Joan,Lomond Hill Runners,F40,0:25:48
+58,Mitchell,Neill,Fife AC,M40,0:25:56
+59,Harrison,Simon,HBT,M,0:26:12
+60,Connor,Julia,Unattached,F,0:26:16
+61,O`Brien,Phyllis,HBT,F50,0:26:26
+62,Beckett,Daniel,HBT,M,0:26:39
+63,Duff,Bill,Falkland Trail Runners,M60,0:26:40
+64,Calothis,Marinos,Westerlands,M40,0:26:49
+65,Greer,Stephen,Carnegie Harriers,M50,0:26:55
+66,Grieshaber,Simon,Perth Road Runners,M40,0:26:58
+67,Junnier,Beryl,Ochil Hill Runners,F50,0:27:05
+68,Ward,Sarah,Cosmics,F,0:27:06
+69,Jablonski,Derek,Lomond Hill Runners,M50,0:27:11
+70,Lomas,Paul,Unattached,M40,0:27:13
+71,Burns,Keith,Carnethy,M60,0:27:20
+72,Evans,Malcolm,Westerlands,M60,0:27:21
+73,Landels,Brian,Lomond Hill Runners,M40,0:27:50
+74,Lloyd-Evans,Anne,Dunoon Hill Runners,F,0:28:12
+75,Shiell,Dougie,Unattached,M50,0:28:16
+76,Bouchier,Shane,Carnethy,M,0:28:28
+77,Nicoll,Melanie,Lomond Hill Runners,F40,0:28:36
+78,Lye,Mary,Carnethy,F,0:28:38
+79,Macaulay,Allan,Carnegie Harriers,M50,0:28:41
+80,Jones,Matthew,Carnethy,M,0:28:46
+81,Sills,Sam,Lomond Hill Runners,F,0:29:02
+82,Macdougall,Ken,Tinto Hill Runners,M,0:29:18
+83,Bowman,Jean,Lomond Hill Runners,F50,0:29:30
+84,Donnachie,Adrian,Unattached,M40,0:29:47
+85,Downie,Chris,Penicuik Harriers,M50,0:29:48
+86,Love,Charlie,Dundee Hawkhill,M60,0:30:14
+87,Davidson,Stewart,Fife AC,M60,0:30:32
+88,Beyts,Angus,Unattached,M50,0:30:46
+89,Martin,Kim,Unattached,F,0:30:50
+90,Juskowiak,Ben,Unattached,M,0:31:08
+91,Fairley,Bill,Carnegie Harriers,M70,0:32:08
+92,Smith,Janice,HBT,F50,0:32:20
+93,Knox,Lizzie,Anster Haddies,FJ,0:33:26
+94,Dick,Callum,Lomond Hill Runners,M40,0:33:28
+95,Campbell,Paul,Carnegie Harriers,M40,0:34:09
+96,Schmidt,Christina,Musselburgh AC,F,0:34:36
+97,Thornton,Bob,Fife AC,M50,0:35:44
+98,Fraser,Ronald,Dundee Road Runners,M40,0:36:45
+99,MacCalman,Sandy,Kinross Road Runners,M70,0:37:14

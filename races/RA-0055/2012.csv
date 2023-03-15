@@ -1,0 +1,91 @@
+RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
+1,Hood,Keith,Corstorphine,M,0:43:56
+2,Marshall,Brian,HELP,M40,0:44:44
+3,Wilkie,Grant,Corstorphine,M40,0:45:34
+4,Hart,Al,HBT,M40,0:46:01
+5,Carstairs,Douglas,Portobello,M,0:46:27
+6,Ross,Kent,Unattached,M,0:46:58
+7,Wright,David,HBT,M,0:47:58
+8,Best,Steven,Carnethy,M,0:48:02
+9,Hammond,John,Carnethy,M,0:48:04
+10,Rowland,Ian,Dunbar RC,M40,0:48:10
+11,Smith,Bruce,Carnethy,M40,0:49:07
+12,Hardie,James,Carnethy,M,0:49:15
+13,Hay,Stuart,Dunbar RC,M40,0:49:26
+14,Rathjen,Jon,HBT,M40,0:49:31
+15,Cameron,Gordon,Carnethy,M50,0:50:20
+16,Gilmore,Andrew,Highland Hill Runners,M,0:50:38
+17,Stephenson,Olly,Carnethy,M40,0:50:42
+18,Taylor,Richard,Dunbar RC,M40,0:51:01
+19,Wright,Megan,HBT,F,0:51:03
+20,Graham,Kevin,Edinburgh AC,M,0:51:11
+21,Hastie,Neil,HELP,M40,0:52:09
+22,Gilmore,Neil,Carnethy,M40,0:52:13
+23,Williamson,Coll,HBT,M,0:52:14
+24,Pryde,Gordon,Lomond Hill Runners,M50,0:52:21
+25,Anderson,Laurie,Lomond Hill Runners,M50,0:52:31
+26,Griffin,Tim,Unattached,M,0:52:50
+27,Fielding,Richard,Unattached,M,0:52:54
+28,Hindle,Alistair,HBT,M40,0:53:24
+29,Anderson,Rhona,Dunbar RC,F40,0:53:34
+30,Gilmore,Iain,Carnethy,M,0:53:53
+31,Davidson,Brian,Dunbar RC,M40,0:54:00
+32,Nowicki,Michael,Carnethy,M,0:54:47
+33,Anderson,Eoin,Unattached,M,0:54:48
+34,Scott,Sarah,Edinburgh AC,F,0:54:51
+35,Sutherland,Hazel,Carnethy,F40,0:55:09
+36,Waterhouse,Bob,Carnethy,M60,0:55:18
+37,Wood,Mary,Dunbar RC,F,0:55:29
+38,Curry,Matthew,Carnethy,M,0:56:12
+39,Ross,Euan,Unattached,M,0:56:26
+40,Shearer,Colin,The Bicycleworks,M50,0:56:34
+41,Edmondson,Duncan,Unattached,M40,0:56:39
+42,Hadfield,Richard,Portobello,M40,0:56:41
+43,O`Brien,Phyllis,HBT,F50,0:56:44
+44,McInnes,Graham,HELP,M,0:56:55
+45,Nimmo,Peter,Anster Haddies,M50,0:57:02
+46,Maass,Digby,Carnethy,M60,0:57:13
+47,Burnet,Iain,Unattached,M,0:57:51
+48,Mykura,Willie,Carnethy,M50,0:57:58
+49,Baker,Duncan,HBT,M50,0:58:06
+50,Tait,Jamie,Unattached,M,0:58:32
+51,Chapman,Mark,Carnethy,M40,0:58:37
+52,Henderson,David,Corstorphine,M50,0:58:56
+53,Sheldrick,Andrew,Dunbar RC,M40,0:58:59
+54,Henderson,Douglas,Tynedale Harriers,M60,0:59:05
+55,Howie,Brian,Carnethy,M60,0:59:42
+56,MacEwen,Alex,Edinburgh AC,M50,1:00:15
+57,Meikle,Karen,Carnethy,F50,1:00:22
+58,Ridyard,Alison,HBT,F40,1:00:31
+59,Harrington,David,Carnethy,M40,1:00:32
+60,Downie,Chris,Penicuik Harriers,M50,1:00:49
+61,Middler,Lessel,Unattached,M50,1:01:14
+62,Greenall,Dan,Carnegie Harriers,M40,1:01:40
+63,Mackinnon,Fionna,Carnethy,F,1:02:44
+64,Jones,Neil,Dunbar RC,M40,1:03:27
+65,Hay,Anne,Dunbar RC,F40,1:03:42
+66,Dunn,Nicola,Carnethy,F40,1:05:15
+67,Ferguson,Mhairi,Carnethy,F,1:05:38
+68,Hewlett,Jennie,Unattached,F,1:06:24
+69,Best,Sally,Carnethy,F,1:06:55
+70,Gauld,Bill,Carnethy,M60,1:07:49
+71,Smith,Janice,HBT,F50,1:09:59
+72,Berry,Clarissa,Dunbar RC,F40,1:11:56
+73,Legge,Murray,Lothian & Borders,M,1:12:53
+74,Askam,Andrew,Unattached,M,1:13:21
+75,Smith,Elisa,Unattached,F,1:13:58
+76,Littlewood,John,Carnethy,M60,1:15:31
+77,Walkingshaw,Scott,Unattached,M,1:15:56
+78,Ingham,Cali,Carnethy,F50,1:16:11
+79,Stapley,Tony,Portobello,M60,1:17:44
+80,McCarthy,Kevin,Unattached,M40,1:18:15
+81,Cunninghame,Ross,Lothian & Borders,M,1:18:17
+82,Millar,Gordon,Lothian & Borders,M40,1:19:02
+83,Gardner,Andrew,Lothian & Borders,M,1:20:17
+84,Morrison,Sheila,Dunbar RC,F50,1:20:41
+85,Allen,Fraser,Lothian & Borders,M,1:20:45
+86,Toles,Ross,Lothian & Borders,M,1:20:45
+87,Russell,Robert,Unattached,M60,1:29:11
+88,Rowen,Angela,Lothian & Borders,F,1:37:24
+89,Dick,Steven,Lothian & Borders,M,1:37:25
+90,Shearer,Graeme,Lothian & Borders,M,1:38:48

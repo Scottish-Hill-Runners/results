@@ -1,0 +1,67 @@
+RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
+1,Young,Andrew,HNSC,M,0:34:05
+2,Tomlin,Chris,Cosmics,M40,0:34:12
+3,French,George,Garioch Road Runners,M,0:34:25
+4,Smith,Stuart,Cosmics,M,0:34:42
+5,Williamson,Jason,Cosmics,M40,0:35:40
+6,Gaastra,Alex,Cosmics,M,0:35:50
+7,Russell,Ian,Keith & District AAC,M,0:36:16
+8,Marshall,David,Cosmics,M,0:36:20
+9,Henry,Peter,Deeside Runners,M,0:36:22
+10,Tivendale,Drew,Deeside Runners,M40,0:36:24
+11,Walker,Neil,Altrincham,M,0:36:38
+12,Souter,John,Unattached,M,0:36:42
+13,Gilmore,Kegan,Unattached,M,0:36:48
+14,Young,Gregor,HNSC,M,0:36:53
+15,Hirst,David,Deeside Runners,M50,0:37:31
+16,Nicolson,William,Highland Hill Runners,M,0:37:40
+17,McDonald,Dennis,Cosmics,M40,0:37:58
+18,Rahn,Thilo,Aberdeen MRT,M,0:38:09
+19,Burry,Craig,Unattached,M,0:38:35
+20,Largey,Ciara,Lochaber AC,F,0:38:40
+21,Lang,Richard,Cosmics,M40,0:38:43
+22,Drummond,Fraser,Newburgh Dunes RC,M,0:39:06
+23,Rennie,Nick,Unattached,M40,0:39:20
+24,Fraser,Iain,Tri Buchan,M40,0:39:27
+25,Provan,Stephanie,Deeside Runners,F50,0:39:33
+26,Bernie,Mike,Unattached,M,0:40:05
+27,Armitage,Sonia,Cosmics,F50,0:40:33
+28,Verbiest,Dirk,Garioch Road Runners,M50,0:41:12
+29,Ingram,Richard,Cosmics,M40,0:41:35
+30,Mark,Niall,Fleet Feet Triathletes,M,0:41:47
+31,Yardley,Gareth,Cosmics,M40,0:41:58
+32,Stockton,Mark,Cosmics,M,0:42:19
+33,Standon,Alex,HNSC,M,0:42:35
+34,Armitage,Hilary,Unattached,F,0:42:36
+35,Angus,Gerald,Keith & District AAC,M50,0:42:54
+36,Musgrave,Posy,Three Peaks Tri,F,0:43:22
+37,Knight,Geoff,Unattached,M,0:43:24
+38,Duncan,David,Ochil Hill Runners,M50,0:43:49
+39,Mann,Phil,Metro Aberdeen,M50,0:44:36
+40,Hamilton,Anita,Cosmics,F50,0:44:46
+41,Cran,Neil,Unattached,M,0:45:01
+42,French,Isla,Garioch Road Runners,F,0:45:09
+43,Hamilton,Ian,Cosmics,M50,0:45:15
+44,Reid,Colin,Cosmics,M40,0:45:18
+45,Anderson,Fiona,Unattached,F40,0:45:22
+46,Newman,Rick,HNSC,M50,0:45:37
+47,Gutteridge,Gary,Cosmics,M50,0:46:10
+48,Entwistle,Marie,Deeside Runners,F40,0:46:50
+49,Cackette,Iain,Unattached,M,0:47:38
+50,Hood,Angus,Unattached,M,0:47:48
+51,Simpson,Stephen,Garioch Road Runners,M,0:47:50
+52,Stewart,Elaine,Cosmics,F50,0:48:31
+53,Williams,Rupert,Cosmics,M50,0:48:46
+54,Donoghue,Craig,Stonehaven RC,M40,0:48:55
+55,Bass,Ursula,Deeside Runners,F40,0:49:15
+56,Kirk,David,Grampian Orienteers,M40,0:49:23
+57,Kidd,John,Unattached,M40,0:50:09
+58,Craig,Carrie,HBT,F,0:50:44
+59,Thorn,Olwen,HNSC,F,0:53:03
+60,Maclean,Callum,HNSC,M40,0:53:22
+61,Musgrave,Frank,Three Peaks Tri,M50,0:53:32
+62,Daniel,Charles,Unattached,M40,0:58:38
+63,Donald,Stuart,Unattached,M,0:58:44
+64,Taylor,Sue,Cosmics,F50,0:58:52
+65,Wright,James,HBT,M50,1:02:46
+66,Carson,Louise,Unattached,F,1:05:50

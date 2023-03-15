@@ -1,0 +1,159 @@
+RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
+1,Fulton,David,HBT,M,0:30:04
+2,Chepelin,Oleg,HBT,M,0:30:20
+3,Coombs,Duncan,HBT,M,0:31:11
+4,Ward,Dave,HBT,M,0:31:12
+5,Gilmore,Andrew,Highland Hill Runners,M,0:31:20
+6,Sullivan,Matthew,Shettleston Harriers,M,0:31:35
+7,Ward,Ray,HBT,M,0:31:43
+8,Braby,Liam,Carnethy,M,0:31:53
+9,Wright,David,HBT,M,0:32:04
+10,Adkin,Scout,Ambleside,F,0:32:13
+11,Craighead,Scott,Carnethy,M,0:32:22
+12,Murray,Ross,Edinburgh AC,M,0:32:37
+13,Watson,Ed,HBT,M,0:32:43
+14,Manners,Will,Strathearn Harriers,M40,0:32:56
+15,Harrison,James,Corstorphine,M,0:33:05
+16,Horrocks,Sophie,Edinburgh Uni H&H,F,0:33:30
+17,Bryson,Gavin,Highland Hill Runners,MJ,0:33:36
+18,Buchanan,Roy,Portobello,M40,0:33:42
+19,Buchanan,Catriona,Ochil Hill Runners,F,0:34:01
+20,Smith,Gavin,HBT,M,0:34:13
+21,Bareford,Michael,HBT,M40,0:34:19
+22,Smith,Iwan,Edinburgh Uni H&H,M,0:34:23
+23,Mercer,Louise,Edinburgh Uni H&H,F,0:34:32
+24,Haines,Rachel,HBT,F,0:34:36
+25,Williamson,Coll,HBT,M,0:34:37
+26,Holmes,Harry,Pudsey & Bramley,M,0:34:38
+27,Peter,Josh,HBT,M,0:34:42
+28,Limmer,David,Portobello,M,0:34:43
+29,Simpson,Peter,Carnegie Harriers,M50,0:34:51
+30,Ball,Duncan,Penicuik Harriers,M50,0:34:58
+31,Taylor,Mike,HBT,M,0:35:14
+32,Freshwater,Craig,HBT,M,0:35:20
+33,Mowbray,Megan,HBT,F40,0:35:38
+34,Williamson,Nick,Dunbar RC,M,0:35:42
+35,Luetchford,Alex,HBT,M,0:35:45
+36,McManus,John,Garscube Harriers,M,0:35:51
+37,Sims,Andrew,HBT,M,0:36:13
+38,Salvatella,Josep,AE Matxacuca,M40,0:36:17
+39,Rankin,Christina,Kilbarchan,F,0:36:18
+40,McKechanie,Eilis,HBT,F,0:36:26
+41,Walling,Craig,HBT,M,0:36:26
+42,Cruickshanks,Ross,Shettleston Harriers,M,0:36:31
+43,Watson,Charlotte,Edinburgh Uni H&H,F,0:36:37
+44,Hanna,David,Carnethy,M,0:36:37
+45,Lindsey,Angus,Unattached,M,0:36:49
+46,MacTavish,Kevin,Dundee Hawkhill,M40,0:36:55
+47,Cockburn,Scott,Linlithgow Harriers,M,0:37:04
+48,O`Kane,Patrick,Strathearn Harriers,M50,0:37:12
+49,Normand,Ivor,HBT,M50,0:37:16
+50,Davie,Kevin,Carnegie Harriers,M,0:37:22
+51,Walkinshaw,Alick,Tinto Hill Runners,M50,0:37:23
+52,McClelland,Peter,HBT,M,0:37:23
+53,MacQueen,Douglas,Carnethy,M,0:37:36
+54,Darwin-Clements,Dan,HBT,M,0:38:05
+55,White,Ross,Heriot Watt,M,0:38:07
+56,Taylor,Craig,Portobello,M,0:38:07
+57,Browning,David,Carnethy,M,0:38:10
+58,Buchanan,Hugh,Central AC,M50,0:38:11
+59,Hindle,Alistair,HBT,M40,0:38:26
+60,Macfarlane,Andrew,4 PARA,M,0:38:30
+61,Henderson,Ross,BMF Edinburgh,M,0:38:37
+62,Manner,Matthew,Unattached,MJ,0:38:43
+63,Oliver,Alex,Carnethy,M40,0:39:04
+64,Gardner,Peter,HBT,M,0:39:07
+65,Jones,Andrew,Unattached,M,0:39:13
+66,Henderson,Jack,Edinburgh Uni H&H,M,0:39:16
+67,Leiper,Victoria,Shettleston Harriers,F,0:39:23
+68,Fulham,John,Carnegie Harriers,M40,0:39:24
+69,Matthews,Dave,HBT,M,0:39:29
+70,Strickland,Connall,HKSEC,MJ,0:39:29
+71,Cameron,Gordon,Carnethy,M50,0:39:32
+72,Hadfield,Richard,Portobello,M40,0:39:38
+73,Crane,Steve,Portobello,M50,0:39:48
+74,Shaw,Joe,Edinburgh Uni H&H,M,0:40:01
+75,Wright,Graham,HBT,M50,0:40:01
+76,Stephen,Jill,HBT,F,0:40:05
+77,Scully,Bobby,HBT,M,0:40:13
+78,Weir,Jonathan,Unattached,M,0:40:16
+79,Watson,Finlay,Strathearn Harriers,MJ,0:40:19
+80,Hynd,John,Carnegie Harriers,M50,0:40:20
+81,O`Malley,Sinead,HBT,F,0:40:23
+82,Wright,Fiona,Portobello,F40,0:40:27
+83,Rathjen,Sandra,HBT,F40,0:40:40
+84,Campbell,Chris,Unattached,MJ,0:40:52
+85,Graham,Kevin,Edinburgh AC,M,0:41:07
+86,Hope-Jones,David,HBT,M,0:41:16
+87,Gaffney,David,Moorfoot Runners,M,0:41:20
+88,Cairns,Gillian,Penicuik Harriers,F40,0:41:20
+89,Lewandowski,Maciej,Unattached,M,0:41:42
+90,Borland,Matthew,Unattached,M,0:41:52
+91,Hampshire,John,HBT,M50,0:41:56
+92,Donald,Margaret,BMF Edinburgh,F,0:41:58
+93,Costello,Kerry,Portobello,F,0:41:59
+94,Campbell,Andrew,HKSEC,MJ,0:42:00
+95,McKechanie,Andrew,HBT,M,0:42:07
+96,Foster,Tara,HKSEC,FJ,0:42:18
+97,Gosland,Andy,Carnethy,M40,0:42:24
+98,Bruce,Catriona,HBT,F,0:42:36
+99,Howie,Jamie,Bellahouston RR,M,0:42:37
+100,Mitchell,Craig,Vegan Runners,M40,0:42:43
+101,Provan,Louise,Fife AC,F,0:42:50
+102,Pendreigh,Brian,HBT,M50,0:42:50
+103,Roarty,Max,Unattached,MJ,0:42:55
+104,Laverty,Steven,HBT,M,0:43:02
+105,Doyle,Tim,Penicuik Harriers,M50,0:43:08
+106,Williams,Rupert,Cosmics,M50,0:43:11
+107,Twigg,Martin,HBT,M40,0:43:16
+108,Sinclair,Melanie,Unattached,F40,0:43:22
+109,Mcdermiad,Eddie,Unattached,M,0:43:51
+110,Falconer,Helen,Portobello,F,0:43:52
+111,Mair,Will,HBT,M,0:43:58
+112,Walker,Sean,Carnethy,M40,0:44:16
+113,Walling,Katie,HBT,F,0:44:17
+114,Kemp,Sadie,Penicuik Harriers,F,0:44:19
+115,Gibaut,Adrian,Tinto Hill Runners,M40,0:45:09
+116,Macdonald,Marianne,HKSEC,FJ,0:45:10
+117,Downie,Chris,Penicuik Harriers,M50,0:45:22
+118,Muir,Sam,Unattached,M,0:45:24
+119,Duff,Bill,Falkland Trail Runners,M60,0:45:27
+120,Johnstone,Mark,Carnegie Harriers,M40,0:45:37
+121,Macaulay,Allan,Carnegie Harriers,M50,0:45:40
+122,Hart,Jane,HBT,F40,0:45:42
+123,Coltman,Alan,Teviotdale Harriers,M40,0:45:54
+124,McPherson,Hugh,Tinto Hill Runners,M60,0:46:13
+125,Bailey,Will Hugh,HBT,M,0:46:25
+126,Greens,Michael,Penicuik Harriers,M,0:46:45
+127,Davie,Barry,Carnegie Harriers,M,0:46:47
+128,MacEwen,Alex,Edinburgh AC,M60,0:47:00
+129,Borland,Jane,Annan & District AC,F,0:47:04
+130,Donnelly,Claire,Unattached,F,0:47:17
+131,Golding,Katherine,HBT,F,0:47:20
+132,Watson,Helen,HBT,F,0:47:23
+133,Clark,Fraser,Unattached,MJ,0:47:38
+134,Jarvis,Niamh,Edinburgh AC,FJ,0:48:04
+135,Fleming,Morna,Pitreavie,F50,0:48:38
+136,Knox,Bill,Teviotdale Harriers,M60,0:49:02
+137,Weston,Anna,HBT,F,0:49:03
+138,Sinclair,Ross,Unattached,M,0:49:26
+139,Forsyth,Karen,Carnegie Harriers,F,0:49:42
+140,Horsburgh,Jill,Linlithgow Harriers,F50,0:50:05
+141,Dunbar,Melanie,Penicuik Harriers,F40,0:50:07
+142,Henderson,Scott,Unattached,M,0:51:48
+143,Devlin,John,Unattached,M50,0:52:09
+144,Macdonald,Julie,HKSEC,FJ,0:52:35
+145,Gunn-Russell,Kenny,Harmeny AC,M60,0:52:43
+146,Fraser,Ronald,Dundee Road Runners,M50,0:54:23
+147,Phelan,Rory,HKSEC,M,0:54:28
+148,Crichton,Tony,HKSEC,M40,0:54:51
+149,Avinouv,Nathan,Unattached,MJ,0:55:01
+150,Hugill,Elizabeth,HBT,F,0:55:28
+151,King,Shelagh,Gala Harriers,F50,0:57:19
+152,Harrison,Josh,Unattached,MJ,0:59:12
+153,Johnston,Kara,HKSEC,FJ,1:00:52
+154,Brown,Maura,HKSEC,FJ,1:00:52
+155,Cuthbert,Kate,Wallasey AC,F40,1:01:42
+156,Mcdonald,Jack,Unattached,MJ,1:05:27
+157,Jarvis,James,HBT,M40,1:05:27
+158,McManus,Ian,Irvine RC,M70,1:06:27

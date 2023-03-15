@@ -1,0 +1,119 @@
+RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
+1,Bonnyman,Brian,Westerlands,M,1:23:12
+2,Muir,Jonny,Carnethy,M,1:23:25
+3,Cox,Alistair,Tinto Hill Runners,M,1:25:21
+4,Rennie,Willie,Carnegie Harriers,M,1:28:21
+5,Buchanan,Peter,Portobello,M,1:30:20
+6,Walkinshaw,Alick,Tinto Hill Runners,M,1:31:15
+7,Thomson,Iain,Lomond Hill Runners,M,1:31:33
+8,Peebles,Murray,Dunbar RC,M,1:31:39
+9,Limmer,David,Portobello,M,1:32:14
+10,Wainwright,Russ,Edinburgh Running Network,M,1:32:21
+11,Bell,Euan,Unattached,M,1:32:24
+12,Jones,Matthew,Carnethy,M,1:32:34
+13,Ballantyne,Joanna,Unattached,F,1:32:45
+14,Herbert,Neal,Unattached,M,1:32:57
+15,McPhee,Neil,Lauderdale Limpers,M,1:33:32
+16,Gilmore,Neil,Carnethy,M,1:33:41
+17,Douglas,Gav,Unattached,M,1:33:54
+18,Upward,Mark,Portobello,M,1:33:58
+19,Millar,Archie,Unattached,M,1:34:01
+20,Nicholson,Jim,Unattached,M,1:34:04
+21,Haslam,James,Unattached,M,1:34:09
+22,Moseley,Paul,Dunbar RC,M,1:34:43
+23,Moseley,Steve,Wargrave Runners,M,1:34:56
+24,Carruthers,Andy,Unattached,M,1:34:58
+25,Dunbar,Allan,Penicuik Harriers,M,1:35:05
+26,Cairns,Gillian,Penicuik Harriers,F40,1:35:17
+27,McEwan,Andrew,Teviotdale Harriers,M,1:36:06
+28,Kerr,Emma,Unattached,F,1:37:34
+29,Calder,William,Unattached,M,1:37:36
+30,Williams,Alun,Pennine Fell Runners,M,1:38:04
+31,Williams,Sam,Unattached,M,1:38:11
+32,Lockie,Duncan,Unattached,M,1:38:31
+33,Elder,Alan,Moorfoot Runners,M,1:38:49
+34,Birley,Tessa,Edinburgh AC,F,1:38:59
+35,Atkin,David,Westerlands,M,1:39:06
+36,Hawkins,Ian,Fife AC,M,1:39:31
+37,McPartland,Frank,HELP,M,1:40:16
+38,Nightingale,Dave,Borders Triathletes,M,1:40:19
+39,Dance,Rachel,Unattached,F,1:40:23
+40,Hamilton,John,Tinto Hill Runners,M,1:40:33
+41,Maginnis,Martin,Linlithgow Harriers,M,1:41:13
+42,Foy,Michael,HELP,M,1:41:23
+43,Shand,Cameron,Borders Triathletes,M,1:41:27
+44,Whittaker,Mandy,Edinburgh Tri Club,F,1:41:41
+45,Molero,Luis,Lauderdale Limpers,M,1:41:48
+46,Gibson,Gillian,Unattached,F,1:42:28
+47,Caughey,Kyle,Unattached,M,1:42:33
+48,Fraser,Billy,Northumberland FR,M,1:43:24
+49,Hartley,Jenny,Lauderdale Limpers,F,1:43:35
+50,Gralewicz,Margaret,Edinburgh Running Network,F,1:45:29
+51,Mudarra,Miguel,Edinburgh AC,M,1:45:32
+52,Hughes,Malcolm,Linlithgow Harriers,M,1:45:35
+53,Whitlie,Pamela,Carnethy,F,1:46:21
+54,Pound,Oliver,Portobello,M,1:46:33
+55,Boyd,Helen,Carnethy,F,1:47:12
+56,Lockie,Gavin,Teviotdale Harriers,M,1:47:34
+57,Fortune,Carole,Gala Harriers,F,1:47:38
+58,Wilson,Keith,Galavanters,M,1:47:41
+59,Wright,Fiona,Portobello,F,1:47:48
+60,Neilson,Douglas,Unattached,M,1:48:50
+61,Tennet,Graham,Unattached,M,1:49:20
+62,Keefe,Caroline,Jog Earlston,F,1:49:30
+63,Macvicar,Suzanne,Jog Earlston,F,1:49:31
+64,Lockie,Paul,Teviotdale Harriers,M,1:49:49
+65,MacDonald,Martin,HELP,M,1:49:53
+66,Finn,Steven,Unattached,M,1:49:55
+67,McAleese,Rachel,Lauderdale Limpers,F,1:49:59
+68,Earnshaw,Andrew,Unattached,M,1:50:17
+69,Murray,Lucy,Unattached,F,1:51:04
+70,Wharton,Iain,Kelso,M,1:51:06
+71,Leggatt,Angela,Portobello,F,1:51:11
+72,Funnell,Kevin,Falkland Trail Runners,M,1:52:25
+73,Fraser,Catherine,Harmeny AC,F,1:52:31
+74,Johnstone,David,Unattached,M,1:52:54
+75,Taylor,Jane,Galavanters,F,1:53:01
+76,Simpson,Alan,Portobello,M,1:53:54
+77,Walsh,Shaun,Unattached,M,1:54:05
+78,Killean,Liz,Fife AC,F,1:54:12
+79,Ryan,Emmett,Unattached,F,1:54:32
+80,Brown,Gav,Gala Harriers,M,1:54:36
+81,Nairn,John,Unattached,M,1:55:16
+82,Campbell,Alexandra,Unattached,F,1:55:31
+83,Henderson,Kate,Lauderdale Limpers,F,1:56:10
+84,Bayne,Karen,Falkland Trail Runners,F,1:57:06
+85,Leggatt,Kerry,Portobello,F,1:57:13
+86,Whitaker,Helen,Unattached,F,1:57:30
+87,McDonald,Paddy,HELP,M,2:00:13
+88,Thompson,Colin,Tweed Striders,M,2:00:31
+89,Brown,Norman,Edinburgh Running Network,M,2:00:44
+90,Skelt,Jim,Edinburgh Running Network,M,2:00:47
+91,Pound,Victoria,Portobello,F,2:02:09
+92,Castellano,Ines,Edinburgh Running Network,F,2:02:34
+93,Nimmo,Ali,Unattached,F,2:05:11
+94,McDonald,Rachael,Unattached,F,2:05:56
+95,McPherson,Hugh,Tinto Hill Runners,M,2:07:04
+96,White,Michaela,Unattached,F,2:07:54
+97,Kyle,Lorraine,Lauderdale Limpers,F,2:08:08
+98,Horne,Elsie,HBT,F,2:08:42
+99,Galloway,Emma,Unattached,F,2:08:43
+100,Brown,Mairi,Carnethy,F,2:08:52
+101,Briggs,Andrew,Penicuik Harriers,M,2:08:54
+102,Moffat,Julie,Portobello,F,2:09:06
+103,Cowden,Lynne,Edinburgh Running Network,F,2:09:16
+104,Bain,Lynne,Unattached,F,2:10:47
+105,Wallace,Lianne,Unattached,F,2:13:10
+106,Norlander,Charlotte,Unattached,F,2:13:54
+107,Nicholson,Kate,Unattached,F,2:14:45
+108,Birch,Frank,Teviotdale Harriers,M,2:20:01
+109,Fairbairn,Marion,Unattached,M,2:20:04
+110,Forbes,Victoria,Unattached,F,2:20:06
+111,Redburn,Julie,Unattached,F,2:20:13
+112,Sharp,Susan,Unattached,F,2:20:30
+113,Robson,Natalie,Unattached,F,2:21:05
+114,Craig,Ashley,Unattached,F,2:27:44
+115,Craig,Austin,Unattached,M,2:27:45
+116,Baldwin,Jennifer,Unattached,F,2:33:27
+117,Neill,Allan,Unattached,M,2:39:47
+118,Spence,Karen,Falkland Trail Runners,F,2:41:12

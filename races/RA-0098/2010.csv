@@ -1,0 +1,482 @@
+RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
+1,Wild,Finlay,Lochaber AC,M,1:35:39
+2,Simpson,Robbie,Deeside Runners,MU23,1:36:09
+3,Holmes,Ian,Bingley Harriers,M40,1:37:47
+4,Wright,Jonathan,Todmorden Harriers,M40,1:43:29
+5,Pattinson,Richard,Pudsey & Bramley,M40,1:45:08
+6,Sullivan,Matthew,Shettleston Harriers,M,1:45:26
+7,Brittleton,Peter,Ambleside,M40,1:45:56
+8,Steede,Jonny,Glens Runners,M,1:46:15
+9,Ridgway,Iain,Eryri Harriers,M,1:47:57
+10,Smith,Alan,Deeside Runners,M50,1:48:04
+11,Swarbrick,Steve,Bowland Fell Runners,M,1:48:21
+12,Manners,Will,Strathearn Harriers,M40,1:48:36
+13,Woods,Des,Mourne Runners,M40,1:48:42
+14,Gorman,Manny,Westerlands,M40,1:49:03
+15,Lawrence,Robin,Bingley Harriers,M,1:49:06
+16,Mattocks,Craig,Gala Harriers,M,1:49:25
+17,Newman,Chris,Wharfedale Harriers,M,1:49:47
+18,Holloway,Darren,Pennine Fell Runners,M40,1:50:00
+19,Anthony,Alasdair,Ochil Hill Runners,M,1:50:25
+20,Cunningham,Michael,Borrowdale Fell Runners,M,1:50:29
+21,Davenhill,Anesti,Shettleston Harriers,M40,1:51:04
+22,Hulley,Matthew,Pennine Fell Runners,M,1:51:08
+23,Rank,Julian,Holmfirth Harriers,M40,1:51:15
+24,Poll,Bruce,Lochaber AC,M,1:51:20
+25,Cairns,George,Lochaber AC,M40,1:51:26
+26,McQueen,James,Eryri Harriers,M,1:52:00
+27,Mackenzie,Donald,Lomond Hill Runners,M40,1:52:08
+28,Smith,Bruce,Carnethy,M40,1:52:13
+29,Moses,Colin,Wharfedale Harriers,M40,1:52:28
+30,O`Donnell,Hugh,Ambleside,M,1:52:56
+31,MacLean,Paul,Lochaber AC,M,1:53:13
+32,Watt,Ruari,Lochaber AC,M,1:53:17
+33,Gallie,David,Lochaber AC,M40,1:53:33
+34,McGoldrick,Mark,Wharfedale Harriers,M,1:53:36
+35,Glencorse,Colin,Kilmarnock Harriers,M,1:53:51
+36,Binnie,John,Lochaber AC,M40,1:53:55
+37,Hepburn,John,Lochaber AC,M40,1:54:07
+38,Brennan,Alex,Ballymena Runners,M,1:54:20
+39,Murray,David,Ochil Hill Runners,M40,1:54:26
+40,Chippendale,Mark,Bowland Fell Runners,M40,1:54:37
+41,Faulkner,Paul,Carnethy,M,1:55:15
+42,Upson,Chris,Westerlands,M40,1:55:49
+43,MacDonald,John,Lochaber AC,M,1:55:56
+44,O`Donnell,Rory,Eryri Harriers,M,1:55:59
+45,Herron,Samuel,Mourne Runners,M,1:55:59
+46,Mora,Cecilia,Valetudo Skyrunning Italia,F,1:56:01
+47,MacDonald,Gary,Lochaber AC,M,1:56:37
+48,McDonald,Dennis,Cosmics,M40,1:57:10
+49,Modley,Jack,Lonsdale Fell Runners,MU23,1:57:20
+50,Laing,Martin,Unattached,M50,1:57:23
+51,Walker,David,Clayton Le Moors,M,1:57:33
+52,Craine,Noel,Eryri Harriers,M40,1:57:35
+53,Paterson,Donald,Lochaber AC,M,1:57:41
+54,Kennedy,Peter,Lochaber AC,M,1:58:07
+55,Stansfield,Craig,Rossendale,M40,1:58:23
+56,Shaw,Richard,Lochaber AC,M40,1:58:35
+57,Love,Craig,Dundee Hawkhill,M,1:58:38
+58,Hardiman,Neil,Clayton Le Moors,M40,1:59:04
+59,Malcolm,Stuart,Highland Hill Runners,M40,1:59:05
+60,Kelly,Graham,Westerlands,M40,1:59:06
+61,Ward,Dave,Pennine Fell Runners,M,1:59:10
+62,Fallon,Steven,Carnethy,M40,1:59:18
+63,Motley,Dave,Clayton Le Moors,M,1:59:23
+64,Oakes,Tim,Viking,M,1:59:37
+65,Coleman,Jules,Lonsdale Fell Runners,M40,1:59:54
+66,Blomfield,Oliver,Eden Runners,M,1:59:59
+67,Gibson,Scott,Northumberland FR,M,2:00:06
+68,Mitchell,Paul,Bingley Harriers,M40,2:00:14
+69,Forster,Damian,Lochaber AC,M40,2:00:20
+70,Soles,David,Pennine Fell Runners,M40,2:00:20
+71,Ward,Peter,Unattached,M,2:00:22
+72,Williamson,Jason,Cosmics,M40,2:00:40
+73,Greenwood,Ian,Clayton Le Moors,M40,2:01:18
+74,Watson,Sam,Wharfedale Harriers,M,2:01:37
+75,Bailey,Clive,Mourne Runners,M,2:01:41
+76,Blackhall,Keith,Lochaber AC,M40,2:01:51
+77,Mestecky,Phil,Strathearn Harriers,M40,2:01:59
+78,Ridgway,Sarah,Eryri Harriers,F,2:02:13
+79,Smith,Thomas,FRA,M,2:02:18
+80,MacDonald,David X,Lochaber AC,M,2:02:32
+81,Walker,Iain,Westerlands,M,2:02:34
+82,Quail,Brendan,Newcastle AC,M,2:02:36
+83,Muir,Jonny,Carnethy,M,2:02:44
+84,Mack,Glenn,BNRA,M40,2:02:54
+85,Scott,David,Ochil Hill Runners,M50,2:02:58
+86,Johnson,Bob,Gala Harriers,M50,2:03:01
+87,Breytenbach,Johann,Stratford upon Avon AC,M,2:03:23
+88,Pryde,Gordon,Lomond Hill Runners,M50,2:03:55
+89,Ellithorn,Mark,Chorley Harriers,M40,2:04:09
+90,Carr,Kieran,Clayton Le Moors,M60,2:04:23
+91,Kennedy,Ali,Lochaber AC,M40,2:04:46
+92,Heron,Gregor,Carnethy,M40,2:04:59
+93,Macdonald,Dougie,Highland Hill Runners,M,2:05:01
+94,Dugdale,Jack,Clayton Le Moors,MU23,2:05:31
+95,Anderson,Russell,Moorfoot Runners,M50,2:05:36
+96,White,David,Helm Hill Runners,M,2:05:46
+97,Preedy,Andrew,Rossendale,M,2:05:54
+98,Anderson,Laurie,Lomond Hill Runners,M50,2:05:59
+99,Horsfall,Andrew,Todmorden Harriers,M40,2:06:17
+100,Maitland,John,Lochaber AC,M50,2:06:21
+101,Forbes,Craig,Lochaber AC,M,2:06:22
+102,Kendall,Mark,Newcastle AC,M,2:06:35
+103,Shannon,Alwynne,Mourne Runners,F40,2:06:36
+104,Matthews,Steve,Dundee Hawkhill,M,2:06:41
+105,Halliday,Simon,Clayton Le Moors,M,2:06:43
+106,MacEwan,John,Ochil Hill Runners,M40,2:07:05
+107,Gilkison,Alan,Westerlands,M40,2:07:10
+108,Marks,William,Mourne Runners,M,2:07:16
+109,Rooney,Liam,Kimberworth Striders,M,2:07:26
+110,Stewart,Grant,Ochil Hill Runners,M,2:07:32
+111,Bell,Michael,Lochaber AC,M40,2:07:45
+112,Stalker,Jim,Lochaber AC,M40,2:08:09
+113,Russell,Colin,Cosmics,M,2:08:13
+114,White,David,Kilmarnock Harriers,M40,2:08:15
+115,Stewart,Ryan,Lochaber AC,M,2:08:20
+116,Stewart,John,Lochaber AC,M40,2:08:29
+117,Watkins,Rhys,Todmorden Harriers,M40,2:08:31
+118,Fraser,Gary,Ochil Hill Runners,M40,2:08:40
+119,Deakin,Simon,North York Moors AC,M,2:08:59
+120,Kirby,Graham,Fife AC,M40,2:09:06
+121,Matthews,Paul,Metro Aberdeen,M,2:09:20
+122,Walker,Adrian,Settle Harriers,M40,2:09:23
+123,Treitl,Nick,Barlick Fell Runners,M,2:09:31
+124,McAlister,Emmet,Glens Runners,M,2:09:51
+125,Bellaries,Richard,Clayton Le Moors,M50,2:09:53
+126,Horsfield,Richard,Dark Peak,M40,2:09:54
+127,MacBeath,Niall,Lochaber AC,M40,2:09:56
+128,Pemberton,Gareth,Wharfedale Harriers,M,2:10:00
+129,Worswick,Neil,Clayton Le Moors,M40,2:10:20
+130,Berry,Mick,Keighley & Craven,M40,2:10:27
+131,Byrne,Sara,Lochaber AC,F,2:10:32
+132,Raynes,Michael,York Postal Harriers,M,2:10:35
+133,McIntyre,Steven,Highland Hill Runners,M,2:10:46
+134,Watson,Dan,Lochtayside,M40,2:10:50
+135,Taylor,Tim,Pudsey & Bramley,M,2:10:51
+136,Brazier,Daniel,Wolverhampton AC,M,2:10:56
+137,Plummer,Steven,Wharfedale Harriers,M,2:11:01
+138,Clough,Lynne,Chorley Harriers,F40,2:11:07
+139,Denovan,John,Tartan Warrior,M,2:11:10
+140,Browning,Peter,Clayton Le Moors,M50,2:11:12
+141,Homewood,Ellen,Westerlands,F,2:11:12
+142,Beresford,Russell,Dark Peak,M40,2:11:15
+143,Page,Ian,Wharfedale Harriers,M40,2:11:24
+144,Wilson,Stewart,Highland Hill Runners,M40,2:11:24
+145,Sharples,Jon,Clayton Le Moors,M50,2:11:29
+146,Jones,Stephen,Clwydian Range Runners,M40,2:11:44
+147,Scott,Richard,Bingley Harriers,M40,2:11:50
+148,Hicks,Stephen,Borrowdale Fell Runners,M50,2:12:00
+149,Turner,Ronnie,Lochaber AC,M40,2:12:02
+150,MacKenzie,Ruth,Deeside Runners,F40,2:12:03
+151,Simpson,Stuart,Stornoway AC,M40,2:12:07
+152,Buchanan,Peter,Ochil Hill Runners,M50,2:12:15
+153,Whigham,Ivan,Clayton Le Moors,M40,2:12:16
+154,Nutter,Mark,Clayton Le Moors,M40,2:12:22
+155,Holman,Paul,Darwen Dashers,M40,2:12:37
+156,Lee,Andrew,Rossendale,M40,2:12:43
+157,Hanna,Richard,Mourne Runners,M,2:12:51
+158,McCrickard,PJ,Newcastle AC,M,2:12:54
+159,Anthony,Eilidh,HBT,F,2:12:54
+160,Ross,David,Lochaber AC,M40,2:13:01
+161,King,Steven,Carnegie Harriers,M,2:13:08
+162,Scott,Dawn,Lochaber AC,F,2:13:12
+163,Munro,David,Lochaber AC,M40,2:13:21
+164,Thompson,Jim,Saltwell Harriers,M40,2:13:27
+165,Wiseman,Dave,Alnwick Harriers,M40,2:13:30
+166,Moss,Antony,Totley AC,M,2:13:33
+167,Stephenson,Dave,Bingley Harriers,M40,2:13:35
+168,MacLeod,Murdo,Westerlands,M50,2:13:37
+169,Robinson,Andrew,Clayton Le Moors,M50,2:13:40
+170,Barron,Sam,Lonsdale Fell Runners,M,2:13:52
+171,Mathieson,Stuart,Bellahouston RR,M,2:14:07
+172,Scott,Tom,Fife AC,M60,2:14:12
+173,Unknown,Unknown,Unknown,M40,2:14:15
+174,Verbiest,Dirk,Garioch Road Runners,M50,2:14:19
+175,Rogers,David,Westerlands,M40,2:14:23
+176,Barton,Mike,Mourne Runners,M50,2:14:34
+177,Stevenson,John,Ochil Hill Runners,M40,2:14:42
+178,Hindle,Paul,Wharfedale Harriers,M40,2:15:09
+179,McCann,Tish,Mourne Runners,F40,2:15:11
+180,Roberts,Richard Emlyn,Eryri Harriers,M40,2:15:12
+181,MacDonald,Kenny,Carnegie Harriers,M40,2:15:30
+182,Coventry,Gavin,Esk Valley Fell Runners,M40,2:15:44
+183,Bell,David,Mourne Runners,M50,2:15:52
+184,McBurney,Brian,Newcastle AC,M40,2:15:58
+185,Brannan,Tosh,Lothian,M50,2:16:00
+186,Henderson,Iain,Lochaber AC,M,2:16:04
+187,Brash,Colin,Girvan Harriers,M40,2:16:09
+188,Macnab,Graham,Lochaber AC,M40,2:16:22
+189,Matthews,Alison,Metro Aberdeen,F,2:16:48
+190,Brittleton,Paul,Howgill Harriers,M40,2:16:55
+191,Butler,Andy,Pennine Fell Runners,M50,2:16:55
+192,Boler,Neville,Unattached,M60,2:17:17
+193,Blackhall,Amanda,Lochaber AC,F,2:17:21
+194,Denny,Colin,Lochaber AC,M40,2:17:29
+195,Duffy,Paul,North Down AC,M40,2:17:33
+196,Cameron,Gordon,Carnethy,M50,2:18:15
+197,Hardman,Peter,Bracknell Forest Runners,M50,2:18:23
+198,Thompson,Peter,Clayton Le Moors,M50,2:18:31
+199,Roberts,Clive,Fife AC,M50,2:18:39
+200,Broadley,Drew,Lochaber AC,M50,2:18:55
+201,Green,Christopher,Bishops Stortford,M,2:19:40
+202,Gibson,Jonathan,Wharfedale Harriers,M40,2:19:58
+203,Williams,Edwin,Eryri Harriers,M40,2:20:34
+204,Egan,John,Wharfedale Harriers,M40,2:20:38
+205,Allison,Bob,Fife AC,M50,2:20:54
+206,Presly,Sandy,Wolds Veteran Runners Club,M60,2:20:59
+207,Reynolds,Colin,Carnegie Harriers,M,2:21:13
+208,Connell,Ian,Clayton Le Moors,M40,2:21:14
+209,Milne,Bruce,Carnethy,M40,2:21:37
+210,Clegg,Tim,Keighley & Craven,M50,2:21:55
+211,Mortlock,Simon,Dumfries RC,M40,2:22:04
+212,Smith,Fred,Saltwell Harriers,M,2:22:10
+213,Horsley,Brian,Calder Valley,M60,2:22:16
+214,Bradley,Catherine,Wharfedale Harriers,F,2:22:20
+215,Davidson,Chris,Perth Tri Club,M,2:22:29
+216,Strachan,Graham,Metro Aberdeen,M,2:23:00
+217,Little,Chris,Northumberland FR,M40,2:23:01
+218,Campbell,Neil,Carnethy,M,2:23:06
+219,Carman,Paul,Wharfedale Harriers,M,2:23:13
+220,Templeman,Simon,Ochil Hill Runners,M40,2:23:17
+221,Appleby,Jonathan,Highland Hill Runners,M40,2:23:22
+222,Jermieson,Ashley,Cosmics,M50,2:23:27
+223,Bowman,Angus,Lomond Hill Runners,M50,2:23:32
+224,Davidson,Angus,Carnethy,M,2:23:40
+225,Beagrie,Joe,Lochaber AC,M40,2:23:41
+226,Wilson,Colin,Lomond Hill Runners,M40,2:23:43
+227,MacDonald,Gio,Carnethy,M40,2:23:44
+228,Rowe,Chris,North Shields Poly,M,2:23:48
+229,Hepburn,Ian,Horwich,M,2:23:50
+230,Graham,Martin,Lochaber AC,MU23,2:23:51
+231,Smith,Michael,Bingley Harriers,M50,2:23:54
+232,Martin,Nathan,Lochaber AC,M,2:24:10
+233,Hill,Rachel,Wharfedale Harriers,F,2:24:12
+234,Thomas,Alison,Eryri Harriers,F40,2:24:17
+235,Leonard,Jane,Todmorden Harriers,F50,2:24:19
+236,Fitzpatrick,Pat,Ochil Hill Runners,M60,2:24:20
+237,Hall,Andrew,Portsmouth Joggers,M60,2:24:26
+238,Brett,Alex,Highland Hill Runners,M60,2:24:30
+239,Legge,Sarah,Fife AC,F,2:24:54
+240,Cannon,Russell,Helm Hill Runners,M40,2:25:05
+241,Forster,Nix,Lochaber AC,F40,2:25:18
+242,Schofield,Graham,Chorley Harriers,M50,2:25:30
+243,White,Richard,Glossopdale,M,2:25:32
+244,Smith,Stephen,Aberdeen AAC,M,2:25:43
+245,Eadie,Gordon,Carnethy,M50,2:25:47
+246,Maguire,Gerry,Serpentine Running Club,M40,2:26:13
+247,Farrar,Martin,Wharfedale Harriers,M40,2:26:19
+248,Johnson,Lawrence,Northumberland FR,M40,2:26:25
+249,Caulkett,Andy,Lomond Hill Runners,M40,2:26:40
+250,Gregory,Emma,Bowland Fell Runners,F,2:26:42
+251,Watt,Victoria,Lochaber AC,F,2:27:06
+252,Firth,Andrew,Clayton Le Moors,M50,2:27:11
+253,Wardner,Matthew,Lochaber AC,M40,2:27:43
+254,Taylor,Neil,Wharfedale Harriers,M50,2:28:05
+255,Toal,Jacqueline,BARF,F40,2:28:17
+256,Turner,Andrew,Taunton AC,M,2:28:22
+257,Forrest,Stuart,Highland Hill Runners,M,2:28:23
+258,Weir,Jonathan,Unattached,M,2:28:25
+259,Curtis,Lee,Dunbar RC,M,2:28:31
+260,Jablonski,Derek,Lomond Hill Runners,M50,2:28:42
+261,Murdoch,Ray,Lochaber AC,M60,2:28:49
+262,MacGillivray,Andrew,Bridport Runners,M,2:28:54
+263,McWhinnie,Jim,Fife AC,M50,2:28:56
+264,Pugh,Roderick,Kilmarnock Harriers,M50,2:29:21
+265,Lancastle,Marcus,Lincoln & District,M40,2:29:25
+266,Greig,David,Carnegie Harriers,M40,2:29:30
+267,Smillie,Andrew,Lonsdale Fell Runners,M40,2:29:32
+268,Stewart,Craig,Forfar Road Runners,M,2:30:29
+269,Fish,Stephen,Clayton Le Moors,M50,2:30:34
+270,Callcott,Andrew,Derwent Valley Running Club,M40,2:30:35
+271,Walmsley,Andrew,Clayton Le Moors,M50,2:30:39
+272,Cant,Stephen,Lochaber AC,M40,2:30:43
+273,Eddleston,Mike,Clayton Le Moors,M50,2:30:53
+274,Symonds,Trevor,Northern Fells Running Club,M50,2:31:06
+275,Adams,Ian,Lochaber AC,M50,2:31:28
+276,Walker,Sarah,Westerlands,F,2:31:36
+277,Hemstock,Edie,Lochaber AC,FU23,2:31:50
+278,Williams,Pete,Lonsdale Fell Runners,M,2:32:10
+279,Ritchie,Hilary,Fife AC,F40,2:32:13
+280,Anderson,Kevin,Penicuik Harriers,M,2:32:19
+281,Sinclair,Andrew,Macclesfield Harriers,M40,2:32:46
+282,Leonard,Richard,Todmorden Harriers,M50,2:32:49
+283,Whitehead,Ruth,Bingley Harriers,F,2:32:55
+284,Rumgay,Ken,Lochaber AC,M40,2:32:56
+285,Charters,Ian,Bowland Fell Runners,M50,2:33:01
+286,Vergura,Carmela,Valetudo Skyrunning Italia,F,2:33:13
+287,Shaw,Richard,Anster Haddies,M50,2:33:24
+288,Clare,Sean,Clayton Le Moors,M40,2:33:30
+289,Armstrong,David,Northumberland FR,M50,2:33:35
+290,Shaw,Andrew,Holmfirth Harriers,M40,2:33:56
+291,Gow,Elizabeth,Lochaber AC,F40,2:34:20
+292,Nield,David,Clayton Le Moors,M50,2:34:31
+293,Collins,Trevor,Carnethy,M50,2:34:33
+294,Till,Dave,Skye & Lochalsh RC,M50,2:34:37
+295,Morrison,Gordon,Strathearn Harriers,M50,2:34:39
+296,Methold,Henry,Lochaber AC,M40,2:34:54
+297,Graham,Mark,Cumberland Fell Runners,M50,2:35:01
+298,Corner,Julie,Lochaber AC,F,2:35:08
+299,Tuson,Paul,Helm Hill Runners,M50,2:35:11
+300,Symons,Mike,Manchester YMCA,M40,2:35:15
+301,Weston,Alison,Ilkley Harriers,F40,2:35:17
+302,Edwards,Mark,North York Moors AC,M50,2:35:19
+303,Davis,Katherine,Northumberland FR,F40,2:35:25
+304,Brown,Jamie,HBT,M,2:35:35
+305,Black,David,Clayton Le Moors,M40,2:35:39
+306,Ross,Susan Jane,Lochaber AC,F40,2:35:42
+307,Netherwood,Adrian,Bingley Harriers,M50,2:35:52
+308,Bingham,Graham,Northumberland FR,M40,2:36:05
+309,Tighe,Mick,Lochaber AC,M60,2:36:08
+310,Savage,Barbara,Clayton Le Moors,F,2:36:10
+311,Bury,Stephen,Clayton Le Moors,M50,2:36:17
+312,Macdonald,Iain,Lochaber AC,M50,2:36:21
+313,Redmayne,Jacqueline,Chorley Harriers,F40,2:36:38
+314,Milne,Ron,Forfar Road Runners,M50,2:36:47
+315,Smith,Gordon,Lochaber AC,M60,2:36:52
+316,McKechnie,Russell,Highland Hill Runners,M50,2:37:00
+317,Banks,Johnny,Lochaber AC,M60,2:37:13
+318,Whittingham,Bryan,Fife AC,M,2:37:21
+319,Hamilton,Anita,Cosmics,F50,2:37:30
+320,Daynes,Ed,Lochaber AC,M40,2:37:50
+321,Bamber,Graeme,Lochaber AC,M,2:38:00
+322,Schreiber,Jo,Girvan Harriers,M40,2:38:07
+323,Ledingham,Paul,Glasgow Tri Club,M,2:38:09
+324,Thomas,Ranjit,Dumfries RC,M40,2:38:11
+325,Dugdale,Andrew,Clayton Le Moors,M40,2:38:23
+326,Rowlands,Dilwyn,Eryri Harriers,M,2:38:41
+327,Eunson,Paul,Portobello,M50,2:38:57
+328,Dixon,Stephen,Valley Striders,M50,2:39:12
+329,Millar,Malcolm,Durban Athletic Club,M50,2:39:18
+330,Barnes,Ian,Rossendale,M40,2:39:25
+331,Mackenzie,Sarah,Lochaber AC,FU23,2:39:35
+332,McWhinnie,Janet,Fife AC,F40,2:39:35
+333,Gilbert,Richard,Todmorden Harriers,M40,2:39:35
+334,Prytherch,David,Eryri Harriers,M40,2:39:40
+335,Bowie,Tom,Unattached,M60,2:39:44
+336,Yeomans,Sarah,Rossendale,FU23,2:39:52
+337,Tighe,Katharine,Lochaber AC,F40,2:39:56
+338,Yeomans,Allan,Rossendale,M40,2:40:00
+339,Gall,Allan,Central AC,M50,2:40:03
+340,Ball,Stephen,Accrington Road Runners,M40,2:40:16
+341,Cheshire,D,Mercia,M40,2:40:21
+342,Rooney,Patrick,Kimberworth Striders,M50,2:40:21
+343,Birbeck,Mark,Horwich,M40,2:40:30
+344,Henrys,Mark,Lochaber AC,M40,2:40:34
+345,Newman,Kate,Wharfedale Harriers,F,2:40:57
+346,Hayler,Mark,Lancaster & Morecambe,M60,2:41:02
+347,Morris,Paul,Gala Harriers,M50,2:41:18
+348,Warren,Arthur,FRA,M60,2:41:34
+349,Milmoe,Michael,Forres Harriers,M50,2:41:45
+350,Ness,Joanna,Lochaber AC,F40,2:42:14
+351,Jackson,Paul,Chorley Harriers,M40,2:42:46
+352,Johnson,Alex,FRA,M,2:43:03
+353,MacEwan,Linda,Lochaber AC,F40,2:43:08
+354,McAndrew,Colin,Lochaber AC,M50,2:43:16
+355,Shaw,Graham,Bolton United Harriers,M50,2:43:19
+356,Gillies,Eric,Lochaber AC,M40,2:43:24
+357,Walker,Robert,Penicuik Harriers,M40,2:43:34
+358,Campbell,Brian,Lochaber AC,M50,2:43:38
+359,Morgan,Sharyn,Lochaber AC,F,2:43:40
+360,Firth,Stephen,Bingley Harriers,M,2:43:48
+361,Nightingale,John,FRA,M,2:43:50
+362,Johnston,Stephen,Milburn Harriers,M40,2:44:00
+363,Scott,Jocelyn,Fife AC,F50,2:44:13
+364,Titley,William,Trawden AC,M40,2:44:18
+365,Hunn,Stuart,Wharfedale Harriers,M,2:44:25
+366,Smith,Tilly,Deeside Runners,M50,2:44:29
+367,Harwood,Andrew,FRA,M40,2:44:43
+368,Osborn,David,Lomond Hill Runners,M40,2:44:46
+369,O`Neill,David,Lochaber AC,M40,2:44:52
+370,Cowan,Ricky,Mourne Runners,M60,2:44:57
+371,Howard,Michael,Todmorden Harriers,M50,2:45:13
+372,Cassidy,John,Lochaber AC,M,2:45:13
+373,Dugdale,Peter,Clayton Le Moors,M50,2:45:15
+374,Tomlinson,David,Lochaber AC,M60,2:45:18
+375,Leonard,Paul,Wimbledon Windmilers,M,2:45:20
+376,Moynihan,Anthony,BNRA,M40,2:45:21
+377,West,Alison,Carnegie Harriers,F50,2:45:22
+378,Conway,Ged,Saltwell Harriers,M40,2:45:22
+379,Clunas,Gillian,Cosmics,F50,2:45:27
+380,Bellis,Peter,Bolton United Harriers,M50,2:45:30
+381,Goodyear,Ian,Bingley Harriers,M60,2:45:54
+382,Ludley,Kate,Lonsdale Fell Runners,F,2:46:00
+383,Ross,Colin,Lochaber AC,M40,2:46:01
+384,Cassidy,Caroline,Lochaber AC,M,2:46:04
+385,Love,Charlie,Dundee Hawkhill,M60,2:46:07
+386,Hudson,Peter,Mercia,M40,2:46:13
+387,Thorpe,Andrew,Calder Valley,M40,2:46:33
+388,O`Kane,John,Lochaber AC,M40,2:46:41
+389,Allan,Geoff,Carnethy,M40,2:46:46
+390,Tuer,Kate,Unattached,F,2:46:50
+391,Wilson,Stephen,Cumberland Fell Runners,M40,2:47:34
+392,Cameron,James,Lochaber AC,M,2:48:25
+393,Thompson,John,Wharfedale Harriers,M50,2:48:26
+394,Wise,Chris,Bolton United Harriers,M40,2:48:27
+395,MacGillivray,Jock,Lochaber AC,M40,2:48:28
+396,Munroe,Doug,Clayton Le Moors,M60,2:48:33
+397,Stewart,James,Lochaber AC,M60,2:48:48
+398,Wilson,Joan,Lomond Hill Runners,F40,2:49:14
+399,Bates,Paul,Lonsdale Fell Runners,M50,2:49:26
+400,O`Brien,Paul,Corstorphine,M50,2:49:31
+401,MacDonald,Donna,Lochaber AC,F,2:49:38
+402,Lomb,Joachim,BNRA,M40,2:49:41
+403,Marshall,Ian,Cambridge Harriers,M60,2:49:58
+404,Rogan,Kevin,Wharfedale Harriers,M50,2:50:03
+405,Mills,Danny,York Postal Harriers,M50,2:50:41
+406,Orr,Ernie,Lochaber AC,M60,2:50:46
+407,Walsh,Martin,Bowland Fell Runners,M60,2:51:17
+408,Green,Phil,Northumberland FR,M40,2:51:22
+409,Lennie,Andrew,Carnethy,M40,2:51:48
+410,Doyle,John,Lonsdale Fell Runners,M50,2:51:56
+411,Johnson,Dave,Northumberland FR,M50,2:52:08
+412,Ashworth,Kieron,Wharfedale Harriers,M40,2:52:10
+413,Treitl,Richard,Barlick Fell Runners,M50,2:52:21
+414,Gardiner,Fiona,Lochaber AC,F40,2:52:38
+415,Newell,Mark,Cambridge Harriers,M50,2:52:51
+416,Shields,Robert,Milburn Harriers,M60,2:52:56
+417,Hammond,Mark,Accrington Road Runners,M,2:53:08
+418,Lee,John,Todmorden Harriers,M50,2:53:13
+419,McIntyre,Iain,Highland Hill Runners,M40,2:54:00
+420,Barr,Andrew,Mid Argyll AC,M50,2:54:16
+421,Brown,Rick,Lochaber AC,M50,2:54:21
+422,Mackenzie,Iain,Deeside Runners,M50,2:54:25
+423,Blakemore,Ian,Eryri Harriers,M50,2:55:14
+424,Boada,Juan,Lochaber AC,M50,2:56:13
+425,Downie,Chris,Penicuik Harriers,M40,2:56:35
+426,Austin,Patrick,Cambridge Harriers,M40,2:56:54
+427,Holden,Graham,Lonsdale Fell Runners,M50,2:57:19
+428,Hamilton,Jim,Lochaber AC,M40,2:57:21
+429,Kennedy,Nancy,Lochaber AC,F50,2:57:48
+430,MacPherson,Bryan,Lochaber AC,M50,2:58:31
+431,Collinson,Cherry,Bolton United Harriers,F,2:58:41
+432,MacInnes,Karen,Lochaber AC,F40,2:59:24
+433,Mallett,Patrick,Lomond Hill Runners,M40,2:59:33
+434,Roberts,Sue,Todmorden Harriers,F,2:59:37
+435,Morrison,Ellen,Lochaber AC,F40,2:59:49
+436,Jackson,Jenna,Lochaber AC,FU23,3:00:12
+437,Gardiner,Paula,Westerlands,F40,3:00:19
+438,Kirkdale,Brian,Hastings Runners,M50,3:00:21
+439,Marynicz,Paul,Norham RC,M50,3:00:34
+440,Mitchell,David,Ayrodynamic Tri Club,M40,3:01:07
+441,Kitson,Aileen,Lochaber AC,F50,3:01:45
+442,Graham,Andrew,Trawden AC,M,3:02:08
+443,Gatehouse,Richard,Lomond Hill Runners,M50,3:02:27
+444,Pearce,Emma,Lochaber AC,F40,3:02:36
+445,Steele,Stuart,Lochaber AC,M,3:02:44
+446,Corbett,Gary,Pennine Fell Runners,M40,3:03:07
+447,Jardine,Jimmy,Lochaber AC,M60,3:03:26
+448,Barbour,Laura,Lochaber AC,F,3:03:49
+449,Shorrock,Lee,Darwen Dashers,M,3:03:58
+450,Hack,Chris,Portsmouth Joggers,M60,3:04:03
+451,King,Alex,Ochil Hill Runners,M40,3:05:00
+452,Doyle,Tim,Penicuik Harriers,M40,3:05:29
+453,Smith,Janice,HBT,F50,3:06:00
+454,Wake,Adrian,Strathearn Harriers,M50,3:06:00
+455,Channing,Paul,Portsmouth Joggers,M50,3:06:01
+456,Hargreaves,William,Bingley Harriers,M60,3:06:22
+457,Walsh,Paul,Bowland Fell Runners,M60,3:07:10
+458,Sammon,Mark,Lostock AC,M,3:07:52
+459,Robinson,Mick,Notts AC,M50,3:08:11
+460,Tait,Richard,Ambleside,M50,3:08:41
+461,Walker,David,Lochaber AC,M50,3:09:10
+462,Goth,Mandy,Todmorden Harriers,F50,3:09:21
+463,Clavijo,Jorge,Wolds Veteran Runners Club,M40,3:09:32
+464,Macdonald,Corina,Lochaber AC,F40,3:10:09
+465,Winning,Jim,Lomond Hill Runners,M50,3:10:26
+466,Donaldson,Emmy,Lochaber AC,F40,3:10:40
+467,Christie,Ninian,Lochaber AC,M,3:11:05
+468,Aitken,Morag,Lochaber AC,F40,3:11:25
+469,Hawliczek,Edward,Eryri Harriers,M50,3:11:31
+470,Yeomans,Helen,Rossendale,F40,3:11:53
+471,Beveridge,Bob,Lomond Hill Runners,M60,3:13:12
+472,Heywood,Kevin,Kendal AC,M60,3:14:07
+473,Glen,Fiona,Clayton Le Moors,F,3:14:35
+474,Petrie,Jim,Fish Hoek South Africa,M50,3:16:32
+475,Bowman,Jean,Lomond Hill Runners,F50,3:18:16
+476,Yetton,David,Portsmouth Joggers,M50,3:18:18
+477,Goss,Karin,Clayton Le Moors,F60,3:30:41
+478,Oosthuizen,David,Fish Hoek South Africa,M50,3:31:45
+479,Marsh,John,Teviotdale Harriers,M50,3:32:16
+480,Whyte,Angus,Lochaber AC,M60,3:35:20
+481,Davies,Steve,Accrington Road Runners,M60,4:00:00
