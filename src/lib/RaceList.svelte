@@ -1,22 +1,36 @@
 <script lang="ts">
-    export let data: FrontMatter[];
+  import { readable } from 'svelte/store';
+  import { createRender, createTable } from 'svelte-headless-table';
+  import { addColumnOrder, addColumnFilters, addPagination, addSortBy } from 'svelte-headless-table/plugins';
+  import ShrTable from '$lib/ShrTable.svelte';
+  import Link from "$lib/Link.svelte";
+
+  export let data: RaceInfo[];
+
+  const plugins = {
+    sort: addSortBy<RaceInfo>({
+      disableMultiSort: true,
+      initialSortKeys: [{ id: 'title', order: 'asc' }]
+    }),
+    colOrder: addColumnOrder<RaceInfo>(),
+    page: addPagination<RaceInfo>(),
+    filter: addColumnFilters<RaceInfo>()
+  };
+  const table = createTable(readable(data), plugins);
+  const columns = [
+    table.column({
+      header: 'Name',
+      accessor: 'title',
+      cell: ({ row }) =>
+        createRender(Link, { href: row.original.raceId, text: row.original.title })
+      }),
+      table.column({ header: 'Venue', accessor: 'venue' }),
+      table.column({ header: 'Distance', accessor: 'distance' }),
+      table.column({ header: 'Ascent', accessor: 'climb' })
+    ];
+  const tableViewModel = table.createViewModel(table.createColumns(columns))
 </script>
 
-<h1>Hill races in Scotland</h1>
+<h1>Races</h1>
 
-<table>
-    <tr>
-        <th>Name</th>
-        <th>Venue</th>
-        <th>Distance</th>
-        <th>Ascent</th>
-    </tr>
-{#each data as d}
-    <tr>
-        <td><a href={d.raceId}>{d.title}</a></td>
-        <td>{d.venue}</td>
-        <td>{d.distance}</td>
-        <td>{d.climb}</td>
-    </tr>
-{/each}
-</table>
+<ShrTable tableViewModel={tableViewModel} />

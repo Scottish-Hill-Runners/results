@@ -1,183 +1,101 @@
 <script lang="ts">
-    import { readable } from 'svelte/store';
-    import { createRender, createTable, Render, Subscribe } from 'svelte-headless-table';
-    import { addSortBy, addColumnOrder, addColumnFilters, addPagination } from 'svelte-headless-table/plugins';
-    import TextFilter from "$lib/TextFilter.svelte";
-    import SelectFilter from "$lib/SelectFilter.svelte";
-  
-    export let results: Result[];
-    export let title: string;
-    export let blurb: string;
+  import { readable } from 'svelte/store';
+  import { createTable } from 'svelte-headless-table';
+  import { addColumnOrder, addColumnFilters, addPagination, addSortBy } from 'svelte-headless-table/plugins';
+  import { matchFilterPlugin, textFilterPlugin, yearFilterPlugin } from "$lib/filters"; 
+  import ShrTable from '$lib/ShrTable.svelte';
 
-    const textFilterPlugin = {
-      filter: {
-        fn: ({ filterValue, value }) => String(value).toLowerCase().startsWith(String(filterValue).toLowerCase()),
-        initialFilterValue: '',
-        render: ({ filterValue, values, preFilteredValues }) =>
-          createRender(TextFilter, { filterValue, values, preFilteredValues }),
-      }
-    };
-    const matchFilterPlugin = {
-      filter: {
-        fn: ({ filterValue, value }) => filterValue === undefined || filterValue === value,
-        render: ({ filterValue, preFilteredValues }) =>
-          createRender(SelectFilter, { filterValue, preFilteredValues }),
-      }
-    };
+  export let results: Result[];
+  export let title: string;
+  export let blurb: string;
+  export let record: string;
+  export let femaleRecord: string;
+  export let stats: RaceStats;
 
-    const data = readable(results);
-    const table =
-      createTable(
-        data, {
-          sort: addSortBy({ disableMultiSort: true }),
-          colOrder: addColumnOrder(),
-          page: addPagination(),
-          filter: addColumnFilters()
-        });
-    const columns =
-      table.createColumns([
-        table.column({header: 'Year', accessor: 'year', plugins: matchFilterPlugin}),
-        table.column({header: 'Pos', accessor: 'position'}),
-        table.column({header: 'Forename', accessor: 'forename', plugins: textFilterPlugin}),
-        table.column({header: 'Surname', accessor: 'surname', plugins: textFilterPlugin}),
-        table.column({header: 'Club', accessor: 'club', plugins: matchFilterPlugin}),
-        table.column({header: 'Cat.', accessor: 'category', plugins: matchFilterPlugin}),
-        table.column({header: 'Time', accessor: 'time'})
-      ]);
-    const {
-      visibleColumns,
-      headerRows,
-      pageRows,
-      tableAttrs,
-      tableBodyAttrs,
-      pluginStates
-    } =
-      table.createViewModel(
-        columns, {
-          sort: addSortBy(),
-          filter: addColumnFilters()
-       });
-    const { filterValues } = pluginStates.filter;
-    const { pageIndex, pageCount, pageSize, hasNextPage, hasPreviousPage } = pluginStates.page;
-    const { columnIdOrder } = pluginStates.colOrder;
-    $columnIdOrder = ['year', 'position'];
+  const uniqueCategories = new Set<string>();
+  const allYears = Object.keys(stats).sort();
+  allYears.forEach((y) => Object.keys(stats[y]).forEach(c => uniqueCategories.add(c)));
+  const allCategories = Array.from(uniqueCategories).sort();
+
+  const plugins = {
+    sort: addSortBy<RaceInfo>({
+      disableMultiSort: true,
+      initialSortKeys: [{ id: 'time', order: 'asc' }]
+    }),
+    colOrder: addColumnOrder<Result>(),
+    page: addPagination<Result>(),
+    filter: addColumnFilters<Result>()
+  };
+  const table = createTable(readable(results), plugins);
+  const columns = [
+    table.column({
+      header: 'Year',
+      accessor: 'year',
+      plugins: { filter: yearFilterPlugin }
+    }),
+    table.column({
+      header: 'Pos',
+      accessor: 'position'
+    }),
+    table.column({
+      header: 'Forename',
+      accessor: 'forename',
+      plugins: { filter: textFilterPlugin }
+    }),
+    table.column({
+      header: 'Surname',
+      accessor: 'surname',
+      plugins: { filter: textFilterPlugin }
+    }),
+    table.column({
+      header: 'Club',
+      accessor: 'club',
+      plugins: { filter: matchFilterPlugin }
+    }),
+    table.column({
+      header: 'Cat.',
+      accessor: 'category',
+      plugins: { filter: matchFilterPlugin }
+    }),
+    table.column({
+      header: 'Time',
+      accessor: 'time'
+    })
+  ];
+  const tableViewModel = table.createViewModel(table.createColumns(columns))
 </script>
 
 <h1>{title}</h1>
 
+<div class='recordHolders'>
+{#if record !== undefined}
+  <div class='recordHolder'>Record: {record}</div>
+{/if}
+{#if femaleRecord !== undefined}
+  <div class='recordHolder'>Female record: {femaleRecord}</div>
+{/if}
+</div>
+
 {@html blurb}
 
-<table {...$tableAttrs}>
+<h2>Statistics</h2>
+<table>
   <thead>
-    {#each $headerRows as headerRow (headerRow.id)}
-      <Subscribe rowAttrs={headerRow.attrs()} let:rowAttrs>
-        <tr {...rowAttrs}>
-          {#each headerRow.cells as cell (cell.id)}
-            <Subscribe
-              attrs={cell.attrs()} let:attrs 
-              props={cell.props()} let:props>
-              <th {...attrs} on:click={props.sort.toggle}>
-                <Render of={cell.render()} />
-                {#if props.sort.order === 'asc'}
-                  ⬇️
-                {:else if props.sort.order === 'desc'}
-                  ⬆️
-                {/if}
-                {#if props.filter?.render}
-                  <div>
-                      <Render of={props.filter.render} />
-                  </div>
-                {/if}
-              </th>
-            </Subscribe>
-          {/each}
-        </tr>
-      </Subscribe>
-    {/each}
-  </thead>
-  <tbody {...$tableBodyAttrs}>
-    {#each $pageRows as row (row.id)}
-      <Subscribe rowAttrs={row.attrs()} let:rowAttrs>
-        <tr {...rowAttrs}>
-          {#each row.cells as cell (cell.id)}
-            <Subscribe attrs={cell.attrs()} let:attrs props={cell.props()} let:props>
-              <td {...attrs}>
-                <Render of={cell.render()} />
-              </td>
-            </Subscribe>
-          {/each}
-        </tr>
-      </Subscribe>
-    {/each}
-  </tbody>
-  <tfoot>
     <tr>
-      <td colspan=7>
-        <div class=links>
-          <label for=pageSize>Page size</label>
-          <input id=pageSize size=3 type=number min={1} bind:value={$pageSize} />
-          <button
-            on:click={() => $pageIndex--}
-            disabled={!$hasPreviousPage}>
-          &laquo;
-          </button>
-          {$pageIndex + 1} out of {$pageCount}
-          <button
-            on:click={() => $pageIndex++}
-            disabled={!$hasNextPage}>
-            &raquo;
-          </button>
-        </div>
-      </td>
+      <th></th>{#each allYears as year} <th>{year}</th>{/each}
     </tr>
-  </tfoot>
+  </thead>
+  <tbody>
+    {#each allCategories as category}
+      <tr>
+        <th>{category}</th>
+        {#each allYears as year} <td>{stats[year][category] ?? ''}</td>{/each}
+      </tr>
+    {/each}<tr>
+      <th>Total</th>
+      {#each allYears as year} <td>{Object.values(stats[year]).reduce((t, r) => t + r, 0)}</td>{/each}
+    </tr>
+  </tbody>
 </table>
 
-<style>
-table {
-  width: 100%;
-  text-align: center;
-}
-table td, table th {
-  padding: 3px 4px;
-}
-table tbody td {
-  font-size: 13px;
-  text-align: left;
-}
-table tr:nth-child(even) {
-  background: #D0E4F5;
-}
-table thead {
-  background: #FFFFFF;
-  border-bottom: 4px solid #333333;
-}
-table thead th {
-  font-size: 15px;
-  font-weight: bold;
-  color: #333333;
-  text-align: center;
-}
-table tfoot {
-  font-size: 14px;
-  font-weight: bold;
-  color: #333333;
-  border-top: 4px solid #333333;
-}
-table tfoot td {
-  font-size: 14px;
-}
-
-table tfoot .links {
-  text-align: right;
-}
-
-table tfoot .links button {
-  display: inline-block;
-  background: #1C6EA4;
-  color: #FFFFFF;
-  padding: 2px 8px;
-  border-radius: 5px;
-}
-</style>
-  
+<ShrTable tableViewModel={tableViewModel} />

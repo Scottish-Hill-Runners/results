@@ -6,6 +6,8 @@ node_modules
 /src/routes/races
 /src/routes/+layout.js
 /src/routes/+layout.js.map
+/src/lib/filters.js
+/src/lib/filters.js.map
 /.svelte-kit
 /package
 .env

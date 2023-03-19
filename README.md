@@ -39,3 +39,8 @@ The `static` folder contains any data that needs to be copied to the final site 
 ## Process for updating results
 
 TODO.
+
+## TODO
+
+* Add club info
+* Add runner filter

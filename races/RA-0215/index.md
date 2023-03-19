@@ -17,13 +17,15 @@ The race route visits the summits of 9 Munros, starting and finishing at Glenshe
 
 The race checkpoints are as follows:
 
-*   Creag Leacach (via Meall Odhar)
-*   Glas Maol
-*   Cairn of Claise
-*   Tom Buidhe
-*   Tolmount
-*   Carn an Tuirc
-*   Seann Spittal road crossing - with cut off time to be confirmed
-*   Carn Aosda
-*   Carn a Gheoidh
-*   The Cairnwell
+* Creag Leacach (via Meall Odhar)
+* Glas Maol
+* Cairn of Claise
+* Tom Buidhe
+* Tolmount
+* Carn an Tuirc
+* Seann Spittal road crossing - with cut off time to be confirmed
+* Carn Aosda
+* Carn a Gheoidh
+* The Cairnwell
+
+The race was run over a shortened course in 2016.

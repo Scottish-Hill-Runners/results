@@ -8,7 +8,7 @@ declare global {
 		// interface Platform {}
 	}
 
-	interface Result {
+	type Result = {
 		raceId: string,
 		year: string,
 		position: number,
@@ -17,9 +17,19 @@ declare global {
 		club: string,
 		category: string,
 		time: string
-  	}
+	}
   
-	type FrontMatter = { [key: string]: any }
+	type RaceStats = { [year: string]: {[category: string]: number }}
+
+	type RaceInfo = {
+		raceId: string,
+		title: string,
+		venue: string,
+		distance: number,
+		climb?: number,
+		record?: string,
+		femaleRecord?: string
+	}
 }
 
 export {};
