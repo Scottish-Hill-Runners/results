@@ -10,7 +10,7 @@ async function readRaceInstance(raceId: string, raceInstancePath: string): Promi
       return {
         raceId: raceId,
         year: path.basename(raceInstancePath, ".csv"),
-        position: parseInt(json.RunnerPosition),
+        position: parseInt(json.RunnerPosition || json.FinishPosition),
         surname: json.Surname as string,
         forename: json.Firstname as string,
         club: json.Club as string, // *** Needs to be a ClubId.
