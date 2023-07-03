@@ -3,7 +3,7 @@
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
-		"clean": "rm -r src/routes/RA* src/routes/races",
+		"clean": "rm -r src/routes/RA* src/routes/races static/results/*",
 		"dev": "tsc && node src/pre-build.js && vite dev",
 		"build": "tsc && node src/pre-build.js && vite build",
 		"preview": "vite preview",

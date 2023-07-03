@@ -9,6 +9,9 @@ const textPrefixMatch: ColumnFilterFn<string, string> = ({ value, filterValue })
 const exactMatch: ColumnFilterFn<string, string> = ({ value, filterValue }) =>
   filterValue === 'All' || filterValue === value;
 
+const categMatch: ColumnFilterFn<string, string> = ({ value, filterValue }) =>
+  filterValue === 'All' || value.startsWith(filterValue);
+
 const yearMatch: ColumnFilterFn<string, string> = ({ value, filterValue }) =>
   filterValue === 'All' ? !value.endsWith("*") : filterValue === value;
 
@@ -20,6 +23,11 @@ export const textFilterPlugin: ColumnFiltersColumnOptions<any, string> = {
 
 export const matchFilterPlugin: ColumnFiltersColumnOptions<any, string> = {
   fn: exactMatch,
+  render: (arg) => createRender(SelectFilter, arg),
+}
+
+export const categFilterPlugin: ColumnFiltersColumnOptions<any, string> = {
+  fn: categMatch,
   render: (arg) => createRender(SelectFilter, arg),
 }
 

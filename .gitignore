@@ -8,6 +8,7 @@ node_modules
 /src/routes/+layout.js.map
 /src/lib/filters.js
 /src/lib/filters.js.map
+/static/results
 /.svelte-kit
 /package
 .env
