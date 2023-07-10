@@ -1,11 +1,12 @@
 {
 	"name": "scottish-hill-runners",
-	"version": "0.0.1",
+	"version": "0.1.0",
 	"private": true,
 	"scripts": {
-		"clean": "rm -r src/routes/RA* src/routes/races static/results/*",
-		"dev": "tsc && node src/pre-build.js && vite dev",
-		"build": "tsc && node src/pre-build.js && vite build",
+		"clean": "rm -r src/routes/RA* src/routes/races src/routes/runners static/data",
+		"pre-build": "(cd pre-build; tsc) && node pre-build/pre-build.js",
+		"dev": "vite dev",
+		"build": "vite build",
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
@@ -23,6 +24,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@types/estree": "^1.0.1",
 		"@types/node": "^18.15.0",
 		"csvtojson": "^2.0.10",
 		"gray-matter": "^4.0.3",

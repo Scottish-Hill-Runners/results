@@ -1,15 +1,18 @@
 <script lang="ts">
   import { readable } from 'svelte/store';
-  import { createTable } from 'svelte-headless-table';
+  import { page } from '$app/stores';
+  import { createRender, createTable } from 'svelte-headless-table';
   import { addColumnOrder, addColumnFilters, addPagination, addSortBy } from 'svelte-headless-table/plugins';
   import { categFilterPlugin, matchFilterPlugin, textFilterPlugin, yearFilterPlugin } from "$lib/filters";
   import ShrTable from '$lib/ShrTable.svelte';
+  import Link from '$lib/Link.svelte';
+  import { metric, imperial } from '$lib/units';
+
+  const units = $page.url.searchParams.get("units") == "imperial" ? imperial() : metric;
 
   export let results: Result[];
-  export let title: string;
+  export let info: RaceInfo;
   export let blurb: string;
-  export let record: string;
-  export let femaleRecord: string;
   export let stats: RaceStats;
 
   const uniqueCategories = new Set<string>();
@@ -44,10 +47,11 @@
     }),
     table.column({
       header: 'Name',
-      id: 'name',
-      accessor: (row) => row['forename'] + ' ' + row['surname'],
-      plugins: { filter: textFilterPlugin }
-    }),
+      accessor: 'name',
+      plugins: { filter: textFilterPlugin },
+      cell: ({ row }) =>
+        createRender(Link, { href: `runner?name=${row.original.name}`, text: row.original.name })
+      }),
     table.column({
       header: 'Club',
       accessor: 'club',
@@ -71,7 +75,11 @@ let activeTab = 'About';
 const handleClick = (tab: string) => () => (activeTab = tab);
 </script>
 
-<h1>{title}</h1>
+<h1>{info.title}</h1>
+
+<h2>{info.venue},
+  distance: {units.distance.scale(info.distance)} {units.distance.unit}{#if info.climb}, climb: {units.ascent.scale(info.climb)} {units.ascent.unit}{/if}
+</h2>
 
 <ul>
   {#each tabs as tab}
@@ -83,11 +91,11 @@ const handleClick = (tab: string) => () => (activeTab = tab);
 
 {#if activeTab == 'About'}
   <div class='recordHolders'>
-  {#if record !== undefined}
-    <div class='recordHolder'>Record: {record}</div>
+  {#if info.record !== undefined}
+    <div class='recordHolder'>Record: {info.record}</div>
   {/if}
-  {#if femaleRecord !== undefined}
-    <div class='recordHolder'>Female record: {femaleRecord}</div>
+  {#if info.femaleRecord !== undefined}
+    <div class='recordHolder'>Female record: {info.femaleRecord}</div>
   {/if}
   </div>
 

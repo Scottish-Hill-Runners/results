@@ -12,14 +12,15 @@ declare global {
     raceId: string,
     year: string,
     position: number,
-    surname: string,
-    forename: string,
+    name: string,
     club: string,
     category: string,
     categoryPos: { [cat: string]: number },
     time: string
   }
   
+  type Block = { [raceId: string]: Result[] };
+
   type RaceStats = { [year: string]: {[category: string]: number }}
 
   type RaceInfo = {
@@ -31,6 +32,22 @@ declare global {
     record?: string,
     femaleRecord?: string
   }
+
+  type RunnerInfo = {
+    raceId: string,
+    title: string,
+    year: string,
+    time: string,
+    position: number,
+    category: string,
+    categoryPos: { [cat: string]: number },
+    distance: number,
+    climb?: number
+  }
+
+  type ScaleFactor = { unit: string, scale: (d: number) => string }
+
+  type RunnerData = { [name: string]: number[] }
 }
 
 export {};

@@ -10,6 +10,7 @@
 </p>
 
 <p><a href="races">Races</a></p>
+<p><a href="races?units=imperial">Races (imperial units)</a></p>
 
 <p xmlns:cc="http://creativecommons.org/ns#"
    xmlns:dct="http://purl.org/dc/terms/">

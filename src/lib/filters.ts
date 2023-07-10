@@ -2,9 +2,12 @@ import { createRender } from 'svelte-headless-table';
 import type { ColumnFiltersColumnOptions, ColumnFilterFn } from 'svelte-headless-table/lib/plugins/addColumnFilters';
 import TextFilter from "$lib/TextFilter.svelte";
 import SelectFilter from "$lib/SelectFilter.svelte";
-  
+
 const textPrefixMatch: ColumnFilterFn<string, string> = ({ value, filterValue }) =>
   value.toLowerCase().startsWith(filterValue.toLowerCase());
+
+const textApproxMatch: ColumnFilterFn<string, string> = ({ value, filterValue }) =>
+  value.toLowerCase().includes(filterValue.toLowerCase());
 
 const exactMatch: ColumnFilterFn<string, string> = ({ value, filterValue }) =>
   filterValue === 'All' || filterValue === value;
@@ -17,6 +20,12 @@ const yearMatch: ColumnFilterFn<string, string> = ({ value, filterValue }) =>
 
 export const textFilterPlugin: ColumnFiltersColumnOptions<any, string> = {
   fn: textPrefixMatch,
+  initialFilterValue: '',
+  render: (arg) => createRender(TextFilter, arg)
+}
+
+export const approxFilterPlugin: ColumnFiltersColumnOptions<any, string> = {
+  fn: textApproxMatch,
   initialFilterValue: '',
   render: (arg) => createRender(TextFilter, arg)
 }

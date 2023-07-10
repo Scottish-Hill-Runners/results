@@ -4,11 +4,9 @@ node_modules
 /lib
 /src/routes/RA*
 /src/routes/races
-/src/routes/+layout.js
-/src/routes/+layout.js.map
-/src/lib/filters.js
-/src/lib/filters.js.map
-/static/results
+*.js
+*.js.map
+/static/data
 /.svelte-kit
 /package
 .env
@@ -17,6 +15,4 @@ node_modules
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 unused.ts
-pre-build.js
-pre-build.js.map
 .vscode
