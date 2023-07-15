@@ -27,7 +27,7 @@
       accessor: 'title',
       plugins: { filter: approxFilterPlugin },
       cell: ({ row }) =>
-        createRender(Link, { href: row.original.raceId, text: row.original.title })
+        row.isData() ? createRender(Link, { href: row.original.raceId, text: row.original.title }) : ''
       }),
       table.column({
         header: 'Venue',

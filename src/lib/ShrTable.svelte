@@ -11,7 +11,8 @@
       tableBodyAttrs,
       pluginStates
     } = tableViewModel;
-    const { pageIndex, pageCount, pageSize, hasNextPage, hasPreviousPage } = pluginStates.page;
+  const { pageIndex, pageCount, pageSize, hasNextPage, hasPreviousPage } = pluginStates.page;
+  $pageSize = 20;
 </script>
 
 <table {...$tableAttrs}>
@@ -86,11 +87,13 @@
   
   <style>
   table {
-    width: 100%;
+    width: auto;
     text-align: center;
+    table-layout: auto;
   }
   table td, table th {
     padding: 3px 4px;
+    width: auto;
   }
   table tbody td {
     font-size: 13px;
@@ -108,6 +111,7 @@
     font-weight: bold;
     color: #333333;
     text-align: center;
+    vertical-align: top;
   }
   table tfoot {
     font-size: 14px;

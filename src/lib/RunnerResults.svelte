@@ -2,7 +2,7 @@
   import { readable } from 'svelte/store';
   import { page } from '$app/stores';
   import { createRender, createTable } from 'svelte-headless-table';
-  import { addColumnOrder, addPagination, addSortBy } from 'svelte-headless-table/plugins';
+  import { addPagination, addSortBy } from 'svelte-headless-table/plugins';
   import ShrTable from '$lib/ShrTable.svelte';
   import Link from '$lib/Link.svelte';
   import { metric, imperial } from '$lib/units';
@@ -10,6 +10,7 @@
   const units = $page.url.searchParams.get("units") == "imperial" ? imperial() : metric;
 
   export let results: RunnerInfo[];
+  export let stats: { year: string, nRaces: number, totalDistance: number, totalAscent: number }[];
 
   const plugins = {
     sort: addSortBy<RunnerInfo>({
@@ -19,7 +20,6 @@
         { id: 'race', order: 'asc' }
       ]
     }),
-    colOrder: addColumnOrder<RunnerInfo>(),
     page: addPagination<RunnerInfo>()
   };
   const table = createTable(readable(results), plugins);
@@ -29,31 +29,66 @@
       id: 'race',
       accessor: 'title',
       cell: ({ row }) =>
-        createRender(Link, { href: row.original.raceId, text: row.original.title })
+        row.isData() ? createRender(Link, { href: row.original.raceId, text: row.original.title }) : ''
     }),
     table.column({ header: 'Year', accessor: 'year' }),
     table.column({ header: 'Pos', accessor: 'position' }),
     table.column({
       header: 'Cat.Pos',
       id: 'categ-pos',
-      accessor: (row) => Object.keys(row['categoryPos']).map(function(k) { return k + ":" + row['categoryPos'][k] }).join(", ")
+      accessor: (row) => Object.entries(row.categoryPos).map(([k, v]) => `${k}:${v}`).join(", ")
     }),
-    table.column({ header: 'Cat.', accessor: 'category' }),
     table.column({ header: 'Time', accessor: 'time' }),
     table.column({
       header: `Distance (${units.distance.unit})`,
       id: 'distance', 
-      accessor: (row) => units.distance.scale(row['distance']),
+      accessor: (row) => units.distance.scale(row.distance),
       plugins: { sort: { getSortValue: (v) => parseInt(v) }}
     }),
     table.column({
       header: `Ascent (${units.ascent.unit})`,
       id: 'climb',
-      accessor: (row) => row['climb'] === undefined ? '' : units.ascent.scale(row['climb']),
+      accessor: (row) => units.ascent.scale(row?.climb ?? 0),
       plugins: { sort: { getSortValue: (v) => parseInt(v) }}
     })
   ];
+
+  const tabs = ['Results', 'Stats'];
+  let activeTab = 'Results';
+  const switchTab = (tab: string) => () => (activeTab = tab);
 </script>
 
+<ul class="tab">
+  {#each tabs as tab}
+    <li class={activeTab === tab ? 'active' : ''}>
+      <span on:click={switchTab(tab)} on:keydown={switchTab(tab)}>{tab}</span>
+    </li>
+  {/each}
+</ul>
+
+{#if activeTab == 'Results'}
 <ShrTable tableViewModel={table.createViewModel(table.createColumns(columns))} />
-  
+{/if}
+
+{#if activeTab == 'Stats'}
+<table class="stats content">
+  <thead>
+    <tr>
+      <th>Year</th>
+      <th># races</th>
+      <th>Total distance ({units.distance.unit})</th>
+      <th>Total ascent ({units.ascent.unit})</th>
+    </tr>
+  </thead>
+  <tbody>
+    {#each stats.sort((a, b) => a.year.localeCompare(b.year)) as s}
+      <tr>
+        <td>{s.year}</td>
+        <td>{s.nRaces}</td>
+        <td>{units.distance.scale(s.totalDistance)}</td>
+        <td>{units.ascent.scale(s.totalAscent)}</td>
+    </tr>
+    {/each}
+  </tbody>
+</table>
+{/if}

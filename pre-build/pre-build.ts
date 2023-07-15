@@ -24,6 +24,7 @@ async function readRaceInstance(raceId: string, raceInstancePath: string): Promi
       return catPos;
     };
 
+    process.stdout.write(`\x1b[KProcessing results from ${raceInstancePath}\r`)
     return jsonArray.map(json => {
       const category = (json.RunnerCategory as string).toUpperCase();
       return {
@@ -99,6 +100,7 @@ const runnerBlocks = {} as { [name: string]: number[] };
   
 function writeBlock(block: Block): void {
   const blockId = raceBlocks.length;
+  process.stdout.write(`\x1b[KWriting result chunk ${blockId}\r`)
   fs.writeFileSync(`static/data/${blockId}.json`, JSON.stringify(block));
   Object.keys(block).forEach(raceId => {
     raceBlocks.push({ raceId, blockId });
@@ -151,6 +153,7 @@ function writeBlocks() {
     };
     raceInfo.push(info);
 
+    process.stdout.write(`\x1b[KWriting page.ts for ${raceId}\r`);
     fs.writeFileSync(
         `src/routes/${raceId}/+page.ts`,
         `/** @type {import('./$types').PageLoad} */
@@ -201,6 +204,7 @@ export async function load({ fetch }) {
   </script>
   <RaceList data={data.results} />
   `);
+  process.stdout.write("\x1b[KDone\n")
 }
 
 writeBlocks()

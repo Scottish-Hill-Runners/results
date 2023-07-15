@@ -45,6 +45,13 @@ declare global {
     climb?: number
   }
 
+  type RunnerStats = {
+    year: string,
+    nRaces: number,
+    totalDistance: number,
+    totalAscent: number
+  }
+
   type ScaleFactor = { unit: string, scale: (d: number) => string }
 
   type RunnerData = { [name: string]: number[] }

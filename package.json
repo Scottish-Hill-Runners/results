@@ -3,10 +3,11 @@
 	"version": "0.1.0",
 	"private": true,
 	"scripts": {
-		"clean": "rm -r src/routes/RA* src/routes/races src/routes/runners static/data",
+		"clean": "rm -r src/routes/RA* static/data",
 		"pre-build": "(cd pre-build; tsc) && node pre-build/pre-build.js",
 		"dev": "vite dev",
 		"build": "vite build",
+		"deploy": "surge build shr.surge.sh",
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
