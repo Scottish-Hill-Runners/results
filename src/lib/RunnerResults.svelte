@@ -1,6 +1,7 @@
 <script lang="ts">
   import { readable } from 'svelte/store';
   import { page } from '$app/stores';
+  import Chart from 'svelte-frappe-charts';
   import { createRender, createTable } from 'svelte-headless-table';
   import { addPagination, addSortBy } from 'svelte-headless-table/plugins';
   import ShrTable from '$lib/ShrTable.svelte';
@@ -11,6 +12,8 @@
 
   export let results: RunnerInfo[];
   export let stats: { year: string, nRaces: number, totalDistance: number, totalAscent: number }[];
+  const sortedStats = stats.sort((a, b) => a.year.localeCompare(b.year));
+  const years = sortedStats.map(s => s.year);
 
   const plugins = {
     sort: addSortBy<RunnerInfo>({
@@ -59,36 +62,28 @@
 </script>
 
 <ul class="tab">
-  {#each tabs as tab}
+  {#each tabs as tab, i}
     <li class={activeTab === tab ? 'active' : ''}>
-      <span on:click={switchTab(tab)} on:keydown={switchTab(tab)}>{tab}</span>
+      <span role="tab" tabindex={i} on:click={switchTab(tab)} on:keydown={switchTab(tab)}>{tab}</span>
     </li>
   {/each}
 </ul>
 
 {#if activeTab == 'Results'}
-<ShrTable tableViewModel={table.createViewModel(table.createColumns(columns))} />
+  <ShrTable tableViewModel={table.createViewModel(table.createColumns(columns))} />
 {/if}
 
 {#if activeTab == 'Stats'}
-<table class="stats content">
-  <thead>
-    <tr>
-      <th>Year</th>
-      <th># races</th>
-      <th>Total distance ({units.distance.unit})</th>
-      <th>Total ascent ({units.ascent.unit})</th>
-    </tr>
-  </thead>
-  <tbody>
-    {#each stats.sort((a, b) => a.year.localeCompare(b.year)) as s}
-      <tr>
-        <td>{s.year}</td>
-        <td>{s.nRaces}</td>
-        <td>{units.distance.scale(s.totalDistance)}</td>
-        <td>{units.ascent.scale(s.totalAscent)}</td>
-    </tr>
-    {/each}
-  </tbody>
-</table>
+  <Chart
+      title="Number of races"
+      data={{ labels: years, datasets: [{ values: sortedStats.map(s => s.nRaces) }]}}
+      type="bar" />
+  <Chart
+    title={`Total distance (${units.distance.unit})`}
+    data={{ labels: years, datasets: [{ values: sortedStats.map(s => s.totalDistance) }]}}
+    type="bar" />
+  <Chart 
+    title={`Total ascent (${units.ascent.unit})`}
+    data={{ labels: years, datasets: [{ values: sortedStats.map(s => s.totalAscent) }]}}
+    type="bar" />
 {/if}

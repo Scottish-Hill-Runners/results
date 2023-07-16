@@ -19,9 +19,10 @@
     race.forEach(r => {
     if (r.name == name && (!club || r.club == club)) {
       const info = raceInfo(r.raceId);
-      let s = stats.find(s => s.year == r.year);
+      const year = r.year.substring(0, 4);
+      let s = stats.find(s => s.year == year);
       if (!s) {
-        s = { year: r.year, nRaces: 0, totalDistance: 0, totalAscent: 0 };
+        s = { year, nRaces: 0, totalDistance: 0, totalAscent: 0 };
         stats.push(s);
       }
 
@@ -31,7 +32,7 @@
       results.push({
           raceId: r.raceId,
           title: info?.title,
-          year: r.year,
+          year,
           time: r.time,
           position: r.position,
           category: r.category,

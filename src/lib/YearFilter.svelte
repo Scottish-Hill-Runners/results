@@ -3,7 +3,7 @@
   export let filterValue: Readable<string>;
   export let preFilteredValues: Readable<string[]>;
   let unique = Array.from(new Set($preFilteredValues)).sort();
-  unique.unshift('All');
+  unique.unshift('All', 'All*');
   $: uniqueValues = unique;
 </script>
 

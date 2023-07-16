@@ -1,0 +1,27 @@
+ul.tab {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  border-bottom: 1px solid #dee2e6;
+}
+  
+.tab span {
+  border: 1px solid transparent;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  display: block;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+  
+.tab span:hover {
+  border-color: #e9ecef #e9ecef #dee2e6;
+}
+  
+.tab li.active > span {
+  color: #495057;
+  background-color: #fff;
+  border-color: #dee2e6 #dee2e6 #fff;
+}

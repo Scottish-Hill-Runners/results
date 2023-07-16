@@ -3,6 +3,7 @@
   import { page } from '$app/stores';
   import { createRender, createTable } from 'svelte-headless-table';
   import { addColumnFilters, addPagination, addSortBy } from 'svelte-headless-table/plugins';
+  import Chart from 'svelte-frappe-charts';
   import { approxFilterPlugin, matchFilterPlugin, yearFilterPlugin } from "$lib/filters";
   import ShrTable from '$lib/ShrTable.svelte';
   import Link from '$lib/Link.svelte';
@@ -54,7 +55,11 @@
       accessor: 'name',
       plugins: { filter: approxFilterPlugin },
       cell: ({ row }) =>
-        row.isData() ? createRender(Link, { href: `runner?name=${row.original.name}&club=${row.original.club}`, text: row.original.name }) : ''
+        row.isData()
+        ? (row.original.name.startsWith("*")
+          ? row.original.name.substring(1)
+          : createRender(Link, { href: `runner?name=${row.original.name}&club=${row.original.club}`, text: row.original.name }))
+        : ''
       }),
     table.column({
       header: 'Club',
@@ -85,9 +90,9 @@
 </h2>
 
 <ul class="tab">
-  {#each tabs as tab}
+  {#each tabs as tab, i}
     <li class={activeTab === tab ? 'active' : ''}>
-      <span on:click={switchTab(tab)} on:keydown={switchTab(tab)}>{tab}</span>
+      <span role="tab" tabindex={i} on:click={switchTab(tab)} on:keydown={switchTab(tab)}>{tab}</span>
     </li>
   {/each}
 </ul>
@@ -106,25 +111,14 @@
 {/if}
 
 {#if activeTab == 'Stats'}
-  <table class="stats content">
-    <caption>Number of runners by year</caption>
-    <thead>
-      <tr>
-        <th></th>{#each allYears as year} <th>{year}</th>{/each}
-      </tr>
-    </thead>
-    <tbody>
-      {#each allCategories as categ}
-        <tr>
-          <th>{categ}</th>
-          {#each allYears as year} <td>{stats[year][categ] ?? ''}</td>{/each}
-        </tr>
-      {/each}<tr>
-        <th>Total</th>
-        {#each allYears as year} <td>{Object.values(stats[year]).reduce((t, r) => t + r, 0)}</td>{/each}
-      </tr>
-    </tbody>
-  </table>
+  <Chart
+    title="Number of runners (by category)"
+    data={{
+      labels: allYears,
+      datasets: allCategories.map((cat) => { return { name: cat, values: allYears.map(year => stats[year][cat]) } })
+    }}
+    type="bar"
+    barOptions={{ stacked: 1}} />
 {/if}
 
 {#if activeTab == 'Results'}

@@ -16,3 +16,4 @@ vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 unused.ts
 .vscode
+access-token

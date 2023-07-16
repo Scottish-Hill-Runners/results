@@ -37,13 +37,13 @@
       table.column({
         header: `Distance (${units.distance.unit})`,
         id: 'distance', 
-        accessor: (row) => units.distance.scale(row['distance']),
+        accessor: (row) => units.distance.scale(row.distance),
         plugins: { sort: { getSortValue: (v) => parseInt(v) }}
       }),
       table.column({
         header: `Ascent (${units.ascent.unit})`,
         id: 'climb',
-        accessor: (row) => row['climb'] === undefined ? '' : units.ascent.scale(row['climb']),
+        accessor: (row) => row.climb === undefined ? '' : units.ascent.scale(row.climb),
         plugins: { sort: { getSortValue: (v) => parseInt(v) }}
       })
     ];
