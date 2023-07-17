@@ -4,14 +4,18 @@ import path from "path";
 import matter from "gray-matter";
 import MarkdownIt from "markdown-it";
 
+function progress(message: string): void {
+  process.stdout.write(`\x1b[K${message}\r`);
+}
+
 async function readRaceInstance(raceId: string, raceInstancePath: string): Promise<Result[]> {
   return await csv().fromFile(raceInstancePath).then(jsonArray => {
     type PosByCategory = { [cat: string]: number }
     const posByCategory = {} as PosByCategory;
     // TODO: handle dead heats
     const updateCategoryPos = (category: string) => {
-      // Ignore V(=vet), U(=under-23?), J(=junior) attributions.
-      const groups = category.replace(/[VUJ]/, '').match(/([^\d]*)(\d+)?/);
+      // Ignore V(=vet), U(=under-23?), J(=junior), (S=senior) attributions.
+      const groups = category.replace(/[VUJS]/, '').match(/([^\d]*)(\d+)?/);
       const s = groups?.[1]?.replace(/[WL]/, 'F') ?? 'M'; // W=Women, L=Lady.
       const sex = s.length == 0 ? 'M' : s;
       const age = Math.max(parseInt(groups?.[2]?.substring(0, 1) ?? '3') * 10, 30);
@@ -24,7 +28,7 @@ async function readRaceInstance(raceId: string, raceInstancePath: string): Promi
       return catPos;
     };
 
-    process.stdout.write(`\x1b[KProcessing results from ${raceInstancePath}\r`)
+    progress(`Processing results from ${raceInstancePath}`)
     return jsonArray.map(json => {
       const category = (json.RunnerCategory as string).toUpperCase();
       return {
@@ -96,19 +100,20 @@ const byRaceId = groupBy(allResults, r => r.raceId);
 
 const md = new MarkdownIt();
 const raceBlocks = [] as { raceId: string, blockId: number}[];
-const runnerBlocks = {} as { [name: string]: number[] };
+const runnerBlocks = {} as { [name: string]: { blocks: number[], nRaces: number } };
   
 function writeBlock(block: Block): void {
   const blockId = raceBlocks.length;
-  process.stdout.write(`\x1b[KWriting result chunk ${blockId}\r`)
+  progress(`Writing result chunk ${blockId}`)
   fs.writeFileSync(`static/data/${blockId}.json`, JSON.stringify(block));
   Object.keys(block).forEach(raceId => {
     raceBlocks.push({ raceId, blockId });
     block[raceId].forEach(r => {
       if (!runnerBlocks[r.name])
-        runnerBlocks[r.name] = [];
-      if (!runnerBlocks[r.name].includes(blockId))
-        runnerBlocks[r.name].push(blockId)
+        runnerBlocks[r.name] = { blocks: [], nRaces: 0 };
+      runnerBlocks[r.name].nRaces++;
+      if (!runnerBlocks[r.name].blocks.includes(blockId))
+        runnerBlocks[r.name].blocks.push(blockId)
     });
   });
 }
@@ -133,7 +138,9 @@ function writeBlocks() {
       writeBlock(currentBlock);
   });
 
-  fs.writeFileSync('static/data/runners.json', JSON.stringify(runnerBlocks));
+  const runnerData = {} as RunnerData;
+  Object.entries(runnerBlocks).forEach(([name, r]) => { if (r.nRaces > 1) runnerData[name] = r.blocks });
+  fs.writeFileSync('static/data/runners.json', JSON.stringify(runnerData));
 
   const raceInfo = [] as RaceInfo[];
   groupBy(raceBlocks, r => r.raceId).forEach((blocks, raceId) => {
@@ -153,7 +160,7 @@ function writeBlocks() {
     };
     raceInfo.push(info);
 
-    process.stdout.write(`\x1b[KWriting page.ts for ${raceId}\r`);
+    progress(`Writing ${raceId}/+page.ts`);
     fs.writeFileSync(
         `src/routes/${raceId}/+page.ts`,
         `/** @type {import('./$types').PageLoad} */
@@ -204,7 +211,7 @@ export async function load({ fetch }) {
   </script>
   <RaceList data={data.results} />
   `);
-  process.stdout.write("\x1b[KDone\n")
+  progress("Done\n")
 }
 
 writeBlocks()

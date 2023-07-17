@@ -1,12 +1,9 @@
 <script lang="ts">
-  import { writable } from 'svelte/store';
   import { page } from '$app/stores';
-  import { createRender, createTable } from 'svelte-headless-table';
-  import { addColumnFilters, addPagination, addSortBy } from 'svelte-headless-table/plugins';
+  import { Button, ButtonGroup, Heading, Pagination, Tabs, TabItem, TableBody, TableBodyCell, TableBodyRow, TableHead, TableHeadCell, TableSearch } from 'flowbite-svelte';
   import Chart from 'svelte-frappe-charts';
-  import { approxFilterPlugin, matchFilterPlugin, yearFilterPlugin } from "$lib/filters";
-  import ShrTable from '$lib/ShrTable.svelte';
-  import Link from '$lib/Link.svelte';
+  import { makeUrl } from '$lib/makeUrl';
+  import SortIcon from '$lib/SortIcon.svelte';
   import { metric, imperial } from '$lib/units';
 
   const units = $page.url.searchParams.get("units") == "imperial" ? imperial() : metric;
@@ -18,123 +15,143 @@
 
   const uniqueCategories = new Set<string>();
   const allYears = Object.keys(stats).sort();
-  allYears.forEach((y) => Object.keys(stats[y]).forEach(c => uniqueCategories.add(c)));
+  for (const s of Object.values(stats))
+    for (const c of Object.keys(s))
+      uniqueCategories.add(c);
   const allCategories = Array.from(uniqueCategories).sort();
-  const raceCategories = new Set<string>();
-  results.forEach(r => Object.keys(r.categoryPos).forEach((c) => raceCategories.add(c)));
 
-  let category = 'All';
-  let categoryResults = writable(results);
-  $: $categoryResults = category == 'All' ? results : results.filter(r => r.categoryPos[category]);
+  let category: string = 'All';
+  const resultsForCategory = { 'All': [] } as { [category: string]: Result[] };
+  for (const r of results) {
+    resultsForCategory['All'].push(r);
+    for (const c of Object.keys(r.categoryPos)) {
+      if (!resultsForCategory[c])
+        resultsForCategory[c] = [];
+      resultsForCategory[c].push(r);
+    }
+  }
 
-  const plugins = {
-    sort: addSortBy<RaceInfo>({
-      disableMultiSort: true,
-      initialSortKeys: [
-        { id: 'position', order: 'asc' },
-        { id: 'year', order: 'desc' }
-      ]
-    }),
-    page: addPagination<Result>(),
-    filter: addColumnFilters<Result>()
+  let sortKey = { position: 'asc', year: 'desc' } as { [key in keyof Result]: 'asc' | 'desc' };
+
+  const sortBy = (key: keyof Result) => {
+    const current = sortKey[key];
+    delete sortKey[key];
+    if (current == undefined)
+      sortKey = { [key]: 'asc', ...sortKey };
+    else if (current == 'asc')
+      sortKey = { [key]: 'desc', ...sortKey };
+    else
+      sortKey = { ...sortKey };
   };
-  const table = createTable(categoryResults, plugins);
-  const columns = [
-    table.column({
-      header: 'Year',
-      accessor: 'year',
-      plugins: { filter: yearFilterPlugin }
-    }),
-    table.column({
-      header: 'Position',
-      id: 'position',
-      accessor: (row) => category == 'All' ? row.position : row.categoryPos[category]
-    }),
-    table.column({
-      header: 'Name',
-      accessor: 'name',
-      plugins: { filter: approxFilterPlugin },
-      cell: ({ row }) =>
-        row.isData()
-        ? (row.original.name.startsWith("*")
-          ? row.original.name.substring(1)
-          : createRender(Link, { href: `runner?name=${row.original.name}&club=${row.original.club}`, text: row.original.name }))
-        : ''
-      }),
-    table.column({
-      header: 'Club',
-      accessor: 'club',
-      plugins: { filter: matchFilterPlugin }
-    }),
-    table.column({
-      header: 'Cat.',
-      accessor: 'category'
-    }),
-    table.column({
-      header: 'Time',
-      accessor: 'time'
-    })
-  ];
-  const tableViewModel = table.createViewModel(table.createColumns(columns))
 
-  const tabs = ['About', 'Results', 'Stats'];
-  let activeTab = 'Results';
-  const switchTab = (tab: string) => () => (activeTab = tab);
+  function compare(order: typeof sortKey): (a: Result, b: Result) => number {
+    return (a, b) => {
+      for (const [key, dir] of Object.entries(order)) {
+        let aVal = a[key];
+        let bVal = b[key];
+        if (key == 'position' && category != 'All') {
+          aVal = a.categoryPos[category];
+          bVal = b.categoryPos[category];
+        }
+
+        const cmp =
+          typeof aVal == 'number' && typeof bVal == 'number'
+          ? aVal - bVal
+          : typeof aVal == 'string' && typeof bVal == 'string'
+          ? aVal.localeCompare(bVal, undefined, { sensitivity: 'base' })
+          : 0;
+        if (cmp != 0)
+          return cmp * (dir == 'asc' ? 1 : -1);
+      }
+
+      return 0;
+    };
+  }
+
+  let searchTerm = '';
+
+  let pageSize = 10;
+  let nPages = 1;
+  let currentPage = 0;
+  const previous = () => { if (currentPage > 0) currentPage--; };
+  const next = () => { if (currentPage < nPages - 1) currentPage++; };
+
+  let visibleResults = [] as Result[];
+  $: {
+    const lcSearch = searchTerm.toLowerCase();
+    const cmp = compare(sortKey);
+    const filteredItems =
+      resultsForCategory[category]
+        .filter(item => item.name.toLowerCase().indexOf(lcSearch) !== -1 || item.club.toLowerCase().indexOf(lcSearch) !== -1)
+        .sort(cmp)
+    nPages = (filteredItems.length + pageSize - 1) / pageSize << 0;
+    if (currentPage > nPages - 1) currentPage = nPages - 1;
+    visibleResults = filteredItems.slice(currentPage * pageSize, currentPage * pageSize + pageSize);
+  }
 </script>
 
-<h1>{info.title}</h1>
+<Heading>{info.title}</Heading>
 
-<h2>{info.venue},
-  distance: {units.distance.scale(info.distance)} {units.distance.unit}
-  {#if info.climb}, climb: {units.ascent.scale(info.climb)} {units.ascent.unit}{/if}
-</h2>
+<Heading tag="h2">{info.venue},
+  distance: {units.distance.scale(info.distance)} {units.distance.unit}{#if info.climb}, climb: {units.ascent.scale(info.climb)} {units.ascent.unit}{/if}
+</Heading>
 
-<ul class="tab">
-  {#each tabs as tab, i}
-    <li class={activeTab === tab ? 'active' : ''}>
-      <span role="tab" tabindex={i} on:click={switchTab(tab)} on:keydown={switchTab(tab)}>{tab}</span>
-    </li>
-  {/each}
-</ul>
+<Tabs>
+  <TabItem title="About">
+    <div class='recordHolders'>
+    {#if info.record}
+      <div class='recordHolder'>Record: {info.record}</div>
+    {/if}
+    {#if info.femaleRecord}
+      <div class='recordHolder'>Female record: {info.femaleRecord}</div>
+    {/if}
+    </div>
 
-{#if activeTab == 'About'}
-  <div class='recordHolders'>
-  {#if info.record}
-    <div class='recordHolder'>Record: {info.record}</div>
-  {/if}
-  {#if info.femaleRecord}
-    <div class='recordHolder'>Female record: {info.femaleRecord}</div>
-  {/if}
-  </div>
+    {@html blurb}
+  </TabItem>
 
-  {@html blurb}
-{/if}
+  <TabItem open title="Results">
+    <ButtonGroup>
+      {#each Object.keys(resultsForCategory).sort() as cat}
+        <Button on:click={() => category = cat} outline={category != cat}>{cat}</Button>
+      {/each}
+    </ButtonGroup>
 
-{#if activeTab == 'Stats'}
-  <Chart
-    title="Number of runners (by category)"
-    data={{
-      labels: allYears,
-      datasets: allCategories.map((cat) => { return { name: cat, values: allYears.map(year => stats[year][cat]) } })
-    }}
-    type="bar"
-    barOptions={{ stacked: 1}} />
-{/if}
+    <TableSearch placeholder="Search" hoverable={true} bind:inputValue={searchTerm}>
+      <TableHead>
+        <TableHeadCell on:click={() => sortBy('year')}>Year{#if sortKey.year}<SortIcon />{/if}</TableHeadCell>
+        <TableHeadCell on:click={() => sortBy('position')}>Position{#if sortKey.position}<SortIcon />{/if}</TableHeadCell>
+        <TableHeadCell on:click={() => sortBy('name')}>Name{#if sortKey.name}<SortIcon />{/if}</TableHeadCell>
+        <TableHeadCell on:click={() => sortBy('club')}>Club{#if sortKey.club}<SortIcon />{/if}</TableHeadCell>
+        <TableHeadCell on:click={() => sortBy('category')}>Category{#if sortKey.category}<SortIcon />{/if}</TableHeadCell>
+        <TableHeadCell on:click={() => sortBy('time')}>Time{#if sortKey.time}<SortIcon />{/if}</TableHeadCell>
+      </TableHead>
+      <TableBody>
+        {#each visibleResults as result}
+          <TableBodyRow>
+            <TableBodyCell>{result.year}</TableBodyCell>
+            <TableBodyCell>{category == 'All' ? result.position : result.categoryPos[category]}</TableBodyCell>
+            <TableBodyCell>
+              <a href={makeUrl($page.url, "runner", { name: result.name, club: result.club })}>{result.name}</a>
+            </TableBodyCell>
+            <TableBodyCell>{result.club}</TableBodyCell>
+            <TableBodyCell>{result.category}</TableBodyCell>
+            <TableBodyCell>{result.time}</TableBodyCell>
+          </TableBodyRow>
+        {/each}
+      </TableBody>
+    </TableSearch>
+    <Pagination pages={[{ name: `page ${currentPage + 1} of ${nPages}` }]} on:previous={previous} on:next={next} />
+  </TabItem>
 
-{#if activeTab == 'Results'}
-<div role="radiogroup"
-		 class="group-container"
-		 aria-labelledby="category"
-		 id="category">
-  {#each ['All', ...raceCategories].sort() as categ}
-    <input
-      class="sr-only"
-      type="radio"
-      bind:group={category}
-      value={categ} />
-    <label for={categ}> {categ} </label>
-  {/each}
-</div>
-
-  <ShrTable tableViewModel={tableViewModel} />
-{/if}
+  <TabItem title="Stats">
+    <Chart
+      title="Number of runners (by category)"
+      data={{
+        labels: allYears,
+        datasets: allCategories.map((cat) => { return { name: cat, values: allYears.map(year => stats[year][cat]) } })
+      }}
+      type="bar"
+      barOptions={{ stacked: 1}} />
+  </TabItem>
+</Tabs>

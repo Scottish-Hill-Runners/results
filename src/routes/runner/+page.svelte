@@ -1,7 +1,9 @@
 <script lang="ts">
   /** @type {import('./$types').PageData} */
   import { page } from '$app/stores';
+  import { Heading } from 'flowbite-svelte';
   import RunnerResults from '$lib/RunnerResults.svelte';
+
   export let data: { blocks: Block[], runnerData: RunnerData, races: RaceInfo[] };
 
   function raceInfo(raceId: string): RaceInfo {
@@ -44,6 +46,6 @@
     })));
 </script>
 
-<h1>Results for {name}{#if club}&nbsp;({club}){/if}</h1>
+<Heading>Results for {name}{#if club}&nbsp;({club}){/if}</Heading>
 
 <RunnerResults {results} {stats} />

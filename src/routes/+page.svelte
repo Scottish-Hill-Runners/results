@@ -1,18 +1,25 @@
-<h1>Scottish Hill Runners Results</h1>
-<p>
+<script lang="ts">
+  import { Button, ButtonGroup, Heading, P } from 'flowbite-svelte';
+</script>
+
+<Heading>Scottish Hill Runners Results</Heading>
+
+<P>
     Welcome to Scottish Hill Runners,
     an independent organisation helping to support and promote hill running in Scotland.
-</p>
+</P>
 
-<p>
+<P>
     This is the experimental new results site.
     You'll find the main site at <a href="https://www.scottishhillrunners.uk/Home.aspx">www.scottishhillrunners.uk</a>.
-</p>
+</P>
 
-<p><a href="races">Races</a></p>
-<p><a href="races?units=imperial">Races (imperial units)</a></p>
+<ButtonGroup>
+  <Button href="races">Races</Button>
+  <Button href="races?units=imperial">Races (imperial units)</Button>
+</ButtonGroup>
 
-<p xmlns:cc="http://creativecommons.org/ns#"
+<P xmlns:cc="http://creativecommons.org/ns#"
    xmlns:dct="http://purl.org/dc/terms/">
     <span property="dct:title">SHR Results</span> by
     <span property="cc:attributionName">John Hamer</span> is licensed under
@@ -30,4 +37,4 @@
             src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"
             alt="" />
     </a>
-</p>
+</P>
