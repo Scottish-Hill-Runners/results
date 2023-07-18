@@ -1,58 +1,63 @@
 <script lang="ts">
-  import { writable } from 'svelte/store';
   import { page } from '$app/stores';
   import { Heading, Pagination, TableBody, TableBodyCell, TableBodyRow, TableHead, TableHeadCell, TableSearch } from 'flowbite-svelte';
   import { metric, imperial } from '$lib/units';
-  import { makeUrl } from '$lib/makeUrl';
-  import SortIcon from '$lib/SortIcon.svelte';
+  import Link from './Link.svelte';
+  import SortDirection from '$lib/SortDirection.svelte';
 
   export let data: RaceInfo[];
 
   const units = $page.url.searchParams.get("units") == "imperial" ? imperial() : metric;
 
-  const sortKey = writable('title' as keyof RaceInfo); 
-  const sortDirection = writable(1);
+  let sortKey = { title: 'asc' } as { [key in keyof RaceInfo]: 'asc' | 'desc' };
 
   const sortBy = (key: keyof RaceInfo) => {
-    if ($sortKey === key)
-      sortDirection.update(val => -val);
-    else {
-      sortKey.set(key);
-      sortDirection.set(1);
-    }
+    const current = sortKey[key];
+    delete sortKey[key];
+    if (current == undefined)
+      sortKey = { [key]: 'asc', ...sortKey };
+    else if (current == 'asc')
+      sortKey = { [key]: 'desc', ...sortKey };
+    else
+      sortKey = { ...sortKey };
   };
 
-  function cmp(key: keyof RaceInfo, direction: number): (a: RaceInfo, b: RaceInfo) => number {
+  function compare(order: typeof sortKey): (a: RaceInfo, b: RaceInfo) => number {
     return (a, b) => {
-      const aVal = a[key];
-      const bVal = b[key];
-      if (typeof aVal == 'number' && typeof bVal == 'number')
-        return (aVal - bVal) * direction;
-      if (typeof aVal == 'string' && typeof bVal == 'string')
-        return aVal.localeCompare(bVal, undefined, { sensitivity: 'base' }) * direction;
+      for (const [key, dir] of Object.entries(order)) {
+        const aVal = a[key];
+        const bVal = b[key];
+        const cmp =
+          typeof aVal == 'number' && typeof bVal == 'number'
+          ? aVal - bVal
+          : typeof aVal == 'string' && typeof bVal == 'string'
+          ? aVal.localeCompare(bVal, undefined, { sensitivity: 'base' })
+          : 0;
+        if (cmp != 0)
+          return cmp * (dir == 'asc' ? 1 : -1);
+      }
+
       return 0;
     };
   }
 
   let searchTerm = '';
-
   let pageSize = 10;
   let nPages = 1;
   let currentPage = 0;
   const previous = () => { if (currentPage > 0) currentPage--; };
   const next = () => { if (currentPage < nPages - 1) currentPage++; };
 
-  const sortItems = writable(data.slice());
+  let sortItems = [] as RaceInfo[];
   $: {
-    const compare = cmp($sortKey, $sortDirection);
+    const cmp = compare(sortKey);
     const filteredItems =
       data
         .filter(item => item.title.toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1)
-        .sort(compare);
+        .sort(cmp);
     nPages = (filteredItems.length + pageSize - 1) / pageSize << 0;
-    if (currentPage > nPages - 1) currentPage = nPages - 1;
-    sortItems.set(
-      filteredItems.slice(currentPage * pageSize, currentPage * pageSize + pageSize));
+    currentPage = Math.max(0, Math.min(currentPage, nPages - 1));
+    sortItems = filteredItems.slice(currentPage * pageSize, currentPage * pageSize + pageSize);
   }
 </script>
 
@@ -60,15 +65,15 @@
 
 <TableSearch placeholder="Search" hoverable={true} bind:inputValue={searchTerm}>
   <TableHead>
-    <TableHeadCell on:click={() => sortBy('title')}>Name{#if $sortKey === 'title'}<SortIcon />{/if}</TableHeadCell>
-    <TableHeadCell on:click={() => sortBy('venue')}>Venue{#if $sortKey === 'venue'}<SortIcon />{/if}</TableHeadCell>
-    <TableHeadCell on:click={() => sortBy('distance')}>Distance ({units.distance.unit}){#if $sortKey === 'distance'}<SortIcon />{/if}</TableHeadCell>
-    <TableHeadCell on:click={() => sortBy('climb')}>Ascent ({units.ascent.unit}){#if $sortKey === 'climb'}<SortIcon />{/if}</TableHeadCell>
+    <TableHeadCell on:click={() => sortBy('title')}>Name<SortDirection dir={sortKey.title} /></TableHeadCell>
+    <TableHeadCell on:click={() => sortBy('venue')}>Venue<SortDirection dir={sortKey.venue} /></TableHeadCell>
+    <TableHeadCell on:click={() => sortBy('distance')}>Distance ({units.distance.unit})<SortDirection dir={sortKey.distance} /></TableHeadCell>
+    <TableHeadCell on:click={() => sortBy('climb')}>Ascent ({units.ascent.unit})<SortDirection dir={sortKey.climb} /></TableHeadCell>
   </TableHead>
   <TableBody>
-    {#each $sortItems as result}
+    {#each sortItems as result}
     <TableBodyRow>
-      <TableBodyCell><a href={makeUrl($page.url, result.raceId)}>{result.title}</a></TableBodyCell>
+      <TableBodyCell><Link route={result.raceId} text={result.title} /></TableBodyCell>
       <TableBodyCell>{result.venue}</TableBodyCell>
       <TableBodyCell>{units.distance.scale(result.distance)}</TableBodyCell>
       <TableBodyCell>{units.ascent.scale(result.climb)}</TableBodyCell>

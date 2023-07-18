@@ -15,8 +15,8 @@
 </P>
 
 <ButtonGroup>
-  <Button href="races">Races</Button>
-  <Button href="races?units=imperial">Races (imperial units)</Button>
+  <Button href="races">Races (metric)</Button>
+  <Button href="races?units=imperial">Races (imperial)</Button>
 </ButtonGroup>
 
 <P xmlns:cc="http://creativecommons.org/ns#"

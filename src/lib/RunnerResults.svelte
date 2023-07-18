@@ -2,8 +2,8 @@
   import { page } from '$app/stores';
   import { Pagination, Tabs, TabItem, TableBody, TableBodyCell, TableBodyRow, TableHead, TableHeadCell, TableSearch } from 'flowbite-svelte';
   import Chart from 'svelte-frappe-charts';
-  import { makeUrl } from '$lib/makeUrl';
-  import SortIcon from '$lib/SortIcon.svelte';
+  import Link from '$lib/Link.svelte';
+  import SortDirection from './SortDirection.svelte';
   import { metric, imperial } from '$lib/units';
 
   const units = $page.url.searchParams.get("units") == "imperial" ? imperial() : metric;
@@ -73,20 +73,20 @@
   <TabItem open title="Results">
     <TableSearch placeholder="Search" hoverable={true} bind:inputValue={searchTerm}>
       <TableHead>
-        <TableHeadCell on:click={() => sortBy('year')}>Year{#if sortKey.year}<SortIcon />{/if}</TableHeadCell>
-        <TableHeadCell on:click={() => sortBy('title')}>Title{#if sortKey.title}<SortIcon />{/if}</TableHeadCell>
-        <TableHeadCell on:click={() => sortBy('position')}>Position{#if sortKey.position}<SortIcon />{/if}</TableHeadCell>
-        <TableHeadCell on:click={() => sortBy('time')}>Time{#if sortKey.time}<SortIcon />{/if}</TableHeadCell>
-        <TableHeadCell on:click={() => sortBy('category')}>Category{#if sortKey.category}<SortIcon />{/if}</TableHeadCell>
-        <TableHeadCell on:click={() => sortBy('distance')}>Distance ({units.distance.unit}){#if sortKey.distance}<SortIcon />{/if}</TableHeadCell>
-        <TableHeadCell on:click={() => sortBy('climb')}>Ascent({units.ascent.unit}){#if sortKey.climb}<SortIcon />{/if}</TableHeadCell>
-        <TableHeadCell on:click={() => sortBy('categoryPos')}>Categ.Position{#if sortKey.categoryPos}<SortIcon />{/if}</TableHeadCell>
+        <TableHeadCell on:click={() => sortBy('year')}>Year<SortDirection dir={sortKey.year} /></TableHeadCell>
+        <TableHeadCell on:click={() => sortBy('title')}>Title<SortDirection dir={sortKey.title} /></TableHeadCell>
+        <TableHeadCell on:click={() => sortBy('position')}>Position<SortDirection dir={sortKey.position} /></TableHeadCell>
+        <TableHeadCell on:click={() => sortBy('time')}>Time<SortDirection dir={sortKey.time} /></TableHeadCell>
+        <TableHeadCell on:click={() => sortBy('category')}>Category<SortDirection dir={sortKey.category} /></TableHeadCell>
+        <TableHeadCell on:click={() => sortBy('distance')}>Distance ({units.distance.unit})<SortDirection dir={sortKey.distance} /></TableHeadCell>
+        <TableHeadCell on:click={() => sortBy('climb')}>Ascent({units.ascent.unit})<SortDirection dir={sortKey.climb} /></TableHeadCell>
+        <TableHeadCell on:click={() => sortBy('categoryPos')}>Categ.Position<SortDirection dir={sortKey.categoryPos} /></TableHeadCell>
       </TableHead>
       <TableBody>
         {#each visibleResults as result}
           <TableBodyRow>
             <TableBodyCell>{result.year}</TableBodyCell>
-            <TableBodyCell><a href={makeUrl($page.url, result.raceId)}>{result.title}</a></TableBodyCell>
+            <TableBodyCell><Link route={result.raceId} text={result.title} /></TableBodyCell>
             <TableBodyCell>{result.position}</TableBodyCell>
             <TableBodyCell>{result.time}</TableBodyCell>
             <TableBodyCell>{result.category}</TableBodyCell>

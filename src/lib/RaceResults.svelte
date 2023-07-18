@@ -2,8 +2,8 @@
   import { page } from '$app/stores';
   import { Button, ButtonGroup, Heading, Pagination, Tabs, TabItem, TableBody, TableBodyCell, TableBodyRow, TableHead, TableHeadCell, TableSearch } from 'flowbite-svelte';
   import Chart from 'svelte-frappe-charts';
-  import { makeUrl } from '$lib/makeUrl';
-  import SortIcon from '$lib/SortIcon.svelte';
+  import Link from '$lib/Link.svelte';
+  import SortDirection from '$lib/SortDirection.svelte';
   import { metric, imperial } from '$lib/units';
 
   const units = $page.url.searchParams.get("units") == "imperial" ? imperial() : metric;
@@ -82,10 +82,13 @@
     const cmp = compare(sortKey);
     const filteredItems =
       resultsForCategory[category]
-        .filter(item => item.name.toLowerCase().indexOf(lcSearch) !== -1 || item.club.toLowerCase().indexOf(lcSearch) !== -1)
+        .filter(item =>
+          item.name.toLowerCase().indexOf(lcSearch) !== -1
+            || item.club.toLowerCase().indexOf(lcSearch) !== -1
+            || item.year == lcSearch)
         .sort(cmp)
     nPages = (filteredItems.length + pageSize - 1) / pageSize << 0;
-    if (currentPage > nPages - 1) currentPage = nPages - 1;
+    currentPage = Math.max(0, Math.min(currentPage, nPages - 1));
     visibleResults = filteredItems.slice(currentPage * pageSize, currentPage * pageSize + pageSize);
   }
 </script>
@@ -119,12 +122,12 @@
 
     <TableSearch placeholder="Search" hoverable={true} bind:inputValue={searchTerm}>
       <TableHead>
-        <TableHeadCell on:click={() => sortBy('year')}>Year{#if sortKey.year}<SortIcon />{/if}</TableHeadCell>
-        <TableHeadCell on:click={() => sortBy('position')}>Position{#if sortKey.position}<SortIcon />{/if}</TableHeadCell>
-        <TableHeadCell on:click={() => sortBy('name')}>Name{#if sortKey.name}<SortIcon />{/if}</TableHeadCell>
-        <TableHeadCell on:click={() => sortBy('club')}>Club{#if sortKey.club}<SortIcon />{/if}</TableHeadCell>
-        <TableHeadCell on:click={() => sortBy('category')}>Category{#if sortKey.category}<SortIcon />{/if}</TableHeadCell>
-        <TableHeadCell on:click={() => sortBy('time')}>Time{#if sortKey.time}<SortIcon />{/if}</TableHeadCell>
+        <TableHeadCell on:click={() => sortBy('year')}>Year<SortDirection dir={sortKey.year} /></TableHeadCell>
+        <TableHeadCell on:click={() => sortBy('position')}>Position<SortDirection dir={sortKey.position} /></TableHeadCell>
+        <TableHeadCell on:click={() => sortBy('name')}>Name<SortDirection dir={sortKey.name} /></TableHeadCell>
+        <TableHeadCell on:click={() => sortBy('club')}>Club<SortDirection dir={sortKey.club} /></TableHeadCell>
+        <TableHeadCell on:click={() => sortBy('category')}>Category<SortDirection dir={sortKey.category} /></TableHeadCell>
+        <TableHeadCell on:click={() => sortBy('time')}>Time<SortDirection dir={sortKey.time} /></TableHeadCell>
       </TableHead>
       <TableBody>
         {#each visibleResults as result}
@@ -132,7 +135,7 @@
             <TableBodyCell>{result.year}</TableBodyCell>
             <TableBodyCell>{category == 'All' ? result.position : result.categoryPos[category]}</TableBodyCell>
             <TableBodyCell>
-              <a href={makeUrl($page.url, "runner", { name: result.name, club: result.club })}>{result.name}</a>
+              <Link route="runner" params={{ name: result.name, club: result.club }} text={result.name} />
             </TableBodyCell>
             <TableBodyCell>{result.club}</TableBodyCell>
             <TableBodyCell>{result.category}</TableBodyCell>
