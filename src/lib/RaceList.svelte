@@ -1,6 +1,7 @@
 <script lang="ts">
   import { page } from '$app/stores';
-  import { Heading, Pagination, TableBody, TableBodyCell, TableBodyRow, TableHead, TableHeadCell, TableSearch } from 'flowbite-svelte';
+  import { Button, Heading, Pagination, TableBody, TableBodyCell, TableBodyRow, TableHead, TableHeadCell, TableSearch, Tooltip } from 'flowbite-svelte';
+  import { GithubSolid } from 'flowbite-svelte-icons';
   import { metric, imperial } from '$lib/units';
   import Link from './Link.svelte';
   import SortDirection from '$lib/SortDirection.svelte';
@@ -62,6 +63,12 @@
 </script>
 
 <Heading>Scottish Hill Races</Heading>
+
+<Button
+  color="light"
+  size="xs"
+  href={`https://github.com/Scottish-Hill-Runners/results/new/main/races`}><GithubSolid />&nbsp;Add new race</Button>
+<Tooltip>Under 'Name your file', enter a new or unused race number (in the format RA-xxxx), followed by '/index.md'</Tooltip>
 
 <TableSearch placeholder="Search" hoverable={true} bind:inputValue={searchTerm}>
   <TableHead>

@@ -34,6 +34,7 @@
     "csvtojson": "^2.0.10",
     "flowbite": "^1.7.0",
     "flowbite-svelte": "^0.40.1",
+    "flowbite-svelte-icons": "^0.2.5",
     "gray-matter": "^4.0.3",
     "markdown-it": "^13.0.1",
     "svelte-frappe-charts": "^1.10.0",

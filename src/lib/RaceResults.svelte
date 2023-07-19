@@ -1,6 +1,7 @@
 <script lang="ts">
   import { page } from '$app/stores';
-  import { Button, ButtonGroup, Heading, Pagination, Tabs, TabItem, TableBody, TableBodyCell, TableBodyRow, TableHead, TableHeadCell, TableSearch } from 'flowbite-svelte';
+  import { Button, ButtonGroup, Heading, P, Pagination, Tabs, TabItem, TableBody, TableBodyCell, TableBodyRow, TableHead, TableHeadCell, TableSearch, Tooltip, Modal } from 'flowbite-svelte';
+  import { GithubSolid } from 'flowbite-svelte-icons';
   import Chart from 'svelte-frappe-charts';
   import Link from '$lib/Link.svelte';
   import SortDirection from '$lib/SortDirection.svelte';
@@ -91,11 +92,13 @@
     currentPage = Math.max(0, Math.min(currentPage, nPages - 1));
     visibleResults = filteredItems.slice(currentPage * pageSize, currentPage * pageSize + pageSize);
   }
+
+  let editModalIsOpen = false;
 </script>
 
 <Heading>{info.title}</Heading>
 
-<Heading tag="h2">{info.venue},
+<Heading tag="h3">{info.venue},
   distance: {units.distance.scale(info.distance)} {units.distance.unit}{#if info.climb}, climb: {units.ascent.scale(info.climb)} {units.ascent.unit}{/if}
 </Heading>
 
@@ -111,6 +114,13 @@
     </div>
 
     {@html blurb}
+
+    <Button
+      color="light"
+      size="xs"
+      href={`https://github.com/Scottish-Hill-Runners/results/edit/main/races/${info.raceId}/index.md`}>
+      <GithubSolid />&nbsp;Edit on GitHub
+    </Button>
   </TabItem>
 
   <TabItem open title="Results">
@@ -119,6 +129,30 @@
         <Button on:click={() => category = cat} outline={category != cat}>{cat}</Button>
       {/each}
     </ButtonGroup>
+
+    <Button color="light" size="xs" on:click={() => editModalIsOpen = true}><GithubSolid />&nbsp;Edit results</Button>
+    <Modal title="Add new results, or fix an error." bind:open={editModalIsOpen} autoclose>
+      <P>Select a year to edit, or enter new results. You will need a Github account.</P>
+      <div class="grid md:grid-cols-6">
+        {#each allYears as year}
+          <Button
+            color="light"
+            size="xs"
+            href={`https://github.com/Scottish-Hill-Runners/results/edit/main/races/${info.raceId}/${year}.csv`}>
+            {year}
+          </Button>
+        {/each}
+      </div>
+      <Button
+          size="xs"
+          href={`https://github.com/Scottish-Hill-Runners/results/new/main/races/${info.raceId}/`}>
+          Add new results
+        </Button>
+        <P>Prepare the results in a CSV file.<br/>
+          The columns should be "RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime".
+          You can use "Name" instead of "Surname,Forename" if you prefer.<br/>
+          The name of the file you create in Github must be in the format yyyy.csv.</P>
+    </Modal>
 
     <TableSearch placeholder="Search" hoverable={true} bind:inputValue={searchTerm}>
       <TableHead>
