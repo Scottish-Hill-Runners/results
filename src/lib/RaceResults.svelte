@@ -32,7 +32,7 @@
     }
   }
 
-  let sortKey = { position: 'asc', year: 'desc' } as { [key in keyof Result]: 'asc' | 'desc' };
+  let sortKey = { year: 'desc', position: 'asc' } as { [key in keyof Result]: 'asc' | 'desc' };
 
   const sortBy = (key: keyof Result) => {
     const current = sortKey[key];
