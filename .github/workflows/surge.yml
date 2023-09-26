@@ -22,5 +22,5 @@ jobs:
       - name: Deploy
         run: |
           npm install --global surge
-          cp index.html 200.html
+          cp build/index.html build/200.html
           surge build shr.surge.sh --token "${{ secrets.SURGE_TOKEN }}"
