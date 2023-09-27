@@ -187,6 +187,9 @@ fetch("/data/${block.blockId}.json")
   const blurb = ${JSON.stringify(md.render(content))};
   const stats = ${JSON.stringify(stats)};
 </script>
+<svelte:head>
+  <title>SHR - ${info.title}</title>
+</svelte:head>
 <RaceResults {results} {info} {blurb} {stats} />
 `);
   });

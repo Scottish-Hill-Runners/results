@@ -104,23 +104,25 @@
 
 <Tabs>
   <TabItem title="About">
-    <div class='recordHolders'>
-    {#if info.record}
-      <div class='recordHolder'>Record: {info.record}</div>
-    {/if}
-    {#if info.femaleRecord}
-      <div class='recordHolder'>Female record: {info.femaleRecord}</div>
-    {/if}
-    </div>
+    <article class="prose prose-slate">
+      <div class='recordHolders'>
+      {#if info.record}
+        <div class='recordHolder'>Male record: {info.record}</div>
+      {/if}
+      {#if info.femaleRecord}
+        <div class='recordHolder'>Female record: {info.femaleRecord}</div>
+      {/if}
+      </div>
 
-    {@html blurb}
+      {@html blurb}
 
-    <Button
-      color="light"
-      size="xs"
-      href={`https://github.com/Scottish-Hill-Runners/results/edit/main/races/${info.raceId}/index.md`}>
-      <GithubSolid />&nbsp;Edit on GitHub
-    </Button>
+      <Button
+        color="light"
+        size="xs"
+        href={`https://github.com/Scottish-Hill-Runners/results/edit/main/races/${info.raceId}/index.md`}>
+        <GithubSolid />&nbsp;Edit on GitHub
+      </Button>
+  </article>
   </TabItem>
 
   <TabItem open title="Results">
