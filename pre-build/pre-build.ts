@@ -1,11 +1,18 @@
 import csv from "csvtojson";
 import fs from "fs";
-import path from "path";
 import matter from "gray-matter";
+import path from "path";
 import MarkdownIt from "markdown-it";
 
 function progress(message: string): void {
   process.stdout.write(`\x1b[K${message}\r`);
+}
+
+function formatTime(time: string): string {
+  const match = time.match(/(\d?\d)[:h](\d\d)(?:[m:\.](\d\d))?/);
+  if (match)
+    return `${(match[1].length == 1 ? '0' : '') + match[1]}:${match[2]}:${match[3] ?? '00'}`;
+  return time;
 }
 
 async function readRaceInstance(raceId: string, raceInstancePath: string): Promise<Result[]> {
@@ -30,16 +37,16 @@ async function readRaceInstance(raceId: string, raceInstancePath: string): Promi
 
     progress(`Processing results from ${raceInstancePath}`)
     return jsonArray.map(json => {
-      const category = (json.RunnerCategory as string).toUpperCase();
+      const category = ((json.RunnerCategory ?? json.Category) as string).toUpperCase();
       return {
         raceId: raceId,
         year: path.basename(raceInstancePath, ".csv"),
-        position: parseInt(json.RunnerPosition || json.FinishPosition),
+        position: parseInt(json.RunnerPosition ?? json.FinishPosition ?? json.Position),
         name: json.Name ?? `${json.Firstname ?? ''} ${json.Surname ?? ''}`,
         club: json.Club as string, // TODO: Normalise using club aliases
         category: category,
         categoryPos: updateCategoryPos(category),
-        time: json.FinishTime as string
+        time: formatTime((json.FinishTime ?? json.Time) as string)
       };
     })
   });

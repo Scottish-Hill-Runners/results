@@ -55,6 +55,17 @@ declare global {
   type ScaleFactor = { unit: string, scale: (d: number) => string }
 
   type RunnerData = { [name: string]: number[] }
+
+  type ColumnSpec<T> = {
+    header: string,
+    display?: (item: T) => string | number,
+    link?: (item: T) => { text: string, route: string,  params?: { [key: string]: string } },
+    sort?: "asc" | "desc",
+    sticky?: boolean,
+    searchable?: boolean,
+    cmp?: (a: T, b: T) => number,
+    width?: string
+  }
 }
 
 export {};

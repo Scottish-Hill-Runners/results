@@ -1,19 +1,17 @@
 <script lang="ts">
   import { page } from '$app/stores';
-  import { Button, ButtonGroup, Heading, P, Pagination, Tabs, TabItem, TableBody, TableBodyCell, TableBodyRow, TableHead, TableHeadCell, TableSearch, Tooltip, Modal } from 'flowbite-svelte';
+  import { Button, ButtonGroup, Heading, P, Popover, Tabs, TabItem } from 'flowbite-svelte';
   import { GithubSolid } from 'flowbite-svelte-icons';
   import Chart from 'svelte-frappe-charts';
-  import Link from '$lib/Link.svelte';
-  import SortDirection from '$lib/SortDirection.svelte';
   import { metric, imperial } from '$lib/units';
-
-  const units = $page.url.searchParams.get("units") == "imperial" ? imperial() : metric;
+  import VirtualTable from '$lib/VirtualTable.svelte';
 
   export let results: Result[];
   export let info: RaceInfo;
   export let blurb: string;
   export let stats: RaceStats;
 
+  const units = $page.url.searchParams.get("units") == "imperial" ? imperial() : metric;
   const uniqueCategories = new Set<string>();
   const allYears = Object.keys(stats).sort();
   for (const s of Object.values(stats))
@@ -21,7 +19,7 @@
       uniqueCategories.add(c);
   const allCategories = Array.from(uniqueCategories).sort();
 
-  let category: string = 'All';
+  let category = 'All';
   const resultsForCategory = { 'All': [] } as { [category: string]: Result[] };
   for (const r of results) {
     resultsForCategory['All'].push(r);
@@ -32,68 +30,45 @@
     }
   }
 
-  let sortKey = { year: 'desc', position: 'asc' } as { [key in keyof Result]: 'asc' | 'desc' };
-
-  const sortBy = (key: keyof Result) => {
-    const current = sortKey[key];
-    delete sortKey[key];
-    if (current == undefined)
-      sortKey = { [key]: 'asc', ...sortKey };
-    else if (current == 'asc')
-      sortKey = { [key]: 'desc', ...sortKey };
-    else
-      sortKey = { ...sortKey };
+  const columns: { [key: string]: ColumnSpec<Result> } = {
+    "year": {
+      header: "Year",
+      sort: "desc",
+      width: "minmax(6ch, 1fr)",
+      sticky: true, 
+      searchable: true
+    },
+    "position": {
+      header: "Pos.",
+      width: "minmax(5ch, 1fr)",
+      sticky: true,
+      cmp: (a, b) => category == 'All' ? a.position - b.position : a.categoryPos[category] - b.categoryPos[category],
+      display: (item) => category == 'All' ? item.position : item.categoryPos[category],
+      sort: "asc"
+    },
+    "name": {
+      header: "Name",
+      width: "minmax(8ch, 3fr)",
+      link: (item) => { return { route: "runner", params: { name: item.name, club: item.club }, text: item.name } },
+      searchable: true
+    },
+    "club": {
+      header: "Club",
+      width: "minmax(6ch, 2fr)",
+      searchable: true,
+      sticky: true
+    },
+    "category": {
+      header: "Categ.",
+      width: "minmax(4ch, 1fr)",
+      sticky: true
+    },
+    "time": {
+       header: "Time",
+       width: "minmax(4ch, 1fr)",
+       cmp: (a, b) => a.year.endsWith("*") == b.year.endsWith("*") ? a.time.localeCompare(b.time) : a.year.endsWith("*") ? 1 : -1
+    }
   };
-
-  function compare(order: typeof sortKey): (a: Result, b: Result) => number {
-    return (a, b) => {
-      for (const [key, dir] of Object.entries(order)) {
-        let aVal = a[key];
-        let bVal = b[key];
-        if (key == 'position' && category != 'All') {
-          aVal = a.categoryPos[category];
-          bVal = b.categoryPos[category];
-        }
-
-        const cmp =
-          typeof aVal == 'number' && typeof bVal == 'number'
-          ? aVal - bVal
-          : typeof aVal == 'string' && typeof bVal == 'string'
-          ? aVal.localeCompare(bVal, undefined, { sensitivity: 'base' })
-          : 0;
-        if (cmp != 0)
-          return cmp * (dir == 'asc' ? 1 : -1);
-      }
-
-      return 0;
-    };
-  }
-
-  let searchTerm = '';
-
-  let pageSize = 10;
-  let nPages = 1;
-  let currentPage = 0;
-  const previous = () => { if (currentPage > 0) currentPage--; };
-  const next = () => { if (currentPage < nPages - 1) currentPage++; };
-
-  let visibleResults = [] as Result[];
-  $: {
-    const lcSearch = searchTerm.toLowerCase();
-    const cmp = compare(sortKey);
-    const filteredItems =
-      resultsForCategory[category]
-        .filter(item =>
-          item.name.toLowerCase().indexOf(lcSearch) !== -1
-            || item.club.toLowerCase().indexOf(lcSearch) !== -1
-            || item.year == lcSearch)
-        .sort(cmp)
-    nPages = (filteredItems.length + pageSize - 1) / pageSize << 0;
-    currentPage = Math.max(0, Math.min(currentPage, nPages - 1));
-    visibleResults = filteredItems.slice(currentPage * pageSize, currentPage * pageSize + pageSize);
-  }
-
-  let editModalIsOpen = false;
 </script>
 
 <Heading>{info.title}</Heading>
@@ -127,60 +102,45 @@
 
   <TabItem open title="Results">
     <ButtonGroup>
-      {#each Object.keys(resultsForCategory).sort() as cat}
-        <Button on:click={() => category = cat} outline={category != cat}>{cat}</Button>
-      {/each}
-    </ButtonGroup>
+      <Button id="category">Showing results for {category}</Button>
+      <Popover class="text-sm font-light" title="Select category..." triggeredBy="#category" trigger="hover">
+        <ButtonGroup id="category">
+          {#each Object.keys(resultsForCategory).sort() as cat}
+            <Button on:click={() => category = cat} outline={category != cat}>{cat}</Button>
+          {/each}
+        </ButtonGroup>
+      </Popover>
 
-    <Button color="light" size="xs" on:click={() => editModalIsOpen = true}><GithubSolid />&nbsp;Edit results</Button>
-    <Modal title="Add new results, or fix an error." bind:open={editModalIsOpen} autoclose>
-      <P>Select a year to edit, or enter new results. You will need a Github account.</P>
-      <div class="grid md:grid-cols-6">
-        {#each allYears as year}
-          <Button
-            color="light"
-            size="xs"
-            href={`https://github.com/Scottish-Hill-Runners/results/edit/main/races/${info.raceId}/${year}.csv`}>
-            {year}
-          </Button>
-        {/each}
-      </div>
-      <Button
-          size="xs"
-          href={`https://github.com/Scottish-Hill-Runners/results/new/main/races/${info.raceId}/`}>
-          Add new results
-        </Button>
-        <P>Prepare the results in a CSV file.<br/>
-          The columns should be "RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime".
+      <Button id="edit"><GithubSolid />&nbsp;Edit results</Button>
+      <Popover class="text-sm font-light" title="Add new results, or fix an error." triggeredBy="#edit" trigger="hover">
+        <P>
+          Select a year to edit, or
+            <Button size="xs" href={`https://github.com/Scottish-Hill-Runners/results/new/main/races/${info.raceId}/`}>
+              add new results
+            </Button>.
+            You will need to have a (free) Github account
+            (<a href="https://github.com/signup" target="_blank">https://github.com/signup</a>).
+        </P>
+        <div class="grid md:grid-cols-6">
+          {#each allYears as year}
+            <Button
+              color="light"
+              size="xs"
+              href={`https://github.com/Scottish-Hill-Runners/results/edit/main/races/${info.raceId}/${year}.csv`}>
+              {year}
+            </Button>
+          {/each}
+        </div>
+        <P>
+          Prepare the results in a CSV file.<br/>
+          The columns should be "RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime".<br/>
           You can use "Name" instead of "Surname,Forename" if you prefer.<br/>
-          The name of the file you create in Github must be in the format yyyy.csv.</P>
-    </Modal>
-
-    <TableSearch placeholder="Search" hoverable={true} bind:inputValue={searchTerm}>
-      <TableHead>
-        <TableHeadCell on:click={() => sortBy('year')}>Year<SortDirection dir={sortKey.year} /></TableHeadCell>
-        <TableHeadCell on:click={() => sortBy('position')}>Position<SortDirection dir={sortKey.position} /></TableHeadCell>
-        <TableHeadCell on:click={() => sortBy('name')}>Name<SortDirection dir={sortKey.name} /></TableHeadCell>
-        <TableHeadCell on:click={() => sortBy('club')}>Club<SortDirection dir={sortKey.club} /></TableHeadCell>
-        <TableHeadCell on:click={() => sortBy('category')}>Category<SortDirection dir={sortKey.category} /></TableHeadCell>
-        <TableHeadCell on:click={() => sortBy('time')}>Time<SortDirection dir={sortKey.time} /></TableHeadCell>
-      </TableHead>
-      <TableBody>
-        {#each visibleResults as result}
-          <TableBodyRow>
-            <TableBodyCell>{result.year}</TableBodyCell>
-            <TableBodyCell>{category == 'All' ? result.position : result.categoryPos[category]}</TableBodyCell>
-            <TableBodyCell>
-              <Link route="runner" params={{ name: result.name, club: result.club }} text={result.name} />
-            </TableBodyCell>
-            <TableBodyCell>{result.club}</TableBodyCell>
-            <TableBodyCell>{result.category}</TableBodyCell>
-            <TableBodyCell>{result.time}</TableBodyCell>
-          </TableBodyRow>
-        {/each}
-      </TableBody>
-    </TableSearch>
-    <Pagination pages={[{ name: `page ${currentPage + 1} of ${nPages}` }]} on:previous={previous} on:next={next} />
+          The name of the file you create in Github must be in the format yyyy.csv.
+        </P>
+      </Popover>
+    </ButtonGroup>
+    
+    <VirtualTable items={resultsForCategory[category]} {columns} />
   </TabItem>
 
   <TabItem title="Stats">
