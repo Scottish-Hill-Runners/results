@@ -103,7 +103,7 @@
       const gridHeight = grid.clientHeight;
       const numItems = Math.ceil(gridHeight / itemHeight);
       grid.style.setProperty('--grid-end-row', `${startIndex + numItems + 1}`);
-      grid.style.setProperty('--grid-height', "100vh"); // `calc(100vh - ${grid.offsetTop}px)`
+      grid.style.setProperty('--grid-height', "100vh");
       grid.style.setProperty('--grid-item-height', `${itemHeight}px`);
       grid.style.setProperty('--grid-leading-height', `${startIndex * itemHeight}px`);
       grid.style.setProperty('--grid-row-count', `${filtered.length + 1}`);
@@ -135,10 +135,10 @@
   {#if startIndex != 0}
     <div class="leading" />
   {/if}
-  {#each visible as item}
+  {#each visible as item, i}
     <div class="tr">
       {#each Object.entries(columns) as [key, value]}
-        <div class="td">
+        <div class={(i + startIndex) % 2 == 0 ? "td even" : "td"}>
           {#if value.link}
             <Link {...value.link(item)} />
           {:else if value.display}
@@ -193,7 +193,7 @@
     white-space: nowrap;
   }
 
-  .tr:nth-child(even) .td {
+  .even {
     background: #e2e0e9;
   }
   

@@ -29,7 +29,7 @@ declare global {
     venue: string,
     distance: number,
     climb?: number,
-    record?: string,
+    maleRecord?: string,
     femaleRecord?: string
   }
 

@@ -81,8 +81,8 @@
   <TabItem title="About">
     <article class="prose prose-slate">
       <div class='recordHolders'>
-      {#if info.record}
-        <div class='recordHolder'>Male record: {info.record}</div>
+      {#if info.maleRecord}
+        <div class='recordHolder'>Male record: {info.maleRecord}</div>
       {/if}
       {#if info.femaleRecord}
         <div class='recordHolder'>Female record: {info.femaleRecord}</div>

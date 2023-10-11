@@ -162,7 +162,7 @@ function writeBlocks() {
       venue: data.venue,
       distance: parseFloat(data.distance),
       climb: parseFloat(data.climb),
-      record: data.record,
+      maleRecord: data.maleRecord ?? data.record,
       femaleRecord: data.femaleRecord
     };
     raceInfo.push(info);
