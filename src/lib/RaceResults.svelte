@@ -49,7 +49,7 @@
     "name": {
       header: "Name",
       width: "minmax(8ch, 3fr)",
-      link: (item) => { return { route: "runner", params: { name: item.name, club: item.club }, text: item.name } },
+      link: (item) => { return { route: "/runner", params: { name: item.name, club: item.club }, text: item.name } },
       searchable: true
     },
     "club": {
@@ -86,6 +86,9 @@
       {/if}
       {#if info.femaleRecord}
         <div class='recordHolder'>Female record: {info.femaleRecord}</div>
+      {/if}
+      {#if info.nonBinaryRecord}
+        <div class='recordHolder'>Non-binary record: {info.nonBinaryRecord}</div>
       {/if}
       </div>
 

@@ -1,0 +1,88 @@
+FinishPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
+1,Chepelin,Alexander,Carnethy,M,00:15:23
+2,Masson,Alistair,Carnethy,M,00:16:22
+3,Wilson,Thomas,Edinburgh University,M,00:16:30
+4,Martyn,Tom,HBT,M,00:16:38
+5,Malcolm,Gregor,Edinburgh University,M20,00:16:46
+6,Ackland,James,Cambridge,M20,00:16:58
+7,Hugtenburg,Kai,Edinburgh University,M,00:17:34
+8,Rigg,Will,Carnethy,M20,00:17:43
+9,Gardiner,Ritchie,Edinburgh University,M,00:17:53
+10,Bennet,Struan,Fife AC,M,00:17:56
+11,Wiseman,Bob,Ochil Hill Runners,M40,00:17:59
+12,Mackie,Peter,Shettleston,M40,00:18:24
+13,Freshwater,Craig,HBT,M,00:18:42
+14,Blamire,Leo,Hartfell HR,M40,00:18:44
+15,Lavin,Daniel,Carnethy,M,00:18:50
+16,Stephen,Jill,HBT,F,00:19:22
+17,MacDonald,Alasdair,St. Andrews University,M60,00:19:55
+18,Murgatroyd,Euan,Solway,M,00:20:20
+19,Fellbaum,Matthew,Edinburgh University,M20,00:20:22
+20,Smith,Alan,Deeside ,M50,00:20:25
+21,Newham,Paul,Carnethy,M40,00:20:28
+22,Tindley,Georgia,HBT,F,00:20:32
+23,Wilson,Rob,Penicuik Harriers,M40,00:20:56
+24,Plummer,Kevin,Hartfell HR,M50,00:21:13
+25,MacDonald,Euan,Tinto Hill Runners,M,00:21:26
+26,Stewart,Douglas,Unattached,M,00:21:35
+27,Smith,Bruce,Carnethy,M50,00:21:42
+28,Morton,Ceadach,Penicuik Harriers,M,00:21:43
+29,Brodie,Stuart,Ochil Hill Runners,M20,00:22:07
+30,Curtis,Briony,HBT,F,00:22:18
+31,Carr,Dean,Moorfoot Runners,M40,00:22:34
+32,Neilson,Norman,Hartfell HR,M60,00:22:35
+33,Malcolmson,Craig,Hartfell HR,M50,00:22:42
+34,Brooks,Mike,Penicuik Harriers,M50,00:22:56
+35,Bickle,Ben,Unattached,M,00:23:02
+36,Bell,Iain,Gala Harriers,M50,00:23:09
+37,Webb,David,Unattached,M40,00:23:19
+38,Ward,Stewart,Tinto Hill Runners,M40,00:23:23
+39,Carr,Gillian,Moorfoot Runners,F40,00:23:30
+40,Findlayson,Malcolm,Falkland TR,M50,00:23:53
+41,Wilson,Alice,Garscube,F20,00:23:56
+42,Wilson,Stephen,Garscube,M50,00:24:03
+43,Bailey,Will-Hugh,HBT,M,00:24:05
+44,Earle,Paddy,Tinto Hill Runners,M60,00:24:34
+45,Donnelly,John,Westerlands,M50,00:24:44
+46,Stakes,David,Unattached,M50,00:24:51
+47,Ledlie,Colin,Carnethy,M50,00:24:53
+48,Kitchin,Kate,Ferranti AC,F40,00:25:05
+49,McAdam,Sarah,Portobello,F,00:25:10
+50,Duncan,David,Ochil Hill Runners,M60,00:25:13
+51,Murgatroyd,Ian,Hartfell HR,M50,00:25:16
+52,Huntley,Chris,Tinto Hill Runners,M60,00:25:19
+53,Gordon,Nick,Hartfell HR,M50,00:25:34
+54,Padley,Ian,Hartfell HR,M50,00:25:39
+55,MacLeod,Murdo,Westerlands,M60,00:25:40
+56,Paul,Alastair,Northhumberland,M60,00:25:49
+57,Petrie,Neil,Unattached,M40,00:25:53
+58,Kemp,Sadie,Penicuik Harriers,F40,00:26:16
+59,Brownlee,Gary,Unattached,M,00:26:22
+60,Stewart,Alister,Tinto Hill Runners,M50,00:26:29
+61,Fraser,Duncan,Unattached,M,00:26:32
+62,Bennet,Ailsa,Fife AC,F20,00:26:48
+63,Valentine,Russ,Falkland TR,M50,00:27:38
+64,Anderson,Monica,Falkirk Victoria Harriers,F50,00:27:52
+65,McAdam,Pauline,Teviotdale,F60,00:27:53
+66,Gardiner,Caroline,Edinburgh University,F,00:28:02
+67,Crowe,Kate,Penicuik Harriers,F50,00:28:02
+68,Cairns,Scott,Penicuik Harriers,M40,00:28:18
+69,Marshall,Gilly,Penicuik Harriers,F40,00:28:34
+70,Mangan,Lina,Unattached,F40,00:29:03
+71,Borthwick,Neil,Unattached,M40,00:29:25
+72,May,Timothy,ESOC,M50,00:29:32
+73,Robson,Natalie,Unattached,F,00:30:05
+74,Jones,Frances,Penicuik Harriers,F50,00:30:27
+75,McPherson,Hugh,Tinto Hill Runners,M60,00:30:33
+76,Campbell,Ian,HBT,M50,00:30:51
+77,Oldam,Lucy,Moorfoot Runners,F,00:31:14
+78,Robson,John,FRA,M60,00:31:23
+79,Rees,Phil,Unattached,M50,00:31:40
+80,Harvey,Diane,Penicuik Harriers,F60,00:31:50
+81,Johnstone,Joanne,Hartfell HR,F40,00:32:01
+82,Lee,Rosemary,Falkland TR,F60,00:32:30
+83,Dingwall,Alexander,Hartfell HR,M50,00:33:55
+84,Baird,Emma,Penicuik Harriers,F,00:34:49
+85,Lee,John,Falkland TR,M60,00:37:37
+86,Robson,Jean,Unattached,F60,00:37:45
+87,Stewart,Donald,Unattached,M40,00:41:37

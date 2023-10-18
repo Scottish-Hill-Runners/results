@@ -154,7 +154,7 @@ function writeBlocks() {
     const results = byRaceId.get(raceId);
     if (!results) return;
     const stats = raceStats(results);
-    fs.mkdirSync(`src/routes/${raceId}`, { recursive: true });
+    fs.mkdirSync(`src/routes/races/${raceId}`, { recursive: true });
     const {data, content} = matter.read(`races/${raceId}/index.md`);
     const info = {
       raceId: raceId,
@@ -163,13 +163,14 @@ function writeBlocks() {
       distance: parseFloat(data.distance),
       climb: parseFloat(data.climb),
       maleRecord: data.maleRecord ?? data.record,
-      femaleRecord: data.femaleRecord
+      femaleRecord: data.femaleRecord,
+      nonBinaryRecord: data.nonBinaryRecord
     };
     raceInfo.push(info);
 
-    progress(`Writing ${raceId}/+page.ts`);
+    progress(`Writing races/${raceId}/+page.ts`);
     fs.writeFileSync(
-        `src/routes/${raceId}/+page.ts`,
+        `src/routes/races/${raceId}/+page.ts`,
         `/** @type {import('./$types').PageLoad} */
 export async function load({ fetch }) {
   return {
@@ -184,7 +185,7 @@ fetch("/data/${block.blockId}.json")
 }
 `);
       fs.writeFileSync(
-        `src/routes/${raceId}/+page.svelte`,
+        `src/routes/races/${raceId}/+page.svelte`,
         `<script type="ts">
   /** @type {import('./$types').PageData} */
   import RaceResults from "$lib/RaceResults.svelte";
@@ -218,8 +219,8 @@ export async function load({ fetch }) {
   /** @type {import('./$types').PageData} */
   import RaceList from "$lib/RaceList.svelte";
   export let data;
-  </script>
-  <RaceList data={data.results} />
+</script>
+<RaceList data={data.results} />
   `);
   progress("Done\n")
 }

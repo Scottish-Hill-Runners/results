@@ -1,0 +1,89 @@
+FinishPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
+1,Abernethy,Rory,Ochil Hill Runners,M,00:28:23
+2,Patton,Euan,Dark Peak,M,00:28:58
+3,Wright,Angus,Team East Lothian,M,00:29:50
+4,Gilmore,Andrew,Highland Hill Runners,M,00:30:35
+5,Fisher,Sam,Howgill Harriers,M,00:31:37
+6,Paterson,Robbie,Highland Hill Runners,M40,00:31:46
+7,Hill,Alex,Lochaber AC,M,00:32:10
+8,Gilmore,Iain,Carnethy ,M,00:32:28
+9,Ward,Jack,Highland Hill Runners,M,00:32:43
+10,Mann,Joe,Highland Hill Runners,M,00:32:48
+11,MacDonald,Matt,Lochaber AC,M,00:33:01
+12,Anthony,Alasdair,Ochil Hill Runners,M40,00:33:03
+13,Llewellyn,Andrew,Lochaber AC,M,00:33:09
+14,Mowbray,Philip,HBT,M40,00:33:57
+15,Patton,Simon,Dark Peak,M50,00:34:21
+16,Watson,Ed,Drumguish TT,M40,00:34:25
+17,Baxter,Grant,Ochil Hill Runners,M50,00:34:36
+18,Wood,Jack,Ilkley,M,00:35:00
+19,Ockenden,John,HBT,M,00:35:04
+20,Pearks,David,Highland Hill Runners,M50,00:35:05
+21,Ovenstone,Keith,Corstorphine AAC,M40,00:35:21
+22,Anderson,Darroch,Unattached,M,00:35:25
+23,Drysdale,Simon,Lochaber AC,M,00:35:27
+24,Davidson,Gregor,Lochaber AC,M40,00:35:47
+25,Horne,Joseph,Unattached,M,00:35:55
+26,Anderson,Adam,Hartfell Hill Runners.,M50,00:36:02
+27,Malcolm,Stuart,Highland Hill Runners,M50,00:36:11
+28,Smith,Alan,Deeside Runners,M60,00:37:10
+29,Davis,Adrian,Lomond Hill Runners,M60,00:37:25
+30,Belton-Schure,Aidan,HBT,M,00:37:49
+31,Munro,Fraser,Unattached,M,00:38:10
+32,Brown,Matthew,Drumguish TT,M,00:38:13
+33,Slimon,Katie,Highland Hill Runners,F,00:38:24
+34,Brown,Gareth,North Ayrshire AC,M40,00:38:58
+35,MacDonald,Kira,Lochaber AC,F,00:40:05
+36,Dullenend,Marc,AAV 36,M,00:40:09
+37,Wells,Callum,Drumguish TT,M,00:40:42
+38,Patton,Ellen,Dark Peak,F,00:41:01
+39,Conway,Pete,Lochaber AC,M,00:41:07
+40,Blackhall,Amanda,Lochaber AC,F50,00:41:33
+41,Kamerman,Owyn,AAV 36,M,00:42:38
+42,Ross,Niall,Highland Hill Runners,M,00:42:44
+43,Munro,David,Lochaber AC,M50,00:42:50
+44,Macpherson,William,Unattached,M,00:42:53
+45,Richards,Andrew,Unattached,M40,00:44:03
+46,Kelly,Graham,Westerlands CCC,M50,00:44:13
+47,Farquhar,John,Unattached,M50,00:45:23
+48,Byrne,Sara,Lochaber AC,F50,00:45:36
+49,Gaff,Melanie,Unattached,F40,00:45:48
+50,Bryan-Jones,Kirsty,Dark Peak,F50,00:46:02
+51,Duncan,David,Ochil Hill Runners,M60,00:46:04
+52,Brannan,Tosh,Lothian,M60,00:46:47
+53,Kamerman,Brennan,AAV 36,M,00:47:06
+54,Hindle,Millie,Unattached,F,00:47:14
+55,Van Leeuwen,Mark,AAV 36,M,00:47:16
+56,Watson,Helen,Drumguish TT,F40,00:47:30
+57,Ellingson,Andrew,Drumguish TT,M40,00:47:46
+58,Macpherson,Hamish,Unattached,M,00:48:03
+59,Oliver,David,Deeside Runners,M60,00:48:45
+60,Cameron,Calum,Lochaber AC,M40,00:49:02
+61,Pott,Tim,Forres Harriers,M50,00:49:36
+62,Rattray,Ed,Dufftown Jog Scotland,M50,00:49:41
+63,Currie,Alice,Lochaber AC,F,00:49:47
+64,Spencely,Campbell,Unattached,M,00:50:19
+65,Macgillivray,Shelley,Lochaber AC,F,00:50:29
+66,Amadori,Sofia,Ochil Hill Runners,F,00:50:35
+67,Watson,Michael,Unattached,M50,00:50:36
+68,Hall,James,Unattached,M60,00:50:40
+69,Spencely,Dougal,Unattached,M,00:50:54
+70,Spencely,Julie,Unattached,F50,00:51:33
+71,Claes,Thijs,Unattached,M,00:51:35
+72,Ali,Shahjahan,Drumguish TT,M40,00:52:23
+73,Walker,Tom,Drumguish TT,M40,00:53:11
+74,Macpherson,Myrtle,Unattached,F,00:53:29
+75,Brown,Nicholas,Unattached,M40,00:53:47
+76,Spencely,Rory,Unattached,M,00:54:34
+77,Stewart,Charlie,Unattached,M50,00:56:13
+78,Stewart,Jen,Unattached,F50,00:56:25
+79,Stewart,John,Unattached,M60,00:56:25
+80,Das,Rhona,Unattached,F40,00:56:26
+81,Tighe,Mick,Lochaber AC,M70,00:57:18
+82,Oliver,Jane,Deeside Runners,F60,00:57:20
+83,Bowen,Richard,Unattached,M,00:58:55
+84,Tighe,Katharine,Lochaber AC,F50,01:02:01
+85,Mitchell,Hannah,Drumguish TT,F,01:03:14
+86,Thomson,Niki,Unattached,F40,01:05:44
+87,Spalding,Douglas,Ancient Reprobates,M50,01:08:39
+88,Paul,Brenda,Westerlands CCC,F40,01:08:41

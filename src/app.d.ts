@@ -30,7 +30,8 @@ declare global {
     distance: number,
     climb?: number,
     maleRecord?: string,
-    femaleRecord?: string
+    femaleRecord?: string,
+    nonBinaryRecord?: string
   }
 
   type RunnerInfo = {

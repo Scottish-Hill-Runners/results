@@ -1,5 +1,5 @@
 ---
-title: Aonach Mor Uphill (New Year)
+title: Aonach Mhor Uphill (New Year)
 venue: Nevis Range Ski Centre, Torlundy, Fort William
 distance: 4
 climb: 610

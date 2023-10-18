@@ -1,0 +1,86 @@
+FinishPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
+1,Douglas,Andy,Inverclyde,M,00:18:11
+2,Thornton,Alistair,Ochil Hill Runners,M,00:18:15
+3,Wilson,Felix,Carnethy HRC,M,00:19:30
+4,Wright,Joseph,Deeside Runners,M,00:19:42
+5,Cox,Joe,Unattached,M,00:19:54
+6,Phillips,George,Westerlands CCC,M,00:20:14
+7,Luetchford,Alex,HBT,M,00:20:21
+8,Sullivan,Matthew,Moorfoot,M,00:20:52
+9,Moran,Colm,Carnethy HRC,M,00:20:58
+10,Cunningham,Tom,Corstorphine AAC,M,00:21:05
+11,MacLeod,James,Garscube Harriers,M40,00:21:16
+12,Gay,Dan,HBT,M40,00:21:26
+13,Laverick,Ben,Carnethy HRC,M,00:21:28
+14,Rigg,Will,Carnethy HRC,M,00:21:52
+15,Harris,Jack,Carnethy HRC,M,00:21:54
+16,Carter,Justin,Cambuslang Harriers,M50,00:21:58
+17,Lamont,Andrew,Carnethy HRC,M40,00:22:09
+18,McKenna,Bryan,Carnethy HRC,M40,00:22:29
+19,Henderson,Scott,Westerlands CCC,M40,00:22:44
+20,Atkinson,Joel,Haddington RC,M,00:23:04
+21,Walsh,Sam,Carnethy HRC,M,00:23:22
+22,Gainsborough,Francis,Unattached,M,00:23:27
+23,Thin,Jamie,HBT,M50,00:23:40
+24,Robson,Sam,Unattached,M,00:23:43
+25,Bothwell,Alexander,Unattached,M,00:23:59
+26,Atkinson,Emily,Haddington RC,F,00:24:02
+27,Valters,Declan,Carnethy HRC,M,00:24:14
+28,Sherman,Ronan,Carnethy HRC,M,00:24:30
+29,McCartney,Cameron,Ochil Hill Runners,M,00:24:32
+30,Johnstone,Eleanor,Carnethy HRC,F,00:24:41
+31,Ross,Heidi,Carnethy HRC,F,00:24:45
+32,Hamilton,Tilly,Carnethy HRC,F,00:25:03
+33,Dozier,Laura,Carnethy HRC,F,00:25:04
+34,Anderson,Micky,Westerlands CCC,M60,00:25:16
+35,Black,Alistair,Carnethy HRC,M,00:25:35
+36,Gordon,Neil,Carnethy HRC,M,00:25:40
+37,Brodie,Stuart,Ochil Hill Runners,M40,00:25:52
+38,Wilkinson,Owen,Carnethy HRC,M,00:25:57
+39,Burza,Bart,Carnethy HRC,M,00:26:05
+40,Buchheim,Lana,Westerlands CCC,F,00:26:07
+41,Peter,Donald,Unattached,M40,00:26:31
+42,Williamson,Coll,HBT,M,00:26:32
+43,Shepherd,Rozy,Carnethy HRC,F,00:26:34
+44,Reid,Don,Westerlands CCC,M60,00:26:49
+45,Mathier,Sven,West End Road Runners,M,00:26:51
+46,Dawson,Nicola,Westerlands CCC,F40,00:27:04
+47,Knox,Elizabeth,Carnethy HRC,F,00:27:25
+48,Murray,Kevin,Falkland TR ,M50,00:28:12
+49,Kelly,Graham,Westerlands CCC,M50,00:28:15
+50,Cunningham,Emer,Westerlands CCC,F,00:28:26
+51,Easton,Ian,Westerlands CCC,M50,00:28:28
+52,Cross,Nicholas,Carnethy HRC,M40,00:28:40
+53,Cameron,Gordon,Carnethy HRC,M60,00:28:44
+54,Sandhu,Kal,Westerlands CCC,M,00:29:05
+55,Tait,Amy,Falkland TR ,F,00:29:12
+56,Mitchell,Neill,Fife AC,M50,00:29:49
+57,Grant,Michael,HBT,M,00:29:52
+58,Kelsall,Fiona,Ochil Hill Runners,F50,00:29:55
+59,Ascroft,Lorna,Carnethy HRC,F40,00:30:20
+60,Fathers,James,Dunblane Runners,M,00:30:30
+61,Lindsay,Susan,Ochil Hill Runners,F50,00:30:38
+62,Furse,Chris,Westerlands CCC,M50,00:30:49
+63,Ball,James,Carnethy HRC,M,00:31:00
+64,Fitzpatrick,Pat,Ochil Hill Runners,M70,00:31:07
+65,Waterhouse,Bob,Carnethy HRC,M70,00:31:09
+66,Guthrie,Neil,Carnethy HRC,M40,00:31:10
+67,Bouchier,Shane,Carnethy HRC,M40,00:31:24
+68,Mason,Liam,Falkland TR ,M40,00:31:36
+69,Pease,David,Falkland TR ,M50,00:31:40
+70,Martin,Claire,Carnethy HRC,F,00:32:00
+71,Alexander,Jim,Lothian RC,m60,00:32:04
+72,Walker,Sean,Carnethy HRC,M40,00:32:28
+73,Murray,Alastair,Lothian RC,M40,00:32:38
+74,Atkinson,Jennifer,Unattached,F40,00:32:45
+75,Murdoch,Mike,Falkland TR ,M40,00:32:49
+76,Fullwood,Andrew,Westerlands CCC,M50,00:32:52
+77,Duncan,David,Ochil Hill Runners,M60,00:32:57
+78,Cessford,Lee,Falkland TR ,M40,00:33:45
+79,Atkinson,Julie,Lothian RC,F50,00:33:54
+80,Kirkbride,Martin,Falkland TR ,M60,00:34:21
+81,Chandler,Richard,Carnethy HRC,M60,00:35:04
+82,Ross,Fiona,Falkland TR ,F,00:37:03
+83,Atkinson,Michael,Unattached,M40,00:37:37
+84,Lammers,Wiebke,Westerlands CCC,F40,00:37:41
+85,Strain,Sheila,HBT,F70,00:51:09

@@ -2,7 +2,6 @@
 node_modules
 /build
 /lib
-/src/routes/RA*
 /src/routes/races
 *.js
 *.js.map

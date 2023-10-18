@@ -21,7 +21,7 @@
       header: "Title",
       sort: "asc",
       width: "2fr",
-      link: (item) => { return { route: item.raceId, text: item.title } },
+      link: (item) => { return { route: `/races/${item.raceId}`, text: item.title } },
       searchable: true
     },
     "position": {

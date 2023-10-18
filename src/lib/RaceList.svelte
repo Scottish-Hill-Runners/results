@@ -13,7 +13,7 @@
       header: "Title",
       sort: "asc",
       width: "1fr",
-      link: (item) => { return { route: item.raceId, text: item.title } },
+      link: (item) => { return { route: `/races/${item.raceId}`, text: item.title } },
       searchable: true
     },
     "venue": { header: "Venue", width: "1fr", searchable: true },
