@@ -212,7 +212,8 @@ export async function load({ fetch }) {
     await fetch("/data/races.json")
       .then(resp => resp.json() as Promise<RaceInfo[]>)
   };
-}`);
+}
+`);
   fs.writeFileSync(
     `src/routes/races/+page.svelte`,
     `<script type="ts">
@@ -220,8 +221,13 @@ export async function load({ fetch }) {
   import RaceList from "$lib/RaceList.svelte";
   export let data;
 </script>
+
+<svelte:head>
+  <title>SHR - Races</title>
+</svelte:head>
+
 <RaceList data={data.results} />
-  `);
+`);
   progress("Done\n")
 }
 

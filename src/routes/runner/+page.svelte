@@ -46,6 +46,10 @@
     })));
 </script>
 
+<svelte:head>
+  <title>SHR - {name}</title>
+</svelte:head>
+
 <Heading>Results for {name}{#if club}&nbsp;({club}){/if}</Heading>
 
 <RunnerResults {results} {stats} />

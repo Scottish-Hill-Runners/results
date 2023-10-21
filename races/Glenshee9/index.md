@@ -6,6 +6,7 @@ climb: 1700
 maleRecord: Tom Owens, 3:07:21 (2010)
 femaleRecord: Jasmin Paris, 3:37:17 (2014)
 web: www.entrycentral.com/Glenshee-9-Race
+organiser: Ali Hubbard <alastairhubbard@gmail.com>.
 ---
 
 [3D Route Map](http://www.stevenfallon.co.uk/maps/glenshee.jpg) - courtesy of Steven Fallon.
@@ -32,5 +33,3 @@ The race checkpoints are as follows:
 * The Cairnwell
 
 The race was run over a shortened course in 2016.
-
-Organiser: Ali Hubbard <alastairhubbard@gmail.com>.

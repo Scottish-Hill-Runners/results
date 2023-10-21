@@ -1,0 +1,119 @@
+FinishPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
+1,Alexander,Sam,Westerlands CCC,M,01:04:53
+2,Taylor,Luke,Highland HR,M,01:09:05
+3,Howie,Robin,Highland HR,M,01:09:56
+4,Mcinally,Ralph,Strathearn Harriers,M,01:10:20
+5,Mann,Joe,Highland HR,M,01:10:49
+6,Crutchfield,Stuart,Westerlands CCC,M,01:11:14
+7,Gilmore,Andrew,Highland HR,M,01:11:30
+8,Williamson,Clyde,Cosmics,U23,01:12:05
+9,Cabrera Valdes,Francisco Javier,Highland HR,M,01:13:50
+10,Smith,Ben,Unattached,M,01:15:41
+11,Gilmore,Iain,Carnethy ,M,01:16:22
+12,Gardiner,Stuart,Highland HR,M,01:16:26
+13,Hill,Alex,Lochaber AC,M,01:17:39
+14,Ferguson,Norman,Stonehaven RC,M,01:18:40
+15,Burnett,Robin,Inverness Harriers,M50,01:18:57
+16,Watson,Ed,Drumguish TT,M40,01:19:02
+17,Manners,Will,Strathearn Harriers,M50,01:19:05
+18,Bowers,William,Ochils,M,01:19:12
+19,Pearks,David,Highland HR,M50,01:20:33
+20,Shaw,Ruairidh,Lochaber AC,M,01:20:51
+21,Lorimer,Hayden,HBT,M50,01:21:03
+22,Sparks,Arron,Highland HR,M,01:21:07
+23,Reid,Lewis,Strathclyde Uni MC,U23,01:21:19
+24,Gordon,Ryan,Stonehaven RC,M40,01:21:20
+25,Watters,Steven,Stonehaven RC,M40,01:21:26
+26,Farquharson,Edward,Unattached,M,01:22:22
+27,Whiteside,Gavin,Highland HR,M,01:23:02
+28,Riding,David,Achille Ratti CC,M40,01:23:33
+29,Tindley,Georgia,HBT,F,01:23:58
+30,Hogarth,Andrew,Unattached,M,01:24:00
+31,Wright,Finlay,Lochaber AC,M40,01:24:04
+32,MacKay,Ryan,Lochaber AC,M,01:24:05
+33,Macdonald,John Lawrie,Lochaber AC,M40,01:24:38
+34,Williamson,Jason,Cosmics,M50,01:24:40
+35,Du Plessis,Kevin,Vegan Runners UK,M40,01:24:43
+36,Smith,Alan,Deeside Runners,M60,01:25:01
+37,Urquhart,John,Moray RR,M50,01:25:12
+38,Wilson,Stewart,Highland HR,M50,01:25:21
+39,Anderson,Heather,Fife AC,F40,01:26:07
+40,Smith,Christopher,Highland HR,M40,01:27:26
+41,Ross,Heidi,Carnethy ,F,01:27:50
+42,Wilson,Craig,Unattached,M,01:28:35
+43,Cornwall,Matilda,Highland HR,F,01:28:49
+44,Macdonald,Dennis,Cosmics,M50,01:30:14
+45,Oldham,Veronique,Cosmics,F50,01:30:17
+46,Souter,Michael,Perth Road Runners,M,01:30:27
+47,Cameron,Angus,Lochaber AC,M,01:30:32
+48,Berry,Hannah,Dundee University,F,01:31:04
+49,Ord,Steven,Deeside Runners,M50,01:32:43
+50,Watson,Rachel,Highland HR,F,01:32:53
+51,Wilkinson,Chris,Highland HR,M,01:33:03
+52,Morrison,Struan,Unattached,M,01:33:27
+53,Janowski,Krzysztof,Unattached,M,01:33:46
+54,Wolfe,Patrick,Unattached,M50,01:33:48
+55,Omand,Elaine,Cosmics,,01:33:55
+56,Chapman,Andrew,Cosmics,M40,01:33:57
+57,Henderson,Katie,Deeside Runners,F40,01:34:18
+58,Allison,Graham,Unattached,M,01:34:26
+59,Marszalek,Jakub,Unattached,M,01:34:34
+60,Harrison,David,Unattached,M,01:34:57
+61,Meldrum,Marie,Lochaber AC,F40,01:35:03
+62,Blackhall,Amanda,Lochaber AC,F50,01:35:24
+63,Hall,Andy,Highland HR,M40,01:35:31
+64,Little,Rachel,Insch TRC,F40,01:37:16
+65,Pizon,Daniel,Unattached,M,01:37:44
+66,White,Georgia,Lochaber AC,F,01:37:53
+67,MacDonald,Kira,Lochaber AC,F,01:37:57
+68,Battersby,Bruce,Unattached,M40,01:37:58
+69,Findlay-Robinson,Rachel,Westerlands CCC,F,01:38:07
+70,Woolhead,Sam,Unattached,M,01:38:48
+71,Taylor,Gordie,Highland HR,M50,01:39:48
+72,Wilson,Neil,Scottish MC,M50,01:40:20
+73,Ball,James,Carnethy ,M,01:40:32
+74,McIntyre,Kenneth,Lochaber AC,M60,01:41:08
+75,Shaw,Lyndsey,Lochaber AC,F40,01:41:17
+76,Disher,Amy,Lochaber AC,F,01:41:35
+77,Shaw,Richard,Lochaber AC,M50,01:41:40
+78,Macpherson,Rory,Cosmics,M,01:41:43
+79,Philip,Cameron,Carnethy ,U23,01:42:00
+80,Walsh,Gary,Carnethy ,M,01:42:12
+81,Cross,Andrew,Carnethy ,M40,01:42:28
+82,Daynes,Ed,Lochaber AC,M50,01:43:26
+83,Gray,Patrick,Unattached,M,01:44:31
+84,Kammer,Philip,Deveron Harriers,M60,01:44:56
+85,Puckrin,Ian,EBOR Orienteers,M50,01:46:58
+86,Davies,Beckie,Unattached,F,01:49:42
+87,Corner,Julie,Lochaber AC,F50,01:49:53
+88,O'Toole,Orna,Knavetmire Harriers,F40,01:50:49
+89,Oliver,David,Deeside Runners,M60,01:51:07
+90,Kippen,Gauin,Unattached,M,01:51:11
+91,Fowler,Alasdair,Unattached,M40,01:51:22
+92,Wilson,Joan,Lomond Hill Runners,F,01:51:24
+93,Windle,Matthew,Dronfield RC,M40,01:51:48
+94,Shepherd,Freya,Highland HR,U23,01:52:12
+95,Kippen,Vicky,Unattached,F40,01:52:12
+96,Tsoutis,Ioannis,Metro Aberdeen RC,F40,01:53:06
+97,MacGillivray,Shelley,Lochaber AC,F,01:56:15
+98,Burnside,Steven,Highland HR,M40,01:56:30
+99,Pott,Tim,Forres Harriers,M50,01:56:49
+100,Patterson,Mairi,Unattached,F50,01:57:42
+101,Gibson,Andy,Unattached,M40,01:57:58
+102,Dobbs,Simon,Moray RR,M50,01:58:32
+103,Oliver,Jane,Deeside Runners,FV60,01:58:35
+104,Douglas,George,Westerlands CCC,M50,01:59:16
+105,Kennedy,Angelina,Lochaber AC,F40,01:59:25
+106,Reid,Colin,Unattached,M50,02:01:18
+107,Edwards,Colin,Ochils,M50,02:01:42
+108,Brown,Sharon,Anster Haddies,F,02:05:10
+109,Polak,Jo,Highland HR,FV60,02:06:36
+110,Mearns,Vikki,Insch TRC,F40,02:07:37
+111,Mitchell,Karen,Kinross RR,F40,02:10:15
+112,Klunder,Katherine,Chorley A&TC,F,02:12:39
+113,Smith,Harry,Tinto,M50,02:14:05
+114,Hodgson,Karen,Cairngorm Runners,F50,02:16:59
+115,Oliver,Joey,Unattached,M,02:23:46
+116,Stewart,Helen,Unattached,F,02:26:41
+117,Willis,David,Highland HR,M,03:00:56
+118,Thomson,Sarah,Unattached,F,03:01:00
