@@ -1,6 +1,6 @@
 <script lang="ts">
   import { page } from '$app/stores';
-  import { Button, ButtonGroup, Heading, P, Popover, Tabs, TabItem } from 'flowbite-svelte';
+  import { Button, ButtonGroup, Chevron, Dropdown, DropdownItem, Heading, P, Popover, Tabs, TabItem } from 'flowbite-svelte';
   import { GithubSolid } from 'flowbite-svelte-icons';
   import Chart from 'svelte-frappe-charts';
   import { metric, imperial } from '$lib/units';
@@ -10,6 +10,10 @@
   export let info: RaceInfo;
   export let blurb: string;
   export let stats: RaceStats;
+  export let hasGpx: boolean;
+
+  const gpxViewer = hasGpx ? new URL("https://gpsvisualizer.com/atlas/map") : null;
+  gpxViewer?.searchParams.append("url", new URL(`/gpx/${info.raceId}.gpx`, $page.url.href).toString());
 
   const units = $page.url.searchParams.get("units") == "imperial" ? imperial() : metric;
   const uniqueCategories = new Set<string>();
@@ -28,6 +32,12 @@
         resultsForCategory[c] = [];
       resultsForCategory[c].push(r);
     }
+  }
+
+  let categoryOpen = false;
+  function changeCategory(cat: string) {
+    category = cat;
+    categoryOpen = false;
   }
 
   const columns: { [key: string]: ColumnSpec<Result> } = {
@@ -74,7 +84,8 @@
 <Heading>{info.title}</Heading>
 
 <Heading tag="h3">{info.venue},
-  distance: {units.distance.scale(info.distance)} {units.distance.unit}{#if info.climb}, climb: {units.ascent.scale(info.climb)} {units.ascent.unit}{/if}
+  distance: {units.distance.scale(info.distance)} {units.distance.unit}{#if info.climb},
+  climb: {units.ascent.scale(info.climb)} {units.ascent.unit}{/if}
 </Heading>
 
 <Tabs>
@@ -103,17 +114,24 @@
   </article>
   </TabItem>
 
+  {#if gpxViewer}
+    <TabItem title="Route">
+      <iframe
+        title="Race route"
+        width="600"
+        height="600"
+        src={gpxViewer.toString()} />
+    </TabItem>  
+  {/if}
+
   <TabItem open title="Results">
     <ButtonGroup>
-      <Button id="category">Showing results for {category}</Button>
-      <Popover class="text-sm font-light" title="Select category..." triggeredBy="#category" trigger="hover">
-        <ButtonGroup id="category">
-          {#each Object.keys(resultsForCategory).sort() as cat}
-            <Button on:click={() => category = cat} outline={category != cat}>{cat}</Button>
-          {/each}
-        </ButtonGroup>
-      </Popover>
-
+      <Button><Chevron>Category: {category}</Chevron></Button>
+      <Dropdown bind:open={categoryOpen}>
+        {#each Object.keys(resultsForCategory).sort() as cat}
+          <DropdownItem on:click={() => changeCategory(cat)}>{cat}</DropdownItem>
+        {/each}
+      </Dropdown>
       <Button id="edit"><GithubSolid />&nbsp;Edit results</Button>
       <Popover class="text-sm font-light" title="Add new results, or fix an error." triggeredBy="#edit" trigger="hover">
         <P>

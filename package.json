@@ -8,6 +8,7 @@
     "dev": "vite dev",
     "build": "vite build",
     "deploy": "surge build shr.surge.sh",
+    "beta": "surge build shr-beta.surge.sh",
     "preview": "vite preview",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"

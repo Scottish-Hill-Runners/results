@@ -127,6 +127,7 @@ function writeBlock(block: Block): void {
 
 function writeBlocks() {
   fs.mkdirSync(`static/data`, { recursive: true });
+  fs.mkdirSync(`static/gpx`, { recursive: true });
   const allYears = new Set<string>();
   groupBy(allResults, r => r.year.substring(0, 4)).forEach((results, year) => {
     allYears.add(year);
@@ -153,8 +154,21 @@ function writeBlocks() {
   groupBy(raceBlocks, r => r.raceId).forEach((blocks, raceId) => {
     const results = byRaceId.get(raceId);
     if (!results) return;
-    const stats = raceStats(results);
     fs.mkdirSync(`src/routes/races/${raceId}`, { recursive: true });
+    const hasGpx = fs.existsSync(`races/${raceId}/route.gpx`);
+    if (hasGpx) {
+      fs.mkdirSync(`src/routes/races/${raceId}/gpx`, { recursive: true });
+      fs.writeFileSync(
+        `src/routes/races/${raceId}/gpx/+server.js`,
+        `export function GET() {
+  return new Response(
+    ${JSON.stringify(fs.readFileSync(`races/${raceId}/route.gpx`, 'utf8'))},
+    { headers: { "Content-type": "application/gpx+xml" } });
+}
+`);
+    }
+
+    const stats = raceStats(results);
     const {data, content} = matter.read(`races/${raceId}/index.md`);
     const info = {
       raceId: raceId,
@@ -194,11 +208,12 @@ fetch("/data/${block.blockId}.json")
   const info = ${JSON.stringify(info)};
   const blurb = ${JSON.stringify(md.render(content))};
   const stats = ${JSON.stringify(stats)};
+  const hasGpx= ${hasGpx};
 </script>
 <svelte:head>
   <title>SHR - ${info.title}</title>
 </svelte:head>
-<RaceResults {results} {info} {blurb} {stats} />
+<RaceResults {results} {info} {blurb} {stats} {hasGpx} />
 `);
   });
 

@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<gpx creator="John Hamer" version="1.0" xmlns="http://www.topografix.com/GPX/1/1">
+          <trk>
+            <name>
+              Beinn Dubh
+            </name>
+            <trkseg>
+              <trkpt lat="56.102118" lon="-4.640532">
+                  <ele>18.1</ele>
+                </trkpt><trkpt lat="56.101731" lon="-4.640779">
+                  <ele>18.2</ele>
+                </trkpt><trkpt lat="56.101693" lon="-4.641523">
+                  <ele>21.3</ele>
+                </trkpt><trkpt lat="56.102415" lon="-4.643259">
+                  <ele>30.6</ele>
+                </trkpt><trkpt lat="56.103469" lon="-4.643423">
+                  <ele>50.7</ele>
+                </trkpt><trkpt lat="56.104685" lon="-4.643209">
+                  <ele>82.7</ele>
+                </trkpt><trkpt lat="56.106243" lon="-4.644274">
+                  <ele>128.4</ele>
+                </trkpt><trkpt lat="56.106899" lon="-4.644352">
+                  <ele>137.8</ele>
+                </trkpt><trkpt lat="56.107058" lon="-4.646261">
+                  <ele>159.5</ele>
+                </trkpt><trkpt lat="56.109841" lon="-4.649542">
+                  <ele>244.7</ele>
+                </trkpt><trkpt lat="56.11301" lon="-4.655522">
+                  <ele>310.2</ele>
+                </trkpt><trkpt lat="56.113928" lon="-4.656625">
+                  <ele>322.2</ele>
+                </trkpt><trkpt lat="56.115515" lon="-4.660574">
+                  <ele>373.0</ele>
+                </trkpt><trkpt lat="56.11627" lon="-4.663865">
+                  <ele>431.2</ele>
+                </trkpt><trkpt lat="56.116132" lon="-4.665118">
+                  <ele>445.4</ele>
+                </trkpt><trkpt lat="56.116635" lon="-4.66564">
+                  <ele>465.8</ele>
+                </trkpt><trkpt lat="56.116818" lon="-4.667037">
+                  <ele>496.5</ele>
+                </trkpt><trkpt lat="56.117843" lon="-4.669572">
+                  <ele>529.9</ele>
+                </trkpt><trkpt lat="56.11974" lon="-4.672548">
+                  <ele>578.0</ele>
+                </trkpt><trkpt lat="56.1203" lon="-4.675003">
+                  <ele>604.6</ele>
+                </trkpt><trkpt lat="56.121433" lon="-4.67756">
+                  <ele>630.7</ele>
+                </trkpt><trkpt lat="56.120282" lon="-4.674749">
+                  <ele>605.6</ele>
+                </trkpt><trkpt lat="56.119947" lon="-4.672841">
+                  <ele>586.7</ele>
+                </trkpt><trkpt lat="56.117849" lon="-4.669375">
+                  <ele>526.8</ele>
+                </trkpt><trkpt lat="56.116657" lon="-4.665598">
+                  <ele>465.8</ele>
+                </trkpt><trkpt lat="56.116126" lon="-4.665032">
+                  <ele>444.1</ele>
+                </trkpt><trkpt lat="56.116322" lon="-4.663803">
+                  <ele>430.3</ele>
+                </trkpt><trkpt lat="56.115527" lon="-4.660369">
+                  <ele>370.5</ele>
+                </trkpt><trkpt lat="56.113978" lon="-4.656531">
+                  <ele>322.0</ele>
+                </trkpt><trkpt lat="56.112408" lon="-4.654298">
+                  <ele>296.5</ele>
+                </trkpt><trkpt lat="56.111177" lon="-4.65135">
+                  <ele>274.9</ele>
+                </trkpt><trkpt lat="56.107068" lon="-4.64612">
+                  <ele>158.9</ele>
+                </trkpt><trkpt lat="56.106909" lon="-4.6443">
+                  <ele>137.8</ele>
+                </trkpt><trkpt lat="56.106303" lon="-4.644254">
+                  <ele>129.5</ele>
+                </trkpt><trkpt lat="56.10452" lon="-4.643162">
+                  <ele>79.9</ele>
+                </trkpt><trkpt lat="56.102431" lon="-4.643269">
+                  <ele>30.9</ele>
+                </trkpt><trkpt lat="56.101976" lon="-4.641659">
+                  <ele>22.2</ele>
+                </trkpt><trkpt lat="56.101761" lon="-4.641647">
+                  <ele>21.6</ele>
+                </trkpt><trkpt lat="56.101776" lon="-4.640862">
+                  <ele>18.9</ele>
+                </trkpt><trkpt lat="56.102355" lon="-4.640465">
+                  <ele>18.3</ele>
+                </trkpt><trkpt lat="56.102646" lon="-4.639853">
+                  <ele>16.6</ele>
+                </trkpt>
+            </trkseg>
+          </trk>
+        </gpx>
