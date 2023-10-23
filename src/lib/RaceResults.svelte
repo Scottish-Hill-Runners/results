@@ -1,6 +1,6 @@
 <script lang="ts">
   import { page } from '$app/stores';
-  import { Button, ButtonGroup, Chevron, Dropdown, DropdownItem, Heading, P, Popover, Tabs, TabItem } from 'flowbite-svelte';
+  import { Button, ButtonGroup, Checkbox, Chevron, Dropdown, DropdownItem, Heading, Hr, P, Popover, Search, Tabs, TabItem, A } from 'flowbite-svelte';
   import { GithubSolid } from 'flowbite-svelte-icons';
   import Chart from 'svelte-frappe-charts';
   import { metric, imperial } from '$lib/units';
@@ -16,22 +16,48 @@
   gpxViewer?.searchParams.append("url", new URL(`/gpx/${info.raceId}.gpx`, $page.url.href).toString());
 
   const units = $page.url.searchParams.get("units") == "imperial" ? imperial() : metric;
+
+  // See https://stackoverflow.com/a/201378/11340761
+  const emailRex = /\s*<((?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9]))\.){3}(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9])|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\]))>/gi;
+  const organiserEmails = Array.from((info.organiser ?? "").matchAll(emailRex)).map(v => encodeURIComponent(v[1]));
+  const organisers = info.organiser?.replaceAll(emailRex, "");
+
+  function emailOrganisers(e: MouseEvent) {
+    e.preventDefault();
+    const url = new URL(`mailto:${organiserEmails.join(",")}`)
+    url.searchParams.append("subject", `Enquiry regarding ${info.title}`)
+    window.open(url);
+  }
+
   const uniqueCategories = new Set<string>();
-  const allYears = Object.keys(stats).sort();
-  for (const s of Object.values(stats))
-    for (const c of Object.keys(s))
-      uniqueCategories.add(c);
-  const allCategories = Array.from(uniqueCategories).sort();
+  const uniqueClubs = new Set<string>();
+  for (const r of results) {
+    for (const cat of Object.keys(r.categoryPos))
+      uniqueCategories.add(cat)
+      uniqueClubs.add(r.club);
+  }
+
+  const allYears = Object.keys(stats).sort().reverse();
+  const allCategories = [...uniqueCategories].sort();
+  const allClubs = [...uniqueClubs].sort();
 
   let category = 'All';
-  const resultsForCategory = { 'All': [] } as { [category: string]: Result[] };
-  for (const r of results) {
-    resultsForCategory['All'].push(r);
-    for (const c of Object.keys(r.categoryPos)) {
-      if (!resultsForCategory[c])
-        resultsForCategory[c] = [];
-      resultsForCategory[c].push(r);
-    }
+  let year = 'All';
+  let clubs: string[] = [];
+  let items = results;
+  let clubSearch = "";
+
+  $: {
+    items = results.filter(r =>
+      (category == 'All' || r.categoryPos[category]) &&
+      (year == 'All' || r.year == year) &&
+      (clubs.length == 0 || clubs.includes(r.club)))
+  }
+
+  let yearOpen = false;
+  function changeYear(y: string) {
+    year = y;
+    yearOpen = false;
   }
 
   let categoryOpen = false;
@@ -40,13 +66,20 @@
     categoryOpen = false;
   }
 
+  let clubsOpen = false;
+  function clearClubs() {
+    clubs = [];
+    clubSearch = "";
+    clubsOpen = false;
+  }
+
+  
   const columns: { [key: string]: ColumnSpec<Result> } = {
     "year": {
       header: "Year",
       sort: "desc",
       width: "minmax(6ch, 1fr)",
-      sticky: true, 
-      searchable: true
+      sticky: true
     },
     "position": {
       header: "Pos.",
@@ -65,8 +98,8 @@
     "club": {
       header: "Club",
       width: "minmax(6ch, 2fr)",
-      searchable: true,
-      sticky: true
+      sticky: true,
+      searchable: true
     },
     "category": {
       header: "Categ.",
@@ -93,25 +126,37 @@
     <article class="prose prose-slate">
       <div class='recordHolders'>
       {#if info.maleRecord}
-        <div class='recordHolder'>Male record: {info.maleRecord}</div>
+        <div class='recordHolder'><b>Male record:</b> {info.maleRecord}</div>
       {/if}
       {#if info.femaleRecord}
-        <div class='recordHolder'>Female record: {info.femaleRecord}</div>
+        <div class='recordHolder'><b>Female record:</b> {info.femaleRecord}</div>
       {/if}
       {#if info.nonBinaryRecord}
-        <div class='recordHolder'>Non-binary record: {info.nonBinaryRecord}</div>
+        <div class='recordHolder'><b>Non-binary record:</b> {info.nonBinaryRecord}</div>
       {/if}
       </div>
 
       {@html blurb}
 
+      {#if organisers}
+        <P>Organiser: {organisers}
+          {#if organiserEmails}
+            <!-- svelte-ignore a11y-invalid-attribute -->
+            <A href="#" on:click={emailOrganisers}>(email)</A>
+          {/if}
+        </P>
+      {/if}
+      {#if info.web}
+        <P>Race web site: <A href={info.web}>{info.web}</A></P>
+      {/if}
+      <Hr />
       <Button
         color="light"
         size="xs"
         href={`https://github.com/Scottish-Hill-Runners/results/edit/main/races/${info.raceId}/index.md`}>
         <GithubSolid />&nbsp;Edit on GitHub
       </Button>
-  </article>
+    </article>
   </TabItem>
 
   {#if gpxViewer}
@@ -126,42 +171,74 @@
 
   <TabItem open title="Results">
     <ButtonGroup>
+      <Button><Chevron>Year: {year}</Chevron></Button>
+      <Dropdown bind:open={yearOpen}>
+        {#each ['All', ...allYears] as year}
+          <DropdownItem on:click={() => changeYear(year)}>{year}</DropdownItem>
+        {/each}
+      </Dropdown>
+      
       <Button><Chevron>Category: {category}</Chevron></Button>
       <Dropdown bind:open={categoryOpen}>
-        {#each Object.keys(resultsForCategory).sort() as cat}
+        {#each ['All', ...allCategories] as cat}
           <DropdownItem on:click={() => changeCategory(cat)}>{cat}</DropdownItem>
         {/each}
       </Dropdown>
-      <Button id="edit"><GithubSolid />&nbsp;Edit results</Button>
-      <Popover class="text-sm font-light" title="Add new results, or fix an error." triggeredBy="#edit" trigger="hover">
-        <P>
-          Select a year to edit, or
-            <Button size="xs" href={`https://github.com/Scottish-Hill-Runners/results/new/main/races/${info.raceId}/`}>
-              add new results
-            </Button>.
-            You will need to have a (free) Github account
-            (<a href="https://github.com/signup" target="_blank">https://github.com/signup</a>).
-        </P>
-        <div class="grid md:grid-cols-6">
-          {#each allYears as year}
-            <Button
-              color="light"
-              size="xs"
-              href={`https://github.com/Scottish-Hill-Runners/results/edit/main/races/${info.raceId}/${year}.csv`}>
-              {year}
-            </Button>
-          {/each}
+
+      <Button><Chevron>Club{clubs.length == 0 ? ": All" : ""}</Chevron></Button>
+      <Dropdown bind:open={clubsOpen} class="overflow-y-auto px-3 pb-3 text-sm h-44">
+        <div slot="header" class="p-3 {allClubs.length < 10 ? "hidden" : ""}">
+          <Search bind:value={clubSearch} size="md" />
         </div>
-        <P>
-          Prepare the results in a CSV file.<br/>
-          The columns should be "RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime".<br/>
-          You can use "Name" instead of "Surname,Forename" if you prefer.<br/>
-          The name of the file you create in Github must be in the format yyyy.csv.
-        </P>
-      </Popover>
+        {#if clubs.length > 0}
+          <DropdownItem on:click={() => clearClubs()}>Clear</DropdownItem>
+        {/if}
+        {#each allClubs.filter(c => c.toLowerCase().indexOf(clubSearch.toLowerCase()) != -1) as club}
+          <li class="rounded p-2 hover:bg-gray-100 dark:hover:bg-gray-600">
+            <Checkbox bind:group={clubs} value={club}>{club}</Checkbox>
+          </li>
+        {/each}
+      </Dropdown>
+
+      {#if year == 'All'}
+        <Button id="edit"><GithubSolid />&nbsp;Edit results</Button>
+        <Popover class="text-sm font-light" title="Add new results, or fix an error." triggeredBy="#edit" trigger="hover">
+          <P>
+            Select a year to edit, or
+              <Button size="xs" href={`https://github.com/Scottish-Hill-Runners/results/new/main/races/${info.raceId}/`}>
+                add new results
+              </Button>.
+              You will need to have a (free) Github account
+              (<a href="https://github.com/signup" target="_blank">https://github.com/signup</a>).
+          </P>
+          <div class="grid md:grid-cols-6">
+            {#each allYears as year}
+              <Button
+                color="light"
+                size="xs"
+                href={`https://github.com/Scottish-Hill-Runners/results/edit/main/races/${info.raceId}/${year}.csv`}>
+                {year}
+              </Button>
+            {/each}
+          </div>
+          <P>
+            Prepare the results in a CSV file.<br/>
+            The columns should be "RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime".<br/>
+            You can use "Name" instead of "Surname,Forename" if you prefer.<br/>
+            The name of the file you create in Github must be in the format yyyy.csv.
+          </P>
+        </Popover>
+      {:else}
+        <Button
+          color="light"
+          size="xs"
+          href={`https://github.com/Scottish-Hill-Runners/results/edit/main/races/${info.raceId}/${year}.csv`}>
+          <GithubSolid />&nbsp;Edit results for {year}
+        </Button>
+      {/if}
     </ButtonGroup>
     
-    <VirtualTable items={resultsForCategory[category]} {columns} />
+    <VirtualTable {items} {columns} />
   </TabItem>
 
   <TabItem title="Stats">
@@ -175,3 +252,7 @@
       barOptions={{ stacked: 1}} />
   </TabItem>
 </Tabs>
+
+<style>
+  .hidden { display: none }
+</style>

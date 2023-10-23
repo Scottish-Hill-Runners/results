@@ -150,23 +150,15 @@ function writeBlocks() {
   Object.entries(runnerBlocks).forEach(([name, r]) => { if (r.nRaces > 1) runnerData[name] = r.blocks });
   fs.writeFileSync('static/data/runners.json', JSON.stringify(runnerData));
 
+  fs.mkdirSync("static/gpx", { recursive: true });
   const raceInfo = [] as RaceInfo[];
   groupBy(raceBlocks, r => r.raceId).forEach((blocks, raceId) => {
     const results = byRaceId.get(raceId);
     if (!results) return;
     fs.mkdirSync(`src/routes/races/${raceId}`, { recursive: true });
     const hasGpx = fs.existsSync(`races/${raceId}/route.gpx`);
-    if (hasGpx) {
-      fs.mkdirSync(`src/routes/races/${raceId}/gpx`, { recursive: true });
-      fs.writeFileSync(
-        `src/routes/races/${raceId}/gpx/+server.js`,
-        `export function GET() {
-  return new Response(
-    ${JSON.stringify(fs.readFileSync(`races/${raceId}/route.gpx`, 'utf8'))},
-    { headers: { "Content-type": "application/gpx+xml" } });
-}
-`);
-    }
+    if (hasGpx)
+      fs.copyFileSync(`races/${raceId}/route.gpx`, `static/gpx/${raceId}.gpx`)
 
     const stats = raceStats(results);
     const {data, content} = matter.read(`races/${raceId}/index.md`);
@@ -178,7 +170,9 @@ function writeBlocks() {
       climb: parseFloat(data.climb),
       maleRecord: data.maleRecord ?? data.record,
       femaleRecord: data.femaleRecord,
-      nonBinaryRecord: data.nonBinaryRecord
+      nonBinaryRecord: data.nonBinaryRecord,
+      web: data.web,
+      organiser: data.organiser
     };
     raceInfo.push(info);
 

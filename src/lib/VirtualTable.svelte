@@ -65,6 +65,7 @@
   }
 
   let scrollTop = 0;
+  let clientHeight = 0;
   let header: HTMLElement;
   let grid: HTMLElement;
   let frame: number;
@@ -72,6 +73,7 @@
 
   function poll() {
     scrollTop = grid?.scrollTop;
+    clientHeight = grid?.clientHeight;
     frame = requestAnimationFrame(poll);
   }
 
@@ -95,21 +97,21 @@
   }
 
   const templateColumns = Object.values(columns).map(col => col.width).join(" ");
+  $: header?.style.setProperty('--grid-template-columns', templateColumns);
+  $: grid?.style.setProperty('--grid-template-columns', templateColumns);
   $: {
     startIndex = Math.floor(scrollTop / itemHeight);
-    if (header)
-      header.style.setProperty('--grid-template-columns', templateColumns);
+    if (startIndex > filtered.length)
+      startIndex = 0;
     if (grid) {
-      const gridHeight = grid.clientHeight;
-      const numItems = Math.ceil(gridHeight / itemHeight);
-      grid.style.setProperty('--grid-end-row', `${startIndex + numItems + 1}`);
-      grid.style.setProperty('--grid-height', "100vh");
+      const numItems = Math.ceil(clientHeight / itemHeight);
+      grid.style.setProperty('--grid-end-row', `${startIndex + numItems + 2}`);
+      grid.style.setProperty('--grid-offsetTop', `${grid.offsetTop}px`);
       grid.style.setProperty('--grid-item-height', `${itemHeight}px`);
-      grid.style.setProperty('--grid-leading-height', `${startIndex * itemHeight}px`);
+      grid.style.setProperty('--grid-leading-height', `${scrollTop}px`);
       grid.style.setProperty('--grid-row-count', `${filtered.length + 1}`);
       grid.style.setProperty('--grid-start-row', `${startIndex + 1}`);
-      grid.style.setProperty('--grid-template-columns', templateColumns);
-      grid.style.setProperty('--grid-trailing-height', `${filtered.length * itemHeight - gridHeight - scrollTop}px`);
+      grid.style.setProperty('--grid-trailing-height', `${filtered.length * itemHeight - clientHeight - scrollTop}px`);
       visible = filtered.slice(startIndex, startIndex + numItems + 1);
     }
   }
@@ -150,13 +152,15 @@
       {/each}
     </div>
   {/each}
-  <div class="trailing" />
+  {#if filtered.length != visible.length}
+    <div class="trailing" />
+  {/if}
 </div>
 
 <style>
   :root {
     --grid-end-row: inherit;
-    --grid-height: inherit;
+    --grid-offsetTop: inherit;
     --grid-item-height: inherit;
     --grid-leading-height: inherit;
     --grid-row-count: inherit;
@@ -180,12 +184,12 @@
   }
 
   .grid-scroller {
-    overflow-y: scroll;
+    overflow: scroll;
     display: grid;
     grid-template-columns: var(--grid-template-columns);
-    grid-template-rows: var(--grid-item-height);
+    grid-auto-rows: var(--grid-item-height);
     width: 100%;
-    height: var(--grid-height);
+    height: calc(100vh - var(--grid-offsetTop));
   }
 
   .td {
@@ -200,12 +204,10 @@
   .leading {
     grid-column: 1 / -1;
     grid-row: 1 / var(--grid-start-row);
-    height: var(--grid-leading-height);
   }
 
   .trailing {
     grid-column: 1 / -1;
     grid-row: var(--grid-end-row) / var(--grid-row-count);
-    height: var(--grid-trailing-height);
   }
 </style>
