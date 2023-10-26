@@ -7,5 +7,7 @@ export const makeUrl: (
     url.searchParams.append(k, v);
   if (page.searchParams.has("units"))
     url.searchParams.set('units', page.searchParams.get('units'));
+  if (page.searchParams.has("category"))
+    url.searchParams.set('category', page.searchParams.get('category'));
   return url.toString();
 }

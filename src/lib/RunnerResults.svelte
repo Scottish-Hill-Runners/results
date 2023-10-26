@@ -1,12 +1,15 @@
 <script lang="ts">
   import { page } from '$app/stores';
-  import { Tabs, TabItem } from 'flowbite-svelte';
+  import { Button, ButtonGroup, Checkbox, Chevron, Dropdown, Tabs, TabItem } from 'flowbite-svelte';
   import Chart from 'svelte-frappe-charts';
   import { metric, imperial } from '$lib/units';
   import VirtualTable from './VirtualTable.svelte';
 
   export let results: RunnerInfo[];
-  export let stats: { year: string, nRaces: number, totalDistance: number, totalAscent: number }[];
+
+  const possibleClubs = new Set<string>();
+  for (const result of results)
+    possibleClubs.add(result.club);
 
   const units = $page.url.searchParams.get("units") == "imperial" ? imperial() : metric;
   const columns: { [key: string]: ColumnSpec<RunnerInfo> } = {
@@ -21,7 +24,7 @@
       header: "Title",
       sort: "asc",
       width: "2fr",
-      link: (item) => { return { route: `/races/${item.raceId}`, text: item.title } },
+      link: (item) => { return { route: `/races/${item.raceId}?year=${item.year}`, text: item.title } },
       searchable: true
     },
     "position": {
@@ -66,26 +69,65 @@
       }
     }
   };
-  const sortedStats = stats.sort((a, b) => a.year.localeCompare(b.year));
-  const years = sortedStats.map(s => s.year);
+
+  let clubs = $page.url.searchParams.getAll("club");
+  let sortedStats = [] as RunnerStats[];
+  let years = [] as string[];
+  let visibleResults = [] as RunnerInfo[];
+  $: {
+    visibleResults = [];
+    for (const r of results)
+      if (clubs.length == 0 || clubs.includes(r.club))
+      visibleResults.push(r);
+
+    let stats = [];
+    for (const r of visibleResults) {
+      let s = stats.find(s => s.year == r.year);
+      if (!s) {
+        s = { year: r.year, nRaces: 0, totalDistance: 0, totalAscent: 0 };
+        stats.push(s);
+      }
+
+      s.nRaces++;
+      s.totalDistance += r.distance;
+      s.totalAscent += r.climb;
+    }
+
+    sortedStats = stats.sort((a, b) => a.year.localeCompare(b.year));
+    years = sortedStats.map(s => s.year);
+  }
 </script>
 
 <Tabs>
   <TabItem open title="Results">
-    <VirtualTable items={results} {columns} />
+
+  {#if possibleClubs.size > 1}
+    <ButtonGroup>
+      <Button><Chevron>Select clubs</Chevron></Button>
+      <Dropdown>
+        {#each possibleClubs as club}
+          <li class="rounded p-2 hover:bg-gray-100 dark:hover:bg-gray-600">
+            <Checkbox bind:group={clubs} value={club}>{club}</Checkbox>
+          </li>
+        {/each}
+      </Dropdown>
+    </ButtonGroup>
+  {/if}
+
+    <VirtualTable items={visibleResults} {columns} />
   </TabItem>
 
   <TabItem title="Stats">
     <Chart
-        title={`Number of races (total: ${results.length})`}
+        title={`Number of races (total: ${visibleResults.length})`}
         data={{ labels: years, datasets: [{ values: sortedStats.map(s => s.nRaces) }]}}
         type="bar" />
     <Chart
-      title={`Total distance (${units.distance.scale(results.reduce((soFar, r) => soFar + r.distance, 0))} ${units.distance.unit})`}
+      title={`Total distance (${units.distance.scale(visibleResults.reduce((soFar, r) => soFar + r.distance, 0))} ${units.distance.unit})`}
       data={{ labels: years, datasets: [{ values: sortedStats.map(s => s.totalDistance) }]}}
       type="bar" />
     <Chart 
-      title={`Total ascent (${units.ascent.scale(results.reduce((soFar, r) => soFar + r.climb, 0))} ${units.ascent.unit})`}
+      title={`Total ascent (${units.ascent.scale(visibleResults.reduce((soFar, r) => soFar + r.climb, 0))} ${units.ascent.unit})`}
       data={{ labels: years, datasets: [{ values: sortedStats.map(s => s.totalAscent) }]}}
       type="bar" />
   </TabItem>

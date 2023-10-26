@@ -33,7 +33,7 @@ declare global {
     femaleRecord?: string,
     nonBinaryRecord?: string,
     web?: string,
-    organiser?: string
+    organiser?: number[]
   }
 
   type RunnerInfo = {
@@ -44,6 +44,7 @@ declare global {
     position: number,
     category: string,
     categoryPos: { [cat: string]: number },
+    club?: string,
     distance: number,
     climb?: number
   }

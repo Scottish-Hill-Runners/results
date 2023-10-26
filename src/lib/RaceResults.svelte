@@ -9,7 +9,6 @@
   export let results: Result[];
   export let info: RaceInfo;
   export let blurb: string;
-  export let stats: RaceStats;
   export let hasGpx: boolean;
 
   const gpxViewer = hasGpx ? new URL("https://gpsvisualizer.com/atlas/map") : null;
@@ -18,9 +17,10 @@
   const units = $page.url.searchParams.get("units") == "imperial" ? imperial() : metric;
 
   // See https://stackoverflow.com/a/201378/11340761
-  const emailRex = /\s*<((?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9]))\.){3}(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9])|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\]))>/gi;
-  const organiserEmails = Array.from((info.organiser ?? "").matchAll(emailRex)).map(v => encodeURIComponent(v[1]));
-  const organisers = info.organiser?.replaceAll(emailRex, "");
+  const emailRex = /\s*<((?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:(?:2(?:5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9]))\.){3}(?:(?:2(?:5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9])|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\]))>/gi;
+  const organiser = info.organiser ? new TextDecoder().decode(Uint8Array.from(info.organiser)) : "";
+  const organiserEmails = Array.from(organiser.matchAll(emailRex)).map(v => encodeURIComponent(v[1]));
+  const organisers = organiser.replaceAll(emailRex, "");
 
   function emailOrganisers(e: MouseEvent) {
     e.preventDefault();
@@ -31,27 +31,42 @@
 
   const uniqueCategories = new Set<string>();
   const uniqueClubs = new Set<string>();
+  const uniqueYears = new Set<string>();
   for (const r of results) {
     for (const cat of Object.keys(r.categoryPos))
       uniqueCategories.add(cat)
       uniqueClubs.add(r.club);
+      uniqueYears.add(r.year);
   }
 
-  const allYears = Object.keys(stats).sort().reverse();
   const allCategories = [...uniqueCategories].sort();
   const allClubs = [...uniqueClubs].sort();
+  const allYears = [...uniqueYears].sort();
 
-  let category = 'All';
-  let year = 'All';
+  let category = $page.url.searchParams.get("category") ?? 'All';
+  let year = $page.url.searchParams.get("year") ?? 'All';
   let clubs: string[] = [];
   let items = results;
   let clubSearch = "";
+  let stats = {} as RaceStats;
 
   $: {
     items = results.filter(r =>
       (category == 'All' || r.categoryPos[category]) &&
       (year == 'All' || r.year == year) &&
-      (clubs.length == 0 || clubs.includes(r.club)))
+      (clubs.length == 0 || clubs.includes(r.club)));
+
+    stats = {};
+    for (const r of items) {
+      let byYear = stats[r.year];
+      if (byYear === undefined) {
+        byYear = {};
+        stats[r.year] = byYear;
+      }
+
+      const tally = byYear[r.category] ?? 0;
+      byYear[r.category] = tally + 1;
+    }
   }
 
   let yearOpen = false;
@@ -141,8 +156,7 @@
       {#if organisers}
         <P>Organiser: {organisers}
           {#if organiserEmails}
-            <!-- svelte-ignore a11y-invalid-attribute -->
-            <A href="#" on:click={emailOrganisers}>(email)</A>
+            <A href="#" on:click={emailOrganisers}>(send email)</A>
           {/if}
         </P>
       {/if}
@@ -185,7 +199,11 @@
         {/each}
       </Dropdown>
 
-      <Button><Chevron>Club{clubs.length == 0 ? ": All" : ""}</Chevron></Button>
+      <Button>
+        <Chevron>
+          Club{clubs.length == 0 ? ": All" : `: ${clubs[0] + (clubs.length > 1 ? ` (+${clubs.length - 1})` : '')}` }
+        </Chevron>
+      </Button>
       <Dropdown bind:open={clubsOpen} class="overflow-y-auto px-3 pb-3 text-sm h-44">
         <div slot="header" class="p-3 {allClubs.length < 10 ? "hidden" : ""}">
           <Search bind:value={clubSearch} size="md" />
@@ -245,8 +263,8 @@
     <Chart
       title="Number of runners (by category)"
       data={{
-        labels: allYears,
-        datasets: allCategories.map((cat) => { return { name: cat, values: allYears.map(year => stats[year][cat]) } })
+        labels: [...Object.keys(stats)].sort(),
+        datasets: allCategories.map((cat) => { return { name: cat, values: [...Object.keys(stats)].sort().map(year => stats[year][cat]) } })
       }}
       type="bar"
       barOptions={{ stacked: 1}} />

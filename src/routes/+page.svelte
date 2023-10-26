@@ -17,6 +17,8 @@
 <ButtonGroup>
   <Button href="races">Races (metric)</Button>
   <Button href="races?units=imperial">Races (imperial)</Button>
+  <Button href="races?category=F">Boireannaich</Button>
+  <Button href="races?category=M">Fireannaich</Button>
 </ButtonGroup>
 
 <P xmlns:cc="http://creativecommons.org/ns#"

@@ -87,21 +87,6 @@ function groupBy<K, V>(data: V[], key: (t: V) => K): Map<K, V[]> {
   return result;
 }
 
-function raceStats(results: Result[]): RaceStats {
-  const stats = {} as RaceStats;
-  results.forEach(r => {
-    let byYear = stats[r.year];
-    if (byYear === undefined) {
-      byYear = {};
-      stats[r.year] = byYear;
-    }
-
-    const tally = byYear[r.category] ?? 0;
-    byYear[r.category] = tally + 1;
-  });
-  return stats;
-}
-
 const allResults = await readResults();
 const byRaceId = groupBy(allResults, r => r.raceId);
 
@@ -150,6 +135,7 @@ function writeBlocks() {
   Object.entries(runnerBlocks).forEach(([name, r]) => { if (r.nRaces > 1) runnerData[name] = r.blocks });
   fs.writeFileSync('static/data/runners.json', JSON.stringify(runnerData));
 
+  const encoder = new TextEncoder();
   fs.mkdirSync("static/gpx", { recursive: true });
   const raceInfo = [] as RaceInfo[];
   groupBy(raceBlocks, r => r.raceId).forEach((blocks, raceId) => {
@@ -160,7 +146,6 @@ function writeBlocks() {
     if (hasGpx)
       fs.copyFileSync(`races/${raceId}/route.gpx`, `static/gpx/${raceId}.gpx`)
 
-    const stats = raceStats(results);
     const {data, content} = matter.read(`races/${raceId}/index.md`);
     const info = {
       raceId: raceId,
@@ -172,7 +157,7 @@ function writeBlocks() {
       femaleRecord: data.femaleRecord,
       nonBinaryRecord: data.nonBinaryRecord,
       web: data.web,
-      organiser: data.organiser
+      organiser: data.organiser ? Array.from(encoder.encode(data.organiser)) : null
     };
     raceInfo.push(info);
 
@@ -182,6 +167,8 @@ function writeBlocks() {
         `/** @type {import('./$types').PageLoad} */
 export async function load({ fetch }) {
   return {
+    races: await fetch("/data/races.json")
+      .then(resp => resp.json() as Promise<RaceInfo[]>),
     results: await Promise.all([${
       blocks
         .map(block =>`
@@ -199,15 +186,14 @@ fetch("/data/${block.blockId}.json")
   import RaceResults from "$lib/RaceResults.svelte";
   export let data;
   const results = data.results.flat();
-  const info = ${JSON.stringify(info)};
+  const info = data.races.find(r => r.raceId == "${raceId}");
   const blurb = ${JSON.stringify(md.render(content))};
-  const stats = ${JSON.stringify(stats)};
-  const hasGpx= ${hasGpx};
+  const hasGpx = ${hasGpx};
 </script>
 <svelte:head>
   <title>SHR - ${info.title}</title>
 </svelte:head>
-<RaceResults {results} {info} {blurb} {stats} {hasGpx} />
+<RaceResults {results} {info} {blurb} {hasGpx} />
 `);
   });
 

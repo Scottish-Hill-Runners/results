@@ -6,50 +6,34 @@
 
   export let data: { blocks: Block[], runnerData: RunnerData, races: RaceInfo[] };
 
-  function raceInfo(raceId: string): RaceInfo {
-    return data.races.find(r => r.raceId == raceId);
-  }
-
-  // TODO: extend params to include multiple clubs, aliases
-  let name = $page.url.searchParams.get("name");
-  let club = $page.url.searchParams.get("club");
-
+  const name = $page.url.searchParams.get("name");
   const results = [] as RunnerInfo[];
-  const stats = [] as RunnerStats[];
-  data.blocks.forEach(blocks =>
-   Object.values(blocks).forEach(race =>
-    race.forEach(r => {
-    if (r.name == name && (!club || r.club == club)) {
-      const info = raceInfo(r.raceId);
-      const year = r.year.substring(0, 4);
-      let s = stats.find(s => s.year == year);
-      if (!s) {
-        s = { year, nRaces: 0, totalDistance: 0, totalAscent: 0 };
-        stats.push(s);
-      }
-
-      s.nRaces++;
-      s.totalDistance += info.distance;
-      s.totalAscent += info?.climb ?? 0;
-      results.push({
-          raceId: r.raceId,
-          title: info?.title,
-          year,
-          time: r.time,
-          position: r.position,
-          category: r.category,
-          categoryPos: r.categoryPos,
-          distance: info?.distance,
-          climb: info?.climb ?? 0
-        });
-      }
-    })));
+  for (const block of data.blocks)
+    for (const race of Object.values(block))
+      for (const r of race)
+        if (r.name == name) {
+          const info = data.races.find(race => race.raceId == r.raceId);
+          results.push({
+            raceId: r.raceId,
+            title: info?.title,
+            club: r.club,
+            year: r.year.substring(0, 4),
+            time: r.time,
+            position: r.position,
+            category: r.category,
+            categoryPos: r.categoryPos,
+            distance: info?.distance,
+            climb: info?.climb ?? 0
+          });
+        }
 </script>
 
 <svelte:head>
   <title>SHR - {name}</title>
 </svelte:head>
 
-<Heading>Results for {name}{#if club}&nbsp;({club}){/if}</Heading>
+<Heading>
+  Results for {name}
+</Heading>
 
-<RunnerResults {results} {stats} />
+<RunnerResults {results} />
