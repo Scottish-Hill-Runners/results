@@ -1,6 +1,6 @@
 <script lang="ts">
   import { page } from '$app/stores';
-  import { Button, ButtonGroup, Checkbox, Chevron, Dropdown, DropdownItem, Heading, Hr, P, Popover, Search, Tabs, TabItem, A } from 'flowbite-svelte';
+  import { Button, Checkbox, Chevron, Dropdown, DropdownItem, Heading, Hr, Input, P, Popover, Search, Tabs, TabItem, A } from 'flowbite-svelte';
   import { GithubSolid } from 'flowbite-svelte-icons';
   import Chart from 'svelte-frappe-charts';
   import { metric, imperial } from '$lib/units';
@@ -48,13 +48,16 @@
   let clubs: string[] = [];
   let items = results;
   let clubSearch = "";
+  let nameSearch = "";
   let stats = {} as RaceStats;
 
   $: {
+    const lcSearch = nameSearch.toLowerCase();
     items = results.filter(r =>
       (category == 'All' || r.categoryPos[category]) &&
       (year == 'All' || r.year == year) &&
-      (clubs.length == 0 || clubs.includes(r.club)));
+      (clubs.length == 0 || clubs.includes(r.club)) &&
+      r.name.toLowerCase().indexOf(lcSearch) != -1);
 
     stats = {};
     for (const r of items) {
@@ -88,7 +91,6 @@
     clubsOpen = false;
   }
 
-  
   const columns: { [key: string]: ColumnSpec<Result> } = {
     "year": {
       header: "Year",
@@ -107,14 +109,12 @@
     "name": {
       header: "Name",
       width: "minmax(8ch, 3fr)",
-      link: (item) => { return { route: "/runner", params: { name: item.name, club: item.club }, text: item.name } },
-      searchable: true
+      link: (item) => { return { route: "/runner", params: { name: item.name, club: item.club }, text: item.name } }
     },
     "club": {
       header: "Club",
       width: "minmax(6ch, 2fr)",
-      sticky: true,
-      searchable: true
+      sticky: true
     },
     "category": {
       header: "Categ.",
@@ -184,7 +184,7 @@
   {/if}
 
   <TabItem open title="Results">
-    <ButtonGroup>
+    <div class="w-full md:w-auto flex flex-col md:flex-row space-y-2 md:space-y-0 items-stretch md:items-center md:space-x-3 flex-shrink-0">
       <Button><Chevron>Year: {year}</Chevron></Button>
       <Dropdown bind:open={yearOpen}>
         {#each ['All', ...allYears] as year}
@@ -218,12 +218,14 @@
         {/each}
       </Dropdown>
 
+      <Input class="w-60" placeholder="Name" bind:value={nameSearch} />
+
       {#if year == 'All'}
-        <Button id="edit"><GithubSolid />&nbsp;Edit results</Button>
-        <Popover class="text-sm font-light" title="Add new results, or fix an error." triggeredBy="#edit" trigger="hover">
+        <Button id="edit" color="light"><GithubSolid />&nbsp;Edit results</Button>
+        <Popover class="text-sm font-light z-50" title="Add new results, or fix an error." triggeredBy="#edit" trigger="hover">
           <P>
             Select a year to edit, or
-              <Button size="xs" href={`https://github.com/Scottish-Hill-Runners/results/new/main/races/${info.raceId}/`}>
+              <Button size="xs" color="light" href={`https://github.com/Scottish-Hill-Runners/results/new/main/races/${info.raceId}/`}>
                 add new results
               </Button>.
               You will need to have a (free) Github account
@@ -254,8 +256,8 @@
           <GithubSolid />&nbsp;Edit results for {year}
         </Button>
       {/if}
-    </ButtonGroup>
-    
+      </div>
+
     <VirtualTable {items} {columns} />
   </TabItem>
 

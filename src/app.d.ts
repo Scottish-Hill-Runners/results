@@ -66,7 +66,6 @@ declare global {
     link?: (item: T) => { text: string, route: string,  params?: { [key: string]: string } },
     sort?: "asc" | "desc",
     sticky?: boolean,
-    searchable?: boolean,
     cmp?: (a: T, b: T) => number,
     width?: string
   }

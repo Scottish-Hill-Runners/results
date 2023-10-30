@@ -1,32 +1,22 @@
 <script lang="ts">
-  import { onMount, onDestroy } from 'svelte';
-  import { Input } from "flowbite-svelte";
   import Link from '$lib/Link.svelte';
   import SortDirection from "$lib/SortDirection.svelte";
+  import { Table, TableBody, TableBodyCell, TableBodyRow, TableHead, TableHeadCell } from 'flowbite-svelte';
 
   type T = $$Generic;
 
   export let items: T[];
-  export let itemHeight: number = 30;
   export let columns: { [key: string]: ColumnSpec<T> };
-  export let searchTerm = "";
 
   type SortKey = { [key: string]: "asc" | "desc" };
   let sortKey = {} as SortKey;
-  for (const [key, value] of Object.entries(columns)) {
+  for (const [key, value] of Object.entries(columns))
     if (value.sort) sortKey[key] = value.sort;
-    if (!value.width) // TODO: Include header widths
-      value.width =
-        items.length == 0
-        ? "auto"
-        : Math.max(...items.slice(0, 20).map((item) => ("" + item[key]).length)) + "ch";
-  }
 
   const stickySortKeys =
     Object.entries(columns).flatMap(([key, value]) => value.sticky ? [key] : []);
 
   const sortBy = (key: string) => {
-    scrollTop = 0;
     const current = sortKey[key];
     if (stickySortKeys.includes(key))
 		  delete sortKey[key];
@@ -64,150 +54,44 @@
     };
   }
 
-  let scrollTop = 0;
-  let clientHeight = 0;
-  let header: HTMLElement;
-  let grid: HTMLElement;
-  let frame: number;
-  let startIndex: number;
-
-  function poll() {
-    scrollTop = grid?.scrollTop;
-    clientHeight = grid?.clientHeight;
-    frame = requestAnimationFrame(poll);
-  }
-
-  onMount(() => frame = requestAnimationFrame(poll));
-  onDestroy(() => typeof('cancelAnimationFrame') === 'function' && cancelAnimationFrame(frame));
-
-  let filtered = items;
-  let visible = filtered;
-  $: {
-    const lcSearch = searchTerm.toLowerCase();
-    const cmp = compare(sortKey);
-    filtered =
-     items
-      .filter(
-        (item) =>
-          Object.entries(item).some(
-            ([key, value]) =>
-              columns[key]?.searchable &&
-              (value ?? "").toLowerCase().indexOf(lcSearch) != -1))
-      .sort(cmp);
-  }
-
-  const templateColumns = Object.values(columns).map(col => col.width).join(" ");
-  $: header?.style.setProperty('--grid-template-columns', templateColumns);
-  $: grid?.style.setProperty('--grid-template-columns', templateColumns);
-  $: {
-    startIndex = Math.floor(scrollTop / itemHeight);
-    if (startIndex > filtered.length)
-      startIndex = 0;
-    if (grid) {
-      const numItems = Math.ceil(clientHeight / itemHeight);
-      grid.style.setProperty('--grid-end-row', `${startIndex + numItems + 2}`);
-      grid.style.setProperty('--grid-offsetTop', `${grid.offsetTop}px`);
-      grid.style.setProperty('--grid-item-height', `${itemHeight}px`);
-      grid.style.setProperty('--grid-leading-height', `${scrollTop}px`);
-      grid.style.setProperty('--grid-row-count', `${filtered.length + 1}`);
-      grid.style.setProperty('--grid-start-row', `${startIndex + 1}`);
-      grid.style.setProperty('--grid-trailing-height', `${filtered.length * itemHeight - clientHeight - scrollTop}px`);
-      visible = filtered.slice(startIndex, startIndex + numItems + 1);
-    }
-  }
+  $: nRows = 20;
+  $: sorted = items.sort(compare(sortKey));
+  $: visible = sorted.slice(0, nRows);
 </script>
 
-<Input bind:value={searchTerm} placeholder="Search..." />
-
-<div class="header" bind:this={header}>
-  {#each Object.entries(columns) as [key, value], i}
-    <div
-      class="th"
-      on:click={() => sortBy(key)}
-      on:keydown={() => sortBy(key)}
-      role="button"
-      aria-roledescription="sort"
-      tabindex={i}>
+<Table striped={true}>
+  <TableHead>
+    {#each Object.entries(columns) as [key, value]}
+    <TableHeadCell on:click={() => sortBy(key)}>
       {value.header}<SortDirection dir={sortKey[key]} />
-    </div>
-  {/each}
-</div>
-
-<div class="grid-scroller" bind:this={grid}>
-  {#if startIndex != 0}
-    <div class="leading" />
-  {/if}
-  {#each visible as item, i}
-    <div class="tr">
-      {#each Object.entries(columns) as [key, value]}
-        <div class={(i + startIndex) % 2 == 0 ? "td even" : "td"}>
-          {#if value.link}
-            <Link {...value.link(item)} />
-          {:else if value.display}
-            {value.display(item)}
-          {:else}
-            {item[key]}
-          {/if}
-        </div>
-      {/each}
-    </div>
-  {/each}
-  {#if filtered.length != visible.length}
-    <div class="trailing" />
-  {/if}
-</div>
-
-<style>
-  :root {
-    --grid-end-row: inherit;
-    --grid-offsetTop: inherit;
-    --grid-item-height: inherit;
-    --grid-leading-height: inherit;
-    --grid-row-count: inherit;
-    --grid-start-row: inherit;
-    --grid-template-columns: inherit;
-    --grid-trailing-height: inherit;
-  }
-
-  .header {
-    display: grid;
-    grid-template-columns: var(--grid-template-columns);
-    width: 100%;
-  }
-
-  .tr {
-    display: contents;
-  }
-
-  .th {
-    background-color: lightgray;
-  }
-
-  .grid-scroller {
-    overflow: scroll;
-    display: grid;
-    grid-template-columns: var(--grid-template-columns);
-    grid-auto-rows: var(--grid-item-height);
-    width: 100%;
-    height: calc(100vh - var(--grid-offsetTop));
-  }
-
-  .td {
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-
-  .even {
-    background: #e2e0e9;
-  }
-  
-  .leading {
-    grid-column: 1 / -1;
-    grid-row: 1 / var(--grid-start-row);
-  }
-
-  .trailing {
-    grid-column: 1 / -1;
-    grid-row: var(--grid-end-row) / var(--grid-row-count);
-  }
-</style>
+    </TableHeadCell>
+    {/each}
+  </TableHead>
+  <TableBody>
+    {#each visible as item}
+      <TableBodyRow>
+        {#each Object.entries(columns) as [key, value]}
+          <TableBodyCell>
+            {#if value.link}
+              <Link {...value.link(item)} />
+            {:else if value.display}
+              {value.display(item)}
+            {:else}
+              {item[key]}
+            {/if}
+          </TableBodyCell>
+        {/each}
+      </TableBodyRow>
+    {/each}
+    {#if items.length > visible.length}
+    <TableBodyRow>
+      <TableHeadCell
+        class="text-center"
+        colspan={Object.keys(columns).length}
+        on:click={() => nRows += 20}>
+        Show more rows ({items.length - visible.length} hidden)
+      </TableHeadCell>
+    </TableBodyRow>
+    {/if}
+  </TableBody>
+</Table>

@@ -17,15 +17,13 @@
       header: "Year",
       sort: "desc",
       width: "minmax(6ch, 1fr)",
-      sticky: true, 
-      searchable: true
+      sticky: true
     },
     "title": {
       header: "Title",
       sort: "asc",
       width: "2fr",
-      link: (item) => { return { route: `/races/${item.raceId}?year=${item.year}`, text: item.title } },
-      searchable: true
+      link: (item) => { return { route: `/races/${item.raceId}?year=${item.year}`, text: item.title } }
     },
     "position": {
       header: "Position",
@@ -102,16 +100,14 @@
   <TabItem open title="Results">
 
   {#if possibleClubs.size > 1}
-    <ButtonGroup>
-      <Button><Chevron>Select clubs</Chevron></Button>
-      <Dropdown>
-        {#each possibleClubs as club}
-          <li class="rounded p-2 hover:bg-gray-100 dark:hover:bg-gray-600">
-            <Checkbox bind:group={clubs} value={club}>{club}</Checkbox>
-          </li>
-        {/each}
-      </Dropdown>
-    </ButtonGroup>
+    <Button><Chevron>Select clubs</Chevron></Button>
+    <Dropdown>
+      {#each possibleClubs as club}
+        <li class="rounded p-2 hover:bg-gray-100 dark:hover:bg-gray-600">
+          <Checkbox bind:group={clubs} value={club}>{club}</Checkbox>
+        </li>
+      {/each}
+    </Dropdown>
   {/if}
 
     <VirtualTable items={visibleResults} {columns} />
