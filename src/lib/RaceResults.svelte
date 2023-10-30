@@ -1,8 +1,7 @@
 <script lang="ts">
   import { page } from '$app/stores';
-  import { Button, Checkbox, Chevron, Dropdown, DropdownItem, Heading, Hr, Input, P, Popover, Search, Tabs, TabItem, A } from 'flowbite-svelte';
-  import { GithubSolid } from 'flowbite-svelte-icons';
-  import Chart from 'svelte-frappe-charts';
+  import { Button, Chart, Checkbox, Dropdown, DropdownItem, Heading, Hr, Input, P, Popover, Search, Tabs, TabItem, A } from 'flowbite-svelte';
+  import { ChevronDownSolid, GithubSolid } from 'flowbite-svelte-icons';
   import { metric, imperial } from '$lib/units';
   import VirtualTable from '$lib/VirtualTable.svelte';
 
@@ -185,14 +184,14 @@
 
   <TabItem open title="Results">
     <div class="w-full md:w-auto flex flex-col md:flex-row space-y-2 md:space-y-0 items-stretch md:items-center md:space-x-3 flex-shrink-0">
-      <Button><Chevron>Year: {year}</Chevron></Button>
+      <Button>Year: {year}<ChevronDownSolid class="w-3 h-3 ml-2 text-white dark:text-white" /></Button>
       <Dropdown bind:open={yearOpen}>
         {#each ['All', ...allYears] as year}
           <DropdownItem on:click={() => changeYear(year)}>{year}</DropdownItem>
         {/each}
       </Dropdown>
       
-      <Button><Chevron>Category: {category}</Chevron></Button>
+      <Button>Category: {category}<ChevronDownSolid class="w-3 h-3 ml-2 text-white dark:text-white" /></Button>
       <Dropdown bind:open={categoryOpen}>
         {#each ['All', ...allCategories] as cat}
           <DropdownItem on:click={() => changeCategory(cat)}>{cat}</DropdownItem>
@@ -200,9 +199,7 @@
       </Dropdown>
 
       <Button>
-        <Chevron>
-          Club{clubs.length == 0 ? ": All" : `: ${clubs[0] + (clubs.length > 1 ? ` (+${clubs.length - 1})` : '')}` }
-        </Chevron>
+          Club{clubs.length == 0 ? ": All" : `: ${clubs[0] + (clubs.length > 1 ? ` (+${clubs.length - 1})` : '')}` }<ChevronDownSolid class="w-3 h-3 ml-2 text-white dark:text-white" />
       </Button>
       <Dropdown bind:open={clubsOpen} class="overflow-y-auto px-3 pb-3 text-sm h-44">
         <div slot="header" class="p-3 {allClubs.length < 10 ? "hidden" : ""}">
@@ -262,14 +259,17 @@
   </TabItem>
 
   <TabItem title="Stats">
+    <Heading tag="h3">Number of runners (by category)</Heading>
     <Chart
-      title="Number of runners (by category)"
-      data={{
-        labels: [...Object.keys(stats)].sort(),
-        datasets: allCategories.map((cat) => { return { name: cat, values: [...Object.keys(stats)].sort().map(year => stats[year][cat]) } })
-      }}
-      type="bar"
-      barOptions={{ stacked: 1}} />
+      options={
+        {
+          series: allCategories.map((cat) => { return { name: cat, data: [...Object.keys(stats)].sort().map(year => stats[year][cat]) } }),
+          chart: {
+            type: "bar",
+            stacked: true
+          }
+        }
+      } />
   </TabItem>
 </Tabs>
 

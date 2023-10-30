@@ -1,15 +1,15 @@
 <script lang="ts">
   import { page } from '$app/stores';
-  import { Button, ButtonGroup, Checkbox, Chevron, Dropdown, Tabs, TabItem } from 'flowbite-svelte';
-  import Chart from 'svelte-frappe-charts';
+  import { Button, Chart, Checkbox, Dropdown, Heading, Tabs, TabItem } from 'flowbite-svelte';
+  import { ChevronDownSolid, GithubSolid } from 'flowbite-svelte-icons';
   import { metric, imperial } from '$lib/units';
   import VirtualTable from './VirtualTable.svelte';
 
   export let results: RunnerInfo[];
 
-  const possibleClubs = new Set<string>();
+  const uniqueClubs = new Set<string>();
   for (const result of results)
-    possibleClubs.add(result.club);
+    uniqueClubs.add(result.club);
 
   const units = $page.url.searchParams.get("units") == "imperial" ? imperial() : metric;
   const columns: { [key: string]: ColumnSpec<RunnerInfo> } = {
@@ -99,10 +99,10 @@
 <Tabs>
   <TabItem open title="Results">
 
-  {#if possibleClubs.size > 1}
-    <Button><Chevron>Select clubs</Chevron></Button>
+  {#if uniqueClubs.size > 1}
+    <Button>Select clubs<ChevronDownSolid class="w-3 h-3 ml-2 text-white dark:text-white" /></Button>
     <Dropdown>
-      {#each possibleClubs as club}
+      {#each uniqueClubs as club}
         <li class="rounded p-2 hover:bg-gray-100 dark:hover:bg-gray-600">
           <Checkbox bind:group={clubs} value={club}>{club}</Checkbox>
         </li>
@@ -114,17 +114,49 @@
   </TabItem>
 
   <TabItem title="Stats">
+    <Heading tag="h3">Number of races: {visibleResults.length}</Heading>
     <Chart
-        title={`Number of races (total: ${visibleResults.length})`}
-        data={{ labels: years, datasets: [{ values: sortedStats.map(s => s.nRaces) }]}}
-        type="bar" />
+      options={{
+        series: [ {
+          name: '#Races',
+          data: sortedStats.map(s => s.nRaces)
+        }],
+        xaxis: { categories: sortedStats.map(s => s.year) },
+        chart: {
+          type: 'bar',
+          width: '100%',
+          height: 200
+        }
+      }} />
+
+    <Heading tag="h3">Total distance: {units.distance.scale(visibleResults.reduce((soFar, r) => soFar + r.distance, 0))} {units.distance.unit}</Heading>
     <Chart
-      title={`Total distance (${units.distance.scale(visibleResults.reduce((soFar, r) => soFar + r.distance, 0))} ${units.distance.unit})`}
-      data={{ labels: years, datasets: [{ values: sortedStats.map(s => s.totalDistance) }]}}
-      type="bar" />
-    <Chart 
-      title={`Total ascent (${units.ascent.scale(visibleResults.reduce((soFar, r) => soFar + r.climb, 0))} ${units.ascent.unit})`}
-      data={{ labels: years, datasets: [{ values: sortedStats.map(s => s.totalAscent) }]}}
-      type="bar" />
+      options={{
+        series: [ {
+          name: `Distance (${units.distance.unit})`,
+          data: sortedStats.map(s => parseInt(units.distance.scale(s.totalDistance)))
+        }],
+        xaxis: { categories: sortedStats.map(s => s.year) },
+        chart: {
+          type: 'bar',
+          width: '100%',
+          height: 200
+        }
+      }} />
+
+    <Heading tag="h3">Total ascent: {units.ascent.scale(visibleResults.reduce((soFar, r) => soFar + r.climb, 0))} {units.ascent.unit}</Heading>
+    <Chart
+      options={{
+        series: [ {
+          name: `Ascent (${units.ascent.unit})`,
+          data: sortedStats.map(s => parseInt(units.ascent.scale(s.totalAscent)))
+        }],
+        xaxis: { categories: sortedStats.map(s => s.year) },
+        chart: {
+          type: 'bar',
+          width: '100%',
+          height: 200
+        }
+      }} />
   </TabItem>
 </Tabs>
