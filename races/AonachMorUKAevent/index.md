@@ -1,5 +1,5 @@
 ---
-title: Aonach Mor UKA event (men)
+title: Aonach Mor UKA event
 venue: Nevis Range Ski Centre, Torlundy, Fort William
 distance: 6
 climb: 690
