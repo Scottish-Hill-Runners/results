@@ -37,11 +37,11 @@ async function readRaceInstance(raceId: string, raceInstancePath: string): Promi
 
     progress(`Processing results from ${raceInstancePath}`)
     return jsonArray.map(json => {
-      const category = ((json.RunnerCategory ?? json.Category ?? "") as string).toUpperCase();
+      const category = ((json.RunnerCategory ?? json.Category ?? json.Cat ?? "") as string).toUpperCase();
       return {
         raceId: raceId,
         year: path.basename(raceInstancePath, ".csv"),
-        position: parseInt(json.RunnerPosition ?? json.FinishPosition ?? json.Position),
+        position: parseInt(json.RunnerPosition ?? json.FinishPosition ?? json.Position ?? json.Pos),
         name: json.Name ?? `${json.Firstname ?? ''} ${json.Surname ?? ''}`,
         club: json.Club as string, // TODO: Normalise using club aliases
         category: category,
