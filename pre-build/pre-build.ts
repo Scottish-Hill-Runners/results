@@ -37,7 +37,7 @@ async function readRaceInstance(raceId: string, raceInstancePath: string): Promi
 
     progress(`Processing results from ${raceInstancePath}`)
     return jsonArray.map(json => {
-      const category = ((json.RunnerCategory ?? json.Category) as string).toUpperCase();
+      const category = ((json.RunnerCategory ?? json.Category ?? "") as string).toUpperCase();
       return {
         raceId: raceId,
         year: path.basename(raceInstancePath, ".csv"),
