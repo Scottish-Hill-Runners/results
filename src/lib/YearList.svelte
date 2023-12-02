@@ -13,6 +13,7 @@
     },
     "nRaces": { header: "Races", width: "1fr" },
     "nClubs": { header: "Clubs", width: "1fr" },
+    "nResults": { header: "Entries", width: "1fr" },
     "nRunners": {
       header: "Runners",
       display: item => Object.values(item.nRunners).reduce((a, b) => a + b, 0)

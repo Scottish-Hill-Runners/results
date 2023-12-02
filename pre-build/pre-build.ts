@@ -136,6 +136,7 @@ function writeBlocks() {
       year,
       nRaces: uniqueRaces.size,
       nClubs: uniqueClubs.size,
+      nResults: results.length,
       nRunners
     });
     allYears.set(year, []);

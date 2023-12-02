@@ -55,6 +55,7 @@ declare global {
     year: string,
     nRaces: number,
     nClubs: number,
+    nResults: number,
     nRunners: { [cat: string]: number }
   }
 
