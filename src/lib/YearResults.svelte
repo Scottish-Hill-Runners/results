@@ -20,7 +20,7 @@
     for (const cat of Object.keys(r.categoryPos))
       uniqueCategories.add(cat);
     uniqueClubs.add(r.club);
-    uniqueRaces.add(raceInfo[r.raceId].title);
+    uniqueRaces.add(r.raceId);
   }
 
   const allCategories = [...uniqueCategories].sort();
@@ -132,7 +132,7 @@
       </Dropdown>
 
       <Button>
-        Race{selectedRaces.length == 0 ? ": All" : `: ${selectedRaces[0] + (selectedRaces.length > 1 ? ` (+${selectedRaces.length - 1})` : '')}` }<ChevronDownSolid class="w-3 h-3 ml-2 text-white dark:text-white" />
+        Race{selectedRaces.length == 0 ? ": All" : `: ${raceInfo[selectedRaces[0]].title + (selectedRaces.length > 1 ? ` (+${selectedRaces.length - 1})` : '')}` }<ChevronDownSolid class="w-3 h-3 ml-2 text-white dark:text-white" />
     </Button>
     <Dropdown bind:open={racesOpen} class="overflow-y-auto px-3 pb-3 text-sm h-44">
       <div slot="header" class="p-3 {allRaces.length < 10 ? "hidden" : ""}">
@@ -141,9 +141,9 @@
       {#if selectedRaces.length > 0}
         <DropdownItem on:click={() => clearRaces()}>Clear</DropdownItem>
       {/if}
-      {#each allRaces.filter(c => c.toLowerCase().indexOf(raceSearch.toLowerCase()) != -1) as race}
+      {#each allRaces.filter(c => raceInfo[c].title.toLowerCase().indexOf(raceSearch.toLowerCase()) != -1) as raceId}
         <li class="rounded p-2 hover:bg-gray-100 dark:hover:bg-gray-600">
-          <Checkbox bind:group={selectedRaces} value={race}>{race}</Checkbox>
+          <Checkbox bind:group={selectedRaces} value={raceId}>{raceInfo[raceId].title}</Checkbox>
         </li>
       {/each}
     </Dropdown>
