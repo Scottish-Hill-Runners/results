@@ -3,6 +3,7 @@ node_modules
 /build
 /lib
 /src/routes/races
+/src/routes/year
 *.js
 *.js.map
 /static/data

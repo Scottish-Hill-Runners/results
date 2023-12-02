@@ -1,7 +1,7 @@
 ---
 name: Westerlands CCC
 aka: Westerlands, Westies, Westerlands Cross Country Club
-web: www.westerlands.co.uk
+web: http://www.westerlands.co.uk
 ---
 
 # About Westerlands CCC

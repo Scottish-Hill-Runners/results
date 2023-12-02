@@ -19,3 +19,7 @@
   <Button href="races?category=F">Boireannaich</Button>
   <Button href="races?category=M">Fireannaich</Button>
 </ButtonGroup>
+
+<P>
+  You can also view results <Button href="year">by year</Button>.
+</P>

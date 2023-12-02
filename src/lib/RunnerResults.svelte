@@ -1,8 +1,9 @@
 <script lang="ts">
   import { page } from '$app/stores';
-  import { Button, Chart, Checkbox, Dropdown, Heading, Tabs, TabItem } from 'flowbite-svelte';
-  import { ChevronDownSolid, GithubSolid } from 'flowbite-svelte-icons';
+  import { Alert, Banner, Button, Chart, Checkbox, Dropdown, Heading, Tabs, TabItem } from 'flowbite-svelte';
+  import { ChevronDownSolid } from 'flowbite-svelte-icons';
   import { metric, imperial } from '$lib/units';
+  import { compareCategoryPos } from './compareCategoryPos';
   import VirtualTable from './VirtualTable.svelte';
 
   export let results: RunnerInfo[];
@@ -23,7 +24,7 @@
       header: "Title",
       sort: "asc",
       width: "2fr",
-      link: (item) => { return { route: `/races/${item.raceId}?year=${item.year}`, text: item.title } }
+      link: item => { return { route: `/races/${item.raceId}?year=${item.year}`, text: item.title } }
     },
     "position": {
       header: "Position",
@@ -43,42 +44,34 @@
     "distance": {
       header: `Distance (${units.distance.unit})`,
       width: "minmax(8ch, 1fr)",
-      display: (item) => units.distance.scale(item.distance),
+      display: item => units.distance.scale(item.distance),
       sticky: true
     },
     "climb": {
       header: `Ascent (${units.ascent.unit})`,
-      display: (item) => units.ascent.scale(item.climb),
+      display: item => units.ascent.scale(item.climb),
       width: "minmax(8ch, 1fr)",
       sticky: true
     },
     "categoryPos": {
       header: "Categ.Position",
-      display: (item) => Object.entries(item.categoryPos).map(([k, v]) => `${k}:${v}`).join(", "),
+      display: item => Object.entries(item.categoryPos).map(([k, v]) => `${k}:${v}`).join(", "),
       width: "minmax(12ch, 1fr)",
-      cmp: (a, b) => {
-        const aKeys = Object.keys(a.categoryPos);
-        const bKeys = Object.keys(b.categoryPos);
-        const result =
-          bKeys
-          .filter(k => aKeys.includes(k))
-          .reduce((v, k) => v + Math.sign(a.categoryPos[k] - b.categoryPos[k]), 0);
-        return result == 0 ? bKeys.length - aKeys.length : result;
-      }
+      cmp: (a, b) => compareCategoryPos(a.categoryPos, b.categoryPos)
     }
   };
 
   let clubs = $page.url.searchParams.getAll("club");
   let sortedStats = [] as RunnerStats[];
-  let years = [] as string[];
   let visibleResults = [] as RunnerInfo[];
+  let selectedRow: RunnerInfo;
   $: {
     visibleResults = [];
     for (const r of results)
       if (clubs.length == 0 || clubs.includes(r.club))
-      visibleResults.push(r);
+        visibleResults.push(r);
 
-    let stats = [];
+    const stats = [];
     for (const r of visibleResults) {
       let s = stats.find(s => s.year == r.year);
       if (!s) {
@@ -92,71 +85,74 @@
     }
 
     sortedStats = stats.sort((a, b) => a.year.localeCompare(b.year));
-    years = sortedStats.map(s => s.year);
   }
 </script>
+{#if visibleResults.length == 0}
+  <Alert color="blue">
+    Sorry, there are not enough results to display.
+  </Alert>
+{:else}
+  <Tabs>
+    <TabItem open title="Results">
+      {#if uniqueClubs.size > 1}
+        <Button>Select clubs<ChevronDownSolid class="w-3 h-3 ml-2 text-white dark:text-white" /></Button>
+        <Dropdown>
+          {#each uniqueClubs as club}
+            <li class="rounded p-2 hover:bg-gray-100 dark:hover:bg-gray-600">
+              <Checkbox bind:group={clubs} value={club}>{club}</Checkbox>
+            </li>
+          {/each}
+        </Dropdown>
+      {/if}
 
-<Tabs>
-  <TabItem open title="Results">
+      <VirtualTable items={visibleResults} {columns} on:select-row={(e) => selectedRow = e.detail} />
+    </TabItem>
 
-  {#if uniqueClubs.size > 1}
-    <Button>Select clubs<ChevronDownSolid class="w-3 h-3 ml-2 text-white dark:text-white" /></Button>
-    <Dropdown>
-      {#each uniqueClubs as club}
-        <li class="rounded p-2 hover:bg-gray-100 dark:hover:bg-gray-600">
-          <Checkbox bind:group={clubs} value={club}>{club}</Checkbox>
-        </li>
-      {/each}
-    </Dropdown>
-  {/if}
+    <TabItem title="Stats">
+      <Heading tag="h3">Number of races: {visibleResults.length}</Heading>
+      <Chart
+        options={{
+          series: [ {
+            name: '#Races',
+            data: sortedStats.map(s => s.nRaces)
+          }],
+          xaxis: { categories: sortedStats.map(s => s.year) },
+          chart: {
+            type: 'bar',
+            width: '100%',
+            height: 200
+          }
+        }} />
 
-    <VirtualTable items={visibleResults} {columns} />
-  </TabItem>
+      <Heading tag="h3">Total distance: {units.distance.scale(visibleResults.reduce((soFar, r) => soFar + r.distance, 0))} {units.distance.unit}</Heading>
+      <Chart
+        options={{
+          series: [ {
+            name: `Distance (${units.distance.unit})`,
+            data: sortedStats.map(s => parseInt(units.distance.scale(s.totalDistance)))
+          }],
+          xaxis: { categories: sortedStats.map(s => s.year) },
+          chart: {
+            type: 'bar',
+            width: '100%',
+            height: 200
+          }
+        }} />
 
-  <TabItem title="Stats">
-    <Heading tag="h3">Number of races: {visibleResults.length}</Heading>
-    <Chart
-      options={{
-        series: [ {
-          name: '#Races',
-          data: sortedStats.map(s => s.nRaces)
-        }],
-        xaxis: { categories: sortedStats.map(s => s.year) },
-        chart: {
-          type: 'bar',
-          width: '100%',
-          height: 200
-        }
-      }} />
-
-    <Heading tag="h3">Total distance: {units.distance.scale(visibleResults.reduce((soFar, r) => soFar + r.distance, 0))} {units.distance.unit}</Heading>
-    <Chart
-      options={{
-        series: [ {
-          name: `Distance (${units.distance.unit})`,
-          data: sortedStats.map(s => parseInt(units.distance.scale(s.totalDistance)))
-        }],
-        xaxis: { categories: sortedStats.map(s => s.year) },
-        chart: {
-          type: 'bar',
-          width: '100%',
-          height: 200
-        }
-      }} />
-
-    <Heading tag="h3">Total ascent: {units.ascent.scale(visibleResults.reduce((soFar, r) => soFar + r.climb, 0))} {units.ascent.unit}</Heading>
-    <Chart
-      options={{
-        series: [ {
-          name: `Ascent (${units.ascent.unit})`,
-          data: sortedStats.map(s => parseInt(units.ascent.scale(s.totalAscent)))
-        }],
-        xaxis: { categories: sortedStats.map(s => s.year) },
-        chart: {
-          type: 'bar',
-          width: '100%',
-          height: 200
-        }
-      }} />
-  </TabItem>
-</Tabs>
+      <Heading tag="h3">Total ascent: {units.ascent.scale(visibleResults.reduce((soFar, r) => soFar + r.climb, 0))} {units.ascent.unit}</Heading>
+      <Chart
+        options={{
+          series: [ {
+            name: `Ascent (${units.ascent.unit})`,
+            data: sortedStats.map(s => parseInt(units.ascent.scale(s.totalAscent)))
+          }],
+          xaxis: { categories: sortedStats.map(s => s.year) },
+          chart: {
+            type: 'bar',
+            width: '100%',
+            height: 200
+          }
+        }} />
+    </TabItem>
+  </Tabs>
+{/if}

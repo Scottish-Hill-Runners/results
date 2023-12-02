@@ -36,6 +36,8 @@ declare global {
     organiser?: number[]
   }
 
+  type CategoryPos = { [cat: string]: number }
+
   type RunnerInfo = {
     raceId: string,
     title: string,
@@ -43,10 +45,17 @@ declare global {
     time: string,
     position: number,
     category: string,
-    categoryPos: { [cat: string]: number },
+    categoryPos: CategoryPos,
     club?: string,
     distance: number,
     climb?: number
+  }
+
+  type YearInfo = {
+    year: string,
+    nRaces: number,
+    nClubs: number,
+    nRunners: { [cat: string]: number }
   }
 
   type RunnerStats = {
@@ -66,9 +75,19 @@ declare global {
     link?: (item: T) => { text: string, route: string,  params?: { [key: string]: string } },
     sort?: "asc" | "desc",
     sticky?: boolean,
+    ascOnly?: boolean,
     cmp?: (a: T, b: T) => number,
     width?: string
   }
 }
+
+type UpdateResult = {
+  filename: string,
+  suffix: string,
+  raceId: string,
+  contents: string,
+  userName: string,
+  editing: boolean
+};
 
 export {};

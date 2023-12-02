@@ -94,7 +94,7 @@ const md = new MarkdownIt();
 const raceBlocks = [] as { raceId: string, blockId: number}[];
 const runnerBlocks = {} as { [name: string]: { blocks: number[], nRaces: number } };
   
-function writeBlock(block: Block): void {
+function writeBlock(block: Block): number {
   const blockId = raceBlocks.length;
   progress(`Writing result chunk ${blockId}`)
   fs.writeFileSync(`static/data/${blockId}.json`, JSON.stringify(block));
@@ -108,28 +108,96 @@ function writeBlock(block: Block): void {
         runnerBlocks[r.name].blocks.push(blockId)
     });
   });
+  return blockId;
 }
 
 function writeBlocks() {
   fs.mkdirSync(`static/data`, { recursive: true });
   fs.mkdirSync(`static/gpx`, { recursive: true });
-  const allYears = new Set<string>();
+
+  const allYears = new Map<string, number[]>();
+  const yearInfo: YearInfo[] = [];
   groupBy(allResults, r => r.year.substring(0, 4)).forEach((results, year) => {
-    allYears.add(year);
+    const uniqueRaces = new Set<string>();
+    const uniqueClubs = new Set<string>();
+    const uniqueRunners = new Map<string, Set<string>>();
+    for (const r of results) {
+      uniqueRaces.add(r.raceId);
+      uniqueClubs.add(r.club);
+      if (!uniqueRunners.has(r.category))
+        uniqueRunners.set(r.category, new Set<string>());
+      uniqueRunners.get(r.category).add(r.name);
+    }
+
+    const nRunners: { [cat: string]: number } = {};
+    for (const [cat, names] of uniqueRunners)
+      nRunners[cat] = names.size;
+    yearInfo.push( {
+      year,
+      nRaces: uniqueRaces.size,
+      nClubs: uniqueClubs.size,
+      nRunners
+    });
+    allYears.set(year, []);
     let currentBlock = {} as Block;
     let currentBlockSize = 0;
     groupBy(results, r => r.raceId).forEach((results, raceId) => {
       currentBlock[raceId] = results;
       currentBlockSize += results.length;
       if (currentBlockSize > 1000) {
-        writeBlock(currentBlock);
+        allYears.get(year).push(writeBlock(currentBlock));
         currentBlock = {};
         currentBlockSize = 0;
       }
     });
     if (currentBlockSize > 0)
-      writeBlock(currentBlock);
+      allYears.get(year).push(writeBlock(currentBlock));
+
+    fs.mkdirSync(`src/routes/year/${year}`, { recursive: true });
+    fs.writeFileSync(
+      `src/routes/year/${year}/+page.ts`,
+      `/** @type {import('./$types').PageLoad} */
+export async function load({ fetch }) {
+  return {
+    results: await Promise.all([${
+      allYears.get(year).map(blockId =>`
+        fetch("/data/${blockId}.json")
+          .then(resp => resp.json() as Promise<Block>)`)}]),
+    races: await fetch("/data/races.json").then(resp => resp.json() as Promise<RaceInfo>)
+  };
+};
+`);
+fs.writeFileSync(
+  `src/routes/year/${year}/+page.svelte`,
+  `<script type="ts">
+/** @type {import('./$types').PageData} */
+import YearResults from "$lib/YearResults.svelte";
+export let data;
+const results = data.results.flatMap(block => Object.values(block).flat());
+const races = data.races;
+const year = "${year}";
+</script>
+<svelte:head>
+<title>SHR - {year}</title>
+</svelte:head>
+<YearResults {results} {races} {year} />
+`);
   });
+
+  fs.writeFileSync(
+    `src/routes/year/+page.svelte`,
+    `<script type="ts">
+  /** @type {import('./$types').PageData} */
+  import YearList from "$lib/YearList.svelte";
+  const yearInfo = ${JSON.stringify(yearInfo)};
+</script>
+
+<svelte:head>
+  <title>SHR - Years</title>
+</svelte:head>
+
+<YearList {yearInfo} />
+`);
 
   const runnerData = {} as RunnerData;
   Object.entries(runnerBlocks).forEach(([name, r]) => { if (r.nRaces > 1) runnerData[name] = r.blocks });

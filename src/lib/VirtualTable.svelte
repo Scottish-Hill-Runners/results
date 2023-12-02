@@ -19,6 +19,9 @@
   const stickySortKeys =
     Object.entries(columns).flatMap(([key, value]) => value.sticky ? [key] : []);
 
+  const ascOnlySortKeys =
+    Object.entries(columns).flatMap(([key, value]) => value.ascOnly ? [key] : []);
+
   const sortBy = (key: string) => {
     const current = sortKey[key];
     if (stickySortKeys.includes(key))
@@ -27,7 +30,7 @@
 		  sortKey = {} as SortKey;
     if (current == undefined)
 		  sortKey = { [key]: "asc", ...sortKey };
-    else if (current == "asc")
+    else if (current == "asc" && !ascOnlySortKeys.includes(key))
 		  sortKey = { [key]: "desc", ...sortKey };
     else
 		  sortKey = { ...sortKey };
