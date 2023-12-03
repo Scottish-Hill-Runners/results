@@ -4,6 +4,8 @@ import matter from "gray-matter";
 import path from "path";
 import MarkdownIt from "markdown-it";
 
+const md = new MarkdownIt();
+
 function progress(message: string): void {
   process.stdout.write(`\x1b[K${message}\r`);
 }
@@ -15,14 +17,42 @@ function formatTime(time: string): string {
   return time;
 }
 
+function readClubs(): ClubInfo[] {
+  const clubs = [] as ClubInfo[];
+  for (const club of fs.readdirSync("clubs", { withFileTypes: true }))
+    if (club.isFile() || path.extname(club.name) == ".md") {
+      const {data, content} = matter.read(`clubs/${club.name}`);
+      clubs.push({
+        name: data.name as string,
+        aliases: (data.aka as string)?.split(',') ?? [],
+        web: data.web as string,
+        contact: data.contact as string,
+        info: content
+      });
+  }
+
+  return clubs;
+}
+
+const clubs = readClubs();
+const clubAliases = new Map<string, string>();
+for (const club of clubs)
+  for (const aka of club.aliases)
+    clubAliases.set(aka.trim().toUpperCase(), club.name);
+
 async function readRaceInstance(raceId: string, raceInstancePath: string): Promise<Result[]> {
   return await csv().fromFile(raceInstancePath).then(jsonArray => {
     type PosByCategory = { [cat: string]: number }
     const posByCategory = {} as PosByCategory;
     // TODO: handle dead heats
     const updateCategoryPos = (category: string) => {
-      // Ignore V(=vet), U(=under-23?), J(=junior), (S=senior) attributions.
-      const groups = category.replace(/[VUJS]/, '').match(/([^\d]*)(\d+)?/);
+      
+      const groups =
+        category
+          .replace(/(OPEN)|(MEN)|(MALE)|(VET)|(SEN(IOR)?)|(JUN(IOR)?)|(UNDER)/gi, "")
+          .replace(/(WOMEN)|(FEMALE)|(LADY)/, "F")
+          .replace(/[\WVUJS]/g, '') // Ignore V(=vet), U(=under-23?), J(=junior), (S=senior) attributions.
+          .match(/([^\d]*)(\d+)?/);
       const s = groups?.[1]?.replace(/[WL]/, 'F') ?? 'M'; // W=Women, L=Lady.
       const sex = s.length == 0 ? 'M' : s;
       const age = Math.max(parseInt(groups?.[2]?.substring(0, 1) ?? '3') * 10, 30);
@@ -43,7 +73,7 @@ async function readRaceInstance(raceId: string, raceInstancePath: string): Promi
         year: path.basename(raceInstancePath, ".csv"),
         position: parseInt(json.RunnerPosition ?? json.FinishPosition ?? json.Position ?? json.Pos),
         name: json.Name ?? `${json.Firstname ?? ''} ${json.Surname ?? ''}`,
-        club: json.Club as string, // TODO: Normalise using club aliases
+        club: clubAliases.get(json.Club?.toUpperCase() as string) ?? json.Club,
         category: category,
         categoryPos: updateCategoryPos(category),
         time: formatTime((json.FinishTime ?? json.Time) as string)
@@ -90,11 +120,10 @@ function groupBy<K, V>(data: V[], key: (t: V) => K): Map<K, V[]> {
 const allResults = await readResults();
 const byRaceId = groupBy(allResults, r => r.raceId);
 
-const md = new MarkdownIt();
 const raceBlocks = [] as { raceId: string, blockId: number}[];
 const runnerBlocks = {} as { [name: string]: { blocks: number[], nRaces: number } };
   
-function writeBlock(block: Block): number {
+function createBlock(block: Block): number {
   const blockId = raceBlocks.length;
   progress(`Writing result chunk ${blockId}`)
   fs.writeFileSync(`static/data/${blockId}.json`, JSON.stringify(block));
@@ -111,7 +140,85 @@ function writeBlock(block: Block): number {
   return blockId;
 }
 
-function writeBlocks() {
+function writeYear(year: string, blocks: number[]) {
+  progress(`Creating year/${year}`);
+  fs.mkdirSync(`src/routes/year/${year}`, { recursive: true });
+  fs.writeFileSync(
+    `src/routes/year/${year}/+page.ts`,
+    `/** @type {import('./$types').PageLoad} */
+export async function load({ fetch }) {
+return {
+  results: await Promise.all([${
+    blocks.map(blockId =>`
+      fetch("/data/${blockId}.json")
+        .then(resp => resp.json() as Promise<Block>)`)}]),
+  races: await fetch("/data/races.json").then(resp => resp.json() as Promise<RaceInfo>)
+};
+};
+`);
+  fs.writeFileSync(
+`src/routes/year/${year}/+page.svelte`,
+`<script type="ts">
+/** @type {import('./$types').PageData} */
+import YearResults from "$lib/YearResults.svelte";
+export let data;
+const results = data.results.flatMap(block => Object.values(block).flat());
+const races = data.races;
+const year = "${year}";
+</script>
+<svelte:head>
+<title>SHR - {year}</title>
+</svelte:head>
+<YearResults {results} {races} {year} />
+`);
+}
+
+function writeRace(
+  raceId: string,
+  content: string,
+  info: RaceInfo,
+  blocks: { raceId: string, blockId: number }[]) {
+  progress(`Creating races/${raceId}`);
+  const hasGpx = fs.existsSync(`races/${raceId}/route.gpx`);
+  if (hasGpx)
+    fs.copyFileSync(`races/${raceId}/route.gpx`, `static/gpx/${raceId}.gpx`)
+  fs.mkdirSync(`src/routes/races/${raceId}`, { recursive: true });
+  fs.writeFileSync(
+    `src/routes/races/${raceId}/+page.ts`,
+    `/** @type {import('./$types').PageLoad} */
+export async function load({ fetch }) {
+return {
+races: await fetch("/data/races.json")
+  .then(resp => resp.json() as Promise<RaceInfo[]>),
+results: await Promise.all([${
+  blocks
+    .map(block =>`
+fetch("/data/${block.blockId}.json")
+.then(resp => resp.json() as Promise<Block>)
+.then(block => block['${block.raceId}'])`)
+    .join(',')}])
+};
+}
+`);
+  fs.writeFileSync(
+    `src/routes/races/${raceId}/+page.svelte`,
+    `<script type="ts">
+/** @type {import('./$types').PageData} */
+import RaceResults from "$lib/RaceResults.svelte";
+export let data;
+const results = data.results.flat();
+const info = data.races.find(r => r.raceId == "${raceId}");
+const blurb = ${JSON.stringify(md.render(content))};
+const hasGpx = ${hasGpx};
+</script>
+<svelte:head>
+<title>SHR - ${info.title}</title>
+</svelte:head>
+<RaceResults {results} {info} {blurb} {hasGpx} />
+`);
+}
+
+function writeAll() {
   fs.mkdirSync(`static/data`, { recursive: true });
   fs.mkdirSync(`static/gpx`, { recursive: true });
 
@@ -146,43 +253,15 @@ function writeBlocks() {
       currentBlock[raceId] = results;
       currentBlockSize += results.length;
       if (currentBlockSize > 1000) {
-        allYears.get(year).push(writeBlock(currentBlock));
+        allYears.get(year).push(createBlock(currentBlock));
         currentBlock = {};
         currentBlockSize = 0;
       }
     });
     if (currentBlockSize > 0)
-      allYears.get(year).push(writeBlock(currentBlock));
+      allYears.get(year).push(createBlock(currentBlock));
 
-    fs.mkdirSync(`src/routes/year/${year}`, { recursive: true });
-    fs.writeFileSync(
-      `src/routes/year/${year}/+page.ts`,
-      `/** @type {import('./$types').PageLoad} */
-export async function load({ fetch }) {
-  return {
-    results: await Promise.all([${
-      allYears.get(year).map(blockId =>`
-        fetch("/data/${blockId}.json")
-          .then(resp => resp.json() as Promise<Block>)`)}]),
-    races: await fetch("/data/races.json").then(resp => resp.json() as Promise<RaceInfo>)
-  };
-};
-`);
-fs.writeFileSync(
-  `src/routes/year/${year}/+page.svelte`,
-  `<script type="ts">
-/** @type {import('./$types').PageData} */
-import YearResults from "$lib/YearResults.svelte";
-export let data;
-const results = data.results.flatMap(block => Object.values(block).flat());
-const races = data.races;
-const year = "${year}";
-</script>
-<svelte:head>
-<title>SHR - {year}</title>
-</svelte:head>
-<YearResults {results} {races} {year} />
-`);
+    writeYear(year, allYears.get(year));
   });
 
   fs.writeFileSync(
@@ -205,15 +284,10 @@ const year = "${year}";
   fs.writeFileSync('static/data/runners.json', JSON.stringify(runnerData));
 
   const encoder = new TextEncoder();
-  fs.mkdirSync("static/gpx", { recursive: true });
   const raceInfo = [] as RaceInfo[];
   groupBy(raceBlocks, r => r.raceId).forEach((blocks, raceId) => {
     const results = byRaceId.get(raceId);
     if (!results) return;
-    fs.mkdirSync(`src/routes/races/${raceId}`, { recursive: true });
-    const hasGpx = fs.existsSync(`races/${raceId}/route.gpx`);
-    if (hasGpx)
-      fs.copyFileSync(`races/${raceId}/route.gpx`, `static/gpx/${raceId}.gpx`)
 
     const {data, content} = matter.read(`races/${raceId}/index.md`);
     const info = {
@@ -230,40 +304,7 @@ const year = "${year}";
     };
     raceInfo.push(info);
 
-    progress(`Writing races/${raceId}/+page.ts`);
-    fs.writeFileSync(
-        `src/routes/races/${raceId}/+page.ts`,
-        `/** @type {import('./$types').PageLoad} */
-export async function load({ fetch }) {
-  return {
-    races: await fetch("/data/races.json")
-      .then(resp => resp.json() as Promise<RaceInfo[]>),
-    results: await Promise.all([${
-      blocks
-        .map(block =>`
-fetch("/data/${block.blockId}.json")
-  .then(resp => resp.json() as Promise<Block>)
-  .then(block => block['${block.raceId}'])`)
-        .join(',')}])
-    };
-}
-`);
-      fs.writeFileSync(
-        `src/routes/races/${raceId}/+page.svelte`,
-        `<script type="ts">
-  /** @type {import('./$types').PageData} */
-  import RaceResults from "$lib/RaceResults.svelte";
-  export let data;
-  const results = data.results.flat();
-  const info = data.races.find(r => r.raceId == "${raceId}");
-  const blurb = ${JSON.stringify(md.render(content))};
-  const hasGpx = ${hasGpx};
-</script>
-<svelte:head>
-  <title>SHR - ${info.title}</title>
-</svelte:head>
-<RaceResults {results} {info} {blurb} {hasGpx} />
-`);
+    writeRace(raceId, content, info, blocks);
   });
 
   fs.writeFileSync(`static/data/races.json`, JSON.stringify(raceInfo));
@@ -292,7 +333,18 @@ export async function load({ fetch }) {
 
 <RaceList data={data.results} />
 `);
-  progress("Done\n")
 }
 
-writeBlocks()
+writeAll();
+progress("Done\n");
+
+const uniqueCats = new Set<string>();
+const cleanCats = new Set<string>();
+for (const result of allResults) {
+  uniqueCats.add(result.category);
+  for (const cat in result.categoryPos)
+    cleanCats.add(cat);
+}
+
+progress(`Unique categories: ${Array.from(uniqueCats.values()).join(", ")}\n`);
+progress(`Clean categories: ${Array.from(cleanCats.values()).join(", ")}\n`);

@@ -59,6 +59,14 @@ declare global {
     nRunners: { [cat: string]: number }
   }
 
+  type ClubInfo = {
+    name: string,
+    aliases: string[],
+    web?: string,
+    contact?: string,
+    info: string
+  }
+
   type RunnerStats = {
     year: string,
     nRaces: number,
