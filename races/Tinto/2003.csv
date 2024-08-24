@@ -1,0 +1,154 @@
+RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
+1,Lennox,Jethro,Shettleston,S,30.50
+2,Anthony,Alasdair,Ochil,S,31.35
+3,Lenton,Tim,Lothian,S,32.41
+4,Marshall,Brain,HELP,S,32.54
+5,Ward,Adam,Carnethy,V,33.18
+6,Wellock,Ian,Ochil,S,33.40
+7,Mudge,Angela,Carnethy,FS,33.43 (rec)
+8,Gallagher,Ronnie,Westerlands,V,34.16
+9,Kitchin,Andy,Lothian,S,34.30
+10,McGonigle,Dermot,Shettleston,V,34.44
+11,Smith,Alan,Deeside,V,34.46
+12,Scott,Nigel,Westerlands,S,34.50
+13,Lewis,Ian,Shettleston,S,34.52
+14,Cummins,Dave,Shettleston,S,35.02
+15,Crowe,Des,Shettleston,V,35.16
+16,Patterson,Malcolm,Shettleston,V,35.20
+17,McInnes,Gary,Carnethy,S,35.25
+18,Tait,Jill,Carnethy,FS,35.25
+19,Paterson,Ewan,Moray RR,SV,35.29
+20,Simpson,Ricky,Carnethy,S,36.03
+21,Irving,Roger,Solway,V,36.04
+22,Paterson,Robbie,Unatt. Fochabers,S,36.11
+23,Bennet,Sandy,EZ Carnegie,V,36.14
+24,Theaker,Dominic,Helensburgh,V,36.23
+25,Upson,Chris,Westerlands,V,36.32
+26,Law,David,Corstorphine,V,36.36
+27,Blair-Fish,John,Carnethy,SV,36.51
+28,Near,Chris,Eryri,S,36.56
+29,Simpson,Stuart,Ochil,V,37.01
+30,Diver,Mike,Clydesdale,S,37.03
+31,Lee,Rob,Lothian,V,37.12
+32,Hulme,Martin,Corstorphine,SV,37.14
+33,Brown,Douglas,Solway,V,37.30
+34,Liston,Dave,Unatt Edinburgh,S,37.36
+35,Laycock,Andy,Carnethy,S,37.42
+36,Brown,Keith,Unatt Edinburgh,V,37.51
+37,Cumming,Ian,Corstorphine,SV,37.55
+38,Tompsett,Gary,Westerlands,S,37.59
+39,White,David,JW Kilmarnock,S,38.01
+40,McColl,Mark,Westerlands,S,38.05
+41,Hill,Les,Solway,V,38.16
+42,Taylor,Natt,Girvan,V,38.19
+43,Patience,Andy,Carnethy,S,38.27
+44,Harley,Tom,SVHC,V,38.34
+45,OâBrien,Paul,Corstorphine,V,38.36
+46,Barrie,Stewart,Carnethy,S,38.39
+47,Hill,Paul,Unatt Lanark,V,38.47
+48,Bearhop,Derek,Carnethy,V,38.50
+49,Pryde,Gordon,Lomond,V,38.52
+50,Cunningham,Ritchie,EZ Carnegie,S,38.52
+51,Brannon,Tosh,Lothian,V,39.03
+52,Donnelly,John,Westerlands,V,39.27
+53,Gordon,Alasdair,Unatt Edinburgh,S,39.37
+54,Mykura,Willie,Carnethy,V,39.46
+55,Goldsworthy,John,Galloway,V,39.55
+56,Russell,Scott,J W Kilmarnock,S,39.57
+57,Knowles,Stuart,Fife,V,40.11
+58,McGarry,Douglas,E Z Carnegie,V,40.29
+59,Westbury,Tony,Carnethy,V,40.43
+60,Robertson,Stewart,Strathaven,S,40.46
+61,Thomas,Neil,HBT,S,40.53
+62,Waldie,Brian,Carnethy,SSV,41.18
+63,Murgatroyd,Iain,Dumfries,V,41.44
+64,Atkin,David,Garscube,V,41.59
+65,Armstrong,Ian,EZ Carnegie,S,42.12
+66,Armstrong,Mike,Unatt Symington,S,42.22
+67,Colchester,Jim,Solway,S,42.25
+68,Love,Charlie,Dundee,SSV,42.26
+69,Wright,Jim,Unatt. Edinburgh,S,42.27
+70,Heron,Gregor,Unatt Lanark,S,42.28
+71,Gray,Ewart,Strathaven,V,42.33
+72,Adams,Dave,Hamilton,SV,42.43
+73,Bowie,Tom,EZ Carnegie,SV,43.08
+74,Adams,Keith,Westerlands,SV,43.19
+75,Rees,Phil,Unatt Tweedsmuir,S,43.41
+76,Robson,John,Annon,V,43.42
+77,Laws,Graeme,Unatt Edinburgh,S,43.44
+78,Dowell,Finlay,Irvine,V,43.46
+79,Kittel,Werner,Portobello,SV,43.47
+80,Douglas,Mhairi,Dumfries,FS,43.54
+81,Dawson,Tim,Unatt Dumfries,V,44.13
+82,Thistlethwaite,Tony,Strathaven,SV,44.16
+83,Green,Brett,Unatt Symington,S,44.23
+84,Emsley,Paul,Arran,V,44.27
+85,Edenbrandt,Anna,Unatt Edinburgh,FS,44.28
+86,Cranston,Robert,Teviotdale,S,44.34
+87,Hamilton,Craig,Strathaven,S,44.36
+88,Gore,Martin,Unatt Edinburgh,S,44.37
+89,Baxter,Peter,Westerlands,V,44.38
+90,Legge,Sarah,EZ Carnegie,FS,44.49
+91,Kerr,George,JW Kilmarnock,V,44.58
+92,Wilson,Alan,Westerlands,V,45.08
+93,Curtis,Mike,Banchory,SV,45.10
+94,Finbow,Malcolm,Shettleston,SV,45.16
+95,Gordon,Nick,Dumfries,S,45.19
+96,Gauld,Bill,Carnethy,SSSV,45.20
+97,Milner,Jim,Unatt Edinburgh,V,45.28
+98,Near,Pilar,Eryri,FS,45.29
+99,Davidson,Iain,Girvin,V,45.31
+100,Armstrong,George,HELP,SSV,45.35
+101,Wilson,Colin,Carnethy,V,45.37
+102,Francis,David,Fife,VS,45.42
+103,Priestley,Nigel,Solway,V,45.57
+104,Greer,Stephen,EZ Carnegie,V,45.59
+105,Wilson,Joan,Carnethy,FV,46.02
+106,Dalitz,Rod,Carnethy,SV,46.04
+107,Shiell,Douglas,Carnethy,S,46.07
+108,Shiell,Marbeth,Carnethy,FJ,46.07
+109,Thomas,Claire,HBT,FS,46.18
+110,Green,Bob,Solway,V,46.22
+111,Reeves,Mark,Unatt Edinburgh,S,46.26
+112,West,Alison,EZ Carnegie,FSV,46.29
+113,Rampen,Win,Carnethy,V,46.38
+114,Kitchin,Kate,Lothian,FS,46.44
+115,McManus,Ian,Irvine,SSV,46.47
+116,Blair,Kenny,Strathaven,S,46.49
+117,MacDonald,Debbie,HBT,FV,46.51
+118,Gatehouse,Richard,Lomond,SV,46.56
+119,Wilson,Tom,Strathaven,SV,47.12
+120,Jackson,Andrew,Unatt Hamilton,S,47.21
+121,Reid,Kenny,Strathaven,V,47.25
+122,Coon,John,Lothian,SV,47.47
+123,Nimmo,Anne,Carnethy,FSV,48.24
+124,Sullivan,Mike,Unatt Carluke,V,48.39
+125,Miller,Jane,Unatt Carluke,FS,48.39
+126,Gray,Susan,Carnethy,FS,48.49
+127,Lennox,Chris,Law & Dist,VS,49.00
+128,MacDonald,Rory,Unatt Carlops,VS,49.31
+129,Smith,Janice,HBT,FV,49.31
+130,Marriott,Ivor,Dumfries,SSV,49.41
+131,Huntly,Chris,Unatt Carnwarth,V,49.44
+132,Stone,Vicky,Unatt Edinburgh,FS,49.53
+133,McDonald,Mike,Northern Vets,SSV,50.41
+134,Brown,Mike,Carnethy,SV,50.45
+135,Duffy,Peter,Northern Vets,SSV,51.20
+136,Wall,Dick,HBT,V,51.28
+137,Buchanan,Peter,Ochil,V,51.43
+138,Campbell,Claire,Ochil,FS,51.43
+139,Thin,Joanne,Carnethy,FS,51.47
+140,Singh,Shirley,Unatt Dumfries,FV,51.51
+141,MacDiarmid,Lisa,Highland,FSV,52.06
+142,McPhail,Marian,Dumfries,FV,53.14
+143,Pearson,Mike,Penicuick,SSV,53.19
+144,Wesencraft,Janine,Unatt Biggar,FS,53.50
+145,Wesencraft,David,Unatt Biggar,S,53.50
+146,Calder,Mandy,City of Edinburgh,FDS,54.03
+147,Steward,Philippa,,FS,54.03
+148,Bennet,Bill,Penicuick,SSV,54.10
+149,Dobbin,John,Unatt Carluke,SSV,56.12
+150,MacRae,Ian,Unatt Stirling,SV,56.23
+151,Jones,Andrew,Unatt. Edinburgh,S,61.24
+152,Laird,Peter,Unatt Edinburgh,S,77.05
+153,A Wardlaw,A,Carnethy,S,DNF
