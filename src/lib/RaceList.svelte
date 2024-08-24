@@ -7,7 +7,7 @@
 
   export let data: RaceInfo[];
 
-  const units = $page.url.searchParams.get("units") == "imperial" ? imperial() : metric;
+  const units = $page.url.searchParams.get("units") == "imperial" ? imperial : metric;
   const columns: { [key: string]: ColumnSpec<RaceInfo> } = {
     "title": {
       header: "Title",

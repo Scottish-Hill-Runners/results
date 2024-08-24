@@ -12,7 +12,7 @@
   for (const result of results)
     uniqueClubs.add(result.club);
 
-  const units = $page.url.searchParams.get("units") == "imperial" ? imperial() : metric;
+  const units = $page.url.searchParams.get("units") == "imperial" ? imperial : metric;
   const columns: { [key: string]: ColumnSpec<RunnerInfo> } = {
     "year": {
       header: "Year",
