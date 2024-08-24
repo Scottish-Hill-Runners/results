@@ -1,0 +1,142 @@
+RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
+1,Wilkinson,John,Gala,M,32:13
+2,Davidson,Ian,Carnethy,M,32:33
+3,Kerr,Gifford,Fife AC,M,32:48
+4,Potts,Brian,Clydesdale,M,33:06
+5,Curtis,Andy,Livingston,M,33:29
+6,Rodgers,Dave,Lochaber,M,33:38
+7,Hope,Ross,Gala,M,33:53
+8,Hampshire,John,Carnethy,M,33:56
+9,Crowe,Des,Dundee,M,34:00
+10,Blair-Fish,John,Carnethy,M,34:08
+11,Ilgunas,Shug,Livingston,M,34:35
+12,Shields,Jim,Clydesdale,MV,34:52
+13,Rodgers,Billy,Lochaber,MJ,35:07
+14,Letham,Adam,Biggar AC,MV,35:12
+15,McDonald,Neill,ESH,M,35:25
+16,Richmond,H.,Loudon,M,35:44
+17,Petrie,Don,Kilbarchan,M,35:47
+18,Shiell,Doug,Carnethy,M,35:54
+19,Macrae,John,Lochaber,M,36:08
+20,Lennox,A.,Law & District,M,36:19
+21,Howie,Brian,ESH,M,36:27
+22,Ogston,Matt,HBT,M,36:32
+23,Rother,Penny,EAC,F,36:39
+24,Renton,N.,Gala,M,36:53
+25,Mewse,D.,Kilbarchan,M,37:05
+26,Calder,Trish,EAC,F,37:09
+27,McGinlay,Hugh,Lomond,M,37:14
+28,Holden,G.,Lanc & Morecambe,M,37:16
+29,Dick,S.,Lochaber,M,37:22
+30,Jones,G.,Clydesdale OC,M,37:25
+31,Fisher,J.,ECKO,MV,37:30
+32,Jordan,Tim,Carnethy,M,37:35
+33,Burns,Keith,Carnethy,MV,37:50
+34,Gillespie,Eddie,Carnethy,MV,37:53
+35,Lorimer,Hayden,Duns,MJ,38:00
+36,Pryde,Gordon,Lomond,M,
+37,Main,R.,Gala,M,
+38,Jackson,Ian,Livingston,MV,
+39,Darby,Janet,Carnethy,F,
+40,Blissett,Norman,HBT,M,
+41,Nolan,J.,Biggar AC,M,
+42,Campbell,Ian,Livingston,M,
+43,Spenceley,Andy,Carnethy,M,38:51
+44,Love,Charlie,Dundee HH,MV,
+45,Gauld,Bill,Carnethy,MV,
+46,Burns,Stephen,Lochaber,MJ,
+47,Donnelly,I.,Law & District,M,
+48,Kerr,G.,Kilmarnock,M,
+49,Donnelly,John,Shettleston,M,
+50,Bate,Ben,Carnethy,MV,
+51,Hague,Yvette,Edin Uni H&H,F,
+52,McConnell,J.,Unattached,M,
+53,Craig,S.,Biggar AC,M,
+54,Forbes,J.,Fife AC,M,
+55,Salvona,Joyce,Livingston,F,
+56,Lorimer,Alistair,Duns,MV,
+57,Harvey,Eddie,Carnethy,MV,
+58,Richardson,R.,SHRA,MV,
+59,Maxwell,Jack,Carnethy,MV,
+60,Milligan,E.,Solway Strollers,MV,
+61,McDonald,R.,Livingston,M,
+62,Banks,A.,Carnethy,M,
+63,Marshall,Ian,HBT,M,
+64,Gilchrest,D.,Biggar AC,MJ,
+65,Hunter,J.,Gala,M,
+66,Kettles,Robert,Lasswade,MV,
+67,Shields,Bobby,Clydesdale,MV,
+68,Smith,Alistair,Cumbernauld RR,M,
+69,Campbell,I.,L&B Police,M,
+70,Adams,Keith,Livingston,M,
+71,Todd,Marie,ECKO,F,
+72,Smith,J.,Cumbernauld RR,F,
+73,Stapley,Tony,Unattached,MV,
+74,Miller,D.,Unattached,M,
+75,Hughes,B.,Fife AC,M,
+76,Adams,D.,Hamilton,M,
+77,Cranston,Robert,HBT,M,
+78,Dodson,Brian,Law & District,MV,
+79,Sidney,J.,Larkhall YMCA,M,
+80,Dennison,M.,Livingston,MJ,
+81,Boucher,S.,ESH,M,
+82,Hossack,J.,Unattached,M,
+83,Coutts,Peter,ESOC,MV,
+84,Moffat,Tom,Carnethy,MV,
+85,Owens,E.,Biggar AC,MJ,
+86,Cowden,I.,Law & District,M,
+87,Blaney,D.,Unattached,M,
+88,Curtis,Ann,Livingston,F,
+89,Morton,J.,Irvine,M,
+90,Hogg,Karen,Penicuik,F,
+91,Wallace,N.,Lomond,M,
+92,Mair,Jim,Carnethy,M,
+93,Thomas,Robin,HBT,M,
+94,West,Nigel,Carnethy,M,
+95,Owens,Denis,Carnethy,MV,
+96,Turnbull,Drew,East Kilbride,MV,
+97,Smith,A.,L&B Police,MV,
+98,Nicol,R.,Irvine,MV,
+99,Allen,D.,Livingston,MV,
+100,Stasiuk,S.,Springburn H,M,
+101,Cumming,R.,Unattached,M,
+102,Cummins,John,Fife AC,MV,
+103,Ritchie,T.,Westerlands,MV,
+104,Peacock,Phil,Mandale,MV,
+105,Burt,A.,L&B Police,MV,
+106,Trenchard,Peter,Unattached,MV,
+107,Dalitz,Rod,Ferranti AC,MV,
+108,McCraw,S.,Gala,F,
+109,Coon,John,Livingston,M,
+110,Baird,S.,Penicuik H,MJ,
+111,Rose,Nigel,Carnethy,MV,
+112,Dennison,John,Livingston,MV,
+113,Frost,Ian,Carnethy,M,
+114,Smith,J.,Penicuik H,F,
+115,Farrell,C.,Clydesdale,F,
+116,Bennett,Bill,Penicuik H,MV,
+117,Kassyck,Mark,Livingston,M,
+118,Burke,D.,Unattached,M,
+119,Hague,S.,Unattached,F,
+120,Gunn-Russell,Kenny,Unattached,M,
+121,Stewart,J.,Unattached,M,
+122,Dobbin,A.,Unattached,M,
+123,Knowles,M.,Unattached,M,
+124,Dryburgh,M.,Penicuik H,F,
+125,Miller,A.,Irvine,F,
+126,McDonald,C.,Irvine,M,
+127,Robertson,Richard,Carnethy,MV,
+128,Benny,Graham,Unattached,MV,
+129,Van Beinum,M.,Unattached,M,
+130,Renton,B.,Gala,M,
+131,King,Shelagh,Clydesdale,F,
+132,Osmond,C.,Unattached,MV,
+133,Lawson,Harry,Carnethy,MV,
+134,West,Alison,Carnethy,F,
+135,Spenceley,Hilary,Carnethy,F,
+136,Small,Marjorie,Clydesdale,F,
+137,Foster,K.,Unattached,F,
+138,Morton,Helen,Unattached,F,
+139,Nolan,S.,Biggar AC,MJ,
+140,Hope,S.,Blyth,F,
+141,Boniface,Gillian,Carnethy,F,
