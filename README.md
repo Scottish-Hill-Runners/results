@@ -6,10 +6,10 @@ The entire public site is re-built every time any results are added or updated (
 
 ## Results
 
-The results for each hill race event are stored in the `races` folder, and there is a sub-folder for each race. The name of the sub-folder is the race id. If you are entering the first results for a new race, just choose the next available race id, keeping to the same format (`RA-nnnn`).
+The results for each hill race event are stored in the `races` folder, and there is a sub-folder for each race. The name of the sub-folder is the race name. If you are entering the first results for a new race, you will need to create a new folder, preferably in "CamelCase" with no spaces or special characters (hyphens are ok).
 
 The results for each year are in a file of the form `yyyy.csv`. The columns should be
-`RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime` (case-sensitive).
+`RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime` (these are all case-sensitive).
 Update: `Name` can be used instead of `Surname,Firstname`, and `FinishPosition` can be used instead of `RunnerPosition`.
 
 If the race was run on a shortened course then you can place an asterisk (`*`) after the year to indicate this. For example, `2017*.csv`.
@@ -19,12 +19,9 @@ If the race is held twice in the same year, add a suffix to distinguish them; e.
 
 In addition, a blurb about the race is expected to be found in an `index.md` file. This must start with some required information about the race (`title`, `venue`, `distance`, `climb`), and other optional fields. The file uses CommonMark format (<https://spec.commonmark.org/0.30/>).
 
-The races folder currently contains sample data, extracted from Chris Upson's web site. These results are incomplete, and inaccurate in places (in particular, club membership is always for the runner's latest club, rather than their club on the day of the race). These results need to be updated from the official SHR archives.
-
 ## Club information
 
-Club information is yet to be added. It will likely take the form of a directory `clubs` containing a file for each active club (e.g. having a web site or other
-contact details). Views will be provided to select results by club.
+Club contact details and other information can be found in the `clubs` folder. This folder contains a single `.md` file for each club. The pre-matter can include the formal club name, a list of "aka" names, and the club web site. Results using any of the "aka" names will be replaced with the formal club name during the pre-build stage, to make search more consistent.
 
 ## Other files
 
