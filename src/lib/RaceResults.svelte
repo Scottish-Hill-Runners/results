@@ -121,8 +121,8 @@
       sticky: true
     },
     "time": {
-       header: "Time",
-       width: "minmax(4ch, 1fr)",
+      header: "Time",
+      width: "minmax(4ch, 1fr)",
        cmp: (a, b) => a.year.endsWith("*") == b.year.endsWith("*") ? a.time.localeCompare(b.time) : a.year.endsWith("*") ? 1 : -1
     }
   };

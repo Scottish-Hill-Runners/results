@@ -39,7 +39,7 @@ RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
 38,Hawtin,Paula,ESPC  AC,F,36:19
 39,Finnigan,Hugh,Dalry  Thistle,,36:24
 40,Armstrong,George,HELP,SV,36:31
-41,Walton,Charlie,U/A,,36:34
+41,Walton,Charlie,Unattached,,36:34
 42,Harvey,Eddie,Carnethy,V,36:54
 43,Burns,Keith,Carnethy,V,37:01
 44,Murray,David,Berwick  Harriers,,37:05
@@ -59,10 +59,10 @@ RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
 58,Holden,Joe,Lomond,,38:05
 59,Salvona,Joyce,Livingston,F,38:08
 60,Pryde,Gordon,Lomond,,38:13
-61,Mon-Williams,Mark,U/A,,38:23
+61,Mon-Williams,Mark,Unattached,,38:23
 62,Fleming,G,SVH,V,38:26
 63,Graham,Alan,Lomond,,38:32
-64,Aikman,Stewart,U/A,,38:45
+64,Aikman,Stewart,Unattached,,38:45
 65,Shiel,Douglas,Carnethy,,38:54
 66,Gauld,Bill,Carnethy,SV,38:54
 67,Gilmore,Mark,Clydesdale,,38:58
@@ -76,7 +76,7 @@ RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
 75,Campbell,R,Louden,,39:56
 76,Hunter,John,Gala,V,39:59
 77,Dodson,Brian,Law  & D,V,40:01
-78,Douglas,N,U/A,,40:10
+78,Douglas,N,Unattached,,40:10
 79,Cation,Frank,Fife,V,40:35
 80,Maxwell,Jack,Carnethy,V,40:36
 81,Pritchard,Colin,Carnethy,V,40:49
@@ -85,29 +85,29 @@ RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
 84,Gowrie,Ewan,Peebleshire  AC,,40:55
 85,Hinchcliffe,Bill,Lomond,,40:56
 86,Lorimer,Alistair,Duns,V,41:04
-87,Finlayson,Brian,U/A,V,41:12
+87,Finlayson,Brian,Unattached,V,41:12
 88,Boal,John,Victoria  Park,,41:13
-89,Turnbull,Ronald,U/A,,41:14
+89,Turnbull,Ronald,Unattached,,41:14
 90,West,Nick,Carnethy,,41:21
 91,Joyce,James,Dundee  HH,,41:23
 92,Nicol,R,Irvine,V,41:34
 93,Kassyk,Mark,Livingston,,41:46
-94,Stapley,Tony,U/A,V,41:57
+94,Stapley,Tony,Unattached,V,41:57
 95,Terbit,J,Law  & D,V,42:01
 96,Struthers,G,Westerlands,,42:09
-97,Earl,Patrick,U/A,,42:15
+97,Earl,Patrick,Unattached,,42:15
 98,Bagegley,Bill,ESH,V,42:26
-99,Dobson,Jerry,U/A,,42:34
-100,Maxwell,K,U/A,J,42:43
-101,Hunter,Bill,U/A,,42:49
+99,Dobson,Jerry,Unattached,,42:34
+100,Maxwell,K,Unattached,J,42:43
+101,Hunter,Bill,Unattached,,42:49
 102,MacGregor,I,Lothian  & B Police,,42:51
 103,Owens,Denis,Carnethy,V,43:00
 104,Dalitz,Rod,Ferranti,V,43:11
 105,Rose,Nigel,Carnethy,V,43:17
 106,Richie,Tony,Westerlands,V,43:20
 107,Brown,Dave,Livingston,,43:20
-108,Knowles,Mitchel,U/A,,43:55
-109,Shaw,William,U/A,,44:07
+108,Knowles,Mitchel,Unattached,,43:55
+109,Shaw,William,Unattached,,44:07
 110,Wilson,G,Peebles,V,44:10
 111,McGinley,P,Lomond,,44:29
 112,Coon,John,Livingston,,44:36
@@ -115,29 +115,29 @@ RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
 114,Miller,Bruce,Lomond,J,44:48
 115,Darnbrough,Chris,Clydesdale,V,44:56
 116,Coleman,M,Livingston,F,45:10
-117,Gatehouse,Richard,U/A,,45:31
-118,Maclachlan,Malcolm,U/A,V,45:39
+117,Gatehouse,Richard,Unattached,,45:31
+118,Maclachlan,Malcolm,Unattached,V,45:39
 119,Smith,Alex,Lothian  & B Police,V,45:39
 120,Fettes,Pete,Carnethy,V,45:47
 121,Baxter,John,Peebleshire  AC,V,45:52
 122,Toner,Huw,Fauldhouse  Miners,V,45:53
 123,Lawson,Harry,Carnethy,SV,45:57
 124,MacPherson,Helen,Westerlands,F,45:58
-125,Osmand,Chris,U/A,V,45:58
+125,Osmand,Chris,Unattached,V,45:58
 126,Kerr,David,Irvine,SV,46:16
 127,Bennett,Bill,Penicuik,SV,46:24
 128,Dodson,Kay,Law  & District,FV,46:30
 129,King,Shelagh,Clydesdale,F,46:36
-130,Cockerell,Colin,U/A,,46:38
+130,Cockerell,Colin,Unattached,,46:38
 131,Paul,Gillian,Carnethy,FV,46:44
 132,Biggar,John,Livingston,,46:45
 133,Mallon,Thomas,Fauldhouse  Miners,V,46:48
 134,Russell,W,SVH,SV,47:05
 135,Marlet,P,Lomond,,47:34
-136,Page,Andy,U/A,,47:41
+136,Page,Andy,Unattached,,47:41
 137,Biggar,Alison,Livingston,FJ,47:50
 138,Struthers,I,Westerlands,,48:00
-139,Benny,Graham,U/A,V,48:52
+139,Benny,Graham,Unattached,V,48:52
 140,Wall,Dick,HBT,,49:01
 141,Dryborough,Mary,Penicuik,FV,49:03
 142,Small,Marjory,Clydesdale,FV,49:15

@@ -3,7 +3,7 @@ RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
 2,McGonigle,Dermot,Shettleston,,32:02
 3,Stevenson,John,Ochil,,33:34
 4,Ward,Adam,Carnethy,,33:57
-5,Hepburn,John,Dundee  HH,,34:51
+5,Hepburn,John,Dundee HH,,34:51
 6,Marshall,Brian,HELP,,35:09
 7,Martin,Neil,Lomond,,35:27
 8,Mudge,Angela,Carnethy,F,35:27
@@ -60,7 +60,7 @@ RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
 59,MacDonald,Debbie,HBT,F,44:54
 60,Campbell,Bobby,Livingston,SV,45:08
 61,Ferguson,R.,Kilmarnock,V,45:15
-62,Maxwell,G.,U/A,,45:30
+62,Maxwell,G.,Unattached,,45:30
 63,Stewart,Moira,Carnethy,FV,45:43
 64,Rose,Nigel,Carnethy,SV,46:36
 65,Adams,R.,Norham,V,47:00
@@ -78,10 +78,10 @@ RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
 77,Gilchrist,S.,Tweeddale,F,49:23
 78,Scott,D.,HELP,V,49:37
 79,Mitchell,Rob,Teviotdale,SV,50:07
-80,Kirk,K.,U/A,F,50:26
+80,Kirk,K.,Unattached,F,50:26
 81,Searle,I.,Cosmic,,50:34
 82,Pittillo,J.,Teviotdale,SSV,50:34
-83,Lawson,A.,U/A,SV,50:38
+83,Lawson,A.,Unattached,SV,50:38
 84,Spenceley,Hilary,Carnethy,F,50:44
 85,Haddow,Ken,Carnethy,,51:33
 86,Wright,Graham,Carnethy,J,51:43
@@ -96,5 +96,3 @@ RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
 95,Micalizzi,Serena,Carnethy,F,58:49
 96,Hall,M.,Westerlands,F,59:11
 97,Robertson,Richard,Carnethy,SV,63:04
-,Robertson,M.,U/A,,DNF
-,Shiell,Glen,Carnethy,J,DNF

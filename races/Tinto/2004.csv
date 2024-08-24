@@ -1,17 +1,161 @@
-RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
-1,McLeod,Mark,Moorfoots,,24.06
-2,Emsley,Nick,Arran,,24.54
-3,Aitken,Martha,Carnethy,F,25.26
-4,Stokoe,Deborah,Westerlands,F,26.11
-5,Aitken,Evie,Carnethy,F,27.07
-6,Crowe,Jamie,Shettleston,,28.58
-7,Paterson,Robbie,Shettleston,,30.30
-8,Paterson,Laura,Shettleston,F,30.38
-9,Robson,Rachel,Annan,F,30.43
-10,Reid,Cameron,Westerlands,,33.13
-11,Euwert,Stever,U/A,,34.11
-12,Brodie,Stephen,Westerlands,,34.14
-13,reid,Fraser,Westerlands,,36.41
-14,Stokoe,Jennifer,Westerlands,F,43.09
-15,Rogers,Helen,Westerlands,F,44.48
-16,Jardine,Daniel,Gala,,dnf
+RunnerPosition,Name,Club,FinishTime,RunnerCategory
+1,Jethro Lennox,Shettleston,31:11,
+2,Euan Jardine,Gala Harriers,31:57,
+3,Stewart Whitlie,Carnethy,32:42,V
+4,Adrian Davis,Carnethy,33:20,V
+5,Adam Ward,Carnethy,33:32,V
+6,Adam Anderson,Carnethy,33:47
+7,Alan Smith,Deeside,34:33,V
+8,Des Crowe,Shettleston,34:39,V
+9,John Stevenson,Ochil,34:48,V
+10,Mark James,Carnethy,34:51,V
+11,Sandy Bennet,EZCarnegie,35:07,V
+12,Robert Philips,Perth,35:50,
+13,Roger Irvine,Annan,36:05,V
+14,Jill Mykura,Carnethy,36:28,L
+15,David Scott,Ochil,36:35,V
+16,Geraint Florida-James,Carnethy,36:39,
+17,Mike Diver,Clydesdale,36:42,
+18,David White,Kilmarnock,36:45,
+19,Jamie Hope,Unattached,36:59,
+20,Nicholas Beckett,Unattached,37:01,
+21,Graeme Carracher,Carnethy,37:14,V
+22,Russell Anderson,Moorfoot,37:22,V
+23,Colin Miller,Irvine,37:29,V
+24,Scott McKendrick,Irvine,37:42,
+25,Martin Hulme,Corstorphine,37:50,V50
+26,Ken Macmahon,Bellahouston,37:55,
+27,Don Reid,Westerlands,37:57,V
+28,Simon Templeman,Ochil,38:06,
+29,Paul Myerscough,Unattached,38:25,V
+30,Nat Taylor,Girvan,38:30,V50
+31,Willie Mykura,Carnethy,38:34,V
+32,Ron McCraw,Ochil,38:34,V
+33,Alastain Mathieson,HBT,38:41,
+34,Gordon Pryde,Lomond,38:44,V
+35,Tim Norwood,Corstorphine,38:50,
+36,Jorgas Steffen,Westerlands,38:51,
+37,John Hepburn,Lochaber,38:55,V
+38,John Donnely,Westerlands,38:59,V
+39,Craig Love,Dundee,39:00,
+40,Scott Kennedy,Bellahouston,39:02,
+41,Mark Roberts,HBT,39:04,
+42,David Rogers,Westerlands,39:22,V
+43,Eddie Burns,Shettleston,39:29,V
+44,John Blair-Fish,Carnethy,39:30,V50
+45,Tosh Brannon,Lothian,39:44,V
+46,Alastain Murray,Kilmarnock,39:50,
+47,Derek Bearhop,Carnethy,39:54,V
+48,Dougie Milligan,Solway,39:58,V50
+49,Alastair Gordon,Unattached,39:59,
+50,Helen Murray,Lothian,40:01,LV
+51,Luke Arnott,Westerlands,40:10,
+52,David Mitchell,Kilmarnock,40:13,
+53,Tony Westbury,Carnethy,40:16,V
+54,Peter Buchanan,Ochil,40:22,V
+55,Piere Garnaud,Lothian,40:26,
+56,Scott MvKendrick,Irvine,40:34,
+57,Roger Boswell,Unattached,40:46,V50
+58,Sterart Robertson,Bellahouston,41:03,
+59,Keith Fraser,Westerlands,41:10,
+60,Andrew Donaldson,Ochil,41:14,
+61,Neil Thomas,HBT,41:23,
+62,John Goldsworthy,Galloway,41:27,V50
+63,Nick Kelly,Bellahouston,41:31,
+64,Gordon Cameron,Carnethy,41:33,V
+65,Stewart Robertson,Strathaven,41:36,
+66,Chris Bennison,Unattached,41:36,
+67,Colin Wilson,Carnethy,41:40,V
+68,Martin Palitti,Unattached,41:41,
+69,Ian Murgatroid,Dumfries,41:44,V
+70,Owen Brown,Annan,41:51,
+71,Jennifer Emslie,Arran,41:54,LJ
+72,Darren Dougal,Moorfoot,42:03,
+73,Andy Fairgrieve,Annan,42:10,
+74,John Robson,Annan,42:12,V
+75,Keith Adams,Westerlands,42:19,V50
+76,Willie Gibson,Carnethy,42:25,V
+77,Tom Begley,Irvine,42:40,
+78,Andrew McLeod,Moorfoot,42:51,V50
+79,Paddy Earle,Unattached,43:04,V
+80,David Duncan,Ochil,43:06,V50
+81,Ian Armstrong,Carnegie,43:09,
+82,Mick Curtis,Banchory,43:12,V50
+83,Phil Rees,Unattached,43:17,
+84,Nigel Preistley,Annan,43:18,V
+85,Bob Watkinson,Unattached,43:33,V
+86,Robin Haynes,Carnethy,43:37,
+87,Alan Caldwell,Unattached,43:37,
+88,Charlie Love,Dundee,43:55,V60
+89,Helen Palmer,Unattached,44:06,L
+90,Stuart Simpson,Ochil,44:25,
+91,Maggie Keegan,Carnethy,44:32,LV
+92,Ian Davidson,Girvan,44:42,V
+93,Colin Pritchard,Carnethy,44:45,V60
+94,Pete Baxter,Westerlands,44:45,V
+95,Donald Smith,Westerlands,44:54,V50
+96,Andrew Kerr,Troon,45:00,
+97,Michael Dunn,Strathaven,45:11,V
+98,Michael Wilkinson,Carnethy,45:32,
+99,Mike Stewart,ESOC,45:35,V
+100,Ian Forrest,Penicuik,45:38,V50
+101,Finlay Dowell,Irvine,45:50,V
+102,Phil Emsley,Arran,45:52,V
+103,Alan Graham,Lomond,45:54,V50
+104,Eddie Harvey,Carnethy,45:57,V60
+105,Rob Pugh,Kilmarnock,46:00,V
+106,Joan Wilson,Carnethy,46:02,LV
+107,Chris Kregdorn,Unattached,46:05,JNR
+108,Evelyn Freney,Lothian,46:06,L
+109,Steven Hibbert,Unattached,46:10,
+110,Claire Campbell,Ochil,46:12,L
+111,John McEwan,Ochil,46:16,
+112,Richard Gatehouse,Lomond,46:18,V50
+113,Kay Myerscough,Unattached,46:25,LV
+114,Elspeth Scott,Westerlands,46:31,LV
+115,Colin Butler,Helensburgh,46:33,V
+116,MalcolmFinbow,Shettleston,46:36,V50
+117,Colin Watson,Unattached,46:42,V
+118,Rosie Bell,Strathaven,46:47,LV
+119,Ian McManus,Irvine,47:05,V60
+120,Niall Henderson,Ochil,47:11,V
+121,Calvin Crane,Lothian,47:17,V
+122,Katherine Kirk,Westerlands,47:26,L
+123,Alex Irskine,Unattached,47:39,V
+124,Peter McClelland,Unattached,48:01,
+125,Tony Stapley,Portobello,48:13,V60
+126,Mike Meggiato,Girvan,48:30,
+127,Angus Morrison,Unattached,48:47,
+128,Alastair Hind,Carnethy,48:88,
+129,Sandy Lowe,Carnethy,49:00,
+130,Anna Talbot,Westerlands,49:05,L
+131,Pete Naughton,Unattached,49:17,V
+132,Chris Lennon,LAW,49:29,V50
+133,Cameron Taylor,Bellahouston,49:41,
+134,Mike Hill,CFR,49:44,V
+135,Shirley Singh,Unattached,49:44,LV
+136,Peter Trenchard,Girvan,49:49,V50
+137,David Howie Snr,Unattached,50:00,V
+138,Dick Wall,HBT,50:27,V
+139,Chris McLeod,Moorfoot,51:22,
+140,Janice Smith,HBT,51:44,LV
+141,Sarah McAdam,EVOL,51:53,L
+142,Alastair Noble,Girvan,52:13,V50
+143,Mary Miller,Irvine,52:29,LV
+144,Nigel Rose,Carnethy,52:38,V60
+145,Chris Hichcock,Unattached,52:50,
+146,Mike McDonald,Boland,53:18,V60
+147,Mike Pearson,Penicuik,53:20,V60
+148,Kenneth Briarley,Unattached,53:21,V
+149,Bill Bennet,Penicuik,53:48,V60
+150,Alex King,Ochil,55:26,V
+151,Jean Robson,Annan,55:49,LV
+152,Andrew Clydesdale,Unattached,57:25,
+153,Jan Emsley,Arran,57:31,LV
+154,Margaret Forrest,Carnethy,57:40,LV
+155,Max MacFarlane,Kilbarchan,58:11,V50
+156,Rosie Crockard,Westerlands,61:31,L
+157,Linda Hennedy,Bellahouston,62:05,L
+158,Ali Stoke,Unattached,62:24,L
+159,Sandra Vick,Unattached,63:40,L
+160,Ian Hamilton,Irvine,65:57,V60

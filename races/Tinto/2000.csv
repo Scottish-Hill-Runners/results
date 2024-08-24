@@ -13,7 +13,7 @@ RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
 12,Stevenson,John,Ochil,,35:02
 13,Davis,Adrian,Carnethy,,35:11
 14,Simpson,Stuart,Ochil,,35:24
-15,White,David,U/A,,35:36
+15,White,David,Unattached,,35:36
 16,Eades,Colin,Lothian,,35:50
 17,Brown,Douglas,Solway,V,35:56
 18,Simmons,David,Lothian,,36:02
@@ -33,15 +33,15 @@ RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
 32,Murray,Dave,Ochil,,38:07
 33,Wilson,Lyn,Carnethy,F,38:25
 34,Reeve,John,Ochil,,38:28
-35,Davies,Chris,U/A,,38:50
-36,Jones,David,U/A,,38:56
+35,Davies,Chris,Unattached,,38:50
+36,Jones,David,Unattached,,38:56
 37,Goldsworthy,John,Galloway,V,39:10
 38,Laycock,Andy,Carnethy,,39:13
 39,O'Malley,Steve,East Kilbride Tri,V,39:20
 40,Kealey,Karen,Carnethy,F,39:26
 41,Harley,Tom,HELP,V,39:34
 42,Reid,Don,Westerlands,V,39:40
-43,Robertson,Stuart,U/A,,39:42
+43,Robertson,Stuart,Unattached,,39:42
 44,Douglas,Alan,East Kilbride Tri,V,39:43
 45,Howie,Brian,City of Edin,V50,39:46
 46,Jenkins,Kate,Carnethy,F,39:49
@@ -57,7 +57,7 @@ RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
 56,Laws,Alison,Carnethy,F,41:21
 57,Green,Bob,Solway,V,41:30
 58,Vergay,Anna,Penicuik,F,41:42
-59,Bearhop,Derek,U/A,,42:03
+59,Bearhop,Derek,Unattached,,42:03
 60,Priestley,Nigel,Annan,V,42:05
 61,Kerr,George,Kilmarnock,V,42:12
 62,Hunter,Bill,L & B Police,V,42:31
@@ -70,7 +70,7 @@ RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
 69,Godfrey,Gillian,Lothian,F,43:49
 70,Gatehouse,Richard,Lomond,V40,43:55
 71,Hunter,Pete,HBT,V40,44:09
-72,Sinclair,Andrew,U/A,,44:11
+72,Sinclair,Andrew,Unattached,,44:11
 73,Dahl,Fiona,Carnethy,F,44:12
 74,Smith,Donald,Westerlands,V50,44:19
 75,Russell,Scott,Kilmarnock,,44:21
@@ -80,19 +80,19 @@ RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
 78=,MacDonald,Debbie,HBT,FV,44:32
 80,Meiklejohn,Alan,Fife,V50,44:42
 81,Spenceley,Hilary,Carnethy,FV,45:00
-82,Pelaez,Alberto,U/A,,45:20
+82,Pelaez,Alberto,Unattached,,45:20
 83,Pugh,Roddy,Kilmarnock,V,45:26
 84,MacDonald,Nick,Carnethy,V,45:44
 85,Ballantine,Susan,Kilmarnock,F,45:45
 86,Robertson,Stewart,Strathaven,,45:53
 87,Rose,Nigel,Carnethy,V50,45:57
-88,Horsburgh,Steven,U/A,,46:03
+88,Horsburgh,Steven,Unattached,,46:03
 89,Anderson,Adam,Solway,V50,46:05
 90,McManus,Ian,Irvine,V50,46:14
 91,Scott,Elspeth,Westerlands,F,46:19
-92,Royles,Brodick,U/A,,46:28
+92,Royles,Brodick,Unattached,,46:28
 93,Volwerk,Leon,Lochaber,V50,46:42
-94,McKee,Craig,U/A,,46:59
+94,McKee,Craig,Unattached,,46:59
 95,Wood,Angela,Carnethy,F,47:06
 96,Haynes,Robin,Carnethy,,47:16
 97,Coon,John,Lothian,V,47:19
@@ -102,18 +102,18 @@ RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
 101,Powell,Alison,Carnethy,F,48:04
 102,Scott,David,HELP,V,48:08
 103,Quick,Hilary,Lothian,FV,48:18
-104,Huntley,Chris,U/A,V,48:38
+104,Huntley,Chris,Unattached,V,48:38
 105,Monk,Jim,Kilmarnock,,48:49
 106,Mallett,Archie,Lomond,,48:55
 107,Dunn,Clare,Dumfries,F,49:01
 108,Hawkins,Liz,Carnethy,F,49:05
-109,Gill,Ronald,U/A,,49:52
-110,Johnstone,Martin,U/A,,50:02
+109,Gill,Ronald,Unattached,,49:52
+110,Johnstone,Martin,Unattached,,50:02
 111,Pearson,Mike,Carnethy,V50,50:05
 112,Bennett,Bill,Penicuik,V60,50:29
 113,Brown,Mike,Penicuik,V50,50:45
 114,Ingham,Cali,Carnethy,FV,50:53
-115,Reid,Kenny,U/A,V,50:59
+115,Reid,Kenny,Unattached,V,50:59
 116,Crane,Calvin,Lothian,V,51:08
 117,Anderson,Joanne,Carnethy,F,52:08
 118,Thin,Joanne,Carnethy,F,54:30
@@ -125,5 +125,5 @@ RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
 124,Weir,Fiona,Lothian,F,59:59
 125,McCrae,Lori,Penicuik,F,63:10
 126,Robertson,Richard,Carnethy,V60,66:36
-127,Milford,Celia,U/A,F,79:33
-128,Allan,Eileen,U/A,F,83:36
+127,Milford,Celia,Unattached,F,79:33
+128,Allan,Eileen,Unattached,F,83:36

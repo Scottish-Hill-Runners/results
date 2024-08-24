@@ -27,7 +27,7 @@ RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
 26,McCulloch,J.,Ayr,,36:24
 27,Love,Charlie,Dundee,,36:25
 28,Law,P.,Fife,V,36:25
-29,Whyte,I.,U/A,V,36:30
+29,Whyte,I.,Unattached,V,36:30
 30,Petrie,Don,Kilbarchan,,36:35
 31,Kendell,C.,Livingston,,36:42
 32,Rogerson,P.,Annan,,36:52
@@ -51,7 +51,7 @@ RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
 50,Duffy,Pete,Aberdeen,SV,38:28
 51,Pugh,W.,Lomonds,,38:32
 52,Brooks,Peter,Lochaber,V,38:39
-53,Lorimer,Haydon,U/A,J,38:52
+53,Lorimer,Haydon,Unattached,J,38:52
 54,Campbell,R.,Loudon,,39:00
 55,McGillivary,A.,Fife,V,39:06
 56,Cation,Frank,Fife,,39:08
@@ -62,7 +62,7 @@ RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
 61,Silver,A.,Muirhall,J,39:36
 62,Holden,J.,Lomonds,V,40:06
 63,Boyce,S.,Glasgow Univ,J,40:08
-64,Crampion,V.,U/A,,40:11
+64,Crampion,V.,Unattached,,40:11
 65,McGinley,H.,Lononds,,40:16
 66,Kilcullen,K.,dundee,V,40:21
 67,Crane,Pete,Inverness,,40:25
@@ -70,34 +70,34 @@ RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
 69,Gray,S.,Muirhall,J,40:29
 70,Young,A.,Dundee RR,,40:46
 71,Birse,A.,Dundee,V,40:49
-72,Lorimer,A.,U/A,V,40:51
+72,Lorimer,A.,Unattached,V,40:51
 73,Foster,I.,L & L,,40:57
-74,Pryde,Gordon,U/A,,41:10
+74,Pryde,Gordon,Unattached,,41:10
 75,Campbell,I.,Lothian & B Police,V,41:10
 76,Dodson,Brian,Scott Vets,V,41:11
 77,Donnelly,John,Shettleston,,41:12
 78,Campbell,J.,Giffnock N.,,41:17
 79,Stapley,Tony,Fife,V,41:20
 80,Curtis,Ann,Livingston,F,41:23
-81,Sidney,J.,U/A,,41:32
+81,Sidney,J.,Unattached,,41:32
 82,Turnbull,Drew,East Kilbride,V,41:34
 83,Darby,Janet,Carnethy,F,41:37
 84,Peck,Dave,Carnethy,V,42:02
-85,Bennison,J.,U/A,,42:04
+85,Bennison,J.,Unattached,,42:04
 86,Morton,Jim,Irvine,,42:05
-87,Menhennet,Chris,Bellahouston,F,42:06
+87,Menhennet,Christine,Bellahouston,F,42:06
 88,Burns,J.,Livingston,,42:24
 89,Gilchrist,D.,Muirhall,J,42:27
 90,McKirdy,D.,East Kilbride,,42::51
 91,Stott,Adrian,Shi Chimnoy,,42:53
-92,Pitkeathly,S.,U/A,,42:54
+92,Pitkeathly,S.,Unattached,,42:54
 93,O'Keane,P.,Lothian & B Police,,43:07
 94,McIntyre,Ian,Livingston,,43:31
 95,Burt,A.,Lothian & B Police,V,43:32
 96,Doig,F.,Irvine,,43:39
-97,Linn,I.,U/A,V,43:45
-98,MacFarlane,J.,U/A,,43:47
-99,,A.Smith,Lothian & B Police,,43:50
+97,Linn,I.,Unattached,V,43:45
+98,MacFarlane,J.,Unattached,,43:47
+99,Smith,A.,Lothian & B Police,,43:50
 100,Brown,D.,Livingston,,43:53
 101,McGinley,P.,Lomonds,,43:56
 102,West,Nick,Carnethy,,43:58
@@ -105,38 +105,37 @@ RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
 104,Pritchard,Colin,Carnethy,V,44:10
 105,Wall,Dick,Peebleshire,,44:13
 106,Hastie,D.,Livingston,,44:17
-107,McConnell,J.,U/A,,44:22
+107,McConnell,J.,Unattached,,44:22
 108,Hughes,R.,Fife,,44:27
 109,Nicol,R.,Irvine,V,44:30
 110,Traynor,J.,Keswick,V,44:38
-111,Evans,W.,U/A,,44:43
+111,Evans,W.,Unattached,,44:43
 112,Hall,E.,Westerlands,FV,44:49
-113,Gray,J.,U/A,,44:53
+113,Gray,J.,Unattached,,44:53
 114,Dodson,Kay,Law & District,FV,45:11
 115,Coon,John,Livingston,,45:35
 116,Harrison,N.,Muirhall,J,45:37
 117,Boyes,D.,Muirhall,J,45:39
 118,Struthers,I.,Westerlands,,45:48
 119,MacDonald,C.,Irvine,,46:35
-120,Trenchard,Pete,U/A,V,46:55
-121,Callander,G.,U/A,,47:00
+120,Trenchard,Pete,Unattached,V,46:55
+121,Callander,G.,Unattached,,47:00
 122,Morton,Helen,Irvine,F,47:17
 123,Blake,Philipa,HELP,F,47:32
 124,Lawson,Harry,Carnethy,SV,47:40
 125,McLean,D.,Lomonds,,48:13
-126,McIntosh,C.,U/A,,48:24
-127,Ross,M.,U/A,J,48:25
+126,McIntosh,C.,Unattached,,48:24
+127,Ross,M.,Unattached,J,48:25
 128,Begg,A.,Calderglen,,48:26
 129,Tracey,K.,Penicuik,F,48:27
 130,West,Alison,Carnethy,F,50:02
 131,Robertson,Richard,Carnethy,SV,50:03
-132,Wall,J.,U/A,F,50:13
-133,Herbert,M.,U/A,V,50:44
+132,Wall,J.,Unattached,F,50:13
+133,Herbert,M.,Unattached,V,50:44
 134,Tutt,Jim,Carnethy,V,51:18
 135,McKirdy,G.,East Kilbride,V,51:42
 136,Souden,D.,Kintyre AC,,51:56
 137,Coombs,I.,Westerlands,F,52:31
 138,McLaughlin,T.,Westerlands,FV,52:43
 139,Webb-Bowen,John,Pitreavie,SV,74:14
-,Menhennet,Pete,Bellahouston,,DNF
-,Halliday,W.,U/A,,DNF
+

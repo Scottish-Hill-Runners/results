@@ -19,7 +19,7 @@ RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
 18,Gibson,Willie,Carnethy,V,39:25
 19,Waldie,Brian,Carnethy,SSV,39:48
 20,Hill,Les,Dumfries,V,39:52
-21,Shaw,Matt,U/A,,39:55
+21,Shaw,Matt,Unattached,,39:55
 22,Brown,Craig,Ochil,,39:57
 23,Gallacher,John,Ochil,,40:06
 24,Diamantides,Helene,Carnethy,F,40:11
@@ -45,7 +45,7 @@ RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
 44,Howie,Brian,City  of Edinburgh,V,42:59
 45,Irvine,Hamish,Highland,,43:11
 46,Milligan,Douglas,Solway,SV,43:12
-47,Bearhop,Derek,U/A,,43:15
+47,Bearhop,Derek,Unattached,,43:15
 48,,?,?,,?
 49,Campbell,Charles,Westerlands,,43:18
 50,Wright,Graham,Carnethy,,43:20
@@ -57,7 +57,7 @@ RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
 56,Croll,Stewart,Strathclyde  Police,,44:35
 57,Gatehouse,Richard,Lomond,V,45:11
 58,Gillespie,Eddie,Carnethy,SV,45:41
-59,Duthie,Neil,U/A,,45:47
+59,Duthie,Neil,Unattached,,45:47
 60,Eades,Lorna,Livingston,F,45:59
 61,McGrogan,Bill,Valley  Striders,V,46:06
 62,Finbow,Malcolm,Shettleston,V,46:12
@@ -73,11 +73,11 @@ RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
 72,Nimmo,Anne,Carnethy,FV,47:03
 73,MacDonald,Deborah,HBT,F,47:13
 74,Rose,Nigel,Carnethy,SV,47:32
-75,Cooper,Derek,U/A,,47:48
+75,Cooper,Derek,Unattached,,47:48
 76,McIntosh,Mairi,Ochil,F,48:25
 77,Theaker,Damien,Helensburgh,,49:27
 78,Laws,Alison,Carnethy,FJ,49:29
-79,Rawson,Steve,U/A,,49:35
+79,Rawson,Steve,Unattached,,49:35
 80,Innes,Nicki,Carnethy,F,49:37
 81,Anderson,Alan,Solway,SV,49:48
 82,Irvine,Gill,Highland,F,49:54
@@ -94,24 +94,20 @@ RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
 93,Kemp,Brian,Kinross,SV,52:27
 94,McManus,Ian,Irvine,,52:53
 95,Adams,Richard,Norham,V,53:22
-96,Mateer,David,U/A,,53:45
+96,Mateer,David,Unattached,,53:45
 97,Pottie,John,Nairn  RR,SV,53:48
 98,Little,Colin,Dumfries,V,53:59
 99,Bennet,Bill,Penicuik,SV,54:07
 100,Metcalfe,Rachael,Dumfries,F,54:15
 101,Sanderson,Helen,Dumfries,F,54:25
-102,Beswick,Hayden,U/A,SV,55:19
+102,Beswick,Hayden,Unattached,SV,55:19
 103,Thin,Joanne,Carnethy,F,55:29
-104,Blackburn,Liz,U/A,F,55:34
+104,Blackburn,Liz,Unattached,F,55:34
 105,Hamill,Anne,Kinross,FV,55:52
 106,Pearson,Mike,Carnethy,,56:01
 107,Drouet,Paula,Carnethy,FV,57:50
-108,Hamill,Brendan,U/A,V,58:02
+108,Hamill,Brendan,Unattached,V,58:02
 109,Benny,Graham,Westerlands,SV,58:29
 110,Haddow,Ken,Carnethy,V,59:28
 111,King,Shelagh,Clydesdale,FV,61:27
 112,Robertson,Richard,Carnethy,SSV,62:29
-,Jennison,Noreen,Westerlands,,DNF
-,Robertson,Jane,Westerlands,,DNF
-,Smith,Janice,Carnethy,,DNF
-,Taylor,Ben,Helensburgh,,DNF

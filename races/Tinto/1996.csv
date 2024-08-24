@@ -12,7 +12,7 @@ RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
 11,Taviner,Mark,Carnethy,,33:09
 12,Thin,Jamie,Carnethy,,33:50
 13,MacInnes,Gary,Carnethy,,34:25
-14,Dickinson,James,U/A,,34:29
+14,Dickinson,James,Unattached,,34:29
 15,Eades,Colin,Livingston,,34:33
 16,Whittet,Jeremy,Perth  Strathtay,,34:34
 17,Gallagher,Ronnie,Westerlands,,34:39
@@ -40,7 +40,7 @@ RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
 39,McInroy,Ross,Clydesdale,V,37:19
 40,Colver,Keith,Carnethy,,37:20
 41,Kerr,Stuart,Dundee  HH,V,37:24
-42,Mashane,Frank,U/A,,37:32
+42,Mashane,Frank,Unattached,,37:32
 43,Gibson,Willie,Carnethy,,37:36
 44,Gebbie,Ian,Kilmarnock,V,37:41
 45,Milligan,Doug,Solway,SV,37:53
@@ -83,7 +83,7 @@ RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
 82,Williams,James,ESOC,J,41:12
 83,Mcintosh,Mairi,Ochil,F,41:19
 84,Stevenson,Jim,Tinto  Orienteers,,41:22
-85,Reid,David,U/A,,41:37
+85,Reid,David,Unattached,,41:37
 86,Hailey,Jane,Livingston,F,41:38
 87,Wadsworth,Andy,Standard  Life AC,,41:38
 88,Shaw,Peter,Standard  Life AC,,41:41
@@ -94,7 +94,7 @@ RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
 93,Campbell,Bobby,Livingston,SV,42:23
 94,Pugh,Rod,Kilmarnock,V,42:29
 95,Rose,Nigel,Carnethy,SV,42:38
-96,Kennedy,Robert,U/A,,42:42
+96,Kennedy,Robert,Unattached,,42:42
 97,Powell,Karen,Carnethy,F,42:29
 98,Mallett,P.,Lomond,,42:59
 99,Forbes,Alfred,East  Kilbride Tri,,43:02
@@ -109,7 +109,7 @@ RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
 108,Macdonald,Debbie,HBT,F,43:49
 109,Coon,John,Livingston,V,43:59
 110,Stewart,James,Calderglen,V,44:07
-111,Duncan,Michael,U/A,V,44:13
+111,Duncan,Michael,Unattached,V,44:13
 112,Knox,Isobel,Edin  WM,FJ,44:13
 113,Morton,George,Kilmarnock,V,44:25
 114,Innes,Nicki,Carnethy,F,44:26
@@ -118,7 +118,7 @@ RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
 117,Weir,Fiona,Livingston,F,45:28
 118,Scott,Elspeth,Westerlands,F,45:58
 119,Pringle,Bill,Teviotdale,SV,45:59
-120,Robertson,S.,U/A,,46:03
+120,Robertson,S.,Unattached,,46:03
 121,McGregor,Susie,Kilmarnock,F,46:05
 122,Robertson,Billy,Kilmarnock,,46:07
 123,Adams,Richard,Norham,V,46:33
@@ -136,7 +136,7 @@ RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
 135,Haddow,Ken,Carnethy,,50:39
 136,Sharpe,Elaine,Kilmarnock,F,51:11
 137,Drouet,Paula,Carnethy,F,51:24
-138,Stewart,Mary,U/A,FV,52:17
+138,Stewart,Mary,Unattached,FV,52:17
 139,Bennie,Graham,Westerlands,V,52:37
 140,Paul,Gillian,Carnethy,FV,52:46
 141,Campbell,Donna,Livingston,F,52:53
@@ -145,6 +145,3 @@ RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
 144,Pearson,Mike,Carnethy,SV,54:09
 145,Davidson,Sean,Penicuik,,54:12
 146,Robertson,Briget,Kilmarnock,F,55:22
-147,Thin,Joanne,Carnethy,F,-
-,Dempsey,Val,Livingston,FV,DNF
-,Sheill,Doug,Carnethy,,DNF

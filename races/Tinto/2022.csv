@@ -24,7 +24,7 @@ FinishPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
 23,Butler,Christopher,Westerlands,MS,00:39:34
 24,Poulter,Alwyn,Westerlands,MS,00:39:48
 25,Karpowicz,Marcin,Portobello running club,MS,00:39:53
-26,DuPlessis,Kevin,U/A,M40,00:39:54
+26,DuPlessis,Kevin,Unattached,M40,00:39:54
 27,MacInnes,Alasdair,Westerlands,MS,00:40:05
 28,Wight,Ally,Hardrock Hoodlums,M40,00:40:28
 29,Carvalho,Cyril,Carnethy Hill Running Club,MS,00:40:40
@@ -32,7 +32,7 @@ FinishPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
 31,Ross,Heidi,Carnethy,FS,00:41:00
 32,Pugh,Dan,Carnethy Hill Running Club,MS,00:41:13
 33,Mahoney,Luke,Westerlands,MS,00:41:14
-34,Logan,Alasdair,U/A,MS,00:41:17
+34,Logan,Alasdair,Unattached,MS,00:41:17
 35,Ball,Duncan,Penicuik Harriers,M60,00:41:18
 36,Dickie,Adam,Dumfries Running Club,M40,00:41:18
 37,Foster,Paul,Westerlands,MS,00:41:32
@@ -41,7 +41,7 @@ FinishPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
 40,Williams,Daniel,Westerlands,MS,00:41:59
 41,Risk,Alan,Portobello running club,MS,00:42:09
 42,Lowe,Rob,Westerlands,MS,00:42:12
-43,Quimby,Iain,U/A,M40,00:42:34
+43,Quimby,Iain,Unattached,M40,00:42:34
 44,Collins,Ian,Westerlands,M40,00:42:50
 45,Brodie,Stuart,Ochil Hill Runners,M40,00:42:52
 46,Craig,John,Shettleston Harriers,MS,00:42:56
@@ -51,12 +51,12 @@ FinishPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
 50,MacDonald,Euan,Tinto Hill Runners,MS,00:43:32
 51,Plummer,Kevin,Hartfell Hill Running Club,M50,00:43:36
 52,Gilmore,Neil,Carnethy,M50,00:43:52
-53,Dykes,Stuart,U/A,MS,00:43:58
+53,Dykes,Stuart,Unattached,MS,00:43:58
 54,Newnham,Paul,Carnethy Hill Running Club,M40,00:44:05
 55,Reid,Don,Westerlands,M60,00:44:08
-56,Finn,Chris,U/A,MS,00:44:12
+56,Finn,Chris,Unattached,MS,00:44:12
 57,Malcolmson,Craig,Hartfell Hill Running Club,M50,00:44:23
-58,Barnes,Jason,U/A,M40,00:44:31
+58,Barnes,Jason,Unattached,M40,00:44:31
 59,Knox,Rosie,Carnethy,FS,00:44:34
 60,Hooper,Mark,Carnethy Hill Running Club,MS,00:44:39
 61,Andrew,Alastair,Haddington Running Club,M40,00:45:00
@@ -68,12 +68,12 @@ FinishPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
 67,Pugh,Roderick,Kilmarnock Harriers,M60,00:46:00
 68,Mcbirnie,Kirsty,Carnethy Hill Running Club,F40,00:46:02
 69,Ascher,Simon,Univeristy of Glasgow Triathlon Club,MS,00:46:03
-70,McCallum,Mark,U/A,M40,00:46:08
+70,McCallum,Mark,Unattached,M40,00:46:08
 71,Crisford,Ben,Hartfell Hill Running Club,MS,00:46:08
 72,Radcliffe-Adams,Frank,Westerlands,MS,00:46:22
 73,Banford,Alison,Hartfell Hill Running Club,F40,00:46:30
 74,Stead,Samuel,Carnethy Hill Running Club,MS,00:46:42
-75,Murgatroyd,Anna,U/A,FS,00:46:49
+75,Murgatroyd,Anna,Unattached,FS,00:46:49
 76,Lilley,Roanne,Carnethy Hill Running Club,FS,00:46:52
 77,Aubrey,Kathleen,Helm Hill Runners,F50,00:46:55
 78,Aubrey,Roger,Helm Hill Runners,M50,00:46:56
@@ -84,13 +84,13 @@ FinishPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
 83,Ball,James,Carnethy,MS,00:47:40
 84,Findlay-Robinson,Rachel,Westerlands,FS,00:48:04
 85,Roberts,Corrie,Carnethy,F40,00:48:08
-86,Pollock,Patrick,U/A,M40,00:48:11
+86,Pollock,Patrick,Unattached,M40,00:48:11
 87,Cain,Pete,Carnethy,M60,00:48:15
 88,Robertson,Megan,Carnethy Hill Running Club,FS,00:48:18
 89,Gibson,Innes,ERC,M60,00:48:19
 90,Mortlock,Simon,Dumfries Running Club,M50,00:48:26
 91,Macbeth,Gabrielle,Westerlands,FS,00:48:29
-92,Wright,Jade,U/A,FS,00:48:36
+92,Wright,Jade,Unattached,FS,00:48:36
 93,Simpson,Jo,Ochil Hill Runners,FS,00:48:37
 94,White,David,Kilmarnock Harriers,M50,00:48:38
 95,Stevenson,Tyler,Lomond Hill Runners,MS,00:48:43
@@ -113,11 +113,11 @@ FinishPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
 112,Musgrave,Posy,Ochil Hill Runners,FS,00:51:35
 113,Fingland,Alice,Tinto Hill Runners,FS,00:51:44
 114,Stakes,David,Westerlands,M50,00:52:06
-115,Glasgow,Steven,U/A,MS,00:52:08
+115,Glasgow,Steven,Unattached,MS,00:52:08
 116,Ascroft,Lorna,Carnethy,F40,00:52:10
 117,Edward,Iain,Lomond Hill Runners,MS,00:52:29
 118,Graham,Alan,Ochil Hill Runners,M50,00:53:06
-119,Rheinallt,Heledd,U/A,FS,00:53:12
+119,Rheinallt,Heledd,Unattached,FS,00:53:12
 120,Miller,Andrew,Perth Triathlon Club,M40,00:53:27
 121,Donnelly,John,Westerlands,M50,00:53:45
 122,Tooby,Hugh,Ochil Hill Runners,M60,00:54:25
@@ -132,7 +132,7 @@ FinishPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
 131,Innes,Nicki,Carnethy Hill Running Club,F50,00:55:56
 132,Ure,Barry,Ochil Hill Runners,M40,00:56:00
 133,Guthrie,Neil,Carnethy Hill Running Club,M40,00:56:09
-134,Murdo Urquhart,William,U/A,M50,00:56:16
+134,Murdo Urquhart,William,Unattached,M50,00:56:16
 135,Plenderleith,John,Tinto Hill Runners,MS,00:57:03
 136,Fifield,Shivali,Tinto Hill Runners,F50,00:57:23
 137,Reynolds,Lesley,Carnegie Harriers,F50,00:57:27
@@ -141,7 +141,7 @@ FinishPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
 140,Morton,Annie,Killamarsh kestrels,FS,00:58:14
 141,Finbow,Gavin,Shettleston Harriers,M40,00:58:23
 142,Howie,Brian,Carnethy Hill Running Club,M70,00:58:51
-143,Neary,Charlotte,U/A,F40,00:59:05
+143,Neary,Charlotte,Unattached,F40,00:59:05
 144,Mitchell,David,Kilmo,M50,00:59:37
 145,Anderson,Laurie,Lomond Hill Runners,M60,01:00:10
 146,Brown,Iain,Parnie Street Runners,M40,01:00:19
@@ -153,6 +153,6 @@ FinishPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
 152,Crombie,Bobby,Girvan Harriers,M60,01:06:59
 153,Tait,Steve,Gainsborough Morton Striders AC,M50,01:08:11
 154,Paterson,Sandy,Carnethy Hill Running Club,M60,01:08:33
-155,Robson,Jean,U/A,F60,01:18:02
+155,Robson,Jean,Unattached,F60,01:18:02
 156,Wilson,Abbie,Hartfell Hill Running Club,FS,01:28:03
 157,McPherson,Hugh,Tinto Hill Runners,M70,01:31:29

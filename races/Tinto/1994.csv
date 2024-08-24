@@ -54,10 +54,10 @@ RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
 53,Baxter,Peter,Westerlands,,41:20
 54,Lennox,Chris,Law  & District,V,41:22
 55,Pritchard,Matthew,Carnethy,J,41:23
-56,Short,Andrew,U/A,,41:25
+56,Short,Andrew,Unattached,,41:25
 57,Rother,Penny,Livingston,F,41:27
 58,Wilson,Peter,Arran,V,41:32
-59,Hall,Jim,U/A,V,41:36
+59,Hall,Jim,Unattached,V,41:36
 60,Harvey,Eddie,Carnethy,SV,41:45
 61,Haig,Jim,Fife,V,41:46
 62,Stephen,Jack,Ochil,V,41:53
@@ -83,17 +83,17 @@ RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
 82,MacLachlan,Malcolm,Carnethy,V,44:39
 83,Robertson,Jane,Westerlands,F,44:38
 84,Turnbull,Drew,East  Kilbride,SV,44:49
-85,Dunn,Michael,U/A,,44:54
+85,Dunn,Michael,Unattached,,44:54
 86,Dalitz,Rod,Ferranti,V,44:57
 87,Schreiber,Jo,Pudsey  & Bramley,F,44:58
 88,West,Nick,Carnethy,V,45:04
 89,Hedley,Brian,Lomond,V,45:12
 90,MacDonald,Debbie,Lasswade,F,45:13
-91,Taylor,Alexander,U/A,J,45:14
+91,Taylor,Alexander,Unattached,J,45:14
 92,Rose,Nigel,Carnethy,SV,45:30
 93,Dempsey,Valerie,Livingston,FV,45:32
 94,McPhie,W.,Lochgelly,V,45:36
-95,Smith,Susan,U/A,,45:42
+95,Smith,Susan,Unattached,,45:42
 96,Scott,Jim,Norham,V,45:44
 97,Scott,Elspeth,Westerlands,F,46:10
 98,Coltman,Alan,Teviotdale,,46:32
@@ -105,10 +105,10 @@ RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
 104,Smith,Janice,Penicuik,F,47:09
 105,Bennet,Bill,Penicuik,SV,47:18
 106,Wall,Dick,HBT,,47:28
-107,McPhie,David,U/A,V,47:32
+107,McPhie,David,Unattached,V,47:32
 108,Knox,Isobel,Tweeddale,FJ,48:10
 109,Pringle,Bill,Teviotdale,SV,48:16
-110,Scroggie,Mary,U/A,F,48:38
+110,Scroggie,Mary,Unattached,F,48:38
 111,Osmond,Chris,Westerlands,V,48:52
 112,Wharam,Lynne,Kilbarchan,F,49:51
 113,Inglis,H.,Shettleston,,49:55
@@ -117,20 +117,15 @@ RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
 116,Paul,Gillian,Carnethy,FV,51:01
 117,Dick,Geirge,Scottish  Vets,V,52:12
 118,Wilkins,John,Arbroath  Footers,SV,52:20
-119,Suess,N.,U/A,V,52:34
-120,Irons,Martin,U/A,V,53:11
+119,Suess,N.,Unattached,V,52:34
+120,Irons,Martin,Unattached,V,53:11
 121,Drouet,Paula,Carnethy,F,53:18
 122,Robertson,Richard,Carnethy,SV,53:32
 123,Pearson,Mike,Carnethy,V,53:41
 124,Greenslade,David,Larkhall  Triathlon,V,55:50
-125,Corr,Benny,U/A,,56:25
+125,Corr,Benny,Unattached,,56:25
 126,Cairney,John,Shettleston,SV,56:52
-127,Tarbit,Derek,U/A,SV,63:18
+127,Tarbit,Derek,Unattached,SV,63:18
 128,King,Shelagh,Clydesdale,F,66:30
 129,Micalizzi,Serena,Carnethy,F,66:30
 130,Thompson,Jim,Forth  RR,SV,?
-,N/A,N/A,,,
-,,Team,,,
-1,,Westerlands,22,,
-2,,Carenthy,25,,
-3,,HELP,35,,

@@ -11,10 +11,14 @@ function progress(message: string): void {
 }
 
 function formatTime(time: string): string {
-  const match = time.match(/(\d?\d)[:h](\d\d)(?:[m:\.](\d\d))?/);
-  if (match)
-    return `${(match[1].length == 1 ? '0' : '') + match[1]}:${match[2]}:${match[3] ?? '00'}`;
-  return time;
+  const match = time.match(/(\d?\d)[:\.h](\d\d)(?:[:\.m](\d\d))?/);
+  if (match) {
+    if (match[3])
+      return `${match[1].padStart(2, "0")}:${match[2]}:${match[3]}`;
+    return `00:${match[1].padStart(2, "0")}:${match[2]}`;
+  }
+
+  return 'n/a'; // Compares less than any hh:mm:ss time.
 }
 
 function readClubs(): ClubInfo[] {
@@ -49,7 +53,8 @@ async function readRaceInstance(raceId: string, raceInstancePath: string): Promi
       
       const groups =
         category
-          .replace(/(OPEN)|(MEN)|(MALE)|(VET)|(SEN(IOR)?)|(JUN(IOR)?)|(UNDER)/gi, "")
+          .replace(/\s+/g, "")
+          .replace(/(OVER)|(OPEN)|(MEN)|(MALE)|(VET)|(SEN(IOR)?)|(JNR)|(JUN(IOR)?)|(UNDER)/gi, "")
           .replace(/(WOMEN)|(FEMALE)|(LADY)/, "F")
           .replace(/[\WVUJS]/g, '') // Ignore V(=vet), U(=under-23?), J(=junior), (S=senior) attributions.
           .match(/([^\d]*)(\d+)?/);
@@ -74,7 +79,7 @@ async function readRaceInstance(raceId: string, raceInstancePath: string): Promi
         position: parseInt(json.RunnerPosition ?? json.FinishPosition ?? json.Position ?? json.Pos),
         name: json.Name ?? `${json.Firstname ?? ''} ${json.Surname ?? ''}`,
         club: clubAliases.get(json.Club?.toUpperCase() as string) ?? json.Club,
-        category: category,
+        category: category == "" ? "M" : category,
         categoryPos: updateCategoryPos(category),
         time: formatTime((json.FinishTime ?? json.Time) as string)
       };

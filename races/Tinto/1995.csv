@@ -1,6 +1,6 @@
 RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
-1=,Brooks,John,Lochaber,,29:58
-1=,Bartlett,Graeme,Forres,,29:58
+1,Brooks,John,Lochaber,,29:58
+1,Bartlett,Graeme,Forres,,29:58
 3,Kitchin,Andy,Livingston,,30:58
 4,Ward,Adam,Carnethy,,31:58
 5,Martin,Neil,Lomond,,32:22
@@ -48,7 +48,7 @@ RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
 47,Graham,Alan,Lomond,V,40:07
 48,Pryde,Gordon,Lomond,,40:17
 49,Henderson,Iain,Lochaber,,40:33
-50,Lee,Richard,U/A,V,40:35
+50,Lee,Richard,Unattached,V,40:35
 51,Hill,Paul,Law  & District,,40:42
 52,Salvona,Joyce,Livingston,F,40:57
 53,Cardwell,Alan,Law  & District,,41:13
@@ -58,7 +58,7 @@ RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
 57,Hughes,Anne-Marie,Shettleston,F,41:50
 58,Jones,Graham,Moravian  OC,,41:59
 59,Taylor,Alex,Carnethy,,42:09
-60,MacEwan,John,U/A,,42:14
+60,MacEwan,John,Unattached,,42:14
 61,Blane,Quintin,Westerlands,V,42:23
 62,Jackson,Andy,Lomond,,42:52
 63,McCaffer,Donald,Law  & District,V,42:54
@@ -71,10 +71,10 @@ RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
 70,Burnside,William,Strathearn  CC,,43:37
 71,Glasgow,William,Armadale  AC,,43:59
 72,MacLaren,Dougals,Thames  TRC,,44:09
-73,Wightman,Robbie,U/A,,44:09
+73,Wightman,Robbie,Unattached,,44:09
 74,Millar,Paul,Haggis  H,V,44:10
-75,Cross,Bill,U/A,,44:16
-76,McAleenan,John,U/A,,44:22
+75,Cross,Bill,Unattached,,44:16
+76,McAleenan,John,Unattached,,44:22
 77,Turnbull,Drew,East  Kilbride,SV,44:26
 78,Tervit,Jim,Law  & District,V,44:27
 79,Hamburgh,Patrick,Carnethy,V,44:58
@@ -99,5 +99,4 @@ RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
 98,Glasgow,Ian,Armadale  AC,,52:27
 99,Drouet,Paula,Carnethy,,54:18
 100,Kirk,Katherine,Strathclyde  Univ,F,54:20
-101,Tarbit,Derek,U/A,SV,59:01
-,Craig,Stuart,L  & L TC,,DNF
+101,Tarbit,Derek,Unattached,SV,59:01

@@ -18,8 +18,8 @@ RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
 17,Spenceley,Andy,Carnethy,V,34:43
 18,Brown,Douglas,Solway,V,34:52
 19,Mackay,Euan,Ochil,V,35:01
-20,Caron,Steven,U/A,,35:52
-21,White,David,U/A,,36:05
+20,Caron,Steven,Unattached,,35:52
+21,White,David,Unattached,,36:05
 22,Brown,Craig,Ochil,,36:08
 23,Anderson,Adam,Solway,,36:09
 24,Hill,Les,Dumfries,V,36:11
@@ -53,31 +53,31 @@ RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
 52,Anderson,Murray,Fife,SV,39:15
 53,Harley,Tom,HELP,V,39:16
 54,McLaghlan,Danny,Greenock,V,39:18
-55,Davies,Chris,U/A,,39:23
+55,Davies,Chris,Unattached,,39:23
 56,Campbell,Charlie,Westerlands,,39:33
 57,Green,Bob,Solway,V,39:39
 58,Lennie,Andrew,Carnethy,,39:43
-59,Berghoff,Derek,U/A,,39:49
-60,McGRegor,Stuart,U/A,,39:57
+59,Berghoff,Derek,Unattached,,39:49
+60,McGRegor,Stuart,Unattached,,39:57
 61,Diver,Mike,Clydesdale,,40:01
 62,Graham,Alan,Lomond,V,40:08
 63,Adam,David,Hamilton,,40:14
 64,Howie,Brian,City  of Edin,V,40:31
 65,Robson,John,FRA,V,40:33
-66,Roberts,Nigel,U/A,,40:36
+66,Roberts,Nigel,Unattached,,40:36
 67,Cameron,Gordon,Carnethy,V,40:44
 68,Waldie,Brian,Carnethy,SSV,40:51
 69,Reid,Don,Westerlands,V,40:51
 70,Little,Colin,Dumfries,V,40:54
 71,Priestley,Nigel,Annan,V,41:03
 72,Brydon,Chris,East  Kilbride,,41:06
-73,Myatt,Martin,U/A,V,41:12
+73,Myatt,Martin,Unattached,V,41:12
 74,Knowles,Stewart,Fife,V,41:21
 75,Laws,Alison,Carnethy,FJ,41:23
 76,Abraham,Syril,East  Kilbride,,41:29
 77,Finbow,Malcolm,Shettleston,V,41:23
-78,Ferguson,Cameron,U/A,,41:39
-79,Robertson,Stewart,U/A,,41:44
+78,Ferguson,Cameron,Unattached,,41:39
+79,Robertson,Stewart,Unattached,,41:44
 80,Powell,Alison,Carnethy,F,41:49
 81,Pritchard,Colin,Carnethy,SV,41:49
 82,Hunter,Bill,L  & B Police,V,42:24
@@ -86,15 +86,15 @@ RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
 85,Burt,Louise,Fife,F,42:43
 86,Hoffman,Kate,Livingston,F,42:47
 87,Blane,Quinton,Westerlands,V,43:03
-88,Banks,Alastair,U/A,V,43:06
+88,Banks,Alastair,Unattached,V,43:06
 89,Millar,David,Irvine,SV,43:17
-90,Mitchell-Divers,Jason,U/A,,43:23
+90,Mitchell-Divers,Jason,Unattached,,43:23
 91,Gatehouse,Richard,Lomond,V,43:31
-92,Reed,Andrew,U/A,,43:55
+92,Reed,Andrew,Unattached,,43:55
 93,Stewart,Jim,Calderglen,V,44:13
 94,Volwerk,Leen,Lochaber,SV,44:31
 95,Murdoch,Fletcher,Maryhill,SV,44:32
-96,Baird,James,U/A,,44:34
+96,Baird,James,Unattached,,44:34
 97,Clements,Craig,East  Kilbride,,44:41
 98,Macdonald,Debbie,HBT,FV,44:45
 99,Noble,Alastair,Girvan,V,4%:12
@@ -102,7 +102,7 @@ RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
 101,Cross,Bill,Carnethy,V,45:22
 102,McManus,Ian,Irvine,SV,45:45
 103,Wharam,Lynne,Kinross,F,45:55
-104,Huntly,Chris,U/A,V,46:11
+104,Huntly,Chris,Unattached,V,46:11
 105,Cunnane,James,Livingston,,46:15
 106,Weir,Fiona,Livingston,F,46:18
 107,McIntosh,Mhairi,Ochil,F,46:28
@@ -118,14 +118,14 @@ RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
 117,Hunter,Peter,L  & B Police,V,47:29
 118,Gilchrist,Suzanne,Gala,F,47:31
 119,Anderson,Joanne,Carnethy,F,47:32
-120,Douglas,John,U/A,SSV,47:41
+120,Douglas,John,Unattached,SSV,47:41
 121,Anderson,Adam,Solway,SV,48:01
 122,Davidson,Sean,Penicuik,,48:04
 123,Metcalfe,Rachael,Dumfries,F,48:12
 124,Scott,David,HELP,V,48:28
 125,Small,Marjory,Clydesdale,FSV,48:59
 126,Gorman,Richard,Westerlands,SV,49:03
-127,Wilson,Stuart,U/A,,49:11
+127,Wilson,Stuart,Unattached,,49:11
 128,Brodie,Ian,Portobello,V,50:03
 129,Bennet,Bill,Penicuik,SSV,50:08
 130,Murray,Helen,Livingston,F,50:33
@@ -136,13 +136,10 @@ RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
 135,Pearson,Mike,Carnethy,SV,53:01
 136,Haddow,Ken,Carnethy,,53:41
 137,Micalizzi,Serena,Carnethy,F,54:37
-138,Stan,Aurada,U/A,,55:21
+138,Stan,Aurada,Unattached,,55:21
 139,Robertson,Richard,Carnethy,SSV,56:57
 140,Paul,Gillian,Carnethy,FV,57:02
 141,Knox,Lindsay,Teviotdale,F,57:11
 142,Williams,Anne-Marie,Carnethy,F,63:33
 143,Drouet,Paula,Carnethy,FV,63:33
-144,Allan,Eileen,U/A,F,73:03
-,Jennison,Noreen,Westerlands,FV,DNF
-,Holliday,Kevin,Cosmic,,DNF
-,Powell,Karen,Carnethy,F,DNF
+144,Allan,Eileen,Unattached,F,73:03

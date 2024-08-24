@@ -17,7 +17,7 @@ RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
 16,Longmore,Rory,Annan,,37:32
 17,Dytch,Andy,Clydesdale,,37:43
 18,Asher,Stewart,Fife,,38:13
-19,Perry,Campbell,U/A,,38:17
+19,Perry,Campbell,Unattached,,38:17
 20,N/A,N/A,,,38:22
 21,Nicol,Roy,Fife,,38:24
 22,Stapley,Tony,Fife,V,38:29
@@ -53,16 +53,16 @@ RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
 52,Marshall,Ian,HBT,,42:59
 53,Stevenson,G.,Annan,,43:12
 54,Ogston,M.,HBT,,43:20
-55,Murphy,J.,U/A,,
+55,Murphy,J.,Unattached,,
 56,McGillivray,A.,Fife,V,
-57,Blane,Q.,U/A,,
+57,Blane,Q.,Unattached,,
 58,Barton,Jim,Carnethy,V,
 59,Menhennet,Pete,Bellahouston,,
 60,Reglinski,S.,Fife,,
 61,Begley,T.,Irvine,J,
 62,Pryde,Gordon,Clydesdale,,
 63,Jordon,Tim,DHSS,,
-64,Menhennet,Chris,Bellahouston,F,
+64,Menhennet,Christine,Bellahouston,F,
 65,Owens,Denis,Carnethy,V,44:01
 66,Whalley,Christine,Livingston,F,44:16
 67,Harper,C.,Dollar,J,44:28
@@ -75,39 +75,27 @@ RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
 74,Peck,Dave,Carnethy,V,47:04
 75,Campbell,J.,Irvine,,47:05
 76,Smith,A.,Lothian & B Police,,47:28
-77,Dickson,G.,U/A,,47:29
+77,Dickson,G.,Unattached,,47:29
 78,Anderson,W.,Lasswade,,47:55
 79,Duncan,E.,Dollar,,48:02
-80,Gray,Jim,U/A,,48:04
-81,Large,J.,U/A,,48:38
+80,Gray,Jim,Unattached,,48:04
+81,Large,J.,Unattached,,48:38
 82,Baird,S.,Irvine,J,48:39
 83,Ellis,G.,Law & District,,48:42
-84,Lucchesi,A.,U/A,,48:55
+84,Lucchesi,A.,Unattached,,48:55
 85,Doig,F.,Irvine,,49:01
 86,Bowden,A.,Annan,J,49:20
-87,N/A,N/A,,,49:30
+87,,,,,49:30
 88,Brown,D.,Livingston,,50:57
 89,White,J.,Law & District,,52:04
 90,Allan,T.,Bellahouston,,52:45
 91,Smith,D.,St. Andrews,,52:53
-92,Carter,A.,U/A,V,52:57
+92,Carter,A.,Unattached,V,52:57
 93,Begg,M.,Calderglen,,55:12
 94,Robertson,Richard,Carnethy,V,55:52
-95,Macdonald,C.,U/A,,56:34
+95,Macdonald,C.,Unattached,,56:34
 96,Biggart,L.,Bellahouston,F,58:12
-97,Morrison,D.,U/A,,59:09
-98,Blake,Pippa,U/A,F,60:43
+97,Morrison,D.,Unattached,,59:09
+98,Blake,Pippa,Unattached,F,60:43
 99,Fairlie,Hilary,Carnethy,F,
 100,Webb-Bowen,John,Edin West,SV,86:38
-,N/A,N/A,,,
-,:,Due,Due to the exceptionly bad weather the following were not recorded at the finish :,Due to the exceptionly bad weather the following were not recorded at the finish :,Due to the exceptionly bad weather the following were not recorded at the finish :
-,Cation,Frank,Fife,,
-,Stirling,A.,Falkirk V,,
-,Mackie,D.,Irvine,,
-,Duggan,E.,Law & District,,
-,Mennie,G.,Calderglen,,
-,Rose,N.,Forth Valley,,
-,Ellis,R.,Law & District,,
-,Knox,Bill,Teviotdale,,
-,Shiell,Doug,Peebles,,
-,N/A,N/A,,,
