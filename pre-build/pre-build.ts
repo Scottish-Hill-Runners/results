@@ -11,11 +11,21 @@ function progress(message: string): void {
 }
 
 function formatTime(time: string): string {
-  const match = time.match(/(\d?\d)[:\.h](\d\d)(?:[:\.m](\d\d))?/);
+  const match = time.match(/(\d?\d)[:\.h](\d\d)(?:[:\.m](\d\d))?/i);
   if (match) {
-    if (match[3])
-      return `${match[1].padStart(2, "0")}:${match[2]}:${match[3]}`;
-    return `00:${match[1].padStart(2, "0")}:${match[2]}`;
+    let hours: number, minutes: number, seconds: number;
+    if (match[3]) {
+      hours = parseInt(match[1]);
+      minutes = parseInt(match[2]);
+      seconds = parseInt(match[3]);
+    } else {
+      minutes = parseInt(match[1]);
+      seconds = parseInt(match[2]);
+      hours = Math.floor(minutes / 60);
+      minutes -= hours * 60;
+    }
+
+    return `${hours}`.padStart(2, "0") + ":" + `${minutes}`.padStart(2, "0") + ":" + `${seconds}`.padStart(2, "0");
   }
 
   return 'n/a'; // Compares less than any hh:mm:ss time.
