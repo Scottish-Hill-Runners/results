@@ -15,7 +15,7 @@
   },
   "devDependencies": {
     "@sveltejs/adapter-static": "^2.0.3",
-    "@sveltejs/kit": "^1.27.2",
+    "@sveltejs/kit": "^1.30.4",
     "@tailwindcss/typography": "^0.5.10",
     "@types/markdown-it": "^13.0.5",
     "autoprefixer": "^10.4.16",
