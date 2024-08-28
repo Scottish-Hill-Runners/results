@@ -29,10 +29,10 @@ Year,Pos,Name,Club,Time,Cat
 1997,28,Yvette Hague,Pudsey and Bramley Athletic Club,3:08:00,F
 1997,29,Brian Waldie,Carnethy HRC,3:08:44,MS
 1997,30,John Donnely,Shettleston Harriers,3:09:21,M
-1997,31,Mark Johnston,Carnetey Hr,3:10:10,M
+1997,31,Mark Johnston,Carnethy HRC,3:10:10,M
 1997,32,Stewart Whitlie,Standard Life Athletic Club,3:10:50,M
-1997,34,Gavin Stewart,Carnetby Fir,3:11:09,M
-1997,36,Timothy Nash,Cosmic Eillbasflers,3:11:47,M
+1997,34,Gavin Stewart,Carnethy HRC,3:11:09,M
+1997,36,Timothy Nash,Cosmic Hill Bashers,3:11:47,M
 1997,37,Garry Owens,Northumberland Fell Runners,3:11:49,MV
 1997,38,Nicola Davies,Borrowdale Fell Runners,3:12:53,FV
 1997,39,John Stevenson,Ochil Hill Runners,3:14:08,M
@@ -40,12 +40,12 @@ Year,Pos,Name,Club,Time,Cat
 1997,41,John Emeleus,Clydeside Orienteers,3:16:03,M
 1997,42,Duggie Gillespie,Gallows,3:16:58,M
 1997,43,Andy Pearle,Cosmic Hill Bashers,3:17:27,M
-1997,44,Ben Stansfield,Forth Valley Oriente,3:17:37,M
+1997,44,Ben Stansfield,Forth Valley Orienteer,3:17:37,M
 1997,45,Joe Holden,Fife Athletic Club,3:19:11,MS
 1997,46,Guy Woolnough,Kendal Athletic Club,3:19:52,MV
-1997,47,Martin Huline,Kwik-fit Corstorphin,3:20:23,MV
+1997,47,Martin Huline,Kwik-fit Corstorphine,3:20:23,MV
 1997,48,William Hykura,Carnethy HRC,3:20:33,M
-1997,49,Johnny Clark,Oceil Hill Runners,3:20:59,M
+1997,49,Johnny Clark,Ochil Hill Runners,3:20:59,M
 1997,50,Murdo F Macleod,Westerlands,3:21:01,MV
 1997,51,Paul Caban,Ferr,3:21:02,M
 1997,52,Paul McClintock,Gallows,3:21:15,M
@@ -81,7 +81,7 @@ Year,Pos,Name,Club,Time,Cat
 1997,82,John Quine,Kendal Athletic Club,3:37:42,M
 1997,83,Peter Baxter,Westerlands Cross Country Club,3:38:23,MV
 1997,84,Tony Ritchie,Westerlands Cross Country Club,3:38:41,MS
-1997,85,Robert Daly,Cosmic Rillbashers,3:39:13,M
+1997,85,Robert Daly,Cosmic Hill Bashers,3:39:13,M
 1997,86,Dennis McDonald,Cosmic Hill Bashers,3:40:41,M
 1997,87,Joanna McClintock,Gallows,3:40:47,F
 1997,88,Eua Moody,Northumberland Fell Runners,3:42:19,F
@@ -95,8 +95,8 @@ Year,Pos,Name,Club,Time,Cat
 1997,96,Paramjit J Bhogal,Abbey Runners,3:47:40,M
 1997,97,Ian Donnelly,Law And District,3:47:45,MS
 1997,98,Steve Briggs,Ochil Hill Runners,3:48:34,M
-1997,99,Andrew White,Cosmic Hillbasbers,3:48:49,M
-1997,100,John Littlewood,Carnethy Br,3:48:57,MS
+1997,99,Andrew White,Cosmic Hill Bashers,3:48:49,M
+1997,100,John Littlewood,Carnethy HRC,3:48:57,MS
 1997,101,Katy Boocock,Cosmic Hill Bashers,3:48:58,F
 1997,102,Glyn Jones,Gallows,3:48:58,MS
 1997,103,Eddie DeÃ ltry,Ochil Hill Runners,3:49:03,MV
@@ -107,14 +107,14 @@ Year,Pos,Name,Club,Time,Cat
 1997,108,Neil Dyson,Mandale Harriers,3:52:03,MS
 1997,109,Nigel Rose,Carnethy HRC,3:54:22,MS
 1997,110,Andy Wadsworth,Hunters Bog Trotters,3:54:25,M
-1997,111,Marqarte Stafford,Cosmic Hill Bashers,3 55:15,FV
+1997,111,Marqarte Stafford,Cosmic Hill Bashers,3:55:15,FV
 1997,112,Ian McNulty,Dundee Hawkhill Harriers,3:56:52,M
 1997,113,Eucarne Matuzane,Cosmic Hill Bashers,3:57:17,F
 1997,114,Kenneth McGuire,Fife Athletic Club,3:57:23,MV
 1997,115,Frank Cation,Fife Athletic Club,3:57:34,MV
 1997,116,Andrew Johnson,Cosmic Hill Bashers,4:00:20,M
 1997,117,Drew Turnbull,Westerlands Cross Country Club,4:01:17,M50
-1997,118,Maurice Paxton,Perth Stratetay,4:02:07,MV
+1997,118,Maurice Paxton,Perth Strathtay,4:02:07,MV
 1997,119,Jim Paxton,Gala Harriers,4:02:07,MV
 1997,120,Alastair Matthewson,Livingston and District Athletic Club,4:02:19,M
 1997,121,Trevor Collins,Carnethy HRC,4:04:35,MV
@@ -124,7 +124,7 @@ Year,Pos,Name,Club,Time,Cat
 1997,125,Ralph Burton,Unattached,4:06:03,MS
 1997,126,Malcolm MacLachian,Carnethy HRC,4:09:05,MS
 1997,127,Norman Dunning,Unattached,4:09:50,MV
-1997,128,Elaine Stewart,Cosmic Hillbasiiers,4:10:24,FV
+1997,128,Elaine Stewart,Cosmic Hill Bashers,4:10:24,FV
 1997,129,Diana Turner,Solway Orienteers,4:13:03,FV
 1997,130,Angela Wood,Standard Life Athletic Club,4:13:45,FV
 1997,131,Richard Gatehouse,Lomond Hill Runners,4:14:23,MV
@@ -132,8 +132,8 @@ Year,Pos,Name,Club,Time,Cat
 1997,133,Gavin Struthers,Westerlands Cross Country Club,4:15:28,MV
 1997,134,Jean Cairns,Westerlands Cross Country Club,4:16:12,FV
 1997,135,Eric Dodd,Strathtay Harriers,4:17:03,M
-1997,136,Marjorie Small,Clydesdale Harriers,4:17:2O,FV
-1997,137,Keith Greenwood,Cosmic H1llbashers,4:20:38,MV
+1997,136,Marjorie Small,Clydesdale Harriers,4:17:20,FV
+1997,137,Keith Greenwood,Cosmic Hill Bashers,4:20:38,MV
 1997,138,Alison West,Carnethy HRC,4:20:54,FV
 1997,139,Jane Saul,Northumberland Fell Runners,4:22:16,F
 1997,140,Jimmy Tomlin,Horpeth,4:24:19,MV
