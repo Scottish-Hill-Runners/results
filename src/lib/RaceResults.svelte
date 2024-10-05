@@ -1,7 +1,7 @@
 <script lang="ts">
   import { page } from '$app/stores';
   import { Button, Chart, Checkbox, Dropdown, DropdownItem, Heading, Hr, Input, P, Popover, Search, Tabs, TabItem, A } from 'flowbite-svelte';
-  import { ChevronDownSolid, GithubSolid } from 'flowbite-svelte-icons';
+  import { CaretDownSolid, GithubSolid } from 'flowbite-svelte-icons';
   import { metric, imperial } from '$lib/units';
   import VirtualTable from '$lib/VirtualTable.svelte';
 
@@ -184,14 +184,14 @@
 
   <TabItem open title="Results">
     <div class="w-full md:w-auto flex flex-col md:flex-row space-y-2 md:space-y-0 items-stretch md:items-center md:space-x-3 flex-shrink-0">
-      <Button>Year: {year}<ChevronDownSolid class="w-3 h-3 ml-2 text-white dark:text-white" /></Button>
+      <Button>Year: {year}<CaretDownSolid class="w-3 h-3 ml-2 text-white dark:text-white" /></Button>
       <Dropdown bind:open={yearOpen}>
         {#each ['All', ...allYears] as year}
           <DropdownItem on:click={() => changeYear(year)}>{year}</DropdownItem>
         {/each}
       </Dropdown>
       
-      <Button>Category: {category}<ChevronDownSolid class="w-3 h-3 ml-2 text-white dark:text-white" /></Button>
+      <Button>Category: {category}<CaretDownSolid class="w-3 h-3 ml-2 text-white dark:text-white" /></Button>
       <Dropdown bind:open={categoryOpen}>
         {#each ['All', ...allCategories] as cat}
           <DropdownItem on:click={() => changeCategory(cat)}>{cat}</DropdownItem>
@@ -199,7 +199,7 @@
       </Dropdown>
 
       <Button>
-          Club{clubs.length == 0 ? ": All" : `: ${clubs[0] + (clubs.length > 1 ? ` (+${clubs.length - 1})` : '')}` }<ChevronDownSolid class="w-3 h-3 ml-2 text-white dark:text-white" />
+          Club{clubs.length == 0 ? ": All" : `: ${clubs[0] + (clubs.length > 1 ? ` (+${clubs.length - 1})` : '')}` }<CaretDownSolid class="w-3 h-3 ml-2 text-white dark:text-white" />
       </Button>
       <Dropdown bind:open={clubsOpen} class="overflow-y-auto px-3 pb-3 text-sm h-44">
         <div slot="header" class="p-3 {allClubs.length < 10 ? "hidden" : ""}">

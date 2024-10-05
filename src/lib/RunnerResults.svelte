@@ -1,7 +1,7 @@
 <script lang="ts">
   import { page } from '$app/stores';
   import { Alert, Banner, Button, Chart, Checkbox, Dropdown, Heading, Tabs, TabItem } from 'flowbite-svelte';
-  import { ChevronDownSolid } from 'flowbite-svelte-icons';
+  import { CaretDownSolid } from 'flowbite-svelte-icons';
   import { metric, imperial } from '$lib/units';
   import { compareCategoryPos } from './compareCategoryPos';
   import VirtualTable from './VirtualTable.svelte';
@@ -95,7 +95,7 @@
   <Tabs>
     <TabItem open title="Results">
       {#if uniqueClubs.size > 1}
-        <Button>Select clubs<ChevronDownSolid class="w-3 h-3 ml-2 text-white dark:text-white" /></Button>
+        <Button>Select clubs<CaretDownSolid class="w-3 h-3 ml-2 text-white dark:text-white" /></Button>
         <Dropdown>
           {#each uniqueClubs as club}
             <li class="rounded p-2 hover:bg-gray-100 dark:hover:bg-gray-600">
