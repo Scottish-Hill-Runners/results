@@ -21,5 +21,5 @@
 </ButtonGroup>
 
 <P>
-  You can also view results <Button href="year">by year</Button>.
+  You can also view results <A href="year">by year</A>.
 </P>

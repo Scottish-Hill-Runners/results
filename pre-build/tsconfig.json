@@ -1,6 +1,10 @@
 {
-  "extends": "../.svelte-kit/tsconfig.json",
-  "compilerOptions": { "allowSyntheticDefaultImports": true },
+  "compilerOptions": {
+    "target": "es2017",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "allowSyntheticDefaultImports": true 
+},
   "include": ["../src/app.d.ts", "pre-build.ts"]
   // Path aliases are handled by https://kit.svelte.dev/docs/configuration#alias
   //
