@@ -29,9 +29,9 @@ RunnerPosition,Name,Club,RunnerCategory,FinishTime
 28,Jelmer Samplonius,Hunters Bog Trotters,M,03:42:52
 29,Colin Williams,Moorfoot Runners,M40,03:44:19
 30,Anton Kobus,Unattached,M,03:45:18
-31,Kirsty Campbell,Deeside Runners,F,03:46:27
-32,Ian Collins,Westerlands,M40,03:46:56
-33,Andrew Stimson,Durham Fell Runners,M40,03:47:26
+31,Kirsty Campbell,Deeside Runners,F,03:46:26
+32,Ian Collins,Westerlands,M40,03:46:27
+33,Andrew Stimson,Durham Fell Runners,M,03:47:26
 34,Steven White,Durham Fell Runners,M,03:54:34
 35,Leo Johnstone,Unattached,M,03:54:38
 36,Ewan Ross,Westerlands,M,04:02:59
@@ -42,14 +42,14 @@ RunnerPosition,Name,Club,RunnerCategory,FinishTime
 41,Keith Murray,Teviotdale Harriers,M60,04:06:09
 42,Michelle Hetherington,Carnethy HRC,F60,04:06:22
 43,Alex Daley,Ochil Hill Runners,M,04:08:00
-44,Luke Mahoney,Westerlands,M,04:08:10
-45,Tom Vasepuru,Ochil Hill Runners,M,04:08:19
+44,Luke Mahoney,Westerlands,M,04:08:19
+45,Tom Vasepuru,Ochil Hill Runners,M,04:08:30
 46,Laura MacDonald,Tinto Hill Runners,F,04:08:30
 47,Paul Foster,Westerlands,M,04:09:30
 48,Rob Lowe,Westerlands,M,04:09:32
 49,Robert Hamlin,Westerlands,M,04:11:13
 50,Tom Gosling,Westerlands,M,04:12:02
-51,Amanda Young,Westerlands,F,04:12:29
+51,Claire Armstrong,Edinburgh AC,F,04:12:29
 52,Dave Dowse,Strathearn Harriers,M40,04:14:03
 53,Stuart Buckett,Fife Athletic Club,M50,04:14:45
 54,Tarun Purba,Unattached,M,04:15:15
@@ -80,16 +80,16 @@ RunnerPosition,Name,Club,RunnerCategory,FinishTime
 79,Gavin Lockie,Cumberland FR,M,04:25:00
 80,Caroline Friel,Unattached,F40,04:25:20
 81,Samuel Stead,Carnethy HRC,M,04:25:45
-82,Dominic Hughes,Dundee RR,M40,04:26:14
+82,Dominic Hughes,Dundee RR,M40,04:26:44
 83,Duncan Lockie,Teviotdale Harriers,M,04:27:00
 84,Christopher Hill,Edinburgh Outdoor Fitness,M55,04:27:57
 85,James Ritchie,Carnethy HRC,M,04:29:40
 86,Thomas Jones,Moorfoot Runners,M40,04:30:32
 87,Will Mueller,Carnethy HRC,M40,04:30:52
-88,Gavin Davies,Unattached,M,04:32:17
-89,Jess Young,Swaledale Runners,F40,04:33:22
+88,Gavin Davies,Unattached,M,04:32:20
+89,Jess Young,Swaledale Runners,F40,04:33:26
 90,Andrew Mott,Westerlands,M40,04:35:37
-91,Craig Walling,Moorfoot Runners,M40,04:36:02
+91,Craig Walling,Moorfoot Runners,M40,04:36:01
 92,Angela Mackenzie,Strathearn harriers,F40,04:42:48
 93,Rodrigo Reis,Shettleston Harriers,NB40,04:43:00
 94,Tom McKenna,Hunters Bog Trotters,M,04:43:16
@@ -104,18 +104,18 @@ RunnerPosition,Name,Club,RunnerCategory,FinishTime
 103,Iain Young,Unattached,M,04:46:20
 104,Michael Mcvie,Unattached,M40,04:46:25
 105,Mark Keast,Musselburgh and D. AC,M40,04:46:50
-106,Kate Sealy,Unattached,F40,04:47:20
+106,Kate Sealy,Unattached,F,04:47:20
 107,Matthew Scott,Derwent Valley RC,M,04:49:19
 108,Mark Henderson,Kilmarnock Harriers,M,04:49:23
 109,Alexandra Campbell,Moorfoot Runners,F,04:49:56
 110,Teun Krikke,Unattached,M,04:49:59
-111,Chris Furse,Westerlands,M55,04:52:28
+111,Chris Furse,Westerlands,M55,04:52:31
 112,Dave More,Unattached,M40,04:56:13
-113,James Purves,Gala Harriers,M65,04:56:40
+113,James Purves,Gala Harriers,M65,04:56:30
 114,Kevin Murray,Falkland Trail Runners,M55,04:57:21
 115,Mark Ostheimer,Hunters Bog Trotters,M40,04:58:18
-116,Julian Barrable,Corstorphine AAC,M,04:58:54
-117,Kevin Davie,Carnegie Harriers,M40,04:59:06
+116,Kevin Davie,Carnegie Harriers,M40,04:58:54
+117,Amanda Young,Westerlands,F,04:59:06
 118,John Donnelly,Westerlands,M60,04:59:45
 119,Alistair Crawford,Carnethy HRC,M50,05:00:02
 120,Michel Gebre,Unattached,M40,05:01:44
@@ -136,6 +136,6 @@ RunnerPosition,Name,Club,RunnerCategory,FinishTime
 135,Tim Crowe,Unattached,M,05:26:28
 136,Rachel MacFarlane,Unattached,F,05:29:30
 137,Thomas Jones,Unattached,M,05:33:28
-138,Mike Goddard,Moorfoot Runners,M70,05:49:33
+138,Mike Goddard,Moorfoot Runners,M75,05:49:33
 139,Jasmine Brown,Hunters Bog Trotters,F,05:53:46
 140,Paul Lockie,Teviotdale Harriers,M55,05:58:01
