@@ -1,0 +1,190 @@
+FinishPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
+1,Knowles,Matthew,Carnethy HRC,MS,00:32:09
+2,Bunn,David,Carnethy HRC,MS,00:32:45
+3,Cooper,Kieran,Carnethy HRC,MS,00:33:20
+4,Balogh,Csoban,Carnethy HRC,MS,00:33:31
+5,Pulham,Harry,Shettleston Harriers,MS,00:33:42
+6,Leitch,Samuel,Edinburgh Athletic Club,MS,00:33:59
+7,Walker,William,Clayton Le Moors Harriers,MS,00:34:09
+8,Gunning,Sam,Vale of York,MS,00:34:30
+9,Lawson,David,Shettleston Harriers,MS,00:35:15
+10,Callan,Thomas,Wellington SAC,MS,00:35:30
+11,Dry,Jonny,Unattached,MS,00:35:37
+12,Hughes,Richie,Carnethy HRC,MS,00:36:32
+13,Umpleby,Richard,Carnethy HRC,M40,00:36:50
+14,Murison,Callum,Carnethy HRC,MS,00:36:54
+15,Lennox,Jethro,Shettleston Harriers,M40,00:37:00
+16,Thom,Samuel,Unattached,MS,00:37:03
+17,Grant,Chris,Shettleston Harriers,M40,00:37:05
+18,Sedman,Eliot,Carnethy HRC,M40,00:37:18
+19,Park,Adam,Hartfell HRC,MS,00:37:22
+20,McConnell,Morgan,Hartfell HRC,MS,00:37:39
+21,Stevens,Ben,Carnethy HRC,MS,00:37:43
+22,Brattle,Jonny,Carnethy HRC,MS,00:37:51
+23,Pow,Grace,Carnethy HRC,FS,00:37:52
+24,Anthony,Alasdair,Unattached,M40,00:38:01
+25,Pedley,Alasdair,Carnethy HRC,MS,00:38:29
+26,Valters,Declan,Carnethy HRC,MS,00:38:41
+27,Lamont,Andrew,Carnethy HRC,M40,00:38:47
+28,Tweedie,Craig,Unattached,M50,00:38:57
+29,Hetherington,Sandy,Carnethy HRC,MS,00:39:05
+30,Wheeler,Gareth,Carnethy HRC,MS,00:39:14
+31,Horne,Arran,Westerlands CCC,MS,00:39:19
+32,Stead,Samuel,Carnethy HRC,MS,00:39:36
+33,Clarkson,Alex,Shettleston Harriers,MS,00:39:42
+34,Cox,Andrew,Gala Harriers,M40,00:39:50
+35,Barnes,Hannah,Unattached,FS,00:40:06
+36,Robinson,Mike,Dark Peak FR,M50,00:40:43
+37,Duncan,Eric,Highland Hill Runners,M50,00:40:51
+38,Allsop,David,Kirkintilloch Olympians,M50,00:40:52
+39,McAlinden,Niall,Westerlands CCC,M40,00:41:04
+40,Downs,Ellen,Westerlands CCC,FS,00:41:08
+41,Whitlie,Stewart,Carnethy HRC,M60,00:41:15
+42,Quimby,Iain,Unattached,M40,00:41:36
+43,Kennedy,Anna,Carnethy HRC,FS,00:41:50
+44,Booth,Phil,Unattached,MS,00:42:06
+45,Coull,Craig,Central AC,MS,00:42:12
+46,Foster,Paul,Westerlands CCC,MS,00:42:28
+47,Johnston,Mark,Carnethy HRC,M50,00:42:32
+48,Forrester,Michael,Unattached,M40,00:42:35
+49,Forrester,Brendan,Unattached,MS,00:42:35
+50,Campbell,Joseph,Unattached,MS,00:42:38
+51,Taggart,David,Hamilton Harriers,M40,00:42:41
+52,Knox,Jonny,Anster Haddies,M60,00:42:59
+53,Crowe,Des,Penicuik Harriers,M60,00:43:03
+54,Evans,Noah,Westerlands CCC,MS,00:43:26
+55,Rigby,James,Carnethy HRC,MS,00:43:33
+56,Wilson,Malcolm,Westerlands CCC,MS,00:43:54
+57,Anderson,Micky,Westerlands CCC,M60,00:44:02
+58,Gilmore,Neil,Carnethy HRC,M60,00:44:04
+59,Manders,Innes,Unattached,MS,00:44:19
+60,Delaney,Michael,Westerlands CCC,MS,00:44:29
+61,Robinson,Hazel,Keswick AC,F50,00:44:36
+62,Reid,Don,Westerlands CCC,M60,00:44:41
+63,Longair,Kev,Unattached,M40,00:44:47
+64,McCallum,Mark,Unattached,M40,00:44:50
+65,Murray,Keith,Teviotdale Harriers,M60,00:44:56
+66,Humble,Felton,Westerlands CCC,M40,00:44:59
+67,Ledingham,Georgia,Carnethy HRC,FS,00:45:13
+68,Smith,John,Lomond Hill Runners,M50,00:45:14
+69,Richards,Amy,Westerlands CCC,FS,00:45:27
+70,Barnes,Jason,Unattached,M50,00:45:37
+71,MacDonald,Ally,Bellahouston RR,M60,00:45:44
+72,Gielty,Shane,Unattached,M40,00:45:49
+73,Plummer,Kevin,Hartfell HRC,M60,00:45:55
+74,Smith,Alan,Deeside Runners,M60,00:45:58
+75,Forrest,Stuart,Highland Hill Runners,M40,00:46:01
+76,Blackett,Joe,Dark Peak FR,M60,00:46:02
+77,Fitzpatrick,Bryan,Dunoon Hill Runners,M40,00:46:05
+78,Ball,Duncan,Penicuik Harriers,M60,00:46:07
+79,Coombs,Nathan,Carnethy HRC,M40,00:46:10
+80,Mathieson,Stuart,Bellahouston RR,M40,00:46:15
+81,Davis,Adrian,Lomond Hill Runners,M60,00:46:27
+82,Arnott,Luke,Westerlands CCC,M50,00:46:29
+83,Davies,Padrig,Outlier Run Club,MS,00:46:30
+84,Sandhu,Kal,Westerlands CCC,MS,00:46:35
+85,Forsyth,Catriona,Carnethy HRC,FS,00:46:40
+86,Malcolmson,Craig,Hartfell HRC,M60,00:46:41
+87,Farrell,Tom,West Edinburgh RC,MS,00:46:43
+88,Brown,Gareth,North Ayrshire AC,M40,00:46:44
+89,Ingram,Claire,Hartfell HRC,F40,00:46:45
+90,Czerwonka,Andrzej,Unattached,MS,00:46:46
+91,Knox,Rosie,Carnethy HRC,FS,00:46:47
+92,Heron,Rosalind,Carnethy HRC,FS,00:46:55
+93,Dickson,Madeleine,Unattached,FS,00:46:58
+94,Renville,Alan,Carnethy HRC,M50,00:47:00
+95,Banford,Alison,Hartfell HRC,F40,00:47:02
+96,Morrison,Sean,Unattached,M50,00:47:04
+97,Andrew,Alastair,Haddington RC,M40,00:47:39
+98,Lever,Scott,Unattached,MS,00:47:45
+99,McKeever,Leo,Carnethy HRC,MS,00:47:54
+100,Knox,Lizzie,Carnethy HRC,FS,00:48:05
+101,Mooney,Edel,Ochil Hill Runners,F50,00:48:09
+102,McCallum,Alasdair,North Ayrshire AC,M60,00:48:24
+103,Dickson,David,Westerlands CCC,M60,00:48:27
+104,von,Arno,Carnethy HRC,MS,00:48:35
+105,McKay,Craig,Hartfell HRC,M60,00:48:42
+106,Meldrum,Alasdair,Ayr Seaforth,M50,00:48:44
+107,Glasgow,Steven,Westerlands CCC,MS,00:49:02
+108,Stevenson,John,Ochil Hill Runners,M60,00:49:09
+109,Gielty,Elliott,Unattached,FS,00:49:09
+110,Williams,Hannah,Carnethy HRC,FS,00:49:24
+111,Price,Daniel,Westerlands CCC,M40,00:49:38
+112,Furse,Chris,Westerlands CCC,M50,00:50:32
+113,Diver,Michael,Clydesdale Harriers,M50,00:50:38
+114,Woods,Ben,Unattached,M40,00:50:43
+115,Morrison,Colin,Unattached,M50,00:50:48
+116,Campbell,Alison,Westerlands CCC,F40,00:51:07
+117,McElearney,Barry,Unattached,M50,00:51:12
+118,Calder,David,Westerlands CCC,M60,00:51:25
+119,Macrae,Morag,Carnethy HRC,F50,00:51:40
+120,White,David,Kilmarnock Harriers,M50,00:51:45
+121,Brogan,Neil,Unattached,M40,00:51:51
+122,Comrie,Fiona,North Ayrshire AC,F50,00:51:53
+123,Ridges,Peter,Carnethy HRC,M60,00:51:54
+124,Gooch,Andrew,Tinto Hill Runners,M40,00:52:00
+125,Hodge,Duncan,Unattached,MS,00:52:11
+126,Ritchie,Lucy,Carnethy HRC,FS,00:52:16
+127,Denvir,Martin,Unattached,M60,00:52:20
+128,McClure,Julia,Westerlands CCC,FS,00:52:23
+129,Paul,Rachael,Carnethy HRC,FS,00:52:46
+130,Macdonald,Robyn,Lothian Running Club,FS,00:52:54
+131,Weil,Esther,Carnethy HRC,FS,00:53:04
+132,Penot,Anne-Maelle,Carnethy HRC,FS,00:53:07
+133,Shaw,Trevor,Lochtayside,M60,00:53:11
+134,Boley,Michelle,Hartfell HRC,FS,00:53:28
+135,Ansell,Jonathan,Westerlands CCC,MS,00:53:32
+136,Mulholland,Arthur,Unattached,M60,00:53:39
+137,Pemberton,Joanne,Westerlands CCC,FS,00:53:44
+138,Peebles,Jenny,Westerlands CCC,F40,00:53:46
+139,Arnott,Davinia,Unattached,F40,00:53:50
+140,Thompson,Fabienne,Lomond Hill Runners,F50,00:54:01
+141,Brown,Donald,Lomond Hill Runners,M50,00:54:02
+142,Grimes,Jack,Unattached,MS,00:54:12
+143,Freeman,Poppy,Carnethy HRC,FS,00:54:16
+144,Kirk,Thomas,Unattached,MS,00:54:31
+145,Gordon,Robert,Dumfries RC,M50,00:54:35
+146,Coombs,Kirsty,Unattached,FS,00:54:51
+147,Pugh,Roderick,Kilmarnock Harriers,M60,00:54:57
+148,Pflanz,Sebastian,Dumfries RC,M60,00:55:02
+149,Smithard,Alison,Ochil Hill Runners,F40,00:55:06
+150,Coiley,Beth,Carnethy HRC,FS,00:55:22
+151,Heycock,Lucy,Hartfell HRC,F50,00:55:29
+152,Walker,Sean,Carnethy HRC,M50,00:55:46
+153,Donnelly,John,Westerlands CCC,M60,00:55:58
+154,Wilson,Joan,Lomond Hill Runners,F60,00:56:03
+155,McIntyre,Morag,Carnethy HRC,F60,00:56:16
+156,Plenderleith,John,Tinto Hill Runners,MS,00:56:17
+157,Heron,Ceana,Shettleston Harriers,FS,00:56:22
+158,Macvarish,Christine,Lothian Running Club,F50,00:56:32
+159,Kidman,Phil,Dunoon Hill Runners,M60,00:56:44
+160,Ness,David,Unattached,M50,00:56:51
+161,Innes,Nicki,Carnethy HRC,F50,00:56:59
+162,Johnson,Simon,Ochil Hill Runners,M50,00:57:07
+163,Bradley,Jack,Unattached,MS,00:57:43
+164,MacDonald,Jean,Dunoon Hill Runners,F60,00:57:45
+165,Murdo,William,Unattached,M60,00:57:54
+166,Vincett,Anna,Westerlands CCC,FS,00:58:06
+167,Brannan,Terence,Lothian Running Club,M60,00:58:11
+168,Newell,Mark,Moorfoot Runners,M50,00:58:31
+169,Martin,Fiona,Dunoon Hill Runners,F40,00:58:58
+170,Hetherington,Jo,Unattached,FS,00:59:14
+171,Park,Archibald,Hartfell HRC,M60,00:59:42
+172,Finbow,Gavin,Shettleston Harriers,M40,00:59:53
+173,Graham,Kerry,Dumfries RC,F40,00:59:54
+174,Beveridge,Rebecca,Westerlands CCC,FS,01:01:06
+175,Fullwood,Andrew,Westerlands CCC,M50,01:02:49
+176,Stitt,Sylvia,Unattached,F60,01:04:23
+177,Lindblad,Frida,Unattached,FS,01:05:03
+178,Chandler,Richard,Carnethy HRC,M60,01:05:10
+179,Bisset,Michael,West Edinburgh RC,M50,01:06:52
+180,Williams,Lara,Unattached,FS,01:07:22
+181,Organ,Sarah,Unattached,FS,01:08:08
+182,Jewers,Sarah,Hyde Park Harriers,FS,01:08:09
+183,Park,Sarah-Jane,Unattached,FS,01:09:14
+184,Christopher,Katy,Unattached,FS,01:11:29
+185,Mitchell,David,Kilmarnock Harriers,M50,01:12:07
+186,Wilson,Iain,Dunoon Hill Runners,MS,01:12:35
+187,MacLeod,Ruaraidh,Skye,M40,01:13:55
+188,Stirling,Pauline,Hartfell HRC,F60,01:16:30
+189,Oliver,Maggie,Moorfoot Runners,F50,01:22:38
