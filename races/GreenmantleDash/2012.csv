@@ -1,0 +1,105 @@
+RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
+1,Strain,Murray,HBT,M,0:16:03
+2,Marshall,Brian,HELP,M40,0:17:41
+3,Johnston,Fergus,Carnethy,M,0:18:06
+4,Reid,Michael,Carnethy,M,0:18:38
+5,Parrish,David,Dumfries RC,M,0:18:40
+6,McLeod,Mark,Carnethy,M20,0:18:47
+7,Hart,Al,HBT,M40,0:19:04
+8,Burt,Cameron,Westerlands,M,0:19:10
+9,Ball,Duncan,Penicuik Harriers,M50,0:19:11
+10,Buchanan,Peter,Portobello,M40,0:19:18
+11,Wiseman,Bob,Ochil Hill Runners,M,0:19:25
+12,Bland,Gavin,Borrowdale Fell Runners,M40,0:19:26
+13,Tweedie,Craig,Unattached,M,0:19:26
+14,Heaven,Carl,Carnethy,M20,0:19:33
+15,Gilmore,Andrew,Highland Hill Runners,M20,0:19:35
+16,Geoghegan,Michael,Portobello,M21,0:19:53
+17,Morgan,Charlotte,Carnethy,F,0:20:07
+18,Martin,Steven,Gala Harriers,M40,0:20:29
+19,Brooks,Mike,Penicuik Harriers,M40,0:20:43
+20,Bennet,Sandy,Unattached,M40,0:20:46
+21,Fleming,Rod,Westerlands,M,0:20:47
+22,Gilmore,Neil,Carnethy,M40,0:20:51
+23,Heron,Gregor,Carnethy,M40,0:20:53
+24,Longmore,Rory,Hartfell HRC,M50,0:20:57
+25,White,David,Kilmarnock Harriers,M40,0:21:00
+26,Anderson,Russell,Moorfoot Runners,M50,0:21:04
+27,Maxwell,Ian,Gala Harriers,M50,0:21:13
+28,Nash,Graham,Carnethy,M40,0:21:23
+29,Maxwell,Kirstin,Gala Harriers,F20,0:21:23
+30,Balfour,Eddie,Moorfoot Runners,M40,0:21:30
+31,Wilson,Rob,Penicuik Harriers,M40,0:21:32
+32,Gilmore,Iain,Carnethy,M18,0:21:50
+33,Coopland,Martin,Annan & District AC,M40,0:22:04
+34,Weir,Jonathan,Unattached,M,0:22:08
+35,Robson,John,Annan & District AC,M50,0:22:14
+36,Begley,Tommy,Irvine RC,M40,0:22:23
+37,Paul,Alastair,Northumberland FR,M50,0:22:26
+38,Blair-Fish,John,Carnethy,M60,0:22:29
+39,Patterson,Robert,Unattached,M,0:22:31
+40,Wright,Graham,HBT,M50,0:22:41
+41,Thomas,Ranjit,Dumfries RC,M40,0:22:41
+42,Greig,David,Carnegie Harriers,M40,0:22:42
+43,Connor,Julia,Unattached,F,0:22:44
+44,Smith,Alastair,Dundee Hawkhill,M,0:22:45
+45,Reynolds,Colin,Carnegie Harriers,M40,0:22:52
+46,Sim,Andrew,Carnegie Harriers,M40,0:22:55
+47,Earle,Paddy,Tinto Hill Runners,M50,0:22:56
+48,Little,Mike,Cani-Sports Edinburgh,M40,0:23:23
+49,Gerrie,Bill,Troon Tortoises,M40,0:23:28
+50,Duff,Bill,Falkland Trail Runners,M60,0:23:29
+51,Whitehead,Jonathan,Carnethy,M50,0:23:32
+52,Bowie,Tom,Unattached,M60,0:23:38
+53,Ward,Stewart,Tinto Hill Runners,M40,0:23:45
+54,Binnie,Gordon,Lochaber AC,M40,0:23:57
+55,Stewart,Alister,Tinto Hill Runners,M40,0:24:17
+56,Huntley,Chris,Tinto Hill Runners,M50,0:24:20
+57,Fleming,Gibson,Westerlands,M60,0:24:22
+58,Baker,Duncan,HBT,M50,0:24:22
+59,Greer,Stephen,Carnegie Harriers,M50,0:24:29
+60,McLeod,Andy,ESOC,M50,0:24:34
+61,Slane,Finlay,Lothian,M50,0:24:57
+62,McAdam,Pauline,Teviotdale Harriers,F50,0:25:04
+63,Duncan,David,Ochil Hill Runners,M50,0:25:06
+64,Priestley,Nigel,Annan & District AC,M50,0:25:19
+65,Brown,David,Tinto Hill Runners,M40,0:25:26
+66,Downie,Tim,Ayr Seaforth,M50,0:25:28
+67,Hunter,Mary,Portobello,F40,0:25:34
+68,Downie,Chris,Penicuik Harriers,M50,0:25:47
+69,Ledlie,Colin,Carnethy,M40,0:26:00
+70,Sloan,Robin,Carnethy,M60,0:26:22
+71,Macdougall,Ken,Tinto Hill Runners,M,0:26:27
+72,Wilson,Andrea,Penicuik Harriers,F40,0:26:32
+73,Foss,Chris,Unattached,M40,0:26:38
+74,MacDonald,Deborah,HBT,F50,0:26:47
+75,Dalitz,Rod,Carnethy,M60,0:26:55
+76,Johnstone,Ruth,Portobello,F21,0:26:58
+77,Wesencraft,Janine,Unattached,F40,0:27:00
+78,Wesencraft,David,Unattached,M40,0:27:00
+79,Oliver,Chris,HBT,M60,0:27:04
+80,King,Justin,Unattached,M,0:27:10
+81,McLeod,Christine,Carnethy,F50,0:27:27
+82,Maxwell,Susie,Penicuik Harriers,F,0:27:28
+83,McPherson,Hugh,Tinto Hill Runners,M60,0:27:33
+84,Minto,Johnny,Annan & District AC,M40,0:27:35
+85,Smith,Janice,HBT,F50,0:27:50
+86,Letham,Adam,Tinto Hill Runners,M60,0:27:51
+87,MacDonald,Rory,HBT,M60,0:28:24
+88,Bennet,Lynne,Unattached,F40,0:28:42
+89,Penderleith,Leanne,Unattached,F,0:28:45
+90,Boal,John,Garscube Harriers,M60,0:28:46
+91,Tweedie,Michael,Unattached,M,0:29:03
+92,Robson,Jean,Annan & District AC,F50,0:29:11
+93,Priestley,Janet,Hartfell HRC,F50,0:29:38
+94,Welsh,Fraser,Lothian,M,0:29:49
+95,Stapley,Tony,Portobello,M60,0:29:51
+96,Reynolds,Lesley,Carnegie Harriers,F40,0:29:53
+97,Oddie,Maureen,IOM Vets,F50,0:29:55
+98,Fairley,Bill,Carnegie Harriers,M60,0:30:01
+99,Miller,David,Unattached,M40,0:32:19
+100,Boal,Ann,Garscube Harriers,F50,0:33:30
+101,Zammit,Avril,Jog Scotland,F40,0:34:29
+102,Boal,Cameron,Unattached,M,0:38:30
+103,Hayes,Mary,Unattached,F50,0:39:16
+104,Duncan,Shirley Ann,Jog Scotland,F,0:40:50

@@ -1,0 +1,106 @@
+RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
+1,Brown,Ewan,Corstorphine,M,0:40:46
+2,Crickmore,Jonathan,HBT,M,0:41:08
+3,Fraser,Scott,HBT,M,0:41:48
+4,Gristwood,Graham,Ochil Hill Runners,M,0:42:13
+5,Martyn,Tom,HBT,M,0:42:48
+6,Braby,Liam,Carnethy,M,0:43:18
+7,Waldie,James,HBT,M,0:44:11
+8,Park,Luke,HBT,M,0:45:18
+9,Carter,Justin,Cambuslang Harriers,M45,0:45:41
+10,Gardner,Peter,HBT,M,0:46:19
+11,Elder,David,Lomond Hill Runners,MU23,0:47:39
+12,Stubbs,Harrison,Westerlands,M,0:47:40
+13,Gray,Adam,Penicuik Harriers,M,0:48:02
+14,Smith,Gavin,HBT,M35,0:48:34
+15,Marks,Jonathon,Carnethy,M,0:48:40
+16,Tresidder,Es,Lochaber AC,M35,0:48:43
+17,Warman,Julian,HBT,M50,0:49:13
+18,Elliotte,Tom,Westerlands,M,0:49:18
+19,Busby,Chris,Carnethy,M,0:49:27
+20,Callender,James,Westerlands,M,0:49:27
+21,Walsh,Chris,Unattached,M35,0:49:31
+22,Sims,Andrew,HBT,M40,0:49:48
+23,Hayward,Adam,Moorfoot Runners,M,0:50:02
+24,Riggans,Liam,Carnethy,M,0:50:52
+25,Ashworth,James,Ochil Hill Runners,M45,0:51:00
+26,Williams-Duncan,Samuel,Dark Peak,M,0:51:12
+27,Morrison,Sandy,Carnethy,M,0:51:31
+28,Scott,Vivian,Unattached,M,0:51:39
+29,Lawson,David,Unattached,M40,0:51:42
+30,Taylor,Lewis,Ochil Hill Runners,M,0:52:04
+31,Greenald,David,HBT,M,0:52:17
+32,Hooper,Mark,Carnethy,M,0:52:34
+33,Elder,Callum,Perth Road Runners,M,0:53:11
+34,Jones,Huw,HBT,M35,0:53:19
+35,Thomson,Iain,Lomond Hill Runners,M,0:53:29
+36,Dudchenko,Paul,Linlithgow Harriers,M50,0:53:59
+37,Smith,Bruce,Carnethy,M50,0:54:08
+38,Williams,Paul,Westerlands,M,0:54:13
+39,Scott,Finian,Unattached,M,0:54:26
+40,Nicoll,Andy,Unattached,M,0:54:48
+41,Weir,Jonathan,Unattached,M40,0:54:50
+42,McCaffrey,Gordon,Westerlands,M60,0:54:52
+43,Thurlbeck,Ian,Westerlands,M50,0:54:55
+44,Kennedy,Brian,Carnethy,M40,0:55:13
+45,Heron,Kyle,Stag Orienteers,M,0:55:28
+46,Normand,Ivor,HBT,M50,0:55:31
+47,Rushton,Ben,Carnethy,M,0:55:34
+48,McKiddie,Christopher,Westerlands,M35,0:55:37
+49,Wright,Martyn,Unattached,M,0:56:25
+50,Anderson,Ross,Westerlands,M,0:56:38
+51,Forgie,Ryan,Carnethy,M,0:56:42
+52,Cooper,Sinclair,Unattached,M,0:56:47
+53,Furse,Chris,Westerlands,M50,0:56:50
+54,Gillies,Sam,Unattached,M,0:57:03
+55,Wardner,Matthew,Carnethy,M50,0:57:27
+56,Thompson,James,Shettleston Harriers,M,0:57:43
+57,Beard,Romy,Westerlands,F35,0:57:59
+58,Brodie,Stuart,Ochil Hill Runners,M,0:58:10
+59,Mason,David,Linlithgow Harriers,M50,0:58:13
+60,Walling,Chris,Unattached,M,0:58:19
+61,Moss,William,HBT,M,0:58:23
+62,Mitchell,Rory,Harmeny AC,M40,0:58:56
+63,Crawford,Ross,Unattached,M40,0:59:06
+64,Galloway,Trevor,Linlithgow Harriers,M50,0:59:17
+65,Codera Campos,Marc,Unattached,M,0:59:24
+66,Cotter,Rickie,Unattached,F,0:59:48
+67,Taylor,Gordie,Lochaber AC,M50,1:00:07
+68,Pound,Oliver,Portobello,M,1:00:41
+69,Pugh,Roderick,Kilmarnock Harriers,M60,1:01:12
+70,Mollard,Pascaline,Ferranti AC,F,1:01:20
+71,Simpson,Iain,Falkland Trail Runners,M45,1:01:49
+72,Rodney,Laurence,Unattached,M35,1:02:15
+73,Eadsforth,Holly,Westerlands,F,1:02:23
+74,Conolly,Richard,Carnethy,M45,1:02:43
+75,Burberry,Erica,HELP,F,1:02:52
+76,Smith,Nick,Unattached,M45,1:02:54
+77,McPartland,Frank,HELP,M60,1:03:08
+78,Hill,Christopher,British Military Fitness,M50,1:03:19
+79,Edwards,Colin,Ochil Hill Runners,M45,1:03:37
+80,Husbands,Jess,HBT,F,1:03:57
+81,Purves,James,Gala Harriers,M60,1:03:59
+82,Duncan,David,Ochil Hill Runners,M60,1:04:09
+83,Coyle,Shaun,Westerlands,M55,1:04:47
+84,Doig,Lindsay,Carnethy,F,1:04:51
+85,Simister,Rebecca,Bellahouston Harriers,F,1:05:01
+86,Sutton-Hibbert,Jeremy,Unattached,M45,1:05:10
+87,Bleakley,Raphael,Unattached,M,1:05:21
+88,Fullwood,Andrew,Westerlands,M50,1:05:59
+89,McMillan,Stuart,Carnethy,M40,1:06:25
+90,Heron,Rosalind,Stag Orienteers,F,1:07:39
+91,Kemp,Sadie,Penicuik Harriers,F40,1:08:04
+92,Sword,Lawrence,Unattached,M50,1:08:32
+93,Downie,Chris,Penicuik Harriers,M55,1:08:58
+94,May,Timothy,ESOC,M55,1:09:34
+95,Bleakley,Elspeth,HBT,F,1:09:40
+96,Cessford,Lee,Falkland Trail Runners,M40,1:10:22
+97,Eadie,Gordon,Carnethy,M60,1:10:31
+98,Park,Archibald,Hartfell HRC,M60,1:11:32
+99,Oliver,David,Deeside Runners,M60,1:12:49
+100,McPherson,Hugh,Tinto Hill Runners,M70,1:14:27
+101,Heron,Ceana,Stag Orienteers,F,1:16:12
+102,Campbell,Ian,HBT,M50,1:17:39
+103,Strain,Sheila,HBT,F70,1:17:53
+104,Oliver,Jane,Deeside Runners,F60,1:26:47
+105,Delf,Richard,Carnethy,M,1:29:29

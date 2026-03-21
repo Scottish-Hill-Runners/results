@@ -1,0 +1,93 @@
+RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
+1,Sutherland,Angus,Unattached,M,1:13:14
+2,Millar,David,Ochil Hill Runners,M40,1:13:15
+3,Hynd,Wull,Moorfoot Runners,M50,1:19:47
+4,Dougal,Darin,Moorfoot Runners,M40,1:20:03
+5,Cox,Andrew,Moorfoot Runners,M,1:20:37
+6,Sanderson,Stuart,Penicuik Harriers,M50,1:22:21
+7,Henderson,Ryan,Unattached,M,1:24:38
+8,Murray,Keith,Teviotdale Harriers,M50,1:25:25
+9,Reynolds,Harry,Unattached,M,1:26:33
+10,Zeiner,Karl,Harmeny AC,M40,1:27:05
+11,Nightingale,David,Gala Harriers,M50,1:27:46
+12,Brooks,Mike,Penicuik Harriers,M50,1:29:02
+13,Pendrich,Neil,Carnethy,M40,1:29:22
+14,Peters,Steven,Dundee Road Runners,M,1:29:36
+15,Gibson,Peter,Gala Harriers,M,1:29:56
+16,Calder,Dave,Westerlands,M50,1:30:04
+17,Fraser,Billy,Northumberland FR,M50,1:30:18
+18,McMullan,George,Norham RC,M40,1:30:21
+19,Balfour,Eddie,Moorfoot Runners,M40,1:30:28
+20,Hughes,Ian,Calderglen Harriers,M40,1:31:11
+21,Ferguson,Nicholas,Unattached,M,1:32:29
+22,McHugh,Derek,Teviotdale Harriers,M50,1:33:01
+23,Lees,Brian,Falkirk Victoria Harriers,M50,1:33:08
+24,McLure,Neil,Carnegie Harriers,M40,1:33:18
+25,Snodgrass,Mark,Penicuik Harriers,M40,1:33:30
+26,Bagness,Claire,Wooler RC,F50,1:33:40
+27,Howel,Tim,Unattached,M40,1:34:01
+28,Nicholson,Jim,Unattached,M40,1:34:02
+29,Fraser,Mitchell,Edinburgh RC,M40,1:34:43
+30,Carr,Dean,Moorfoot Runners,M40,1:35:20
+31,McCallum,Alasdair,Norham RC,M40,1:35:40
+32,Howe,David,Lomond Hill Runners,M40,1:36:51
+33,Dennett,Stephen,Unattached,M40,1:36:59
+34,Carr,Gillian,Moorfoot Runners,F,1:37:27
+35,Cairns,Gillian,Penicuik Harriers,F40,1:38:29
+36,Brady,Stephen,Unattached,M40,1:39:13
+37,Elder,Alan,Moorfoot Runners,M50,1:39:39
+38,Logan,Johnny,Unattached,M50,1:40:29
+39,Inkster,Berit,Edinburgh RC,F,1:41:00
+40,Campbell,Alexandra,Unattached,F,1:41:17
+41,Dawson,Jan,Penicuik Harriers,F,1:41:42
+42,Duncan,Andy,Musselburgh AC,M40,1:41:57
+43,Jones,Sarah,Lothian,F50,1:45:26
+44,Grant,Eryk,Unattached,M50,1:45:26
+45,Melotte,Dave,Unattached,M40,1:46:46
+46,Clough,Steve,Norham RC,M60,1:46:54
+47,Martin,Angela,Unattached,F40,1:47:13
+48,Thompson,Wayne,Unattached,M40,1:47:39
+49,Cessford,Lee,Falkland Trail Runners,M40,1:47:56
+50,Brown,Pam,Wooler RC,F,1:48:02
+51,McKay,Michael,Unattached,M50,1:48:15
+52,Cillan Garcia,Eugenio,Unattached,M,1:49:19
+53,Fortune,Carole,Gala Harriers,F50,1:49:39
+54,Walker,Sean,Carnethy,M40,1:50:04
+55,Sloan,Robin,Carnethy,M60,1:51:47
+56,May,Timothy,ESOC,M50,1:52:24
+57,Kemp,Sadie,Penicuik Harriers,F,1:52:55
+58,Van,Andre,Unattached,M,1:52:57
+59,Humphries,Phil,Carnethy,M40,1:53:00
+60,Maxwell,Susie,Penicuik Harriers,F40,1:53:04
+61,Jones,Frances,Penicuik Harriers,F40,1:53:05
+62,Simpson,Iain,Falkland Trail Runners,M40,1:53:29
+63,Joiner,Isobel,Carnethy,F,1:53:30
+64,Reynolds,Lesley,Carnegie Harriers,F40,1:53:31
+65,Donnachie,Adrian,Unattached,M50,1:53:33
+66,Almond,Kim,Harmeny AC,F40,1:54:13
+67,McMillan,Stuart,Unattached,M40,1:54:28
+68,Melville,Linzi,Unattached,F,1:54:30
+69,Mackenzie-Brodie,Ceana,Unattached,F,1:54:46
+70,Aitchison,Steve,Lauderdale Limpers,M,1:55:49
+71,Smith,Robin,Unattached,M50,1:56:16
+72,Henderson,Derek,Unattached,M50,1:56:17
+73,Bell,Ian,Gala Harriers,M50,1:58:13
+74,Richardson,Elizabeth,Edinburgh Tri Club,F,1:58:24
+75,Kulow,Nikolai,Unattached,M40,1:58:56
+76,Lambie,Dougie,Unattached,M50,2:00:01
+77,Woodcock,Ian,Lauderdale Limpers,M40,2:01:51
+78,Horsburgh,Jill,Linlithgow Harriers,F50,2:02:13
+79,Nimmo,Ali,Unattached,F40,2:02:27
+80,McAdam,Pauline,Teviotdale Harriers,F50,2:03:38
+81,Morris,Richard,Unattached,M60,2:06:01
+82,Ashe,James,Unattached,M50,2:06:20
+83,Mackenzie,Eleanor,Edinburgh Running Network,F40,2:06:53
+84,Mackenzie,Fiona,Carnethy,F50,2:06:57
+85,Ennis,Holly,Edinburgh AC,F,2:07:16
+86,Lockie,Paul,Teviotdale Harriers,M40,2:07:50
+87,Tweddle,Kyra,Lauderdale Limpers,F,2:10:30
+88,Dunbar,Melanie,Penicuik Harriers,F40,2:11:15
+89,Pham,Lan,Jog Scotland,F,2:14:00
+90,King,Shelagh,Gala Harriers,F50,2:28:44
+91,Meikle,Karen,Carnethy,F50,2:58:28
+92,Loudon,Kirsty,Penicuik Harriers,F40,2:58:33

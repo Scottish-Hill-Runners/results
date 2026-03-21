@@ -1,0 +1,293 @@
+RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
+1,Gristwood,Graham,Ochil Hill Runners,M,0:32:56
+2,Chepelin,Alexander,Carnethy,M,0:33:45
+3,Stewart,Gregor,Westerlands,M,0:34:54
+4,Martyn,Tom,HBT,M,0:35:23
+5,Gollan,Ross,East Sutherland,M,0:35:35
+6,Feltbower,Steve,Ochil Hill Runners,M,0:35:57
+7,Battle,Hamish,Metro Aberdeen,M,0:36:01
+8,Callan,Thomas,Westerlands,M,0:36:10
+9,Naylor,Donald,HBT,M40,0:36:34
+10,Sedman,Eliot,Carnethy,M,0:36:59
+11,Cooper,Kieran,St Andrews University,M,0:37:15
+12,Cope,David,Howgill Harriers,M,0:37:43
+13,Winter,Stephen,Shettleston Harriers,M40,0:38:32
+14,Purkis,Mark,HBT,M,0:38:34
+15,Luetchford,Alex,HBT,M,0:38:39
+16,Drummond,Fraser,Newburgh Dunes RC,M,0:38:57
+17,Tuck,Ian,Unattached,M,0:39:15
+18,Buchanan,Catriona,Ochil Hill Runners,F,0:39:21
+19,Anderson,Ben,Unattached,M,0:39:30
+20,Campbell,Graeme,Ochil Hill Runners,M40,0:39:40
+21,Mackie,Peter,Shettleston Harriers,M40,0:39:46
+22,Gardner,Peter,HBT,M,0:39:50
+23,Walsh,Chris,HBT,M,0:39:53
+24,Knox,Thomas,Anster Haddies,M,0:40:07
+25,Crowther,Darcy,Unattached,M,0:40:20
+26,Healy,Michael,Cambuslang Harriers,M,0:40:44
+27,McDougall,Stephen,St Andrews University,M,0:40:46
+28,Walker,Alistair,Deeside Runners,M,0:40:49
+29,Dawson,Aaron,Strathearn Harriers,M,0:40:50
+30,McMillan,Ewan,Edinburgh AC,M,0:40:51
+31,Park,Adam,Ochil Hill Runners,M,0:40:52
+32,Vasepurg,Tom,Unattached,M,0:40:54
+33,Gardner,Simon,Westerlands,M,0:41:21
+34,Tindley,Georgia,HBT,F,0:41:28
+35,Knox,Jonny,Anster Haddies,M50,0:41:32
+36,Spalding,Ross,Ochil Hill Runners,M,0:41:34
+37,Taylor,Lewis,Unattached,M,0:41:37
+38,Cusack,Jeremy,Unattached,M,0:41:47
+39,Fraser,Hamish,Unattached,M,0:41:47
+40,Gray,Telfer,Wee County Harriers,M,0:41:48
+41,Sillero,Miguel Delgado,Unattached,M,0:41:53
+42,Millar,David,Ochil Hill Runners,M40,0:41:55
+43,Cunningham,Roddy,Westerlands,M,0:42:01
+44,Ladouce,Simon,Wee County Harriers,M,0:42:03
+45,Park,Luke,HBT,M,0:42:07
+46,Graham,Scott,Unattached,M,0:42:13
+47,Lorimer,Hayden,HBT,M40,0:42:16
+48,Gilmore,Iain,Carnethy,M,0:42:22
+49,Malcolm,John,Carnethy,M,0:42:27
+50,Gilmore,Neil,Carnethy,M50,0:42:29
+51,Ravenscroft,Jack,Unattached,M,0:42:33
+52,Gaffney,David,Moorfoot Runners,M,0:42:37
+53,Ballantyne,Iain,Glasgow Uni H&H,M,0:42:39
+54,MacDonald,Jordan,Unattached,M,0:42:43
+55,Reid,Craig,Bellahouston RR,M,0:42:45
+56,Penny,Alastair,Stirling University,M,0:42:50
+57,Keatch,Steven,Unattached,M,0:43:02
+58,Tomlinson,Andrew,Unattached,M,0:43:07
+59,Bloodworth,Jack,Ochil Hill Runners,M,0:43:08
+60,Horswell,Clara,Shettleston Harriers,F,0:43:11
+61,Frost,Hamish,Unattached,M,0:43:12
+62,Quirke,Martin,HBT,M,0:43:14
+63,MacMillan,George,Unattached,M40,0:43:15
+64,Cashman,Tracey,Wee County Harriers,F40,0:43:16
+65,McKiddie,Christopher,Westerlands,M,0:43:19
+66,Matthews,Steve,Dundee Hawkhill,M40,0:43:25
+67,Devlin,Gordon,Unattached,M,0:43:33
+68,Gough,Nick,Strathearn Harriers,M,0:43:33
+69,Campbell,Ryan,Unattached,M,0:43:40
+70,Warnock,Bob,Wee County Harriers,M50,0:43:44
+71,Randfield,Simon,Stirling Tri Club,M50,0:43:49
+72,Gill,Andy,Unattached,M,0:43:52
+73,Walling,Craig,HBT,M,0:43:58
+74,Luscombe,Jack,Edinburgh Uni H&H,M,0:44:12
+75,Talbot,Jack,Glasgow Uni H&H,M,0:44:17
+76,Crewe,Ruth,Westerlands,F,0:44:28
+77,Woodthorpe,Matt,Unattached,M,0:44:37
+78,Dudchenko,Paul,Linlithgow Harriers,M50,0:44:39
+79,Brand,Calum,Wee County Harriers,M,0:44:45
+80,Priestley,Andrea,Ochil Hill Runners,F50,0:44:55
+81,Brannigan,Ross,Ochil Hill Runners,M,0:44:56
+82,Campbell,Donald,Unattached,M40,0:45:00
+83,Braby,Liam,Carnethy,M,0:45:03
+84,Hancox,Brendan,Edinburgh AC,M,0:45:13
+85,Mason,David,Linlithgow Harriers,M50,0:45:15
+86,Weir,Jonathan,Unattached,M40,0:45:18
+87,Ferguson,Allan,Forfar Road Runners,M,0:45:18
+88,Pinter,Kamilla,Heriot Watt,F,0:45:26
+89,Stark,Adam,Glasgow Uni H&H,M,0:45:30
+90,Brodie,Stuart,Ochil Hill Runners,M,0:45:31
+91,Hunter,Angus,Unattached,M50,0:45:31
+92,Carruthers,Alex,Glasgow Uni H&H,M,0:45:32
+93,Butler,Chris,Westerlands,M,0:45:34
+94,Ross,Robert,Unattached,M,0:45:41
+95,Cleghorn,Peter,Unattached,M,0:45:45
+96,Anderson,Neil,Linlithgow Harriers,M50,0:45:47
+97,Thomson,Mike,Unattached,M40,0:45:50
+98,Inman,Jason,Ochil Hill Runners,M40,0:45:54
+99,Hawthorne,Stuart,Ayrodynamic Tri Club,M40,0:45:59
+100,Black,Ali,Carnethy,M,0:46:04
+101,Balfour,Steven,Unattached,M,0:46:16
+102,Boulton,Steve,Stirling University,M40,0:46:22
+103,Glass,Jennie,Deeside Runners,F,0:46:24
+104,Hennessy,Martin,Unattached,M,0:46:44
+105,Wilson,David,Unattached,M40,0:46:46
+106,Pecnik Bambic,Maks,Heriot Watt,M,0:47:03
+107,Metselaar,Matthijs,Unattached,M,0:47:04
+108,Walsh,Fay,Edinburgh AC,F,0:47:06
+109,Johns,Andy,Kinross Road Runners,M40,0:47:09
+110,Reid,Don,Westerlands,M50,0:47:19
+111,Strange,Nick,Stirling Tri Club,M40,0:47:19
+112,Gallagher,Andrew,Strathearn Harriers,M50,0:47:25
+113,Sleggs,Paul,HBT,M,0:47:27
+114,Watts,Michael,Linlithgow Harriers,M,0:47:28
+115,McCall,Jenny,HBT,F,0:47:44
+116,Ditchfield,Stuart,Unattached,M40,0:47:52
+117,McLearnon,Andrew,Unattached,M40,0:47:55
+118,Britton,Richard,Stirling Tri Club,M40,0:47:57
+119,Mahoney,Lorna,Westerlands,F50,0:48:00
+120,Gilmour,Mairi,Westerlands,F,0:48:01
+121,Hanson,Thomas,Unattached,M,0:48:02
+122,Harris,Fraser,Stirling Tri Club,M50,0:48:04
+123,Gill,Russell,Ochil Hill Runners,M,0:48:09
+124,Kelly,Graham,Westerlands,M40,0:48:15
+125,Cox,Chloe,Edinburgh AC,F,0:48:15
+126,Hyslop,Scott,Linlithgow Harriers,M50,0:48:18
+127,Campos,Carlos,Strathclyde University,M,0:48:24
+128,Manson,Alan,Ochil Hill Runners,M50,0:48:29
+129,Wayte,Tony,Strathearn Harriers,M50,0:48:34
+130,Coombs,Kirsty,Deeside Runners,F,0:48:36
+131,McMahon,Genevieve,Edinburgh AC,F,0:48:38
+132,MacDonald,Elsie,Garscube Harriers,F,0:48:47
+133,Bartlett,Pat,Interlopers,M50,0:48:49
+134,Caldwell,Christine,Wee County Harriers,F40,0:48:51
+135,Kirkland,Andrew,Unattached,M,0:49:05
+136,Mitchell,Neill,Fife AC,M40,0:49:06
+137,Brown,Jamie,HBT,M,0:49:14
+138,Longhurst,Abigail,Forth Valley Orienteers,F,0:49:41
+139,Wright,Rosie,Edinburgh Uni H&H,F,0:49:46
+140,Brennan,Brian,Westerlands,M50,0:49:49
+141,Johnston,Stephen,Milburn Harriers,M50,0:49:57
+142,Bowman,Angus,Lomond Hill Runners,M50,0:49:58
+143,Bennett,John,Unattached,M,0:50:02
+144,MacKay,Iain,Unattached,M50,0:50:06
+145,Bull,Matthew,Westerlands,M,0:50:10
+146,Sion,Tomos,Unattached,M,0:50:18
+147,McKenna,Jennifer,Carnethy,F,0:50:21
+148,Clark,Laura,Unattached,F,0:50:22
+149,Whyte,Martin,Unattached,M,0:50:22
+150,Sinclair,David,Perth Road Runners,M,0:50:25
+151,Armitage,Hilary,Unattached,F,0:50:27
+152,Farquhar,Angus,Westerlands,M50,0:50:29
+153,McDonald,Kenny,Bellahouston RR,M40,0:50:30
+154,McMaster,Peter,Unattached,M,0:50:42
+155,Forte,Phil,Dundee Hawkhill,M50,0:50:48
+156,Hanley,Nick,Unattached,M50,0:50:56
+157,Goddard,Alysha,Heriot Watt,F,0:50:58
+158,Lennie,Andrew,Carnethy,M50,0:51:02
+159,McEvoy,Joanne,Calderglen Harriers,F,0:51:04
+160,Barker,Oliver,Unattached,M,0:51:08
+161,Henderson,Mark,Unattached,M40,0:51:10
+162,Roberts,Nigel,Stirling Tri Club,M50,0:51:13
+163,McFarlane,Ian,Wee County Harriers,M50,0:51:20
+164,Fleming,Rod,Westerlands,M,0:51:23
+165,Hanson,Eleanor,Central AC,F,0:51:39
+166,Lothian,Fiona,Unattached,F50,0:51:47
+167,Croney,Rebecca,Edinburgh Uni H&H,F,0:51:56
+168,Breckenridge,Myrtle,Shettleston Harriers,F,0:51:56
+169,Jelly,Ewan,Perth Road Runners,M,0:51:59
+170,Davidson,Robert,Wee County Harriers,M50,0:52:12
+171,Wyllie,Stewart,Unattached,M,0:52:15
+172,Barrie,Robin,Unattached,F,0:52:18
+173,Blaikie,James,Unattached,M50,0:52:21
+174,Hulme,Colin,Unattached,M40,0:52:23
+175,Quinn,John,Westerlands,M50,0:52:29
+176,Taylor,Lucy,HBT,F,0:52:33
+177,Stevenson,Innes,Unattached,M,0:52:33
+178,Riggins,Nash,Ochil Hill Runners,M,0:52:34
+179,Sun,Ping,Unattached,M,0:52:37
+180,Midgley,Peter,Westerlands,M50,0:52:39
+181,Gallagher,Sally,Unattached,F,0:52:44
+182,Sword,Lawrence,Unattached,M50,0:52:47
+183,Trenholm,Martin,Unattached,M40,0:52:48
+184,Blackley,Lisa,Unattached,F,0:52:50
+185,Morrison,Gordon,Strathearn Harriers,M50,0:52:56
+186,Cowper,Stephen,Milburn Harriers,M50,0:52:58
+187,Fulton,David,HBT,M,0:53:09
+188,Wishart,Nicola,Unattached,F40,0:53:12
+189,Anderson,Ross,Unattached,M,0:53:27
+190,Knox,Rosie,Anster Haddies,F,0:53:34
+191,MacNeil,Kevin,Unattached,M40,0:53:42
+192,Hughes,Malcolm,Linlithgow Harriers,M50,0:53:46
+193,Brosnan,Kevin,Unattached,M50,0:53:48
+194,Reis,Rodrigo,Shettleston Harriers,M,0:53:53
+195,Howe,Gary,Fife AC,M40,0:54:01
+196,Young,Mike,Unattached,M50,0:54:02
+197,Hutcheson,Colin,Linlithgow Harriers,M50,0:54:07
+198,Kilburn,David,Forth Valley Orienteers,M50,0:54:12
+199,Walling,Katie,HBT,F,0:54:14
+200,Drewette,David,Ochil Hill Runners,M40,0:54:17
+201,Couper,Brian,Linlithgow Harriers,M40,0:54:22
+202,Gilligan,Steven,Westerlands,M40,0:54:26
+203,Hazelwood,Kirstie,Unattached,F,0:54:32
+204,Weir,Alan,Unattached,M40,0:54:44
+205,Husbands,Jess,HBT,F,0:54:47
+206,Wilson,Becky,Unattached,F,0:54:50
+207,Guevara,Sebastian Alberto Martinez,Unattached,M,0:54:56
+208,Petrie,Jim,Lothian,M50,0:54:56
+209,Nicol,Jack,Unattached,M,0:54:57
+210,Waugh,Eleanor,Glasgow Uni H&H,F,0:55:00
+211,Tilbrook,Cathy,Strathearn Harriers,F40,0:55:11
+212,Urquhart,William,Unattached,M50,0:55:17
+213,Whiteford,Michael,Unattached,M,0:55:21
+214,Fitzgerald,Jacob,Unattached,M,0:55:37
+215,Young,DAVID,Scottish Prison Service,M40,0:55:44
+216,Mearns,Kenny,Lothian,M50,0:55:47
+217,Sinclair,Colin,Central AC,M50,0:55:53
+218,Bremner,Mike,Unattached,M40,0:56:11
+219,Fowler,Paul,Ochil Hill Runners,M40,0:56:22
+220,McGreevy,Kay,British Military Fitness,F50,0:56:23
+221,Waddington,Michael,Ron`s Runners,M40,0:56:51
+222,Fraser,Ronald,Dundee Road Runners,M50,0:57:08
+223,Barker,Hugo,Strathearn Harriers,M50,0:57:25
+224,Ayres,Audrey,Westerlands,F,0:57:36
+225,Burrows,Graham,Linlithgow Harriers,M50,0:57:38
+226,Hill,Juliet,Glasgow Uni H&H,F,0:57:41
+227,Mason,John Paul,Unattached,M40,0:57:45
+228,Peters,Ciara,Stirling University,F,0:57:50
+229,Evans,Josie,Stirling University,F40,0:57:53
+230,Santayana,Vivek,Unattached,M,0:57:56
+231,Pollock,Ronnie,Wee County Harriers,M,0:57:59
+232,Cooper,Harriet,Unattached,F,0:58:02
+233,May,Iain,Unattached,M,0:58:07
+234,Loffill,Elizabeth,Westerlands,F,0:58:16
+235,Irving,John,Dundee Road Runners,M40,0:58:19
+236,Payne,Emily,Edinburgh AC,F,0:58:20
+237,McDiarmid,Susan,Wee County Harriers,F40,0:58:21
+238,Bloodworth,Karin,Ochil Hill Runners,F,0:58:22
+239,Clark,Catie,Unattached,F,0:58:23
+240,Ritchie,Alison,Unattached,F40,0:58:26
+241,Thomas,Nadine,Carnethy,F,0:58:29
+242,Watson,Fiona,Unattached,F50,0:58:44
+243,Brisbane,Chris,Unattached,M,0:58:53
+244,McLaughlin,Nyree,Wee County Harriers,F40,0:59:21
+245,Mitchell,Stewart,Unattached,M,0:59:23
+246,Woods,Sue,Wee County Harriers,F40,0:59:29
+247,Randfield,Helen,Forth Valley Orienteers,F50,0:59:34
+248,Brown,Simon,Unattached,M40,0:59:39
+249,Chambers,Graham,Linlithgow Harriers,M,0:59:42
+250,Moran,Charlotte,Linlithgow Harriers,F,0:59:42
+251,Mackie,Fraser,Unattached,M40,1:00:09
+252,Harris,Mark,Kilbarchan,M40,1:00:16
+253,Johnston,Simon,Falkirk Victoria Harriers,M40,1:00:30
+254,Loots,Fran,Strathearn Harriers,F50,1:00:32
+255,Shoemark,Amelia,Unattached,F,1:00:35
+256,Bowman,Jean,Lomond Hill Runners,F50,1:00:51
+257,Grant,Jamie,Stirling University,M,1:00:53
+258,Smith,Janice,HBT,F50,1:01:00
+259,Santi,Ines,Edinburgh Uni H&H,F,1:01:02
+260,May,Timothy,ESOC,M50,1:01:15
+261,Meintjies,Johan,Linlithgow Harriers,M40,1:01:19
+262,Thomson,Kerr,Unattached,M,1:01:30
+263,Robertson,Rab,Unattached,M50,1:01:40
+264,Holborn,Gary,Unattached,M,1:01:41
+265,Gilroy,Paul,Unattached,M50,1:01:42
+266,Williamson,Hazel,Unattached,F50,1:02:50
+267,Birmingham,Colm,Glasgow Uni H&H,M,1:03:04
+268,Davidson,Stewart,Fife AC,M50,1:03:06
+269,Monteith,John,Stirling University,M,1:03:25
+270,Musgrave,Alan,Unattached,M,1:03:38
+271,Abbott,mandy,Unattached,F50,1:03:49
+272,Ridout,David,Ron`s Runners,M50,1:04:08
+273,Stewart,George,Calderglen Harriers,M50,1:04:30
+274,Dick,Callum,Lomond Hill Runners,M50,1:04:32
+275,Gair,Nicholas,Unattached,M,1:05:01
+276,Mallett,Carole,Lomond Hill Runners,F50,1:05:14
+277,Gillespie,Gemma,Unattached,F,1:05:48
+278,Grome,Bryan,Linlithgow Harriers,M,1:05:50
+279,Toda,Gendai,Unattached,M,1:06:30
+280,Baxter,David,Unattached,M,1:08:57
+281,Hibberd,Carina,Unattached,F50,1:09:54
+282,Hossack,Ian,Wee County Harriers,M40,1:10:17
+283,Cameron,Dawn,Linlithgow Harriers,F40,1:11:20
+284,Milnes,Bex,Unattached,F,1:13:15
+285,Cairns,Tanya,Unattached,F40,1:13:23
+286,Graham,Eilidh,Unattached,F,1:13:44
+287,Heyes,James,Unattached,M,1:14:04
+288,Sweeney,Natalie,Stirling University,F,1:15:23
+289,Johnston,Shelby,Unattached,F,1:18:22
+290,Metselaar,Matthijs,Unattached,M,1:18:52
+291,Tanyadez,Carolina,Unattached,F,1:18:56
+292,Faulkner,Hannah,Unattached,F,1:20:45

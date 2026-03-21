@@ -1,0 +1,116 @@
+RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
+1,Marshall,Brian,HELP,M40,0:30:31
+2,Harris,Adam,Unattached,MU17,0:31:44
+3,Wiseman,Bob,Ochil Hill Runners,M,0:31:52
+4,Davis,Adrian,Lomond Hill Runners,M45,0:32:03
+5,Cruickshank,Brian,Falkland Trail Runners,M40,0:32:06
+6,Knox,Jonny,Anster Haddies,M40,0:32:55
+7,Taylor,Ewan,PH Racing,M,0:32:58
+8,McFarlane,Russ,Fife AC,M,0:33:00
+9,Smith,Alan,Deeside Runners,M40,0:33:24
+10,Laing,Martin,Unattached,M50,0:34:12
+11,Garrick,William,2 SCOTS,M,0:35:02
+12,Anderson,Laurie,Lomond Hill Runners,M45,0:35:05
+13,Aitken,Bryce,Fife AC,M50,0:35:17
+14,Scott,Tom,Fife AC,M60,0:35:22
+15,Pryde,Gordon,Lomond Hill Runners,M50,0:35:31
+16,Laycock,Andy,Kinross Road Runners,M40,0:35:34
+17,Martin,Christopher,St Andrews University,M,0:35:38
+18,Rees,Halina,Fife AC,FU15,0:35:43
+19,Rees,Roger,Fife AC,M40,0:35:44
+20,Knox,Thomas,Anster Haddies,MU17,0:35:50
+21,Clarke,Daniel,Fife AC,M,0:36:03
+22,Murray,Alan,Ochil Hill Runners,M45,0:36:12
+23,MacEwan,John,Ochil Hill Runners,M40,0:36:34
+24,Smith,Bill,Fife AC,M40,0:35:38
+25,Sharpe,Helen,Fife AC,F,0:36:39
+26,Duncan,Andrew,Fife AC,M,0:36:53
+27,Martin,Tony,Falkland Trail Runners,M55,0:37:04
+28,Buchanan,Peter,Ochil Hill Runners,M50,0:37:10
+29,Hutson,Liam,Fife AC,MU17,0:37:14
+30,Roberts,Clive,Fife AC,M50,0:37:16
+31,Low,John,Anster Haddies,M40,0:37:19
+32,Tibbs,Jack,Unattached,M,0:37:38
+33,Horsburgh,Robert,Fife AC,M50,0:37:47
+34,Duncan,David,Ochil Hill Runners,M50,0:38:01
+35,Poolman,Ian,Glenrothes Tri Club,M,0:38:03
+36,Wiseman,Sarah,Ochil Hill Runners,F,0:38:06
+37,Fitzpatrick,Pat,Ochil Hill Runners,M50,0:38:09
+38,Hood,Alasdair,Fife AC,M50,0:38:16
+39,Mason,David,Linlithgow Harriers,M40,0:38:16
+40,Sanders,Eddie,Fife AC,M55,0:38:17
+41,Wilson,Niall,Carnegie Harriers,M,0:38:38
+42,Love,Craig,Dundee Hawkhill,M,0:38:53
+43,Roberts,Craig,Unattached,M,0:38:58
+44,McGill,Alison,PH Racing,F,0:39:00
+45,Milne,Andrew,Fife AC,M40,0:39:01
+46,Legge,Sarah,Fife AC,F,0:39:07
+47,Hawkins,Ian,Fife AC,M45,0:39:21
+48,Cooper,Meike,Unattached,F,0:39:32
+49,Weir,Jonathan,Unattached,M,0:39:35
+50,Kennovin,Gordon,Calder Valley,M45,0:39:50
+51,Wilson,Colin,Lomond Hill Runners,M45,0:39:59
+52,McIntosh,Colin,Anster Haddies,M50,0:40:08
+53,Knowles,Stuart,Fife AC,M50,0:40:21
+54,Beggs,Daryl,Fife AC,M,0:40:25
+55,Ritchie,Hilary,Fife AC,F45,0:40:26
+56,Bowman,Angus,Lomond Hill Runners,M50,0:40:30
+57,Ledlie,Colin,Carnethy,M40,0:40:49
+58,Brown,Jamie,HBT,M,0:40:54
+59,Mallett,Patrick,Lomond Hill Runners,M40,0:40:59
+60,Harley,Susan,Falkland Trail Runners,F40,0:41:04
+61,Jelly,Ewan,Perth Road Runners,M,0:41:06
+62,Martin,Ron,Ochil Hill Runners,M40,0:41:11
+63,Allison,Bob,Fife AC,M50,0:41:24
+64,Rickman,Glen,Anster Haddies,M40,0:41:27
+65,Landels,Brian,Lomond Hill Runners,M45,0:41:47
+66,MacDonald,Deborah,HBT,F50,0:42:05
+67,Davidson,Chris,Perth Tri Club,M,0:42:09
+68,Davis,John,Unattached,M40,0:42:18
+69,Nicoll,Grahame,Tayside Orienteers,M50,0:42:21
+70,Killean,Liz,Fife AC,F40,0:42:21
+71,West,Alison,Carnegie Harriers,F50,0:42:21
+72,Martin,Alec,Unattached,M,0:42:38
+73,Lindsay,Susan,Ochil Hill Runners,F40,0:42:41
+74,Smith,Brian,Fife AC,M50,0:42:41
+75,Graham,Robyn,Fife AC,FU15,0:42:49
+76,Ward,Claire,HBT,F,0:43:28
+77,Scott,Jocelyn,Fife AC,F55,0:43:36
+78,Keenlyside,John,Fife AC,M55,0:43:48
+79,Barker,Gary,Fife AC,M50,0:44:34
+80,MacDonald,Rory,HBT,M60,0:44:38
+81,Woodburn,Jim,Fife AC,M40,0:44:43
+82,Tibbs,Fergus,Unattached,M,0:44:46
+83,Sinclair,Melanie,Unattached,F,0:44:55
+84,Smith,Tilly,Deeside Runners,F50,0:45:12
+85,Davidson,Stewart,Fife AC,M55,0:45:14
+86,Macdougall,Ken,Tinto Hill Runners,M,0:45:24
+87,Bracegirdle,Innes,Fife AC,F50,0:45:28
+88,Radley,Andrew,Perth Strathtay Harriers,M45,0:45:33
+89,Cromar,Steve,Dundee Hawkhill,M70,0:45:43
+90,Hutson,Martin,Fife AC,M45,0:45:59
+91,Jack,Jim,Unattached,M40,0:46:02
+92,Beveridge,Bob,Lomond Hill Runners,M65,0:46:08
+93,Bancroft,Kara,Unattached,F,0:46:39
+94,Francis,David,Fife AC,M60,0:47:50
+95,Horsburgh,Caroline,Fife AC,F45,0:48:34
+96,Wall,Dick,HBT,M50,0:49:29
+97,Paterson,Maurice,Fife AC,M,0:49:32
+98,Wilson,Joan,Lomond Hill Runners,F40,0:49:49
+99,Anderson,Adam,Dumfries RC,M60,0:50:26
+100,Stapley,Tony,Portobello,M65,0:50:46
+101,Perry,Martin,Esk Valley Fell Runners,M40,0:51:01
+102,Bowman,Jean,Lomond Hill Runners,F45,0:51:05
+103,Bennison,Graham,Fife AC,M60,0:51:07
+104,Kirby,Charlotte,Fife AC,F40,0:51:22
+105,Martin,Tom,Unattached,M,0:51:23
+106,McNally,John,Fife AC,M70,0:51:23
+107,Knox,Lizzie,Anster Haddies,F,0:51:29
+108,Knox,Tracy,Anster Haddies,F40,0:52:02
+109,McManus,Ian,Irvine RC,M65,0:52:21
+110,Whisler,Sue,Fife AC,F50,0:52:26
+111,Fairley,Bill,Carnegie Harriers,M60,0:52:36
+112,Downie,Bill,Greenock Glenpark Harriers,M55,1:00:28
+113,Winning,Jennifer,Lomond Hill Runners,F,1:05:51
+114,Winning,Jim,Lomond Hill Runners,M50,1:05:59
+115,Robertson,Alastair,Fife AC,M65,1:06:12

@@ -1,0 +1,99 @@
+RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
+1,Roberts,Matthew,Eryri Harriers,M,0:30:06
+2,Gilbert,Matthew,Wrexham Tri Club,M,0:30:09
+3,Bartlett,Graeme,Forres Harriers,M,0:30:34
+4,Paterson,Robbie,Moray Road Runners,M,0:30:48
+5,Hendry,Alexander,Central AC,M,0:30:59
+6,Harris,Adam,Unattached,M,0:31:03
+7,Gorman,Manny,Westerlands,M,0:31:14
+8,Dixon,Scott,CBNSC,M,0:31:26
+9,Rawlinson,Stephen,Lochtayside,M,0:31:34
+10,Patton,Simon,Dark Peak,M,0:32:01
+11,Donnelly,Colin,Cambuslang Harriers,M,0:32:10
+12,Irvine,Calum,CBNSC,M,0:32:19
+13,Millar,Lewis,Central AC,M,0:32:38
+14,Anthony,Alasdair,Ochil Hill Runners,M,0:32:41
+15,MacLean,Paul,Lochaber AC,M,0:33:02
+16,Smith,Alan,Deeside Runners,M,0:33:24
+17,Simmons,David,Lothian,M,0:33:40
+18,Stevenson,John,Ochil Hill Runners,M50,0:33:51
+19,Grosdanoff,Scott,Highland Hill Runners,M,0:33:53
+20,Ward,Jack,Highland Hill Runners,M,0:33:55
+21,Stewart,Gordon,Highland Hill Runners,M,0:34:01
+22,Leslie,Blair,Unattached,M,0:34:32
+23,Garrick,William,2 SCOTS,M,0:34:39
+24,Johnson,Bill,Calder Valley,M,0:34:44
+25,Buckden,David,Unattached,M,0:35:29
+26,Stewart,Ian,Unattached,M,0:35:42
+27,Hughes,Fiona,Cambridge Univ H & H,F,0:35:48
+28,Kennedy,Ali,Lochaber AC,M,0:36:02
+29,Watson,Dan,Lochtayside,M,0:36:11
+30,Kelly,Graham,Westerlands,M40,0:36:30
+31,McCarthy,Ewan,Unattached,M,0:36:48
+32,Matthewson,Alastair,Highland Hill Runners,M40,0:36:57
+33,Forrest,Stuart,Highland Hill Runners,M,0:37:02
+34,Macpherson,William,Unattached,M,0:37:51
+35,MacBeath,Niall,Lochaber AC,M,0:37:57
+36,McCarthy,Keith,RAF,M,0:37:58
+37,Johnson,Anne,Calder Valley,F,0:38:10
+38,Irvine,Gill,Highland Hill Runners,F,0:38:18
+39,Runciman,George,Lauderdale Limpers,M,0:39:09
+40,Roberts,Clive,Fife AC,M50,0:39:31
+41,MacKintosh,James,Unattached,M,0:39:46
+42,Woods,Ian,Unattached,M,0:39:49
+43,Molero,Luis,Lauderdale Limpers,M,0:40:05
+44,Stickings,Nigel,Unattached,M,0:40:21
+45,Robson,John,Annan & District AC,M,0:40:39
+46,Fraser,Swaz,Westerlands,M,0:40:46
+47,Weir,Jonathan,Unattached,M,0:40:52
+48,Turner,Ronnie,Lochaber AC,M,0:40:54
+49,Slimon,Cathy,Highland Hill Runners,F,0:41:22
+50,Williams,Rupert,Cosmics,M,0:41:43
+51,Shaw,Trevor,Lochtayside,M,0:41:46
+52,Kingdom,Bob,Unattached,M,0:41:54
+53,Connor,Julia,Unattached,F,0:42:04
+54,Bryan-Jones,Gareth,Ochil Hill Runners,M,0:42:39
+55,Bryan-Jones,Kirsty,Dark Peak,F,0:42:40
+56,Gaff,Melanie,Wester Ross Athletics,F,0:43:10
+57,Fraser,Calum,Westerlands,M,0:44:05
+58,Byde,Rosemary,Edinburgh AC,F,0:44:43
+59,Stewart,David,Unattached,M,0:44:43
+60,Fischer,Christine,Unattached,F,0:44:46
+61,Stakes,David,Unattached,M,0:44:57
+62,Beharrell,Malcolm,Nairn Road Runners,M,0:45:00
+63,MacGregor,Graeme,Wetherby,M,0:45:21
+64,Livingstone,Robin,HBT,M,0:45:28
+65,Smith,Tilly,Deeside Runners,F,0:46:23
+66,Tomlinson,David,Lochaber AC,M,0:47:12
+67,Hamilton,Jeff,Unattached,M,0:47:12
+68,Coltman,Alan,Teviotdale Harriers,M,0:47:31
+69,Diffey,John,Cairngorm Runners,M,0:48:09
+70,Rottier,Phil,Unattached,M,0:48:36
+71,Watson,Michael,Unattached,M,0:48:45
+72,Homyer,Elaine,Highland Nordic,F,0:50:43
+73,Hughes,Bob,Ochil Hill Runners,M,0:50:48
+74,McGlone,Laura,Unattached,F,0:50:53
+75,Robson,Jean,Annan & District AC,F,0:52:10
+76,Macleod,Robert,Unattached,M,0:52:13
+77,Jardine,Jimmy,Lochaber AC,M,0:52:41
+78,Linton,Alan,Unattached,M,0:53:56
+79,Paul,Brenda,Westerlands,F,0:54:23
+80,Bennie,Rhona,Westerlands,F,0:54:39
+81,Kitson,Aileen,Lochaber AC,F,0:54:51
+82,Sircus,Geraldine,Cairngorm Runners,F,0:55:37
+83,Macpherson,Myrtle,Unattached,F,0:55:39
+84,MacDermid,Lisa,Strathearn Harriers,F,0:56:52
+85,Craig,Jude,Unattached,M,0:57:02
+86,Ciapetti,Leonardo,Unattached,M,0:57:12
+87,Sicuranza,Silvia,Unattached,M,0:57:17
+88,Johnston,Alison,HBT,F,0:57:40
+89,Doonan,Kevin,Westerlands,M,0:58:14
+90,Moore,Peter,Unattached,M,0:59:53
+91,MacKay,Anne,Tain Runners,F,1:02:00
+92,Sinclair,Coral,Unattached,M,1:04:54
+93,Connolly,Anne,Unattached,F,1:05:35
+94,Lamb,Angela,Unattached,F,1:08:50
+95,Gwinup,Brandon,Unattached,M,1:13:38
+96,Foreman,Wendy,Unattached,F,1:14:03
+97,Braithwaite,Joanna,Unattached,F,1:30:28
+98,Dickson,Pamela,Unattached,F,1:30:28

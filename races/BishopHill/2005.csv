@@ -1,0 +1,101 @@
+RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
+1,Marshall,Brian,HELP,M,0:19:14
+2,Whitlie,Stewart,Carnethy,M40,0:19:48
+3,Watson,Cameron,Lomond Hill Runners,M,0:19:52
+4,Whitehead,Dan,Deeside Runners,M,0:20:33
+5,Gallagher,Ronnie,Carnethy,M40,0:20:48
+6,Scott,Nigel,Westerlands,M,0:20:50
+7,Anderson,Adam,Hartfell HRC,M,0:20:53
+8,Smith,Alan,Deeside Runners,M40,0:20:59
+9,Fettes,Paul,Ochil Hill Runners,M,0:21:08
+10,Stevenson,John,Ochil Hill Runners,M40,0:21:17
+11,Hepburn,John,Lochaber AC,M40,0:21:28
+12,Simpson,Stuart,Stornoway AC,M,0:21:47
+13,Bennet,Sandy,Unattached,M40,0:22:04
+14,Robertson,Brian,Arran Runners,M40,0:22:12
+15,Simpson,Elliot,Fife AC,MJ,0:22:13
+16,Smith,Bruce,Carnethy,M40,0:22:19
+17,Carracher,Graeme,Carnethy,M40,0:22:22
+18,Spenceley,Andy,Carnethy,M40,0:22:27
+19,Upson,Chris,Westerlands,M40,0:22:34
+20,McDonald,Dennis,Cosmics,M40,0:22:48
+21,Horsfield,Richard,Dark Peak,M40,0:22:50
+22,Cairns,George,Lochaber AC,M,0:22:51
+23,Watson,Robin,Ochil Hill Runners,M40,0:22:53
+24,Matthewson,Alastair,Highland Hill Runners,M,0:22:54
+25,Cunningham,Richie,Carnegie Harriers,M,0:22:56
+26,Glencorse,Colin,Kilmarnock Harriers,M,0:23:04
+27,Turnbull,Les,Norham RC,M50,0:23:06
+28,Blair-Fish,John,Carnethy,M50,0:23:11
+29,Southwick,Martin,Scunthorpe,M40,0:23:12
+30,Sheridan,Bob,Deeside Runners,M,0:23:16
+31,Eades,Colin,Lothian,M,0:23:20
+32,Anderson,Laurie,Lomond Hill Runners,M40,0:23:24
+33,Ritchie,Paul,Carnethy,M,0:23:26
+34,Brannan,Tosh,Lothian,M40,0:23:29
+35,Love,Craig,Dundee Hawkhill,M,0:23:34
+36,Rumgay,Ken,Lochaber AC,M,0:23:40
+37,Maddocks,Paul,Kinross Road Runners,M40,0:23:52
+38,Taylor,Nat,Girvan Harriers,M50,0:23:57
+39,Wombwell,Stephen,Beacon Runners,M40,0:23:59
+40,Reid,Don,Westerlands,M40,0:24:05
+41,MacLeod,Murdo,Westerlands,M50,0:24:10
+42,Evans,Andrew,Fife AC,MJ,0:24:16
+43,Buchanan,Peter,Ochil Hill Runners,M40,0:24:20
+44,Roberts,Clive,Fife AC,M40,0:24:24
+45,Hunter,Andrew,Carnegie Harriers,M40,0:24:25
+46,Harley,Mark,Fife AC,MJ,0:24:32
+47,Wilson,Colin,Lomond Hill Runners,M40,0:24:36
+48,Anthony,Eilidh,HBT,F,0:24:42
+49,Knowles,Stuart,Fife AC,M50,0:24:43
+50,Semple,Hamilton,Westerlands,M50,0:24:49
+51,McGuire,Alex,Fife AC,M50,0:24:49
+52,Mitchell,Mike,Fife AC,M,0:24:54
+53,Cameron,Gordon,Carnethy,M40,0:25:24
+54,Mitchell,Dave,Dundee Hawkhill,M40,0:25:48
+55,Bowie,Tom,Unattached,M50,0:26:02
+56,Campbell,Neil,Carnethy,M40,0:26:13
+57,Keegan,Maggie,Carnethy,F40,0:26:33
+58,Jenkins,Kate,Gala Harriers,F,0:26:34
+59,Armstrong,Ian,Carnegie Harriers,M,0:26:43
+60,Legge,Sarah,Fife AC,F,0:27:07
+61,Thomas,Claire,HBT,F,0:27:07
+62,Lang,James,Carnegie Harriers,M40,0:27:14
+63,Love,Charlie,Dundee Hawkhill,M60,0:27:17
+64,Noble,Lois,Cosmics,F40,0:27:46
+65,Wombwell,Peter,Beacon Runners,MJ,0:27:46
+66,Johnston,Stephen,Milburn Harriers,M40,0:28:27
+67,O`Brien,Phyllis,HBT,F40,0:28:29
+68,Robertson,Jane,Westerlands,F40,0:28:30
+69,Wilson,Joan,Lomond Hill Runners,F40,0:28:31
+70,Scott,Elspeth,Westerlands,F40,0:28:35
+71,Cowie,Gordon,Moray Road Runners,M50,0:28:37
+72,Talbot,Ana,Westerlands,F,0:28:41
+73,Smith,Donald,Westerlands,M50,0:28:47
+74,West,Alison,Carnegie Harriers,F50,0:28:55
+75,Curtis,Briony,HBT,F,0:29:17
+76,Aitken,Martha,Carnethy,FJ,0:29:43
+77,McManus,Ian,Irvine RC,M50,0:29:55
+78,Murdoch,George,Carnegie Harriers,M,0:29:58
+79,Aitken,Evie,Carnethy,FJ,0:29:59
+80,Davidson,Iain,Girvan Harriers,M40,0:30:08
+81,Nimmo,Anne,Carnethy,F50,0:30:09
+82,Beveridge,Bob,Lomond Hill Runners,M60,0:30:37
+83,Burt,Louise,Fife AC,F40,0:30:40
+84,Wall,Dick,HBT,M50,0:31:18
+85,Turnbull,Drew,Westerlands,M60,0:31:27
+86,Nairns,William,Ochil Hill Runners,M,0:33:10
+87,Bennet,Bill,Penicuik Harriers,M60,0:33:52
+88,Stokoe,Deborah,Westerlands,FJ,0:34:01
+89,Benny,Graham,Westerlands,M50,0:34:05
+90,King,Alex,Ochil Hill Runners,M40,0:34:18
+91,Nimmo,Ian,Carnethy,M60,0:34:27
+92,MacCalman,Sandy,Kinross Road Runners,M60,0:34:38
+93,Padden,Dennis,Arran Runners,M50,0:34:54
+94,Thornton,Bob,Fife AC,M40,0:35:08
+95,Crockard,Rosie,Milburn Harriers,F40,0:36:58
+96,Forrest,Margaret,Carnethy,F40,0:37:38
+97,McLaughlin,Pat,Westerlands,F50,0:37:39
+98,Rumgay,Clare,Lochaber AC,F,0:38:47
+99,Coon,John,Unattached,M50,0:41:01
+100,Murray,Helen,Lothian,F40,0:42:53

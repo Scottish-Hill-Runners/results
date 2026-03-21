@@ -1,0 +1,87 @@
+FinishPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
+1,Yells,John,Lochaber AC,M,01:09:38
+2,Quinn,Adam,Unattached,M,01:14:05
+3,Mcinally,Ralph,Unattached,M,01:17:46
+4,Fraser,Gary,Ochil Hill Runners,M50,01:20:04
+5,Ring,Josh,Westerlands CCC,M,01:20:35
+6,Eisen,Luis,Shettleston Harriers,M,01:20:36
+7,Gilmore,Iain,Carnethy ,M,01:21:47
+8,Davidson,Gregor,Lochaber AC,M40,01:22:13
+9,Mulgrew,Bryan,Bellahouston RR,M,01:23:25
+10,MacDonald,Catriona,Bellahouston RR,F,01:24:15
+11,Mailley,Keir,Unattached,M,01:24:51
+12,Foggo,Iain,Lochaber AC,M,01:25:01
+13,Allsop,David,Arran Runners,M40,01:25:11
+14,Low,Matthew,Shettleston Harriers,M40,01:26:35
+15,Phillips,George,Westerlands CCC,M,01:28:00
+16,Johnston,Fergus,Carnethy ,M,01:28:17
+17,Cameron,Angus,Lochaber AC,M,01:28:29
+18,Henderson,Scott,Westerlands CCC,M40,01:28:31
+19,Davis,Angus,Unattached,M,01:29:04
+20,Peters,Ella,Westerlands CCC,F,01:29:29
+21,Buglass,Donnie,Shettleston Harriers,M,01:30:04
+22,Dickie,Adam,Dumfries RC,M40,01:31:00
+23,Brodie,Stuart,Ochil Hill Runners,M40,01:31:10
+24,Callander,Alastair,Westerlands CCC,M,01:31:29
+25,O'Neill,Owen,Westerlands CCC,M,01:31:48
+26,Dodman,Ben,Lochaber AC,M40,01:31:50
+27,MacDonald,Ally,Bellahouston RR,M50,01:32:04
+28,Leigh,Helen,Blackburn Harriers AC,F,01:32:42
+29,Templeman,Simon,Ochil Hill Runners,M50,01:34:23
+30,Gillies,Sam,Carnethy ,M,01:34:23
+31,Standen,Hugh,Carnethy ,M,01:34:33
+32,Docherty,Ross,Carnethy ,M,01:35:08
+33,Gilmore,Neil,Carnethy ,M50,01:35:34
+34,Downs,Ellen,Westerlands CCC,F,01:36:35
+35,Stuart,Megan,Westerlands CCC,F,01:36:53
+36,Malcolmson,Craig,Hartfell HR,M50,01:37:10
+37,Johnstone,Leo,Unattached,M,01:39:18
+38,Dinwoodie,Ava,Unattached,F,01:39:29
+39,Blackhall,Amanda,Lochaber AC,F50,01:40:33
+40,Wake,Ben,Unattached,M,01:40:41
+41,Blake,Anna,Unattached,F,01:40:57
+42,MacBeath,Niall,Lochaber AC,M50,01:41:18
+43,Walters,Annie,Unattached,F,01:41:20
+44,White,Georgia,Lochaber AC,F,01:41:25
+45,Lamont,Allan,Lochaber AC,M40,01:42:30
+46,Mason,David,Linlithgow AC,M50,01:42:37
+47,Pugh,Roderick,Kilmarnock Harriers,M60,01:42:41
+48,Blackley,Lisa,Unattached,F40,01:43:08
+49,Stuart,Mclean,Ayr Seaforth,M50,01:43:18
+50,Gorgas,Steffen,Westerlands CCC,M50,01:44:55
+51,Anderson,Colin,Unattached,M40,01:46:20
+52,Disher,Amy,Lochaber AC,F,01:46:56
+53,Towers,Eilidh,Cuillin Dubh RC,F,01:47:11
+54,Cameron,Kathleen,Lochaber AC,F,01:47:28
+55,Shaw,Trevor,Lochtayside,M50,01:47:39
+56,Allen,Marisa,Unattached,F,01:48:33
+57,Galloway,Trevor,Linlithgow AC,M50,01:50:31
+58,Furse,Chris,Westerlands CCC,M50,01:51:00
+59,Brown,Ian,Helensburgh AAC,M60,01:52:20
+60,Shaw,Grainne,Lochaber AC,F,01:52:39
+61,Wilson,Joan,Lomond HR,F60,01:52:43
+62,McLarnon,Gordon,Unattached,M,01:52:45
+63,Worboys,Helen,Lochaber AC,F50,01:53:24
+64,Pegram,Eleanor,Unattached,F,01:54:54
+65,Pettigrew,Iain,Ayr Seaforth,M50,01:55:23
+66,Rivers,Steve,Unattached,M40,01:55:32
+67,Halliday,William,Unattached,M60,01:55:34
+68,Sherman,Clare,Unattached,F40,01:57:21
+69,Cunningham,Jess,Unattached,F,01:58:28
+70,Stakes,David,Westerlands CCC,M50,02:00:09
+71,McDougall,Simon,Bellahouston Harriers,M40,02:00:18
+72,Osborn,David,Lomond HR,M60,02:01:47
+73,Landels,Brian,Lomond HR,M50,02:01:48
+74,Irwin,Edward,Unattached,M,02:03:14
+75,McColm,Stuart,Ayr Seaforth,M50,02:03:14
+76,Davis,Pete,Unattached,M50,02:03:23
+77,Laidler,Paula,Unattached,F40,02:05:24
+78,Valentine,Debbie,Lochaber AC,F40,02:09:20
+79,Troup,Scott,Unattached,M40,02:12:38
+80,Bissett,Louise,Unattached,F40,02:21:56
+81,Savage,Debbie,Helensburgh AAC,F40,02:21:57
+82,Riou,Paul,Unattached,M,02:22:21
+83,Niciu,Cristina,Unattached,F,02:22:25
+84,Davies,Jason,Ochil Hill Runners,M50,02:22:27
+85,Fowler,Paul,Ochil Hill Runners,M50,02:23:00
+86,Mallet,Patrick,Lomond HR,M,03:06:10

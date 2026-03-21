@@ -1,0 +1,87 @@
+RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
+1,Faulkner,Paul,Carnethy,M,0:31:09
+2,Marshall,Brian,HELP,M40,0:31:41
+3,Rodwell,Damon,Border Search and Rescue,M40,0:32:51
+4,McGovern,Michael,Moorfoot Runners,M40,0:32:58
+5,Gallagher,Ronnie,Carnethy,M50,0:33:05
+6,Johnston,Fergus,Carnethy,M,0:33:11
+7,Gilmore,Andrew,Highland Hill Runners,M,0:34:00
+8,Grieve,Craig,Teviotdale Harriers,M40,0:34:55
+9,Haywood,Michael,Gala Harriers,M,0:34:57
+10,Anderson,Adam,Hartfell HRC,M40,0:34:58
+11,Turner,Brian,Falkirk Victoria Harriers,M,0:35:01
+12,Cox,Andrew,Moorfoot Runners,M,0:35:35
+13,Flett,Rob,HBT,M40,0:35:37
+14,Morgan,Charlotte,Carnethy,F,0:35:38
+15,Glendinning,Greig,Bellahouston RR,M40,0:35:46
+16,Gilmore,Iain,Carnethy,M,0:36:01
+17,MacDonald,Alistair,Dundee Hawkhill,M40,0:36:03
+18,Short,Kenny,Teviotdale Harriers,M40,0:36:07
+19,Sims,Andrew,HBT,M,0:36:14
+20,Moffat,David,Gala Harriers,M,0:36:14
+21,Geoghegan,Michael,Portobello,M,0:36:22
+22,Maxwell,Bill,Shettleston Harriers,M50,0:36:27
+23,Otton,Felix,Gala Harriers,M50,0:36:35
+24,Earle,Paddy,Tinto Hill Runners,M50,0:36:58
+25,Gilmore,Neil,Carnethy,M40,0:36:59
+26,Cameron,Gordon,Carnethy,M50,0:37:05
+27,Pendrich,Neil,Carnethy,M40,0:37:09
+28,Wight,Ally,Hardrock Hoodlums,M,0:37:14
+29,Hastie,Neil,HELP,M40,0:37:28
+30,Martin,Steven,Gala Harriers,M40,0:37:29
+31,Webster,Andrew,Solway,M,0:37:30
+32,Lunn,Anthony,Gala Harriers,M40,0:37:30
+33,Runciman,George,Lauderdale Limpers,M50,0:37:35
+34,Ellis,Kevin,Marlborough Harriers (NZ),M50,0:37:46
+35,Grove,Matthew,Carnethy,M40,0:37:49
+36,Clarke,Martin,Gala Harriers,M50,0:37:58
+37,Fraser,Billy,Northumberland FR,M50,0:38:29
+38,May,Damien,Unattached,M,0:38:51
+39,Dalgleish,Fiona,Gala Harriers,F40,0:38:56
+40,Kemp,Alex,Unattached,M,0:39:00
+41,Jones,Stephen,Unattached,M40,0:39:05
+42,Henry,Graham,Portobello,M40,0:39:14
+43,Anderson,Fraser,Unattached,M,0:39:36
+44,Erskine,Alec,Cosmics,M40,0:39:57
+45,Brydon,Derrick,Gala Harriers,M40,0:39:59
+46,Duncan,Andrew,Unattached,M40,0:40:28
+47,Walker,Ewan,Norham RC,M,0:40:37
+48,Maass,Digby,Carnethy,M50,0:40:54
+49,Molero,Luis,Lauderdale Limpers,M,0:41:07
+50,Pogson,Graham,Borders Triathletes,M50,0:41:37
+51,McLean,Graham,Corstorphine,M50,0:41:50
+52,Semple,Hamilton,Westerlands,M50,0:41:55
+53,Turner,Stuart,Unattached,M40,0:42:06
+54,Wight,Guy,Dalbeattie Running Club,M40,0:42:10
+55,Scully,Bobby,HBT,M,0:42:29
+56,Westbury,Tony,Gala Harriers,M40,0:42:49
+57,Parker,Craig,Solway,M40,0:43:06
+58,Johnston,Gordon,Norham RC,M40,0:43:24
+59,Stitt,John,Hardrock Hoodlums,M40,0:44:12
+60,Shepherd,Fiona,Borders Triathletes,F40,0:44:27
+61,Macaulay,Allan,Carnegie Harriers,M50,0:44:37
+62,Walker,Graeme,Unattached,M40,0:44:48
+63,McGilvray,Ally,Gala Harriers,M,0:44:48
+64,Gilligan,Steven,Westerlands,M,0:46:00
+65,Gollan,Graham,Unattached,M,0:46:23
+66,Smithard,Phil,Carnegie Harriers,M50,0:46:42
+67,Grainger,Jason,Gala Harriers,M,0:47:21
+68,Magowan,Ben,Unattached,M,0:47:34
+69,Hutchison,Struan,Unattached,M,0:47:34
+70,Fletcher,Jonathan,Unattached,M40,0:48:00
+71,Good,John,HELP,M40,0:48:51
+72,Coltman,Alan,Teviotdale Harriers,M40,0:48:58
+73,Grant,Dawn,Lauderdale Limpers,F40,0:49:28
+74,Khan,Mohammed,Dumfries RC,M,0:49:36
+75,Turner,Cameron,Unattached,M,0:50:00
+76,Magowan,Brian,Unattached,M40,0:50:14
+77,Howieson,Patricia,Carnethy,F,0:50:45
+78,Wilson,Calum,Unattached,M40,0:51:30
+79,Stapley,Tony,Portobello,M60,0:55:52
+80,Young,Rebecca,Unattached,F,0:56:00
+81,Meikle,Karen,Carnethy,F50,0:56:00
+82,Headley,Phillipa,Carnethy,F40,0:56:00
+83,Douglas-Hamilton,Alasdair,Unattached,M50,0:58:20
+84,Scott,John,Fife AC,M50,1:00:18
+85,Stark,Linda,Unattached,F50,1:04:36
+86,Loveland,Ann,Unattached,F50,1:23:00

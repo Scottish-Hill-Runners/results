@@ -1,0 +1,97 @@
+FinishPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
+1,Espie,James,Deeside Runners,M,00:28:00
+2,Tryner,Euan,Hallamshire Harriers,M Jun,00:29:40
+3,Wright,Angus,Team E Lothian AC,M Jun,00:30:48
+4,Appleton,David,Drumguish D & JC,M,00:31:48
+5,Paterson,Robbie,Highland Hill Runners,M40,00:32:20
+6,Evans,Bruce,Forres Harriers,M Jun,00:32:48
+7,Watson,Ed,Drumguish D & JC,M40,00:32:54
+8,MacEwan,Dougal,Drumguish D & JC,M,00:33:05
+9,Naylor,Donald,HBT,M50,00:33:11
+10,Marshall,Brian,Haddington,M50,00:33:30
+11,Campbell,Garry,Lochaber AC,M,00:33:59
+12,Shaw,Ruairidh,Lochaber AC,M,00:34:01
+13,Luna Hayman,James,Atletica Gavirote,M Jun,00:35:19
+14,Adams,Neil,Drumguish D & JC,M40,00:36:34
+15,Anderson,Adam,Hartfell Hill Runners.,M50,00:36:42
+16,Williamson,Jason,Cosmics,M50,00:37:05
+17,Wilkinson,Chris,Drumguish D & JC,M,00:37:30
+18,Bennet,Donald,Orion Harriers,M,00:37:36
+19,Macdonald,Sarah,Lochaber AC,F,00:37:41
+20,Hamilton,Rob,Lochaber AC,M40,00:37:47
+21,Smith,Alan,Deeside Runners,M60,00:37:50
+22,Gordon,Catriona,Drumguish D & JC,F,00:37:53
+23,Horne,Joseph,Drumguish D & JC,M,00:37:54
+24,Gorman,Manny,Drumguish D & JC,M50,00:38:01
+25,Slimon,Katie,Highland Hill Runners,F Jun,00:38:07
+26,Patton,Ellen,Dark Peak,F,00:38:14
+27,Patton,Simon,Dark Peak,M50,00:38:25
+28,Brown,Patrick,Orion Harriers,M,00:38:26
+29,Harvey-Bryant,Lloyd,Unattached,M ,00:38:34
+30,Roberts,Adam,Unattached,M,00:38:58
+31,Macpherson,Tom,Unattached,M,00:38:59
+32,Lamont,Donald,Lochaber AC,M,00:39:00
+33,Alcock,David,Unattached,M40,00:39:14
+34,Cameron,Fraser,Lochaber AC,M,00:39:23
+35,Thursby-Pelham,Brian,Thames Hare & Hounds,M50,00:39:31
+36,Malcolm,Stuart,Drumguish D & JC,M50,00:39:34
+37,Hayman,Mark,Unattached,M50,00:39:40
+38,Macdonald,Kira,Lochaber AC,F,00:39:52
+39,Maxwell,Ian,Gala Harriers,M60,00:40:03
+40,Gordon,Neil,Carnethy ,M,00:40:27
+41,Prise,Eilidh,Unattached,F,00:40:38
+42,White,Georgia,Lochaber AC,F,00:40:56
+43,Wells,Callum,Drumguish D & JC,M,00:41:21
+44,Watts,Liam,Unattached,M,00:41:29
+45,Tweed,Bradley,Unattached,M,00:41:44
+46,Brimacombe,Benjamin,Drumguish D & JC,M,00:41:44
+47,Marten,Seghers,Unattached,M40,00:42:27
+48,Miles,Finn,Drumguish D & JC,M,00:42:35
+49,McCarthy,Keith,Royal Wootton RC,M40,00:42:48
+50,Wetherill,Dil,WAOC,M50,00:42:51
+51,Aitken,Andrew,Strathearn Harriers,M40,00:43:14
+52,Macbeath,Niall,Lochaber AC,M50,00:43:22
+53,Claes,Thijs,Drumguish D & JC,M,00:43:27
+54,Ward,Claire,HBT,F40,00:43:28
+55,Noble,Callum,Unattached,M,00:43:37
+56,Shaw,Lyndsey,Lochaber AC,F40,00:43:39
+57,Davies,Beckie,Drumguish D & JC,F,00:43:54
+58,Shaw,Richard,Lochaber AC,M50,00:43:56
+59,Bakermans,Manouk,Drumguish D & JC,F,00:44:05
+60,Coe,Cara,Drumguish D & JC,F,00:44:22
+61,Mackintosh,Alasdair,Unattached,M Jun,00:46:00
+62,Bryan-Jones,Kirsty,Dark Peak,F50,00:46:07
+63,Watson,Helen,Drumguish D & JC,F40,00:46:30
+64,Kennedy,Michaela,Lochaber AC,F,00:46:43
+65,Kenrick,Thom,SMBRC,M40,00:46:47
+66,Valentine,Tom,Unattached,M,00:47:21
+67,Bull,Oliver,Unattached,M,00:47:30
+68,Pott,Tim,Forres Harriers,M50,00:47:57
+69,Hall,Mark,Insch TRC,M50,00:48:28
+70,Francis,Matt,Unattached,M40,00:48:50
+71,Taggart,Ada,Unattached,F,00:48:58
+72,Blain,Ben,Unattached,M50,00:50:08
+73,Watson,Michael,Unattached,M50,00:51:24
+74,Tatlow,Helen,Unattached,F,00:51:37
+75,Simon,Anthony,Unattached,M50,00:51:49
+76,Donghi,Enrico,Unattached,M40,00:52:25
+77,Hall,James,BAC,M60,00:52:28
+78,Valentine,Russ,Falkland Trail Runners,M60,00:53:28
+79,Norris,Harry,Unattached,M,00:54:31
+80,Foreman,Sophie,Unattached,F,00:54:47
+81,Peddie,Sophia,Unattached,F,00:58:20
+82,Baxter,Peter,Westerlands CCC,M60,01:00:56
+83,Banks,Lisa,Glasgow South RR,F40,01:02:40
+84,Slesser,Alan,Unattached,M70,01:03:15
+85,Garrett,Cameron,Unattached,M,01:03:36
+86,King,Shelagh,Gala Harriers,F60,01:05:37
+87,Macleod,Douglas,Unattached,M50,01:07:24
+88,Hall,Jeremy,Unattached,M50,01:07:54
+89,Carr,Kotomi,Unattached,F40,01:08:53
+90,Ellis,Julie,Unattached,F50,01:10:14
+91,Stewart,Helen,Unattached,F ,01:11:46
+92,Alcock,Helen,Unattached,F40,01:12:54
+93,Campbell,Karen,Falkland Trail Runners,F60,01:21:07
+94,Slesser,Mark,Unattached,M40,01:40:14
+95,Slesser,Graeme,Unattached,M40,01:41:53
+96,Gorman,Brenda,Westerlands CCC,F40,01:41:54

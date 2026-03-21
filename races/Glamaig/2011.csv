@@ -1,0 +1,102 @@
+RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
+1,Marshall,Brian,HELP,M40,0:51:54
+2,Fallas,Andrew,Carnethy,M,0:54:21
+3,Smith,Alan,Deeside Runners,M50,0:54:58
+4,Shepherd,Francis,Unattached,M,0:55:40
+5,Brookes,Rob,Cosmics,M,0:55:46
+6,Gorman,Manny,Westerlands,M40,0:57:14
+7,Davis,Adrian,Lomond Hill Runners,M40,0:58:23
+8,Harper,Kevin,Cosmics,M,0:59:46
+9,MacKenzie,John,Highland Hill Runners,M40,1:00:09
+10,Macpherson,Kenny,Tyne Bridge Harriers,M40,1:00:45
+11,Bass,Owen,Solway,M40,1:02:56
+12,Matthewson,Alastair,Highland Hill Runners,M40,1:04:18
+13,Kennedy,Ali,Lochaber AC,M50,1:04:23
+14,Macdonald,Matthew,Lochaber AC,M,1:05:21
+15,Blackhall,Keith,Lochaber AC,M40,1:05:57
+16,Ward,Peter,Unattached,M,1:06:21
+17,Fraser,Iain,Tri Buchan,M40,1:06:33
+18,Abrahams,Ben,Cosmics,M,1:08:07
+19,Simpson,Stuart,Stornoway AC,M40,1:08:21
+20,Till,Niall,Skye & Lochalsh RC,MU23,1:09:07
+21,Dallas,Bill,Cosmics,M40,1:09:14
+22,Blackhall,Amanda,Lochaber AC,F40,1:11:54
+23,Gilmore,Andrew,Highland Hill Runners,MU23,1:12:17
+24,Earle,Paddy,Tinto Hill Runners,M50,1:12:37
+25,Popple,Steve,Highland Hill Runners,M40,1:13:49
+26,Nash,Graham,Carnethy,M40,1:14:00
+27,Shepherd,Andrew,Carnethy,M50,1:14:17
+28,Butterworth,Nick,Unattached,M50,1:14:42
+29,Smith,John,Unattached,M,1:15:43
+30,Wilson,Colin,Lomond Hill Runners,M40,1:15:55
+31,Brett,Alex,Highland Hill Runners,M60,1:16:27
+32,Mackinnon,Martin,Cosmics,MU23,1:16:51
+33,Gilmore,Neil,Carnethy,M40,1:17:00
+34,Forrest,Stuart,Highland Hill Runners,M,1:17:06
+35,Campbell,Neil,Carnethy,M50,1:17:10
+36,Macbeath,John,Unattached,M,1:17:25
+37,Delaney,Liz,Cosmics,F,1:17:46
+38,O`Sullivan,Sean,Deeside Runners,M,1:17:54
+39,MacAskill,Robert,Unattached,M,1:17:55
+40,Macrury,Neil,Stornoway AC,M40,1:18:05
+41,Sheridan,Bob,Deeside Runners,M40,1:18:14
+42,Mardall,Nick,Deeside Runners,M40,1:18:44
+43,Till,Dave,Skye & Lochalsh RC,M50,1:18:49
+44,Brettle,Matt,Cosmics,M,1:19:04
+45,Murdoch,Ray,Lochaber AC,M60,1:19:39
+46,Bowman,Angus,Lomond Hill Runners,M50,1:19:51
+47,Nevett,Tom,RGS Guildford,MU23,1:20:16
+48,MacSween,Alastair,Wee County Harriers,M50,1:20:52
+49,Thomson,Ewan,Unattached,MU23,1:21:00
+50,Ward,Sarah,Cosmics,F,1:21:02
+51,Findlay,James,Unattached,M,1:21:17
+52,Ritchie,Hilary,Fife AC,F40,1:21:48
+53,Jermieson,Ashley,Cosmics,M60,1:22:43
+54,Harkness,Will,Unattached,M,1:23:07
+55,Earnshaw,Neil,Unattached,M,1:23:27
+56,Methold,Henry,Lochaber AC,M40,1:23:27
+57,Wilson,Joan,Lomond Hill Runners,F40,1:23:37
+58,MacLeod,Alastair,Unattached,M40,1:23:49
+59,Wallace,Craig,Vegan Runners,M,1:24:04
+60,Walker,Andrew,Cosmics,M50,1:24:08
+61,Andersen,Kaare,Unattached,M,1:24:31
+62,Riddell,Nicholas,Watlington Runners,MU23,1:25:02
+63,Gaff,Melanie,Wester Ross Athletics,F,1:25:58
+64,Stewart,Elaine,Cosmics,F50,1:26:03
+65,Gillies,Norman,Unattached,M,1:26:46
+66,Rawlinson,Keith,Unattached,M,1:28:07
+67,Campbell,Liz,Unattached,F,1:29:29
+68,Flack,Neil,Unattached,M40,1:31:41
+69,Bishop,Murray,Dark Peak,M40,1:32:07
+70,Hampshire,Duncan,RGS Guildford,MU23,1:32:19
+71,Macdougall,Ken,Tinto Hill Runners,M,1:32:28
+72,Riddell,John,Watlington Runners,M40,1:32:34
+73,Calcutt,Jock,Unattached,M50,1:34:13
+74,O`Sullivan,Clare,Cosmics,F,1:34:14
+75,Barbour,Laura,Lochaber AC,F,1:34:48
+76,Thompson,Fiona,Lochaber AC,F,1:35:18
+77,Bradley,Siobhan,Lochaber AC,F,1:36:14
+78,Hamilton,Jim,Lochaber AC,M40,1:37:34
+79,Bass,Ursula,Deeside Runners,F40,1:38:29
+80,Ross,Richard,Unattached,M,1:40:27
+81,O`Sullivan,Sarah,Cosmics,F,1:41:40
+82,Bowman,Jean,Lomond Hill Runners,F50,1:48:31
+83,Earnshaw,Colin,North Highland Harriers,M40,1:49:02
+84,Hill,Iain,Unattached,M,1:50:59
+85,Wall,Dick,HBT,M50,1:52:54
+86,Macrae,Rachel,Wee Grumpy Runners,F,1:54:17
+87,Macdonald,Fiona,Wee Grumpy Runners,F40,1:54:18
+88,Paul,Brenda,Westerlands,F,1:56:53
+89,Cheek,Liam,RGS Guildford,MU23,1:57:01
+90,Arronson,Nathaniel,RGS Guildford,MU23,1:57:01
+91,White,Douglas,RGS Guildford,MU23,1:59:31
+92,Dickinson,Ben,RGS Guildford,MU23,1:59:34
+93,Gillies,Ann,Unattached,F40,2:07:37
+94,Gray,Kevan,Unattached,M,2:08:04
+95,Bidwell,Sam,Unattached,M,2:15:58
+96,McGroarty,Paul,Unattached,M,2:16:23
+97,Gunn,Tarquin,Lochaber AC,M,2:18:23
+98,Carnegie-Brown,Hugo,Unattached,MU23,2:22:26
+99,Hall,Sam,RGS Guildford,MU23,2:29:54
+100,Grassick,William,RGS Guildford,MU23,2:30:05
+101,Warby,Tony,Unattached,M50,2:33:43

@@ -1,0 +1,110 @@
+RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
+1,Whitehead,Dan,Deeside Runners,M,0:23:26
+2,Strain,Murray,HBT,M,0:24:12
+3,Smith,Tom,Lochaber AC,M,0:25:18
+4,Paterson,Donald,Lochaber AC,M,0:25:41
+5,Brand,Tim,Lochaber AC,M40,0:25:49
+6,Sedgwick,Nick,Lochaber AC,M,0:26:01
+7,Mitchell,Craig,Vegan Runners,M,0:26:05
+8,Hepburn,John,Lochaber AC,M40,0:26:09
+9,Fallon,Steven,Carnethy,M40,0:26:11
+10,Gorman,Manny,Westerlands,M,0:26:12
+11,Williamson,Jason,Cosmics,M,0:26:45
+12,Smith,Alan,Deeside Runners,M40,0:27:00
+13,Mair,Will,HBT,M,0:27:09
+14,Whitehead,Clare,Deeside Runners,F,0:27:26
+15,Taylor,Peter,Unattached,M,0:27:59
+16,Cameron,Stephen,Unattached,M,0:28:09
+17,Mowbray,Phil,HBT,M,0:28:13
+18,Ward,Peter,Unattached,M,0:28:19
+19,Gordon,Claire,HBT,F,0:28:24
+20,Muir,Gregor,Lochaber AC,M,0:28:25
+21,Simpson,Geoff,HBT,M40,0:28:26
+22,Philip,Daryl,HBT,M,0:28:34
+23,Brooks,Graham,Lochaber AC,M50,0:28:40
+24,Munro,Graham,Lochaber AC,M,0:28:43
+25,Gunn,Tarquin,Lochaber AC,M,0:28:48
+26,Dale,Andy,Loch Eck Orienteers,M,0:29:00
+27,Normand,Ivor,HBT,M40,0:29:02
+28,Bass,Owen,Solway,M40,0:29:13
+29,Clark,Ian,Unattached,M,0:29:30
+30,Kennedy,Ali,Lochaber AC,M40,0:29:32
+31,Beckett,Daniel,HBT,M,0:29:54
+32,Verbiest,Dirk,Garioch Road Runners,M40,0:30:00
+33,Honston,Paul,Unattached,M,0:30:04
+34,Rathjen,Jon,HBT,M,0:30:28
+35,Wilson,Stewart,Highland Hill Runners,M40,0:30:48
+36,Grant,Miranda,HBT,F,0:30:51
+37,Rudkin,David,Unattached,M,0:30:52
+38,McClelland,Peter,HBT,M,0:30:57
+39,Hunter,Andrew,Unattached,M,0:31:07
+40,Henderson,Julia,Helensburgh AAC,F,0:31:15
+41,Strachan,Graham,Unattached,M,0:31:27
+42,Forster,Nix,Lochaber AC,F40,0:31:35
+43,Forster,Damian,Lochaber AC,M40,0:31:44
+44,Macdonald,Gavin,Unattached,M,0:31:49
+45,Provan,Louise,Fife AC,F,0:32:04
+46,Poll,Bruce,Lochaber AC,M,0:32:12
+47,Shaw,Richard,Lochaber AC,M40,0:32:13
+48,Cant,Stephen,Lochaber AC,M,0:32:20
+49,Whitehead,Jonathan,Carnethy,M50,0:32:35
+50,Barclay,Vicki,Unattached,F,0:32:40
+51,Mowbray,Megan,HBT,F,0:32:48
+52,Duncan,David,Ochil Hill Runners,M50,0:32:58
+53,Treasurer,Jim,Lochaber AC,M50,0:33:07
+54,MacEwan,Linda,Lochaber AC,F40,0:33:12
+55,Wilson,Colin,Lomond Hill Runners,M40,0:33:15
+56,Livingstone,Robin,HBT,M50,0:33:16
+57,Jeffrey,Michelle,Unattached,F,0:33:41
+58,Dowell,Finlay,Irvine RC,M40,0:33:48
+59,Pearce,Emma,Lochaber AC,F40,0:34:04
+60,Axon,Simon,HBT,M40,0:34:19
+61,McClelland,Morag,HBT,F,0:34:20
+62,Rathjen,Sandra,HBT,F,0:35:00
+63,Gow,Elizabeth,Lochaber AC,F,0:35:09
+64,Paterson,Chloe,Lochaber AC,F,0:35:18
+65,Hemm,Michael,Unattached,M,0:35:25
+66,Mackenzie,Sarah,Lochaber AC,F,0:35:43
+67,Dodman,Ben,Lochaber AC,M,0:36:06
+68,Buchanan-Smith,Beppo,Unattached,M,0:36:12
+69,Spalding,Maggie,HBT,F,0:36:16
+70,Scott,Bill,Lochaber AC,M50,0:36:33
+71,Orr,Ernie,Lochaber AC,M60,0:36:48
+72,Smith,Tilly,Deeside Runners,F40,0:36:52
+73,Finnimore,Andrew,Lochaber AC,M50,0:36:55
+74,O`Kane,John,Lochaber AC,M40,0:37:01
+75,Aitken,Morag,Lochaber AC,F40,0:37:05
+76,Wilson,Joan,Lomond Hill Runners,F40,0:37:20
+77,Murdoch,Ray,Lochaber AC,M50,0:37:23
+78,Ness,Joanna,Lochaber AC,F40,0:37:32
+79,Dougan,John,Lochaber AC,M50,0:37:33
+80,Rumgay,Clare,Lochaber AC,F,0:37:42
+81,MacLennan,Lynn,Lochaber AC,F40,0:38:10
+82,MacDonald,Nicky,Lochaber AC,F,0:38:47
+83,Smith,Gordon,Lochaber AC,M,0:38:48
+84,McNeillage,Alison,HBT,F,0:38:54
+85,Treasurer,Claire,Lochaber AC,F,0:39:36
+86,Sangster,Gillian,Dundee Road Runners,F,0:39:46
+87,Murdoch,Elma,Lochaber AC,F50,0:40:01
+88,Duncan,Aileen,Lochaber AC,F40,0:40:19
+89,Bailey,Will Hugh,HBT,M,0:40:38
+90,Morrison,Ellen,Lochaber AC,F,0:41:14
+91,Kennedy,Nancy,Lochaber AC,F50,0:41:49
+92,Kitson,Aileen,Lochaber AC,F50,0:41:50
+93,Fyfe,Susan,Lochaber AC,F40,0:43:00
+94,Paul,Brenda,Westerlands,F,0:43:14
+95,Cant,Ailsa,Lochaber AC,F,0:44:05
+96,Johnston,Aileen,Unattached,F40,0:44:22
+97,Livingstone,Cath,HBT,F40,0:44:23
+98,Gayle,Verona,Unattached,F,0:44:49
+99,Hynd,Joanna,Lochaber AC,F,0:45:08
+100,Kennedy,Teresa,Lochaber AC,F40,0:48:00
+101,Austin,Davie,Unattached,M,0:48:55
+102,Rankin,Gavin,Lochaber AC,M,0:49:02
+103,MacLeod,Clare,Lochaber AC,F,0:49:18
+104,Duncan,Davy,Unattached,M40,0:51:57
+105,Dougan,Christine,Lochaber AC,F40,0:52:19
+106,Hervo,Sandra,Unattached,F,0:53:08
+107,Tennant,Yvonne,Unattached,F,1:02:26
+108,Corner,Julie,Lochaber AC,F,1:02:27
+109,Corner,Graham,Lochaber AC,M,1:02:28

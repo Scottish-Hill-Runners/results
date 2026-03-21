@@ -1,0 +1,117 @@
+RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
+1,Houston,Ross,Central AC,M,0:34:11
+2,Gay,Dan,HBT,M,0:36:05
+3,Green,Gareth,Portobello,M,0:36:48
+4,Reid,Michael,Carnethy,M,0:37:09
+5,Naylor,Donald,HBT,M,0:37:21
+6,McAlinden,Niall,Westerlands,M,0:37:32
+7,Mattocks,Craig,Gala Harriers,M,0:37:46
+8,Ferrington,Tom,Corstorphine,M,0:38:04
+9,Robertson,Ally,Carnethy,MU23,0:38:36
+10,Buchanan,Peter,Portobello,M40,0:39:07
+11,Rankin,Christina,Kilbarchan,F,0:39:17
+12,Stevenson,John,Ochil Hill Runners,M50,0:39:25
+13,Fraser,Gary,Ochil Hill Runners,M40,0:39:29
+14,McLean,Alan,Unattached,M40,0:39:47
+15,Love,Craig,Dundee Hawkhill,M40,0:39:50
+16,Johnston,Fergus,Carnethy,M,0:40:11
+17,O`Neill,Owen,Westerlands,M,0:40:14
+18,Nash,Graham,Carnethy,M40,0:40:21
+19,Garrick,William,2 SCOTS,M,0:40:32
+20,Crabbie,Colin,HBT,M40,0:40:37
+21,Rathjen,Jon,HBT,M40,0:40:53
+22,Norwood,Tim,Corstorphine,M,0:40:59
+23,Murray,Alan,Ochil Hill Runners,M40,0:41:02
+24,Sims,Andrew,HBT,M,0:41:08
+25,McMillan,Ian,Portobello,M40,0:41:15
+26,Burt,Cameron,Westerlands,M,0:41:25
+27,Malcolm,Bruce,Corstorphine,M40,0:41:32
+28,Blore,Paul,Unattached,M40,0:41:36
+29,Smith,Alastair,Dundee Hawkhill,M,0:41:39
+30,Morgan,Charlotte,Carnethy,F,0:41:40
+31,Kelly,Graham,Westerlands,M40,0:42:04
+32,McKechanie,Eilis,HBT,F,0:42:06
+33,Wild,Mike,HBT,M,0:42:08
+34,King,Steven,Carnegie Harriers,M40,0:42:26
+35,Berrill,David,Lothian,M,0:42:37
+36,Malcolm,John,Carnethy,M,0:42:40
+37,Gilkison,Alan,Westerlands,M40,0:42:44
+38,Jenkins,Kate,Gala Harriers,F,0:43:00
+39,Gilmore,Andrew,Highland Hill Runners,MU23,0:43:07
+40,Brown,Andrew,Unattached,M,0:43:21
+41,Hendry,Robert,Unattached,M40,0:43:25
+42,Colquhoun,Lucy,Moorfoot Runners,F40,0:43:28
+43,Pollard,Paul,Penicuik Harriers,M,0:43:40
+44,Nash,Paul,Carnethy,M,0:43:47
+45,Fulton,David,HBT,M,0:43:52
+46,Gilmore,Iain,Carnethy,MU23,0:43:56
+47,Harrison,Simon,HBT,M,0:43:58
+48,Gilmore,Neil,Carnethy,M40,0:44:02
+49,Darwin-Clements,Dan,HBT,M,0:44:35
+50,McKechanie,Andrew,HBT,M,0:44:40
+51,Cox,Chloe,Edinburgh AC,F,0:44:49
+52,Mooney,Edel,Ochil Hill Runners,F,0:44:55
+53,Orr,Johnston,Westerlands,M,0:45:03
+54,Anthony,Eilidh,HBT,F,0:45:07
+55,Grisewood,Aidan,Portobello,M,0:45:19
+56,Owens,Phil,Portobello,M,0:45:27
+57,Paul,Alastair,Northumberland FR,M50,0:45:51
+58,Orr,Gavin,Harmeny AC,M40,0:45:57
+59,Nowicki,Michael,Carnethy,M,0:46:01
+60,Connor,Julia,Unattached,F,0:46:13
+61,Bartlett,Pat,Interlopers,M40,0:46:33
+62,Normand,Ivor,HBT,M40,0:47:03
+63,Weir,Jonathan,Unattached,M,0:47:57
+64,Martin,Ron,Ochil Hill Runners,M40,0:48:00
+65,O`Brien,Phyllis,HBT,F50,0:48:04
+66,Mitchell,Neill,Fife AC,M40,0:48:07
+67,Duff,Bill,Falkland Trail Runners,M60,0:48:09
+68,Stavert,Andrew,Portobello,M,0:48:16
+69,McLean,Graham,Corstorphine,M50,0:48:22
+70,McNeile,Peter,Westerlands,M,0:48:43
+71,Hunter,Roy,Carnethy,M50,0:48:44
+72,Martin,Keith,Harmeny AC,M50,0:48:46
+73,Muir,Denise,Portobello,F40,0:48:53
+74,O`Brien,Paul,Corstorphine,M50,0:49:10
+75,Tayial,Rebecca,Unattached,F,0:49:12
+76,Duncan,David,Ochil Hill Runners,M50,0:49:15
+77,Huntley,Chris,Tinto Hill Runners,M50,0:49:17
+78,Brown,Kevin,Ochil Hill Runners,M,0:49:21
+79,Kelsall,Fiona,Ochil Hill Runners,F40,0:49:26
+80,Warner,Mark,HBT,M40,0:49:41
+81,Adam,Sarah,Westerlands,F,0:49:59
+82,Smith,Ian,Harmeny AC,M40,0:50:15
+83,Gillilian,Steven,Unattached,M40,0:50:22
+84,Elms,Derek,Portobello,M50,0:50:27
+85,Hunter,Mary,Portobello,F40,0:50:53
+86,Whitehead,Jonathan,Carnethy,M50,0:51:19
+87,Midgley,Peter,Westerlands,M50,0:51:28
+88,McKelvie,Gillian,Portobello,F50,0:52:34
+89,Ridyard,Alison,HBT,F40,0:52:48
+90,Downie,Chris,Penicuik Harriers,M50,0:52:53
+91,Ascroft,Lorna,Carnethy,F,0:53:21
+92,Wilson,Andrea,Penicuik Harriers,F40,0:53:38
+93,Chambers,Kirsty,HBT,F,0:53:53
+94,Corrigan,Andrew,Harmeny AC,M40,0:53:58
+95,May,Timothy,ESOC,M40,0:53:59
+96,McNeillage,Alison,HBT,F40,0:54:14
+97,Webster,Leanne,Lothian,F,0:54:21
+98,Higgins,Keziah,Harmeny AC,F,0:54:24
+99,Simpson,Alan,Portobello,M50,0:54:28
+100,Horsburgh,Jill,Linlithgow Harriers,F50,0:54:31
+101,Oliver,Chris,HBT,M60,0:54:49
+102,Love,Charlie,Dundee Hawkhill,M60,0:56:12
+103,Mayfield,Fiona,Portobello,F40,0:58:21
+104,Moss,Stephanie,Carnethy,F,0:58:29
+105,Craig,Carrie,HBT,F,0:58:51
+106,Stoddart,Kirsty,Harmeny AC,F40,0:59:21
+107,Young,Douglas,Portobello,M60,0:59:45
+108,Ball,Nia,Harmeny AC,F,1:00:53
+109,Fairley,Bill,Carnegie Harriers,M60,1:01:22
+110,Bone,Norma,Harmeny AC,F50,1:06:32
+111,Munro,Karen,Portobello,F40,1:09:41
+112,Webster,Cath,Portobello,F50,1:16:10
+113,Stirton,Janis,Portobello,F50,1:16:10
+114,Milne,Ellie,Portobello,F40,1:16:10
+115,Reese,Rev D,USA,M40,1:16:10
+116,Reese,Mrs D,USA,F40,1:16:10

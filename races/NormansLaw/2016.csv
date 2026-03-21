@@ -1,0 +1,133 @@
+RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
+1,Rees,Logan,Fife AC,MU20,0:30:23
+2,Rees,George,Fife AC,MU20,0:32:15
+3,Knox,Jonny,Anster Haddies,M50,0:34:23
+4,Andrew,Mike,Carnethy,M50,0:34:48
+5,Rees,Halina,Fife AC,F,0:34:52
+6,Louden,Alexander,Fife AC,M,0:35:00
+7,Cox,Alistair,Tinto Hill Runners,M,0:35:05
+8,McBain,Johnny,Dundee Hawkhill,M,0:35:11
+9,Gibson,Billy,Dundee Hawkhill,M40,0:35:15
+10,Dobson,Jacob,Kinross Road Runners,M,0:35:18
+11,Morris,Craig,Fife AC,MU20,0:35:35
+12,Malcolm,Bruce,Corstorphine,M50,0:35:39
+13,Laycock,Andy,Kinross Road Runners,M40,0:35:42
+14,Duffy,Sean,Unattached,M,0:36:24
+15,Coron,Ross,St Andrews University,M,0:36:34
+16,Innes,Bryan,Falkland Trail Runners,M,0:36:44
+17,Strachan,Scott,Kinross Road Runners,M40,0:36:54
+18,MacDonald,Mike,Unattached,M40,0:36:55
+19,Booth,Rick,Fife AC,M40,0:37:42
+20,McIntyre,Jimmy,Fife AC,M40,0:37:50
+21,Cargill,Andy,Leven Las Vegas,M,0:37:53
+22,Lamont,Colin,Strathearn Harriers,M50,0:37:56
+23,Black,Ali,Carnethy,M,0:38:10
+24,Farquhar,Jeff,Pitreavie,M50,0:38:11
+25,Lye,Mary,Carnethy,F40,0:38:15
+26,Cowan,David,Fife AC,M50,0:38:24
+27,Rogers,Kevin,Perth Road Runners,M40,0:38:42
+28,Poolman,Ian,Glenrothes Tri Club,M40,0:38:49
+29,Roberts,Clive,Fife AC,M50,0:38:55
+30,Miller,David,Dundee Road Runners,M40,0:38:57
+31,Reid,Stewart,Perth Road Runners,M,0:39:05
+32,Barker,Gary,Fife AC,M50,0:39:12
+33,Lomas,Paul,Unattached,M40,0:39:14
+34,Gallagher,Andrew,Strathearn Harriers,M50,0:39:18
+35,Hill,James,Dundee University,M,0:39:30
+36,Veerboer,Rik,St Andrews University,M,0:39:32
+37,Alexander,David,Strathearn Harriers,MU20,0:39:40
+38,Weir,Jonathan,Unattached,M,0:39:40
+39,Roberts,Craig,Unattached,M,0:39:41
+40,Milne,Andrew,Fife AC,M40,0:39:43
+41,Halliday,Gordon,Anster Haddies,M40,0:39:43
+42,Ingram,Richard,Cosmics,M40,0:39:48
+43,Boyd,Ryan,Glenrothes Tri Club,M,0:39:57
+44,Fox,Simon,Fife AC,M50,0:40:00
+45,Simkin,Steven,Carnethy,M40,0:40:11
+46,Goad,Will,Unattached,M40,0:40:20
+47,MacKinlay,David,Central AC,M,0:40:35
+48,Forte,Phil,Dundee Hawkhill,M50,0:40:44
+49,Crow,Sonja,Perth Road Runners,F,0:40:53
+50,Jones,Tim,Kinross Road Runners,M,0:41:00
+51,Millar,Neil,Fife AC,M40,0:41:01
+52,Mitchell,Neill,Fife AC,M40,0:41:03
+53,Reid,Don,Westerlands,M50,0:41:07
+54,Douglas,Claire,Perth Road Runners,F40,0:41:09
+55,Shaw,Richard,Anster Haddies,M60,0:41:19
+56,Reed,Paul,Dundee Road Runners,M40,0:41:49
+57,Page,Michael,Knavesmire Harriers,M,0:41:50
+58,Murray,Kevin,Unattached,M40,0:41:52
+59,Johnston,Zoey,Falkland Trail Runners,F40,0:42:00
+60,Wayte,Tony,Strathearn Harriers,M50,0:42:17
+61,Banks,Kevin,Unattached,M,0:42:21
+62,Wood,Adrian,East Fife Tri,M,0:42:27
+63,Kennovin,Gordon,Calder Valley,M50,0:42:32
+64,Cessford,Lee,Falkland Trail Runners,M,0:42:58
+65,Taylor,Tony,Falkland Trail Runners,M50,0:43:11
+66,Groeneveld,Eva,Fife AC,F,0:43:16
+67,Knox,Rosie,Anster Haddies,FU20,0:43:20
+68,Kent,Graham,Kinross Road Runners,M,0:43:21
+69,Kendal,Scott,Unattached,M,0:43:35
+70,Allcock,Mike,Wormit RR,M60,0:43:36
+71,Barker,Graham,Fife AC,M,0:43:39
+72,Darbyshire,Peter,Fife AC,M50,0:43:47
+73,Blackley,Lisa,Unattached,F,0:43:48
+74,Norrie,David,Fife AC,M60,0:43:51
+75,Kilpatrick,Deborah,Ochil Hill Runners,F,0:43:54
+76,Riley,Claire,Unattached,F40,0:44:00
+77,Dobson,Judith,Kinross Road Runners,F50,0:44:06
+78,Ward,Richard,Perth Road Runners,M40,0:44:14
+79,Marr,Allen,Anster Haddies,M60,0:44:23
+80,Manson,Fiona,Perth Road Runners,F40,0:44:25
+81,Davies,Jeremy,Unattached,M,0:44:27
+82,Bracegirdle,Innes,Fife AC,F60,0:44:29
+83,Dillon,Mark,Strathearn Harriers,M40,0:44:31
+84,Baillie,Jas,Anster Haddies,M50,0:44:37
+85,Simpson,Iain,Falkland Trail Runners,M40,0:44:57
+86,Hunter,Lynn,Kinross Road Runners,F40,0:45:30
+87,Sinclair,David,Perth Road Runners,M,0:45:36
+88,Cruickshanks,Pamela,Anster Haddies,F50,0:45:41
+89,Taylor,Gordon,Leven Las Vegas,M50,0:45:42
+90,Taylor,Jeff,Leven Las Vegas,M50,0:45:44
+91,Campbell,Barry,Perth Road Runners,M,0:46:04
+92,Stokoe,David,Perth Road Runners,M40,0:46:22
+93,Hunter,Findlay,Kinross Road Runners,MU20,0:46:54
+94,Dobson,Stuart,Kinross Road Runners,M50,0:46:56
+95,Cameron,Ewan,Anster Haddies,M50,0:47:16
+96,Mearns,Kenny,Lothian,M50,0:47:23
+97,Knox,Tracy,Anster Haddies,F50,0:48:17
+98,MacPherson,Lorraine,Perth Road Runners,F40,0:48:38
+99,Hunter,Neil,Kinross Road Runners,M40,0:48:42
+100,Wedderburn,John,Unattached,M50,0:48:54
+101,Gibson,Allan,Anster Haddies,M60,0:48:57
+102,Fry,Nick,Anster Haddies,M50,0:49:07
+103,Cromar,Steve,Dundee Hawkhill,M70,0:49:24
+104,Mitchell,Michael,Unattached,M40,0:49:38
+105,Scott,Isobel,St Andrews University,FU20,0:49:52
+106,Brown,Sharon,Anster Haddies,F,0:49:56
+107,Torres,Merle,Fife AC,F,0:52:33
+108,Vigrow,Alan,Dundee Hawkhill,M50,0:52:47
+109,Morgan,Donna,Fife AC,F40,0:53:09
+110,Melville,Carole,Fife AC,F70,0:53:19
+111,Taylor,Angela,Falkland Trail Runners,F50,0:53:22
+112,MacIntyre,Anne,Kinross Road Runners,F60,0:53:25
+113,Houston,Alison,Kinross Road Runners,F60,0:53:47
+114,Whiteford,Anne,Fife AC,F50,0:53:52
+115,Stewart,Mark,Dundee Road Runners,M40,0:53:53
+116,Roberts,Nina,Perth Road Runners,F,0:55:40
+117,Staples,Holly,Perth Road Runners,F,0:55:42
+118,Whisler,Sue,Fife AC,F55,0:55:56
+119,Cuthbert,Anna,Unattached,F40,0:58:12
+120,Bennison,Graham,Fife AC,M60,0:58:59
+121,Nachman,Eric,Falkland Trail Runners,M60,0:59:09
+122,Toller,Ruth,Dundee Road Runners,F60,0:59:14
+123,Scott,Tom,Fife AC,M60,1:00:23
+124,Gibson,Annie,Falkland Trail Runners,F50,1:01:02
+125,Gray,Fiona,Unattached,F,1:02:36
+126,Spence,Karen,Falkland Trail Runners,F40,1:06:44
+127,Tweddle,Alexa,Falkland Trail Runners,F,1:07:08
+128,Smith,Norman,Kinross Road Runners,M70,1:07:24
+129,Taylor,Simon,Unattached,M40,1:07:53
+130,Rieu-Clarke,Peter,Fife AC,M70,1:11:06
+131,MacCalman,Sandy,Kinross Road Runners,M70,1:11:07
+132,Love,Charlie,Dundee Hawkhill,M70,1:16:58

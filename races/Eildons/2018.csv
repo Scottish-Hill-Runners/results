@@ -1,0 +1,90 @@
+RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
+1,Espie,James,Deeside Runners,M,0:35:27
+2,Dunn,James,HBT,M,0:36:38
+3,Bryson,Gavin,Highland Hill Runners,MU20,0:37:57
+4,Luetchford,Alex,HBT,M,0:38:55
+5,Hanson,Bethany,Edinburgh Uni H&H,F,0:39:08
+6,Cox,Andrew,Moorfoot Runners,M,0:39:41
+7,Stewart,Iain,Westerlands,M,0:40:39
+8,Livingstone,Andrew,Annan & District AC,M,0:41:33
+9,McGowan,Jamie,Gala Harriers,M40,0:43:06
+10,Anderson,Heather,Fife AC,F,0:43:09
+11,Whitelaw,Mark,Hartfell HRC,M40,0:43:37
+12,Galbraith,Anna,Teviotdale Harriers,F,0:43:50
+13,McLellan,Graham,Hartfell HRC,M40,0:43:57
+14,Trewartha,Gary,Gala Harriers,M40,0:44:33
+15,Williams,Colin,Moorfoot Runners,M40,0:44:35
+16,Lavin,Daniel,Carnethy,M,0:44:49
+17,Anderson,Adam,Hartfell HRC,M50,0:44:53
+18,Maxwell,Ian,Gala Harriers,M50,0:45:18
+19,Tullie,John,Teviotdale Harriers,M60,0:45:19
+20,Duncan,Eric,Highland Hill Runners,M40,0:45:31
+21,Pikett,William,Norham RC,M50,0:46:06
+22,Henry,Robert,Musselburgh AC,M40,0:46:13
+23,Adamson,Simon,Gala Harriers,M40,0:46:16
+24,Badial,Anisha,Aberdeen AAC,FU20,0:46:18
+25,Booth,Rick,Fife AC,M40,0:46:30
+26,Jones,Stephen,Unattached,M50,0:46:43
+27,Lalither,Scott,Unattached,M40,0:46:48
+28,McKenna,Lynn,Giffnock North,FU20,0:46:54
+29,Irving,Roger,Hartfell HRC,M50,0:46:58
+30,Short,Michelle,Teviotdale Harriers,F,0:47:35
+31,Turnbull,Les,Norham RC,M60,0:47:41
+32,Macdonald,Scott,Unattached,M50,0:48:12
+33,Molero,Luis,Lauderdale Limpers,M,0:48:24
+34,Stone,Maya,Fife AC,F,0:48:25
+35,Malcolmson,Craig,Hartfell HRC,M50,0:48:31
+36,Farquhar,Jeff,Pitreavie,M50,0:48:46
+37,Boyd,Duncan,Unattached,M50,0:49:28
+38,McCulloch,Billy,Gala Harriers,M50,0:49:35
+39,Crawford,Holly,Unattached,FU20,0:49:44
+40,Hardy,Mark,Carnethy,M,0:50:42
+41,Husbands,Jess,HBT,F,0:50:44
+42,Schoeman,Jenny,Unattached,F,0:50:50
+43,Hartley,Jenny,Lauderdale Limpers,F,0:50:57
+44,Lawson,Jamie,Unattached,M,0:51:44
+45,Aikman,Mike,Unattached,M,0:51:47
+46,Allen,Rosie,Hartfell HRC,F40,0:52:00
+47,Nightingale,David,Unattached,M60,0:52:48
+48,Kelsall,Fiona,Ochil Hill Runners,F40,0:52:49
+49,Hall,Pete,Moorfoot Runners,M50,0:53:08
+50,Milligan,George,Unattached,M40,0:53:09
+51,Forte,Phil,Dundee Hawkhill,M60,0:53:21
+52,Bellamy,Paul,Unattached,M40,0:53:45
+53,Milligan,Douglas,Solway,M70,0:53:51
+54,Williamson,Philip,Unattached,M50,0:53:54
+55,Brydon,Derrick,Gala Harriers,M40,0:53:59
+56,Williamsom,Finlay,Unattached,M,0:54:53
+57,Lockie,Gavin,Teviotdale Harriers,M,0:54:53
+58,Fortune,Carole,Gala Harriers,F50,0:55:05
+59,Graham,Kevin,Edinburgh AC,M,0:55:06
+60,Duncan,David,Ochil Hill Runners,M60,0:55:22
+61,Scott,Jocelyn,Fife AC,F60,0:55:34
+62,Paul,Alastair,Northumberland FR,M60,0:55:47
+63,Tillotson,Adam,Unattached,M,0:55:51
+64,Lockie,Paul,Teviotdale Harriers,M50,0:56:14
+65,Jamieson,Stuart,Jog Scotland,M,0:56:39
+66,Marynicz,Paul,Norham RC,M60,0:57:45
+67,Godfrey,Kevin,Lothian,M50,0:58:03
+68,Tyler,Caroline,Norham RC,F50,0:58:10
+69,Morton,Jonathan,Lauderdale Limpers,M,0:58:15
+70,McAleese,Rachel,Lauderdale Limpers,F,0:59:07
+71,Lockie,Duncan,Unattached,M,0:59:08
+72,McAdam,Sarah,Portobello,F,0:59:14
+73,MacEwen,Alex,Edinburgh AC,M60,0:59:38
+74,Brown,Gav,Gala Harriers,M40,1:03:27
+75,Fraser,Ronald,Dundee Road Runners,M50,1:03:31
+76,McAdam,Pauline,Teviotdale Harriers,F60,1:03:34
+77,Coltman,Alan,Teviotdale Harriers,M50,1:04:38
+78,Davidson,Stewart,Fife AC,M60,1:07:36
+79,King,Shelagh,Gala Harriers,F60,1:07:44
+80,Fraser,Jeremy,Lauderdale Limpers,M50,1:09:08
+81,Birch,Frank,Teviotdale Harriers,M70,1:10:21
+82,Cameron,Susan,Unattached,F40,1:11:15
+83,Lawson,Sophie,Unattached,F,1:11:23
+84,Lloyd,Hannah,Unattached,F,1:13:03
+85,Woodcock,Ian,Lauderdale Limpers,M40,1:13:09
+86,Murray,Robert,Unattached,M60,1:19:19
+87,Foley,Erina,Unattached,FU20,1:22:29
+88,Alla,Indi,Unattached,FU20,1:22:40
+89,Purves,Anne,Gala Harriers,F40,1:25:11

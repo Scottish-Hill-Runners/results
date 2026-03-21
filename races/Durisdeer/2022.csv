@@ -1,0 +1,171 @@
+FinishPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
+1,Wild,Finlay,Lochaber AC,M,01:23:20
+2,Lennon,Eoin,Carnethy Hill Racing Club,M,01:30:09
+3,Elkington,Matthew,Ambleside AC,M,01:30:13
+4,Bolton,Harry,Keswick AC,MU23,01:30:13
+5,Masson,Alistair,Carnethy Hill Racing Club,M,01:30:37
+6,Lamb,Mark,Keswick AC,M,01:30:53
+7,Gollan,Ross,Shettleston Harriers,M,01:31:03
+8,Espie,James,Deeside Runners,M,01:33:01
+9,Roberts,Gavin,Calder Valley Fell Runners,M,01:33:03
+10,Fallas,Andrew,Carnethy Hill Racing Club,M40,01:33:17
+11,Roberts,Matthew,Calder Valley Fell Runners,M40,01:33:50
+12,Gray,Karl,Calder Valley Fell Runners,M50,01:34:00
+13,Halsall,Steve,Keswick AC,M,01:34:35
+14,Callan,Thomas,Westerlands CCC,M,01:34:43
+15,Worster,Andrew,Calder Valley Fell Runners,M,01:34:45
+16,Wilson,Felix,Carnethy Hill Racing Club,MU23,01:35:39
+17,Kay,Darren,Calder Valley Fell Runners,M50,01:35:48
+18,Dry,Dan,Shettleston Harriers,M,01:36:04
+19,Mulholland,Gavin,Calder Valley Fell Runners,M50,01:36:48
+20,Faulkner,Paul,Carnethy Hill Racing Club,M40,01:36:58
+21,Collier,Jake,Keswick AC,MU23,01:38:25
+22,Richmond,Kenny,Helm Hill Runners,M50,01:38:43
+23,Stewart,Gregor,Westerlands CCC,M,01:39:09
+24,Davis,Andrew,Ochil Hill Runners,M40,01:39:21
+25,Lowther,Charlie,Eden Runners,M40,01:39:43
+26,Flanagan,Dessie,Carnethy Hill Racing Club,M40,01:39:54
+27,Saville,Tom,Dark Peak Fell Runners,M,01:40:01
+28,Mcinally,Ralph,Unattached,M,01:40:05
+29,Crutchfield,Stuart,Westerlands CCC,M,01:40:07
+30,Morgan,Tim,Carnethy Hill Racing Club,M,01:40:59
+31,Sedman,Eliot,Carnethy Hill Racing Club,M40,01:41:22
+32,Owen,Rhodri,Meirionnydd Running Club,M,01:42:44
+33,Reid,Michael,Carnethy Hill Racing Club,M40,01:42:48
+34,Godsman,Shaun,Calder Valley Fell Runners,M40,01:43:49
+35,Luetchford,Alex,HBT,M,01:44:39
+36,Oldfield,Ifan,Edinburgh Uni H&H,MU23,01:45:38
+37,Gallacher,Craig,Westerlands CCC,M,01:45:43
+38,Ainsworth,Michael,Helm Hill Runners,M40,01:46:02
+39,Cox,Andrew,Moorfoot Runners,M40,01:46:08
+40,Molina,Rodrigo Felipe Lara,Carnethy Hill Racing Club,M,01:47:04
+41,Stewart,Iain,Westerlands CCC,M40,01:47:03
+42,Pender,Iain,Shettleston Harriers,M,01:47:13
+43,Whitlie,Stewart,Carnethy Hill Racing Club,M60,01:47:31
+44,Barber,Nicholas,Helm Hill Runners,M,01:47:33
+45,Wainwright,Sam,Ochil Hill Runners,M,01:47:53
+46,Skrimshire,Ralph,Dark Peak Fell Runners,M40,01:47:55
+47,Birch-Machin,Sam,Westerlands CCC,M,01:48:17
+48,Taylor,Mark,Calder Valley Fell Runners,M50,01:49:16
+49,Hunt,John,Dark Peak Fell Runners,M55,01:49:22
+50,Baron,James,Helm Hill Runners,M50,01:51:00
+51,Pannone,Eve,Eden Runners,F,01:51:19
+52,Roberts,Mark,Borrowdale Fellrunners,M60,01:51:28
+53,Muir,Jonny,Carnethy Hill Racing Club,M40,01:51:29
+54,Foxall,Jack,Dark Peak Fell Runners,M40,01:51:39
+55,Reilly,Paul,Helm Hill Runners,M40,01:51:43
+56,Stead,Sam,Keswick AC,M,01:51:53
+57,Bannister,Richard,Deeside Runners,M40,01:51:51
+58,Allen,Matthew,Black Combe Runners,M,01:52:14
+59,Osborn,Lou,Ambleside AC,F50,01:52:25
+60,Henderson,Walter,Shettleston Harriers,M50,01:52:52
+61,Pearson,Philip,Northern Fells Running Club,M60,01:53:12
+62,Parrish,David,Dumfries Running Club,M,01:53:41
+63,Marwick,Caroline,Highland Hill Runners,F,01:54:16
+64,Cruickshanks,Ross,Shettleston Harriers,M,01:54:27
+65,Allsop,David,Arran Runners,M40,01:55:59
+66,Anderson,Adam,Hartfell Hill Running Club,M50,01:56:09
+67,Crowe,Des,Penicuik Harriers,M60,01:56:23
+68,Procter,William,Helm Hill Runners,M65,01:56:53
+69,Foggo,Iain,Lochaber AC,M,01:56:56
+70,Johnson,Bill,Calder Valley Fell Runners,M55,01:57:09
+71,Ashworth,James,Ochil Hill Runners,M50,01:57:53
+72,Dyer,Jacob,Helm Hill Runners,M50,01:58:08
+73,Downs,Rob,Cheshire Hill Racers,M55,01:58:09
+74,Finch,Tom,Westerlands CCC,M,01:58:59
+75,Anderson,Darroch,Unattached,MU23,01:59:11
+76,Anderson,Micky,Unattached,M55,01:59:06
+77,Pilling,Rachel,Pudsey & Bramley AC,F,01:59:31
+78,Smith,Alan,Deeside Runners,M60,01:59:35
+79,Owen,Emlyn,Eryri Harriers,M40,02:00:10
+80,Dyer,Bianca,Helm Hill Runners,F40,02:00:41
+81,Park,Adam,Hartfell Hill Running Club,M,02:00:58
+82,Butler,Ross,Keswick AC,M40,02:01:09
+83,Ball,Duncan,Penicuik Harriers,M60,02:01:41
+84,Hayhurst,Norman,Bowland Fell Runners,M60,02:02:01
+85,Breckenridge,Bill,Shettleston Harriers,M55,02:02:29
+86,Illingworth,Guy,Keswick AC,M55,02:02:54
+87,Peters,Ella,Westerlands CCC,F,02:04:05
+88,Box,Edward,Ambleside AC,M40,02:04:33
+89,Pilling,Graham,Pudsey & Bramley AC,M40,02:05:06
+90,Thackray,Ruth,Bingley Harriers & AC,F50,02:05:19
+91,Rogan,Kirstie,Highland Hill Runners,F,02:05:36
+92,Clarkson,Alex,Shettleston Harriers,M,02:06:03
+93,Shields,Andrew,Shettleston Harriers,M,02:06:25
+94,Gerrity,Neil,Newcastle (Staffs) AC,M40,02:06:44
+95,Crisford,Toby,Vegan Runners UK,M,02:06:54
+96,Maclennan,Iain,Highland Hill Runners,M50,02:07:07
+97,Elmore,Helen,Dark Peak Fell Runners,F50,02:07:17
+98,Gilmore,Neil,Carnethy Hill Racing Club,M55,02:07:42
+99,Gowans,Deborah,Todmorden Harriers,F55,02:08:11
+100,Roberts,Kelli,Helm Hill Runners,F,02:08:37
+101,Hickey,Brian,Cheshire Hill Racers,M55,02:08:53
+102,Downs,Juliet,Dark Peak Fell Runners,F,02:08:58
+103,Riley,Phil,Helm Hill Runners,M40,02:09:07
+104,Agnew,Mark,Mercia Fell Runners,M55,02:09:20
+105,McLure,Neil,Carnegie Harriers,M55,02:10:20
+106,Watson,Madeleine,Law and District AAC,F,02:10:37
+107,Malcolmson,Craig,Hartfell Hill Running Club,M55,02:11:34
+108,Bacon,Robin,Mercia Fell Runners,M55,02:11:55
+109,Waters,Allan,Westerlands CCC,M,02:12:31
+110,Pugh,Roderick,Kilmarnock Harriers,M65,02:12:39
+111,White,David,Kilmarnock Harriers,M50,02:13:32
+112,Renville,Alan,Carnethy Hill Racing Club,M50,02:13:42
+113,van Rensburg,Rhona,Fife AC,F40,02:14:05
+114,Bagge,John,Helm Hill Runners,M60,02:14:41
+115,Williams,Dominic,Dundee Road Runners,M,02:15:32
+116,Hellam,Lorna,Hartfell Hill Running Club,F,02:16:30
+117,Partington,Tom,Westerlands CCC,M,02:16:35
+118,Tinnion,Jim,Mercia Fell Runners,M50,02:16:47
+119,German,Peter,Helm Hill Runners,M40,02:17:24
+120,Barnett,Andy,Dark Peak Fell Runners,M60,02:17:47
+121,Bell,Ruth,Helm Hill Runners,F,02:17:58
+122,Reis,Rodrigo,Shettleston Harriers,M40,02:18:10
+123,Blackley,Lisa,Unattached,F40,02:19:02
+124,Breckenridge,Myrtle,Shettleston Harriers,F,02:19:03
+125,Robertson,Iona,Highland Hill Runners,F40,02:19:05
+126,Crisford,Ben,Hartfell Hill Running Club,M,02:19:20
+127,Donnelly,John,Westerlands CCC,M55,02:19:38
+128,Clarke,Daniel,Ochil Hill Runners,M40,02:19:49
+129,Furse,Chris,Westerlands CCC,M50,02:19:56
+130,Dickson,Stephen,Fife AC,M40,02:20:29
+131,Wathall,Steve,Black Combe Runners,M60,02:20:57
+132,Aradi,Adrian,Unattached,M,02:21:45
+133,Cunningham,Kerry,Westerlands CCC,F,02:22:01
+134,Davie,Kevin,Carnegie Harriers,M40,02:22:35
+135,Cowan,David,Fife AC,M55,02:23:29
+136,Mullan,Martyn,Shettleston Harriers,M,02:23:39
+137,Ritchie,Hilary,Fife AC,F55,02:23:51
+138,Tirbooman,Alice,Westerlands CCC,F,02:24:30
+139,Wilson,Joan,Lomond Hill Runners,F60,02:25:35
+140,Paterson,Ewan,Highland Hill Runners,M70,02:27:06
+141,Fleming,Rod,Westerlands CCC,M40,02:29:16
+142,Findlay-Robinson,Rachel,Westerlands CCC,F,02:29:28
+143,Boyer,Alistair,Westerlands CCC,M40,02:29:54
+144,Husbands,Jess,HBT,F,02:29:54
+145,Van Zyl,Gerhard,Fife AC,M40,02:30:44
+146,Smith,Eleanor,Fife AC,F40,02:32:35
+147,Macbeth,Gaby,Westerlands CCC,F,02:32:39
+148,Dodds,Wendy,Dallam Running Club,F70,02:34:21
+149,Ingram,Claire,Hartfell Hill Running Club,F40,02:34:24
+150,Duncan,David,Ochil Hill Runners,M65,02:35:08
+151,Claridge,Donna,Dark Peak Fell Runners,F55,02:35:40
+152,Holmes,Keith,Dark Peak Fell Runners,M65,02:36:49
+153,Williamson,Philip,Pitreavie ACC,M60,02:40:38
+154,Pflanz,Sebastian,Dumfries Running Club,M55,02:41:52
+155,Park,Archibald,Hartfell Hill Running Club,M60,02:44:10
+156,Scott,Jocelyn,Fife AC,F65,02:44:34
+157,Quinn,John,Westerlands CCC,M60,02:46:47
+158,Plummer,Brett,Hartfell Hill Running Club,M,02:49:04
+159,Low,Matthew,Shettleston Harriers,M40,02:49:26
+160,MacNeill,Sarah,HBT,F,02:49:35
+161,Gallagher,Brian,Unattached,M50,02:49:52
+162,McClure,Julia,Westerlands CCC,F,02:51:23
+163,Oliver,Jane,Deeside Runners,F60,02:54:17
+164,Oliver,David,Deeside Runners,M60,02:58:15
+165,Tunstall,Denise,Durham Fell Runners,F55,02:59:27
+166,Fullwood,Andrew,Westerlands CCC,M50,03:06:09
+167,Gilligan,Amy,Dundee Road Runners,F,03:08:47
+168,Laidlaw,Anita,Fife AC,F40,03:19:13
+169,Lammers,Wiebke,Westerlands CCC,F40,03:21:31
+170,Tsivos,Demi,Unattached,F,03:25:03

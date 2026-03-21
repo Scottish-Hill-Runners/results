@@ -1,0 +1,126 @@
+RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
+1,Chepelin,Alexander,Carnethy,M,1:11:48
+2,Mattocks,Craig,Gala Harriers,M,1:19:23
+3,Glendinning,Greig,Bellahouston RR,M,1:19:35
+4,McDonald,Alistair,Morpeth Harriers,M,1:21:04
+5,McGovern,Michael,Moorfoot Runners,M,1:21:16
+6,Weatherhead,David,Bellahouston RR,M,1:21:27
+7,Samphier,Oliver,Stirling Bike Club,M,1:22:40
+8,Maltman,Andrew,Unattached,M,1:22:48
+9,Hughes,Bruce,Teviotdale Harriers,M,1:23:10
+10,Fraser,David,Edinburgh AC,M,1:23:26
+11,Watson,Scott,Teviotdale Harriers,M,1:23:52
+12,Parry,Leahn,Lauderdale Limpers,M,1:23:59
+13,Moseley,Paul,Dunbar RC,M,1:24:48
+14,Rennie,Willie,Carnegie Harriers,M,1:25:25
+15,Wilson,Rob,Penicuik Harriers,M,1:29:54
+16,McMullan,George,Norham RC,M,1:30:43
+17,Colvin,Billy,Penicuik Harriers,M,1:31:18
+18,Dalgleish,Fiona,Gala Harriers,F,1:32:59
+19,McPhee,Neil,Lauderdale Limpers,M,1:33:31
+20,Lewis,Michael,Unattached,M,1:33:41
+21,Wallace,Stephen,Squadra Porcini,M,1:33:48
+22,Turnbull,Les,Norham RC,M,1:34:11
+23,Nicholson,Jim,Unattached,M,1:34:31
+24,Greens,Michael,Penicuik Harriers,M,1:34:36
+25,Wainwright,Russ,Edinburgh Running Network,M,1:34:38
+26,Dunbar,Allan,Penicuik Harriers,M,1:35:12
+27,Cairns,Gillian,Penicuik Harriers,F40,1:35:32
+28,Grace,Paul,Perth Road Runners,M,1:35:52
+29,Scott,Darren,Galavanters,M,1:37:03
+30,Jones,Tim,Kinross Road Runners,M,1:37:11
+31,Scott,Derek,Teviotdale Harriers,M,1:38:01
+32,McPartland,Frank,HELP,M,1:38:28
+33,Elder,Alan,Moorfoot Runners,M,1:38:41
+34,Hetherington,Michelle,Carnethy,F,1:38:56
+35,Anderson,Neil,Linlithgow Harriers,M,1:39:26
+36,Stratford,Allan,Unattached,M,1:39:54
+37,Hall,Pete,Moorfoot Runners,M,1:40:21
+38,Ward,Simon,Unattached,M,1:41:12
+39,Scott-Watson,Douglas,Unattached,M,1:41:20
+40,Caldwell,Christine,Wee County Harriers,F,1:41:49
+41,Watson,Chris,Teviotdale Harriers,M,1:42:18
+42,Turnbull,Billy,Wee County Harriers,M,1:43:01
+43,Eadie,Gordon,Carnethy,M,1:43:53
+44,Robertson,Iain,Unattached,M,1:44:00
+45,Dunn,Sandy,Wee County Harriers,M,1:45:19
+46,Dingwall,Adrian,Unattached,M,1:45:49
+47,Prior,Mark,Unattached,M,1:46:22
+48,Hayes,Alan,Unattached,M,1:46:22
+49,Wilson,Keith,Galavanters,M,1:46:38
+50,Hernes,Maya,Westerlands,F,1:47:55
+51,Lees,Gary,Unattached,M,1:47:56
+52,Downie,Chris,Penicuik Harriers,M,1:48:33
+53,Arnold,Kim,Harmeny AC,F,1:48:39
+54,Hall,Robin,Penicuik Harriers,M,1:49:13
+55,Donnachie,Adrian,Unattached,M,1:50:17
+56,Clough,Steve,Norham RC,M,1:50:23
+57,Corris,Joanne,Unattached,F,1:50:56
+58,Watt,John,Unattached,M,1:51:03
+59,McCall,Colin,Gala Harriers,M,1:51:21
+60,Taylor,Jane,Galavanters,F,1:52:33
+61,Kemp,Sadie,Penicuik Harriers,F,1:52:40
+62,Murdoch,Mike,Falkland Trail Runners,M,1:52:46
+63,McDonald,Derek,Falkland Trail Runners,M,1:52:46
+64,Dunbar,Melanie,Penicuik Harriers,F,1:52:51
+65,O`Donnell,Frank,Galavanters,M,1:53:08
+66,Broatch,Ian,Unattached,M,1:53:45
+67,Paterson,David,Galavanters,M,1:54:18
+68,Blair,Jane,Unattached,F,1:54:35
+69,Lockie,Paul,Teviotdale Harriers,M,1:54:49
+70,Dun,Lindsay,Gala Harriers,F,1:54:49
+71,Fowler,Zoe,Penicuik Harriers,F,1:55:11
+72,Paxton,Pamela,Teviotdale Harriers,F,1:55:25
+73,Harris,Ewan,Unattached,M,1:56:14
+74,Crowe,Kate,Penicuik Harriers,F,1:56:21
+75,Marsden,Joanne,Tynedale Harriers,F,1:58:10
+76,Black,Susan,Tynedale Harriers,F,1:58:34
+77,Turnbull,Graham,Galavanters,M,1:59:07
+78,Anderson,Mark,Galavanters,M,1:59:29
+79,Campbell,Gordon,Penicuik Harriers,M,2:00:07
+80,Kershaw,Daniel,Falkland Trail Runners,M,2:01:08
+81,Flockhart,Graham,Unattached,M,2:01:24
+82,Samphier,Philippa,Unattached,F,2:02:02
+83,Ballantyne,Pauline,Lauderdale Limpers,F,2:02:16
+84,McDonald,Paddy,HELP,M,2:03:22
+85,Nimmo,Ali,Unattached,F,2:03:48
+86,Pringle,John,Harmeny AC,M,2:07:18
+87,Cunningham,Ray,Galavanters,M,2:08:07
+88,Moncrieff,Jacqui,Unattached,F,2:08:42
+89,Holdaway,Claire,Galavanters,F,2:08:56
+90,Ravindran,Vineeth,Linlithgow Harriers,M,2:09:19
+91,Allen,Gina,Gala Harriers,F,2:09:47
+92,Caughey,Isaac,Unattached,M,2:10:23
+93,Botha,Arlene,Galavanters,F,2:10:26
+94,Thompson,Colin,Tweed Striders,M,2:10:34
+95,McDermott,Will,Tweed Striders,M,2:10:34
+96,Gibson,Ian,Tynedale Harriers,M,2:12:21
+97,Roebuck,Jeremy,HELP,M,2:13:37
+98,Scott,Neil,HELP,M,2:13:37
+99,Neilson,Douglas,Unattached,M,2:13:40
+100,McFarlane,Steven,Unattached,M,2:13:40
+101,Hughes,Kirsty,Teviotdale Harriers,F,2:15:36
+102,Aitken,Anne,Teviotdale Harriers,F,2:15:36
+103,Buckley-Jones,Jenny,Unattached,F,2:16:40
+104,Sandie,Graeme,Galavanters,M,2:16:56
+105,Redburn,Julie,Galavanters,F,2:18:59
+106,Turner,Scott,HELP,M,2:19:00
+107,Sipple,Daile,Perth Road Runners,F,2:19:20
+108,King,Shelagh,Gala Harriers,F,2:20:53
+109,Kyle,Lorraine,Lauderdale Limpers,F,2:21:02
+110,Dick,Callum,Lomond Hill Runners,M,2:21:31
+111,Duff,Bill,Falkland Trail Runners,M,2:21:32
+112,Tweddle,Alexa,Falkland Trail Runners,F,2:21:33
+113,Finnie,Brian,Norham RC,M,2:23:28
+114,Dixon,Brenda,Unattached,F,2:23:55
+115,Howel,Susan,Gala Harriers,F,2:24:29
+116,Baldwin,Jenny,Unattached,F,2:24:40
+117,Grimsditch,Kate,Gala Harriers,F,2:26:27
+118,Woodcock,Ian,Lauderdale Limpers,M,2:26:27
+119,Braid,Graham,Unattached,M,2:29:38
+120,Horton,Lynsey,Unattached,F,2:31:19
+121,Whitaker,Helen,Unattached,F,2:31:19
+122,McDougall,Eilidh,Unattached,F,2:39:39
+123,Purves,Judith,Unattached,F,2:40:21
+124,Liddle,Nelson,Unattached,M,2:45:02
+125,Wilson,Callum,Unattached,M,2:45:04

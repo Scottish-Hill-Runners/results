@@ -1,0 +1,88 @@
+RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
+1,Strain,Murray,HBT,M,0:26:35
+2,Martyn,Tom,HBT,M,0:27:35
+3,Anthony,Alasdair,Ochil Hill Runners,M,0:28:11
+4,MacCorquodale,Iain,Cambuslang Harriers,M,0:28:30
+5,Henderson,Jonny,HBT,M,0:30:02
+6,Lawson,Johnny,Portobello,M40,0:30:18
+7,Hammond,John,Carnethy,M,0:30:55
+8,Watson,Robert,Musselburgh AC,M40,0:31:01
+9,Thin,Jamie,HBT,M50,0:31:31
+10,Ward,Dave,HBT,M,0:31:36
+11,Marshall,Brian,HELP,M40,0:31:44
+12,Craighead,Scott,Carnethy,M40,0:32:10
+13,White,David,Kilmarnock Harriers,M40,0:32:40
+14,Malcolm,John,Carnethy,M,0:32:55
+15,Best,Steven,Carnethy,M40,0:33:07
+16,Hart,Al,HBT,M40,0:33:14
+17,Jones,Huw,HBT,M,0:33:19
+18,Gilmore,Neil,Carnethy,M50,0:33:38
+19,Tindley,Georgia,HBT,F,0:33:49
+20,Titmuss,Simon,Carnethy,M40,0:33:54
+21,Williamson,Coll,HBT,M,0:34:14
+22,Jones,Mike,Musselburgh AC,M,0:34:21
+23,Zeiner,Karl,Harmeny AC,M40,0:34:38
+24,Quirke,Martin,HBT,M,0:34:39
+25,Pugh,Dan,Unattached,M,0:34:46
+26,Bryson,James,HBT,M,0:34:48
+27,Gaffney,David,Moorfoot Runners,M,0:34:52
+28,Diver,Michael,Clydesdale Harriers,M50,0:35:11
+29,MacInnes,Garry,Carnethy,M50,0:35:20
+30,Gardiner,Douglas,Carnethy,M40,0:35:32
+31,Greens,Michael,Penicuik Harriers,M,0:35:46
+32,McCallum,Mark,Unattached,M40,0:35:54
+33,Ashley,George,HBT,M,0:35:56
+34,Millan,Ally,HBT,M,0:36:06
+35,Simpson,Peter,Carnegie Harriers,M50,0:36:07
+36,Peebles,Murray,Dunbar RC,M,0:36:08
+37,Wilson,Rob,Penicuik Harriers,M40,0:36:19
+38,Hancox,Brendan,Edinburgh AC,M,0:36:22
+39,Farquhar,Jeff,Pitreavie,M50,0:36:40
+40,Brennan,Paul,Edinburgh AC,M,0:36:45
+41,Harrison,Simon,HBT,M,0:36:50
+42,McCall,Jenny,HBT,F,0:36:54
+43,Cairns,Gillian,Penicuik Harriers,F40,0:37:05
+44,Reid,Don,Westerlands,M50,0:37:10
+45,Whyte,Alison,Carnegie Harriers,F40,0:37:12
+46,Matthews,Dave,HBT,M,0:37:20
+47,Pryde,Gordon,Lomond Hill Runners,M50,0:37:21
+48,Sleggs,Paul,HBT,M,0:37:28
+49,Fraser,Doug,Musselburgh AC,M40,0:37:29
+50,Weir,Jonathan,Unattached,M40,0:37:51
+51,Dudchenko,Paul,Linlithgow Harriers,M50,0:38:00
+52,Darwin-Clements,Daniel,HBT,M,0:38:37
+53,Stevenson,Kevin,Gala Harriers,M50,0:38:39
+54,Magill,Cat,HBT,F,0:38:49
+55,Campbell,Fergus,Corstorphine,MJ,0:38:56
+56,Forgie,Ryan,Carnethy,M,0:39:17
+57,Barker,Graham,Fife AC,M,0:39:25
+58,Schutter,John-Sebastian,Unattached,M,0:39:37
+59,McManus,Mairead,HBT,F,0:40:06
+60,Barker,Gary,Fife AC,M60,0:40:14
+61,Bowman,Angus,Lomond Hill Runners,M60,0:40:28
+62,Dawson,Babs,Unattached,F,0:40:35
+63,Murray,Hazel,HBT,F,0:41:38
+64,O`Malley,Sinead,HBT,F,0:42:01
+65,Duncan,David,Ochil Hill Runners,M60,0:42:28
+66,Wilson,Colin,Lomond Hill Runners,M50,0:43:13
+67,Lockie,Paul,Teviotdale Harriers,M50,0:43:22
+68,Wilson,Joan,Lomond Hill Runners,F50,0:43:41
+69,Kelly,Peter,Unattached,M,0:43:48
+70,Kemp,Sadie,Penicuik Harriers,F40,0:43:51
+71,Downie,Chris,Penicuik Harriers,M50,0:43:56
+72,Mearns,Kenny,Lothian,M50,0:44:06
+73,Fraser,Ronald,Dundee Road Runners,M50,0:44:50
+74,McKay,Michael,Unattached,M50,0:45:23
+75,Marshal,Sheena,Unattached,F40,0:45:28
+76,MacEwen,Alex,Edinburgh AC,M60,0:45:52
+77,Rathjen,Calum,HBT,MJ,0:46:02
+78,Campbell,Ian,HBT,M50,0:46:04
+79,Burrows,Graham,Linlithgow Harriers,M60,0:46:06
+80,Lee,Rosemary,Falkland Trail Runners,F50,0:46:59
+81,Coltman,Alan,Teviotdale Harriers,M50,0:48:04
+82,Burns,Ian,Norham RC,M60,0:49:04
+83,Gunn-Russell,Kenny,Harmeny AC,M60,0:49:05
+84,Bowman,Jean,Lomond Hill Runners,F50,0:49:11
+85,O`Malley,Neassa,Unattached,F,0:51:50
+86,Lee,John,Falkland Trail Runners,M50,0:56:01
+87,MacPherson,Jill,Carnethy,F,0:57:16

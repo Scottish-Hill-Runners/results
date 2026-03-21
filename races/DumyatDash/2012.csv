@@ -1,0 +1,97 @@
+RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
+1,Richmond,Kenny,Shettleston Harriers,M40,0:49:14
+2,Stewart,Iain,Westerlands,M,0:49:18
+3,Fulton,David,HBT,M,0:50:15
+4,Love,Craig,Dundee Hawkhill,M40,0:52:50
+5,Gilmore,Andrew,Highland Hill Runners,M,0:52:55
+6,Taylor,Ewan,PH Racing,M,0:53:01
+7,Fraser,Gary,Ochil Hill Runners,M40,0:53:27
+8,Smith,Alan,Deeside Runners,M50,0:54:05
+9,Stewart,Gregor,Westerlands,M,0:54:21
+10,Gilmore,Iain,Carnethy,M,0:54:40
+11,MacDonald,Grant,Garscube Harriers,M,0:54:41
+12,Baxter,Grant,Ochil Hill Runners,M40,0:54:42
+13,Carter,Tim,Brat Club,M,0:54:45
+14,Gray,Andy,Ochil Hill Runners,M,0:54:59
+15,Callender,James,Westerlands,M,0:54:59
+16,Harper,Peter,Westerlands,M40,0:55:09
+17,Mackie,Peter,Shettleston Harriers,M,0:55:15
+18,O`Neill,Owen,Westerlands,M,0:55:28
+19,Mardall,Nick,Deeside Runners,M40,0:56:45
+20,Geoghegan,Michael,Portobello,M,0:57:27
+21,Martin,Neil,Lomond Hill Runners,M40,0:58:27
+22,Scott,David,Ochil Hill Runners,M50,0:59:51
+23,Raitt,Neil,Unattached,M40,0:59:58
+24,Cowan,David,Fife AC,M50,1:00:03
+25,Earle,Paddy,Tinto Hill Runners,M50,1:00:23
+26,Anderson,Laurie,Lomond Hill Runners,M50,1:00:35
+27,Kennedy,John,Clydesdale Harriers,M50,1:01:06
+28,Gilmore,Neil,Carnethy,M40,1:01:10
+29,Poolman,Ian,Glenrothes Tri Club,M,1:01:34
+30,Wilson,Rob,Penicuik Harriers,M40,1:01:58
+31,Mitchell,Dave,Dundee Hawkhill,M50,1:02:16
+32,Higginbottom,Jacqui,Carnethy,F40,1:02:20
+33,Anderson,Alexander,Anster Haddies,M,1:03:10
+34,Sleggs,Paul,HBT,M,1:03:18
+35,McCallum,Mark,Unattached,M,1:03:24
+36,Mathieson,Stuart,Bellahouston RR,M,1:03:45
+37,Edwards,Barry,Bellahouston RR,M,1:03:51
+38,Ingram,Richard,Cosmics,M,1:03:59
+39,Reid,Don,Westerlands,M50,1:05:12
+40,Knox,Matthew,Unattached,M,1:05:23
+41,Gorgas,Steffen,Westerlands,M40,1:05:32
+42,Inman,Jason,Ochil Hill Runners,M40,1:05:43
+43,Connor,Julia,Unattached,F,1:05:47
+44,Semple,Hamilton,Westerlands,M50,1:06:35
+45,McCallum,Alasdair,Norham RC,M40,1:06:43
+46,Brennan,Brian,Westerlands,M50,1:06:50
+47,Ritchie,Hilary,Fife AC,F40,1:06:53
+48,Hamilton,Anita,Cosmics,F50,1:07:00
+49,Erskine,Alec,Cosmics,M40,1:07:10
+50,Junnier,Beryl,Ochil Hill Runners,F50,1:08:05
+51,Duncan,David,Ochil Hill Runners,M50,1:08:42
+52,Kealey,Karen,Ochil Hill Runners,F40,1:09:05
+53,Baxter,Katy,Ochil Hill Runners,F40,1:10:30
+54,Stakes,David,Unattached,M40,1:11:03
+55,Greig,Alistair,Unattached,M50,1:11:10
+56,McCartney,Tom,Unattached,M40,1:11:10
+57,O`Neill,Daniel,Springburn Harriers,M40,1:11:19
+58,MacEwan,John,Ochil Hill Runners,M40,1:11:43
+59,Douglas,George,Westerlands,M40,1:11:45
+60,Sheridan,Sarah,Unattached,F40,1:11:51
+61,Butler,Thomas,Ochil Hill Runners,M40,1:12:00
+62,Moffat,Ewan,Unattached,M40,1:12:21
+63,Gilligan,Steven,Westerlands,M40,1:12:49
+64,Midgley,Peter,Westerlands,M50,1:14:06
+65,Legge,Sarah,Fife AC,F40,1:14:24
+66,Weinschenk,Stephan,Unattached,M40,1:14:26
+67,Ledlie,Colin,Carnethy,M40,1:14:34
+68,McInally,John,Westerlands,M50,1:14:40
+69,Fowler,Nigel,Fife AC,M40,1:15:00
+70,Adams,Brendan,Unattached,M40,1:15:10
+71,Harris,Matt,Carnegie Harriers,M,1:15:14
+72,Johnston,Stephen,Milburn Harriers,M50,1:16:05
+73,Bullen,John,Unattached,M,1:16:08
+74,Buchanan,Lynn,Central AC,F40,1:16:09
+75,Anderson,Barry,Ochil Hill Runners,M,1:16:44
+76,Law,David,Corstorphine,M50,1:16:47
+77,Martin,Alastair,Unattached,M40,1:17:11
+78,Laing,Sybil,Central AC,F40,1:17:29
+79,Robertson,Brian,Unattached,M,1:17:32
+80,Polak,Jo,Highland Hill Runners,F50,1:19:15
+81,Love,Charlie,Dundee Hawkhill,M60,1:20:42
+82,Lawton,Michael,Unattached,M40,1:21:10
+83,Bates,David,Unattached,M,1:21:17
+84,Kennedy,Nancy,Lochaber AC,F50,1:21:54
+85,Lee,Phil,Unattached,M,1:22:14
+86,Stapley,Tony,Portobello,M60,1:26:33
+87,Gleave,Sarah,Unattached,F40,1:28:27
+88,McNee,Lucy,Ochil Hill Runners,F40,1:29:17
+89,Steven,Charles,Calderglen Harriers,M50,1:30:04
+90,Robinson,Giles,Unattached,M,1:31:19
+91,Allan,John,Motherwell AC,M50,1:36:11
+92,Hughes,Eoin,Unattached,M,1:37:20
+93,Fraser,Ronald,Dundee Road Runners,M50,1:37:38
+94,Dehn,Yvonne,Anster Haddies,F,1:42:15
+95,Thornton,Bob,Fife AC,M50,1:45:45
+96,Molmans,Lizan,Unattached,F40,1:48:43

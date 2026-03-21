@@ -1,0 +1,89 @@
+RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
+1,Strain,Murray,HBT,M,0:27:36
+2,Haines,Hector,HBT,M,0:27:56
+3,McLeod,Alasdair,Shettleston Harriers,M,0:29:59
+4,Donnelly,Colin,Cambuslang Harriers,M50,0:30:19
+5,Wilby,David,Highland Hill Runners,M,0:30:40
+6,Patton,Simon,Dark Peak,M40,0:31:48
+7,Gorman,Manny,Westerlands,M40,0:31:51
+8,Malcolm,Stuart,Highland Hill Runners,M40,0:31:54
+9,Smith,Alan,Deeside Runners,M50,0:33:13
+10,Whiteside,Gavin,Highland Hill Runners,M,0:33:42
+11,MacLean,Paul,Lochaber AC,M,0:34:00
+12,Rankin,Christina,Kilbarchan,F,0:34:12
+13,Brown,Max,Unattached,M40,0:34:22
+14,Forrest,Stuart,Highland Hill Runners,M,0:34:33
+15,Mardall,Nick,Deeside Runners,M40,0:34:46
+16,Gristwood,Fanni,Ochil Hill Runners,F,0:35:00
+17,McCarthy,Donald,BASOC,M40,0:35:14
+18,Evans,Neah,Westerlands,F,0:35:22
+19,Watson,Andy,Manx Fell Runners,M40,0:35:24
+20,Hulley,David,Stockport Harriers,M,0:36:22
+21,Kennedy,Ali,Lochaber AC,M50,0:36:33
+22,Armitage,Rachel,Inverness Harriers,F,0:37:29
+23,Burns,Steven,Lochaber AC,MJ,0:38:06
+24,Brian,Mike,Unattached,M40,0:38:46
+25,Bass,Owen,Solway,M50,0:38:53
+26,Bryan-Jones,Kirsty,Dark Peak,F40,0:39:13
+27,MacKinnon,Barrie,Lochaber AC,M,0:39:32
+28,Pott,Tim,Forres Harriers,M50,0:39:42
+29,Moffat,John,Highland Hill Runners,M50,0:40:03
+30,Tomaszewski,Rafal,Unattached,M,0:40:19
+31,MacBeath,Niall,Lochaber AC,M40,0:40:41
+32,Alonzi,Gianluca,Edinburgh Uni H&H,M,0:40:43
+33,Blackhall,Amanda,Lochaber AC,F40,0:40:45
+34,Spruch,Manfred,Unattached,M40,0:40:50
+35,Vet,Marco,Unattached,M40,0:40:53
+36,Blackhall,Keith,Lochaber AC,M40,0:40:59
+37,Duncan,David,Ochil Hill Runners,M50,0:41:01
+38,MacKay,Isla,Lochaber AC,FJ,0:41:02
+39,Kelly,Graham,Westerlands,M40,0:41:09
+40,Bryan,David,East Sutherland,M40,0:41:10
+41,Carter,Julie,Keswick AC,F50,0:41:10
+42,Spencer,Rob,Unattached,M,0:41:14
+43,Young,Phil,Carnethy,M40,0:41:19
+44,Lyons,Karen,Highland Hill Runners,F40,0:41:24
+45,Buckler,Ben,Unattached,M,0:41:31
+46,MacGregor,Colin,Unattached,M,0:41:45
+47,Rawlinson,Grant,Unattached,M40,0:41:51
+48,Hurst,Michael,Unattached,M50,0:42:13
+49,Colgan,Frances,Unattached,F,0:42:15
+50,McKenzie,Kenneth,Unattached,M40,0:42:21
+51,Weir,Jonathan,Unattached,M,0:42:38
+52,Hall,Jim,Badenoch,M60,0:42:38
+53,Macnab,Graham,Lochaber AC,M50,0:42:47
+54,Stewart,David,Unattached,M40,0:42:59
+55,Hartmann,Thomas,Unattached,M,0:43:15
+56,Burnside,William,Unattached,M40,0:43:51
+57,Slimon,Cathy,Highland Hill Runners,F,0:44:02
+58,Bradley,Ed,Highland Hill Runners,M40,0:44:05
+59,Rycott,Ian,Unattached,M50,0:44:47
+60,Tuer,Kate,Unattached,F,0:45:10
+61,Evans,Ros,Westerlands,F,0:45:19
+62,Arnot,Derek,Highland Hill Runners,M50,0:45:41
+63,Wishart,Nicola,Unattached,F40,0:45:54
+64,Murdoch,Ray,Lochaber AC,M60,0:46:11
+65,Shaw,Daniel,Unattached,M,0:46:57
+66,Damerow,Ulrike,Unattached,F50,0:47:25
+67,McKay,Heather,Unattached,F,0:48:02
+68,Hamer,John,Westerlands,M50,0:48:05
+69,Ross,Susan Jane,Lochaber AC,F40,0:48:29
+70,Blackley,Lisa,Unattached,F,0:48:33
+71,McLeod,Douglas,Unattached,M40,0:48:37
+72,Mitchell,George,Inverness Harriers,M50,0:49:14
+73,Creighton,Alan,Annan & District AC,M50,0:50:15
+74,Hulley,Jennifer,Unattached,F,0:50:18
+75,Thomas,Russell,Unattached,M,0:50:52
+76,Macpherson,Myrtle,Unattached,F,0:52:08
+77,Linton,Alan,Unattached,M40,0:52:09
+78,Macpherson,William,Unattached,M,0:52:10
+79,Zert,Aline,Unattached,F,0:52:25
+80,Ramsay,June,Unattached,F40,0:52:49
+81,Christie,Ninian,Lochaber AC,M40,0:53:49
+82,Diffey,John,Cairngorm Runners,M,0:53:57
+83,Paul,Brenda,Westerlands,F,0:56:50
+84,Johnston,Emma,Tain Runners,F40,0:57:20
+85,Burnard,Elinor,Unattached,F,1:00:55
+86,Johnston,Alison,HBT,F40,1:04:47
+87,Murdoch,Jacqueline,Beaches Runners,F40,1:06:06
+88,Macpherson,William,Unattached,M50,1:06:06

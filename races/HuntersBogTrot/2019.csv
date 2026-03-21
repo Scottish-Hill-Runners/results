@@ -1,0 +1,106 @@
+RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
+1,Masson,Alistair,Carnethy,M,0:30:01
+2,Morgan,Tim,Edinburgh Uni H&H,M,0:30:41
+3,Hinchcliffe,Alex,Carnethy,M,0:30:49
+4,Martyn,Tom,HBT,M,0:30:58
+5,Waldie,James,HBT,M,0:32:04
+6,Tullie,Douglas,HBT,M,0:32:45
+7,Rigg,William,Ambleside,M,0:33:01
+8,Luetchford,Alex,HBT,M,0:33:29
+9,Hugtenburg,Kai,Edinburgh Uni H&H,M,0:33:46
+10,Gardner,Peter,HBT,M,0:33:52
+11,Haynes,James,Edinburgh AC,M,0:34:00
+12,Park,Luke,HBT,M,0:34:06
+13,Dhillon,Niku,Dundee Uni Tri Club,M,0:34:14
+14,Hart,Henry,Unattached,M,0:34:25
+15,Johnston,Mark,Carnethy,M40,0:35:00
+16,Smith,Gavin,HBT,M,0:35:07
+17,Fraser,Malcolm,Edinburgh AC,M,0:35:31
+18,Murphy,Ben,HBT,M,0:35:49
+19,Crowe,Des,Penicuik Harriers,M50,0:35:50
+20,Limmer,David,Portobello,M,0:36:15
+21,Freshwater,Craig,HBT,M,0:37:00
+22,Tindley,Georgia,HBT,F,0:37:22
+23,Jones,Huw,HBT,M,0:37:23
+24,Maciver,Alasdair,Carnethy,M,0:37:39
+25,Elliotte,Tom,Westerlands,M,0:38:03
+26,Sims,Andrew,HBT,M40,0:38:09
+27,McVicar,James,Gala Harriers,M,0:38:34
+28,Ashley,James,Bournville Harriers,M,0:38:35
+29,Murray,Cameron,Carnethy,M40,0:38:41
+30,O`Neil,Sarah,HBT,F,0:38:52
+31,Quirke,Martin,HBT,M40,0:39:15
+32,Fraser,Doug,Musselburgh AC,M40,0:39:30
+33,McCall,Tim,Norham RC,M50,0:39:31
+34,Slifer,Paul,Musselburgh AC,M40,0:39:32
+35,Diver,Michael,Clydesdale Harriers,M50,0:39:35
+36,Rhynes,Mark,HBT,M,0:39:41
+37,Murphy,Niamh,Unattached,F,0:39:45
+38,Grisewood,Aidan,Portobello,M40,0:39:47
+39,Weir,Jonathan,Unattached,M40,0:39:53
+40,Hemmings,Anthony,Carnethy,M,0:40:16
+41,Upward,Mark,Portobello,M50,0:40:32
+42,Malcolm,John,Carnethy,M,0:40:42
+43,Reid,Don,Westerlands,M60,0:40:47
+44,Cormack,Wade,HBT,M,0:41:01
+45,Harrison,Simon,HBT,M,0:41:10
+46,Paton,Derek,Carnethy,M40,0:41:15
+47,McCallum,Mark,Unattached,M40,0:41:19
+48,Jones,Andrew,Unattached,M,0:41:31
+49,Coyle,John,Carnethy,M50,0:41:42
+50,Mounce,Stuart,HBT,M,0:41:50
+51,Greenald,David,HBT,M,0:41:51
+52,Tyler,Emilia,Norham RC,,0:41:57
+53,Darwin-Clements,Dan,HBT,M,0:42:13
+54,Williamson,Ben,Edinburgh Uni H&H,M,0:42:42
+55,Bastide,Camille,HBT,M,0:42:46
+56,Rogers,James,HBT,M,0:43:06
+57,Jackson,Gary,Eden Runners,M40,0:43:24
+58,Hanlon,Robbie,Norham RC,M,0:43:34
+59,Turnbull,Les,Norham RC,M60,0:43:37
+60,Mason,David,Linlithgow Harriers,M50,0:43:42
+61,Wright,Graham,HBT,M50,0:44:08
+62,Twigg,Martin,HBT,M50,0:44:17
+63,Hughes,Ian,Calderglen Harriers,M40,0:44:38
+64,Matthews,Dave,HBT,M,0:44:53
+65,Husbands,Jess,HBT,F,0:44:56
+66,Lang,Jonathan,Unattached,M,0:44:57
+67,MacDonald,Gio,Carnethy,M40,0:45:04
+68,Heede,James,Strathaven Striders,M50,0:45:04
+69,Hope-Jones,David,HBT,M,0:45:38
+70,Williamson,Phillip,Unattached,M50,0:45:55
+71,Friedrich,Juliane,Penicuik Harriers,F,0:46:05
+72,Bowman,Angus,Lomond Hill Runners,M60,0:46:24
+73,Turnbull,Neil,Norham RC,M50,0:46:27
+74,Anderson,Andrew,Dunbar RC,M50,0:46:57
+75,Best,Sally,Carnethy,F,0:47:14
+76,Brennan,Brian,Westerlands,M60,0:47:17
+77,Lockie,Paul,Teviotdale Harriers,M50,0:47:49
+78,Jennings,Amy,HBT,F,0:48:06
+79,McLay,Michael,Unattached,M50,0:48:13
+80,Law,David,Corstorphine,M50,0:48:30
+81,Clough,Steve,Norham RC,M60,0:48:38
+82,Hilbourne,Tom,Unattached,M,0:48:54
+83,Kitchin,Kate,Unattached,F40,0:49:17
+84,Duncan,David,Ochil Hill Runners,M60,0:49:25
+85,Kemp,Sadie,Penicuik Harriers,F40,0:49:53
+86,Anderson,Neil,Unattached,M,0:51:09
+87,Innes,Allan,Portobello,M,0:51:24
+88,Downie,Chris,Penicuik Harriers,M50,0:51:38
+89,Warner,Mark,HBT,M50,0:52:16
+90,Somerville,Gordon,Carnegie Harriers,M60,0:52:29
+91,Simpson,Alan,Portobello,M60,0:52:34
+92,Howie,Brian,Carnethy,M60,0:52:38
+93,Tyler,Caroline,Norham RC,T50,0:52:59
+94,Humphries,Channal,Norham RC,F40,0:53:06
+95,Turnbull,Shona,Norham RC,F40,0:53:08
+96,Jones,Mike,Norham RC,M50,0:53:09
+97,Bowman,Jean,Lomond Hill Runners,F60,0:54:23
+98,Blackley,Lisa,Unattached,F,0:54:23
+99,McPherson,Hugh,Tinto Hill Runners,M60,0:54:42
+100,Coltman,Alan,Teviotdale Harriers,M50,0:55:01
+101,Stone,Adam,Unattached,M,0:55:50
+102,Fraser,Ronald,Dundee Road Runners,M50,0:56:34
+103,Rhodes,Kate,Unattached,F,0:57:05
+104,Good,John,HELP,M50,0:57:05
+105,Stevenson,Eric,Edinburgh AC,M60,0:57:24

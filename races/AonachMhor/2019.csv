@@ -1,0 +1,130 @@
+RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
+1,Alexander,Sam,Westerlands,M,0:24:56
+2,Taylor,Ewan,PH Racing,M,0:25:06
+3,Tresidder,Es,Lochaber AC,M,0:25:29
+4,Mowbray,Phil,HBT,M40,0:26:11
+5,Crutchfield,Stuart,Lochaber AC,M,0:26:23
+6,Blake,Kristopher,Westerlands,M,0:26:45
+7,Barr,Andrew,Forres Harriers,M,0:27:10
+8,Russell,Robert,Unattached,M,0:27:14
+9,Fraser,Callum,Lochaber AC,M,0:27:22
+10,Harvey,Dougie,Lochaber AC,M,0:27:32
+11,McKenzie,Ryan,Highland Hill Runners,M40,0:27:40
+12,Traill,Steven,Lochaber AC,M,0:27:57
+13,Sedgwick,Nick,Lochaber AC,M,0:28:10
+14,Hamlin,Robert,Westerlands,M,0:28:26
+15,Cant,Robbie,Lochaber AC,M40,0:28:54
+16,Bentley,Alfie,Lochaber AC,M,0:29:00
+17,MacAlistair,Kenny,Lochaber AC,M40,0:29:07
+18,Morton,Alastair,Unattached,M,0:29:21
+19,Urquhart,John,Moray Road Runners,M50,0:29:33
+20,Cumming,Shaun,Highland Hill Runners,M,0:29:44
+21,MacKintosh,Hugh,Lochaber AC,M50,0:29:46
+22,Pringle,Stuart,Deeside Runners,M40,0:29:51
+23,MacInnes,Alasdair,Westerlands,M,0:29:58
+24,Wilson,Stewart,Highland Hill Runners,M50,0:30:06
+25,Simpson,Geoff,HBT,M50,0:30:11
+26,Cunningham,Roddy,Westerlands,M,0:30:23
+27,Runner,Unknown,Unattached,M,0:30:39
+28,Du Plessis,Christoff,Lochaber AC,M,0:30:49
+29,Theaker,Damien,Westerlands,M50,0:30:53
+30,Forrest,Stuart,Highland Hill Runners,M,0:30:57
+31,Lamont,Donald,Lochaber AC,M,0:31:09
+32,MacDonald,Iain,Forres Harriers,M50,0:31:38
+33,Hepburn,John,Lochaber AC,M50,0:31:45
+34,Gorman,Manny,Westerlands,M50,0:31:49
+35,Lund,Rachel,Woodford Greeen AC with Essex Ladies,F,0:32:00
+36,Stansfield,Ben,Forth Valley Orienteers,M50,0:32:06
+37,Crewe,Ruth,Westerlands,F,0:32:09
+38,Munro,Graham,Lochaber AC,M50,0:32:15
+39,Walker,Alistair,Deeside Runners,M,0:32:18
+40,Munro,David,Lochaber AC,M50,0:32:30
+41,Musgrave,Jon,Deeside Runners,M50,0:32:33
+42,Waslidge,Neil,Lochaber AC,M50,0:32:39
+43,Kay,Angus,Lochtayside,M50,0:32:48
+44,Darby,Steven,Unattached,M,0:32:57
+45,Meldrum,Marie,Lochaber AC,F40,0:33:06
+46,Strachan,Jamie,Thame Runners,M,0:33:11
+47,Taylor,Gordie,Lochaber AC,M50,0:33:13
+48,Walter,Lisette,Lochaber AC,F,0:33:16
+49,Barr,Elizabeth,Forres Harriers,F50,0:33:22
+50,Bass,Owen,Solway,M50,0:33:32
+51,Murray,Jon,Unattached,M40,0:33:40
+52,Mackay,Stewart,Unattached,M40,0:34:02
+53,Mackinnon,Jason,Unattached,M,0:34:06
+54,Maclean,Robert,Lochaber AC,M50,0:34:16
+55,Henry,Sara,Deeside Runners,F40,0:34:19
+56,Collins,Richard,Lochaber AC,M50,0:34:27
+57,Margesson,George,Unattached,M,0:34:31
+58,Wilson,Alison,Inverness Harriers,F40,0:34:34
+59,Runner,Unknown,Unattached,M,0:34:38
+60,Welsh,Cal,Unattached,M,0:34:37
+61,Moynihan,Eilidh,BNRA,F,0:34:39
+62,Parton,Mikayla,Unattached,F,0:34:42
+63,Mason,Crispin,Unattached,M,0:34:43
+64,Shaw,Trevor,Lochtayside,M50,0:34:44
+65,MacBeath,Niall,Lochaber AC,M50,0:34:51
+66,Stansfield,Daniel,Forth Valley Orienteers,M,0:34:53
+67,Collier,Samson,Unattached,M,0:34:59
+68,Forster,Nix,Lochaber AC,F50,0:35:12
+69,Leiper,Victoria,Shettleston Harriers,F,0:35:14
+70,Henderson,Katie,Deeside Runners,F40,0:35:17
+71,Conway,Pete,Lochaber AC,M,0:35:19
+72,Douglas,George,Westerlands,M50,0:35:24
+73,Kerr,Sam,Unattached,F,0:35:32
+74,Leggett,Helen,Lochaber AC,F50,0:35:41
+75,Payne,David,Unattached,M40,0:35:46
+76,MacKinnon,Barrie,Lochaber AC,M,0:35:49
+77,Barr,Kathryn,Forres Harriers,F,0:35:54
+78,Entwistle,Marie,Deeside Runners,F40,0:35:57
+79,Baxter,Ros,Deeside Runners,F40,0:36:12
+80,Lee,Phil,Unattached,M40,0:36:21
+81,Dunn,Sarah,Deeside Runners,F50,0:36:25
+82,Barr,Nick,Forres Harriers,M50,0:36:29
+83,Boyer,Alistair,Westerlands,M,0:36:32
+84,Williams,Mandy,Unattached,F40,0:36:44
+85,Philbrick,Sophie,Westerlands,F,0:36:56
+86,Flores,Leyre,Westerlands,F,0:36:59
+87,Forster,Damian,Lochaber AC,M50,0:37:25
+88,Wilson,Colin,Lomond Hill Runners,M50,0:37:29
+89,Blackhall,Amanda,Lochaber AC,F40,0:37:37
+90,Moffat,John,Highland Hill Runners,M50,0:37:40
+91,Hemstock,Edie,Lochaber AC,F,0:37:52
+92,McGougan,Craig,Lochaber AC,M,0:37:58
+93,Reid,Angela,North Ayrshire AC,F40,0:38:21
+94,Stansfield,Claire,Forth Valley Orienteers,F,0:38:24
+95,Murray,Chris,Unattached,M,0:38:27
+96,Oliver,David,Deeside Runners,M50,0:38:29
+97,Arnot,Derek,Unattached,M60,0:38:31
+98,Ditchfield,James,Oban Mountain Goats,M40,0:38:33
+99,Leuch,Selin,Unattached,F,0:38:45
+100,Oliver,Alex,Carnethy,M40,0:38:50
+101,Duncan,David,Ochil Hill Runners,M60,0:39:04
+102,Pearce,Emma,Lochaber AC,F50,0:39:15
+103,Wilson,Joan,Lomond Hill Runners,F50,0:39:19
+104,Berrie,Peter,Lochaber AC,M60,0:39:25
+105,Cunningham,Kerry,Westerlands,F,0:39:30
+106,Macdonald,Willie,Lochaber AC,M60,0:41:08
+107,Ness,Joanna,Lochaber AC,F50,0:41:26
+108,Oliver,Jane,Deeside Runners,F50,0:41:28
+109,Ditchfield,Arlene,Oban Mountain Goats,F40,0:41:36
+110,Maclean,Anita,Lochaber Jog Scotland,F50,0:41:42
+111,Treasurer,Claire,Lochaber AC,F,0:42:13
+112,Tighe,Mick,Lochaber AC,M60,0:42:22
+113,Mitchell,Craig,Vegan Runners,M40,0:42:48
+114,Forster,Katy,Lochtayside,F50,0:43:03
+115,Donghi,Enrico,Unattached,M,0:43:13
+116,Stansfield,Josie,Forth Valley Orienteers,F40,0:43:51
+117,McKenzie,Rebecca,Unattached,F,0:44:04
+118,Vrain,Emilie,Unattached,F,0:44:25
+119,Helliwell,Rebecca,Mid Argyll Tri & Cycle Club,F40,0:44:56
+120,Cooper,Sonia,Unattached,F,0:45:05
+121,Cooper,John,Dundee Hawkhill,M,0:45:23
+122,Lee,Victoria,Unattached,F40,0:45:49
+123,Paul,Brenda,Westerlands,F40,0:46:32
+124,Aitken,Morag,Lochaber AC,F50,0:49:09
+125,Douglas,Lorna,Unattached,F50,0:49:49
+126,Gunn,Sandra,Lochaber AC,F50,0:50:57
+127,Lawrie,Naomi,Lochaber Jog Scotland,F40,0:55:29
+128,Bergin,Iona,Lochaber AC,F,0:55:44
+129,Duncan,Davy,Unattached,M50,0:58:07

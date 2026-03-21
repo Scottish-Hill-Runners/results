@@ -1,0 +1,70 @@
+import fs from 'fs';
+import path from 'path';
+import matter from 'gray-matter';
+
+interface NewsItem {
+  slug: string;
+  title: string;
+  date: string;
+  excerpt: string;
+  content: string;
+}
+
+function stripHtml(html: string): string {
+  return html.replace(/<[^>]*>/g, '').trim();
+}
+
+async function buildNews() {
+  const newsDir = path.join(process.cwd(), 'news');
+  const outputDir = path.join(process.cwd(), 'public');
+  const outputFile = path.join(outputDir, 'news.json');
+
+  try {
+    // Create output directory if it doesn't exist
+    if (!fs.existsSync(outputDir)) {
+      fs.mkdirSync(outputDir, { recursive: true });
+    }
+
+    // Check if news directory exists
+    if (!fs.existsSync(newsDir)) {
+      console.warn('News directory not found, creating empty news.json');
+      fs.writeFileSync(outputFile, JSON.stringify([], null, 2));
+      return;
+    }
+
+    console.log(`Reading news from ${newsDir}...`);
+
+    // Get all markdown files
+    const files = fs.readdirSync(newsDir).filter((file) => file.endsWith('.md'));
+    console.log(`Found ${files.length} news files`);
+
+    // Parse and sort by date
+    const newsItems: NewsItem[] = files
+      .map((file) => {
+        const filePath = path.join(newsDir, file);
+        const fileContent = fs.readFileSync(filePath, 'utf-8');
+        const { data, content } = matter(fileContent);
+
+        // Clean excerpt from any HTML tags
+        const excerpt = stripHtml((data.excerpt as string) || '');
+
+        return {
+          slug: file.replace('.md', ''),
+          title: (data.title as string) || 'Untitled',
+          date: (data.date as string) || new Date().toISOString().split('T')[0],
+          excerpt: excerpt,
+          content: content.replace(/\u00a0/g, ' '),
+        };
+      })
+      .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
+    // Write to JSON file
+    fs.writeFileSync(outputFile, JSON.stringify(newsItems, null, 2));
+    console.log(`✓ Built ${newsItems.length} news items to ${outputFile}`);
+  } catch (error) {
+    console.error('Error building news:', error);
+    process.exit(1);
+  }
+}
+
+buildNews();

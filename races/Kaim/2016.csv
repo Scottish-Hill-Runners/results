@@ -1,0 +1,106 @@
+RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
+1,Symonds,Joe,Shettleston Harriers,M,0:28:41
+2,Sutherland,Mark,Westerlands,M,0:28:58
+3,Alexander,Sam,Westerlands,M,0:30:12
+4,Bellamy,Gwyn,Westerlands,M,0:31:15
+5,Bryson,Gavin,Highland Hill Runners,M,0:31:49
+6,Mackie,Peter,Shettleston Harriers,M,0:32:25
+7,Smith,Alan,Deeside Runners,M50,0:32:42
+8,Freshwater,Craig,HBT,M,0:33:16
+9,Callan,Thomas,Westerlands,M,0:33:22
+10,Kravcovs,Kristaps,Unattached,M,0:33:25
+11,MacDonald,Grant,Garscube Harriers,M,0:33:33
+12,Glencorse,Colin,Kilmarnock Harriers,M40,0:33:41
+13,Forrester,Brendan,Unattached,M,0:33:45
+14,McCall,Andrew,Greenock Glenpark Harriers,M,0:33:58
+15,Theaker,Damien,Westerlands,M50,0:34:31
+16,Robinson,Madeline,Helensburgh AAC,F,0:34:34
+17,Brown,Gareth,North Ayrshire AC,M,0:35:01
+18,Rankin,Christina,Kilbarchan,F,0:35:03
+19,McLean,Alan,Unattached,M50,0:35:28
+20,O`Neill,Owen,Westerlands,M,0:35:35
+21,Stephen,Jill,HBT,F,0:35:41
+22,Bryson,Mark,Gala Harriers,M50,0:36:01
+23,Bladon,Andrew,Carnethy,M,0:36:13
+24,Thurlbeck,Ian,Westerlands,M50,0:36:26
+25,Begley,Tommy,Irvine RC,M40,0:37:03
+26,MacMillan,George,Unattached,M40,0:37:22
+27,McBride,Andrew,Westerlands,M40,0:37:27
+28,Houston,Val,Westerlands,F50,0:37:34
+29,Pettigrew,James,Ayr Seaforth,M,0:37:39
+30,Wheeler,Mark,Hamilton Harriers,M,0:37:41
+31,Dickson,David,Westerlands,M50,0:37:41
+32,Pugh,Kevin,Unattached,M,0:37:42
+33,Pugh,Roderick,Kilmarnock Harriers,M60,0:37:49
+34,Dunn,Mick,Greenock Glenpark Harriers,M60,0:38:01
+35,Shelley,Edward,Unattached,M,0:38:02
+36,McKiddie,Christopher,Westerlands,M,0:38:25
+37,Willox,Gage,Glasgow Uni H&H,M,0:38:29
+38,Brodie,Stuart,Ochil Hill Runners,M,0:38:35
+39,Black,Ali,Carnethy,M,0:38:51
+40,Rigmand,Derek,Bellahouston RR,M40,0:39:05
+41,Price,Aron,Westerlands,M,0:39:29
+42,Kravcovs,Robert,Westerlands,M,0:39:39
+43,Matthew,Billy,Unattached,M40,0:39:46
+44,Brown,Jamie,HBT,M,0:39:51
+45,Kelly,Graham,Westerlands,M40,0:39:52
+46,Thompson,Kevin,Unattached,M40,0:40:08
+47,Ferguson,Ian,Unattached,M40,0:40:11
+48,Adams,Brian,Unattached,M50,0:40:15
+49,Lampard,Stuart,Unattached,M50,0:40:21
+50,Fleming,Rod,Westerlands,M,0:40:23
+51,Weir,Jonathan,Unattached,M,0:40:24
+52,Fitzpatrick,Pat,Ochil Hill Runners,M60,0:40:29
+53,Comrie,Fiona,North Ayrshire AC,F40,0:40:32
+54,Hawthorne,Stuart,Ayrodynamic Tri Club,M40,0:40:45
+55,Reid,Angela,North Ayrshire AC,F,0:40:53
+56,Nisbet,Stephen,North Ayrshire AC,M,0:41:21
+57,Davis,Tim,Unattached,M,0:41:23
+58,Reid,Don,Westerlands,M50,0:41:45
+59,Anderson,Hugh,Unattached,M,0:41:47
+60,Boyer,Alistair,Westerlands,M,0:41:59
+61,Douglas,Alan,Unattached,M,0:42:01
+62,MacLeod,Murdo,Westerlands,M60,0:42:13
+63,Connor,Julia,Unattached,F40,0:42:22
+64,Gilmour,Mairi,Westerlands,F,0:42:29
+65,Paparakis,Niko,Ayrodynamic Tri Club,M,0:42:37
+66,Johnson,Keith,Unattached,M40,0:42:42
+67,Blackley,Lisa,Unattached,F,0:42:51
+68,Milligan,Douglas,Solway,M60,0:43:06
+69,Brennan,Brian,Westerlands,M60,0:43:39
+70,Lafferty,Paul,Unattached,M,0:43:56
+71,Crawford,Ross,Unattached,M,0:44:16
+72,Pettigrew,Iain,Ayr Seaforth,M40,0:44:59
+73,Burnett,John,Unattached,M40,0:46:32
+74,Crawford,Stevie,Unattached,M,0:46:48
+75,Atkin,David,Westerlands,M50,0:46:51
+76,Midgley,Peter,Westerlands,M50,0:47:17
+77,Stirling,Brian,Unattached,M,0:47:24
+78,Turner,Thomas,Ayrodynamic Tri Club,M,0:47:26
+79,Mackenzie,Boyd,Greenock Glenpark Harriers,M50,0:48:16
+80,Waugh,Eleanor,Glasgow Uni H&H,F,0:48:21
+81,McColm,Stuart,Ayr Seaforth,M40,0:50:01
+82,Bennie,Rhona,Westerlands,F40,0:51:01
+83,Hill,Juliet,Glasgow Uni H&H,F,0:51:38
+84,McBreen,Craig,Unattached,M,0:51:56
+85,Caulket,Clare,Unattached,F,0:52:21
+86,White,Jim,Unattached,M60,0:53:08
+87,Taylor,Damien,Unattached,M,0:53:09
+88,Robertson,Karen,Kilmarnock Harriers,F40,0:53:39
+89,Johnson,Lindsay,Unattached,F,0:53:49
+90,Houldsworth,Sandra,Kilbarchan,F,0:53:56
+91,Ayres,Audrey,Westerlands,F,0:54:16
+92,Noble,Anne,Troon Tortoises,F50,0:54:23
+93,Crawford,Graeme,Unattached,M40,0:56:33
+94,Allan,Keith,Unattached,M40,0:58:35
+95,Scott,Diane,Westerlands,F40,1:00:16
+96,Kerr,Heather,Unattached,F40,1:07:10
+97,Nicol,Robert,Irvine RC,M70,1:09:46
+98,Gordon,Audrey,Unattached,F40,1:10:00
+99,Stewart,Jaquie,Unattached,F50,1:10:00
+100,McBlain,Tracey,Unattached,F40,1:10:05
+101,Finlay,Carrol,Ron`s Runners,F50,1:11:33
+102,Cox,Rachael,Unattached,F40,1:11:57
+103,McManus,Ian,Irvine RC,M70,1:14:52
+104,Plimbley,Shari,Unattached,F40,1:24:59
+105,McDowall,Geraldine,Unattached,F50,1:24:59

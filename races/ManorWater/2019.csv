@@ -1,0 +1,93 @@
+RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
+1,Shankey,Mark,HBT,M,1:12:42
+2,Dobson,Jacob,Kinross Road Runners,M,1:15:48
+3,Chepelin,Oleg,HBT,M,1:17:02
+4,Stewart,Gregor,Westerlands,M,1:19:56
+5,McVey,Alex,Carnethy,M,1:22:16
+6,Donnelly,Colin,Cambuslang Harriers,M60,1:22:26
+7,Stewart,Iain,Westerlands,M,1:22:28
+8,Marshall,Brian,HELP,M40,1:24:34
+9,Busby,John,Carnethy,M,1:24:44
+10,Marks,Jonathon,Carnethy,M,1:27:40
+11,Blackett,Joe,Dark Peak,M50,1:30:17
+12,Urquhart,John,Moray Road Runners,M50,1:33:41
+13,Hogg,Alan,Carnethy,M60,1:35:08
+14,Duncan,Nicola,Carnethy,F,1:35:19
+15,MacDonald,Alistair,Dundee Hawkhill,M50,1:35:35
+16,Reid,Don,Westerlands,M60,1:36:17
+17,Christian,Donald,Unattached,M40,1:37:05
+18,Pryde,Gordon,Lomond Hill Runners,M60,1:37:12
+19,Smith,Brian,Moorfoot Runners,M40,1:38:31
+20,Mason,Gary,Northumberland FR,M40,1:38:50
+21,Greenald,David,HBT,M,1:39:26
+22,Davis,Geoff,Northumberland FR,M60,1:39:29
+23,Skilling,Andrew,Unattached,M,1:40:16
+24,Furse,Chris,Westerlands,M50,1:41:07
+25,Morton Lloyd,Alun,Carnethy,M50,1:41:14
+26,Armstrong,David,Northumberland FR,M50,1:41:25
+27,Duff,Ian,Carnethy,M50,1:42:03
+28,White,David,Helm Hill Runners,M40,1:42:24
+29,Hetherington,Michelle,Carnethy,F50,1:43:28
+30,Mitchell,Neill,Fife AC,M50,1:44:14
+31,Wallace,Sandy,HELP,M60,1:46:31
+32,Ballinger,Tracy,Carnethy,F,1:46:35
+33,Miller,Andy,Perth Tri Club,M40,1:46:52
+34,Reid,Stewart,Perth Road Runners,M40,1:47:25
+35,McPartland,Frank,HELP,M60,1:47:36
+36,Purves,James,Gala Harriers,M60,1:50:14
+37,Cameron,Gordon,Carnethy,M60,1:50:20
+38,Ingram,Richard,Cosmics,M40,1:51:05
+39,Moss,William,HBT,M,1:51:07
+40,Nimmo,Alex,Carnethy,M60,1:51:15
+41,Fullwood,Andrew,Westerlands,M50,1:51:56
+42,Summers,Robert,Beacon Runners,M50,1:52:51
+43,Harrington,David,Carnethy,M40,1:53:52
+44,Telfer,John,Northumberland FR,M50,1:54:23
+45,McAllistir,Georgina,Lauderdale Limpers,F40,1:55:01
+46,Fordyce,Kenneth,Carnethy,M40,1:55:10
+47,Black,Lewis,Dumfries Harriers,M,1:55:32
+48,Munro,Frazer,Kinross Road Runners,M50,1:55:35
+49,Paul,Alastair,Northumberland FR,M60,1:55:56
+50,Walker,Sean,Carnethy,M40,1:56:44
+51,Steven,Robert,Unattached,M,1:57:07
+52,Yuill,Andre,Deeside Runners,M,1:57:09
+53,Davis,Susan,Northumberland FR,F60,1:57:43
+54,Punshon,Jon,Northumberland FR,M60,1:57:59
+55,Taylor,Kim,Northumberland FR,F50,1:58:05
+56,Fisher,Richard,Unattached,M50,1:58:35
+57,Gordon,John,Glasgow South Road Runners,M60,2:00:06
+58,Duncan,Andrew,Northumberland FR,M60,2:00:20
+59,Bruce,Duncan,North Ayrshire AC,M40,2:02:13
+60,Godfrey,Kevin,Lothian,M50,2:05:14
+61,Valentine,Russ,Falkland Trail Runners,M50,2:06:44
+62,Bolton-Carter,Henrietta,Northumberland FR,F50,2:06:50
+63,Buckley,Rachel,Carnethy,F,2:07:10
+64,Buckley,Peter,Carnethy,M40,2:07:10
+65,Duncan,David,Ochil Hill Runners,M60,2:07:57
+66,Wilkinson,John,Lauderdale Limpers,M50,2:09:10
+67,Gonzales,Alexandrea,Dumfries Harriers,F,2:11:12
+68,Latham,Mark,Northumberland FR,M50,2:15:00
+69,Minto,Johnny,Annan & District AC,M50,2:20:13
+70,Brown,Norman,Carnethy,M50,2:28:42
+71,Duncan,Andy,Unattached,M40,2:35:17
+72,Macnab,Graham,Lochaber AC,M50,1:17:14
+73,Byrne,Sara,Lochaber AC,F40,1:17:17
+74,Dalglish,Iain,Unattached,M,1:17:29
+75,Brennan,Brian,Westerlands,M60,1:18:19
+76,Daynes,Ed,Lochaber AC,M50,1:19:58
+77,Boardman,Chris,Strathearn Harriers,M40,1:21:46
+78,Hems,Steve,Unattached,M,1:21:50
+79,Hilmi,Amber,Dundee University,F,1:22:41
+80,Kealey,Karen,Ochil Hill Runners,F40,1:23:21
+81,McIntyre,Karen,Unattached,F40,1:24:08
+82,Lopez,Ailsa,Unattached,F,1:24:35
+83,Ross,Susan Jane,Lochaber AC,F50,1:24:41
+84,Urquhart,William Murdo,Unattached,M50,1:25:33
+85,Cameron,Michael,Unattached,M,1:29:08
+86,Howie,Craig,Unattached,M40,1:29:09
+87,Dixon,Emma,Unattached,F,1:31:01
+88,Dixon,Emma,Unattached,F,1:31:01
+89,Forster,Kate,Lochtayside,F50,1:31:52
+90,Fowler,Rosalind,Unattached,F40,1:33:16
+91,MacGillivray,Shelley,Unattached,F,1:35:09
+92,Andrews,David,Unattached,M,1:42:51

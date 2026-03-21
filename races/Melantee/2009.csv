@@ -1,0 +1,108 @@
+RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
+1,Prasad,Prasad,Squadra Porcini,M,0:29:31
+2,Anthony,Alasdair,Ochil Hill Runners,M,0:30:19
+3,Marshall,Brian,HELP,M,0:32:00
+4,Rodgers,David,Lochaber AC,M40,0:32:24
+5,Blake,Henry,Highland Hill Runners,M,0:32:40
+6,Richmond,Kenny,Shettleston Harriers,M40,0:33:04
+7,Davis,Adrian,Lomond Hill Runners,M40,0:33:27
+8,Whitlie,Stewart,Carnethy,M40,0:33:52
+9,Gallagher,Ronnie,Carnethy,M40,0:34:03
+10,Fallon,Steven,Carnethy,M40,0:34:17
+11,Smith,Alan,Deeside Runners,M40,0:34:46
+12,Williamson,Jason,Cosmics,M,0:35:18
+13,Campbell,Graeme,Ochil Hill Runners,M,0:35:22
+14,Laing,Martin,Unattached,M50,0:35:45
+15,Bennet,Sandy,Unattached,M40,0:36:08
+16,Butler,Ian,Shettleston Harriers,M,0:36:30
+17,Harris,Mark,Fife AC,M40,0:36:41
+18,Gorman,Manny,Westerlands,M40,0:36:46
+19,Scott,David,Ochil Hill Runners,M50,0:36:57
+20,Birnie,Andy,Bellahouston RR,M40,0:37:05
+21,Simpson,Peter,Carnegie Harriers,M50,0:37:16
+22,Burns,Stephen,Lochaber AC,M,0:37:41
+23,Brooks,Graham,Lochaber AC,M50,0:38:02
+24,Macdonald,Matthew,Lochaber AC,MU23,0:38:18
+25,Pryde,Gordon,Lomond Hill Runners,M50,0:38:44
+26,Dickson,David,Westerlands,M50,0:39:58
+27,Heron,Gregor,Carnethy,M,0:40:14
+28,Donnelly,John,Westerlands,M40,0:40:47
+29,Popham,Frank,Fife AC,M,0:40:58
+30,Birnie,Emma,Bellahouston RR,F,0:41:01
+31,Kennedy,Ali,Lochaber AC,M40,0:41:04
+32,Oldham,Veronique,Cosmics,F40,0:41:07
+33,MacKenzie,Ruth,Deeside Runners,F40,0:41:10
+34,Blackhall,Amanda,Lochaber AC,F,0:41:19
+35,Wilson,Stewart,Highland Hill Runners,M40,0:41:26
+36,Maitland,John,Lochaber AC,M40,0:41:28
+37,Milligan,Douglas,Solway,M60,0:41:57
+38,Nash,Graham,Carnethy,M40,0:42:16
+39,Duncan,David,Ochil Hill Runners,M50,0:42:32
+40,Larmour,Colin,Cosmics,M40,0:42:37
+41,Brett,Alex,Highland Hill Runners,M50,0:42:42
+42,Hirst,David,Deeside Runners,M40,0:42:54
+43,Turner,Ronnie,Lochaber AC,M40,0:43:01
+44,Shaw,Lyndsey,Lochaber AC,F,0:43:10
+45,Wardner,Matthew,Lochaber AC,M40,0:43:33
+46,Ross,Tom,Fife AC,M60,0:43:47
+47,McLean,Herbie,Lochtayside,M60,0:44:01
+48,Murdoch,Ray,Lochaber AC,M60,0:44:07
+49,Macnab,Graham,Lochaber AC,M40,0:44:15
+50,King,Steven,Carnegie Harriers,M,0:44:53
+51,Hamilton,Anita,Cosmics,F50,0:44:57
+52,Beagrie,Joe,Lochaber AC,M40,0:45:29
+53,Forrest,Stuart,Highland Hill Runners,M,0:45:35
+54,Byrne,Sara,Lochaber AC,F,0:45:35
+55,Bowman,Angus,Lomond Hill Runners,M50,0:45:48
+56,MacDonald,David X,Lochaber AC,M,0:46:08
+57,Macdonald,Iain,Lochaber AC,M40,0:46:12
+58,Brennan,Brian,Westerlands,M50,0:46:20
+59,Arthur,Graham,Highland Hill Runners,M60,0:46:39
+60,Scott,Jocelyn,Fife AC,F50,0:46:57
+61,Corner,Julie,Lochaber AC,F,0:47:00
+62,MacEwan,Linda,Lochaber AC,F40,0:47:08
+63,Orr,Ernie,Lochaber AC,M60,0:47:33
+64,Sim,Andrew,Carnegie Harriers,M40,0:47:53
+65,Smithard,Phil,Carnegie Harriers,M60,0:48:23
+66,Morgan,Sharyn,Lochaber AC,F,0:48:43
+67,Forster,Nix,Lochaber AC,F40,0:49:16
+68,Bennet,Lynne,Unattached,F40,0:49:29
+69,Ross,Fionna,Harmeny AC,F,0:49:45
+70,Sibbett,Lorna,Fife AC,F40,0:49:47
+71,West,Alison,Carnegie Harriers,F50,0:49:59
+72,Reid,Colin,Cosmics,M40,0:50:13
+73,Crowe,Kate,Penicuik Harriers,F40,0:50:33
+74,Gatehouse,Richard,Lomond Hill Runners,M50,0:50:48
+75,Smith,Tilly,Deeside Runners,F40,0:51:07
+76,Killean,Liz,Fife AC,F40,0:51:27
+77,Pearce,Emma,Lochaber AC,F40,0:51:35
+78,Laing,Sarah,Unattached,F,0:52:11
+79,Scott,Bill,Lochaber AC,M50,0:52:21
+80,Johnston,Stephen,Milburn Harriers,M40,0:52:28
+81,Ritchie,Hilary,Fife AC,F40,0:52:30
+82,Kirkdale,Brian,Hastings Runners,M50,0:53:02
+83,Bass,Ursula,Deeside Runners,F40,0:53:34
+84,Ness,Joanna,Lochaber AC,F40,0:53:42
+85,Tomlinson,David,Lochaber AC,M60,0:53:43
+86,Evans,Neah,Westerlands,FU23,0:53:50
+87,Grainger,Moira,Fife AC,F40,0:54:01
+88,Finnimore,Andrew,Lochaber AC,M50,0:54:27
+89,Smith,Janice,HBT,F50,0:54:42
+90,Francis,David,Fife AC,M60,0:55:21
+91,Ross,Colin,Lochaber AC,M40,0:55:33
+92,Ross,Kirstie,Lochaber AC,F,0:56:35
+93,Anderson,Scott,Highland Hill Runners,M,0:56:37
+94,Mackenzie,Iain,Deeside Runners,M50,0:56:46
+95,Oliver,Jane,Deeside Runners,F50,0:56:56
+96,Laidlaw,Anita,Fife AC,F,0:57:36
+97,Jardine,Jimmy,Lochaber AC,M60,0:59:03
+98,Ascroft,Lorna,Carnethy,F,1:01:07
+99,Bowman,Jean,Lomond Hill Runners,F50,1:01:11
+100,O`Neill,John,Lochaber AC,M40,1:02:52
+101,Hailey,Lucy,Carnethy,F,1:03:55
+102,Lemoncello,Phyllis,Fife AC,F60,1:05:34
+103,Murdoch,Elma,Lochaber AC,F50,1:06:55
+104,MacPhee,Margaret Rose,Lochaber AC,F40,1:10:29
+105,Watt,June,Lochaber AC,F40,1:12:06
+106,O`Sullivan,Sarah,Cosmics,F,1:21:10
+107,Wilson,Rachel,Springburn Harriers,F,1:24:01

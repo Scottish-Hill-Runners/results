@@ -1,0 +1,135 @@
+FinishPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
+1,Thornton,Alistair,Howgill Harriers,M,00:51:29
+2,Fraser,Callum,Lochaber AC,M,00:51:44
+3,Ashwood,Daniel,Carnethy HRC,M,00:52:26
+4,Thorburn,Ewan,Lochaber AC,M40,00:53:26
+5,Wilson,Felix,Carnethy HRC,M,00:53:40
+6,Cooling,Harry,Howgill Harriers,M,00:54:00
+7,Crutchfield,Stuart,Westerlands CCC,M40,00:54:31
+8,Gilmore,Iain,Carnethy HRC,M,00:56:01
+9,Bartholomew,Douglas,Unattached,M,00:56:30
+10,Mann,Joe,Drumguish D&JC,M,00:56:38
+11,Day,Tom,Keswick AC,M,00:57:32
+12,Downie,Robin,Lochaber AC,M,00:57:36
+13,Oliver,Huw,Drumguish D&JC,M,00:57:39
+14,Gilmore,Andrew,Highland Hill Runners,M,00:57:48
+15,Cope,David,Howgill Harriers,M,00:58:03
+16,Smith-Price,Ben,Lochaber AC,M,00:58:25
+17,Slimon,James,Highland Hill Runners,M,00:58:28
+18,MacDonald,John Lawrie,Lochaber AC,M40,00:59:18
+19,Anthony,Alasdair,Drumguish D&JC,M40,01:00:01
+20,Campbell,Garry,Lochaber AC,M,01:00:28
+21,Harrison,Pete,Howgill Harriers,M,01:00:34
+22,Hester,Ben,Highland Hill Runners,M,01:00:48
+23,Smith,Lester,Cuillin Dubh HRC,M,01:01:07
+24,Cope,Alan,Unattached,M,01:01:53
+25,Davidson,Gregor,Lochaber AC,M40,01:02:10
+26,Deamer,Matt,Cuillin Dubh HRC,M,01:02:23
+27,Macdonald,Steve,Lochaber AC,M40,01:02:38
+28,MacDonald,Matt,Lochaber AC,M,01:02:49
+29,Davies,Fred,Shettleston Harriers,M,01:03:17
+30,Furness,Ethan,Black Combe Runners,M,01:03:33
+31,Smith,Alan,Drumguish D&JC,M60,01:04:04
+32,Reid,Lewis,Strathclyde Uni MC,M,01:04:35
+33,Horsfall,Beinn,Unattached,M,01:04:43
+34,Elliot,Daniel,Cuillin Dubh HRC,M,01:04:49
+35,Cameron,Angus,Lochaber AC,M,01:05:03
+36,McKinney,Matthew,Unattached,M,01:05:14
+37,Dodman,Ben,Lochaber AC,M40,01:05:21
+38,McDougall,Stephen,Middlesbrough & Cleveland H,M,01:05:25
+39,Stewart,Mike,Keith and District AAC,M50,01:06:19
+40,Shaw,Ruairidh,Lochaber AC,M,01:06:41
+41,Oliver-Jones,Ruairdh,Lochaber AC,M,01:06:47
+42,Downs,Ellen,Unattached,F,01:06:54
+43,Foreman,Ella,Westerlands CCC,F,01:07:09
+44,Strachan,Andrew,Westerlands CCC,M,01:07:55
+45,Knox,Jonny,Anster Haddies,M50,01:08:01
+46,Griffiths,Bruce,Drumguish D&JC,M,01:08:11
+47,McKinney,Sammy,Unattached,M,01:08:15
+48,Gorman,Manny,Drumguish D&JC,M50,01:08:49
+49,Page,Aiden,Lochaber AC,M,01:08:59
+50,MacLenannan,Iain,Highland Hill Runners,M50,01:09:03
+51,Till,Niall,Cuillin Dubh HRC,M,01:09:11
+52,Wilkinson,Chris,Highland Hill Runners,M,01:10:09
+53,Mackinnon,Gordon,BNRA,M40,01:10:16
+54,Thomson,Iain,Lomond Hill Runners,M40,01:10:54
+55,Walmsley,Alex,Cuillin Dubh HRC,M,01:11:02
+56,Huins,Charlie,Unattached,M,01:11:08
+57,Sutton,Sarah,Cuillin Dubh HRC,F,01:11:17
+58,Philip,Cameron,Unattached,M,01:11:20
+59,Currie,Jamie,Lochaber AC,M40,01:11:39
+60,Moro,Aurelien,Unattached,M,01:12:11
+61,Robson,Scott,Carnethy HRC,M,01:12:19
+62,Kennedy,Ali,Lochaber AC,M60,01:12:40
+63,Wood,Helen,Westerlands CCC,F,01:12:47
+64,Macphie,Donald,Unattached,M,01:14:04
+65,MacKintosh,Hugh,Lochaber AC,M50,01:14:12
+66,Ameixenda Capeans,Lucas,Strathclyde Uni MC,M,01:14:28
+67,Coombs,Richard,Ochils,M50,01:14:35
+68,Rowe,Ben,Lochaber AC,M,01:14:42
+69,MacKay,Ryan,Lochaber AC,M,01:15:15
+70,Horne,Joseph,Drumguish D&JC,M,01:15:21
+71,Wells,Callum,Drumguish D&JC,M,01:15:29
+72,Stone,Ellie,Westerlands CCC,F,01:15:40
+73,Kennedy,Peter,Lochaber AC,M50,01:16:17
+74,Murrish,Bruce,Unattached,M,01:16:28
+75,Forbes,Seana,Lochaber AC,F,01:16:51
+76,Gilmore,Neil,Carnethy HRC,M60,01:17:02
+77,Malcolm,Stuart,Drumguish D&JC,M50,01:17:12
+78,Watson,Edward,Unattached,M,01:18:57
+79,Coghill,John,Unattached,M,01:19:02
+80,Macaskill,Maggie,Cuillin Dubh HRC,F,01:20:27
+81,Shepherd,Andrew,Carnethy HRC,M60,01:20:29
+82,Popple,Stephen,Highland Hill Runners,M50,01:20:36
+83,MacDonald,Archie,Unattached,M,01:21:03
+84,Shah,Callum,Unattached,M,01:22:12
+85,Oakley,Kirstin,Ayr Seaforth AC,F,01:22:17
+86,Weller,Zach,Unattached,M,01:22:20
+87,Miles,Finn,Drumguish D&JC,M,01:22:26
+88,Cameron,Fraser,Lochaber AC,M,01:22:29
+89,Pryde,Gordon,Lomond Hill Runners,M60,01:22:50
+90,Kelly,Graham,Westerlands CCC,M50,01:22:54
+91,Birnie,Craig,Unattached,M,01:23:09
+92,MacLeod,Ally,Unattached,M50,01:24:08
+93,Shaw,Lyndsey,Lochaber AC,F40,01:24:20
+94,Shaw,Richard,Lochaber AC,M50,01:24:47
+95,Suddes,Emily,Unattached,F,01:25:35
+96,Hayward,Gemma,Westerlands CCC,F,01:25:58
+97,Kennedy,Michaela,Lochaber AC,F,01:26:16
+98,MacSween,Alasdair,Skye and Lochalsh RC,M60,01:26:26
+99,Silvester,Ian,Cuillin Dubh HRC,M60,01:26:43
+100,Davies,Beckie,Drumguish D&JC,F,01:26:48
+101,Cameron,William,Lochaber AC,M40,01:27:46
+102,Simpson,Iain,Lomond Hill Runners,M50,01:27:53
+103,Brownlie,Ross,Unattached,M,01:28:15
+104,White,Georgia,Lochaber AC,F,01:28:28
+105,Worlock,Benjamin,Unattached,M,01:29:35
+106,Swann,Craig,Unattached,M,01:29:35
+107,Turner,Dave,Lomond Hill Runners,M50,01:32:35
+108,Brimacombe,Benjamin,Drumguish D&JC,M,01:33:05
+109,Strachan,Paul,Westerlands CCC,M70,01:34:35
+110,White,Lucy,Westerlands CCC,F,01:37:10
+111,Shaw,Rachel,Cuillin Dubh HRC,F,01:38:03
+112,Lynch,Thomas,Lochaber AC,M40,01:39:02
+113,ORourke,Matt,Unattached,M,01:39:05
+114,Stewart,Jordan,Moray Road Runners,M,01:40:11
+115,Law,Isabelle,Unattached,F,01:40:28
+116,McIntyre,Cheryl,Unattached,F,01:40:31
+117,Nogueras,Aniol,Unattached,M,01:40:40
+118,Park,Archibald,Hartfell Hill Runners,M60,01:40:47
+119,Barrett,Amy,Drumguish D&JC,F,01:40:53
+120,Hunter,Sandy,Unattached,M,01:41:19
+121,Megicks,Julian,Unattached,M60,01:44:39
+122,Angus,Gerald,Keith and District AAC,M60,01:47:16
+123,Macdonald,Martin,Lochaber AC,M40,01:47:36
+124,Beveridge,Michael,Team Kirrie,M40,01:48:27
+125,MacNiven,Craig,Unattached,M,01:50:54
+126,Fowlie,David,Unattached,M40,01:55:03
+127,Muir,Stephen,Unattached,M40,01:57:58
+128,Canning,Dave,Unattached,M40,02:11:19
+129,Mcgroarty,Paul,Unattached,M50,02:16:45
+130,Hodgetts,Kate,Drumguish D&JC,F,02:17:12
+131,MacKinnon,Eilidh,Unattached,F,02:20:04
+132,Mather,Sandra,Unattached,F60,02:20:05
+133,Murrish,Jessica,Unattached,F,02:26:20
+134,Urquhart,Brian,Unattached,M60,02:30:40

@@ -1,0 +1,128 @@
+RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
+1,Limmer,David,Portobello,M,0:34:35
+2,Murdoch,Graeme,Gala Harriers,M,0:34:57
+3,Park,Luke,HBT,M,0:35:21
+4,Smith,Colin,Unattached,M,0:35:50
+5,McDonald,Alistair,St Andrews University,M,0:36:20
+6,Donnelly,Colin,Cambuslang Harriers,M,0:36:39
+7,Stewart,Iain,Westerlands,M,0:36:52
+8,Trewartha,Gary,Gala Harriers,M,0:37:53
+9,Morgan,Charlotte,Carnethy,F,0:37:57
+10,Marshall,Brian,HELP,M,0:37:58
+11,Taylor,William,Gala Harriers,M,0:38:00
+12,Parry,Leahn,Lauderdale Limpers,M,0:38:04
+13,Entwhistle,Jamie,Lauderdale Limpers,M,0:38:25
+14,Crowe,Des,Penicuik Harriers,M,0:38:47
+15,Hendrie,Jason,Unattached,M,0:39:24
+16,Hill,Sinclair,Gala Harriers,M,0:39:40
+17,McGovern,Michael,Moorfoot Runners,M,0:40:05
+18,Barden,Katy,Gala Harriers,F,0:40:25
+19,Lewis,Michael,Unattached,M,0:40:37
+20,Green,Sarah,Gala Harriers,F,0:40:58
+21,Lawrie,Andrew,Lauderdale Limpers,M,0:41:12
+22,Paterson,Robert,Unattached,M,0:41:22
+23,Maxwell,Ian,Gala Harriers,M,0:41:36
+24,McCall,Tim,Norham RC,M,0:41:39
+25,Inglis,Magnus,Gala Harriers,M,0:41:40
+26,Christie,Neil,Gala Harriers,M,0:42:15
+27,Landles,Mark,Unattached,M,0:42:24
+28,Brown,Steven,Unattached,M,0:42:26
+29,Wilson,Rob,Penicuik Harriers,M,0:42:38
+30,Spenceley,Andy,Carnethy,M,0:43:16
+31,Rooney,Edmund,Lauderdale Limpers,M,0:43:42
+32,Wilkinson,Marc,Lauderdale Limpers,M,0:43:48
+33,Lunn,Anthony,Gala Harriers,M,0:44:08
+34,Oswald,Julie,Musselburgh AC,F,0:44:22
+35,McLean,Calum,Dunblane Runners,M,0:44:43
+36,Rogerson,Michael,Lauderdale Limpers,M,0:44:44
+37,Elder,Alan,Moorfoot Runners,M,0:44:45
+38,Summerfield,Chloe,Lauderdale Limpers,F,0:44:53
+39,Goodair,Andy,Teviotdale Harriers,M,0:45:01
+40,Tomlinson,Jeremy,Unattached,M,0:45:03
+41,Campbell,Alex,Gala Harriers,F,0:45:06
+42,Duncan,Gillian,Gala Harriers,F,0:45:07
+43,McCulloch,Billy,Gala Harriers,M,0:45:21
+44,Martin,Keith,Harmeny AC,M,0:46:26
+45,Nightingale,David,Gala Harriers,M,0:45:42
+46,Plint,Sarah,Lauderdale Limpers,F,0:45:58
+47,Turnbull,Neil,Norham RC,M,0:46:22
+48,Ker,Gregor,Lauderdale Limpers,M,0:46:23
+49,Burberry,Erica,HELP,F,0:46:45
+50,Scott,Paul,Unattached,M,0:46:47
+51,Riddell,Doug,Unattached,,0:46:54
+52,Wallace,Sandy,HELP,M,0:47:06
+53,McCaa,Keith,Jog Earlston,M,0:47:09
+54,McPartland,Frank,HELP,M,0:47:14
+55,Lockie,Paul,Teviotdale Harriers,M,0:47:15
+56,Dalgleish,Lisa,Jog Earlston,F,0:47:19
+57,Aitchison,Steve,Lauderdale Limpers,M,0:47:21
+58,Hunter,David,Gala Harriers,M,0:47:24
+59,Johnson,Alexandra,Norham RC,F,0:48:01
+60,Grant,Dawn,Lauderdale Limpers,F,0:48:30
+61,Sutherland,Graeme,Lauderdale Limpers,F,0:48:32
+62,Wilson,Robert,Moorfoot Runners,M,0:48:37
+63,Murray,David,Unattached,M,0:49:11
+64,McAleese,Rachel,Lauderdale Limpers,F,0:49:16
+65,Gall,Allan,Central AC,M,0:49:21
+66,Ogden,Geoff,Unattached,M,0:49:27
+67,Jack,Caroline,Teviotdale Harriers,F,0:49:36
+68,Hartley,Jenny,Lauderdale Limpers,F,0:49:43
+69,Lamd,Jo,Unattached,F,0:49:51
+70,Allan,Emma,Jog Earlston,F,0:49:57
+71,Comins,Kate,Unattached,F,0:50:16
+72,MacVicar,Suzanne,Unattached,F,0:50:31
+73,Keefe,Caroline,Jog Earlston,F,0:51:12
+74,Clark,Catie,Unattached,F,0:51:16
+75,Turnbull,Shona,Norham RC,F,0:51:34
+76,Spenceley,Hilary,Carnethy,F,0:51:39
+77,Moffat,Julie,Portobello,F,0:51:43
+78,Nicol,Eileen,Gala Harriers,F,0:51:54
+79,Millar,Michael,Gala Harriers,M,0:52:17
+80,Phip,Tracey,Penicuik Harriers,F,0:52:37
+81,Downie,Chris,Penicuik Harriers,M,0:52:39
+82,Yates,Robbie,Portobello,M,0:53:03
+83,McNeil,Cameron,Lauderdale Limpers,M,0:53:11
+84,Nelson,Barry,Unattached,M,0:53:20
+85,Dalrymple,Claire,Unattached,F,0:53:44
+86,Cradd,Aidan,Unattached,M,0:53:49
+87,Purves,Matthew,Unattached,M,0:53:51
+88,MacDonald,Paddy,Unattached,M,0:53:56
+89,Bain,Kerry,Jog Earlston,F,0:54:01
+90,Johnson,Graham,Unattached,M,0:54:02
+91,Tweddle,Kyra,Lauderdale Limpers,F,0:54:07
+92,Nelson,Katie,Unattached,F,0:54:14
+93,Coltman,Alan,Teviotdale Harriers,M,0:54:17
+94,Elsdon,Bruce,Unattached,M,0:54:58
+95,McAdam,Pauline,Teviotdale Harriers,F,0:55:46
+96,Hastings,Ron,Teviotdale Harriers,M,0:57:53
+97,Eaton-Turner,Clark,Unattached,M,0:58:01
+98,Taddei,Claire,Unattached,F,0:58:08
+99,Hacene,Bouache,Jog Earlston,M,0:58:53
+100,Fraser,Jeremy,Lauderdale Limpers,M,0:58:33
+101,Birch,Frank,Teviotdale Harriers,M,0:59:09
+102,Bain,Lynne,Unattached,F,0:59:21
+103,Calothis,Marinos,Westerlands,M,0:59:27
+104,Brown,Stewart,Unattached,M,0:59:56
+105,Addis,Lauren,Jog Earlston,F,1:00:15
+106,Hendry,Charlotte,Gala Harriers,F,1:00:16
+107,Davidson,Stewart,Fife AC,M,1:00:46
+108,Wilson,Pamela,Unattached,F,1:00:58
+109,Buchanan,Yvonne,Jog Earlston,F,1:01:07
+110,Irvine,Robert,Unattached,M,1:02:02
+111,Irvine,Claire,Galavanters,F,1:02:02
+112,Mole,Correne,Norham RC,F,1:02:06
+113,Hall,Ailsa,Unattached,F,1:02:06
+114,Purves,Judith,Unattached,F,1:02:20
+115,Briggs,Keith,Jog Earlston,M,1:03:46
+116,Glendinning,Ross,Unattached,M,1:03:49
+117,Sharp,Jonathan,Jog Earlston,M,1:03:51
+118,Baxter,Angus,Jog Earlston,M,1:03:54
+119,Purdy,Lynne,Unattached,F,1:04:27
+120,Tennant,Sheila,Jog Scotland,F,1:05:36
+121,Fairbairn,Marion,Unattached,F,1:06:20
+122,Chester,Roberta,Norham RC,F,1:07:32
+123,Thomson,Laura,Run Duns,F,1:08:07
+124,Purves,Anne,Gala Harriers,F,1:10:44
+125,Brownlie,Gill,Run Duns,F,1:14:46
+126,Hutton,Felicity,Run Duns,F,1:14:46
+127,Cullen,Lynsey,Unattached,F,1:15:41

@@ -1,0 +1,108 @@
+RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
+1,Callan,Thomas,Westerlands,M,1:12:46
+2,MacLeod,Richard,Lochaber AC,M,1:17:38
+3,Eiser,Dave,Ochil Hill Runners,M,1:19:01
+4,Watson,Cameron,Lomond Hill Runners,M40,1:19:35
+5,Macdonald,Steve,Lochaber AC,M,1:20:06
+6,Marce,Marc,Unattached,M,1:20:09
+7,Walsh,Chris,HBT,M,1:20:19
+8,Henry,Peter,Deeside Runners,M,1:21:37
+9,Montgomery,James,Bellahouston RR,M,1:21:41
+10,Martin,Calum,Carnethy,M,1:21:53
+11,Monk,Stephen,Lochaber AC,M,1:22:01
+12,Purkis,Mark,HBT,M,1:22:21
+13,Anderson,Adam,Hartfell HRC,M40,1:22:50
+14,Macmillan,Gavin,Lochaber AC,M,1:23:07
+15,Henderson,Jonny,HBT,M,1:23:35
+16,Mackellaig,Iain,Lochaber AC,M40,1:25:41
+17,Walsh,David,Dunoon Hill Runners,M50,1:27:44
+18,Dickson,David,Westerlands,M50,1:27:49
+19,Upson,Chris,Westerlands,M50,1:28:11
+20,Allsop,David,Kirkintilloch Olympians,M40,1:28:17
+21,Whitelaw,Mark,Hartfell HRC,M40,1:28:31
+22,Kennedy,Ali,Lochaber AC,M50,1:28:47
+23,Ballantyne,Iain,Glasgow Uni H&H,M,1:28:54
+24,Butler,Chris,Westerlands,M,1:28:59
+25,Kerridge,Donald,Deeside Runners,M50,1:29:00
+26,Brown,Gareth,North Ayrshire AC,M,1:29:03
+27,Allik,Mirjam,Clydeside Orienteers,F,1:29:07
+28,Duncan,Eric,Highland Hill Runners,M40,1:29:52
+29,Hope,Jamie,Unattached,M,1:30:42
+30,Leith,Clifford,Metro Aberdeen,M40,1:30:47
+31,Lipton,Gareth,Unattached,M,1:30:51
+32,Waslidge,Neil,Lochaber AC,M50,1:31:47
+33,Davidson,Gregor,Lochaber AC,M,1:32:38
+34,Osborne,Alex,Westerlands,M,1:33:26
+35,Andrew,Alastair,Parnie Street Runners,M,1:33:36
+36,Fitzpatrick,Bryan,Dunoon Hill Runners,M,1:34:32
+37,Weir,Jonathan,Unattached,M40,1:34:33
+38,Dooner,Creagh,Unattached,M,1:34:52
+39,Taylor,Alex,Unattached,M,1:35:10
+40,MacKinnon,Barrie,Lochaber AC,M,1:35:11
+41,Lamont,Allan,Lochaber AC,M,1:35:18
+42,Bowden,James,HBT,M,1:35:25
+43,Blackhall,Amanda,Lochaber AC,F40,1:36:12
+44,Pugh,Roderick,Kilmarnock Harriers,M60,1:36:16
+45,McCloy,Michael,Carnethy,M40,1:36:26
+46,Pryde,Gordon,Lomond Hill Runners,M50,1:36:53
+47,Reid,Don,Westerlands,M50,1:37:10
+48,Brennan,Brian,Westerlands,M60,1:37:58
+49,Hawthorne,Stuart,Ayrodynamic Tri Club,M40,1:38:01
+50,Maclean,Robert,Lochaber AC,M40,1:38:23
+51,MacNab,Peter,Westerlands,M,1:38:47
+52,MacDonald,Brian,Lochaber AC,M,1:39:14
+53,Bowman,Angus,Lomond Hill Runners,M60,1:39:19
+54,McLaughlin,Tony,Unattached,M,1:39:28
+55,Mackenzie,Sarah,Lochaber AC,F,1:39:56
+56,Simpson,Heather,Westerlands,F,1:40:31
+57,Corner,Julie,Lochaber AC,F40,1:41:45
+58,Lefevre,Lucas,Carnethy,M,1:42:06
+59,Blackhall,Keith,Lochaber AC,M40,1:42:32
+60,Slezas,Michael,Lochaber AC,M,1:42:32
+61,Lamont,Iain,Lochaber AC,M,1:42:43
+62,Forster,Nix,Lochaber AC,F40,1:42:59
+63,Cumming,Mike,Fife AC,M,1:43:00
+64,Castelo,Marco,Unattached,M,1:43:15
+65,Street,Thomas,Kilbarchan,M40,1:43:18
+66,Forster,Damian,Lochaber AC,M40,1:43:55
+67,Mackay,Cara,Lochaber AC,F,1:44:20
+68,Thele,Roland,Unattached,M,1:44:54
+69,Douglas,George,Westerlands,M50,1:46:05
+70,Midgley,Peter,Westerlands,M50,1:46:16
+71,MacKinnon,Vikki,Lochaber AC,F40,1:46:23
+72,Paul,Craig,Unattached,M,1:48:25
+73,Blackley,Lisa,Unattached,F,1:48:27
+74,Reid,Angela,North Ayrshire AC,F,1:48:36
+75,Johnson,Ian,Lochaber AC,M50,1:49:02
+76,Edwards,Jenny,Westerlands,F,1:49:12
+77,Wilson,Colin,Lomond Hill Runners,M50,1:50:35
+78,Wise,Helen,Carnethy,F,1:50:46
+79,Hunter,Lia,Lochaber AC,F,1:51:18
+80,Byrne,Sara,Lochaber AC,F40,1:52:13
+81,Hamilton,Jim,Lochaber AC,M50,1:53:28
+82,Drewette,David,Ochil Hill Runners,M40,1:53:36
+83,Shaw,Trevor,Lochtayside,M50,1:54:04
+84,MacEwan,Linda,Lochaber AC,F50,1:55:22
+85,Murdoch,Ray,Lochaber AC,M60,1:55:30
+86,Bradley,Siobhan,Lochaber AC,F,1:55:38
+87,Landels,Brian,Lomond Hill Runners,M50,1:56:26
+88,Khan,Mohammed,Dumfries RC,M,1:56:36
+89,Solomon,Ty,Clydeside Orienteers,M,1:58:49
+90,Thomas,Ranjit,Dumfries RC,M40,1:59:05
+91,MacDiarmid,Arlene,Lochaber AC,F40,1:59:32
+92,O`Neill,David,Lochaber AC,M50,2:00:41
+93,Sim,Andrew,Carnegie Harriers,M40,2:00:50
+94,Kennedy,Angelina,Lochaber AC,F,2:01:50
+95,Mackie,Eugene,Highland Hill Runners,M,2:02:55
+96,Donnachie,Adrian,Unattached,M50,2:05:28
+97,Bowman,Jean,Lomond Hill Runners,F50,2:05:43
+98,Morgan,Sharyn,Lochaber AC,F40,2:05:54
+99,Banks,Johnny,Lochaber AC,M60,2:06:58
+100,Sutherland,Hannah,Lochaber AC,F,2:07:04
+101,Harris,Mark,Kilbarchan,M40,2:08:27
+102,MacLean,Catriona,Lochaber AC,F40,2:10:53
+103,MacDonald,Donna,Lochaber AC,F40,2:11:24
+104,Macdonald,Willie,Lochaber AC,M60,2:16:38
+105,Lee,John,Todmorden Harriers,M50,2:17:44
+106,Dick,Callum,Lomond Hill Runners,M50,2:26:56
+107,Hamilton,Pamela,Lochaber AC,F40,2:29:00

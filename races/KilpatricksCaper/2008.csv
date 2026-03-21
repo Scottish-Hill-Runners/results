@@ -1,0 +1,95 @@
+RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
+1,Lennox,Jethro,Shettleston Harriers,M,0:44:31
+2,McCall,Andrew,Greenock Glenpark Harriers,M,0:45:55
+3,Wiseman,Bob,Ochil Hill Runners,M,0:46:54
+4,Ross,Dougal,Bellahouston RR,M,0:46:59
+5,Sullivan,Matthew,Shettleston Harriers,M,0:47:20
+6,Gallagher,Ronnie,Carnethy,M40,0:47:48
+7,Haining,Keith,Kilmarnock Harriers,M40,0:47:56
+8,McLoone,Stephen,Greenock Glenpark Harriers,M40,0:48:14
+9,Sanz Gomez,Marcos,Bellahouston RR,M,0:48:56
+10,Scott,Nigel,Westerlands,M40,0:49:18
+11,Glencorse,Colin,Kilmarnock Harriers,M,0:49:23
+12,Simpson,Stuart,Stornoway AC,M,0:51:07
+13,Winter,Stephen,Shettleston Harriers,M,0:51:13
+14,Jamieson,David,Shettleston Harriers,M40,0:51:18
+15,Clelland,Steven,Shettleston Harriers,M,0:51:29
+16,Cowper,Stephen,Milburn Harriers,M40,0:51:39
+17,Reid,Don,Westerlands,M50,0:52:05
+18,Moriarty,Brendan,Bellahouston RR,M,0:52:10
+19,Fallon,Steven,Carnethy,M40,0:52:21
+20,McGougan,Duncan,Scottish Prison Service,M40,0:52:27
+21,Prasad,Elke,Squadra Porcini,F,0:52:32
+22,McLaughlin,Danny,Greenock Glenpark Harriers,M40,0:52:36
+23,Reid,Nick,Bellahouston RR,M,0:52:37
+24,Munro,Graham,Lochaber AC,M40,0:52:42
+25,Heron,Kyle,Stag Orienteers,M,0:53:08
+26,Anderson,Russell,Moorfoot Runners,M40,0:53:11
+27,Kelly,Graham,Westerlands,M,0:53:31
+28,Triger,Simon,Westerlands,M,0:53:49
+29,Bell,Stephen,Helensburgh AAC,M40,0:54:12
+30,Rumgay,Ken,Lochaber AC,M40,0:54:26
+31,McNeill,Steven,Kilmarnock Harriers,M,0:54:34
+32,Gorgas,Steffen,Westerlands,M,0:54:35
+33,Gammie,David,Unattached,M,0:54:43
+34,Craft,Iona,Moray Road Runners,F,0:54:48
+35,McKendrick,Scott,North Ayrshire AC,M,0:55:19
+36,Houston,Val,Westerlands,F40,0:55:27
+37,Scott,Alan,Unattached,M,0:55:44
+38,MacLeod,Murdo,Westerlands,M50,0:55:45
+39,Stockdale,Chris,Maryhill Harriers,M,0:56:04
+40,McQuater,Rob,Westerlands,M,0:56:44
+41,Laverty,Hugh,Clydesdale Harriers,M50,0:56:47
+42,Riddell,Duncan,Westerlands,M,0:56:56
+43,Duncan,David,Ochil Hill Runners,M50,0:57:02
+44,Diver,Michael,Clydesdale Harriers,M40,0:57:05
+45,McCaffrey,Gordon,Westerlands,M50,0:57:16
+46,Gaughan,Adrian,Unattached,M40,0:57:31
+47,Hill,Richard,Westerlands,M,0:58:04
+48,McInroy,Ross,Helensburgh AAC,M50,0:58:18
+49,Wiseman,Sarah,Ochil Hill Runners,F,0:58:28
+50,Birnie,Emma,Bellahouston RR,F,0:58:33
+51,Galbraith,Jim,Giffnock North,M40,0:59:07
+52,Mackenzie,Sarah,Lochaber AC,F,0:59:22
+53,Docherty,Simon,Unattached,M,1:00:13
+54,Pugh,Roderick,Kilmarnock Harriers,M50,1:00:28
+55,Johnston,Stephen,Milburn Harriers,M40,1:01:00
+56,Whitehead,Jonathan,Carnethy,M50,1:01:50
+57,Clough,Andrew,Chorley Harriers,M40,1:02:03
+58,Harrington,Mick,Greenock Glenpark Harriers,M40,1:02:08
+59,Adams,David,Hamilton Harriers,M60,1:02:19
+60,MacFarlane,Brian,Unattached,M,1:02:39
+61,Milner,Jim,Maryhill Harriers,M50,1:03:38
+62,Jones,Stephen,Maryhill Harriers,M,1:03:59
+63,Wadsworth,Andy,HBT,M40,1:04:01
+64,Anderson,Joanne,Carnethy,F,1:04:03
+65,Fraser,Iain,Troon Tortoises,M40,1:04:06
+66,Thomson,Fred,Glasgow Uni H&H,M,1:05:11
+67,Kirk,Katherine,ESOC,F,1:05:11
+68,Jones,Caroline,Perth Road Runners,F,1:05:42
+69,Hussey,Rosalind,Edinburgh Uni H&H,F,1:06:39
+70,Pugh,Michael,Glasgow Uni H&H,M,1:07:07
+71,Sandbach,John,Bellahouston RR,M40,1:07:27
+72,Skinner,Sharon,Greenock Glenpark Harriers,F,1:07:35
+73,Polak,Jo,Highland Hill Runners,F40,1:07:38
+74,Milligan,John,Bellahouston RR,M,1:08:12
+75,Finbow,Malcolm,Westerlands,M50,1:08:24
+76,Pitch,Amy,Unattached,F,1:08:27
+77,McGuire,Jackie,Central AC,F,1:08:55
+78,Coll,Joe,Unattached,M,1:09:34
+79,Kennedy,Nancy,Lochaber AC,F50,1:09:36
+80,Hall,Terry,Greenock Glenpark Harriers,F40,1:09:44
+81,Thin,Joanne,Carnethy,F40,1:09:59
+82,McManus,Ian,Irvine RC,M60,1:10:05
+83,Houldsworth,Sandra,Kilbarchan,F,1:11:06
+84,Mackie,Stephanie,Westerlands,F,1:11:50
+85,King,Alex,Ochil Hill Runners,M40,1:11:59
+86,Currie,Geraldine,Milburn Harriers,F,1:13:33
+87,Taylor,Andy,Kilmarnock Harriers,M40,1:14:09
+88,McAdam,Pauline,Teviotdale Harriers,F50,1:14:09
+89,McLaughlin,Pat,Westerlands,F50,1:14:40
+90,Johnston,Scott,Bellahouston RR,M40,1:18:45
+91,Fouhy,Bridget,Bellahouston RR,F,1:19:53
+92,Hamilton,Iain,Beith Harriers,M60,1:23:46
+93,Benny,Graham,Westerlands,M60,1:27:14
+94,McFarlane,Max,Kilbarchan,M50,1:29:42

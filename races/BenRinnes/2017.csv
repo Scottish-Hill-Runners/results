@@ -1,0 +1,94 @@
+RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
+1,Fallas,Andrew,Carnethy,M,2:00:40
+2,Crowe,Jamie,Central AC,M,2:02:34
+3,Duncan,Jon,Warrior Orienteering Club,M40,2:06:11
+4,Braby,Liam,Carnethy,M,2:08:22
+5,Manson,Iain,Metro Aberdeen,M,2:11:49
+6,Whitlie,Stewart,Carnethy,M50,2:13:25
+7,Wallace,David,Ochil Hill Runners,M40,2:14:13
+8,Stewart,Mike,Keith & District AAC,M50,2:16:16
+9,Wagner,Stefan,Cosmics,M40,2:17:25
+10,Cabrera Valdes,Francisco Javier,Highland Hill Runners,M,2:18:52
+11,Mackie,Peter,Shettleston Harriers,M40,2:19:13
+12,Busby,John,Carnethy,M,2:19:21
+13,Scott,Vivian,Unattached,M,2:19:24
+14,Easton,Neil,Stonehaven RC,M,2:21:05
+15,Crowe,Des,Penicuik Harriers,M50,2:21:29
+16,Stephen,Jill,HBT,F,2:21:39
+17,Freshwater,Craig,HBT,M,2:25:15
+18,Tomlin,Chris,Cosmics,M40,2:26:35
+19,Gamble,Jon,Metro Aberdeen,M,2:28:23
+20,Hart,Stephen,Insch Trail Running Club,M,2:29:07
+21,Williamson,Jason,Cosmics,M40,2:30:25
+22,Comber,Ayron,Deeside Runners,M40,2:31:34
+23,Marwick,Caroline,Inverness Harriers,F,2:31:52
+24,Fallas,Helen,Carnethy,F,2:33:20
+25,Fallon,Steven,Carnethy,M50,2:34:39
+26,Burnett,Neil,Carnethy,M40,2:36:35
+27,Davie,Kevin,Carnegie Harriers,M,2:38:19
+28,Morrison,Sandy,Carnethy,M,2:39:14
+29,Oldham,Veronique,Cosmics,F50,2:39:29
+30,Angus,Gerald,Keith & District AAC,M50,2:40:00
+31,Young,James,Insch Trail Running Club,M,2:41:37
+32,Cymbalista,Pawel,Lochaber AC,M,2:41:41
+33,Dobbs,Simon,Moray Road Runners,M50,2:41:59
+34,Doidge-Harrison,Steve,Cosmics,M40,2:42:33
+35,Barfoot,James,Fleet Feet Triathletes,M,2:42:33
+36,Davis,Duncan,Carnethy,M40,2:44:34
+37,Kammer,Philip,Cosmics,M60,2:45:24
+38,Thomson,Gary,Garioch Road Runners,M,2:45:39
+39,Scott Collins,Graham,Belper Harriers,M40,2:45:49
+40,Johnson,Bob,Gala Harriers,M50,2:46:01
+41,Hawkins,Ian,Fife AC,M50,2:46:22
+42,Maclean,Robert,Lochaber AC,M40,2:46:40
+43,Hume,James,Forres Harriers,M40,2:47:36
+44,Schofield,Malcolm,Keith & District AAC,M,2:47:36
+45,Pryde,Gordon,Lomond Hill Runners,M50,2:48:28
+46,Ord,Steven,Deeside Runners,M40,2:48:36
+47,Cochrane,Luke,Unattached,M,2:48:55
+48,Walker,Iain,Westerlands,M40,2:50:34
+49,McCaffrey,Gordon,Westerlands,M60,2:51:24
+50,Lynch,Mike,Carnethy,M40,2:51:36
+51,Cairns,Gillian,Penicuik Harriers,F40,2:51:37
+52,Mackie,Shona,Highland Hill Runners,F,2:52:41
+53,White,David,Helm Hill Runners,M40,2:53:53
+54,Stirton,Charlotte,Garioch Gazelles,F,2:54:52
+55,Moffat,John,Highland Hill Runners,M50,2:56:00
+56,Harris,Gavin,Deveron Harriers,M,2:56:18
+57,Aitken,Graham,Insch Trail Running Club,M,2:56:28
+58,Jeffries,Rob,Mow Cop Runners,M50,2:57:34
+59,Naughton,David,Deveron Harriers,M40,2:57:37
+60,Hodgkinson,Sarah,Blackheath & Bromley Harriers,F,2:57:40
+61,Donnelly,John,Westerlands,M50,2:58:15
+62,Barron,Bob,Deveron Harriers,M40,2:58:31
+63,Ritchie,Hilary,Fife AC,F50,3:00:04
+64,Mollard,Pascaline,Ferranti AC,F,3:00:14
+65,McGuire,Austin,Insch Trail Running Club,M40,3:01:05
+66,Thomas,Neil,HBT,M40,3:01:23
+67,Johnston,Stephen,Milburn Harriers,M50,3:01:34
+68,Wise,Helen,Carnethy,F,3:01:41
+69,Baird,Gemma,Unattached,F,3:02:52
+70,Entwistle,Marie,Deeside Runners,F40,3:04:08
+71,McDonald,Brian,Unattached,M50,3:05:59
+72,Skinner,James,Unattached,M,3:07:37
+73,Rogers,Brett,Keith & District AAC,M40,3:08:00
+74,Scott,Jocelyn,Fife AC,F60,3:08:02
+75,Paul,Craig,Unattached,M,3:08:54
+76,Glennie,Joe,Unattached,M,3:08:56
+77,Macdonald,Sanders,North Highland Harriers,M,3:09:39
+78,Weir,Jonathan,Unattached,M40,3:10:16
+79,Bloomfield,Kate,Unattached,F40,3:11:32
+80,Thomson,Iain,Strathearn Harriers,M60,3:12:06
+81,MacIntosh,Daniel,Nairn Road Runners,M,3:13:57
+82,MacDougall,Antony,Unattached,M40,3:16:21
+83,Gibson,Fraser,Carnethy,M,3:18:48
+84,Jones,Graham,Unattached,M40,3:26:20
+85,Palop,Kilian,Fleet Feet Triathletes,M,3:26:36
+86,Ferguson,Katherine,Unattached,F,3:26:36
+87,Lambert,Laura,Unattached,F,3:27:02
+88,McWilliams,Glen,Northumberland FR,M50,3:27:24
+89,Stewart,Elaine,Cosmics,F60,3:29:00
+90,Williams,Rupert,Cosmics,M50,3:29:42
+91,Oliver,Jane,Deeside Runners,F50,3:33:17
+92,Combe,Alastair,Unattached,M40,3:33:19
+93,Combe,Dougie,Unattached,M40,3:33:19

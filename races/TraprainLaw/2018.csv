@@ -1,0 +1,107 @@
+RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
+1,Waldie,James,HBT,M,0:38:10
+2,Gardner,Peter,HBT,M,0:40:21
+3,Smart,John,Unattached,M40,0:41:48
+4,McDonald,Alistair,St Andrews University,M,0:41:59
+5,Dempster,Brian,Carnethy,M50,0:42:18
+6,Addie,James,Dunbar RC,M,0:42:52
+7,Peebles,Murray,Dunbar RC,M,0:43:33
+8,Hayward,Adam,Moorfoot Runners,M,0:43:39
+9,Grant,Christopher,Portobello,M,0:43:49
+10,Taylor,Craig,Portobello,M40,0:44:12
+11,Richards,Caspian,Dunbar RC,M40,0:44:15
+12,Marks,Jonathon,Carnethy,M,0:44:20
+13,Ross,Kent,Unattached,M40,0:44:21
+14,Edwards,Benjamin,Unattached,M,0:44:59
+15,Askham,John,Unattached,M40,0:45:07
+16,Taylor,Richard,Dunbar RC,M40,0:45:18
+17,Jones,Huw,HBT,M,0:45:22
+18,Andrew,Alistair,Unattached,M,0:45:26
+19,McCall,Tim,Norham RC,M50,0:45:38
+20,Greens,Michael,Penicuik Harriers,M,0:45:47
+21,Hay,Stuart,Dunbar RC,M50,0:45:54
+22,James,Mark,Carnethy,M50,0:46:29
+23,Mykura,Jill,Carnethy,F40,0:46:33
+24,Hooper,Mark,Carnethy,M,0:46:59
+25,Fraser,Doug,Musselburgh AC,M40,0:47:31
+26,Ross,Euan,Unattached,M40,0:47:35
+27,Leason,Elizabeth,Carnethy,F,0:47:45
+28,James,Mick,Carnethy,M50,0:47:54
+29,McMullan,George,Norham RC,M50,0:47:58
+30,Normand,Ivor,HBT,M50,0:48:15
+31,Rushton,Ben,Carnethy,M,0:48:18
+32,Renville,Alan,Carnethy,M40,0:48:22
+33,Coakley,Alex,Carnethy,M,0:48:26
+34,Moseley,Steve,Carnethy,M,0:48:33
+35,Gries,Jenny,Unattached,F,0:48:42
+36,Connor,Richy,Unattached,M,0:48:44
+37,Duncan,Alistair,Unattached,M40,0:49:13
+38,Robson,James,Unattached,M40,0:49:15
+39,Dillon,Stewart,Fife AC,M50,0:49:28
+40,Gilhooley,George,Lothian,M50,0:49:45
+41,Tait,JJ,Unattached,M40,0:49:55
+42,Rushton,Diana,Unattached,F,0:49:57
+43,McInnes,Graham,HELP,M40,0:50:10
+44,Barker,Graham,Fife AC,M,0:50:35
+45,Duncan,Andy,Musselburgh AC,M40,0:51:05
+46,Costello,Kerry,Portobello,F40,0:51:25
+47,Fox,Mike,HELP,M50,0:51:34
+48,Anderson,Rhona,Dunbar RC,F50,0:51:40
+49,Quirke,Martin,HBT,M40,0:51:52
+50,Van Wessel,Jurgen,Unattached,M,0:52:23
+51,Cameron,Gordon,Carnethy,M60,0:52:36
+52,Lisle,Kate,Unattached,F,0:52:40
+53,Hardy,Mark,Carnethy,M,0:52:56
+54,Wilkie,Derek,HBT,M,0:53:10
+55,McKinley,Norrie,HELP,M50,0:53:14
+56,Kelsall,Fiona,Ochil Hill Runners,F40,0:53:16
+57,Pound,Oliver,Portobello,M,0:53:18
+58,O'Brien,Phyllis,HBT,F50,0:53:20
+59,McCrum,Corin,Jog Scotland,M40,0:53:24
+60,Grant,Michael,HBT,M,0:53:25
+61,McDonnell,Clare,Carnethy,F,0:53:27
+62,Duncan,David,Ochil Hill Runners,M60,0:53:46
+63,Connolly,Richard,Unattached,M40,0:54:00
+64,Lupton,George,Portobello,M40,0:54:05
+65,Fortune,Carole,Gala Harriers,F50,0:54:22
+66,Shearer,Colin,Unattached,M50,0:54:50
+67,Astley-Jones,Adrian,Unattached,M40,0:55:00
+68,Hoppe,Michael,HELP,M40,0:55:15
+69,Holmes,Martin,Unattached,M50,0:55:38
+70,Friedrich,Juliane,Penicuik Harriers,F,0:55:57
+71,Wood,Darrel,Unattached,M,0:56:03
+72,Bouchier,Shane,Carnethy,M40,0:56:08
+73,Osborn,David,Lomond Hill Runners,M50,0:56:20
+74,Johnson,Gordon,Chirnside Chasers,M40,0:56:41
+75,MacDonald,Sean,Portobello,M,0:58:00
+76,MacEwen,Alex,Edinburgh AC,M60,0:58:17
+77,Horne,Elsie,HBT,F,0:58:19
+78,Eadie,Gordon,Carnethy,M50,0:58:27
+79,Hughes,Laura,Portobello,F,0:58:38
+80,Maass,Digby,Carnethy,M60,0:58:54
+81,Sinclair,Jason,Unattached,M40,0:58:55
+82,Hopley,Marianne,Portobello,F,0:59:06
+83,Tomlin,Nina,Edinburgh RC,F,0:59:26
+84,Leggatt,Angela,Portobello,F40,1:00:21
+85,Stable,Charles,Musselburgh AC,M40,1:00:56
+86,Van Wessel,Cornelis,Unattached,M60,1:01:01
+87,McCarthy,Brian,Celbridge AC,M40,1:01:55
+88,Parry,Fen,Portobello,F50,1:01:59
+89,Middler,Lessel,Unattached,M60,1:02:37
+90,Runner,Unknown,Unattached,F50,1:02:58
+91,Downie,Chris,Penicuik Harriers,M50,1:03:08
+92,McCarthy,Kevin,Unattached,M50,1:04:44
+93,Guy,Craig,Unattached,M,1:04:46
+94,Atkinson,Jennifer,Unattached,F,1:05:10
+95,Evans,Caroline,Unattached,F,1:05:14
+96,Mallett,Patrick,Lomond Hill Runners,M50,1:07:38
+97,Grant,Andy,Unattached,M60,1:10:21
+98,Gornall,Laura,Unattached,F,1:10:49
+99,Malcolm,Carrie,Unattached,F,1:13:40
+100,Reddington,Audrey,Portobello,F40,1:16:07
+101,Bell,Nancy,Unattached,F40,1:31:15
+102,Lochhead,Jo,HELP,F50,1:31:15
+103,Russell,Joann,Unattached,F40,1:31:16
+104,Horn,Rosetta,Unattached,F40,1:31:17
+105,Devon,Rebecca,Unattached,F40,1:31:18
+106,Overmeer,Fenneke,Unattached,F40,1:31:18

@@ -1,0 +1,114 @@
+RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
+1,Strain,Murray,HBT,M,0:21:55
+2,Simpson,Robert,Shettleston Harriers,M,0:22:25
+3,Martyn,Tom,HBT,M,0:22:33
+4,Yells,John,Lochaber AC,M,0:22:53
+5,Whitlie,Stewart,Carnethy,M50,0:23:13
+6,Connaghan,John,Shettleston Harriers,M40,0:23:19
+7,McAlinden,Niall,Westerlands,M,0:23:30
+8,Thin,Jamie,HBT,M50,0:23:31
+9,MacLeod,Richard,Lochaber AC,M,0:23:35
+10,Reid,Michael,Carnethy,M40,0:23:52
+11,Fairgrieve,Ewan,Annan & District AC,MJ,0:24:02
+12,Mackie,Peter,Shettleston Harriers,M40,0:24:08
+13,Houston,David,Shettleston Harriers,M,0:24:21
+14,Crowe,Des,Penicuik Harriers,M50,0:24:22
+15,Breckenridge,Bill,Shettleston Harriers,M50,0:24:28
+16,Lennox,Moray,Unattached,M,0:24:38
+17,Davis,Adrian,Lomond Hill Runners,M50,0:24:39
+18,Provan,Stephanie,Deeside Runners,F,0:24:40
+19,Grant,Miranda,HBT,F,0:24:43
+20,Freshwater,Craig,HBT,M,0:24:56
+21,Luetchford,Alex,HBT,M,0:24:59
+22,Winter,Stephen,Shettleston Harriers,M40,0:25:07
+23,Mitchell,John,Cosmics,M,0:25:41
+24,Worsley,Steven,Inverness Harriers,M50,0:25:45
+25,Malcolm,John,Carnethy,M,0:25:49
+26,Tindley,Georgia,HBT,F,0:26:03
+27,Anderson,Adam,Hartfell HRC,M40,0:26:08
+28,Kerr,Michael,Hartfell HRC,MJ,0:26:11
+29,Stephen,Jill,HBT,F,0:26:13
+30,Robertson,Shona,Shettleston Harriers,F40,0:26:19
+31,Cunningham,Roddy,Westerlands,M,0:26:21
+32,Henderson,Walter,Shettleston Harriers,M40,0:26:34
+33,Martin,Calum,Carnethy,M,0:26:58
+34,Reid,Don,Westerlands,M50,0:27:04
+35,McDonald,Fiona,Cosmics,F40,0:27:05
+36,Plummer,Kevin,Hartfell HRC,M50,0:27:19
+37,Gilmore,Neil,Carnethy,M50,0:27:27
+38,Patience,Andrew,Carnethy,M50,0:27:29
+39,McCloskey,Terry,Dumfries RC,M,0:27:30
+40,McLure,Neil,Carnegie Harriers,M50,0:27:32
+41,Marshall,Brian,HELP,M40,0:27:42
+42,Watson,Dan,Lochtayside,M40,0:27:46
+43,Titmuss,Simon,Carnethy,M40,0:27:49
+44,Murphy,Lee,Carnethy,M40,0:28:11
+45,Zakrzewski,Joanna,Dumfries RC,F40,0:28:13
+46,McCheyne,Cliona,Inverclyde AC,FJ,0:28:30
+47,O`Neill,Owen,Westerlands,M,0:29:00
+48,Shaw,Trevor,Lochtayside,M50,0:29:03
+49,McCallum,Alasdair,Norham RC,M50,0:29:04
+50,Foley,Darren,Hartfell HRC,M40,0:29:12
+51,Kammer,Philip,Cosmics,M60,0:29:25
+52,Pugh,Roderick,Kilmarnock Harriers,M60,0:29:34
+53,McKiddie,Christopher,Westerlands,M,0:29:37
+54,Dickie,Adam,Dumfries RC,M,0:29:38
+55,Davie,Kevin,Carnegie Harriers,M,0:30:31
+56,McCaffrey,Gordon,Westerlands,M60,0:30:35
+57,Hindle,Alistair,HBT,M40,0:30:36
+58,Donnelly,John,Westerlands,M50,0:30:44
+59,Maass,Digby,Carnethy,M60,0:30:49
+60,Whitelaw,Mark,Hartfell HRC,M40,0:30:55
+61,Cameron,Gordon,Carnethy,M50,0:30:55
+62,Tinning,Chris,Carnethy,M40,0:31:04
+63,Simpson,Heather,Westerlands,F,0:31:05
+64,Devey,Suzy,Lochaber AC,F,0:31:10
+65,Fleming,Rod,Westerlands,M,0:31:14
+66,Milligan,Douglas,Solway,M70,0:31:16
+67,Munro,Nick,Annan & District AC,M,0:31:20
+68,Flores,Leyre,Westerlands,F,0:31:27
+69,Fairgrieve,Andy,Annan & District AC,M50,0:31:35
+70,McCheyne,Neil,Unattached,M50,0:31:54
+71,Ritchie,Hilary,Fife AC,F50,0:32:00
+72,White,David,Helm Hill Runners,M40,0:32:10
+73,Allen,Rosie,Hartfell HRC,F40,0:32:13
+74,Leiper,Victoria,Shettleston Harriers,F,0:32:37
+75,Johnston,Stephen,Milburn Harriers,M50,0:32:40
+76,MacLeod,Murdo,Westerlands,M60,0:32:42
+77,Aubrey,Kathleen,Helm Hill Runners,F50,0:32:54
+78,Waterhouse,Bob,Carnethy,M60,0:32:57
+79,Menhennet,Christine,Westerlands,F60,0:33:09
+80,Entwistle,Marie,Deeside Runners,F40,0:33:14
+81,Dahl,Jessie,Carnethy,F,0:33:22
+82,Weir,Jonathan,Unattached,M40,0:33:49
+83,Duncan,David,Ochil Hill Runners,M60,0:33:50
+84,Scott,Jocelyn,Fife AC,F60,0:33:56
+85,Bouchier,Shane,Carnethy,M40,0:34:32
+86,Mitchell,Chris,Unattached,M60,0:34:38
+87,Brennan,Brian,Westerlands,M60,0:34:43
+88,Breckenridge,Myrtle,Shettleston Harriers,F,0:34:48
+89,Baxter,Alan,Dumfries RC,M40,0:35:24
+90,Thin,Joanne,Carnethy,F50,0:35:47
+91,Jeffrey,Sue,Dumfries RC,F,0:36:08
+92,Martin,Clare,Deeside Runners,F50,0:36:10
+93,Hamer,John,Westerlands,M50,0:36:34
+94,Beedie,Iain,Lomond Hill Runners,M40,0:37:09
+95,Killean,Liz,Fife AC,F50,0:37:43
+96,Murdoch,Ray,Lochaber AC,M60,0:37:55
+97,Fordyce,Kenneth,Carnethy,M40,0:38:03
+98,Spalding,Douglas,Unattached,M50,0:38:09
+99,Breckenridge,Susan,Shettleston Harriers,F50,0:38:11
+100,McPherson,Hugh,Tinto Hill Runners,M70,0:38:18
+101,Gatehouse,Richard,Lomond Hill Runners,M60,0:38:23
+102,Waldie,James,HBT,M,0:39:47
+103,Carter,Joanna,HBT,F,0:40:05
+104,Smith,Janice,HBT,F60,0:40:19
+105,Robson,John,Annan & District AC,M60,0:40:34
+106,Robson,Jean,Annan & District AC,F60,0:42:02
+107,Pringle,Christopher,Unattached,M,0:42:09
+108,Pringle,Andrew,Unattached,M50,0:42:51
+109,Patterson,Kenny,Unattached,M70,0:43:29
+110,Cameron,Linda,Annan & District AC,F50,0:43:42
+111,King,Sarah,Unattached,F,0:43:45
+112,Francis,David,Fife AC,M60,0:43:53
+113,King,Shelagh,Gala Harriers,F60,0:44:29
