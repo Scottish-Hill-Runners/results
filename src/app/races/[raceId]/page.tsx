@@ -1,35 +1,12 @@
 import RaceResultsDataTable from '@/components/RaceResultsDataTable';
-import { DataRow, RaceInfo } from '@/types/datatable';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { loadRaceInfos, loadRaceResults } from '@/lib/results-data';
+import type { DataRow, RaceInfo } from '@/types/datatable';
 
-async function fetchRaceInfos(): Promise<RaceInfo[]> {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
-  const response = await fetch(`${baseUrl}/api/races`, {
-    next: { revalidate: 3600 },
-  });
-
-  if (!response.ok) {
-    throw new Error(`Failed to fetch races list: ${response.statusText}`);
-  }
-
-  return (await response.json()) as RaceInfo[];
-}
-
-async function loadRaceResults(raceId: string): Promise<DataRow[]> {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
-  const response = await fetch(`${baseUrl}/api/race-results?race=${encodeURIComponent(raceId)}`, {
-    next: { revalidate: 3600 },
-  });
-
-  if (!response.ok) {
-    if (response.status === 404) {
-      notFound();
-    }
-    throw new Error(`Failed to fetch race results: ${response.statusText}`);
-  }
-
-  return (await response.json()) as DataRow[];
+export async function generateStaticParams() {
+  const raceInfos = await loadRaceInfos().catch(() => [] as RaceInfo[]);
+  return raceInfos.map((race) => ({ raceId: race.raceId }));
 }
 
 export default async function RacePage({ params }: { params: Promise<{ raceId: string }> }) {
@@ -39,7 +16,7 @@ export default async function RacePage({ params }: { params: Promise<{ raceId: s
   let listError: string | null = null;
 
   try {
-    raceInfos = await fetchRaceInfos();
+    raceInfos = await loadRaceInfos();
   } catch (error) {
     console.error('Error fetching race list:', error);
     listError = 'Unable to load race list at the moment. Please try again later.';
@@ -75,6 +52,9 @@ export default async function RacePage({ params }: { params: Promise<{ raceId: s
   try {
     data = await loadRaceResults(raceId);
   } catch (error) {
+    if ((error as NodeJS.ErrnoException).code === 'ENOENT') {
+      notFound();
+    }
     console.error('Error loading race results for', raceId, error);
     resultsError = 'Failed to load results. Please try again later.';
     data = [];

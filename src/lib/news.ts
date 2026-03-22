@@ -1,3 +1,6 @@
+import { promises as fs } from 'node:fs';
+import path from 'node:path';
+
 export interface NewsItem {
   slug: string;
   title: string;
@@ -8,28 +11,39 @@ export interface NewsItem {
 
 let cachedNewsItems: NewsItem[] | null = null;
 
+async function readNewsItemsFromFile(): Promise<NewsItem[]> {
+  const filePath = path.join(process.cwd(), 'public', 'news.json');
+  const file = await fs.readFile(filePath, 'utf8');
+  const newsItems = JSON.parse(file) as NewsItem[];
+
+  if (!Array.isArray(newsItems)) {
+    throw new Error('news.json format is invalid');
+  }
+
+  return newsItems;
+}
+
+export async function getAllNewsItems(): Promise<NewsItem[]> {
+  try {
+    if (cachedNewsItems !== null) {
+      return cachedNewsItems;
+    }
+    const newsItems = await readNewsItemsFromFile();
+    cachedNewsItems = newsItems;
+    return newsItems;
+  } catch (error) {
+    console.warn('Could not load news data:', error);
+    return [];
+  }
+}
+
 export async function getRecentNewsItems(limit: number = 10): Promise<NewsItem[]> {
   try {
     if (cachedNewsItems !== null) {
       return cachedNewsItems.slice(0, limit);
     }
 
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
-    const response = await fetch(`${baseUrl}/news.json`, {
-      next: { revalidate: 3600 },
-    });
-
-    if (!response.ok) {
-      console.warn('Could not fetch prebuilt news.json', response.status);
-      return [];
-    }
-
-    const newsItems = (await response.json()) as NewsItem[];
-
-    if (!Array.isArray(newsItems)) {
-      console.warn('news.json format is invalid');
-      return [];
-    }
+    const newsItems = await readNewsItemsFromFile();
 
     cachedNewsItems = newsItems;
 

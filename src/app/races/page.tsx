@@ -1,27 +1,11 @@
 import Link from 'next/link';
-import { RaceInfo } from '@/types/datatable';
-
-async function fetchRaceInfos(): Promise<RaceInfo[]> {
-  try {
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
-    const response = await fetch(`${baseUrl}/api/races`, {
-      next: { revalidate: 3600 },
-    });
-
-    if (!response.ok) {
-      throw new Error(`Failed to fetch races list: ${response.statusText}`);
-    }
-
-    const races = (await response.json()) as RaceInfo[];
-    return races;
-  } catch (error) {
-    console.error('Failed to load races list:', error);
-    return [];
-  }
-}
+import { loadRaceInfos } from '@/lib/results-data';
 
 export default async function RaceListPage() {
-  const races = await fetchRaceInfos();
+  const races = await loadRaceInfos().catch((error) => {
+    console.error('Failed to load races list:', error);
+    return [];
+  });
 
   return (
     <main id="main-content" className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8">

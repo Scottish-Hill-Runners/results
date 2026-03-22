@@ -1,24 +1,5 @@
 import InfoAccordion from '@/app/info/info-accordion';
-
-interface InfoItem {
-  slug: string;
-  title: string;
-  content: string;
-}
-
-async function getInfoItems(): Promise<InfoItem[]> {
-  try {
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
-    const res = await fetch(`${baseUrl}/info.json`);
-    if (!res.ok) {
-      throw new Error('Failed to fetch info');
-    }
-    return res.json();
-  } catch (error) {
-    console.error('Error fetching info:', error);
-    return [];
-  }
-}
+import { getInfoItems } from '@/lib/info';
 
 export default async function InfoPage() {
   const infoItems = await getInfoItems();
