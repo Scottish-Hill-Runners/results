@@ -1,36 +1,91 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Race Results Build Process
 
-## Getting Started
+## Overview
 
-First, run the development server:
+The `build-race-results.js` script transforms raw race results from CSV files into compressed JSON format that the application uses.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Directory structure
+
+Place your raw race data in a `races/` folder at the project root:
+
+```text
+project-root/
+├── races/
+│   ├── ArrocharAlps/
+│   │   └── 2023.csv
+│   │   └── index.md
+│   ├── BeinnResipol/
+│   │   └── 2023.csv
+│   │   ├── 2024.csv
+│   │   └── index.md
+│   ├── TwoBreweries/
+│   │   └── 2022.csv
+│   │   ├── 2023.csv
+│   │   ├── 2024.csv
+│   │   └── index.md
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The pre-build step generates compressed JSON files.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+* Each race has a `.json.gz` file containing the extracted contents of `index.md` and all the results for the race.
+* A set of files `R-0` to `R-99` contain individual results, grouped by a hash of the runner surname.
+* A `years.json` file gives statistics of the number of runners in each category for each year.
+* `races.json` contains an entry for each race, with race details and organiser contact information.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```text
+├── public/
+│   └── results/
+│       └── ArrocharAlps.json.gz
+│       ├── BeinnResipol.json.gz
+│       ├── TwoBreweries.json.gz
+│       └── R-0.json.gz
+│       └── R-1.json.gz
+│       └── years.json.gz
+│       └── races.json.gz
+└── ... other project files
+```
 
-## Learn More
+## CSV format
 
-To learn more about Next.js, take a look at the following resources:
+Each CSV file should contain race results with the following columns:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```csv
+RunnerPosition,Surname,Firstname,Club,RunnerCategory,FinishTime
+1,John,Smith,City Athletic,M,23:45
+2,Mary,Johnson,Town Runners,F40,26:12
+...
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**Important:**
 
-## Deploy on Vercel
+* The CSV filename (without `.csv` extension) is used as the **year** field
+* Required: Include a header row
+* Columns: `RunnerPosition`, `Surname`, `Firstname`, `RunnerCategory`, `FinishTime`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Build process
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Automatic (recommended)
+
+The script runs automatically before each build:
+
+```bash
+npm run build
+```
+
+This executes the `prebuild` script which:
+
+1. Reads all race folders in `results/`
+2. For each race folder, processes all `.csv` files
+3. Extracts the year from each filename
+4. Parses the CSV data
+5. Creates a JSON object with year field added
+6. Compresses to `.json.gz` format
+7. Outputs to `public/results/<race-name>.json.gz`
+
+### Manual run
+
+You can also run the script manually:
+
+```bash
+tsx scripts/build-race-results.ts
+```

@@ -118,7 +118,7 @@ export default function RaceResultsDataTable({ data }: DataTableProps) {
     // Apply all filters EXCEPT category
     result = result.filter((row) => {
       return (
-        (filters.year === '' || row.year.toString().includes(filters.year)) &&
+        (filters.year === '' || row.year.includes(filters.year)) &&
         (filters.name === '' || row.name.toLowerCase().includes(filters.name.toLowerCase())) &&
         (filters.club === '' || row.club.toLowerCase().includes(filters.club.toLowerCase()))
       );
@@ -131,21 +131,21 @@ export default function RaceResultsDataTable({ data }: DataTableProps) {
 
   // Get unique years from data, sorted in ascending order
   const availableYears = useMemo(() => {
-    const uniqueYears = Array.from(new Set(data.map((row) => row.year))).sort((a, b) => b - a);
+    const uniqueYears = Array.from(new Set(data.map((row) => row.year))).sort((a, b) => b.localeCompare(a));
     return uniqueYears;
   }, [data]);
 
   return (
     <div className="space-y-4">
       {/* Filter Controls */}
-      <div className="bg-white shadow-md rounded-lg p-4">
+      <div className="rounded-lg bg-white p-4 shadow-md dark:bg-slate-900">
         <div className="flex flex-col gap-4">
           <div className="flex items-center justify-between mb-2">
-            <h3 className="text-sm font-semibold text-gray-700">Filters</h3>
+            <h3 className="text-sm font-semibold text-gray-700 dark:text-slate-200">Filters</h3>
             {(filters.year || filters.name || filters.club || filters.category || sortColumn) && (
               <button
                 onClick={clearFilters}
-                className="text-xs px-3 py-1 bg-red-100 text-red-700 rounded hover:bg-red-200 transition-colors"
+                className="rounded bg-red-100 px-3 py-1 text-xs text-red-700 transition-colors hover:bg-red-200 dark:bg-red-950/60 dark:text-red-300 dark:hover:bg-red-950"
               >
                 Clear All
               </button>
@@ -155,7 +155,7 @@ export default function RaceResultsDataTable({ data }: DataTableProps) {
             <select
               value={filters.year}
               onChange={(e) => handleFilterChange('year', e.target.value)}
-              className="px-3 py-2 border border-gray-300 rounded text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+              className="rounded border border-gray-300 bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-100"
             >
               <option value="">All Years</option>
               {availableYears.map((year) => (
@@ -169,19 +169,19 @@ export default function RaceResultsDataTable({ data }: DataTableProps) {
               placeholder="Filter by Name..."
               value={filters.name}
               onChange={(e) => handleFilterChange('name', e.target.value)}
-              className="px-3 py-2 border border-gray-300 rounded text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="rounded border border-gray-300 bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-100"
             />
             <input
               type="text"
               placeholder="Filter by Club..."
               value={filters.club}
               onChange={(e) => handleFilterChange('club', e.target.value)}
-              className="px-3 py-2 border border-gray-300 rounded text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="rounded border border-gray-300 bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-100"
             />
             <select
               value={filters.category}
               onChange={(e) => handleFilterChange('category', e.target.value)}
-              className="px-3 py-2 border border-gray-300 rounded text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+              className="rounded border border-gray-300 bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-100"
             >
               <option value="">All Categories</option>
               {availableCategories.map((category) => (
@@ -198,42 +198,42 @@ export default function RaceResultsDataTable({ data }: DataTableProps) {
       <div className="shadow-md rounded-lg overflow-hidden">
         <div className="overflow-x-auto">
           <div className="max-h-screen overflow-y-auto">
-            <table className="w-full border-collapse bg-white">
+            <table className="w-full border-collapse bg-white dark:bg-slate-900">
               <thead>
-                <tr className="bg-gray-100 border-b-2 border-gray-300 sticky top-0">
+                <tr className="sticky top-0 border-b-2 border-gray-300 bg-gray-100 dark:border-slate-700 dark:bg-slate-800">
                   <th
                     onClick={() => handleSort('year')}
-                    className="px-6 py-3 text-left text-sm font-semibold text-gray-700 cursor-pointer hover:bg-gray-200 transition-colors"
+                    className="cursor-pointer px-6 py-3 text-left text-sm font-semibold text-gray-700 transition-colors hover:bg-gray-200 dark:text-slate-200 dark:hover:bg-slate-700"
                   >
                     Year {getSortIndicator(sortColumn === 'year' ? 'year' : null)}
                   </th>
                   <th
                     onClick={() => handleSort('position')}
-                    className="px-6 py-3 text-left text-sm font-semibold text-gray-700 cursor-pointer hover:bg-gray-200 transition-colors"
+                    className="cursor-pointer px-6 py-3 text-left text-sm font-semibold text-gray-700 transition-colors hover:bg-gray-200 dark:text-slate-200 dark:hover:bg-slate-700"
                   >
                     {filters.category === '' ? '' : "Category "}Position {getSortIndicator(sortColumn === 'position' ? 'position' : null)}
                   </th>
                   <th
                     onClick={() => handleSort('name')}
-                    className="px-6 py-3 text-left text-sm font-semibold text-gray-700 cursor-pointer hover:bg-gray-200 transition-colors"
+                    className="cursor-pointer px-6 py-3 text-left text-sm font-semibold text-gray-700 transition-colors hover:bg-gray-200 dark:text-slate-200 dark:hover:bg-slate-700"
                   >
                     Name {getSortIndicator(sortColumn === 'name' ? 'name' : null)}
                   </th>
                   <th
                     onClick={() => handleSort('club')}
-                    className="px-6 py-3 text-left text-sm font-semibold text-gray-700 cursor-pointer hover:bg-gray-200 transition-colors"
+                    className="cursor-pointer px-6 py-3 text-left text-sm font-semibold text-gray-700 transition-colors hover:bg-gray-200 dark:text-slate-200 dark:hover:bg-slate-700"
                   >
                     Club {getSortIndicator(sortColumn === 'club' ? 'club' : null)}
                   </th>
                   <th
                     onClick={() => handleSort('category')}
-                    className="px-6 py-3 text-left text-sm font-semibold text-gray-700 cursor-pointer hover:bg-gray-200 transition-colors"
+                    className="cursor-pointer px-6 py-3 text-left text-sm font-semibold text-gray-700 transition-colors hover:bg-gray-200 dark:text-slate-200 dark:hover:bg-slate-700"
                   >
                     Category {getSortIndicator(sortColumn === 'category' ? 'category' : null)}
                   </th>
                   <th
                     onClick={() => handleSort('time')}
-                    className="px-6 py-3 text-left text-sm font-semibold text-gray-700 cursor-pointer hover:bg-gray-200 transition-colors"
+                    className="cursor-pointer px-6 py-3 text-left text-sm font-semibold text-gray-700 transition-colors hover:bg-gray-200 dark:text-slate-200 dark:hover:bg-slate-700"
                   >
                     Time {getSortIndicator(sortColumn === 'time' ? 'time' : null)}
                   </th>
@@ -244,21 +244,21 @@ export default function RaceResultsDataTable({ data }: DataTableProps) {
                   processedData.map((row, index) => (
                     <tr
                       key={index}
-                      className={`border-b border-gray-200 ${
-                        index % 2 === 0 ? 'bg-white' : 'bg-gray-50'
-                      } hover:bg-blue-50 transition-colors`}
+                      className={`border-b border-gray-200 transition-colors hover:bg-blue-50 dark:border-slate-800 dark:hover:bg-slate-800 ${
+                        index % 2 === 0 ? 'bg-white dark:bg-slate-900' : 'bg-gray-50 dark:bg-slate-950'
+                      }`}
                     >
-                      <td className="px-6 py-4 text-sm text-gray-800">{row.year}</td>
-                      <td className="px-6 py-4 text-sm font-semibold text-gray-800">{filters.category === '' ? row.position : row.categoryPos[filters.category]}</td>
-                      <td className="px-6 py-4 text-sm text-gray-800">{row.name}</td>
-                      <td className="px-6 py-4 text-sm text-gray-800">{row.club}</td>
-                      <td className="px-6 py-4 text-sm text-gray-800">{row.category}</td>
-                      <td className="px-6 py-4 text-sm font-mono text-gray-800">{row.time}</td>
+                      <td className="px-6 py-4 text-sm text-gray-800 dark:text-slate-200">{row.year}</td>
+                      <td className="px-6 py-4 text-sm font-semibold text-gray-800 dark:text-slate-200">{filters.category === '' ? row.position : row.categoryPos[filters.category]}</td>
+                      <td className="px-6 py-4 text-sm text-gray-800 dark:text-slate-200">{row.name}</td>
+                      <td className="px-6 py-4 text-sm text-gray-800 dark:text-slate-200">{row.club}</td>
+                      <td className="px-6 py-4 text-sm text-gray-800 dark:text-slate-200">{row.category}</td>
+                      <td className="px-6 py-4 font-mono text-sm text-gray-800 dark:text-slate-200">{row.time}</td>
                     </tr>
                   ))
                 ) : (
                   <tr>
-                    <td colSpan={6} className="px-6 py-4 text-center text-sm text-gray-500">
+                    <td colSpan={6} className="px-6 py-4 text-center text-sm text-gray-500 dark:text-slate-400">
                       No results match your filters
                     </td>
                   </tr>
@@ -270,7 +270,7 @@ export default function RaceResultsDataTable({ data }: DataTableProps) {
       </div>
 
         {/* Results Info */}
-        <div className="text-sm text-gray-600">
+        <div className="text-sm text-gray-600 dark:text-slate-300">
           Showing {processedData.length} of {data.length} results
         </div>
       </div>

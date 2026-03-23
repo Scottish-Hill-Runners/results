@@ -26,37 +26,37 @@ const shiftedHeadingComponents: Components = {
   h1: ({ className, ...props }) => (
     <h3
       {...props}
-      className={mergeClasses('mt-8 mb-4 text-3xl font-semibold text-slate-900', className)}
+      className={mergeClasses('mt-8 mb-4 text-3xl font-semibold text-slate-900 dark:text-slate-50', className)}
     />
   ),
   h2: ({ className, ...props }) => (
     <h4
       {...props}
-      className={mergeClasses('mt-7 mb-3 text-2xl font-semibold text-slate-900', className)}
+      className={mergeClasses('mt-7 mb-3 text-2xl font-semibold text-slate-900 dark:text-slate-50', className)}
     />
   ),
   h3: ({ className, ...props }) => (
     <h5
       {...props}
-      className={mergeClasses('mt-6 mb-3 text-xl font-semibold text-slate-900', className)}
+      className={mergeClasses('mt-6 mb-3 text-xl font-semibold text-slate-900 dark:text-slate-50', className)}
     />
   ),
   h4: ({ className, ...props }) => (
     <h6
       {...props}
-      className={mergeClasses('mt-5 mb-2 text-lg font-semibold text-slate-900', className)}
+      className={mergeClasses('mt-5 mb-2 text-lg font-semibold text-slate-900 dark:text-slate-50', className)}
     />
   ),
   h5: ({ className, ...props }) => (
     <h6
       {...props}
-      className={mergeClasses('mt-4 mb-2 text-base font-semibold text-slate-900', className)}
+      className={mergeClasses('mt-4 mb-2 text-base font-semibold text-slate-900 dark:text-slate-50', className)}
     />
   ),
   h6: ({ className, ...props }) => (
     <p
       {...props}
-      className={mergeClasses('mt-4 mb-2 text-sm font-semibold uppercase tracking-wide text-slate-700', className)}
+      className={mergeClasses('mt-4 mb-2 text-sm font-semibold uppercase tracking-wide text-slate-700 dark:text-slate-300', className)}
     />
   ),
 };
@@ -72,12 +72,12 @@ export default function InfoAccordion({ items }: InfoAccordionProps) {
         const panelId = `info-accordion-panel-${item.slug}`;
 
         return (
-          <section key={item.slug} className="overflow-hidden rounded-xl border border-slate-200 bg-white">
+          <section key={item.slug} className="overflow-hidden rounded-xl border border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900">
             <h2>
               <button
                 id={buttonId}
                 type="button"
-                className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left text-xl font-semibold text-slate-900 transition hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400"
+                className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left text-xl font-semibold text-slate-900 transition hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400 dark:text-slate-50 dark:hover:bg-slate-800 dark:focus-visible:ring-slate-500"
                 aria-expanded={isOpen}
                 aria-controls={panelId}
                 onClick={() => setActiveSlug((current) => (current === item.slug ? null : item.slug))}
@@ -86,8 +86,8 @@ export default function InfoAccordion({ items }: InfoAccordionProps) {
                 <span
                   className={
                     isOpen
-                      ? 'relative block h-4 w-4 text-slate-500 transition-transform duration-300 ease-out rotate-180 motion-reduce:transition-none'
-                      : 'relative block h-4 w-4 text-slate-500 transition-transform duration-300 ease-out rotate-0 motion-reduce:transition-none'
+                      ? 'relative block h-4 w-4 text-slate-500 transition-transform duration-300 ease-out rotate-180 motion-reduce:transition-none dark:text-slate-400'
+                      : 'relative block h-4 w-4 text-slate-500 transition-transform duration-300 ease-out rotate-0 motion-reduce:transition-none dark:text-slate-400'
                   }
                   aria-hidden="true"
                 >
@@ -114,7 +114,7 @@ export default function InfoAccordion({ items }: InfoAccordionProps) {
               }
             >
               <div className="overflow-hidden px-5 pb-5">
-                <div className="prose prose-slate max-w-none prose-headings:text-slate-900 prose-headings:font-semibold prose-li:marker:text-slate-500">
+                <div className="prose prose-slate max-w-none prose-headings:font-semibold prose-li:marker:text-slate-500 dark:prose-invert dark:prose-headings:text-slate-50 dark:prose-li:marker:text-slate-400">
                   <ReactMarkdown components={shiftedHeadingComponents}>
                     {normalizeMarkdown(item.content)}
                   </ReactMarkdown>

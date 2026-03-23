@@ -51,7 +51,7 @@ export default function NewsFilter({ items }: NewsFilterProps) {
     <div className="w-full space-y-6">
       <div className="flex flex-col gap-4">
         <div className="flex flex-col gap-1">
-          <label htmlFor="news-search" className="text-sm font-medium text-gray-700">
+          <label htmlFor="news-search" className="text-sm font-medium text-gray-700 dark:text-slate-300">
             Search
           </label>
           <input
@@ -60,14 +60,14 @@ export default function NewsFilter({ items }: NewsFilterProps) {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Search title, excerpt or content…"
-            className="w-full rounded-md border border-gray-300 px-3 py-1.5 text-sm text-gray-900 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+            className="w-full rounded-md border border-gray-300 bg-white px-3 py-1.5 text-sm text-gray-900 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100"
           />
         </div>
 
         <fieldset className="flex flex-wrap items-end gap-4">
           <legend className="sr-only">Date range</legend>
           <div className="flex flex-col gap-1">
-            <label htmlFor="news-from" className="text-sm font-medium text-gray-700">
+            <label htmlFor="news-from" className="text-sm font-medium text-gray-700 dark:text-slate-300">
               From
             </label>
             <input
@@ -76,11 +76,11 @@ export default function NewsFilter({ items }: NewsFilterProps) {
               value={from}
               max={to || undefined}
               onChange={(e) => setFrom(e.target.value)}
-              className="rounded-md border border-gray-300 px-3 py-1.5 text-sm text-gray-900 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+              className="rounded-md border border-gray-300 bg-white px-3 py-1.5 text-sm text-gray-900 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100"
             />
           </div>
           <div className="flex flex-col gap-1">
-            <label htmlFor="news-to" className="text-sm font-medium text-gray-700">
+            <label htmlFor="news-to" className="text-sm font-medium text-gray-700 dark:text-slate-300">
               To
             </label>
             <input
@@ -89,17 +89,17 @@ export default function NewsFilter({ items }: NewsFilterProps) {
               value={to}
               min={from || undefined}
               onChange={(e) => setTo(e.target.value)}
-              className="rounded-md border border-gray-300 px-3 py-1.5 text-sm text-gray-900 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+              className="rounded-md border border-gray-300 bg-white px-3 py-1.5 text-sm text-gray-900 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100"
             />
           </div>
           <button
             type="button"
             onClick={reset}
-            className="rounded-md border border-gray-300 px-3 py-1.5 text-sm text-gray-600 hover:bg-gray-50 focus:outline-none focus:ring-1 focus:ring-blue-500"
+            className="rounded-md border border-gray-300 px-3 py-1.5 text-sm text-gray-600 hover:bg-gray-50 focus:outline-none focus:ring-1 focus:ring-blue-500 dark:border-slate-700 dark:text-slate-300 dark:hover:bg-slate-800"
           >
             Reset
           </button>
-          <p className="text-sm text-gray-500 self-end pb-1.5">
+          <p className="self-end pb-1.5 text-sm text-gray-500 dark:text-slate-400">
             {filtered.length} {filtered.length === 1 ? 'item' : 'items'}
           </p>
         </fieldset>

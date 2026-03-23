@@ -5,7 +5,7 @@ import Link from 'next/link';
 import type { RaceInfo } from '@/types/datatable';
 
 interface RaceListFilterProps {
-  races: RaceInfo[];
+  races: Array<RaceInfo & { raceId: string }>;
 }
 
 export default function RaceListFilter({ races }: RaceListFilterProps) {
@@ -33,22 +33,22 @@ export default function RaceListFilter({ races }: RaceListFilterProps) {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Search by name or venue…"
-          className="w-full rounded-md border border-gray-300 px-3 py-2 text-sm text-gray-900 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+          className="w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100"
         />
       </div>
 
       {filtered.length === 0 ? (
-        <p className="py-6 text-center text-sm text-gray-500">No races match your search.</p>
+        <p className="py-6 text-center text-sm text-gray-500 dark:text-slate-400">No races match your search.</p>
       ) : (
         <ul className="space-y-2">
           {filtered.map((race) => (
             <li key={race.raceId}>
               <Link
                 href={`/races/${encodeURIComponent(race.raceId)}`}
-                className="block px-4 py-3 bg-white border border-gray-200 rounded-lg text-blue-600 hover:bg-gray-50"
+                className="block rounded-lg border border-gray-200 bg-white px-4 py-3 text-blue-600 hover:bg-gray-50 dark:border-slate-800 dark:bg-slate-900 dark:hover:bg-slate-800"
               >
-                <div className="font-semibold">{race.title}</div>
-                <div className="text-sm text-gray-600">{race.venue} • {race.distance}km</div>
+                <div className="font-semibold dark:text-slate-100">{race.title}</div>
+                <div className="text-sm text-gray-600 dark:text-slate-300">{race.venue} • {race.distance}km</div>
               </Link>
             </li>
           ))}

@@ -8,6 +8,7 @@
     "build-info": "tsx scripts/build-info.ts",
     "dev": "next dev",
     "build": "next build",
+    "deploy": "next build && npx surge --project ./out --domain shr-next.surge.sh",
     "start": "next start",
     "lint": "eslint",
     "format": "prettier --write .",

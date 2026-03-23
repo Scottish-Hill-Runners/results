@@ -1,0 +1,130 @@
+'use client';
+
+import { useState } from 'react';
+import ReactMarkdown from 'react-markdown';
+import RaceResultsDataTable from '@/components/RaceResultsDataTable';
+import type { RaceInfo, RaceResult } from '@/types/datatable';
+
+interface RaceDetailsTabsProps {
+  raceId: string;
+  race: RaceInfo;
+  contents: string;
+  hasGpx: boolean;
+  results: RaceResult[];
+  resultsError: string | null;
+}
+
+type TabKey = 'results' | 'info' | 'gpx';
+
+export default function RaceDetailsTabs({ raceId, race, contents, hasGpx, results, resultsError }: RaceDetailsTabsProps) {
+  const [activeTab, setActiveTab] = useState<TabKey>('results');
+  const tabs: Array<{ key: TabKey; label: string }> = hasGpx
+    ? [
+        { key: 'results', label: 'Results' },
+        { key: 'info', label: 'Race info' },
+        { key: 'gpx', label: 'GPX' },
+      ]
+    : [
+        { key: 'results', label: 'Results' },
+        { key: 'info', label: 'Race info' },
+      ];
+
+  return (
+    <section className="mb-6 rounded-lg border border-gray-200 bg-white shadow-md dark:border-slate-800 dark:bg-slate-900">
+      <div role="tablist" aria-label="Race details tabs" className="flex flex-wrap gap-2 border-b border-gray-200 p-3 dark:border-slate-800">
+        {tabs.map((tab) => {
+          const isActive = activeTab === tab.key;
+          return (
+            <button
+              key={tab.key}
+              type="button"
+              role="tab"
+              aria-selected={isActive}
+              aria-controls={`race-tab-panel-${tab.key}`}
+              id={`race-tab-${tab.key}`}
+              onClick={() => setActiveTab(tab.key)}
+              className={`rounded-md px-3 py-1.5 text-sm font-medium transition-colors ${
+                isActive ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700'
+              }`}
+            >
+              {tab.label}
+            </button>
+          );
+        })}
+      </div>
+
+      <div className="p-4 sm:p-6">
+        {activeTab === 'results' && (
+          <div role="tabpanel" id="race-tab-panel-results" aria-labelledby="race-tab-results">
+            {resultsError ? (
+              <div className="rounded-lg border border-red-200 bg-red-50 p-4 text-center dark:border-red-900 dark:bg-red-950/40">
+                <p className="mb-2 font-semibold text-red-700">{resultsError}</p>
+                <p className="text-sm text-red-600">Try again in a few minutes or choose another race.</p>
+              </div>
+            ) : results.length > 0 ? (
+              <RaceResultsDataTable data={results} />
+            ) : (
+              <p className="text-sm text-gray-600 dark:text-slate-300">No results available for {race.title}.</p>
+            )}
+          </div>
+        )}
+
+        {activeTab === 'info' && (
+          <div
+            role="tabpanel"
+            id="race-tab-panel-info"
+            aria-labelledby="race-tab-info"
+            className="space-y-6"
+          >
+            <div className="grid grid-cols-1 gap-2 text-sm text-gray-700 dark:text-slate-300 sm:grid-cols-2">
+              <p><span className="font-semibold text-gray-900 dark:text-slate-100">Venue:</span> {race.venue}</p>
+              <p><span className="font-semibold text-gray-900 dark:text-slate-100">Distance:</span> {race.distance} km</p>
+              {typeof race.climb === 'number' && (
+                <p><span className="font-semibold text-gray-900 dark:text-slate-100">Climb:</span> {race.climb} m</p>
+              )}
+              {race.maleRecord && (
+                <p><span className="font-semibold text-gray-900 dark:text-slate-100">Male record:</span> {race.maleRecord}</p>
+              )}
+              {race.femaleRecord && (
+                <p><span className="font-semibold text-gray-900 dark:text-slate-100">Female record:</span> {race.femaleRecord}</p>
+              )}
+              {race.nonBinaryRecord && (
+                <p><span className="font-semibold text-gray-900 dark:text-slate-100">Non-binary record:</span> {race.nonBinaryRecord}</p>
+              )}
+              {race.web && (
+                <p className="sm:col-span-2">
+                  <span className="font-semibold text-gray-900 dark:text-slate-100">Website:</span>{' '}
+                  <a href={race.web} target="_blank" rel="noreferrer" className="text-blue-600 hover:text-blue-800 hover:underline">
+                    {race.web}
+                  </a>
+                </p>
+              )}
+            </div>
+
+            <div>
+              {contents.trim() ? (
+                <div className="prose prose-slate max-w-none prose-headings:text-gray-900 dark:prose-invert dark:prose-headings:text-slate-100">
+                  <ReactMarkdown>{contents}</ReactMarkdown>
+                </div>
+              ) : (
+                <p className="text-sm text-gray-600 dark:text-slate-300">No additional content available for this race.</p>
+              )}
+            </div>
+          </div>
+        )}
+
+        {activeTab === 'gpx' && hasGpx && (
+          <div role="tabpanel" id="race-tab-panel-gpx" aria-labelledby="race-tab-gpx" className="space-y-3">
+            <p className="text-sm text-gray-700 dark:text-slate-300">A GPX route file is available for this race.</p>
+            <a
+              href={`/results/${encodeURIComponent(raceId)}.gpx`}
+              className="inline-block rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-700"
+            >
+              Download GPX
+            </a>
+          </div>
+        )}
+      </div>
+    </section>
+  );
+}

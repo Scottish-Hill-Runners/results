@@ -1,7 +1,7 @@
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
 import { gunzipSync } from 'node:zlib';
-import type { DataRow, RaceInfo } from '@/types/datatable';
+import type { AllRaceData, RaceData } from '@/types/datatable';
 
 function resultsPath(fileName: string): string {
   return path.join(process.cwd(), 'public', 'results', fileName);
@@ -13,16 +13,15 @@ async function readJsonGzip<T>(fileName: string): Promise<T> {
   return JSON.parse(decompressed) as T;
 }
 
-export async function loadRaceInfos(): Promise<RaceInfo[]> {
-  const races = await readJsonGzip<RaceInfo[]>('races.json.gz');
-  return races.sort((a, b) => a.title.localeCompare(b.title));
+export async function loadAllRaces(): Promise<AllRaceData> {
+  return await readJsonGzip<AllRaceData>('races.json.gz');
 }
 
-export async function loadRaceResults(raceId: string): Promise<DataRow[]> {
+export async function loadRaceResults(raceId: string): Promise<RaceData> {
   const safeRaceId = raceId.replace(/[^a-zA-Z0-9_-]/g, '');
   if (!safeRaceId) {
     throw new Error('Invalid race id');
   }
 
-  return readJsonGzip<DataRow[]>(`${safeRaceId}-results.json.gz`);
+  return readJsonGzip<RaceData>(`${safeRaceId}.json.gz`);
 }

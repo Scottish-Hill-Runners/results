@@ -25,36 +25,36 @@ export default function NewsList({ items }: NewsListProps) {
   return (
     <div className="w-full space-y-3">
       {items.length === 0 ? (
-        <p className="text-gray-500 text-center py-8">No news items available</p>
+        <p className="py-8 text-center text-gray-500 dark:text-slate-400">No news items available</p>
       ) : (
         items.map((item) => (
           <article
             key={item.slug}
-            className="bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow"
+            className="rounded-lg border border-gray-200 bg-white shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-900"
           >
             <button
               onClick={() => toggleExpand(item.slug)}
-              className="w-full text-left p-4 flex items-start justify-between hover:bg-gray-50 transition-colors"
+              className="flex w-full items-start justify-between p-4 text-left transition-colors hover:bg-gray-50 dark:hover:bg-slate-800"
               aria-expanded={expandedId === item.slug}
             >
               <div className="flex-1 min-w-0">
-                <time className="text-xs text-gray-500 uppercase tracking-wide">
+                <time className="text-xs uppercase tracking-wide text-gray-500 dark:text-slate-400">
                   {new Date(item.date).toLocaleDateString('en-US', {
                     year: 'numeric',
                     month: 'short',
                     day: 'numeric',
                   })}
                 </time>
-                <h3 className="text-lg font-semibold text-gray-900 mt-1 leading-tight">
+                <h3 className="mt-1 text-lg font-semibold leading-tight text-gray-900 dark:text-slate-50">
                   {item.title}
                 </h3>
-                <p className="text-sm text-gray-600 mt-2 line-clamp-2">
+                <p className="mt-2 line-clamp-2 text-sm text-gray-600 dark:text-slate-300">
                   {item.excerpt}
                 </p>
               </div>
               <div className="ml-4 flex-shrink-0 flex items-center">
                 <span
-                  className={`text-gray-400 text-xl transition-transform ${
+                  className={`text-xl text-gray-400 transition-transform dark:text-slate-500 ${
                     expandedId === item.slug ? 'rotate-180' : ''
                   }`}
                 >
@@ -64,8 +64,8 @@ export default function NewsList({ items }: NewsListProps) {
             </button>
 
             {expandedId === item.slug && (
-              <div className="px-4 pb-4 border-t border-gray-100 bg-gray-50">
-                <div className="prose prose-sm max-w-none text-gray-700 mt-4">
+              <div className="border-t border-gray-100 bg-gray-50 px-4 pb-4 dark:border-slate-800 dark:bg-slate-800/60">
+                <div className="prose prose-sm mt-4 max-w-none text-gray-700 dark:prose-invert dark:text-slate-200">
                   <ReactMarkdown>{item.content}</ReactMarkdown>
                 </div>
               </div>

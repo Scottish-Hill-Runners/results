@@ -1,5 +1,5 @@
 export interface RaceResult {
-  id: string;
+  raceId: string;
   year: string;
   position: number;
   name: string;
@@ -10,7 +10,6 @@ export interface RaceResult {
 }
 
 export interface RaceInfo {
-  raceId: string;
   title: string;
   venue: string;
   distance: number;
@@ -20,4 +19,15 @@ export interface RaceInfo {
   nonBinaryRecord?: string;
   web?: string;
   organiser?: number[];
+}
+
+export interface RaceData {
+  info: RaceInfo;
+  contents: string;
+  results: RaceResult[];
+  hasGpx: boolean;
+}
+
+export interface AllRaceData {
+  [raceId: string]: RaceInfo;
 }

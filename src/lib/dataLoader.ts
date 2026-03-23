@@ -1,11 +1,11 @@
-import { DataRow } from '@/types/datatable';
+import { RaceData } from '@/types/datatable';
 
 /**
  * Fetches and decompresses data from a gzipped JSON file
  * @param filePath - Path to the compressed JSON file (relative to public folder)
  * @returns Parsed data array
  */
-export async function fetchCompressedJsonData(filePath: string): Promise<DataRow[]> {
+export async function fetchCompressedJsonData(filePath: string): Promise<RaceData[]> {
   try {
     const url = new URL(filePath, typeof window === 'undefined' ? `http://localhost:3000` : window.location.origin);
     const response = await fetch(url.toString());
@@ -45,7 +45,7 @@ export async function fetchCompressedJsonData(filePath: string): Promise<DataRow
 
     const decompressedBuffer = await new Response(decompressedStream).arrayBuffer();
     const decompressedText = new TextDecoder().decode(decompressedBuffer);
-    const data = JSON.parse(decompressedText) as DataRow[];
+    const data = JSON.parse(decompressedText) as RaceData[];
 
     return data;
   } catch (error) {
@@ -59,7 +59,7 @@ export async function fetchCompressedJsonData(filePath: string): Promise<DataRow
  * @param filePath - Path to the JSON file (relative to public folder)
  * @returns Parsed data array
  */
-export async function fetchJsonData(filePath: string): Promise<DataRow[]> {
+export async function fetchJsonData(filePath: string): Promise<RaceData[]> {
   try {
     const url = new URL(filePath, typeof window === 'undefined' ? `http://localhost:3000` : window.location.origin);
     const response = await fetch(url.toString());
@@ -68,7 +68,7 @@ export async function fetchJsonData(filePath: string): Promise<DataRow[]> {
       throw new Error(`Failed to fetch data: ${response.statusText}`);
     }
 
-    const data = await response.json() as DataRow[];
+    const data = await response.json() as RaceData[];
     return data;
   } catch (error) {
     console.error('Error loading JSON data:', error);
