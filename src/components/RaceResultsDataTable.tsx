@@ -1,13 +1,13 @@
 'use client';
 
 import { useEffect, useState, useMemo } from 'react';
-import { DataRow } from '@/types/datatable';
+import { RaceResult } from '@/types/datatable';
 
 interface DataTableProps {
-  data: DataRow[];
+  data: RaceResult[];
 }
 
-type SortColumn = keyof DataRow | null;
+type SortColumn = keyof RaceResult | null;
 type SortDirection = 'asc' | 'desc';
 
 interface Filters {
@@ -42,7 +42,7 @@ export default function RaceResultsDataTable({ data }: DataTableProps) {
         (filters.year === '' || row.year.toString().includes(filters.year)) &&
         (filters.name === '' || row.name.toLowerCase().includes(filters.name.toLowerCase())) &&
         (filters.club === '' || row.club.toLowerCase().includes(filters.club.toLowerCase())) &&
-        (filters.category === '' || row.category == filters.category)
+        (filters.category === '' || (filters.category in row.categoryPos))
       );
     });
 
@@ -52,28 +52,32 @@ export default function RaceResultsDataTable({ data }: DataTableProps) {
 
       // Primary sort: by sortColumn (or year if no custom sort)
       const primaryCol = sortColumn || 'year';
-      const aVal = a[primaryCol];
-      const bVal = b[primaryCol];
+      let aVal = a[primaryCol];
+      let bVal = b[primaryCol];
 
       if (typeof aVal === 'string' && typeof bVal === 'string') {
+        if (primaryCol === 'time') {
+          if (a['year'].endsWith("*")) aVal = "x" + aVal;
+          if (b['year'].endsWith("*")) bVal = "x" + bVal;
+        }
+
         comparison = sortDirection === 'asc' ? aVal.localeCompare(bVal) : bVal.localeCompare(aVal);
       } else if (typeof aVal === 'number' && typeof bVal === 'number') {
+        if (primaryCol === 'position' && filters.category !== '') {
+          aVal = a.categoryPos[filters.category];
+          bVal =b.categoryPos[filters.category]
+        }
+        
         comparison = sortDirection === 'asc' ? aVal - bVal : bVal - aVal;
       }
 
       // Secondary sort: by position if primary sort is by year and values are equal
-      if (comparison === 0 && primaryCol === 'year') {
-        const aPos = a.position;
-        const bPos = b.position;
-        comparison = aPos - bPos;
-      }
+      if (comparison === 0 && primaryCol === 'year')
+        return a.position - b.position;
 
       // Secondary sort: by year if primary sort is by something else and values are equal
-      if (comparison === 0 && primaryCol !== 'year') {
-        const aYear = a.year;
-        const bYear = b.year;
-        comparison = aYear - bYear;
-      }
+      if (comparison === 0 && primaryCol !== 'year')
+        return a.year.localeCompare(b.year);
 
       return comparison;
     });
@@ -207,7 +211,7 @@ export default function RaceResultsDataTable({ data }: DataTableProps) {
                     onClick={() => handleSort('position')}
                     className="px-6 py-3 text-left text-sm font-semibold text-gray-700 cursor-pointer hover:bg-gray-200 transition-colors"
                   >
-                    Position {getSortIndicator(sortColumn === 'position' ? 'position' : null)}
+                    {filters.category === '' ? '' : "Category "}Position {getSortIndicator(sortColumn === 'position' ? 'position' : null)}
                   </th>
                   <th
                     onClick={() => handleSort('name')}
@@ -245,7 +249,7 @@ export default function RaceResultsDataTable({ data }: DataTableProps) {
                       } hover:bg-blue-50 transition-colors`}
                     >
                       <td className="px-6 py-4 text-sm text-gray-800">{row.year}</td>
-                      <td className="px-6 py-4 text-sm font-semibold text-gray-800">{row.position}</td>
+                      <td className="px-6 py-4 text-sm font-semibold text-gray-800">{filters.category === '' ? row.position : row.categoryPos[filters.category]}</td>
                       <td className="px-6 py-4 text-sm text-gray-800">{row.name}</td>
                       <td className="px-6 py-4 text-sm text-gray-800">{row.club}</td>
                       <td className="px-6 py-4 text-sm text-gray-800">{row.category}</td>

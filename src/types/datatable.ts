@@ -1,10 +1,11 @@
-export interface DataRow {
+export interface RaceResult {
   id: string;
-  year: number;
+  year: string;
   position: number;
   name: string;
   club: string;
   category: string;
+  categoryPos: { [cat: string]: number };
   time: string;
 }
 

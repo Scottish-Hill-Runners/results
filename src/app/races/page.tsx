@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { loadRaceInfos } from '@/lib/results-data';
+import RaceListFilter from '@/app/races/race-list-filter';
 
 export default async function RaceListPage() {
   const races = await loadRaceInfos().catch((error) => {
@@ -25,19 +26,7 @@ export default async function RaceListPage() {
             <p className="text-gray-600">No races available right now.</p>
           </div>
         ) : (
-          <ul className="space-y-2">
-            {races.map((race) => (
-              <li key={race.raceId}>
-                <Link
-                  href={`/races/${encodeURIComponent(race.raceId)}`}
-                  className="block px-4 py-3 bg-white border border-gray-200 rounded-lg text-blue-600 hover:bg-gray-50"
-                >
-                  <div className="font-semibold">{race.title}</div>
-                  <div className="text-sm text-gray-600">{race.venue} • {race.distance}km</div>
-                </Link>
-              </li>
-            ))}
-          </ul>
+          <RaceListFilter races={races} />
         )}
       </div>
     </main>

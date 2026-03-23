@@ -29,12 +29,12 @@ export default async function RacePage({ params }: { params: Promise<{ raceId: s
           <div className="bg-white rounded-lg shadow-md p-8 text-center">
             <p className="text-red-600 font-semibold mb-2">{listError}</p>
             <p className="text-gray-600 mb-4">You can still try again or go back to the races list.</p>
-            <a
+            <Link
               href="/races"
               className="inline-block px-4 py-2 text-sm font-semibold text-white bg-blue-600 rounded-lg hover:bg-blue-700"
             >
               Back to Races
-            </a>
+            </Link>
           </div>
         </div>
       </main>
@@ -85,12 +85,12 @@ export default async function RacePage({ params }: { params: Promise<{ raceId: s
           <div className="bg-white rounded-lg shadow-md p-8 text-center">
             <p className="text-red-600 font-semibold mb-2">{resultsError}</p>
             <p className="text-gray-600 mb-4">Try again in a few minutes or choose another race.</p>
-            <a
+            <Link
               href="/races"
               className="inline-block px-4 py-2 text-sm font-semibold text-white bg-blue-600 rounded-lg hover:bg-blue-700"
             >
               Back to Races
-            </a>
+            </Link>
           </div>
         ) : data.length > 0 ? (
           <RaceResultsDataTable key={raceId} data={data} />
