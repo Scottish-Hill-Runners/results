@@ -3,6 +3,7 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import path from 'path';
 import zlib from 'zlib';
+import { surnameHash } from '@/lib/runner-name';
 import { RaceInfo, RaceResult } from '@/types/datatable';
 
 type YearInfo = {
@@ -198,15 +199,6 @@ function writeGz(fileName: string, data: string): void {
   progress(
     `✓ ${outputFile} (${rawSize}→${gzipSize}, ${compression}% compression)`
   );
-}
-
-function surnameHash(name: string): number {
-  const m = name.match(/(\w+)$/);
-  const last = m ? m[1] : '';
-  let h = 9;
-  for (let i = 0; i < last.length; i++)
-    h = Math.imul(h ^ last.charCodeAt(i), 9 ** 9);
-  return Math.abs(h ^ (h >>> 9));
 }
 
 function writeYearData(allResults: RaceResult[]) {

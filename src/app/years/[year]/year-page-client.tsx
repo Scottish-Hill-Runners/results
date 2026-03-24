@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import RaceResultsDataTable from '@/components/RaceResultsDataTable';
+import { fetchJsonWithApiFallback } from '@/lib/client-results-fetch';
 import type { YearRaceResult } from '@/types/datatable';
 
 interface YearPageClientProps {
@@ -24,25 +25,20 @@ export default function YearPageClient({ year }: YearPageClientProps) {
       setIsNotFound(false);
 
       try {
-        const response = await fetch(`/api/years/${encodeURIComponent(year)}`, {
-          cache: 'force-cache',
-        });
+        const result = await fetchJsonWithApiFallback<YearRaceResult[]>(
+          `/api/years/${encodeURIComponent(year)}`,
+          `/results/${encodeURIComponent(year)}.json.gz`,
+        );
 
-        if (response.status === 404) {
-          if (!isCancelled) {
+        if (!isCancelled) {
+          if (result.status === 'ok') {
+            setResults(result.data);
+          } else if (result.status === 'not-found') {
             setIsNotFound(true);
             setResults(null);
+          } else {
+            throw result.error;
           }
-          return;
-        }
-
-        if (!response.ok) {
-          throw new Error(`Request failed with status ${response.status}`);
-        }
-
-        const nextResults = (await response.json()) as YearRaceResult[];
-        if (!isCancelled) {
-          setResults(nextResults);
         }
       } catch (error) {
         console.error('Failed to fetch year data on client:', error);

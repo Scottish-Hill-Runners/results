@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import RaceDetailsTabs from '@/components/RaceDetailsTabs';
+import { fetchJsonWithApiFallback } from '@/lib/client-results-fetch';
 import type { RaceData } from '@/types/datatable';
 
 interface RacePageClientProps {
@@ -24,25 +25,20 @@ export default function RacePageClient({ raceId }: RacePageClientProps) {
       setIsNotFound(false);
 
       try {
-        const response = await fetch(`/api/races/${encodeURIComponent(raceId)}`, {
-          cache: 'force-cache',
-        });
+        const result = await fetchJsonWithApiFallback<RaceData>(
+          `/api/races/${encodeURIComponent(raceId)}`,
+          `/results/${encodeURIComponent(raceId)}.json.gz`,
+        );
 
-        if (response.status === 404) {
-          if (!isCancelled) {
+        if (!isCancelled) {
+          if (result.status === 'ok') {
+            setData(result.data);
+          } else if (result.status === 'not-found') {
             setIsNotFound(true);
             setData(null);
+          } else {
+            throw result.error;
           }
-          return;
-        }
-
-        if (!response.ok) {
-          throw new Error(`Request failed with status ${response.status}`);
-        }
-
-        const nextData = (await response.json()) as RaceData;
-        if (!isCancelled) {
-          setData(nextData);
         }
       } catch (error) {
         console.error('Failed to fetch race data on client:', error);

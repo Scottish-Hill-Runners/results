@@ -45,3 +45,31 @@ export async function loadYearResults(year: string): Promise<RaceResult[]> {
 
   return readJsonGzip<RaceResult[]>(`${year}.json.gz`);
 }
+
+export async function loadRunnerBatch(batch: number): Promise<RaceResult[]> {
+  if (!Number.isInteger(batch) || batch < 0 || batch > 99) {
+    throw new Error('Invalid runner batch');
+  }
+
+  return readJsonGzip<RaceResult[]>(`R-${batch}.json.gz`);
+}
+
+export async function loadRunnerNames(): Promise<string[]> {
+  const unique = new Set<string>();
+
+  for (let batch = 0; batch < 100; batch += 1) {
+    try {
+      const rows = await loadRunnerBatch(batch);
+      rows.forEach((row) => {
+        const name = row.name.trim();
+        if (name) {
+          unique.add(name);
+        }
+      });
+    } catch {
+      // Ignore missing batches.
+    }
+  }
+
+  return Array.from(unique).sort((a, b) => a.localeCompare(b));
+}

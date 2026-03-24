@@ -293,7 +293,14 @@ export default function RaceResultsDataTable({ data, showRaceColumn = false }: D
                         </td>
                       )}
                       <td className="px-6 py-4 text-sm font-semibold text-gray-800 dark:text-slate-200">{filters.category === '' ? row.position : row.categoryPos[filters.category]}</td>
-                      <td className="px-6 py-4 text-sm text-gray-800 dark:text-slate-200">{row.name}</td>
+                      <td className="px-6 py-4 text-sm text-gray-800 dark:text-slate-200">
+                        <Link
+                          href={`/runner?name=${encodeURIComponent(row.name)}`}
+                          className="text-blue-600 hover:text-blue-800 hover:underline dark:text-blue-400 dark:hover:text-blue-300"
+                        >
+                          {row.name}
+                        </Link>
+                      </td>
                       <td className="px-6 py-4 text-sm text-gray-800 dark:text-slate-200">{row.club}</td>
                       <td className="px-6 py-4 text-sm text-gray-800 dark:text-slate-200">{row.category}</td>
                       <td className="px-6 py-4 font-mono text-sm text-gray-800 dark:text-slate-200">{row.time}</td>
