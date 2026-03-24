@@ -75,6 +75,18 @@ for (const club of clubs)
   for (const aka of club.aliases)
     clubAliases.set(aka.trim().toUpperCase(), club.name);
 
+function cleanCategory(category: string): string {
+  return category
+    .replace(/\s+/g, '')
+    .replace(
+      /(OVER)|(OPEN)|(MEN)|(MALE)|(VET)|(SEN(IOR)?)|(JNR)|(JUN(IOR)?)|(UNDER)/gi,
+      ''
+    )
+    .replace(/(WOMEN)|(FEMALE)|(LADY)/, 'F')
+    // Ignore V(=vet), U(=under-23?), J(=junior), (S=senior) attributions.
+    .replace(/[\WVUJS]/g, '');
+}
+
 async function readRaceInstance(
   raceId: string,
   raceInstancePath: string
@@ -86,21 +98,11 @@ async function readRaceInstance(
       const posByCategory = {} as PosByCategory;
       // TODO: handle dead heats
       const updateCategoryPos = (category: string) => {
-        const groups = category
-          .replace(/\s+/g, '')
-          .replace(
-            /(OVER)|(OPEN)|(MEN)|(MALE)|(VET)|(SEN(IOR)?)|(JNR)|(JUN(IOR)?)|(UNDER)/gi,
-            ''
-          )
-          .replace(/(WOMEN)|(FEMALE)|(LADY)/, 'F')
-          .replace(/[\WVUJS]/g, '') // Ignore V(=vet), U(=under-23?), J(=junior), (S=senior) attributions.
-          .match(/([^\d]*)(\d+)?/);
+        const cat = cleanCategory(category);
+        const groups = cat.match(/([^\d]*)(\d+)?/)
         const s = groups?.[1]?.replace(/[WL]/, 'F') ?? 'M'; // W=Women, L=Lady.
         const sex = s.length == 0 ? 'M' : s;
-        const age = Math.max(
-          parseInt(groups?.[2]?.substring(0, 1) ?? '3') * 10,
-          30
-        );
+        const age = Math.max(parseInt(groups?.[2] ?? '30'), 30);
         const catPos = {} as PosByCategory;
         let catIncr = 10;
         for (let a = 30; a <= age; a += catIncr) {
@@ -217,9 +219,10 @@ function writeYearData(allResults: RaceResult[]) {
     for (const r of results) {
       uniqueRaces.add(r.raceId);
       uniqueClubs.add(r.club);
+      const cat = cleanCategory(r.category);
       const categorySet =
-        uniqueRunners.get(r.category) ||
-        uniqueRunners.set(r.category, new Set<string>()).get(r.category)!;
+        uniqueRunners.get(cat) ||
+        uniqueRunners.set(cat, new Set<string>()).get(cat)!;
       categorySet.add(r.name);
     }
 
@@ -232,6 +235,7 @@ function writeYearData(allResults: RaceResult[]) {
       nResults: results.length,
       nRunners,
     });
+    writeGz(`${year}.json`, JSON.stringify(results));
   });
   writeGz('years.json', JSON.stringify(yearInfo));
 }

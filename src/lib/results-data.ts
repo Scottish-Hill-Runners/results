@@ -1,7 +1,7 @@
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
 import { gunzipSync } from 'node:zlib';
-import type { AllRaceData, RaceData } from '@/types/datatable';
+import type { AllRaceData, RaceData, RaceResult } from '@/types/datatable';
 
 function resultsPath(fileName: string): string {
   return path.join(process.cwd(), 'public', 'results', fileName);
@@ -24,4 +24,24 @@ export async function loadRaceResults(raceId: string): Promise<RaceData> {
   }
 
   return readJsonGzip<RaceData>(`${safeRaceId}.json.gz`);
+}
+
+export async function loadAvailableYears(): Promise<string[]> {
+  const files = await fs.readdir(resultsPath(''));
+
+  return files
+    .map((fileName) => {
+      const match = fileName.match(/^(\d{4})\.json\.gz$/);
+      return match ? match[1] : null;
+    })
+    .filter((year): year is string => year !== null)
+    .sort((a, b) => b.localeCompare(a));
+}
+
+export async function loadYearResults(year: string): Promise<RaceResult[]> {
+  if (!/^\d{4}$/.test(year)) {
+    throw new Error('Invalid year');
+  }
+
+  return readJsonGzip<RaceResult[]>(`${year}.json.gz`);
 }

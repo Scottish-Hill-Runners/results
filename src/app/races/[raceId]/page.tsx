@@ -1,8 +1,6 @@
-import RaceDetailsTabs from '@/components/RaceDetailsTabs';
-import Link from 'next/link';
-import { notFound } from 'next/navigation';
-import { loadAllRaces, loadRaceResults } from '@/lib/results-data';
-import type { AllRaceData, RaceData } from '@/types/datatable';
+import RacePageClient from '@/app/races/[raceId]/race-page-client';
+import { loadAllRaces } from '@/lib/results-data';
+import type { AllRaceData } from '@/types/datatable';
 
 export async function generateStaticParams() {
   const allRaces = await loadAllRaces().catch(() => ({} as AllRaceData));
@@ -12,85 +10,6 @@ export async function generateStaticParams() {
 export default async function RacePage({ params }: { params: Promise<{ raceId: string }> }) {
   const { raceId } = await params;
 
-  let allRaces: AllRaceData = {};
-  let listError: string | null = null;
-
-  try {
-    allRaces = await loadAllRaces();
-  } catch (error) {
-    console.error('Error fetching race list:', error);
-    listError = 'Unable to load race list at the moment. Please try again later.';
-    allRaces = {};
-  }
-
-  if (listError) {
-    return (
-      <main className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 px-4 py-12 dark:from-slate-950 dark:to-slate-900 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
-          <div className="rounded-lg bg-white p-8 text-center shadow-md dark:bg-slate-900">
-            <p className="text-red-600 font-semibold mb-2">{listError}</p>
-            <p className="mb-4 text-gray-600 dark:text-slate-300">You can still try again or go back to the races list.</p>
-            <Link
-              href="/races"
-              className="inline-block px-4 py-2 text-sm font-semibold text-white bg-blue-600 rounded-lg hover:bg-blue-700"
-            >
-              Back to Races
-            </Link>
-          </div>
-        </div>
-      </main>
-    );
-  }
-
-  const race = allRaces[raceId];
-  if (!race) {
-    notFound();
-  }
-
-  let data: RaceData;
-  let resultsError: string | null = null;
-
-  try {
-    data = await loadRaceResults(raceId);
-  } catch (error) {
-    if ((error as NodeJS.ErrnoException).code === 'ENOENT') {
-      notFound();
-    }
-    console.error('Error loading race results for', raceId, error);
-    resultsError = 'Failed to load results. Please try again later.';
-    data = { info: race, contents: '', results: [], hasGpx: false };
-  }
-
-  return (
-    <main id="main-content" className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 px-4 py-12 dark:from-slate-950 dark:to-slate-900 sm:px-6 lg:px-8">
-      <div className="max-w-6xl mx-auto">
-        <nav aria-label="Breadcrumb" className="mb-4 text-sm text-slate-500 dark:text-slate-400">
-          <ol role="list" className="flex flex-wrap gap-2">
-            <li>
-              <Link href="/" className="text-blue-600 hover:text-blue-800">Home</Link>
-            </li>
-            <li aria-hidden="true">/</li>
-            <li>
-              <Link href="/races" className="text-blue-600 hover:text-blue-800">Races</Link>
-            </li>
-            <li aria-hidden="true">/</li>
-            <li className="font-semibold text-slate-900 dark:text-slate-100" aria-current="page">
-              {race!.title}
-            </li>
-          </ol>
-        </nav>
-
-        <h1 className="mb-4 text-4xl font-bold text-gray-900 dark:text-slate-50">{race!.title} Results</h1>
-        <RaceDetailsTabs
-          raceId={raceId}
-          race={data.info}
-          contents={data.contents}
-          hasGpx={data.hasGpx}
-          results={data.results}
-          resultsError={resultsError}
-        />
-      </div>
-    </main>
-  );
+  return <RacePageClient raceId={raceId} />;
 }
 

@@ -9,6 +9,10 @@ export interface RaceResult {
   time: string;
 }
 
+export interface YearRaceResult extends RaceResult {
+  raceTitle: string;
+}
+
 export interface RaceInfo {
   title: string;
   venue: string;

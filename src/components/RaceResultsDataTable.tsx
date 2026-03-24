@@ -1,13 +1,15 @@
 'use client';
 
 import { useEffect, useState, useMemo } from 'react';
+import Link from 'next/link';
 import { RaceResult } from '@/types/datatable';
 
 interface DataTableProps {
-  data: RaceResult[];
+  data: Array<RaceResult & { raceTitle?: string }>;
+  showRaceColumn?: boolean;
 }
 
-type SortColumn = keyof RaceResult | null;
+type SortColumn = 'raceTitle' | 'year' | 'position' | 'name' | 'club' | 'category' | 'time' | null;
 type SortDirection = 'asc' | 'desc';
 
 interface Filters {
@@ -17,9 +19,9 @@ interface Filters {
   category: string;
 }
 
-export default function RaceResultsDataTable({ data }: DataTableProps) {
-  const [sortColumn, setSortColumn] = useState<SortColumn>('year');
-  const [sortDirection, setSortDirection] = useState<SortDirection>('desc');
+export default function RaceResultsDataTable({ data, showRaceColumn = false }: DataTableProps) {
+  const [sortColumn, setSortColumn] = useState<SortColumn>(showRaceColumn ? 'raceTitle' : 'year');
+  const [sortDirection, setSortDirection] = useState<SortDirection>(showRaceColumn ? 'asc' : 'desc');
   const [filters, setFilters] = useState<Filters>({
     year: '',
     name: '',
@@ -52,8 +54,16 @@ export default function RaceResultsDataTable({ data }: DataTableProps) {
 
       // Primary sort: by sortColumn (or year if no custom sort)
       const primaryCol = sortColumn || 'year';
-      let aVal = a[primaryCol];
-      let bVal = b[primaryCol];
+      let aVal: string | number;
+      let bVal: string | number;
+
+      if (primaryCol === 'raceTitle') {
+        aVal = a.raceTitle ?? a.raceId;
+        bVal = b.raceTitle ?? b.raceId;
+      } else {
+        aVal = a[primaryCol];
+        bVal = b[primaryCol];
+      }
 
       if (typeof aVal === 'string' && typeof bVal === 'string') {
         if (primaryCol === 'time') {
@@ -103,7 +113,8 @@ export default function RaceResultsDataTable({ data }: DataTableProps) {
 
   const clearFilters = () => {
     setFilters({ year: '', name: '', club: '', category: '' });
-    setSortColumn(null);
+    setSortColumn(showRaceColumn ? 'raceTitle' : 'year');
+    setSortDirection('desc');
   };
 
   const getSortIndicator = (column: SortColumn) => {
@@ -125,8 +136,11 @@ export default function RaceResultsDataTable({ data }: DataTableProps) {
     });
 
     // Get unique categories, sorted alphabetically
-    const uniqueCategories = Array.from(new Set(result.map((row) => row.category))).sort();
-    return uniqueCategories;
+    const uniq = new Set<string>();
+    result.forEach((row) => {
+      Object.keys(row.categoryPos).forEach((cat) => uniq.add(cat));
+    });
+    return Array.from(uniq).sort();
   }, [data, filters.year, filters.name, filters.club]);
 
   // Get unique years from data, sorted in ascending order
@@ -201,12 +215,22 @@ export default function RaceResultsDataTable({ data }: DataTableProps) {
             <table className="w-full border-collapse bg-white dark:bg-slate-900">
               <thead>
                 <tr className="sticky top-0 border-b-2 border-gray-300 bg-gray-100 dark:border-slate-700 dark:bg-slate-800">
-                  <th
-                    onClick={() => handleSort('year')}
-                    className="cursor-pointer px-6 py-3 text-left text-sm font-semibold text-gray-700 transition-colors hover:bg-gray-200 dark:text-slate-200 dark:hover:bg-slate-700"
-                  >
-                    Year {getSortIndicator(sortColumn === 'year' ? 'year' : null)}
-                  </th>
+                  {showRaceColumn && (
+                    <th
+                      onClick={() => handleSort('raceTitle')}
+                      className="cursor-pointer px-6 py-3 text-left text-sm font-semibold text-gray-700 transition-colors hover:bg-gray-200 dark:text-slate-200 dark:hover:bg-slate-700"
+                    >
+                      Race {getSortIndicator(sortColumn === 'raceTitle' ? 'raceTitle' : null)}
+                    </th>
+                  )}
+                  {!showRaceColumn && (
+                    <th
+                      onClick={() => handleSort('year')}
+                      className="cursor-pointer px-6 py-3 text-left text-sm font-semibold text-gray-700 transition-colors hover:bg-gray-200 dark:text-slate-200 dark:hover:bg-slate-700"
+                    >
+                      Year {getSortIndicator(sortColumn === 'year' ? 'year' : null)}
+                    </th>
+                  )}
                   <th
                     onClick={() => handleSort('position')}
                     className="cursor-pointer px-6 py-3 text-left text-sm font-semibold text-gray-700 transition-colors hover:bg-gray-200 dark:text-slate-200 dark:hover:bg-slate-700"
@@ -248,7 +272,26 @@ export default function RaceResultsDataTable({ data }: DataTableProps) {
                         index % 2 === 0 ? 'bg-white dark:bg-slate-900' : 'bg-gray-50 dark:bg-slate-950'
                       }`}
                     >
-                      <td className="px-6 py-4 text-sm text-gray-800 dark:text-slate-200">{row.year}</td>
+                      {showRaceColumn && (
+                        <td className="px-6 py-4 text-sm text-gray-800 dark:text-slate-200">
+                          <Link
+                            href={`/races/${encodeURIComponent(row.raceId)}`}
+                            className="text-blue-600 hover:text-blue-800 hover:underline dark:text-blue-400 dark:hover:text-blue-300"
+                          >
+                            {row.raceTitle ?? row.raceId}
+                          </Link>
+                        </td>
+                      )}
+                      {!showRaceColumn && (
+                        <td className="px-6 py-4 text-sm text-gray-800 dark:text-slate-200">
+                          <Link
+                            href={`/years/${encodeURIComponent(row.year.substring(0, 4))}`}
+                            className="text-blue-600 hover:text-blue-800 hover:underline dark:text-blue-400 dark:hover:text-blue-300"
+                          >
+                            {row.year}
+                          </Link>
+                        </td>
+                      )}
                       <td className="px-6 py-4 text-sm font-semibold text-gray-800 dark:text-slate-200">{filters.category === '' ? row.position : row.categoryPos[filters.category]}</td>
                       <td className="px-6 py-4 text-sm text-gray-800 dark:text-slate-200">{row.name}</td>
                       <td className="px-6 py-4 text-sm text-gray-800 dark:text-slate-200">{row.club}</td>
@@ -258,7 +301,7 @@ export default function RaceResultsDataTable({ data }: DataTableProps) {
                   ))
                 ) : (
                   <tr>
-                    <td colSpan={6} className="px-6 py-4 text-center text-sm text-gray-500 dark:text-slate-400">
+                    <td colSpan={showRaceColumn ? 6 : 6} className="px-6 py-4 text-center text-sm text-gray-500 dark:text-slate-400">
                       No results match your filters
                     </td>
                   </tr>
