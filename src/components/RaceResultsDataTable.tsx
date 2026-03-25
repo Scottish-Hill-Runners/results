@@ -146,7 +146,7 @@ export default function RaceResultsDataTable({ data, showRaceColumn = false, sho
 
   // Get unique years from data, sorted in ascending order
   const availableYears = useMemo(() => {
-    const uniqueYears = Array.from(new Set(data.map((row) => row.year))).sort((a, b) => b.localeCompare(a));
+    const uniqueYears = Array.from(new Set(data.map((row) => row.year.substring(0, 4)))).sort((a, b) => b.localeCompare(a));
     return uniqueYears;
   }, [data]);
 

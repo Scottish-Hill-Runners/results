@@ -1,14 +1,14 @@
 {
   "name": "shr-web",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "scripts": {
     "prebuild": "set -a && source .env && set +a && node scripts/run-builds.mjs",
     "content:sync": "node --env-file .env scripts/sync-content.mjs",
     "content:build": "set -a && source .env && set +a &&  npm run prebuild",
     "validate:results": "tsx scripts/validate-results.ts",
-    "validate:results:content": "set -a && source .env && set +a &&  tsx scripts/validate-results.ts",
-    "validate:results:strict": "tsx scripts/validate-results.ts --strict-filenames --warnings-as-errors",
+    "validate:results:content": "set -a && source .env && set +a && tsx scripts/validate-results.ts",
+    "validate:results:strict": "set -a && source .env && set +a && tsx scripts/validate-results.ts --strict-filenames --warnings-as-errors",
     "dev": "next dev",
     "build": "npm run prebuild && next build",
     "deploy": "next build && npx surge --project ./out --domain shr-next.surge.sh",

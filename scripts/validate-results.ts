@@ -20,6 +20,7 @@ type Summary = {
 
 type ValidationOptions = {
   strictFileNames: boolean;
+  strictCategories: boolean;
   warningsAsErrors: boolean;
   maxPrintedIssues: number;
 };
@@ -31,18 +32,26 @@ const SURNAME_KEYS = ['Surname', 'LastName'];
 const CLUB_KEYS = ['Club'];
 const CATEGORY_KEYS = ['RunnerCategory', 'Category', 'Cat'];
 const TIME_KEYS = ['FinishTime', 'Time'];
+const ALLOWED_RUNNER_CATEGORIES =
+  'F,F40,F50,F60,F65,F70,F75,F80,M,M40,M50,M60,M65,M70,M75,M80,NB,NB40,NB50,NB60,NB65,NB70,NB75,NB80'
+    .split(',')
+    .reduce((set, cat) => set.add(cat), new Set<string>());
 const DEFAULT_MAX_PRINTED_ISSUES = 300;
 
 function parseOptions(argv: string[]): ValidationOptions {
   const strictFileNames = argv.includes('--strict-filenames');
+  const strictCategories = argv.includes('--strict-categories');
   const warningsAsErrors = argv.includes('--warnings-as-errors');
-  const maxIssuesArg = argv.find((arg) => arg.startsWith('--max-printed-issues='));
+  const maxIssuesArg = argv.find((arg) =>
+    arg.startsWith('--max-printed-issues=')
+  );
   const parsedMax = maxIssuesArg
     ? parseInt(maxIssuesArg.split('=')[1] ?? '', 10)
     : DEFAULT_MAX_PRINTED_ISSUES;
 
   return {
     strictFileNames,
+    strictCategories,
     warningsAsErrors,
     maxPrintedIssues:
       Number.isNaN(parsedMax) || parsedMax < 1
@@ -141,8 +150,7 @@ function validateHeaders(
       file: filePath,
       row: null,
       level: 'error',
-      message:
-        `Missing name columns (expected Name or Firstname+Surname variants)`,
+      message: `Missing name columns (expected Name or Firstname+Surname variants)`,
     });
   }
 
@@ -181,7 +189,8 @@ function validateTime(time: string): boolean {
 function validateRows(
   filePath: string,
   rows: Record<string, unknown>[],
-  issues: ValidationIssue[]
+  issues: ValidationIssue[],
+  options: ValidationOptions
 ): number {
   let rowCount = 0;
 
@@ -194,6 +203,7 @@ function validateRows(
       findValue(row, NAME_KEYS) ||
       `${findValue(row, FIRST_NAME_KEYS)} ${findValue(row, SURNAME_KEYS)}`.trim();
     const time = findValue(row, TIME_KEYS);
+    const category = findValue(row, CATEGORY_KEYS);
 
     if (!position || Number.isNaN(parseInt(position, 10))) {
       issues.push({
@@ -228,14 +238,37 @@ function validateRows(
         message: `Unrecognized time format '${time}'`,
       });
     }
+
+    if (!category) {
+      issues.push({
+        file: filePath,
+        row: rowNumber,
+        level: 'warning',
+        message: 'Missing runner category',
+      });
+    } else if (options.strictCategories && !ALLOWED_RUNNER_CATEGORIES.has(category)) {
+      issues.push({
+        file: filePath,
+        row: rowNumber,
+        level: 'warning',
+        message:
+          `Unexpected runner category '${category}' ` +
+          `(expected one of: ${Array.from(ALLOWED_RUNNER_CATEGORIES).join(', ')})`,
+      });
+    }
   });
 
   return rowCount;
 }
 
-function printIssues(issues: ValidationIssue[], maxPrintedIssues: number): void {
+function printIssues(
+  issues: ValidationIssue[],
+  maxPrintedIssues: number
+): void {
   const sorted = [...issues].sort((a, b) =>
-    a.file === b.file ? (a.row ?? 0) - (b.row ?? 0) : a.file.localeCompare(b.file)
+    a.file === b.file
+      ? (a.row ?? 0) - (b.row ?? 0)
+      : a.file.localeCompare(b.file)
   );
 
   const toPrint = sorted.slice(0, maxPrintedIssues);
@@ -253,7 +286,9 @@ function printIssues(issues: ValidationIssue[], maxPrintedIssues: number): void 
   }
 }
 
-async function validateAllResultsCsv(options: ValidationOptions): Promise<Summary> {
+async function validateAllResultsCsv(
+  options: ValidationOptions
+): Promise<Summary> {
   const racesDir = contentPath('races');
   const files = listCsvFiles(racesDir);
   const issues: ValidationIssue[] = [];
@@ -263,9 +298,12 @@ async function validateAllResultsCsv(options: ValidationOptions): Promise<Summar
     validateFileName(filePath, issues, options);
 
     try {
-      const rows = (await csv().fromFile(filePath)) as Record<string, unknown>[];
+      const rows = (await csv().fromFile(filePath)) as Record<
+        string,
+        unknown
+      >[];
       validateHeaders(filePath, rows, issues);
-      rowsChecked += validateRows(filePath, rows, issues);
+      rowsChecked += validateRows(filePath, rows, issues, options);
     } catch (error) {
       issues.push({
         file: filePath,
