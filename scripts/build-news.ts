@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import { writeGz, progress } from './write-gz-util';
-import { contentPath, getContentRoot } from './content-paths';
+import { contentPath, contentRoot } from './content-paths';
 
 interface NewsItem {
   slug: string;
@@ -33,7 +33,7 @@ async function buildNews() {
       return;
     }
 
-    progress(`Reading news from ${newsDir} (CONTENT_ROOT=${getContentRoot()})...`);
+    progress(`Reading news from ${newsDir} (CONTENT_ROOT=${contentRoot()})...`);
 
     // Get all markdown files
     const files = fs.readdirSync(newsDir).filter((file) => file.endsWith('.md'));

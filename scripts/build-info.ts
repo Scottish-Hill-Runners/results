@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import { writeGz, progress } from './write-gz-util';
-import { contentPath, getContentRoot } from './content-paths';
+import { contentPath, contentRoot } from './content-paths';
 
 interface InfoItem {
   slug: string;
@@ -22,7 +22,7 @@ function buildInfo() {
       return;
     }
 
-    progress(`Reading info from ${infoDir} (CONTENT_ROOT=${getContentRoot()})...`);
+    progress(`Reading info from ${infoDir} (CONTENT_ROOT=${contentRoot()})...`);
 
     // Get all markdown files
     const files = fs.readdirSync(infoDir).filter((file) => file.endsWith('.md'));

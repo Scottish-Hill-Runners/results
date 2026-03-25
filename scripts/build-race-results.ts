@@ -3,7 +3,7 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import path from 'path';
 import { writeGz, progress } from './write-gz-util';
-import { contentPath, getContentRoot } from './content-paths';
+import { contentPath, contentRoot } from './content-paths';
 import { surnameHash } from '@/lib/runner-name';
 import { RaceInfo, RaceResult } from '@/types/datatable';
 
@@ -289,7 +289,7 @@ function summariseCategories(allResults: RaceResult[]): void {
 }
 
 async function main() {
-  progress(`Using content root: ${getContentRoot()}`);
+  progress(`Using content root: ${contentRoot()}`);
   const allResults = await readResults();
   writeYearData(allResults);
   writeRaceData(allResults);
