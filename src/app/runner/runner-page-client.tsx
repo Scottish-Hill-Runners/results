@@ -6,7 +6,7 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import RaceResultsDataTable from '@/components/RaceResultsDataTable';
 import { fetchGzipJson } from '@/lib/client-results-fetch';
 import { runnerNameMatches, surnameHash } from '@/lib/runner-name';
-import type { RaceResult } from '@/types/datatable';
+import type { RaceInfo, RaceResult } from '@/types/datatable';
 
 interface RunnerPageClientProps {
   name?: string;
@@ -95,7 +95,11 @@ export default function RunnerPageClient({ name, runnerNames = [] }: RunnerPageC
       const hash = surnameHash(surname) % 100;
       const batchPath = `/results/R-${hash}.json.gz`;
 
-      const response = await fetchGzipJson<RaceResult[]>(batchPath);
+      const [response, racesResponse] = await Promise.all([
+        fetchGzipJson<RaceResult[]>(batchPath),
+        fetchGzipJson<{ [raceId: string]: RaceInfo }>('/results/races.json.gz'),
+      ]);
+      const races = racesResponse.status === 'ok' ? racesResponse.data : {};
 
       if (isCancelled) {
         return;
@@ -109,7 +113,9 @@ export default function RunnerPageClient({ name, runnerNames = [] }: RunnerPageC
         setErrorMessage('Failed to load runner results. Please try again later.');
         setResults(null);
       } else {
-        const filtered = response.data.filter((row) => runnerNameMatches(decodedName, row.name));
+        const filtered = response.data
+          .filter((row) => runnerNameMatches(decodedName, row.name))
+          .map((row) => ({ ...row, raceTitle: races[row.raceId]?.title ?? row.raceId }));
         if (filtered.length === 0) {
           setIsNotFound(true);
           setResults(null);
@@ -211,7 +217,7 @@ export default function RunnerPageClient({ name, runnerNames = [] }: RunnerPageC
             <p className="mb-4 text-gray-600 dark:text-slate-300">Try again in a few minutes.</p>
           </div>
         ) : results ? (
-          <RaceResultsDataTable data={results} />
+          <RaceResultsDataTable data={results} showRaceTitle />
         ) : (
           <div className="rounded-lg bg-white p-8 text-center shadow-md dark:bg-slate-900">
             <p className="text-gray-600 dark:text-slate-300">No runner data available.</p>

@@ -7,6 +7,7 @@ import { RaceResult } from '@/types/datatable';
 interface DataTableProps {
   data: Array<RaceResult & { raceTitle?: string }>;
   showRaceColumn?: boolean;
+  showRaceTitle?: boolean;
 }
 
 type SortColumn = 'raceTitle' | 'year' | 'position' | 'name' | 'club' | 'category' | 'time' | null;
@@ -19,7 +20,7 @@ interface Filters {
   category: string;
 }
 
-export default function RaceResultsDataTable({ data, showRaceColumn = false }: DataTableProps) {
+export default function RaceResultsDataTable({ data, showRaceColumn = false, showRaceTitle = false }: DataTableProps) {
   const [sortColumn, setSortColumn] = useState<SortColumn>(showRaceColumn ? 'raceTitle' : 'year');
   const [sortDirection, setSortDirection] = useState<SortDirection>(showRaceColumn ? 'asc' : 'desc');
   const [filters, setFilters] = useState<Filters>({
@@ -114,7 +115,7 @@ export default function RaceResultsDataTable({ data, showRaceColumn = false }: D
   const clearFilters = () => {
     setFilters({ year: '', name: '', club: '', category: '' });
     setSortColumn(showRaceColumn ? 'raceTitle' : 'year');
-    setSortDirection('desc');
+    setSortDirection(showRaceColumn ? 'asc' : 'desc');
   };
 
   const getSortIndicator = (column: SortColumn) => {
@@ -237,12 +238,21 @@ export default function RaceResultsDataTable({ data, showRaceColumn = false }: D
                   >
                     {filters.category === '' ? '' : "Category "}Position {getSortIndicator(sortColumn === 'position' ? 'position' : null)}
                   </th>
-                  <th
-                    onClick={() => handleSort('name')}
-                    className="cursor-pointer px-6 py-3 text-left text-sm font-semibold text-gray-700 transition-colors hover:bg-gray-200 dark:text-slate-200 dark:hover:bg-slate-700"
-                  >
-                    Name {getSortIndicator(sortColumn === 'name' ? 'name' : null)}
-                  </th>
+                  {showRaceTitle ? (
+                    <th
+                      onClick={() => handleSort('raceTitle')}
+                      className="cursor-pointer px-6 py-3 text-left text-sm font-semibold text-gray-700 transition-colors hover:bg-gray-200 dark:text-slate-200 dark:hover:bg-slate-700"
+                    >
+                      Race {getSortIndicator(sortColumn === 'raceTitle' ? 'raceTitle' : null)}
+                    </th>
+                  ) : (
+                    <th
+                      onClick={() => handleSort('name')}
+                      className="cursor-pointer px-6 py-3 text-left text-sm font-semibold text-gray-700 transition-colors hover:bg-gray-200 dark:text-slate-200 dark:hover:bg-slate-700"
+                    >
+                      Name {getSortIndicator(sortColumn === 'name' ? 'name' : null)}
+                    </th>
+                  )}
                   <th
                     onClick={() => handleSort('club')}
                     className="cursor-pointer px-6 py-3 text-left text-sm font-semibold text-gray-700 transition-colors hover:bg-gray-200 dark:text-slate-200 dark:hover:bg-slate-700"
@@ -293,14 +303,25 @@ export default function RaceResultsDataTable({ data, showRaceColumn = false }: D
                         </td>
                       )}
                       <td className="px-6 py-4 text-sm font-semibold text-gray-800 dark:text-slate-200">{filters.category === '' ? row.position : row.categoryPos[filters.category]}</td>
-                      <td className="px-6 py-4 text-sm text-gray-800 dark:text-slate-200">
-                        <Link
-                          href={`/runner?name=${encodeURIComponent(row.name)}`}
-                          className="text-blue-600 hover:text-blue-800 hover:underline dark:text-blue-400 dark:hover:text-blue-300"
-                        >
-                          {row.name}
-                        </Link>
-                      </td>
+                      {showRaceTitle ? (
+                        <td className="px-6 py-4 text-sm text-gray-800 dark:text-slate-200">
+                          <Link
+                            href={`/races/${encodeURIComponent(row.raceId)}`}
+                            className="text-blue-600 hover:text-blue-800 hover:underline dark:text-blue-400 dark:hover:text-blue-300"
+                          >
+                            {row.raceTitle ?? row.raceId}
+                          </Link>
+                        </td>
+                      ) : (
+                        <td className="px-6 py-4 text-sm text-gray-800 dark:text-slate-200">
+                          <Link
+                            href={`/runner?name=${encodeURIComponent(row.name)}`}
+                            className="text-blue-600 hover:text-blue-800 hover:underline dark:text-blue-400 dark:hover:text-blue-300"
+                          >
+                            {row.name}
+                          </Link>
+                        </td>
+                      )}
                       <td className="px-6 py-4 text-sm text-gray-800 dark:text-slate-200">{row.club}</td>
                       <td className="px-6 py-4 text-sm text-gray-800 dark:text-slate-200">{row.category}</td>
                       <td className="px-6 py-4 font-mono text-sm text-gray-800 dark:text-slate-200">{row.time}</td>
