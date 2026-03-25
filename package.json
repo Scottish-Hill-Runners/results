@@ -4,6 +4,8 @@
   "private": true,
   "scripts": {
     "prebuild": "node scripts/run-builds.mjs",
+    "validate:results": "tsx scripts/validate-results.ts",
+    "validate:results:strict": "tsx scripts/validate-results.ts --strict-filenames --warnings-as-errors",
     "dev": "next dev",
     "build": "npm run prebuild && next build",
     "deploy": "next build && npx surge --project ./out --domain shr-next.surge.sh",
