@@ -3,17 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "prebuild": "tsx scripts/build-race-results.ts && tsx scripts/build-news.ts && tsx scripts/build-info.ts",
-    "build-news": "tsx scripts/build-news.ts",
-    "build-info": "tsx scripts/build-info.ts",
+    "prebuild": "node scripts/run-builds.mjs",
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm run prebuild && next build",
     "deploy": "next build && npx surge --project ./out --domain shr-next.surge.sh",
     "start": "next start",
     "lint": "eslint",
     "format": "prettier --write .",
-    "format:check": "prettier --check .",
-    "news:convert": "node scripts/convert_news.mjs"
+    "format:check": "prettier --check ."
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.19",
@@ -23,7 +20,8 @@
     "next": "^16.2.1",
     "react": "19.2.3",
     "react-dom": "19.2.3",
-    "react-markdown": "^10.1.0"
+    "react-markdown": "^10.1.0",
+    "remark-gfm": "^4.0.1"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

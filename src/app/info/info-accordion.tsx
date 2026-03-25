@@ -2,15 +2,16 @@
 
 import { useState } from 'react';
 import ReactMarkdown, { type Components } from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
-interface InfoItem {
+export interface AccordionItem {
   slug: string;
   title: string;
   content: string;
 }
 
 interface InfoAccordionProps {
-  items: InfoItem[];
+  items: AccordionItem[];
 }
 
 function normalizeMarkdown(markdown: string): string {
@@ -68,8 +69,8 @@ export default function InfoAccordion({ items }: InfoAccordionProps) {
     <div className="space-y-4">
       {items.map((item) => {
         const isOpen = item.slug === activeSlug;
-        const buttonId = `info-accordion-button-${item.slug}`;
-        const panelId = `info-accordion-panel-${item.slug}`;
+        const buttonId = `accordion-button-${item.slug}`;
+        const panelId = `accordion-panel-${item.slug}`;
 
         return (
           <section key={item.slug} className="overflow-hidden rounded-xl border border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900">
@@ -115,7 +116,7 @@ export default function InfoAccordion({ items }: InfoAccordionProps) {
             >
               <div className="overflow-hidden px-5 pb-5">
                 <div className="prose prose-slate max-w-none prose-headings:font-semibold prose-li:marker:text-slate-500 dark:prose-invert dark:prose-headings:text-slate-50 dark:prose-li:marker:text-slate-400">
-                  <ReactMarkdown components={shiftedHeadingComponents}>
+                  <ReactMarkdown remarkPlugins={[remarkGfm]} components={shiftedHeadingComponents}>
                     {normalizeMarkdown(item.content)}
                   </ReactMarkdown>
                 </div>

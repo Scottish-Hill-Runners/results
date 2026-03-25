@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
+import { writeGz, progress } from './write-gz-util';
 
 interface InfoItem {
   slug: string;
@@ -10,21 +11,21 @@ interface InfoItem {
 
 function buildInfo() {
   const infoDir = path.join(process.cwd(), 'info');
-  const outputFile = path.join(process.cwd(), 'public', 'info.json');
+  const outputDir = path.join(process.cwd(), 'public');
 
   try {
     // Check if info directory exists
     if (!fs.existsSync(infoDir)) {
-      console.warn('Info directory not found, creating empty info.json');
-      fs.writeFileSync(outputFile, JSON.stringify([], null, 2));
+      console.warn('Info directory not found, creating empty info.json.gz');
+      writeGz(outputDir, 'info.json', JSON.stringify([]));
       return;
     }
 
-    console.log(`Reading info from ${infoDir}...`);
+    progress(`Reading info from ${infoDir}...`);
 
     // Get all markdown files
     const files = fs.readdirSync(infoDir).filter((file) => file.endsWith('.md'));
-    console.log(`Found ${files.length} info files`);
+    progress(`Found ${files.length} info files`);
 
     // Parse files
     const infoItems: InfoItem[] = files.map((file) => {
@@ -39,9 +40,9 @@ function buildInfo() {
       };
     });
 
-    // Write to JSON file
-    fs.writeFileSync(outputFile, JSON.stringify(infoItems, null, 2));
-    console.log(`✓ Built ${infoItems.length} info items to ${outputFile}`);
+    // Write to compressed JSON file
+    writeGz(outputDir, 'info.json', JSON.stringify(infoItems));
+    progress(`✓ Built ${infoItems.length} info items`);
   } catch (error) {
     console.error('Error building info:', error);
     process.exit(1);

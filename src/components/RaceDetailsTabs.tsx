@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 import RaceResultsDataTable from '@/components/RaceResultsDataTable';
 import type { RaceInfo, RaceResult } from '@/types/datatable';
 
@@ -104,7 +105,7 @@ export default function RaceDetailsTabs({ raceId, race, contents, hasGpx, result
             <div>
               {contents.trim() ? (
                 <div className="prose prose-slate max-w-none prose-headings:text-gray-900 dark:prose-invert dark:prose-headings:text-slate-100">
-                  <ReactMarkdown>{contents}</ReactMarkdown>
+                  <ReactMarkdown remarkPlugins={[remarkGfm]}>{contents}</ReactMarkdown>
                 </div>
               ) : (
                 <p className="text-sm text-gray-600 dark:text-slate-300">No additional content available for this race.</p>

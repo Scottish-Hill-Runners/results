@@ -1,21 +1,20 @@
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
+import { gunzipSync } from 'node:zlib';
+import { type AccordionItem } from '@/app/info/info-accordion';
 
-export interface InfoItem {
-  slug: string;
-  title: string;
-  content: string;
-}
+export type InfoItem = AccordionItem;
 
 let cachedInfoItems: InfoItem[] | null = null;
 
 async function readInfoItemsFromFile(): Promise<InfoItem[]> {
-  const filePath = path.join(process.cwd(), 'public', 'info.json');
-  const file = await fs.readFile(filePath, 'utf8');
+  const filePath = path.join(process.cwd(), 'public', 'info.json.gz');
+  const compressed = await fs.readFile(filePath);
+  const file = gunzipSync(compressed).toString('utf8');
   const infoItems = JSON.parse(file) as InfoItem[];
 
   if (!Array.isArray(infoItems)) {
-    throw new Error('info.json format is invalid');
+    throw new Error('info.json.gz format is invalid');
   }
 
   return infoItems;

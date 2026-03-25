@@ -8,6 +8,7 @@ const links = [
   { href: '/', label: 'Home' },
   { href: '/races', label: 'Races' },
   { href: '/info', label: 'Info' },
+  { href: '/epics', label: 'Epics' },
 ];
 
 export default function SiteHeader() {

@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 interface NewsItem {
   slug: string;
@@ -66,7 +67,7 @@ export default function NewsList({ items }: NewsListProps) {
             {expandedId === item.slug && (
               <div className="border-t border-gray-100 bg-gray-50 px-4 pb-4 dark:border-slate-800 dark:bg-slate-800/60">
                 <div className="prose prose-sm mt-4 max-w-none text-gray-700 dark:prose-invert dark:text-slate-200">
-                  <ReactMarkdown>{item.content}</ReactMarkdown>
+                  <ReactMarkdown remarkPlugins={[remarkGfm]}>{item.content}</ReactMarkdown>
                 </div>
               </div>
             )}

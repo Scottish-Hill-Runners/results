@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
+import { writeGz, progress } from './write-gz-util';
 
 interface NewsItem {
   slug: string;
@@ -17,7 +18,6 @@ function stripHtml(html: string): string {
 async function buildNews() {
   const newsDir = path.join(process.cwd(), 'news');
   const outputDir = path.join(process.cwd(), 'public');
-  const outputFile = path.join(outputDir, 'news.json');
 
   try {
     // Create output directory if it doesn't exist
@@ -27,16 +27,16 @@ async function buildNews() {
 
     // Check if news directory exists
     if (!fs.existsSync(newsDir)) {
-      console.warn('News directory not found, creating empty news.json');
-      fs.writeFileSync(outputFile, JSON.stringify([], null, 2));
+      console.warn('News directory not found, creating empty news.json.gz');
+      writeGz(outputDir, 'news.json', JSON.stringify([]));
       return;
     }
 
-    console.log(`Reading news from ${newsDir}...`);
+    progress(`Reading news from ${newsDir}...`);
 
     // Get all markdown files
     const files = fs.readdirSync(newsDir).filter((file) => file.endsWith('.md'));
-    console.log(`Found ${files.length} news files`);
+    progress(`Found ${files.length} news files`);
 
     // Parse and sort by date
     const newsItems: NewsItem[] = files
@@ -58,9 +58,9 @@ async function buildNews() {
       })
       .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
-    // Write to JSON file
-    fs.writeFileSync(outputFile, JSON.stringify(newsItems, null, 2));
-    console.log(`✓ Built ${newsItems.length} news items to ${outputFile}`);
+    // Write to compressed JSON file
+    writeGz(outputDir, 'news.json', JSON.stringify(newsItems));
+    progress(`✓ Built ${newsItems.length} news items`);
   } catch (error) {
     console.error('Error building news:', error);
     process.exit(1);

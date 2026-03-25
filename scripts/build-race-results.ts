@@ -2,7 +2,7 @@ import csv from 'csvtojson';
 import fs from 'fs';
 import matter from 'gray-matter';
 import path from 'path';
-import zlib from 'zlib';
+import { writeGz, progress } from './write-gz-util'
 import { surnameHash } from '@/lib/runner-name';
 import { RaceInfo, RaceResult } from '@/types/datatable';
 
@@ -21,10 +21,6 @@ type ClubInfo = {
   contact?: string;
   info: string;
 };
-
-function progress(message: string): void {
-  process.stdout.write(`\x1b[K${message}\r`);
-}
 
 function formatTime(time: string): string {
   const match = time.match(/(\d?\d)[:\.h](\d\d)(?:[:\.m](\d\d))?/i);
@@ -189,18 +185,6 @@ if (fs.existsSync(outputDir)) {
   progress(`Created output directory: ${outputDir}`);
 }
 
-function writeGz(fileName: string, data: string): void {
-  const outputFile = path.join(outputDir, `${fileName}.gz`);
-  fs.writeFileSync(outputFile, zlib.gzipSync(Buffer.from(data, 'utf8')));
-
-  const rawSize = Buffer.byteLength(data);
-  const gzipSize = fs.statSync(outputFile).size;
-  const compression = ((1 - gzipSize / rawSize) * 100).toFixed(1);
-  progress(
-    `✓ ${outputFile} (${rawSize}→${gzipSize}, ${compression}% compression)`
-  );
-}
-
 function writeYearData(allResults: RaceResult[]) {
   const byYear = groupBy(allResults, (r) => r.year.substring(0, 4));
   const yearInfo: YearInfo[] = [];
@@ -227,9 +211,9 @@ function writeYearData(allResults: RaceResult[]) {
       nResults: results.length,
       nRunners,
     });
-    writeGz(`${year}.json`, JSON.stringify(results));
+    writeGz(outputDir, `${year}.json`, JSON.stringify(results));
   });
-  writeGz('years.json', JSON.stringify(yearInfo));
+  writeGz(outputDir, 'years.json', JSON.stringify(yearInfo));
 }
 
 function writeRaceData(allResults: RaceResult[]) {
@@ -259,6 +243,7 @@ function writeRaceData(allResults: RaceResult[]) {
         `${outputDir}/${raceId}.gpx`
       );
     writeGz(
+      outputDir,
       `${raceId}.json`,
       JSON.stringify({
         info: info,
@@ -268,13 +253,13 @@ function writeRaceData(allResults: RaceResult[]) {
       })
     );
   });
-  writeGz('races.json', JSON.stringify(raceInfo));
+  writeGz(outputDir, 'races.json', JSON.stringify(raceInfo));
 }
 
 function writeRunnerData(allResults: RaceResult[]) {
   const byRunnerHash = groupBy(allResults, (r) => surnameHash(r.name) % 100);
   byRunnerHash.forEach((results, hash) => {
-    writeGz(`R-${hash}.json`, JSON.stringify(results));
+    writeGz(outputDir, `R-${hash}.json`, JSON.stringify(results));
   });
 }
 
