@@ -4,7 +4,10 @@
   "private": true,
   "scripts": {
     "prebuild": "node scripts/run-builds.mjs",
+    "content:sync": "node scripts/sync-content.mjs",
+    "content:build": "CONTENT_ROOT=content npm run prebuild",
     "validate:results": "tsx scripts/validate-results.ts",
+    "validate:results:content": "CONTENT_ROOT=content tsx scripts/validate-results.ts",
     "validate:results:strict": "tsx scripts/validate-results.ts --strict-filenames --warnings-as-errors",
     "dev": "next dev",
     "build": "npm run prebuild && next build",

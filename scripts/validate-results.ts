@@ -1,6 +1,7 @@
 import csv from 'csvtojson';
 import fs from 'node:fs';
 import path from 'node:path';
+import { contentPath } from './content-paths';
 
 type ValidationIssue = {
   file: string;
@@ -253,7 +254,7 @@ function printIssues(issues: ValidationIssue[], maxPrintedIssues: number): void 
 }
 
 async function validateAllResultsCsv(options: ValidationOptions): Promise<Summary> {
-  const racesDir = path.join(process.cwd(), 'races');
+  const racesDir = contentPath('races');
   const files = listCsvFiles(racesDir);
   const issues: ValidationIssue[] = [];
   let rowsChecked = 0;

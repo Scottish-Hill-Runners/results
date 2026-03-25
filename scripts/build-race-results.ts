@@ -3,6 +3,7 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import path from 'path';
 import { writeGz, progress } from './write-gz-util';
+import { contentPath, getContentRoot } from './content-paths';
 import { surnameHash } from '@/lib/runner-name';
 import { RaceInfo, RaceResult } from '@/types/datatable';
 
@@ -53,7 +54,7 @@ function readClubs(dir: string): ClubInfo[] {
   const clubs = [] as ClubInfo[];
   for (const club of fs.readdirSync(dir, { withFileTypes: true }))
     if (club.isFile() || path.extname(club.name) == '.md') {
-      const { data, content } = matter.read(`clubs/${club.name}`);
+      const { data, content } = matter.read(path.join(dir, club.name));
       clubs.push({
         name: data.name as string,
         aliases: (data.aka as string)?.split(',') ?? [],
@@ -66,7 +67,7 @@ function readClubs(dir: string): ClubInfo[] {
   return clubs;
 }
 
-const clubs = readClubs('clubs');
+const clubs = readClubs(contentPath('clubs'));
 const clubAliases = new Map<string, string>();
 for (const club of clubs)
   for (const aka of club.aliases)
@@ -157,9 +158,9 @@ async function readRaceResults(raceId: string): Promise<RaceResult[]> {
 
 async function readResults(): Promise<RaceResult[]> {
   return await Promise.all(
-    fs.readdirSync('races', { withFileTypes: true }).flatMap((raceId) => {
+    fs.readdirSync(contentPath('races'), { withFileTypes: true }).flatMap((raceId) => {
       if (!raceId.isDirectory()) return Promise.resolve([] as RaceResult[]);
-      return readRaceResults(`races/${raceId.name}`);
+      return readRaceResults(path.join(contentPath('races'), raceId.name));
     })
   ).then((result) => result.flat());
 }
@@ -223,7 +224,8 @@ function writeRaceData(allResults: RaceResult[]) {
   const encoder = new TextEncoder();
   const raceInfo: { [raceId: string]: RaceInfo } = {};
   byRaceId.forEach((results, raceId) => {
-    const { data, content } = matter.read(`races/${raceId}/index.md`);
+    const raceDir = path.join(contentPath('races'), raceId);
+    const { data, content } = matter.read(path.join(raceDir, 'index.md'));
     const info = {
       title: data.title,
       venue: data.venue,
@@ -238,10 +240,10 @@ function writeRaceData(allResults: RaceResult[]) {
         : undefined,
     };
     raceInfo[raceId] = info;
-    const hasGpx = fs.existsSync(`races/${raceId}/route.gpx`);
+    const hasGpx = fs.existsSync(path.join(raceDir, 'route.gpx'));
     if (hasGpx)
       fs.copyFileSync(
-        `races/${raceId}/route.gpx`,
+        path.join(raceDir, 'route.gpx'),
         `${outputDir}/${raceId}.gpx`
       );
     writeGz(
@@ -287,6 +289,7 @@ function summariseCategories(allResults: RaceResult[]): void {
 }
 
 async function main() {
+  progress(`Using content root: ${getContentRoot()}`);
   const allResults = await readResults();
   writeYearData(allResults);
   writeRaceData(allResults);

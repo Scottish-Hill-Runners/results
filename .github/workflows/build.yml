@@ -1,0 +1,38 @@
+name: Build
+
+on:
+  push:
+    branches: [main, next]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      CONTENT_REPO: Scottish-Hill-Runners/contents
+      CONTENT_REF: main
+      CONTENT_DIR: contents
+      CONTENT_ROOT: contents
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Sync external content
+        run: npm run content:sync
+
+      - name: Build content artifacts
+        run: npm run content:build
+
+      - name: Build app
+        run: npm run build
