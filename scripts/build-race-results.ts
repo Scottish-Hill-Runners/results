@@ -2,7 +2,7 @@ import csv from 'csvtojson';
 import fs from 'fs';
 import matter from 'gray-matter';
 import path from 'path';
-import { writeGz, progress } from './write-gz-util'
+import { writeGz, progress } from './write-gz-util';
 import { surnameHash } from '@/lib/runner-name';
 import { RaceInfo, RaceResult } from '@/types/datatable';
 
@@ -73,15 +73,17 @@ for (const club of clubs)
     clubAliases.set(aka.trim().toUpperCase(), club.name);
 
 function cleanCategory(category: string): string {
-  return category
-    .replace(/\s+/g, '')
-    .replace(
-      /(OVER)|(OPEN)|(MEN)|(MALE)|(VET)|(SEN(IOR)?)|(JNR)|(JUN(IOR)?)|(UNDER)/gi,
-      ''
-    )
-    .replace(/(WOMEN)|(FEMALE)|(LADY)/, 'F')
-    // Ignore V(=vet), U(=under-23?), J(=junior), (S=senior) attributions.
-    .replace(/[\WVUJS]/g, '');
+  return (
+    category
+      .replace(/\s+/g, '')
+      .replace(
+        /(OVER)|(OPEN)|(MEN)|(MALE)|(VET)|(SEN(IOR)?)|(JNR)|(JUN(IOR)?)|(UNDER)/gi,
+        ''
+      )
+      .replace(/(WOMEN)|(FEMALE)|(LADY)/, 'F')
+      // Ignore V(=vet), U(=under-23?), J(=junior), (S=senior) attributions.
+      .replace(/[\WVUJS]/g, '')
+  );
 }
 
 async function readRaceInstance(
@@ -96,7 +98,7 @@ async function readRaceInstance(
       // TODO: handle dead heats
       const updateCategoryPos = (category: string) => {
         const cat = cleanCategory(category);
-        const groups = cat.match(/([^\d]*)(\d+)?/)
+        const groups = cat.match(/([^\d]*)(\d+)?/);
         const s = groups?.[1]?.replace(/[WL]/, 'F') ?? 'M'; // W=Women, L=Lady.
         const sex = s.length == 0 ? 'M' : s;
         const age = Math.max(parseInt(groups?.[2] ?? '30'), 30);
@@ -257,6 +259,13 @@ function writeRaceData(allResults: RaceResult[]) {
 }
 
 function writeRunnerData(allResults: RaceResult[]) {
+  const uniqueRunners = new Set<string>();
+  allResults.forEach((r) => uniqueRunners.add(r.name));
+  writeGz(
+    outputDir,
+    'runners.json',
+    JSON.stringify(Array.from(uniqueRunners).sort((a, b) => a.localeCompare(b)))
+  );
   const byRunnerHash = groupBy(allResults, (r) => surnameHash(r.name) % 100);
   byRunnerHash.forEach((results, hash) => {
     writeGz(outputDir, `R-${hash}.json`, JSON.stringify(results));
