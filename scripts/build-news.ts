@@ -16,6 +16,18 @@ function stripHtml(html: string): string {
   return html.replace(/<[^>]*>/g, '').trim();
 }
 
+function collectMarkdownFiles(dir: string): string[] {
+  return fs.readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
+    const entryPath = path.join(dir, entry.name);
+
+    if (entry.isDirectory()) {
+      return collectMarkdownFiles(entryPath);
+    }
+
+    return entry.name.endsWith('.md') ? [entryPath] : [];
+  });
+}
+
 async function buildNews() {
   const newsDir = contentPath('news');
   const outputDir = path.join(process.cwd(), 'public');
@@ -35,14 +47,13 @@ async function buildNews() {
 
     progress(`Reading news from ${newsDir} (CONTENT_ROOT=${contentRoot()})...`);
 
-    // Get all markdown files
-    const files = fs.readdirSync(newsDir).filter((file) => file.endsWith('.md'));
+    // Get all markdown files, including year-based subdirectories.
+    const files = collectMarkdownFiles(newsDir);
     progress(`Found ${files.length} news files`);
 
     // Parse and sort by date
     const newsItems: NewsItem[] = files
-      .map((file) => {
-        const filePath = path.join(newsDir, file);
+      .map((filePath) => {
         const fileContent = fs.readFileSync(filePath, 'utf-8');
         const { data, content } = matter(fileContent);
 
@@ -50,7 +61,7 @@ async function buildNews() {
         const excerpt = stripHtml((data.excerpt as string) || '');
 
         return {
-          slug: file.replace('.md', ''),
+          slug: path.basename(filePath, '.md'),
           title: (data.title as string) || 'Untitled',
           date: (data.date as string) || new Date().toISOString().split('T')[0],
           excerpt: excerpt,

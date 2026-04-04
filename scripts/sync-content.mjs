@@ -2,14 +2,9 @@ import { execSync } from 'node:child_process';
 import { existsSync, rmSync } from 'node:fs';
 import path from 'node:path';
 
-const repo = process.env.CONTENT_REPO;
+const repo = process.env.CONTENT_REPO || 'Scottish-Hill-Runners/contents';
 const ref = process.env.CONTENT_REF || 'main';
 const targetDir = process.env.CONTENT_DIR || path.join('content');
-
-if (!repo) {
-  console.error('CONTENT_REPO is required, e.g. Scottish-Hill-Runners/contents');
-  process.exit(1);
-}
 
 const destination = path.resolve(process.cwd(), targetDir);
 
