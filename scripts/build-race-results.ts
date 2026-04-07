@@ -241,10 +241,16 @@ function writeRaceData(allResults: RaceResult[]) {
     };
     raceInfo[raceId] = info;
     const hasGpx = fs.existsSync(path.join(raceDir, 'route.gpx'));
+    const hasRaceMap = fs.existsSync(path.join(raceDir, 'race-map.webp'));
     if (hasGpx)
       fs.copyFileSync(
         path.join(raceDir, 'route.gpx'),
         `${outputDir}/${raceId}.gpx`
+      );
+    if (hasRaceMap)
+      fs.copyFileSync(
+        path.join(raceDir, 'race-map.webp'),
+        `${outputDir}/${raceId}-map.webp`
       );
     writeGz(
       outputDir,
@@ -254,6 +260,7 @@ function writeRaceData(allResults: RaceResult[]) {
         contents: content,
         results: results,
         hasGpx: hasGpx,
+        hasRaceMap: hasRaceMap,
       })
     );
   });

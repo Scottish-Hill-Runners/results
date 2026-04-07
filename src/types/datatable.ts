@@ -30,6 +30,7 @@ export interface RaceData {
   contents: string;
   results: RaceResult[];
   hasGpx: boolean;
+  hasRaceMap?: boolean;
 }
 
 export interface AllRaceData {

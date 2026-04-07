@@ -111,6 +111,7 @@ export default function RacePageClient({ raceId }: RacePageClientProps) {
               race={data.info}
               contents={data.contents}
               hasGpx={data.hasGpx}
+              hasRaceMap={Boolean(data.hasRaceMap)}
               results={data.results}
               resultsError={null}
             />

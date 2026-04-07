@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import RaceResultsDataTable from '@/components/RaceResultsDataTable';
@@ -11,19 +12,21 @@ interface RaceDetailsTabsProps {
   race: RaceInfo;
   contents: string;
   hasGpx: boolean;
+  hasRaceMap: boolean;
   results: RaceResult[];
   resultsError: string | null;
 }
 
 type TabKey = 'results' | 'info' | 'gpx';
 
-export default function RaceDetailsTabs({ raceId, race, contents, hasGpx, results, resultsError }: RaceDetailsTabsProps) {
+export default function RaceDetailsTabs({ raceId, race, contents, hasGpx, hasRaceMap, results, resultsError }: RaceDetailsTabsProps) {
   const [activeTab, setActiveTab] = useState<TabKey>('results');
-  const tabs: Array<{ key: TabKey; label: string }> = hasGpx
+  const hasRouteAssets = hasGpx || hasRaceMap;
+  const tabs: Array<{ key: TabKey; label: string }> = hasRouteAssets
     ? [
         { key: 'results', label: 'Results' },
         { key: 'info', label: 'Race info' },
-        { key: 'gpx', label: 'GPX' },
+        { key: 'gpx', label: 'Route' },
       ]
     : [
         { key: 'results', label: 'Results' },
@@ -114,15 +117,35 @@ export default function RaceDetailsTabs({ raceId, race, contents, hasGpx, result
           </div>
         )}
 
-        {activeTab === 'gpx' && hasGpx && (
+        {activeTab === 'gpx' && hasRouteAssets && (
           <div role="tabpanel" id="race-tab-panel-gpx" aria-labelledby="race-tab-gpx" className="space-y-3">
-            <p className="text-sm text-gray-700 dark:text-slate-300">A GPX route file is available for this race.</p>
-            <a
-              href={`/results/${encodeURIComponent(raceId)}.gpx`}
-              className="inline-block rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-700"
-            >
-              Download GPX
-            </a>
+            {hasRaceMap && (
+              <div className="space-y-2">
+                <p className="text-sm text-gray-700 dark:text-slate-300">Race map preview:</p>
+                <Image
+                  src={`/results/${encodeURIComponent(raceId)}-map.webp`}
+                  alt={`${race.title} race map`}
+                  width={1200}
+                  height={675}
+                  unoptimized
+                  className="w-full max-w-3xl rounded-lg border border-gray-200 shadow-sm dark:border-slate-700"
+                  loading="lazy"
+                />
+              </div>
+            )}
+            {hasGpx ? (
+              <>
+                <p className="text-sm text-gray-700 dark:text-slate-300">A GPX file is available for this race.</p>
+                <a
+                  href={`/results/${encodeURIComponent(raceId)}.gpx`}
+                  className="inline-block rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-700"
+                >
+                  Download Route
+                </a>
+              </>
+            ) : (
+              <p className="text-sm text-gray-700 dark:text-slate-300">No GPX file is available for this race.</p>
+            )}
           </div>
         )}
       </div>

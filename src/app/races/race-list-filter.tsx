@@ -15,9 +15,11 @@ export default function RaceListFilter({ races }: RaceListFilterProps) {
     const needle = query.trim().toLowerCase();
     if (!needle) return races;
     return races.filter(
-      (r) =>
-        r.title.toLowerCase().includes(needle) ||
-        r.venue.toLowerCase().includes(needle),
+      (r) => {
+        const title = (r.title ?? '').toLowerCase();
+        const venue = (r.venue ?? '').toLowerCase();
+        return title.includes(needle) || venue.includes(needle);
+      },
     );
   }, [races, query]);
 
@@ -47,8 +49,8 @@ export default function RaceListFilter({ races }: RaceListFilterProps) {
                 href={`/races/${encodeURIComponent(race.raceId)}`}
                 className="block rounded-lg border border-gray-200 bg-white px-4 py-3 text-blue-600 hover:bg-gray-50 dark:border-slate-800 dark:bg-slate-900 dark:hover:bg-slate-800"
               >
-                <div className="font-semibold dark:text-slate-100">{race.title}</div>
-                <div className="text-sm text-gray-600 dark:text-slate-300">{race.venue} • {race.distance}km</div>
+                <div className="font-semibold dark:text-slate-100">{race.title ?? race.raceId}</div>
+                <div className="text-sm text-gray-600 dark:text-slate-300">{race.venue ?? 'Unknown venue'} • {race.distance}km</div>
               </Link>
             </li>
           ))}
