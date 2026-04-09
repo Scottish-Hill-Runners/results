@@ -20,16 +20,27 @@ interface Filters {
   category: string;
 }
 
+const FILTER_VISIBILITY_STORAGE_KEY = 'raceResults.showFilters';
+
 export default function RaceResultsDataTable({ data, showRaceColumn = false, showRaceTitle = false }: DataTableProps) {
   const [sortColumn, setSortColumn] = useState<SortColumn>(showRaceColumn ? 'raceTitle' : 'year');
   const [sortDirection, setSortDirection] = useState<SortDirection>(showRaceColumn ? 'asc' : 'desc');
-  const [showFilters, setShowFilters] = useState(true);
+  const [showFilters, setShowFilters] = useState(() => {
+    if (typeof window === 'undefined') return true;
+    const savedValue = window.localStorage.getItem(FILTER_VISIBILITY_STORAGE_KEY);
+    return savedValue === 'true';
+  });
   const [filters, setFilters] = useState<Filters>({
     year: '',
     name: '',
     club: '',
     category: '',
   });
+
+  // Persist filter panel preference for future visits.
+  useEffect(() => {
+    window.localStorage.setItem(FILTER_VISIBILITY_STORAGE_KEY, showFilters ? 'true' : 'false');
+  }, [showFilters]);
 
   // Scroll to top when data changes
   useEffect(() => {
