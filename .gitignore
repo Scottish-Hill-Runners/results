@@ -45,3 +45,6 @@ convert_news.mjs
 
 # local content
 /contents
+
+scripts/club-frequency.ts
+.gitignore
