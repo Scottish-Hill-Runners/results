@@ -12,6 +12,19 @@ type CalendarEntry = {
   climb?: number;
 };
 
+function isPastRace(dateString: string): boolean {
+  const raceDate = new Date(`${dateString}T00:00:00`);
+
+  if (Number.isNaN(raceDate.getTime())) {
+    return false;
+  }
+
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+
+  return raceDate < today;
+}
+
 export default function CalendarPageClient() {
   const [entries, setEntries] = useState<CalendarEntry[] | null>(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -100,8 +113,16 @@ export default function CalendarPageClient() {
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-100 dark:divide-slate-800">
-                {entries.map((entry, index) => (
-                  <tr key={`${entry.Date}-${entry.raceId ?? entry.raceName}-${index}`} className="hover:bg-slate-50 dark:hover:bg-slate-800/60">
+                {entries.map((entry, index) => {
+                  const pastRace = isPastRace(entry.Date);
+
+                  return (
+                  <tr
+                    key={`${entry.Date}-${entry.raceId ?? entry.raceName}-${index}`}
+                    className={pastRace
+                      ? 'bg-stone-100 hover:bg-stone-200 dark:bg-slate-800/80 dark:hover:bg-slate-800'
+                      : 'bg-white hover:bg-slate-50 dark:bg-slate-900 dark:hover:bg-slate-800/60'}
+                  >
                     <td className="whitespace-nowrap px-4 py-3 text-sm text-slate-700 dark:text-slate-200">{entry.Date}</td>
                     <td className="px-4 py-3 text-sm text-slate-900 dark:text-slate-100">
                       {entry.raceId ? (
@@ -119,7 +140,7 @@ export default function CalendarPageClient() {
                       {entry.climb !== undefined ? `${entry.climb} m` : '—'}
                     </td>
                   </tr>
-                ))}
+                );})}
               </tbody>
             </table>
           </div>
