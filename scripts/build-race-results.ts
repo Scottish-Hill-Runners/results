@@ -342,11 +342,32 @@ function readChampionships(): ChampionshipData[] {
   return championships;
 }
 
-function writeChampionshipData(): void {
-  const championships = readChampionships();
+function writeChampionshipData(championships: ChampionshipData[]): void {
   progress(`Read ${championships.length} championships`);
   writeGz(path.join(process.cwd(), 'public'), 'championships.json', JSON.stringify(championships));
   progress('Wrote championships.json.gz');
+}
+
+function writeChampionshipResultsData(
+  allResults: RaceResult[],
+  championships: ChampionshipData[]
+): void {
+  for (const championship of championships) {
+    for (const [year, raceIds] of Object.entries(championship.years)) {
+      const raceSet = new Set(raceIds);
+      const results = allResults.filter(
+        (result) => result.year.startsWith(year) && raceSet.has(result.raceId)
+      );
+
+      writeGz(
+        outputDir,
+        `${championship.slug}-${year}.json`,
+        JSON.stringify(results)
+      );
+    }
+  }
+
+  progress('Wrote championship series-year result files');
 }
 
 async function writeCalendarData(): Promise<void> {
@@ -384,11 +405,13 @@ async function writeCalendarData(): Promise<void> {
 async function main() {
   progress(`Using content root: ${contentRoot()}`);
   const allResults = await readResults();
+  const championships = readChampionships();
   writeYearData(allResults);
   writeRaceData(allResults);
   writeRunnerData(allResults);
   summariseCategories(allResults);
-  writeChampionshipData();
+  writeChampionshipData(championships);
+  writeChampionshipResultsData(allResults, championships);
   await writeCalendarData();
 
   progress('Done\n');

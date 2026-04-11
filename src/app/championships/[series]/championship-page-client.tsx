@@ -113,6 +113,19 @@ export default function ChampionshipPageClient({ series }: ChampionshipPageClien
         ) : data ? (
           <div className="rounded-lg bg-white p-8 shadow-md dark:bg-slate-900">
             <h1 className="mb-2 text-4xl font-bold text-slate-900 dark:text-slate-100">{data.title}</h1>
+            <div className="mb-6 flex flex-wrap gap-2">
+              {Object.keys(data.years)
+                .sort((a, b) => Number(b) - Number(a))
+                .map((year) => (
+                  <Link
+                    key={year}
+                    href={`/championships/${encodeURIComponent(series)}/${encodeURIComponent(year)}`}
+                    className="inline-flex items-center rounded-md border border-slate-300 bg-white px-3 py-1 text-sm font-medium text-slate-700 hover:bg-slate-50 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200 dark:hover:bg-slate-800"
+                  >
+                    {year}
+                  </Link>
+                ))}
+            </div>
             <div className="prose dark:prose-invert prose-sm sm:prose-base max-w-none">
               <ReactMarkdown remarkPlugins={[remarkGfm]}>{data.contents}</ReactMarkdown>
             </div>

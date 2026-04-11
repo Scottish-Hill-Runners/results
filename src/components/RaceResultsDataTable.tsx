@@ -8,6 +8,7 @@ interface DataTableProps {
   data: Array<RaceResult & { raceTitle?: string }>;
   showRaceColumn?: boolean;
   showRaceTitle?: boolean;
+  showYearFilter?: boolean;
 }
 
 type SortColumn = 'raceTitle' | 'year' | 'position' | 'name' | 'club' | 'category' | 'time' | null;
@@ -22,7 +23,12 @@ interface Filters {
 
 const FILTER_VISIBILITY_STORAGE_KEY = 'raceResults.showFilters';
 
-export default function RaceResultsDataTable({ data, showRaceColumn = false, showRaceTitle = false }: DataTableProps) {
+export default function RaceResultsDataTable({
+  data,
+  showRaceColumn = false,
+  showRaceTitle = false,
+  showYearFilter = true,
+}: DataTableProps) {
   const [sortColumn, setSortColumn] = useState<SortColumn>(showRaceColumn ? 'raceTitle' : 'year');
   const [sortDirection, setSortDirection] = useState<SortDirection>(showRaceColumn ? 'asc' : 'desc');
   const [showFilters, setShowFilters] = useState(() => {
@@ -54,7 +60,7 @@ export default function RaceResultsDataTable({ data, showRaceColumn = false, sho
     // Apply filters
     result = result.filter((row) => {
       return (
-        (filters.year === '' || row.year.toString().includes(filters.year)) &&
+        (!showYearFilter || filters.year === '' || row.year.toString().includes(filters.year)) &&
         (filters.name === '' || row.name.toLowerCase().includes(filters.name.toLowerCase())) &&
         (filters.club === '' || row.club.toLowerCase().includes(filters.club.toLowerCase())) &&
         (filters.category === '' || (filters.category in row.categoryPos))
@@ -106,7 +112,7 @@ export default function RaceResultsDataTable({ data, showRaceColumn = false, sho
     });
 
     return result;
-  }, [data, filters, sortColumn, sortDirection]);
+  }, [data, filters, sortColumn, sortDirection, showYearFilter]);
 
   const handleSort = (column: SortColumn) => {
     if (sortColumn === column) {
@@ -142,7 +148,7 @@ export default function RaceResultsDataTable({ data, showRaceColumn = false, sho
     // Apply all filters EXCEPT category
     result = result.filter((row) => {
       return (
-        (filters.year === '' || row.year.includes(filters.year)) &&
+        (!showYearFilter || filters.year === '' || row.year.includes(filters.year)) &&
         (filters.name === '' || row.name.toLowerCase().includes(filters.name.toLowerCase())) &&
         (filters.club === '' || row.club.toLowerCase().includes(filters.club.toLowerCase()))
       );
@@ -154,7 +160,7 @@ export default function RaceResultsDataTable({ data, showRaceColumn = false, sho
       Object.keys(row.categoryPos).forEach((cat) => uniq.add(cat));
     });
     return Array.from(uniq).sort();
-  }, [data, filters.year, filters.name, filters.club]);
+  }, [data, filters.year, filters.name, filters.club, showYearFilter]);
 
   // Get unique years from data, sorted in ascending order
   const availableYears = useMemo(() => {
@@ -178,7 +184,7 @@ export default function RaceResultsDataTable({ data, showRaceColumn = false, sho
               >
                 {showFilters ? 'Hide Filters' : 'Show Filters'}
               </button>
-              {(filters.year || filters.name || filters.club || filters.category || sortColumn) && (
+              {((showYearFilter && filters.year) || filters.name || filters.club || filters.category || sortColumn) && (
                 <button
                   onClick={clearFilters}
                   className="rounded bg-red-100 px-3 py-1 text-xs text-red-700 transition-colors hover:bg-red-200 dark:bg-red-950/60 dark:text-red-300 dark:hover:bg-red-950"
@@ -190,18 +196,20 @@ export default function RaceResultsDataTable({ data, showRaceColumn = false, sho
           </div>
           {showFilters && (
             <div id="results-filter-controls" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-              <select
-                value={filters.year}
-                onChange={(e) => handleFilterChange('year', e.target.value)}
-                className="rounded border border-gray-300 bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-100"
-              >
-                <option value="">All Years</option>
-                {availableYears.map((year) => (
-                  <option key={year} value={year.toString()}>
-                    {year}
-                  </option>
-                ))}
-              </select>
+              {showYearFilter && (
+                <select
+                  value={filters.year}
+                  onChange={(e) => handleFilterChange('year', e.target.value)}
+                  className="rounded border border-gray-300 bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-100"
+                >
+                  <option value="">All Years</option>
+                  {availableYears.map((year) => (
+                    <option key={year} value={year.toString()}>
+                      {year}
+                    </option>
+                  ))}
+                </select>
+              )}
               <input
                 type="text"
                 placeholder="Filter by Name..."
