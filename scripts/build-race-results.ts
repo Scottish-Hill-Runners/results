@@ -23,6 +23,13 @@ type ClubInfo = {
   info: string;
 };
 
+type ChampionshipData = {
+  slug: string;
+  title: string;
+  contents: string;
+  years: { [year: string]: string[] };
+};
+
 function formatTime(time: string): string {
   const match = time.match(/(\d?\d)[:\.h](\d\d)(?:[:\.m](\d\d))?/i);
   if (match) {
@@ -295,6 +302,45 @@ function summariseCategories(allResults: RaceResult[]): void {
   progress(`Clean categories: ${Array.from(cleanCats.values()).join(', ')}\n`);
 }
 
+function readChampionships(): ChampionshipData[] {
+  const champDir = contentPath('championships');
+  const championships: ChampionshipData[] = [];
+
+  for (const file of fs.readdirSync(champDir, { withFileTypes: true })) {
+    if (!file.isFile() || path.extname(file.name) !== '.md') continue;
+
+    const { data, content } = matter.read(path.join(champDir, file.name));
+    const slug = path.basename(file.name, '.md');
+    const years: { [year: string]: string[] } = {};
+
+    // Extract year data from frontmatter
+    for (const [key, value] of Object.entries(data)) {
+      if (/^\d{4}$/.test(key) && typeof value === 'string') {
+        const raceIds = value === 'n/a' 
+          ? [] 
+          : value.split(';').map((id: string) => id.trim()).filter((id: string) => id);
+        years[key] = raceIds;
+      }
+    }
+
+    championships.push({
+      slug,
+      title: data.title as string,
+      contents: content,
+      years,
+    });
+  }
+
+  return championships;
+}
+
+function writeChampionshipData(): void {
+  const championships = readChampionships();
+  progress(`Read ${championships.length} championships`);
+  writeGz(path.join(process.cwd(), 'public'), 'championships.json', JSON.stringify(championships));
+  progress('Wrote championships.json.gz');
+}
+
 async function main() {
   progress(`Using content root: ${contentRoot()}`);
   const allResults = await readResults();
@@ -302,6 +348,7 @@ async function main() {
   writeRaceData(allResults);
   writeRunnerData(allResults);
   summariseCategories(allResults);
+  writeChampionshipData();
 
   progress('Done\n');
 }

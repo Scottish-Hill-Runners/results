@@ -14,6 +14,22 @@ export default async function Home() {
           </h1>
 
           <section className="w-full mt-8">
+            <h2 className="mb-4 text-2xl font-bold text-gray-900 dark:text-slate-50">
+              Browse
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <Link href="/races" className="p-4 rounded-lg border border-gray-200 bg-gray-50 hover:bg-blue-50 dark:border-slate-700 dark:bg-slate-900 dark:hover:bg-slate-800 transition-colors">
+                <h3 className="font-semibold text-gray-900 dark:text-slate-50">Races</h3>
+                <p className="text-sm text-gray-600 dark:text-slate-400">Explore hill races</p>
+              </Link>
+              <Link href="/championships" className="p-4 rounded-lg border border-gray-200 bg-gray-50 hover:bg-blue-50 dark:border-slate-700 dark:bg-slate-900 dark:hover:bg-slate-800 transition-colors">
+                <h3 className="font-semibold text-gray-900 dark:text-slate-50">Championships</h3>
+                <p className="text-sm text-gray-600 dark:text-slate-400">Championship series</p>
+              </Link>
+            </div>
+          </section>
+
+          <section className="w-full mt-8">
             <h2 className="mb-6 text-2xl font-bold text-gray-900 dark:text-slate-50">
               Recent News
             </h2>
