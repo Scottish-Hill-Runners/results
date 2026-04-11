@@ -12,6 +12,7 @@ export interface AccordionItem {
 
 interface InfoAccordionProps {
   items: AccordionItem[];
+  initialActiveSlug?: string;
 }
 
 function normalizeMarkdown(markdown: string): string {
@@ -62,8 +63,8 @@ const shiftedHeadingComponents: Components = {
   ),
 };
 
-export default function InfoAccordion({ items }: InfoAccordionProps) {
-  const [activeSlug, setActiveSlug] = useState<string | null>(null);
+export default function InfoAccordion({ items, initialActiveSlug }: InfoAccordionProps) {
+  const [activeSlug, setActiveSlug] = useState<string | null>(initialActiveSlug ?? null);
 
   return (
     <div className="space-y-4">

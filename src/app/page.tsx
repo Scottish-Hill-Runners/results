@@ -38,6 +38,10 @@ export default async function Home() {
                 <h3 className="font-semibold text-gray-900 dark:text-slate-50">Epics</h3>
                 <p className="text-sm text-gray-600 dark:text-slate-400">Long distance challenges</p>
               </Link>
+              <Link href="/safety" className="p-4 rounded-lg border border-gray-200 bg-gray-50 hover:bg-blue-50 dark:border-slate-700 dark:bg-slate-900 dark:hover:bg-slate-800 transition-colors">
+                <h3 className="font-semibold text-gray-900 dark:text-slate-50">Safety</h3>
+                <p className="text-sm text-gray-600 dark:text-slate-400">Safety rules and guidelines</p>
+              </Link>
             </div>
           </section>
 
