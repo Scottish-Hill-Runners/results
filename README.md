@@ -5,8 +5,7 @@
 This project can build from content stored in another repository.
 
 - `CONTENT_ROOT` controls where content folders are read from.
-- If unset, scripts read from the project root (legacy behaviour).
-- Supported content folders are `clubs`, `info`, `long-distance`, `news`, and `races`.
+- Supported content folders are `clubs`, `info`, `long-distance`, `news`, `championships`, and `races`.
 
 Example workflow using a separate repository:
 
@@ -50,10 +49,11 @@ project-root/
 
 The pre-build step generates compressed JSON files.
 
-- Each race has a `.json.gz` file containing the extracted contents of `index.md` and all the results for the race.
+- Each race has a `.json` file containing the extracted contents of `index.md` and all the results for the race.
 - A set of files `R-0` to `R-99` contain individual results, grouped by a hash of the runner surname.
 - A `years.json` file gives statistics of the number of runners in each category for each year.
 - `races.json` contains an entry for each race, with race details and organiser contact information.
+- `championships.json` contains an entry for each championship series.
 
 ```text
 ├── public/
@@ -61,10 +61,13 @@ The pre-build step generates compressed JSON files.
 │       └── ArrocharAlps.json.gz
 │       ├── BeinnResipol.json.gz
 │       ├── TwoBreweries.json.gz
+│       ├── ....json.gz
 │       └── R-0.json.gz
 │       └── R-1.json.gz
+│       └── R-....json.gz
 │       └── years.json.gz
 │       └── races.json.gz
+│       └── championships.json.gz
 └── ... other project files
 ```
 
@@ -101,4 +104,4 @@ This executes the `prebuild` script which:
 4. Parses the CSV data
 5. Creates a JSON object with year field added
 6. Compresses to `.json.gz` format
-7. Outputs to `public/results/<race-name>.json.gz`
+7. Outputs to `public/results/...`
