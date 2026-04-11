@@ -30,6 +30,14 @@ type ChampionshipData = {
   years: { [year: string]: string[] };
 };
 
+type CalendarEntry = {
+  Date: string;
+  raceName: string;
+  raceId?: string;
+  distance?: number;
+  climb?: number;
+};
+
 function formatTime(time: string): string {
   const match = time.match(/(\d?\d)[:\.h](\d\d)(?:[:\.m](\d\d))?/i);
   if (match) {
@@ -341,6 +349,38 @@ function writeChampionshipData(): void {
   progress('Wrote championships.json.gz');
 }
 
+async function writeCalendarData(): Promise<void> {
+  const rows = await csv().fromFile(contentPath('calendar.csv'));
+  const entries: CalendarEntry[] = rows.map((row) => {
+    const raceId = String(row.Race ?? '').trim();
+    const raceIndexPath = contentPath('races', raceId, 'index.md');
+    if (!raceId || !fs.existsSync(raceIndexPath)) {
+      return {
+        Date: String(row.Date ?? '').trim(),
+        raceName: raceId,
+      };
+    }
+
+    const { data } = matter.read(raceIndexPath);
+    const entry: CalendarEntry = {
+      Date: String(row.Date ?? '').trim(),
+      raceName: String(data.title ?? raceId),
+      raceId,
+    };
+
+    const distance = parseFloat(String(data.distance ?? ''));
+    if (!Number.isNaN(distance)) entry.distance = distance;
+
+    const climb = parseFloat(String(data.climb ?? ''));
+    if (!Number.isNaN(climb)) entry.climb = climb;
+
+    return entry;
+  });
+
+  writeGz(path.join(process.cwd(), 'public'), 'calendar.json', JSON.stringify(entries));
+  progress('Wrote calendar.json.gz');
+}
+
 async function main() {
   progress(`Using content root: ${contentRoot()}`);
   const allResults = await readResults();
@@ -349,6 +389,7 @@ async function main() {
   writeRunnerData(allResults);
   summariseCategories(allResults);
   writeChampionshipData();
+  await writeCalendarData();
 
   progress('Done\n');
 }
