@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
+import { parse as parseYaml } from 'yaml';
 import { contentPath, contentRoot } from './content-paths';
 import { writeGz, progress } from './write-gz-util';
 
@@ -60,14 +61,14 @@ function getContentSha(root: string): string {
 }
 
 function buildImageCollections() {
-  const sourceFile = contentPath('collections.json');
+  const sourceFile = contentPath('collections.yaml');
   const outputDir = path.join(process.cwd(), 'public');
 
   if (!fs.existsSync(outputDir))
     fs.mkdirSync(outputDir, { recursive: true });
 
   if (!fs.existsSync(sourceFile)) {
-    console.warn('collections.json not found at content root, creating empty image-collections.json.gz');
+    console.warn('collections.yaml not found at content root, creating empty image-collections.json.gz');
     writeGz(outputDir, 'image-collections.json', JSON.stringify({
       version: 1,
       collections: [],
@@ -82,7 +83,7 @@ function buildImageCollections() {
   const sha = getContentSha(contentRoot());
   const baseUrl = `https://raw.githubusercontent.com/${repo}/${sha}`;
 
-  const sourceData = JSON.parse(fs.readFileSync(sourceFile, 'utf-8')) as SourceCollectionsFile;
+  const sourceData = parseYaml(fs.readFileSync(sourceFile, 'utf-8')) as SourceCollectionsFile;
   const collections = (sourceData.collections || []).map((collection) => ({
     ...collection,
     items: (collection.items || []).map((item) => ({

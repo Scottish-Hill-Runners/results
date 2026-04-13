@@ -24,13 +24,13 @@ npm run validate:results:content
 
 ## Image collections output
 
-If `collections.json` exists at the synced content root, the build step now emits:
+If `collections.yaml` exists at the synced content root, the build step now emits:
 
 - `public/image-collections.json.gz`
 
 This payload preserves collection metadata and adds external image links for each item.
 
-- `sourcePath` keeps the original path from `collections.json`.
+- `sourcePath` keeps the original path from `collections.yaml`.
 - `imageUrl` points to `raw.githubusercontent.com` using the exact synced content commit SHA.
 
 The SHA-pinned URLs make output deterministic for a given content sync, instead of tracking a moving branch URL.
