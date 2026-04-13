@@ -40,7 +40,7 @@ export default async function Home() {
           {heroImages.length > 0 && (
             <section className="w-full mt-2">
               <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
-                {heroImages.map((item) => (
+                {heroImages.map((item, index) => (
                   <figure
                     key={item.sourcePath}
                     className="overflow-hidden rounded-lg border border-gray-200 bg-gray-100 dark:border-slate-700 dark:bg-slate-900"
@@ -50,6 +50,8 @@ export default async function Home() {
                       alt={filenameToAltText(item.sourcePath)}
                       width={640}
                       height={360}
+                      sizes="(min-width: 640px) 33vw, 50vw"
+                      priority={index === 0}
                       unoptimized
                       className="h-32 w-full object-cover sm:h-36"
                       referrerPolicy="no-referrer"
