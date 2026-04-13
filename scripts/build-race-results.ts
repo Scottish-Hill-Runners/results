@@ -88,18 +88,28 @@ for (const club of clubs)
   for (const aka of club.aliases)
     clubAliases.set(aka.trim().toUpperCase(), club.name);
 
-function cleanCategory(category: string): string {
-  return (
-    category
-      .replace(/\s+/g, '')
-      .replace(
-        /(OVER)|(OPEN)|(MEN)|(MALE)|(VET)|(SEN(IOR)?)|(JNR)|(JUN(IOR)?)|(UNDER)/gi,
-        ''
-      )
-      .replace(/(WOMEN)|(FEMALE)|(LADY)/, 'F')
-      // Ignore V(=vet), U(=under-23?), J(=junior), (S=senior) attributions.
-      .replace(/[\WVUJS]/g, '')
-  );
+function likelySex(category: string): string {
+  if (/W(OM[EA]N)?|F(EMALE)?|L(ADY)?|G(IRL)?/i.test(category))
+    return 'F';
+  if (/(NB?|NON[-\s]?BINARY)/i.test(category))
+    return 'NB';
+  return 'M';
+}
+
+function categoryAge(category: string): number | null {
+  const match = category.match(/(\d+)/);
+  if (match)
+    return Number.parseInt(match[1], 10);
+  if (/(JNR|JUN(IOR)?|U(NDER)?)/i.test(category))
+    return 23;
+  if (/(V(VET)?)/i.test(category))
+    return /S(EN(IOR)?)?/i.test(category) ? 50 : 40;
+  return null;
+}
+
+function isUnder23Result(result: RaceResult): boolean {
+  const age = categoryAge(result.category);
+  return age !== null && age <= 23;
 }
 
 async function readRaceInstance(
@@ -113,18 +123,20 @@ async function readRaceInstance(
       const posByCategory = {} as PosByCategory;
       // TODO: handle dead heats
       const updateCategoryPos = (category: string) => {
-        const cat = cleanCategory(category);
-        const groups = cat.match(/([^\d]*)(\d+)?/);
-        const s = groups?.[1]?.replace(/[WL]/, 'F') ?? 'M'; // W=Women, L=Lady.
-        const sex = s.length == 0 ? 'M' : s;
-        const age = Math.max(parseInt(groups?.[2] ?? '30'), 30);
+        const sex = likelySex(category);
+        const age = categoryAge(category) ?? 30; // Assume 30+ if no age info in category, to give a category position.
         const catPos = {} as PosByCategory;
-        let catIncr = 10;
-        for (let a = 30; a <= age; a += catIncr) {
-          const cat = sex + (a < 40 ? '' : a);
-          catPos[cat] = posByCategory[cat] = (posByCategory?.[cat] ?? 0) + 1;
-          if (a == 60) catIncr = 5;
-        }
+        if (age <= 23) {
+          catPos[sex + 23] = posByCategory[sex + 23] = (posByCategory?.[sex + 23] ?? 0) + 1;
+          catPos[sex] = posByCategory[sex] = (posByCategory?.[sex] ?? 0) + 1;
+        } else {
+          let catIncr = 10;
+          for (let a = 30; a <= age; a += catIncr) {
+            const cat = sex + (a < 40 ? '' : a);
+            catPos[cat] = posByCategory[cat] = (posByCategory?.[cat] ?? 0) + 1;
+            if (a == 60) catIncr = 5;
+          }
+       }
 
         return catPos;
       };
@@ -213,7 +225,7 @@ function writeYearData(allResults: RaceResult[]) {
     for (const r of results) {
       uniqueRaces.add(r.raceId);
       uniqueClubs.add(r.club);
-      const cat = cleanCategory(r.category);
+      const cat = likelySex(r.category) + (categoryAge(r.category) ?? '');
       const categorySet =
         uniqueRunners.get(cat) ||
         uniqueRunners.set(cat, new Set<string>()).get(cat)!;
@@ -359,10 +371,15 @@ function writeChampionshipResultsData(
         (result) => result.year.startsWith(year) && raceSet.has(result.raceId)
       );
 
+      const championshipResults =
+        championship.slug === 'Under23'
+          ? results.filter(isUnder23Result)
+          : results;
+
       writeGz(
         outputDir,
         `${championship.slug}-${year}.json`,
-        JSON.stringify(results)
+        JSON.stringify(championshipResults)
       );
     }
   }
