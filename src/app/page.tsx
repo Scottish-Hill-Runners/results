@@ -27,7 +27,7 @@ export default async function Home() {
     getRecentNewsItems(10),
     getImageCollectionById('homepage-decorative-draft'),
   ]);
-  const heroImages = shuffled(heroCollection?.items ?? []).slice(0, 12);
+  const heroImages = shuffled(heroCollection?.items ?? []).slice(0, 6);
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-slate-950">
@@ -39,9 +39,6 @@ export default async function Home() {
 
           {heroImages.length > 0 && (
             <section className="w-full mt-2">
-              <h2 className="mb-4 text-2xl font-bold text-gray-900 dark:text-slate-50">
-                In The Hills
-              </h2>
               <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
                 {heroImages.map((item) => (
                   <figure
