@@ -20,17 +20,17 @@ interface RaceDetailsTabsProps {
 type TabKey = 'results' | 'info' | 'gpx';
 
 export default function RaceDetailsTabs({ raceId, race, contents, hasGpx, hasRaceMap, results, resultsError }: RaceDetailsTabsProps) {
-  const [activeTab, setActiveTab] = useState<TabKey>('results');
+  const [activeTab, setActiveTab] = useState<TabKey>('info');
   const hasRouteAssets = hasGpx || hasRaceMap;
   const tabs: Array<{ key: TabKey; label: string }> = hasRouteAssets
     ? [
-        { key: 'results', label: 'Results' },
         { key: 'info', label: 'Race info' },
+        { key: 'results', label: 'Results' },
         { key: 'gpx', label: 'Route' },
       ]
     : [
-        { key: 'results', label: 'Results' },
         { key: 'info', label: 'Race info' },
+        { key: 'results', label: 'Results' },
       ];
 
   return (
