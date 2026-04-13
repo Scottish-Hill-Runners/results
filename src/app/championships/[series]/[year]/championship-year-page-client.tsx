@@ -163,6 +163,10 @@ function calculateRacePoints(series: string, row: RaceResult, winnerTimesByRace:
 }
 
 function meetsMinimumRequirements(series: string, categories: string[], events: RunnerEvent[]): boolean {
+  if (series === 'BogAndBurn') {
+    return events.length >= 6;
+  }
+
   if (series === 'LongClassics') {
     return events.length >= 5;
   }
@@ -180,7 +184,7 @@ function meetsMinimumRequirements(series: string, categories: string[], events: 
     return buckets.has('short') && buckets.has('medium') && buckets.has('long');
   }
 
-  // BogAndBurn and other series have no minimum requirement
+  // Other series have no minimum requirement
   return true;
 }
 
@@ -669,6 +673,11 @@ export default function ChampionshipYearPageClient({
                     {series === 'LongClassics' && (
                       <p className="text-sm text-slate-600 dark:text-slate-400">
                         Runners below minimum requirement (5 races)
+                      </p>
+                    )}
+                    {series === 'BogAndBurn' && (
+                      <p className="text-sm text-slate-600 dark:text-slate-400">
+                        Runners below minimum requirement (6 races)
                       </p>
                     )}
                     <div className="overflow-x-auto rounded-lg bg-white shadow-md dark:bg-slate-900">
