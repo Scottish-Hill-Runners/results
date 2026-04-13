@@ -5,7 +5,7 @@
 This project can build from content stored in another repository.
 
 - `CONTENT_ROOT` controls where content folders are read from.
-- Supported content folders are `clubs`, `info`, `long-distance`, `news`, `championships`, and `races`.
+- Supported content folders are `clubs`, `info`, `joining`, `juniors`, `long-distance`, `news`, `safety`, `championships`, and `races`.
 
 Example workflow using a separate repository:
 
@@ -21,6 +21,19 @@ Validation against synced content:
 ```sh
 npm run validate:results:content
 ```
+
+## Image collections output
+
+If `collections.json` exists at the synced content root, the build step now emits:
+
+- `public/image-collections.json.gz`
+
+This payload preserves collection metadata and adds external image links for each item.
+
+- `sourcePath` keeps the original path from `collections.json`.
+- `imageUrl` points to `raw.githubusercontent.com` using the exact synced content commit SHA.
+
+The SHA-pinned URLs make output deterministic for a given content sync, instead of tracking a moving branch URL.
 
 ## Overview
 

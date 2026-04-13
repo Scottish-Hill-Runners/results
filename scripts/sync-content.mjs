@@ -15,7 +15,12 @@ if (existsSync(destination)) {
 const repoUrl = repo.startsWith('http') ? repo : `https://github.com/${repo}.git`;
 
 console.log(`Cloning ${repoUrl}#${ref} into ${destination}`);
-execSync(`git clone --depth 1 --branch ${ref} ${repoUrl} "${destination}"`, {
+execSync(`git clone --depth 1 --filter=blob:none --sparse --branch ${ref} ${repoUrl} "${destination}"`, {
+  stdio: 'inherit',
+});
+
+execSync('git sparse-checkout set --no-cone "/*" "!/Pictures/" "!/Pictures/**"', {
+  cwd: destination,
   stdio: 'inherit',
 });
 
