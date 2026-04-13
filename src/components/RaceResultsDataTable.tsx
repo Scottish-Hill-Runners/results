@@ -9,6 +9,7 @@ interface DataTableProps {
   showRaceColumn?: boolean;
   showRaceTitle?: boolean;
   showYearFilter?: boolean;
+  initialNameFilter?: string;
 }
 
 type SortColumn = 'raceTitle' | 'year' | 'position' | 'name' | 'club' | 'category' | 'time' | null;
@@ -28,6 +29,7 @@ export default function RaceResultsDataTable({
   showRaceColumn = false,
   showRaceTitle = false,
   showYearFilter = true,
+  initialNameFilter = '',
 }: DataTableProps) {
   const [sortColumn, setSortColumn] = useState<SortColumn>(showRaceColumn ? 'raceTitle' : 'year');
   const [sortDirection, setSortDirection] = useState<SortDirection>(showRaceColumn ? 'asc' : 'desc');
@@ -38,7 +40,7 @@ export default function RaceResultsDataTable({
   });
   const [filters, setFilters] = useState<Filters>({
     year: '',
-    name: '',
+    name: initialNameFilter,
     club: '',
     category: '',
   });

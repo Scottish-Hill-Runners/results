@@ -384,7 +384,9 @@ export default function ChampionshipYearPageClient({
   const [results, setResults] = useState<RaceResult[] | null>(null);
   const [raceMetadata, setRaceMetadata] = useState<RaceMetadata>({});
   const [activeTab, setActiveTab] = useState<ChampionshipTab>('standings');
+  const [selectedRunnerName, setSelectedRunnerName] = useState('');
   const [selectedCategoryPos, setSelectedCategoryPos] = useState<string>('All');
+  const [selectedClub, setSelectedClub] = useState<string>('All');
   const [isLoading, setIsLoading] = useState(true);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [isNotFound, setIsNotFound] = useState(false);
@@ -397,6 +399,16 @@ export default function ChampionshipYearPageClient({
       Object.keys(row.categoryPos).forEach((cat) => categories.add(cat));
     });
     return Array.from(categories).sort();
+  }, [results]);
+
+  const availableClubs = useMemo(() => {
+    const clubs = new Set<string>();
+    results?.forEach((row) => {
+      if (row.club?.trim()) {
+        clubs.add(row.club.trim());
+      }
+    });
+    return Array.from(clubs).sort((a, b) => a.localeCompare(b));
   }, [results]);
 
   const filteredStandings = useMemo(() => {
@@ -479,14 +491,27 @@ export default function ChampionshipYearPageClient({
     });
   }, [selectedCategoryPos, allStandings, results, series, raceMetadata]);
 
+  const clubFilteredStandings = useMemo(() => {
+    if (selectedClub === 'All') {
+      return filteredStandings;
+    }
+
+    return filteredStandings.filter((runner) => runner.clubs.includes(selectedClub));
+  }, [filteredStandings, selectedClub]);
+
   const qualifiedStandings = useMemo(
-    () => filteredStandings?.filter((r) => r.isQualified) ?? [],
-    [filteredStandings]
+    () => clubFilteredStandings?.filter((r) => r.isQualified) ?? [],
+    [clubFilteredStandings]
   );
   const unqualifiedStandings = useMemo(
-    () => filteredStandings?.filter((r) => !r.isQualified) ?? [],
-    [filteredStandings]
+    () => clubFilteredStandings?.filter((r) => !r.isQualified) ?? [],
+    [clubFilteredStandings]
   );
+
+  const handleRunnerClick = (runnerName: string) => {
+    setSelectedRunnerName(runnerName);
+    setActiveTab('results');
+  };
 
   useEffect(() => {
     let isCancelled = false;
@@ -612,23 +637,44 @@ export default function ChampionshipYearPageClient({
 
             {activeTab === 'standings' ? (
               <div className="space-y-4">
-                <div className="flex items-center gap-4">
-                  <label htmlFor="categorypos-select" className="text-sm font-semibold text-slate-700 dark:text-slate-200">
-                    Category:
-                  </label>
-                  <select
-                    id="categorypos-select"
-                    value={selectedCategoryPos}
-                    onChange={(e) => setSelectedCategoryPos(e.target.value)}
-                    className="rounded border border-gray-300 bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-100"
-                  >
-                    <option value="All">All</option>
-                    {availableCategoryPos.map((cat) => (
-                      <option key={cat} value={cat}>
-                        {cat}
-                      </option>
-                    ))}
-                  </select>
+                <div className="flex flex-wrap items-center gap-4">
+                  <div className="flex items-center gap-2">
+                    <label htmlFor="categorypos-select" className="text-sm font-semibold text-slate-700 dark:text-slate-200">
+                      Category:
+                    </label>
+                    <select
+                      id="categorypos-select"
+                      value={selectedCategoryPos}
+                      onChange={(e) => setSelectedCategoryPos(e.target.value)}
+                      className="rounded border border-gray-300 bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-100"
+                    >
+                      <option value="All">All</option>
+                      {availableCategoryPos.map((cat) => (
+                        <option key={cat} value={cat}>
+                          {cat}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+
+                  <div className="flex items-center gap-2">
+                    <label htmlFor="club-select" className="text-sm font-semibold text-slate-700 dark:text-slate-200">
+                      Club:
+                    </label>
+                    <select
+                      id="club-select"
+                      value={selectedClub}
+                      onChange={(e) => setSelectedClub(e.target.value)}
+                      className="rounded border border-gray-300 bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-100"
+                    >
+                      <option value="All">All</option>
+                      {availableClubs.map((club) => (
+                        <option key={club} value={club}>
+                          {club}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
                 </div>
                 {qualifiedStandings.length > 0 && (
                   <div className="space-y-3">
@@ -646,7 +692,18 @@ export default function ChampionshipYearPageClient({
                         </thead>
                         <tbody className="divide-y divide-slate-100 dark:divide-slate-800">
                           {qualifiedStandings.map((runner) => (
-                          <tr key={runner.key} className="bg-white hover:bg-slate-50 dark:bg-slate-900 dark:hover:bg-slate-800/60">
+                          <tr
+                            key={runner.key}
+                            tabIndex={0}
+                            onClick={() => handleRunnerClick(runner.name)}
+                            onKeyDown={(event) => {
+                              if (event.key === 'Enter' || event.key === ' ') {
+                                event.preventDefault();
+                                handleRunnerClick(runner.name);
+                              }
+                            }}
+                            className="cursor-pointer bg-white hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-slate-900 dark:hover:bg-slate-800/60"
+                          >
                             <td className="whitespace-nowrap px-4 py-3 text-sm font-semibold text-slate-900 dark:text-slate-100">{runner.name}</td>
                             <td className="px-4 py-3 text-sm text-slate-700 dark:text-slate-200">{runner.clubs.join(', ')}</td>
                             <td className="px-4 py-3 text-sm text-slate-700 dark:text-slate-200">{runner.categories.join(', ')}</td>
@@ -693,7 +750,18 @@ export default function ChampionshipYearPageClient({
                         </thead>
                         <tbody className="divide-y divide-slate-100 dark:divide-slate-800">
                           {unqualifiedStandings.map((runner) => (
-                          <tr key={runner.key} className="bg-white hover:bg-slate-50 dark:bg-slate-900 dark:hover:bg-slate-800/60">
+                          <tr
+                            key={runner.key}
+                            tabIndex={0}
+                            onClick={() => handleRunnerClick(runner.name)}
+                            onKeyDown={(event) => {
+                              if (event.key === 'Enter' || event.key === ' ') {
+                                event.preventDefault();
+                                handleRunnerClick(runner.name);
+                              }
+                            }}
+                            className="cursor-pointer bg-white hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-slate-900 dark:hover:bg-slate-800/60"
+                          >
                             <td className="whitespace-nowrap px-4 py-3 text-sm font-semibold text-slate-900 dark:text-slate-100">{runner.name}</td>
                             <td className="px-4 py-3 text-sm text-slate-700 dark:text-slate-200">{runner.clubs.join(', ')}</td>
                             <td className="px-4 py-3 text-sm text-slate-700 dark:text-slate-200">{runner.categories.join(', ')}</td>
@@ -716,7 +784,12 @@ export default function ChampionshipYearPageClient({
                 )}
               </div>
             ) : (
-              <RaceResultsDataTable data={results} showRaceColumn showYearFilter={false} />
+              <RaceResultsDataTable
+                data={results}
+                showRaceColumn
+                showYearFilter={false}
+                initialNameFilter={selectedRunnerName}
+              />
             )}
           </div>
         ) : (
