@@ -1,4 +1,5 @@
 import RacePageClient from '@/app/races/[raceId]/race-page-client';
+import { getRaceImagesBySlug } from '@/lib/imageCollections';
 import { loadAllRaces } from '@/lib/results-data';
 import type { AllRaceData } from '@/types/datatable';
 
@@ -9,7 +10,8 @@ export async function generateStaticParams() {
 
 export default async function RacePage({ params }: { params: Promise<{ raceId: string }> }) {
   const { raceId } = await params;
+  const raceImages = await getRaceImagesBySlug(raceId);
 
-  return <RacePageClient raceId={raceId} />;
+  return <RacePageClient raceId={raceId} raceImages={raceImages} />;
 }
 

@@ -15,23 +15,37 @@ interface RaceDetailsTabsProps {
   hasRaceMap: boolean;
   results: RaceResult[];
   resultsError: string | null;
+  heroImage: { sourcePath: string; imageUrl: string } | null;
+  galleryImages: Array<{ sourcePath: string; imageUrl: string }>;
 }
 
-type TabKey = 'results' | 'info' | 'gpx';
+type TabKey = 'results' | 'info' | 'gpx' | 'gallery';
 
-export default function RaceDetailsTabs({ raceId, race, contents, hasGpx, hasRaceMap, results, resultsError }: RaceDetailsTabsProps) {
+function filenameToAltText(sourcePath: string): string {
+  const fileName = sourcePath.split('/').pop() ?? sourcePath;
+  const baseName = fileName.replace(/\.[^.]+$/, '');
+  return baseName
+    .replace(/[-_]+/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+export default function RaceDetailsTabs({ raceId, race, contents, hasGpx, hasRaceMap, results, resultsError, heroImage, galleryImages }: RaceDetailsTabsProps) {
   const [activeTab, setActiveTab] = useState<TabKey>('info');
   const hasRouteAssets = hasGpx || hasRaceMap;
-  const tabs: Array<{ key: TabKey; label: string }> = hasRouteAssets
-    ? [
-        { key: 'info', label: 'Race info' },
-        { key: 'results', label: 'Results' },
-        { key: 'gpx', label: 'Route' },
-      ]
-    : [
-        { key: 'info', label: 'Race info' },
-        { key: 'results', label: 'Results' },
-      ];
+  const hasGallery = galleryImages.length > 0;
+  const tabs: Array<{ key: TabKey; label: string }> = [
+    { key: 'info', label: 'Race info' },
+    { key: 'results', label: 'Results' },
+  ];
+
+  if (hasGallery) {
+    tabs.push({ key: 'gallery', label: 'Gallery' });
+  }
+
+  if (hasRouteAssets) {
+    tabs.push({ key: 'gpx', label: 'Route' });
+  }
 
   return (
     <section className="mb-6 rounded-lg border border-gray-200 bg-white shadow-md dark:border-slate-800 dark:bg-slate-900">
@@ -80,6 +94,22 @@ export default function RaceDetailsTabs({ raceId, race, contents, hasGpx, hasRac
             aria-labelledby="race-tab-info"
             className="space-y-6"
           >
+            {heroImage && (
+              <figure className="overflow-hidden rounded-xl border border-gray-200 bg-gray-100 shadow-sm dark:border-slate-700 dark:bg-slate-800">
+                <Image
+                  src={heroImage.imageUrl}
+                  alt={`${race.title} hero image: ${filenameToAltText(heroImage.sourcePath)}`}
+                  width={1600}
+                  height={900}
+                  sizes="(min-width: 1024px) 900px, 100vw"
+                  unoptimized
+                  priority
+                  referrerPolicy="no-referrer"
+                  className="h-56 w-full object-cover sm:h-72"
+                />
+              </figure>
+            )}
+
             <div className="grid grid-cols-1 gap-2 text-sm text-gray-700 dark:text-slate-300 sm:grid-cols-2">
               <p><span className="font-semibold text-gray-900 dark:text-slate-100">Venue:</span> {race.venue}</p>
               <p><span className="font-semibold text-gray-900 dark:text-slate-100">Distance:</span> {race.distance} km</p>
@@ -113,6 +143,32 @@ export default function RaceDetailsTabs({ raceId, race, contents, hasGpx, hasRac
               ) : (
                 <p className="text-sm text-gray-600 dark:text-slate-300">No additional content available for this race.</p>
               )}
+            </div>
+          </div>
+        )}
+
+        {activeTab === 'gallery' && hasGallery && (
+          <div role="tabpanel" id="race-tab-panel-gallery" aria-labelledby="race-tab-gallery" className="space-y-3">
+            <p className="text-sm text-gray-700 dark:text-slate-300">Photos from {race.title}.</p>
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              {galleryImages.map((image, index) => (
+                <figure
+                  key={`${image.sourcePath}-${index}`}
+                  className="overflow-hidden rounded-lg border border-gray-200 bg-gray-100 dark:border-slate-700 dark:bg-slate-800"
+                >
+                  <Image
+                    src={image.imageUrl}
+                    alt={`${race.title} gallery image ${index + 1}: ${filenameToAltText(image.sourcePath)}`}
+                    width={800}
+                    height={600}
+                    sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 100vw"
+                    unoptimized
+                    loading="lazy"
+                    referrerPolicy="no-referrer"
+                    className="h-48 w-full object-cover"
+                  />
+                </figure>
+              ))}
             </div>
           </div>
         )}

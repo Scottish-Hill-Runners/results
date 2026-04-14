@@ -19,6 +19,19 @@ export interface ImageCollection {
   items: ImageCollectionItem[];
 }
 
+export interface RaceImageItem {
+  path: string;
+  sourcePath: string;
+  imageUrl: string;
+  confidence?: string;
+  source?: string;
+}
+
+export interface RaceImagesBySlugEntry {
+  hero: RaceImageItem[];
+  gallery: RaceImageItem[];
+}
+
 interface ImageCollectionsPayload {
   version: number;
   generatedAt?: string;
@@ -29,6 +42,7 @@ interface ImageCollectionsPayload {
     missing?: boolean;
   };
   collections: ImageCollection[];
+  raceImagesBySlug?: Record<string, RaceImagesBySlugEntry>;
 }
 
 let cachedPayload: ImageCollectionsPayload | null = null;
@@ -64,4 +78,22 @@ export async function getImageCollectionsPayload(): Promise<ImageCollectionsPayl
 export async function getImageCollectionById(id: string): Promise<ImageCollection | null> {
   const payload = await getImageCollectionsPayload();
   return payload.collections.find((collection) => collection.id === id) ?? null;
+}
+
+export async function getRaceImagesBySlug(slug: string): Promise<RaceImagesBySlugEntry | null> {
+  const payload = await getImageCollectionsPayload();
+  const raceImagesBySlug = payload.raceImagesBySlug;
+
+  if (!raceImagesBySlug) {
+    return null;
+  }
+
+  if (raceImagesBySlug[slug]) {
+    return raceImagesBySlug[slug];
+  }
+
+  const lowerSlug = slug.toLowerCase();
+  const matchedKey = Object.keys(raceImagesBySlug).find((key) => key.toLowerCase() === lowerSlug);
+
+  return matchedKey ? raceImagesBySlug[matchedKey] : null;
 }

@@ -8,9 +8,13 @@ import type { RaceData } from '@/types/datatable';
 
 interface RacePageClientProps {
   raceId: string;
+  raceImages: {
+    hero: Array<{ sourcePath: string; imageUrl: string }>;
+    gallery: Array<{ sourcePath: string; imageUrl: string }>;
+  } | null;
 }
 
-export default function RacePageClient({ raceId }: RacePageClientProps) {
+export default function RacePageClient({ raceId, raceImages }: RacePageClientProps) {
   const [data, setData] = useState<RaceData | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
@@ -114,6 +118,8 @@ export default function RacePageClient({ raceId }: RacePageClientProps) {
               hasRaceMap={Boolean(data.hasRaceMap)}
               results={data.results}
               resultsError={null}
+              heroImage={raceImages?.hero?.[0] ?? null}
+              galleryImages={raceImages?.gallery ?? []}
             />
           </>
         ) : (

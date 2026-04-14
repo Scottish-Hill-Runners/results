@@ -20,9 +20,21 @@ interface SourceCollection {
   items: SourceItem[];
 }
 
+interface SourceRaceImageItem {
+  path: string;
+  confidence?: string;
+  source?: string;
+}
+
+interface SourceRaceImagesBySlugEntry {
+  hero?: SourceRaceImageItem[];
+  gallery?: SourceRaceImageItem[];
+}
+
 interface SourceCollectionsFile {
   version?: number;
   collections: SourceCollection[];
+  raceImagesBySlug?: Record<string, SourceRaceImagesBySlugEntry>;
 }
 
 function encodeRepoPath(repoPath: string): string {
@@ -93,6 +105,24 @@ function buildImageCollections() {
     })),
   }));
 
+  const raceImagesBySlug = Object.fromEntries(
+    Object.entries(sourceData.raceImagesBySlug || {}).map(([slug, entry]) => [
+      slug,
+      {
+        hero: (entry.hero || []).map((item) => ({
+          ...item,
+          sourcePath: item.path,
+          imageUrl: `${baseUrl}/${encodeRepoPath(item.path)}`,
+        })),
+        gallery: (entry.gallery || []).map((item) => ({
+          ...item,
+          sourcePath: item.path,
+          imageUrl: `${baseUrl}/${encodeRepoPath(item.path)}`,
+        })),
+      },
+    ]),
+  );
+
   const payload = {
     version: sourceData.version || 1,
     generatedAt: new Date().toISOString(),
@@ -102,6 +132,7 @@ function buildImageCollections() {
       baseUrl,
     },
     collections,
+    raceImagesBySlug,
   };
 
   writeGz(outputDir, 'image-collections.json', JSON.stringify(payload));
