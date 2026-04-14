@@ -21,7 +21,7 @@
     "csvtojson": "^2.0.14",
     "gray-matter": "^4.0.3",
     "markdown-it": "^14.1.0",
-    "next": "^16.2.1",
+    "next": "^16.2.3",
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "react-markdown": "^10.1.0",
@@ -29,7 +29,6 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
-    "yaml": "^2.7.1",
     "@types/markdown-it": "^14.1.2",
     "@types/node": "^20",
     "@types/react": "^19",
@@ -41,6 +40,7 @@
     "tailwindcss": "^4",
     "tsx": "^4",
     "turndown": "^7.1.1",
-    "typescript": "^5"
+    "typescript": "^5",
+    "yaml": "^2.7.1"
   }
 }
