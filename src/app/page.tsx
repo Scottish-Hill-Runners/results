@@ -63,9 +63,6 @@ export default async function Home() {
           )}
 
           <section className="w-full mt-8">
-            <h2 className="mb-4 text-2xl font-bold text-gray-900 dark:text-slate-50">
-              Browse
-            </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               <Link href="/races" className="p-4 rounded-lg border border-gray-200 bg-gray-50 hover:bg-blue-50 dark:border-slate-700 dark:bg-slate-900 dark:hover:bg-slate-800 transition-colors">
                 <h3 className="font-semibold text-gray-900 dark:text-slate-50">Races</h3>
