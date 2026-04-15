@@ -109,7 +109,7 @@ export default function RacePageClient({ raceId, raceImages }: RacePageClientPro
           </div>
         ) : data ? (
           <>
-            <h1 className="mb-4 text-4xl font-bold text-gray-900 dark:text-slate-50">{data.info.title} Results</h1>
+            <h1 className="mb-4 text-4xl font-bold text-gray-900 dark:text-slate-50">{data.info.title}</h1>
             <RaceDetailsTabs
               raceId={raceId}
               race={data.info}
