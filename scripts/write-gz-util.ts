@@ -3,7 +3,8 @@ import path from 'path';
 import zlib from 'zlib';
 
 export function progress(message: string): void {
-  process.stdout.write(`\x1b[K${message}\r`);
+  if ('VERBOSE' in process.env)
+    process.stdout.write(`\x1b[K${message}\r`);
 }
 
 export function writeGz(outputDir: string, fileName: string, data: string): void {
