@@ -13,6 +13,12 @@ export interface YearRaceResult extends RaceResult {
   raceTitle: string;
 }
 
+export interface ResultsFocusContext {
+  raceId: string;
+  year: string;
+  source: 'selected-row' | 'table-visible';
+}
+
 export interface RaceInfo {
   title: string;
   venue: string;

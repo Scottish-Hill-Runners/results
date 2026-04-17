@@ -2,7 +2,8 @@
 
 import { useEffect, useState, useMemo } from 'react';
 import Link from 'next/link';
-import { RaceResult } from '@/types/datatable';
+import { RaceResult, ResultsFocusContext } from '@/types/datatable';
+import { normalizeResultYear } from '@/lib/results-correction-link';
 
 interface DataTableProps {
   data: Array<RaceResult & { raceTitle?: string }>;
@@ -10,6 +11,8 @@ interface DataTableProps {
   showRaceTitle?: boolean;
   showYearFilter?: boolean;
   initialNameFilter?: string;
+  enableRowFocus?: boolean;
+  onFocusContextChange?: (context: ResultsFocusContext | null) => void;
 }
 
 type SortColumn = 'raceTitle' | 'year' | 'position' | 'name' | 'club' | 'category' | 'time' | null;
@@ -30,6 +33,8 @@ export default function RaceResultsDataTable({
   showRaceTitle = false,
   showYearFilter = true,
   initialNameFilter = '',
+  enableRowFocus = false,
+  onFocusContextChange,
 }: DataTableProps) {
   const [sortColumn, setSortColumn] = useState<SortColumn>(showRaceColumn ? 'raceTitle' : 'year');
   const [sortDirection, setSortDirection] = useState<SortDirection>(showRaceColumn ? 'asc' : 'desc');
@@ -44,6 +49,15 @@ export default function RaceResultsDataTable({
     club: '',
     category: '',
   });
+  const [selectedRowKey, setSelectedRowKey] = useState<string | null>(null);
+
+  const getRowKey = (row: RaceResult & { raceTitle?: string }) => [
+    row.raceId,
+    row.year,
+    row.position,
+    row.name,
+    row.time,
+  ].join('|');
 
   // Persist filter panel preference for future visits.
   useEffect(() => {
@@ -169,6 +183,41 @@ export default function RaceResultsDataTable({
     const uniqueYears = Array.from(new Set(data.map((row) => row.year.substring(0, 4)))).sort((a, b) => b.localeCompare(a));
     return uniqueYears;
   }, [data]);
+
+  const selectedRow = useMemo(() => {
+    if (!enableRowFocus || !selectedRowKey) return null;
+    return processedData.find((row) => getRowKey(row) === selectedRowKey) ?? null;
+  }, [enableRowFocus, processedData, selectedRowKey]);
+
+  const activeFocusContext = useMemo<ResultsFocusContext | null>(() => {
+    if (!onFocusContextChange || !enableRowFocus) return null;
+
+    if (selectedRow) {
+      const normalizedYear = normalizeResultYear(selectedRow.year);
+      if (!normalizedYear) return null;
+      return {
+        raceId: selectedRow.raceId,
+        year: normalizedYear,
+        source: 'selected-row',
+      };
+    }
+
+    const firstVisibleRow = processedData[0];
+    if (!firstVisibleRow) return null;
+    const normalizedYear = normalizeResultYear(firstVisibleRow.year);
+    if (!normalizedYear) return null;
+
+    return {
+      raceId: firstVisibleRow.raceId,
+      year: normalizedYear,
+      source: 'table-visible',
+    };
+  }, [enableRowFocus, onFocusContextChange, processedData, selectedRow]);
+
+  useEffect(() => {
+    if (!onFocusContextChange) return;
+    onFocusContextChange(activeFocusContext);
+  }, [activeFocusContext, onFocusContextChange]);
 
   return (
     <div className="space-y-4">
@@ -309,11 +358,30 @@ export default function RaceResultsDataTable({
               </thead>
               <tbody>
                 {processedData.length > 0 ? (
-                  processedData.map((row, index) => (
+                  processedData.map((row, index) => {
+                    const rowKey = getRowKey(row);
+                    const isSelected = enableRowFocus && selectedRowKey === rowKey;
+                    const zebraTone = index % 2 === 0 ? 'bg-white dark:bg-slate-900' : 'bg-gray-50 dark:bg-slate-950';
+
+                    return (
                     <tr
                       key={index}
-                      className={`border-b border-gray-200 transition-colors hover:bg-blue-50 dark:border-slate-800 dark:hover:bg-slate-800 ${
-                        index % 2 === 0 ? 'bg-white dark:bg-slate-900' : 'bg-gray-50 dark:bg-slate-950'
+                      tabIndex={enableRowFocus ? 0 : -1}
+                      onClick={(event) => {
+                        if (!enableRowFocus) return;
+                        if ((event.target as HTMLElement).closest('a')) return;
+                        setSelectedRowKey(rowKey);
+                      }}
+                      onKeyDown={(event) => {
+                        if (!enableRowFocus) return;
+                        if (event.key !== 'Enter' && event.key !== ' ') return;
+                        event.preventDefault();
+                        setSelectedRowKey(rowKey);
+                      }}
+                      className={`border-b border-gray-200 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 dark:border-slate-800 ${
+                        isSelected
+                          ? 'bg-blue-100 hover:bg-blue-100 dark:bg-blue-950/60 dark:hover:bg-blue-950/60'
+                          : `${zebraTone} hover:bg-blue-50 dark:hover:bg-slate-800`
                       }`}
                     >
                       {showRaceColumn && (
@@ -360,7 +428,8 @@ export default function RaceResultsDataTable({
                       <td className="hidden px-2 py-4 text-sm text-gray-800 md:table-cell md:px-6 dark:text-slate-200">{row.category}</td>
                       <td className="px-2 py-4 font-mono text-sm font-semibold text-gray-800 sm:px-6 dark:text-slate-200">{row.time}</td>
                     </tr>
-                  ))
+                  );
+                  })
                 ) : (
                   <tr>
                     <td colSpan={showRaceColumn ? 6 : 6} className="px-6 py-4 text-center text-sm text-gray-500 dark:text-slate-400">
