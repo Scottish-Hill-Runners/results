@@ -1,6 +1,7 @@
 import Link from 'next/link';
-import InfoAccordion from '@/app/info/info-accordion';
 import { getEpicItems } from '@/lib/epics';
+
+export { getEpicItems };
 
 export default async function EpicsPage() {
   const epicItems = await getEpicItems();
@@ -22,7 +23,18 @@ export default async function EpicsPage() {
       {epicItems.length === 0 ? (
         <p className="text-slate-600 dark:text-slate-300">No epics available.</p>
       ) : (
-        <InfoAccordion items={epicItems} />
+        <ul className="space-y-2">
+          {epicItems.map((item) => (
+            <li key={item.slug}>
+              <Link
+                href={`/epics/${item.slug}`}
+                className="text-blue-600 hover:text-blue-800 hover:underline dark:text-blue-400 dark:hover:text-blue-300"
+              >
+                {item.title}
+              </Link>
+            </li>
+          ))}
+        </ul>
       )}
     </div>
   );

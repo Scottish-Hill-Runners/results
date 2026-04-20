@@ -1,10 +1,17 @@
 import Link from 'next/link';
-import InfoAccordion from '@/app/info/info-accordion';
-import { getInfoItems } from '@/lib/info';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+import { getInfoItems, getAllInfoItems } from '@/lib/info';
 
-export default async function InfoPage() {
-  const infoItems = await getInfoItems();
+export { getAllInfoItems };
 
+export async function InfoPageContent({ slug = 'index' }: { slug?: string }) {
+  const allItems = await getAllInfoItems();
+  const infoPage = allItems.find((item) => item.slug === slug) ?? null;
+
+
+
+  // For other pages, show as a detail view
   return (
     <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6 lg:px-8">
       <nav aria-label="Breadcrumb" className="mb-4 text-sm text-slate-500 dark:text-slate-400">
@@ -13,17 +20,36 @@ export default async function InfoPage() {
             <Link href="/" className="text-blue-600 hover:text-blue-800">Home</Link>
           </li>
           <li aria-hidden="true">/</li>
-          <li className="font-semibold text-slate-900 dark:text-slate-100" aria-current="page">
-            Info
+          <li>
+            <Link href="/info" className="text-blue-600 hover:text-blue-800">Info</Link>
           </li>
+          {slug !== 'index' && (
+            <>
+              <li aria-hidden="true">/</li>
+              <li className="font-semibold text-slate-900 dark:text-slate-100" aria-current="page">
+                {infoPage?.title ?? slug}
+              </li>
+            </>
+          )}
         </ol>
       </nav>
-      <h1 className="mb-8 text-3xl font-bold text-slate-900 dark:text-slate-50">Information</h1>
-      {infoItems.length === 0 ? (
-        <p className="text-slate-600 dark:text-slate-300">No information available.</p>
+
+      {infoPage === null ? (
+        <p className="text-slate-600 dark:text-slate-300">Page not found.</p>
       ) : (
-        <InfoAccordion items={infoItems} />
+        <article className="rounded-xl border border-slate-200 bg-white p-6 dark:border-slate-800 dark:bg-slate-900 sm:p-8">
+          <h1 className="mb-8 text-3xl font-bold text-slate-900 dark:text-slate-50">{infoPage.title}</h1>
+          <div className="prose prose-slate max-w-none prose-headings:font-semibold prose-li:marker:text-slate-500 dark:prose-invert dark:prose-headings:text-slate-50 dark:prose-li:marker:text-slate-400">
+            <ReactMarkdown remarkPlugins={[remarkGfm]}>
+              {infoPage.content.replace(/\u00a0/g, ' ')}
+            </ReactMarkdown>
+          </div>
+        </article>
       )}
     </div>
   );
+}
+
+export default async function InfoPage() {
+  return <InfoPageContent />;
 }

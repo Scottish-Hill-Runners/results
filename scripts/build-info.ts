@@ -10,12 +10,27 @@ interface InfoItem {
   content: string;
 }
 
+function extractTitle(markdown: string): string {
+  const match = markdown.match(/^#\s+(.+)$/m);
+  return match ? match[1].trim() : 'Untitled';
+}
+
+/** Recursively collect all .md files under `dir`, returning slug (relative path without .md) and filePath. */
+function collectFiles(dir: string, base = ''): { slug: string; filePath: string }[] {
+  return fs.readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
+    const fullPath = path.join(dir, entry.name);
+    const rel = base ? `${base}/${entry.name}` : entry.name;
+    if (entry.isDirectory()) return collectFiles(fullPath, rel);
+    if (entry.name.endsWith('.md')) return [{ slug: rel.replace(/\.md$/, ''), filePath: fullPath }];
+    return [];
+  });
+}
+
 function buildInfo() {
   const infoDir = contentPath('info');
   const outputDir = path.join(process.cwd(), 'public');
 
   try {
-    // Check if info directory exists
     if (!fs.existsSync(infoDir)) {
       console.warn('Info directory not found, creating empty info.json.gz');
       writeGz(outputDir, 'info.json', JSON.stringify([]));
@@ -24,19 +39,24 @@ function buildInfo() {
 
     progress(`Reading info from ${infoDir} (CONTENT_ROOT=${contentRoot()})...`);
 
-    // Get all markdown files
-    const files = fs.readdirSync(infoDir).filter((file) => file.endsWith('.md'));
-    progress(`Found ${files.length} info files`);
+    // Collect all .md files recursively
+    const entries = collectFiles(infoDir).sort((a, b) => {
+      // index at top level should come first
+      if (a.slug === 'index') return -1;
+      if (b.slug === 'index') return 1;
+      return a.slug.localeCompare(b.slug);
+    });
+
+    progress(`Found ${entries.length} info files`);
 
     // Parse files
-    const infoItems: InfoItem[] = files.map((file) => {
-      const filePath = path.join(infoDir, file);
+    const infoItems: InfoItem[] = entries.map(({ slug, filePath }) => {
       const fileContent = fs.readFileSync(filePath, 'utf-8');
       const { data, content } = matter(fileContent);
 
       return {
-        slug: file.replace('.md', ''),
-        title: (data.title as string) || 'Untitled',
+        slug,
+        title: ((data.title as string | undefined)?.trim()) || extractTitle(content),
         content: content.replace(/\u00a0/g, ' '),
       };
     });

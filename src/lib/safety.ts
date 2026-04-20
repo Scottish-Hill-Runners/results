@@ -5,19 +5,25 @@ import { type AccordionItem } from '@/app/info/info-accordion';
 
 export type SafetyItem = AccordionItem;
 
+interface RawInfoItem {
+  slug: string;
+  title: string;
+  content: string;
+}
+
 let cachedSafetyItems: SafetyItem[] | null = null;
 
-async function readSafetyItemsFromFile(): Promise<SafetyItem[]> {
-  const filePath = path.join(process.cwd(), 'public', 'safety.json.gz');
+async function readInfoItemsFromFile(): Promise<RawInfoItem[]> {
+  const filePath = path.join(process.cwd(), 'public', 'info.json.gz');
   const compressed = await fs.readFile(filePath);
   const file = gunzipSync(compressed).toString('utf8');
-  const safetyItems = JSON.parse(file) as SafetyItem[];
+  const items = JSON.parse(file) as RawInfoItem[];
 
-  if (!Array.isArray(safetyItems)) {
-    throw new Error('safety.json.gz format is invalid');
+  if (!Array.isArray(items)) {
+    throw new Error('info.json.gz format is invalid');
   }
 
-  return safetyItems;
+  return items;
 }
 
 export async function getSafetyItems(): Promise<SafetyItem[]> {
@@ -26,9 +32,17 @@ export async function getSafetyItems(): Promise<SafetyItem[]> {
       return cachedSafetyItems;
     }
 
-    const safetyItems = await readSafetyItemsFromFile();
-    cachedSafetyItems = safetyItems;
+    const allItems = await readInfoItemsFromFile();
+    // Filter items that start with "safety/" and strip the prefix
+    const safetyItems = allItems
+      .filter((item) => item.slug.startsWith('safety/'))
+      .map((item) => ({
+        slug: item.slug.replace(/^safety\//, ''),
+        title: item.title,
+        content: item.content,
+      }));
 
+    cachedSafetyItems = safetyItems;
     return safetyItems;
   } catch (error) {
     console.error('Error fetching safety:', error);

@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import InfoAccordion from '@/app/info/info-accordion';
-import { getSafetyItems } from '@/lib/safety';
+import { getSafetyItems } from '@/lib/info';
 
 export { getSafetyItems };
 

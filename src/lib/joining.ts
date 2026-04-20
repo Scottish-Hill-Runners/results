@@ -8,19 +8,25 @@ export interface JoiningItem {
   content: string;
 }
 
+interface RawInfoItem {
+  slug: string;
+  title: string;
+  content: string;
+}
+
 let cachedJoiningItems: JoiningItem[] | null = null;
 
-async function readJoiningItemsFromFile(): Promise<JoiningItem[]> {
-  const filePath = path.join(process.cwd(), 'public', 'joining.json.gz');
+async function readInfoItemsFromFile(): Promise<RawInfoItem[]> {
+  const filePath = path.join(process.cwd(), 'public', 'info.json.gz');
   const compressed = await fs.readFile(filePath);
   const file = gunzipSync(compressed).toString('utf8');
-  const joiningItems = JSON.parse(file) as JoiningItem[];
+  const items = JSON.parse(file) as RawInfoItem[];
 
-  if (!Array.isArray(joiningItems)) {
-    throw new Error('joining.json.gz format is invalid');
+  if (!Array.isArray(items)) {
+    throw new Error('info.json.gz format is invalid');
   }
 
-  return joiningItems;
+  return items;
 }
 
 export async function getJoiningItems(): Promise<JoiningItem[]> {
@@ -29,9 +35,17 @@ export async function getJoiningItems(): Promise<JoiningItem[]> {
       return cachedJoiningItems;
     }
 
-    const joiningItems = await readJoiningItemsFromFile();
-    cachedJoiningItems = joiningItems;
+    const allItems = await readInfoItemsFromFile();
+    // Filter items that start with "joining/" and strip the prefix
+    const joiningItems = allItems
+      .filter((item) => item.slug.startsWith('joining/'))
+      .map((item) => ({
+        slug: item.slug.replace(/^joining\//, ''),
+        title: item.title,
+        content: item.content,
+      }));
 
+    cachedJoiningItems = joiningItems;
     return joiningItems;
   } catch (error) {
     console.error('Error fetching joining:', error);

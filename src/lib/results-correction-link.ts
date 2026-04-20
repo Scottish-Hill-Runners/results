@@ -13,13 +13,13 @@ export function buildResultsEditUrl(raceId: string, year: string): string {
 }
 
 export function getLatestResultYear(results: RaceResult[]): string | null {
-  const years = results
-    .map((row) => normalizeResultYear(row.year))
-    .filter((year): year is string => year !== null)
-    .map((year) => Number.parseInt(year, 10))
-    .filter((year) => Number.isFinite(year));
+  let latestYear: string | null = null;
 
-  if (years.length === 0) return null;
+  for (const row of results) {
+    const year = normalizeResultYear(row.year);
+    if (year && (latestYear === null || year > latestYear))
+      latestYear = year;
+  }
 
-  return String(Math.max(...years));
+  return latestYear;
 }

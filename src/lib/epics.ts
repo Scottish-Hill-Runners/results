@@ -1,9 +1,9 @@
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
 import { gunzipSync } from 'node:zlib';
-import { type AccordionItem } from '@/app/info/info-accordion';
+import { type ContentItem } from '@/lib/info';
 
-export type EpicItem = AccordionItem;
+export type EpicItem = ContentItem;
 
 let cachedEpicItems: EpicItem[] | null = null;
 

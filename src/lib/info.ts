@@ -1,35 +1,59 @@
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
 import { gunzipSync } from 'node:zlib';
-import { type AccordionItem } from '@/app/info/info-accordion';
 
-export type InfoItem = AccordionItem;
+export interface ContentItem {
+  slug: string;
+  title: string;
+  content: string;
+}
 
+export type InfoItem = ContentItem;
+
+let cachedAllInfoItems: InfoItem[] | null = null;
 let cachedInfoItems: InfoItem[] | null = null;
 
-async function readInfoItemsFromFile(): Promise<InfoItem[]> {
+async function readAllInfoItemsFromFile(): Promise<InfoItem[]> {
   const filePath = path.join(process.cwd(), 'public', 'info.json.gz');
   const compressed = await fs.readFile(filePath);
   const file = gunzipSync(compressed).toString('utf8');
-  const infoItems = JSON.parse(file) as InfoItem[];
+  const allItems = JSON.parse(file) as InfoItem[];
 
-  if (!Array.isArray(infoItems)) {
+  if (!Array.isArray(allItems)) {
     throw new Error('info.json.gz format is invalid');
   }
 
-  return infoItems;
+  return allItems;
 }
 
+/** Get all info items without filtering (for unified routing) */
+export async function getAllInfoItems(): Promise<InfoItem[]> {
+  try {
+    if (cachedAllInfoItems !== null) {
+      return cachedAllInfoItems;
+    }
+
+    const allItems = await readAllInfoItemsFromFile();
+    cachedAllInfoItems = allItems;
+
+    return allItems;
+  } catch (error) {
+    console.error('Error fetching all info items:', error);
+    return [];
+  }
+}
+
+/** Get all info items */
 export async function getInfoItems(): Promise<InfoItem[]> {
   try {
     if (cachedInfoItems !== null) {
       return cachedInfoItems;
     }
 
-    const infoItems = await readInfoItemsFromFile();
-    cachedInfoItems = infoItems;
+    const allItems = await readAllInfoItemsFromFile();
+    cachedInfoItems = allItems;
 
-    return infoItems;
+    return allItems;
   } catch (error) {
     console.error('Error fetching info:', error);
     return [];

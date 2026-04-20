@@ -8,36 +8,40 @@ export interface JuniorsPageData {
   content: string;
 }
 
-let cachedJuniorsPage: JuniorsPageData | null = null;
-
 async function readJuniorsPageFromFile(): Promise<JuniorsPageData | null> {
-  const filePath = path.join(process.cwd(), 'public', 'juniors.json.gz');
+  const filePath = path.join(process.cwd(), 'public', 'info.json.gz');
   const compressed = await fs.readFile(filePath);
   const file = gunzipSync(compressed).toString('utf8');
-  const juniorsPage = JSON.parse(file) as JuniorsPageData | null;
+  const allItems = JSON.parse(file) as JuniorsPageData[];
 
-  if (juniorsPage === null)
-    return null;
-
-  if (
-    typeof juniorsPage.slug !== 'string'
-    || typeof juniorsPage.title !== 'string'
-    || typeof juniorsPage.content !== 'string'
-  ) {
-    throw new Error('juniors.json.gz format is invalid');
+  if (!Array.isArray(allItems)) {
+    throw new Error('info.json.gz format is invalid');
   }
 
-  return juniorsPage;
+  // Find the juniors item which has slug "joining/juniors"
+  const juniorsItem = allItems.find((item) => item.slug === 'joining/juniors');
+  if (!juniorsItem) {
+    return null;
+  }
+
+  // Return with slug stripped of prefix to match interface
+  return {
+    slug: 'juniors',
+    title: juniorsItem.title,
+    content: juniorsItem.content,
+  };
 }
+
+let cachedJuniorsPage: JuniorsPageData | null | undefined;
 
 export async function getJuniorsPage(): Promise<JuniorsPageData | null> {
   try {
-    if (cachedJuniorsPage !== null)
+    if (cachedJuniorsPage !== undefined) {
       return cachedJuniorsPage;
+    }
 
     const juniorsPage = await readJuniorsPageFromFile();
-    if (juniorsPage !== null)
-      cachedJuniorsPage = juniorsPage;
+    cachedJuniorsPage = juniorsPage;
 
     return juniorsPage;
   } catch (error) {
