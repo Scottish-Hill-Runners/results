@@ -25,7 +25,7 @@ function filenameToAltText(sourcePath: string): string {
 export default async function Home() {
   const [newsItems, heroCollection] = await Promise.all([
     getRecentNewsItems(10),
-    getImageCollectionById('homepage-decorative-draft'),
+    getImageCollectionById('homepage-decorative'),
   ]);
   const heroImages = shuffled(heroCollection?.items ?? []).slice(0, 6);
 
