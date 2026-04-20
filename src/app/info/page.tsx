@@ -1,15 +1,13 @@
 import Link from 'next/link';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-import { getInfoItems, getAllInfoItems } from '@/lib/info';
+import { getAllInfoItems } from '@/lib/info';
 
 export { getAllInfoItems };
 
 export async function InfoPageContent({ slug = 'index' }: { slug?: string }) {
   const allItems = await getAllInfoItems();
   const infoPage = allItems.find((item) => item.slug === slug) ?? null;
-
-
 
   // For other pages, show as a detail view
   return (
@@ -38,7 +36,6 @@ export async function InfoPageContent({ slug = 'index' }: { slug?: string }) {
         <p className="text-slate-600 dark:text-slate-300">Page not found.</p>
       ) : (
         <article className="rounded-xl border border-slate-200 bg-white p-6 dark:border-slate-800 dark:bg-slate-900 sm:p-8">
-          <h1 className="mb-8 text-3xl font-bold text-slate-900 dark:text-slate-50">{infoPage.title}</h1>
           <div className="prose prose-slate max-w-none prose-headings:font-semibold prose-li:marker:text-slate-500 dark:prose-invert dark:prose-headings:text-slate-50 dark:prose-li:marker:text-slate-400">
             <ReactMarkdown remarkPlugins={[remarkGfm]}>
               {infoPage.content.replace(/\u00a0/g, ' ')}
