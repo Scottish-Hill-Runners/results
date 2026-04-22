@@ -388,8 +388,32 @@ function writeChampionshipResultsData(
 }
 
 async function writeCalendarData(): Promise<void> {
-  const rows = await csv().fromFile(contentPath('calendar.csv'));
-  const entries: CalendarEntry[] = rows.map((row) => {
+  const rows = await csv({
+    noheader: true,
+    headers: ['Date', 'Race'],
+    trim: true,
+  }).fromFile(contentPath('calendar.csv'));
+
+  const entries: CalendarEntry[] = rows
+    .filter((row, index) => {
+      const date = String(row.Date ?? '').trim();
+      const race = String(row.Race ?? '').trim();
+      if (!date && !race) {
+        return false;
+      }
+
+      if (index === 0) {
+        const looksLikeHeader =
+          date.toLowerCase() === 'date' &&
+          (race.toLowerCase() === 'race' || race.toLowerCase() === 'raceid');
+        if (looksLikeHeader) {
+          return false;
+        }
+      }
+
+      return true;
+    })
+    .map((row) => {
     const raceId = String(row.Race ?? '').trim();
     const raceIndexPath = contentPath('races', raceId, 'index.md');
     if (!raceId || !fs.existsSync(raceIndexPath)) {

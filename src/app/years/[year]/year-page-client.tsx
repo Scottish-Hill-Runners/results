@@ -108,6 +108,7 @@ export default function YearPageClient({ year }: YearPageClientProps) {
             <RaceResultsDataTable
               data={results}
               showRaceColumn
+              showYearFilter={false}
               enableRowFocus
               onFocusContextChange={setFocusedResultContext}
             />

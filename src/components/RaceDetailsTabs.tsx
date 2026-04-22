@@ -227,19 +227,6 @@ export default function RaceDetailsTabs({ raceId, race, contents, hasGpx, hasRac
                 />
               </div>
             )}
-            {hasGpx ? (
-              <>
-                <p className="text-sm text-gray-700 dark:text-slate-300">A GPX file is available for this race.</p>
-                <a
-                  href={`/results/${encodeURIComponent(raceId)}.gpx`}
-                  className="inline-block rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-700"
-                >
-                  Download Route
-                </a>
-              </>
-            ) : (
-              <p className="text-sm text-gray-700 dark:text-slate-300">No GPX file is available for this race.</p>
-            )}
           </div>
         )}
       </div>
