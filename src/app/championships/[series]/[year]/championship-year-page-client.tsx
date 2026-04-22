@@ -26,7 +26,7 @@ type RunnerEvent = {
 type StandingRow = {
   key: string;
   name: string;
-  clubs: string[];
+  club: string;
   categories: string[];
   points: number;
   events: Array<{ raceId: string; points: number }>;
@@ -50,10 +50,6 @@ function parseRunnerName(name: string): { surname: string; initial: string; disp
     initial,
     displayName: trimmed,
   };
-}
-
-function categoryInitial(category: string): string {
-  return category.trim().charAt(0).toUpperCase() || '?';
 }
 
 function parseCategoryAge(category: string): number | null {
@@ -259,13 +255,14 @@ function totalRunnerPoints(series: string, categories: string[], events: RunnerE
 
 function buildRunnerResultsMap(
   rows: RaceResult[],
-  groupKey: string
+  runnerName: string,
+  runnerClub: string
 ): Map<string, RaceResult> {
   const map = new Map<string, RaceResult>();
+  const normalizedSearchName = runnerName.toLowerCase();
+  const normalizedSearchClub = runnerClub.toLowerCase();
   rows.forEach((row) => {
-    const parsed = parseRunnerName(row.name);
-    const rowGroupKey = `${parsed.surname.toLowerCase()}|${parsed.initial}|${categoryInitial(row.category)}`;
-    if (rowGroupKey === groupKey) {
+    if (row.name.toLowerCase() === normalizedSearchName && row.club.toLowerCase() === normalizedSearchClub) {
       map.set(row.raceId, row);
     }
   });
@@ -277,8 +274,8 @@ function countHeadToHeadWins(
   runnerB: StandingRow,
   allResults: RaceResult[]
 ): number {
-  const resultsMapA = buildRunnerResultsMap(allResults, runnerA.key);
-  const resultsMapB = buildRunnerResultsMap(allResults, runnerB.key);
+  const resultsMapA = buildRunnerResultsMap(allResults, runnerA.name, runnerA.club);
+  const resultsMapB = buildRunnerResultsMap(allResults, runnerB.name, runnerB.club);
 
   let aWins = 0;
   let totalShared = 0;
@@ -316,15 +313,14 @@ function buildStandings(series: string, rows: RaceResult[], raceMetadata: RaceMe
 
   rows.forEach((row) => {
     const parsed = parseRunnerName(row.name);
-    const groupKey = `${parsed.surname.toLowerCase()}|${parsed.initial}|${categoryInitial(row.category)}`;
+    const normalizedName = row.name.trim();
+    const normalizedClub = row.club.trim();
+    const groupKey = `${normalizedName.toLowerCase()}|${normalizedClub.toLowerCase()}`;
     const racePoints = calculateRacePoints(series, row, winnerTimesByRace);
     const bucket = getDistanceBucket(raceMetadata[row.raceId]?.distance);
     const existing = grouped.get(groupKey);
 
     if (existing) {
-      if (!existing.clubs.includes(row.club)) {
-        existing.clubs.push(row.club);
-      }
       if (!existing.categories.includes(row.category)) {
         existing.categories.push(row.category);
       }
@@ -336,7 +332,7 @@ function buildStandings(series: string, rows: RaceResult[], raceMetadata: RaceMe
     grouped.set(groupKey, {
       key: groupKey,
       name: parsed.displayName,
-      clubs: [row.club],
+      club: normalizedClub,
       categories: [row.category],
       points: 0,
       runnerEvents: [{ raceId: row.raceId, points: racePoints, bucket }],
@@ -349,7 +345,7 @@ function buildStandings(series: string, rows: RaceResult[], raceMetadata: RaceMe
     return {
       key: runner.key,
       name: runner.name,
-      clubs: runner.clubs,
+      club: runner.club,
       categories: runner.categories,
       points: totalRunnerPoints(series, runner.categories, runner.runnerEvents),
       events: sortedEvents,
@@ -422,7 +418,9 @@ export default function ChampionshipYearPageClient({
 
     filteredRows.forEach((row) => {
       const parsed = parseRunnerName(row.name);
-      const groupKey = `${parsed.surname.toLowerCase()}|${parsed.initial}|${categoryInitial(selectedCategoryPos)}`;
+      const normalizedName = row.name.trim();
+      const normalizedClub = row.club.trim();
+      const groupKey = `${normalizedName.toLowerCase()}|${normalizedClub.toLowerCase()}`;
       const categoryPosition = row.categoryPos[selectedCategoryPos] ?? row.position;
       let racePoints = calculateRacePoints(series, row, winnerTimesByRace);
 
@@ -438,9 +436,6 @@ export default function ChampionshipYearPageClient({
       const existing = grouped.get(groupKey);
 
       if (existing) {
-        if (!existing.clubs.includes(row.club)) {
-          existing.clubs.push(row.club);
-        }
         existing.runnerEvents.push({ raceId: row.raceId, points: racePoints, bucket });
         existing.events.push({ raceId: row.raceId, points: racePoints });
         return;
@@ -449,7 +444,7 @@ export default function ChampionshipYearPageClient({
       grouped.set(groupKey, {
         key: groupKey,
         name: parsed.displayName,
-        clubs: [row.club],
+        club: normalizedClub,
         categories: [selectedCategoryPos],
         points: 0,
         runnerEvents: [{ raceId: row.raceId, points: racePoints, bucket }],
@@ -463,7 +458,7 @@ export default function ChampionshipYearPageClient({
       return {
         key: runner.key,
         name: runner.name,
-        clubs: runner.clubs,
+        club: runner.club,
         categories: runner.categories,
         points: totalRunnerPoints(series, runner.categories, runner.runnerEvents),
         events: sortedEvents,
@@ -496,7 +491,7 @@ export default function ChampionshipYearPageClient({
       return filteredStandings;
     }
 
-    return filteredStandings.filter((runner) => runner.clubs.includes(selectedClub));
+    return filteredStandings.filter((runner) => runner.club === selectedClub);
   }, [filteredStandings, selectedClub]);
 
   const qualifiedStandings = useMemo(
@@ -705,7 +700,7 @@ export default function ChampionshipYearPageClient({
                             className="cursor-pointer bg-white hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-slate-900 dark:hover:bg-slate-800/60"
                           >
                             <td className="whitespace-nowrap px-4 py-3 text-sm font-semibold text-slate-900 dark:text-slate-100">{runner.name}</td>
-                            <td className="px-4 py-3 text-sm text-slate-700 dark:text-slate-200">{runner.clubs.join(', ')}</td>
+                            <td className="px-4 py-3 text-sm text-slate-700 dark:text-slate-200">{runner.club}</td>
                             <td className="px-4 py-3 text-sm text-slate-700 dark:text-slate-200">{runner.categories.join(', ')}</td>
                             <td className="whitespace-nowrap px-4 py-3 text-right text-sm font-semibold text-slate-900 dark:text-slate-100">{formatPoints(runner.points)}</td>
                             <td className="px-4 py-3 text-sm text-slate-700 dark:text-slate-200">
@@ -763,7 +758,7 @@ export default function ChampionshipYearPageClient({
                             className="cursor-pointer bg-white hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-slate-900 dark:hover:bg-slate-800/60"
                           >
                             <td className="whitespace-nowrap px-4 py-3 text-sm font-semibold text-slate-900 dark:text-slate-100">{runner.name}</td>
-                            <td className="px-4 py-3 text-sm text-slate-700 dark:text-slate-200">{runner.clubs.join(', ')}</td>
+                            <td className="px-4 py-3 text-sm text-slate-700 dark:text-slate-200">{runner.club}</td>
                             <td className="px-4 py-3 text-sm text-slate-700 dark:text-slate-200">{runner.categories.join(', ')}</td>
                             <td className="whitespace-nowrap px-4 py-3 text-right text-sm font-semibold text-slate-900 dark:text-slate-100">{formatPoints(runner.points)}</td>
                             <td className="px-4 py-3 text-sm text-slate-700 dark:text-slate-200">
