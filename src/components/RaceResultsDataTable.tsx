@@ -4,6 +4,7 @@ import { useEffect, useState, useMemo } from 'react';
 import Link from 'next/link';
 import { RaceResult, ResultsFocusContext } from '@/types/datatable';
 import { normalizeResultYear } from '@/lib/results-correction-link';
+import { fetchGzipJson } from '@/lib/client-results-fetch';
 
 interface DataTableProps {
   data: Array<RaceResult & { raceTitle?: string }>;
@@ -36,6 +37,20 @@ export default function RaceResultsDataTable({
   enableRowFocus = false,
   onFocusContextChange,
 }: DataTableProps) {
+  const [clubNameToSlug, setClubNameToSlug] = useState<Record<string, string>>({});
+
+  useEffect(() => {
+    fetchGzipJson<Array<{ name: string; slug: string }>>('/clubs.json.gz')
+      .then((result) => {
+        if (result.status === 'ok') {
+          const map: Record<string, string> = {};
+          for (const c of result.data) map[c.name] = c.slug;
+          setClubNameToSlug(map);
+        }
+      })
+      .catch(() => {});
+  }, []);
+
   const [sortColumn, setSortColumn] = useState<SortColumn>(showRaceColumn ? 'raceTitle' : 'year');
   const [sortDirection, setSortDirection] = useState<SortDirection>(showRaceColumn ? 'asc' : 'desc');
   const [showFilters, setShowFilters] = useState(() => {
@@ -424,7 +439,18 @@ export default function RaceResultsDataTable({
                           </Link>
                         </td>
                       )}
-                      <td className="hidden px-2 py-4 text-sm text-gray-800 sm:table-cell sm:px-6 dark:text-slate-200">{row.club}</td>
+                      <td className="hidden px-2 py-4 text-sm text-gray-800 sm:table-cell sm:px-6 dark:text-slate-200">
+                        {row.club ? (
+                          clubNameToSlug[row.club] ? (
+                            <Link
+                              href={`/club/${encodeURIComponent(clubNameToSlug[row.club])}`}
+                              className="text-blue-600 hover:underline dark:text-blue-400"
+                            >
+                              {row.club}
+                            </Link>
+                          ) : row.club
+                        ) : null}
+                      </td>
                       <td className="hidden px-2 py-4 text-sm text-gray-800 md:table-cell md:px-6 dark:text-slate-200">{row.category}</td>
                       <td className="px-2 py-4 font-mono text-sm font-semibold text-gray-800 sm:px-6 dark:text-slate-200">{row.time}</td>
                     </tr>

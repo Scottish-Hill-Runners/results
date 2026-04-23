@@ -16,6 +16,7 @@ type YearInfo = {
 };
 
 type ClubInfo = {
+  slug: string;
   name: string;
   aliases: string[];
   web?: string;
@@ -71,6 +72,7 @@ function readClubs(dir: string): ClubInfo[] {
     if (club.isFile() || path.extname(club.name) == '.md') {
       const { data, content } = matter.read(path.join(dir, club.name));
       clubs.push({
+        slug: path.basename(club.name, '.md'),
         name: data.name as string,
         aliases: (data.aka as string[]) ?? [],
         web: data.web as string,
@@ -354,6 +356,18 @@ function readChampionships(): ChampionshipData[] {
   return championships;
 }
 
+function writeClubData(clubs: ClubInfo[]): void {
+  const output = clubs.map(({ slug, name, web, contact, info }) => ({
+    slug,
+    name,
+    web,
+    contact,
+    content: info,
+  }));
+  writeGz(path.join(process.cwd(), 'public'), 'clubs.json', JSON.stringify(output));
+  progress('Wrote clubs.json.gz');
+}
+
 function writeChampionshipData(championships: ChampionshipData[]): void {
   progress(`Read ${championships.length} championships`);
   writeGz(path.join(process.cwd(), 'public'), 'championships.json', JSON.stringify(championships));
@@ -447,6 +461,7 @@ async function main() {
   progress(`Using content root: ${contentRoot()}`);
   const allResults = await readResults();
   const championships = readChampionships();
+  writeClubData(clubs);
   writeYearData(allResults);
   writeRaceData(allResults);
   writeRunnerData(allResults);
