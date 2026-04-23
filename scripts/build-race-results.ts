@@ -72,7 +72,7 @@ function readClubs(dir: string): ClubInfo[] {
       const { data, content } = matter.read(path.join(dir, club.name));
       clubs.push({
         name: data.name as string,
-        aliases: (data.aka as string)?.split(',') ?? [],
+        aliases: (data.aka as string[]) ?? [],
         web: data.web as string,
         contact: data.contact as string,
         info: content,
