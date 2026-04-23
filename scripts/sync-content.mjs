@@ -19,7 +19,7 @@ execSync(`git clone --depth 1 --filter=blob:none --sparse --branch ${ref} ${repo
   stdio: 'inherit',
 });
 
-execSync('git sparse-checkout set --no-cone "/*" "!/Pictures/" "!/Pictures/**"', {
+execSync('git sparse-checkout set --no-cone "/*" "!/blobs/" "!/blobs/**"', {
   cwd: destination,
   stdio: 'inherit',
 });
