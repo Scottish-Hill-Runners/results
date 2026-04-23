@@ -12,6 +12,12 @@ type CalendarEntry = {
   climb?: number;
 };
 
+type ChampionshipData = {
+  slug: string;
+  title: string;
+  years: { [year: string]: string[] };
+};
+
 type MonthGroup = {
   key: string;
   label: string;
@@ -128,10 +134,28 @@ function isPastRace(dateString: string): boolean {
 
 export default function CalendarPageClient() {
   const [entries, setEntries] = useState<CalendarEntry[] | null>(null);
+  const [championships, setChampionships] = useState<ChampionshipData[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [isNotFound, setIsNotFound] = useState(false);
   const [selectedMonthKey, setSelectedMonthKey] = useState<string | null>(null);
+
+  // Map of "year/raceId" -> { slug, title }[]
+  const championshipLookup = useMemo(() => {
+    const map = new Map<string, Array<{ slug: string; title: string }>>();
+    for (const champ of championships) {
+      for (const [year, raceIds] of Object.entries(champ.years)) {
+        for (const raceId of raceIds) {
+          if (!raceId || raceId.startsWith('no-slug(')) continue;
+          const key = `${year}/${raceId}`;
+          const existing = map.get(key) ?? [];
+          existing.push({ slug: champ.slug, title: champ.title });
+          map.set(key, existing);
+        }
+      }
+    }
+    return map;
+  }, [championships]);
 
   const monthGroups = useMemo(() => {
     return entries ? buildMonthGroups(entries) : [];
@@ -170,16 +194,23 @@ export default function CalendarPageClient() {
       setIsNotFound(false);
 
       try {
-        const result = await fetchGzipJson<CalendarEntry[]>('/calendar.json.gz');
+        const [calendarResult, champsResult] = await Promise.all([
+          fetchGzipJson<CalendarEntry[]>('/calendar.json.gz'),
+          fetchGzipJson<ChampionshipData[]>('/championships.json.gz'),
+        ]);
 
         if (!isCancelled) {
-          if (result.status === 'ok') {
-            setEntries(result.data);
-          } else if (result.status === 'not-found') {
+          if (calendarResult.status === 'ok') {
+            setEntries(calendarResult.data);
+          } else if (calendarResult.status === 'not-found') {
             setIsNotFound(true);
             setEntries(null);
           } else {
-            throw result.error;
+            throw calendarResult.error;
+          }
+
+          if (champsResult.status === 'ok') {
+            setChampionships(champsResult.data);
           }
         }
       } catch (error) {
@@ -345,6 +376,10 @@ export default function CalendarPageClient() {
                 <div className="space-y-3">
                   {selectedMonth.entries.map((entry, index) => {
                     const pastRace = isPastRace(entry.Date);
+                    const entryYear = entry.Date.slice(0, 4);
+                    const champSeries = entry.raceId
+                      ? (championshipLookup.get(`${entryYear}/${entry.raceId}`) ?? [])
+                      : [];
 
                     return (
                       <article
@@ -368,6 +403,20 @@ export default function CalendarPageClient() {
                                 entry.raceName
                               )}
                             </div>
+                            {champSeries.length > 0 && (
+                              <div className="mt-1 flex flex-wrap gap-1">
+                                {champSeries.map(({ slug, title }) => (
+                                  <Link
+                                    key={slug}
+                                    href={`/championships/${encodeURIComponent(slug)}`}
+                                    className="inline-flex items-center rounded-full bg-amber-100 px-2 py-0.5 text-xs font-medium text-amber-800 hover:bg-amber-200 dark:bg-amber-900/40 dark:text-amber-200 dark:hover:bg-amber-900/70"
+                                    title={title}
+                                  >
+                                    {title}
+                                  </Link>
+                                ))}
+                              </div>
+                            )}
                           </div>
                           <div className="text-right text-sm text-slate-700 dark:text-slate-300">
                             <div>{entry.distance !== undefined ? `${entry.distance.toFixed(1)} km` : 'Distance: —'}</div>
