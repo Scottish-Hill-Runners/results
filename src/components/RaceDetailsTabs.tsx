@@ -182,6 +182,22 @@ export default function RaceDetailsTabs({ raceId, race, contents, hasGpx, hasRac
                 <p className="text-sm text-gray-600 dark:text-slate-300">No additional content available for this race.</p>
               )}
             </div>
+
+            <div className="rounded-lg border border-blue-200 bg-blue-50 p-4 text-sm text-blue-900 dark:border-blue-900 dark:bg-blue-950/40 dark:text-blue-100">
+              <p className="font-semibold">Race organiser?</p>
+              <p className="mt-1">
+                Edit the race description via{' '}
+                <a
+                  href={`https://admin.scottishhillrunners.uk/races/edit?raceId=${encodeURIComponent(raceId)}`}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-2 hover:text-blue-900 dark:text-blue-300 dark:decoration-blue-700 dark:hover:text-blue-200"
+                >
+                  the race editor
+                </a>
+                .
+              </p>
+            </div>
           </div>
         )}
 
