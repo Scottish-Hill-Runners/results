@@ -28,7 +28,7 @@ export default async function ClubsPage() {
           {sorted.map((club) => (
             <li key={club.slug}>
               <Link
-                href={`/club/${club.slug}`}
+                href={`/clubs/${club.slug}`}
                 className="text-blue-600 hover:text-blue-800 hover:underline dark:text-blue-400 dark:hover:text-blue-300"
               >
                 {club.name}

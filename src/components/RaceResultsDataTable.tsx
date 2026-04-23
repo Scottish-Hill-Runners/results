@@ -443,7 +443,7 @@ export default function RaceResultsDataTable({
                         {row.club ? (
                           clubNameToSlug[row.club] ? (
                             <Link
-                              href={`/club/${encodeURIComponent(clubNameToSlug[row.club])}`}
+                              href={`/clubs/${encodeURIComponent(clubNameToSlug[row.club])}`}
                               className="text-blue-600 hover:underline dark:text-blue-400"
                             >
                               {row.club}
