@@ -93,7 +93,7 @@ for (const club of clubs)
 function likelySex(category: string): string {
   if (/W(OM[EA]N)?|F(EMALE)?|L(ADY)?|G(IRL)?/i.test(category))
     return 'F';
-  if (/(NB?|NON[-\s]?BINARY)/i.test(category))
+  if (/(A|NB?|NON[-\s]?BINARY)/i.test(category))
     return 'NB';
   return 'M';
 }

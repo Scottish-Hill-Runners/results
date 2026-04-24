@@ -373,19 +373,44 @@ function buildStandings(series: string, rows: RaceResult[], raceMetadata: RaceMe
   });
 }
 
+const CHAMP_TAB_STORAGE_KEY = 'championship.activeTab';
+
 export default function ChampionshipYearPageClient({
   series,
   year,
 }: ChampionshipYearPageClientProps) {
   const [results, setResults] = useState<RaceResult[] | null>(null);
   const [raceMetadata, setRaceMetadata] = useState<RaceMetadata>({});
-  const [activeTab, setActiveTab] = useState<ChampionshipTab>('standings');
+  const [activeTab, setActiveTab] = useState<ChampionshipTab>(() => {
+    try {
+      const saved = window.localStorage.getItem(CHAMP_TAB_STORAGE_KEY);
+      if (saved === 'standings' || saved === 'results') return saved;
+    } catch {}
+    return 'standings';
+  });
+  useEffect(() => {
+    try { window.localStorage.setItem(CHAMP_TAB_STORAGE_KEY, activeTab); } catch {}
+  }, [activeTab]);
+
   const [selectedRunnerName, setSelectedRunnerName] = useState('');
   const [selectedCategoryPos, setSelectedCategoryPos] = useState<string>('All');
   const [selectedClub, setSelectedClub] = useState<string>('All');
   const [isLoading, setIsLoading] = useState(true);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [isNotFound, setIsNotFound] = useState(false);
+  const [clubNameToSlug, setClubNameToSlug] = useState<Record<string, string>>({});
+
+  useEffect(() => {
+    fetchGzipJson<Array<{ name: string; slug: string }>>('/clubs.json.gz')
+      .then((result) => {
+        if (result.status === 'ok') {
+          const map: Record<string, string> = {};
+          for (const c of result.data) map[c.name] = c.slug;
+          setClubNameToSlug(map);
+        }
+      })
+      .catch(() => {});
+  }, []);
 
   const allStandings = useMemo(() => buildStandings(series, results ?? [], raceMetadata), [results, raceMetadata, series]);
 
@@ -700,7 +725,11 @@ export default function ChampionshipYearPageClient({
                             className="cursor-pointer bg-white hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-slate-900 dark:hover:bg-slate-800/60"
                           >
                             <td className="whitespace-nowrap px-4 py-3 text-sm font-semibold text-slate-900 dark:text-slate-100">{runner.name}</td>
-                            <td className="px-4 py-3 text-sm text-slate-700 dark:text-slate-200">{runner.club}</td>
+                            <td className="px-4 py-3 text-sm text-slate-700 dark:text-slate-200">
+                              {runner.club && clubNameToSlug[runner.club] ? (
+                                <Link href={`/clubs/${encodeURIComponent(clubNameToSlug[runner.club])}`} className="text-blue-600 hover:underline dark:text-blue-400">{runner.club}</Link>
+                              ) : runner.club}
+                            </td>
                             <td className="px-4 py-3 text-sm text-slate-700 dark:text-slate-200">{runner.categories.join(', ')}</td>
                             <td className="whitespace-nowrap px-4 py-3 text-right text-sm font-semibold text-slate-900 dark:text-slate-100">{formatPoints(runner.points)}</td>
                             <td className="px-4 py-3 text-sm text-slate-700 dark:text-slate-200">
@@ -758,7 +787,11 @@ export default function ChampionshipYearPageClient({
                             className="cursor-pointer bg-white hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-slate-900 dark:hover:bg-slate-800/60"
                           >
                             <td className="whitespace-nowrap px-4 py-3 text-sm font-semibold text-slate-900 dark:text-slate-100">{runner.name}</td>
-                            <td className="px-4 py-3 text-sm text-slate-700 dark:text-slate-200">{runner.club}</td>
+                            <td className="px-4 py-3 text-sm text-slate-700 dark:text-slate-200">
+                              {runner.club && clubNameToSlug[runner.club] ? (
+                                <Link href={`/clubs/${encodeURIComponent(clubNameToSlug[runner.club])}`} className="text-blue-600 hover:underline dark:text-blue-400">{runner.club}</Link>
+                              ) : runner.club}
+                            </td>
                             <td className="px-4 py-3 text-sm text-slate-700 dark:text-slate-200">{runner.categories.join(', ')}</td>
                             <td className="whitespace-nowrap px-4 py-3 text-right text-sm font-semibold text-slate-900 dark:text-slate-100">{formatPoints(runner.points)}</td>
                             <td className="px-4 py-3 text-sm text-slate-700 dark:text-slate-200">

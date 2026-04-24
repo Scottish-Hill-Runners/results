@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useMemo, useState, useEffect } from 'react';
 import Image from 'next/image';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
@@ -31,8 +31,19 @@ function filenameToAltText(sourcePath: string): string {
     .trim();
 }
 
+const TAB_STORAGE_KEY = 'raceDetails.activeTab';
+
 export default function RaceDetailsTabs({ raceId, race, contents, hasGpx, hasRaceMap, results, resultsError, heroImage, galleryImages }: RaceDetailsTabsProps) {
-  const [activeTab, setActiveTab] = useState<TabKey>('info');
+  const [activeTab, setActiveTab] = useState<TabKey>(() => {
+    try {
+        const saved = window.localStorage.getItem(TAB_STORAGE_KEY);
+        if (saved === 'results' || saved === 'info' || saved === 'gpx' || saved === 'gallery') return saved as TabKey;
+      } catch {}
+      return 'info';
+  });
+  useEffect(() => {
+    try { window.localStorage.setItem(TAB_STORAGE_KEY, activeTab); } catch {}
+  }, [activeTab]);
   const [focusedResultContext, setFocusedResultContext] = useState<ResultsFocusContext | null>(null);
   const hasRouteAssets = hasGpx || hasRaceMap;
   const hasGallery = galleryImages.length > 0;
