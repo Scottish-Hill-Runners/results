@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import "./globals.css";
 import sharedStyles from './shared.module.css';
 import SiteHeader from '@/components/SiteHeader';
@@ -62,6 +64,8 @@ export default function RootLayout({
         </a>
         <SiteHeader />
         <div className="min-h-screen bg-slate-50 dark:bg-slate-950">{children}</div>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
