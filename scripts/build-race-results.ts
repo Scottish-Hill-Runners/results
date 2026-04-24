@@ -356,13 +356,24 @@ function readChampionships(): ChampionshipData[] {
   return championships;
 }
 
-function writeClubData(clubs: ClubInfo[]): void {
+function writeClubData(clubs: ClubInfo[], allResults: RaceResult[]): void {
+  const currentYear = new Date().getFullYear();
+  const prevYear = currentYear - 1;
+  const activeClubNames = new Set(
+    allResults
+      .filter((r) => {
+        const y = parseInt(r.year.substring(0, 4), 10);
+        return y === currentYear || y === prevYear;
+      })
+      .map((r) => r.club)
+  );
   const output = clubs.map(({ slug, name, web, contact, info }) => ({
     slug,
     name,
     web,
     contact,
     content: info,
+    active: activeClubNames.has(name),
   }));
   writeGz(path.join(process.cwd(), 'public'), 'clubs.json', JSON.stringify(output));
   progress('Wrote clubs.json.gz');
@@ -461,7 +472,7 @@ async function main() {
   progress(`Using content root: ${contentRoot()}`);
   const allResults = await readResults();
   const championships = readChampionships();
-  writeClubData(clubs);
+  writeClubData(clubs, allResults);
   writeYearData(allResults);
   writeRaceData(allResults);
   writeRunnerData(allResults);

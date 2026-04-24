@@ -5,7 +5,7 @@ export { getClubItems };
 
 export default async function ClubsPage() {
   const clubs = await getClubItems();
-  const sorted = [...clubs].sort((a, b) => a.name.localeCompare(b.name));
+  const sorted = [...clubs].filter((c) => c.active).sort((a, b) => a.name.localeCompare(b.name));
 
   return (
     <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6 lg:px-8">

@@ -8,6 +8,7 @@ export interface ClubItem {
   web?: string;
   contact?: string;
   content: string;
+  active?: boolean;
 }
 
 let cachedClubItems: ClubItem[] | null = null;
