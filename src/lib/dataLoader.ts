@@ -1,4 +1,5 @@
 import { RaceData } from '@/types/datatable';
+import { resolvePublicUrl } from './asset-manifest';
 
 /**
  * Fetches and decompresses data from a gzipped JSON file
@@ -7,7 +8,8 @@ import { RaceData } from '@/types/datatable';
  */
 export async function fetchCompressedJsonData(filePath: string): Promise<RaceData[]> {
   try {
-    const url = new URL(filePath, typeof window === 'undefined' ? `http://localhost:3000` : window.location.origin);
+    const resolvedPath = await resolvePublicUrl(filePath);
+    const url = new URL(resolvedPath, typeof window === 'undefined' ? `http://localhost:3000` : window.location.origin);
     const response = await fetch(url.toString());
     
     if (!response.ok) {
@@ -61,7 +63,8 @@ export async function fetchCompressedJsonData(filePath: string): Promise<RaceDat
  */
 export async function fetchJsonData(filePath: string): Promise<RaceData[]> {
   try {
-    const url = new URL(filePath, typeof window === 'undefined' ? `http://localhost:3000` : window.location.origin);
+    const resolvedPath = await resolvePublicUrl(filePath);
+    const url = new URL(resolvedPath, typeof window === 'undefined' ? `http://localhost:3000` : window.location.origin);
     const response = await fetch(url.toString());
 
     if (!response.ok) {

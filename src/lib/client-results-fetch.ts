@@ -1,3 +1,5 @@
+import { resolvePublicUrl } from './asset-manifest';
+
 type FetchJsonResult<T> =
   | { status: 'ok'; data: T }
   | { status: 'not-found' }
@@ -37,7 +39,8 @@ export async function fetchJsonWithApiFallback<T>(
       return { status: 'error', error: new Error(`Request failed with status ${apiResponse.status}`) };
     }
 
-    const gzipResponse = await fetch(gzipFallbackUrl, { cache: 'force-cache' });
+    const resolvedFallbackUrl = await resolvePublicUrl(gzipFallbackUrl);
+    const gzipResponse = await fetch(resolvedFallbackUrl, { cache: 'force-cache' });
     if (gzipResponse.status === 404) {
       return { status: 'not-found' };
     }
@@ -56,7 +59,8 @@ export async function fetchJsonWithApiFallback<T>(
 
 export async function fetchGzipJson<T>(gzipUrl: string): Promise<FetchJsonResult<T>> {
   try {
-    const response = await fetch(gzipUrl, { cache: 'force-cache' });
+    const resolvedUrl = await resolvePublicUrl(gzipUrl);
+    const response = await fetch(resolvedUrl, { cache: 'force-cache' });
 
     if (response.status === 404) {
       return { status: 'not-found' };
