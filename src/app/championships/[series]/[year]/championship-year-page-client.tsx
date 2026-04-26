@@ -449,7 +449,7 @@ export default function ChampionshipYearPageClient({
       const categoryPosition = row.categoryPos[selectedCategoryPos] ?? row.position;
       let racePoints = calculateRacePoints(series, row, winnerTimesByRace);
 
-      if (series === 'Under23') {
+      if (series === 'SHR' || series === 'Under23') {
         racePoints = pointsWithWinnerBonus(categoryPosition);
       }
 
