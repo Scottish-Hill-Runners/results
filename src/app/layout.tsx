@@ -17,8 +17,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Scottish Hill Running",
-  description: "Information, news and results for Scottish hill running",
+  title: "Scottish Hill Runners",
+  description: "Information, news and results for Scottish hill runners",
   icons: {
     icon: '/icon.svg',
     shortcut: '/icon.svg',
