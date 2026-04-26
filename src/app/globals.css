@@ -5,6 +5,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --logo-text: #054285;
 }
 
 @theme inline {
@@ -21,6 +22,7 @@ html {
 html[data-theme='dark'] {
   --background: #0a0f1a;
   --foreground: #e5edf7;
+  --logo-text: #cbd5e1;
   color-scheme: dark;
 }
 
