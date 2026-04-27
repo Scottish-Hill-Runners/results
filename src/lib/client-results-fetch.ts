@@ -24,6 +24,19 @@ export async function fetchJsonWithApiFallback<T>(
   gzipFallbackUrl: string,
 ): Promise<FetchJsonResult<T>> {
   try {
+    // Prefer the versioned .json.gz file so long-term immutable caching applies.
+    const resolvedGzipUrl = await resolvePublicUrl(gzipFallbackUrl);
+    const gzipResponse = await fetch(resolvedGzipUrl, { cache: 'force-cache' });
+
+    if (gzipResponse.ok) {
+      return { status: 'ok', data: await parseGzipJsonResponse<T>(gzipResponse) };
+    }
+
+    if (gzipResponse.status !== 404) {
+      return { status: 'error', error: new Error(`Request failed with status ${gzipResponse.status}`) };
+    }
+
+    // .json.gz not found — fall back to the API route.
     const apiResponse = await fetch(apiUrl, { cache: 'force-cache' });
 
     if (apiResponse.ok) {
@@ -34,21 +47,7 @@ export async function fetchJsonWithApiFallback<T>(
       return { status: 'not-found' };
     }
 
-    // Surge returns 410 for /api/* static paths. Fall back to raw .json.gz files.
-    if (apiResponse.status !== 410) {
-      return { status: 'error', error: new Error(`Request failed with status ${apiResponse.status}`) };
-    }
-
-    const resolvedFallbackUrl = await resolvePublicUrl(gzipFallbackUrl);
-    const gzipResponse = await fetch(resolvedFallbackUrl, { cache: 'force-cache' });
-    if (gzipResponse.status === 404) {
-      return { status: 'not-found' };
-    }
-    if (!gzipResponse.ok) {
-      return { status: 'error', error: new Error(`Fallback request failed with status ${gzipResponse.status}`) };
-    }
-
-    return { status: 'ok', data: await parseGzipJsonResponse<T>(gzipResponse) };
+    return { status: 'error', error: new Error(`API request failed with status ${apiResponse.status}`) };
   } catch (error) {
     return {
       status: 'error',
