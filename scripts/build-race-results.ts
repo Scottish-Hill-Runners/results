@@ -40,13 +40,15 @@ type CalendarEntry = {
 };
 
 function formatTime(time: string): string {
-  const match = time.match(/(\d?\d)[:\.h](\d\d)(?:[:\.m](\d\d))?/i);
+  const match = time.match(/(\d{1,3})[:\.h](\d{1,3})(?:[:\.m](\d\d))?/i);
   if (match) {
     let hours: number, minutes: number, seconds: number;
     if (match[3]) {
       hours = parseInt(match[1]);
       minutes = parseInt(match[2]);
       seconds = parseInt(match[3]);
+      hours += Math.floor(minutes / 60);
+      minutes = minutes % 60;
     } else {
       minutes = parseInt(match[1]);
       seconds = parseInt(match[2]);
