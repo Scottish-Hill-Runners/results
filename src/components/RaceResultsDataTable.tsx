@@ -1,6 +1,7 @@
 'use client';
 
-import { useEffect, useState, useMemo } from 'react';
+import { useEffect, useRef, useState, useMemo } from 'react';
+import { useVirtualizer } from '@tanstack/react-virtual';
 import Link from 'next/link';
 import { RaceResult, ResultsFocusContext } from '@/types/datatable';
 import { normalizeResultYear } from '@/lib/results-correction-link';
@@ -12,6 +13,7 @@ interface DataTableProps {
   showRaceTitle?: boolean;
   showYearFilter?: boolean;
   initialNameFilter?: string;
+  initialYearFilter?: string;
   enableRowFocus?: boolean;
   onFocusContextChange?: (context: ResultsFocusContext | null) => void;
 }
@@ -34,9 +36,11 @@ export default function RaceResultsDataTable({
   showRaceTitle = false,
   showYearFilter = true,
   initialNameFilter = '',
+  initialYearFilter = '',
   enableRowFocus = false,
   onFocusContextChange,
 }: DataTableProps) {
+  "use no memo";
   const [clubNameToSlug, setClubNameToSlug] = useState<Record<string, string>>({});
 
   useEffect(() => {
@@ -59,12 +63,13 @@ export default function RaceResultsDataTable({
     return savedValue === 'true';
   });
   const [filters, setFilters] = useState<Filters>({
-    year: '',
+    year: initialYearFilter,
     name: initialNameFilter,
     club: '',
     category: '',
   });
   const [selectedRowKey, setSelectedRowKey] = useState<string | null>(null);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   const getRowKey = (row: RaceResult & { raceTitle?: string }) => [
     row.raceId,
@@ -78,11 +83,6 @@ export default function RaceResultsDataTable({
   useEffect(() => {
     window.localStorage.setItem(FILTER_VISIBILITY_STORAGE_KEY, showFilters ? 'true' : 'false');
   }, [showFilters]);
-
-  // Scroll to top when data changes
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, [data]);
 
   // Filter and sort data
   const processedData = useMemo(() => {
@@ -144,6 +144,11 @@ export default function RaceResultsDataTable({
 
     return result;
   }, [data, filters, sortColumn, sortDirection, showYearFilter]);
+
+  // Reset scroll position when filters/sort change
+  useEffect(() => {
+    scrollContainerRef.current?.scrollTo({ top: 0 });
+  }, [processedData]);
 
   const handleSort = (column: SortColumn) => {
     if (sortColumn === column) {
@@ -234,6 +239,16 @@ export default function RaceResultsDataTable({
     onFocusContextChange(activeFocusContext);
   }, [activeFocusContext, onFocusContextChange]);
 
+  const rowVirtualizer = useVirtualizer({
+    count: processedData.length,
+    getScrollElement: () => scrollContainerRef.current,
+    estimateSize: () => 52,
+    overscan: 5,
+  });
+  const virtualItems = rowVirtualizer.getVirtualItems();
+  const paddingTop = virtualItems.length > 0 ? virtualItems[0].start : 0;
+  const paddingBottom = virtualItems.length > 0 ? rowVirtualizer.getTotalSize() - virtualItems[virtualItems.length - 1].end : 0;
+
   return (
     <div className="space-y-4">
       {/* Filter Controls */}
@@ -310,7 +325,7 @@ export default function RaceResultsDataTable({
       {/* Data Table */}
       <div className="shadow-md rounded-lg overflow-hidden">
         <div className="overflow-x-auto">
-          <div className="max-h-screen overflow-y-auto">
+          <div className="max-h-screen overflow-y-auto" ref={scrollContainerRef}>
             <table className="w-full border-collapse bg-white dark:bg-slate-900">
               <thead>
                 <tr className="sticky top-0 border-b-2 border-gray-300 bg-gray-100 dark:border-slate-700 dark:bg-slate-800">
@@ -372,96 +387,100 @@ export default function RaceResultsDataTable({
                 </tr>
               </thead>
               <tbody>
-                {processedData.length > 0 ? (
-                  processedData.map((row, index) => {
-                    const rowKey = getRowKey(row);
-                    const isSelected = enableRowFocus && selectedRowKey === rowKey;
-                    const zebraTone = index % 2 === 0 ? 'bg-white dark:bg-slate-900' : 'bg-gray-50 dark:bg-slate-950';
-
-                    return (
-                    <tr
-                      key={index}
-                      tabIndex={enableRowFocus ? 0 : -1}
-                      onClick={(event) => {
-                        if (!enableRowFocus) return;
-                        if ((event.target as HTMLElement).closest('a')) return;
-                        setSelectedRowKey(rowKey);
-                      }}
-                      onKeyDown={(event) => {
-                        if (!enableRowFocus) return;
-                        if (event.key !== 'Enter' && event.key !== ' ') return;
-                        event.preventDefault();
-                        setSelectedRowKey(rowKey);
-                      }}
-                      className={`border-b border-gray-200 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 dark:border-slate-800 ${
-                        isSelected
-                          ? 'bg-blue-100 hover:bg-blue-100 dark:bg-blue-950/60 dark:hover:bg-blue-950/60'
-                          : `${zebraTone} hover:bg-blue-50 dark:hover:bg-slate-800`
-                      }`}
-                    >
-                      {showRaceColumn && (
-                        <td className="px-2 py-4 text-sm text-gray-800 sm:px-6 dark:text-slate-200">
-                          <Link
-                            href={`/races/${encodeURIComponent(row.raceId)}`}
-                            className="text-blue-600 hover:text-blue-800 hover:underline dark:text-blue-400 dark:hover:text-blue-300"
-                          >
-                            {row.raceTitle ?? row.raceId}
-                          </Link>
-                        </td>
-                      )}
-                      {!showRaceColumn && (
-                        <td className="px-2 py-4 text-sm text-gray-800 sm:px-6 dark:text-slate-200">
-                          <Link
-                            href={`/years/${encodeURIComponent(row.year.substring(0, 4))}`}
-                            className="text-blue-600 hover:text-blue-800 hover:underline dark:text-blue-400 dark:hover:text-blue-300"
-                          >
-                            {row.year}
-                          </Link>
-                        </td>
-                      )}
-                      <td className="px-2 py-4 text-sm font-semibold text-gray-800 sm:px-6 dark:text-slate-200">{filters.category === '' ? row.position : row.categoryPos[filters.category]}</td>
-                      {showRaceTitle ? (
-                        <td className="px-2 py-4 text-sm text-gray-800 sm:px-6 dark:text-slate-200">
-                          <Link
-                            href={`/races/${encodeURIComponent(row.raceId)}`}
-                            className="text-blue-600 hover:text-blue-800 hover:underline dark:text-blue-400 dark:hover:text-blue-300"
-                          >
-                            {row.raceTitle ?? row.raceId}
-                          </Link>
-                        </td>
-                      ) : (
-                        <td className="px-2 py-4 text-sm font-semibold text-gray-800 sm:px-6 dark:text-slate-200">
-                          <Link
-                            href={`/runner?name=${encodeURIComponent(row.name)}`}
-                            className="text-blue-600 hover:text-blue-800 hover:underline dark:text-blue-400 dark:hover:text-blue-300"
-                          >
-                            {row.name}
-                          </Link>
-                        </td>
-                      )}
-                      <td className="hidden px-2 py-4 text-sm text-gray-800 sm:table-cell sm:px-6 dark:text-slate-200">
-                        {row.club ? (
-                          clubNameToSlug[row.club] ? (
-                            <Link
-                              href={`/clubs/${encodeURIComponent(clubNameToSlug[row.club])}`}
-                              className="text-blue-600 hover:underline dark:text-blue-400"
-                            >
-                              {row.club}
-                            </Link>
-                          ) : row.club
-                        ) : null}
-                      </td>
-                      <td className="hidden px-2 py-4 text-sm text-gray-800 md:table-cell md:px-6 dark:text-slate-200">{row.category}</td>
-                      <td className="px-2 py-4 font-mono text-sm font-semibold text-gray-800 sm:px-6 dark:text-slate-200">{row.time}</td>
-                    </tr>
-                  );
-                  })
-                ) : (
+                {processedData.length === 0 ? (
                   <tr>
-                    <td colSpan={showRaceColumn ? 6 : 6} className="px-6 py-4 text-center text-sm text-gray-500 dark:text-slate-400">
+                    <td colSpan={6} className="px-6 py-4 text-center text-sm text-gray-500 dark:text-slate-400">
                       No results match your filters
                     </td>
                   </tr>
+                ) : (
+                  <>
+                    {paddingTop > 0 && <tr><td colSpan={6} style={{ height: paddingTop }} /></tr>}
+                    {virtualItems.map((virtualRow) => {
+                      const row = processedData[virtualRow.index];
+                      const rowKey = getRowKey(row);
+                      const isSelected = enableRowFocus && selectedRowKey === rowKey;
+                      const zebraTone = virtualRow.index % 2 === 0 ? 'bg-white dark:bg-slate-900' : 'bg-gray-50 dark:bg-slate-950';
+                      return (
+                        <tr
+                          key={virtualRow.key}
+                          tabIndex={enableRowFocus ? 0 : -1}
+                          onClick={(event) => {
+                            if (!enableRowFocus) return;
+                            if ((event.target as HTMLElement).closest('a')) return;
+                            setSelectedRowKey(rowKey);
+                          }}
+                          onKeyDown={(event) => {
+                            if (!enableRowFocus) return;
+                            if (event.key !== 'Enter' && event.key !== ' ') return;
+                            event.preventDefault();
+                            setSelectedRowKey(rowKey);
+                          }}
+                          className={`border-b border-gray-200 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 dark:border-slate-800 ${
+                            isSelected
+                              ? 'bg-blue-100 hover:bg-blue-100 dark:bg-blue-950/60 dark:hover:bg-blue-950/60'
+                              : `${zebraTone} hover:bg-blue-50 dark:hover:bg-slate-800`
+                          }`}
+                        >
+                          {showRaceColumn && (
+                            <td className="px-2 py-4 text-sm text-gray-800 sm:px-6 dark:text-slate-200">
+                              <Link
+                                href={`/races/${encodeURIComponent(row.raceId)}`}
+                                className="text-blue-600 hover:text-blue-800 hover:underline dark:text-blue-400 dark:hover:text-blue-300"
+                              >
+                                {row.raceTitle ?? row.raceId}
+                              </Link>
+                            </td>
+                          )}
+                          {!showRaceColumn && (
+                            <td className="px-2 py-4 text-sm text-gray-800 sm:px-6 dark:text-slate-200">
+                              <Link
+                                href={`/years/${encodeURIComponent(row.year.substring(0, 4))}`}
+                                className="text-blue-600 hover:text-blue-800 hover:underline dark:text-blue-400 dark:hover:text-blue-300"
+                              >
+                                {row.year}
+                              </Link>
+                            </td>
+                          )}
+                          <td className="px-2 py-4 text-sm font-semibold text-gray-800 sm:px-6 dark:text-slate-200">{filters.category === '' ? row.position : row.categoryPos[filters.category]}</td>
+                          {showRaceTitle ? (
+                            <td className="px-2 py-4 text-sm text-gray-800 sm:px-6 dark:text-slate-200">
+                              <Link
+                                href={`/races/${encodeURIComponent(row.raceId)}`}
+                                className="text-blue-600 hover:text-blue-800 hover:underline dark:text-blue-400 dark:hover:text-blue-300"
+                              >
+                                {row.raceTitle ?? row.raceId}
+                              </Link>
+                            </td>
+                          ) : (
+                            <td className="px-2 py-4 text-sm font-semibold text-gray-800 sm:px-6 dark:text-slate-200">
+                              <Link
+                                href={`/runner?name=${encodeURIComponent(row.name)}`}
+                                className="text-blue-600 hover:text-blue-800 hover:underline dark:text-blue-400 dark:hover:text-blue-300"
+                              >
+                                {row.name}
+                              </Link>
+                            </td>
+                          )}
+                          <td className="hidden px-2 py-4 text-sm text-gray-800 sm:table-cell sm:px-6 dark:text-slate-200">
+                            {row.club ? (
+                              clubNameToSlug[row.club] ? (
+                                <Link
+                                  href={`/clubs/${encodeURIComponent(clubNameToSlug[row.club])}`}
+                                  className="text-blue-600 hover:underline dark:text-blue-400"
+                                >
+                                  {row.club}
+                                </Link>
+                              ) : row.club
+                            ) : null}
+                          </td>
+                          <td className="hidden px-2 py-4 text-sm text-gray-800 md:table-cell md:px-6 dark:text-slate-200">{row.category}</td>
+                          <td className="px-2 py-4 font-mono text-sm font-semibold text-gray-800 sm:px-6 dark:text-slate-200">{row.time}</td>
+                        </tr>
+                      );
+                    })}
+                    {paddingBottom > 0 && <tr><td colSpan={6} style={{ height: paddingBottom }} /></tr>}
+                  </>
                 )}
               </tbody>
             </table>

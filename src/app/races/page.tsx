@@ -7,7 +7,7 @@ export default async function RaceListPage() {
   const races = await loadAllRaces().then((allRaces) => {
     return Object.entries(allRaces)
       .map(([raceId, race]) => ({ raceId, ...race }))
-      .sort((a, b) => a.title.localeCompare(b.title));
+      .sort((a, b) => (a.title ?? a.raceId).localeCompare(b.title ?? b.raceId));
   }).catch((error: unknown) => {
     console.error('Failed to load races list:', error);
     return [] as Array<RaceInfo & { raceId: string }>;

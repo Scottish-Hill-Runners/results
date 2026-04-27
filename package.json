@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.19",
+    "@tanstack/react-virtual": "^3.13.24",
     "@vercel/analytics": "^2.0.1",
     "@vercel/speed-insights": "^2.0.0",
     "csvtojson": "^2.0.14",
