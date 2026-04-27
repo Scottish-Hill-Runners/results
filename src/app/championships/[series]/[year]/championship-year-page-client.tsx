@@ -707,7 +707,7 @@ export default function ChampionshipYearPageClient({
                             <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-600 dark:text-slate-300">Club</th>
                             <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-600 dark:text-slate-300">Category</th>
                             <th className="px-4 py-3 text-right text-xs font-semibold uppercase tracking-wide text-slate-600 dark:text-slate-300">Points</th>
-                            <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-600 dark:text-slate-300">Events</th>
+                            <th className="hidden px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-600 sm:table-cell dark:text-slate-300">Events</th>
                           </tr>
                         </thead>
                         <tbody className="divide-y divide-slate-100 dark:divide-slate-800">
@@ -732,7 +732,7 @@ export default function ChampionshipYearPageClient({
                             </td>
                             <td className="px-4 py-3 text-sm text-slate-700 dark:text-slate-200">{runner.categories.join(', ')}</td>
                             <td className="whitespace-nowrap px-4 py-3 text-right text-sm font-semibold text-slate-900 dark:text-slate-100">{formatPoints(runner.points)}</td>
-                            <td className="px-4 py-3 text-sm text-slate-700 dark:text-slate-200">
+                            <td className="hidden px-4 py-3 text-sm text-slate-700 sm:table-cell dark:text-slate-200">
                               {runner.events.map((event) => `${event.raceId}: ${formatPoints(event.points)}`).join(', ')}
                             </td>
                           </tr>
@@ -769,7 +769,7 @@ export default function ChampionshipYearPageClient({
                             <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-600 dark:text-slate-300">Club</th>
                             <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-600 dark:text-slate-300">Category</th>
                             <th className="px-4 py-3 text-right text-xs font-semibold uppercase tracking-wide text-slate-600 dark:text-slate-300">Points</th>
-                            <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-600 dark:text-slate-300">Events</th>
+                            <th className="hidden px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-600 sm:table-cell dark:text-slate-300">Events</th>
                           </tr>
                         </thead>
                         <tbody className="divide-y divide-slate-100 dark:divide-slate-800">
@@ -794,7 +794,7 @@ export default function ChampionshipYearPageClient({
                             </td>
                             <td className="px-4 py-3 text-sm text-slate-700 dark:text-slate-200">{runner.categories.join(', ')}</td>
                             <td className="whitespace-nowrap px-4 py-3 text-right text-sm font-semibold text-slate-900 dark:text-slate-100">{formatPoints(runner.points)}</td>
-                            <td className="px-4 py-3 text-sm text-slate-700 dark:text-slate-200">
+                            <td className="hidden px-4 py-3 text-sm text-slate-700 sm:table-cell dark:text-slate-200">
                               {runner.events.map((event) => `${event.raceId}: ${formatPoints(event.points)}`).join(', ')}
                             </td>
                           </tr>
