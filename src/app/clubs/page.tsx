@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { getClubItems } from '@/lib/clubs';
+import ClubsFilter from './clubs-filter';
 
 export { getClubItems };
 
@@ -24,18 +25,7 @@ export default async function ClubsPage() {
       {sorted.length === 0 ? (
         <p className="text-slate-600 dark:text-slate-300">No clubs available.</p>
       ) : (
-        <ul className="space-y-2">
-          {sorted.map((club) => (
-            <li key={club.slug}>
-              <Link
-                href={`/clubs/${club.slug}`}
-                className="text-blue-600 hover:text-blue-800 hover:underline dark:text-blue-400 dark:hover:text-blue-300"
-              >
-                {club.name}
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <ClubsFilter items={sorted} />
       )}
       <div className="mt-10 border-t border-slate-200 pt-6 dark:border-slate-700">
         <p className="text-sm text-slate-600 dark:text-slate-400">
