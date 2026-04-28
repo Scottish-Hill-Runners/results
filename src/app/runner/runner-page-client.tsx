@@ -42,6 +42,7 @@ export default function RunnerPageClient({ name, runnerNames = [] }: RunnerPageC
   const deferredQuery = useDeferredValue(query);
 
   const [results, setResults] = useState<RaceResult[] | null>(null);
+  const [races, setRaces] = useState<{ [raceId: string]: RaceInfo }>({});
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [isNotFound, setIsNotFound] = useState(false);
@@ -99,8 +100,6 @@ export default function RunnerPageClient({ name, runnerNames = [] }: RunnerPageC
         fetchGzipJson<RaceResult[]>(batchPath),
         fetchGzipJson<{ [raceId: string]: RaceInfo }>('/results/races.json.gz'),
       ]);
-      const races = racesResponse.status === 'ok' ? racesResponse.data : {};
-
       if (isCancelled) {
         return;
       }
@@ -114,12 +113,12 @@ export default function RunnerPageClient({ name, runnerNames = [] }: RunnerPageC
         setResults(null);
       } else {
         const filtered = response.data
-          .filter((row) => runnerNameMatches(decodedName, row.name))
-          .map((row) => ({ ...row, raceTitle: races[row.raceId]?.title ?? row.raceId }));
+          .filter((row) => runnerNameMatches(decodedName, row.name));
         if (filtered.length === 0) {
           setIsNotFound(true);
           setResults(null);
         } else {
+          setRaces(racesResponse.status === 'ok' ? racesResponse.data : {});
           setResults(filtered);
         }
       }
@@ -217,7 +216,7 @@ export default function RunnerPageClient({ name, runnerNames = [] }: RunnerPageC
             <p className="mb-4 text-gray-600 dark:text-slate-300">Try again in a few minutes.</p>
           </div>
         ) : results ? (
-          <RaceResultsDataTable data={results} showRaceTitle />
+          <RaceResultsDataTable data={results} races={races} showRaceTitle />
         ) : (
           <div className="rounded-lg bg-white p-8 text-center shadow-md dark:bg-slate-900">
             <p className="text-gray-600 dark:text-slate-300">No runner data available.</p>

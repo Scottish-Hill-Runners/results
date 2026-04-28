@@ -3,12 +3,13 @@
 import { useEffect, useRef, useState, useMemo } from 'react';
 import { useVirtualizer } from '@tanstack/react-virtual';
 import Link from 'next/link';
-import { RaceResult, ResultsFocusContext } from '@/types/datatable';
+import { RaceResult, RaceInfo, ResultsFocusContext } from '@/types/datatable';
 import { normalizeResultYear } from '@/lib/results-correction-link';
 import { fetchGzipJson } from '@/lib/client-results-fetch';
 
 interface DataTableProps {
-  data: Array<RaceResult & { raceTitle?: string }>;
+  data: Array<RaceResult>;
+  races?: { [raceId: string]: RaceInfo };
   showRaceColumn?: boolean;
   showRaceTitle?: boolean;
   showYearFilter?: boolean;
@@ -32,6 +33,7 @@ const FILTER_VISIBILITY_STORAGE_KEY = 'raceResults.showFilters';
 
 export default function RaceResultsDataTable({
   data,
+  races,
   showRaceColumn = false,
   showRaceTitle = false,
   showYearFilter = true,
@@ -71,7 +73,7 @@ export default function RaceResultsDataTable({
   const [selectedRowKey, setSelectedRowKey] = useState<string | null>(null);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
-  const getRowKey = (row: RaceResult & { raceTitle?: string }) => [
+  const getRowKey = (row: RaceResult) => [
     row.raceId,
     row.year,
     row.position,
@@ -108,8 +110,8 @@ export default function RaceResultsDataTable({
       let bVal: string | number;
 
       if (primaryCol === 'raceTitle') {
-        aVal = a.raceTitle ?? a.raceId;
-        bVal = b.raceTitle ?? b.raceId;
+        aVal = races?.[a.raceId]?.title ?? a.raceId;
+        bVal = races?.[b.raceId]?.title ?? b.raceId;
       } else {
         aVal = a[primaryCol];
         bVal = b[primaryCol];
@@ -143,7 +145,7 @@ export default function RaceResultsDataTable({
     });
 
     return result;
-  }, [data, filters, sortColumn, sortDirection, showYearFilter]);
+  }, [data, filters, sortColumn, sortDirection, showYearFilter, races]);
 
   // Reset scroll position when filters/sort change
   useEffect(() => {
@@ -428,7 +430,7 @@ export default function RaceResultsDataTable({
                                 href={`/races/${encodeURIComponent(row.raceId)}`}
                                 className="text-blue-600 hover:text-blue-800 hover:underline dark:text-blue-400 dark:hover:text-blue-300"
                               >
-                                {row.raceTitle ?? row.raceId}
+                                {races?.[row.raceId]?.title ?? row.raceId}
                               </Link>
                             </td>
                           )}
@@ -449,7 +451,7 @@ export default function RaceResultsDataTable({
                                 href={`/races/${encodeURIComponent(row.raceId)}`}
                                 className="text-blue-600 hover:text-blue-800 hover:underline dark:text-blue-400 dark:hover:text-blue-300"
                               >
-                                {row.raceTitle ?? row.raceId}
+                                {races?.[row.raceId]?.title ?? row.raceId}
                               </Link>
                             </td>
                           ) : (

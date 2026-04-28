@@ -3,9 +3,9 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import RaceResultsDataTable from '@/components/RaceResultsDataTable';
-import { fetchJsonWithApiFallback } from '@/lib/client-results-fetch';
+import { fetchJsonWithApiFallback, fetchGzipJson } from '@/lib/client-results-fetch';
 import { buildResultsEditUrl, normalizeResultYear } from '@/lib/results-correction-link';
-import type { YearRaceResult } from '@/types/datatable';
+import type { RaceInfo, RaceResult } from '@/types/datatable';
 import type { ResultsFocusContext } from '@/types/datatable';
 
 interface YearPageClientProps {
@@ -13,7 +13,8 @@ interface YearPageClientProps {
 }
 
 export default function YearPageClient({ year }: YearPageClientProps) {
-  const [results, setResults] = useState<YearRaceResult[] | null>(null);
+  const [results, setResults] = useState<RaceResult[] | null>(null);
+  const [races, setRaces] = useState<{ [raceId: string]: RaceInfo }>({});
   const [isLoading, setIsLoading] = useState(true);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [isNotFound, setIsNotFound] = useState(false);
@@ -33,13 +34,16 @@ export default function YearPageClient({ year }: YearPageClientProps) {
       setIsNotFound(false);
 
       try {
-        const result = await fetchJsonWithApiFallback<YearRaceResult[]>(
-          `/api/years/${encodeURIComponent(year)}`,
-          `/results/${encodeURIComponent(year)}.json.gz`,
-        );
-
+        const [result, racesResponse] = await Promise.all([
+          fetchJsonWithApiFallback<RaceResult[]>(
+            `/api/years/${encodeURIComponent(year)}`,
+            `/results/${encodeURIComponent(year)}.json.gz`,
+          ),
+          fetchGzipJson<{ [raceId: string]: RaceInfo }>('/results/races.json.gz'),
+        ]);
         if (!isCancelled) {
           if (result.status === 'ok') {
+            setRaces(racesResponse.status === 'ok' ? racesResponse.data : {});
             setResults(result.data);
           } else if (result.status === 'not-found') {
             setIsNotFound(true);
@@ -107,6 +111,7 @@ export default function YearPageClient({ year }: YearPageClientProps) {
           <div className="space-y-4">
             <RaceResultsDataTable
               data={results}
+              races={races}
               showRaceColumn
               showYearFilter={false}
               enableRowFocus
