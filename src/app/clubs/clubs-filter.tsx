@@ -63,7 +63,7 @@ export default function ClubsFilter({ items }: ClubsFilterProps) {
       ) : (
         <ul className="space-y-2">
           {filtered.map((club) => (
-            <li key={club.slug}>
+            <li key={club.slug} className={club.active === false ? 'opacity-50' : undefined}>
               <Link
                 href={`/clubs/${club.slug}`}
                 className="text-blue-600 hover:text-blue-800 hover:underline dark:text-blue-400 dark:hover:text-blue-300"
