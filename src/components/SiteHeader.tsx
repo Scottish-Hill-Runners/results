@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import ThemeToggle from '@/components/ThemeToggle';
+import UnitsToggle from '@/components/UnitsToggle';
 
 export default function SiteHeader() {
   return (
@@ -33,7 +34,8 @@ export default function SiteHeader() {
             <rect x="36" y="50" width="426" height="6" rx="1" fill="url(#shr-logo-g)" />
           </svg>
         </Link>
-        <div className="flex items-center">
+        <div className="flex items-center gap-2">
+          <UnitsToggle />
           <ThemeToggle />
         </div>
       </div>

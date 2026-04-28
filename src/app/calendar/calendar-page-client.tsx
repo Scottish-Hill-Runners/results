@@ -3,6 +3,8 @@
 import { useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
 import { fetchGzipJson } from '@/lib/client-results-fetch';
+import { useUnits } from '@/components/UnitsProvider';
+import { formatDistance, formatClimb } from '@/lib/units';
 
 type CalendarEntry = {
   Date: string;
@@ -133,6 +135,7 @@ function isPastRace(dateString: string): boolean {
 }
 
 export default function CalendarPageClient() {
+  const { imperial } = useUnits();
   const [entries, setEntries] = useState<CalendarEntry[] | null>(null);
   const [championships, setChampionships] = useState<ChampionshipData[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -419,8 +422,8 @@ export default function CalendarPageClient() {
                             )}
                           </div>
                           <div className="text-right text-sm text-slate-700 dark:text-slate-300">
-                            <div>{entry.distance !== undefined ? `${entry.distance.toFixed(1)} km` : 'Distance: —'}</div>
-                            <div>{entry.climb !== undefined ? `${entry.climb} m climb` : 'Climb: —'}</div>
+                            <div>{entry.distance !== undefined ? formatDistance(entry.distance, imperial) : 'Distance: —'}</div>
+                            <div>{entry.climb !== undefined ? `${formatClimb(entry.climb, imperial)} climb` : 'Climb: —'}</div>
                           </div>
                         </div>
                       </article>

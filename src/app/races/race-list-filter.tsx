@@ -3,12 +3,15 @@
 import { useState, useMemo } from 'react';
 import Link from 'next/link';
 import type { RaceInfo } from '@/types/datatable';
+import { useUnits } from '@/components/UnitsProvider';
+import { formatDistance } from '@/lib/units';
 
 interface RaceListFilterProps {
   races: Array<RaceInfo & { raceId: string }>;
 }
 
 export default function RaceListFilter({ races }: RaceListFilterProps) {
+  const { imperial } = useUnits();
   const [query, setQuery] = useState('');
 
   const filtered = useMemo(() => {
@@ -50,7 +53,7 @@ export default function RaceListFilter({ races }: RaceListFilterProps) {
                 className="block rounded-lg border border-gray-200 bg-white px-4 py-3 text-blue-600 hover:bg-gray-50 dark:border-slate-800 dark:bg-slate-900 dark:hover:bg-slate-800"
               >
                 <div className="font-semibold dark:text-slate-100">{race.title ?? race.raceId}</div>
-                <div className="text-sm text-gray-600 dark:text-slate-300">{race.venue ?? 'Unknown venue'} • {race.distance}km</div>
+                <div className="text-sm text-gray-600 dark:text-slate-300">{race.venue ?? 'Unknown venue'} • {formatDistance(race.distance, imperial)}</div>
               </Link>
             </li>
           ))}

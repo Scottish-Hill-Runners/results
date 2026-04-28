@@ -5,6 +5,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 import "./globals.css";
 import sharedStyles from './shared.module.css';
 import SiteHeader from '@/components/SiteHeader';
+import UnitsProvider from '@/components/UnitsProvider';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,6 +25,15 @@ export const metadata: Metadata = {
     shortcut: '/icon.svg',
   },
 };
+
+const unitsScript = `
+(() => {
+  try {
+    if (window.localStorage.getItem('shr-units') === 'imperial') {
+      document.documentElement.dataset.units = 'imperial';
+    }
+  } catch {}
+})();`;
 
 const themeScript = `
 (() => {
@@ -51,6 +61,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <script dangerouslySetInnerHTML={{ __html: unitsScript }} />
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
       <body
@@ -62,8 +73,10 @@ export default function RootLayout({
         >
           Skip to content
         </a>
-        <SiteHeader />
-        <div className="min-h-screen bg-slate-50 dark:bg-slate-950">{children}</div>
+        <UnitsProvider>
+          <SiteHeader />
+          <div className="min-h-screen bg-slate-50 dark:bg-slate-950">{children}</div>
+        </UnitsProvider>
         <Analytics />
         <SpeedInsights />
       </body>

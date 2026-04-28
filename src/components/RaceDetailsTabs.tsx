@@ -6,6 +6,8 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import RaceResultsDataTable from '@/components/RaceResultsDataTable';
 import { buildResultsEditUrl, getLatestResultYear } from '@/lib/results-correction-link';
+import { useUnits } from '@/components/UnitsProvider';
+import { formatDistance, formatClimb } from '@/lib/units';
 import type { RaceInfo, RaceResult, ResultsFocusContext } from '@/types/datatable';
 
 interface RaceDetailsTabsProps {
@@ -34,6 +36,7 @@ function filenameToAltText(sourcePath: string): string {
 const TAB_STORAGE_KEY = 'raceDetails.activeTab';
 
 export default function RaceDetailsTabs({ raceId, race, contents, hasGpx, hasRaceMap, results, resultsError, heroImage, galleryImages }: RaceDetailsTabsProps) {
+  const { imperial } = useUnits();
   const [activeTab, setActiveTab] = useState<TabKey>(() => {
     try {
         const saved = window.localStorage.getItem(TAB_STORAGE_KEY);
@@ -162,9 +165,9 @@ export default function RaceDetailsTabs({ raceId, race, contents, hasGpx, hasRac
 
             <div className="grid grid-cols-1 gap-2 text-sm text-gray-700 dark:text-slate-300 sm:grid-cols-2">
               <p><span className="font-semibold text-gray-900 dark:text-slate-100">Venue:</span> {race.venue}</p>
-              <p><span className="font-semibold text-gray-900 dark:text-slate-100">Distance:</span> {race.distance} km</p>
+              <p><span className="font-semibold text-gray-900 dark:text-slate-100">Distance:</span> {formatDistance(race.distance, imperial)}</p>
               {typeof race.climb === 'number' && (
-                <p><span className="font-semibold text-gray-900 dark:text-slate-100">Climb:</span> {race.climb} m</p>
+                <p><span className="font-semibold text-gray-900 dark:text-slate-100">Climb:</span> {formatClimb(race.climb, imperial)}</p>
               )}
               {race.maleRecord && (
                 <p><span className="font-semibold text-gray-900 dark:text-slate-100">Male record:</span> {race.maleRecord}</p>
