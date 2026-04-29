@@ -204,7 +204,7 @@ export default function RaceDetailsTabs({ raceId, race, contents, hasGpx, hasRac
               <p className="mt-1">
                 Edit the race description via{' '}
                 <a
-                  href={`https://admin.scottishhillrunners.uk/races/edit?raceId=${encodeURIComponent(raceId)}`}
+                  href={`https://admin.scottishhillrunners.uk/races/${encodeURIComponent(raceId)}`}
                   target="_blank"
                   rel="noreferrer"
                   className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-2 hover:text-blue-900 dark:text-blue-300 dark:decoration-blue-700 dark:hover:text-blue-200"

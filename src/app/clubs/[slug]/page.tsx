@@ -17,7 +17,7 @@ export default async function ClubSlugPage({ params }: ClubSlugPageProps) {
   const items = await getClubItems();
   const club = items.find((item) => item.slug === slug) ?? null;
 
-  const editUrl = `https://admin.scottishhillrunners.uk/clubs/edit?clubId=${encodeURIComponent(slug)}`;
+  const editUrl = `https://admin.scottishhillrunners.uk/clubs/${encodeURIComponent(slug)}`;
 
   return (
     <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6 lg:px-8">
