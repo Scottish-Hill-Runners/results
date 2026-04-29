@@ -15,6 +15,12 @@ export interface ResultsFocusContext {
   source: 'selected-row' | 'table-visible';
 }
 
+export interface Era {
+  label: string;
+  from?: number;
+  to?: number;
+}
+
 export interface RaceInfo {
   title: string;
   venue: string;
@@ -25,6 +31,7 @@ export interface RaceInfo {
   nonBinaryRecord?: string;
   web?: string;
   organiser?: number[];
+  eras?: Era[];
 }
 
 export interface RaceData {

@@ -5,7 +5,7 @@ import path from 'path';
 import { writeGz, progress } from './write-gz-util';
 import { contentPath, contentRoot } from './content-paths';
 import { surnameHash } from '@/lib/runner-name';
-import { RaceInfo, RaceResult } from '@/types/datatable';
+import { Era, RaceInfo, RaceResult } from '@/types/datatable';
 
 type YearInfo = {
   year: string;
@@ -250,6 +250,32 @@ function writeYearData(allResults: RaceResult[]) {
   writeGz(outputDir, 'years.json', JSON.stringify(yearInfo));
 }
 
+function parseEras(raw: string | undefined): Era[] | undefined {
+  if (!raw) return undefined;
+  const eras: Era[] = [];
+  for (const part of raw.split(';')) {
+    const label = part.trim();
+    if (!label) continue;
+    const preMatch = label.match(/^pre-(\d{4})$/);
+    if (preMatch) {
+      eras.push({ label, to: parseInt(preMatch[1], 10) - 1 });
+      continue;
+    }
+    const presentMatch = label.match(/^(\d{4})-present$/);
+    if (presentMatch) {
+      eras.push({ label, from: parseInt(presentMatch[1], 10) });
+      continue;
+    }
+    const rangeMatch = label.match(/^(\d{4})-(\d{4})$/);
+    if (rangeMatch) {
+      eras.push({ label, from: parseInt(rangeMatch[1], 10), to: parseInt(rangeMatch[2], 10) });
+      continue;
+    }
+    progress(`Warning: unrecognised era "${label}" — skipping`);
+  }
+  return eras.length > 0 ? eras : undefined;
+}
+
 function writeRaceData(allResults: RaceResult[]) {
   const byRaceId = groupBy(allResults, (r) => r.raceId);
   const encoder = new TextEncoder();
@@ -269,6 +295,7 @@ function writeRaceData(allResults: RaceResult[]) {
       organiser: data.organiser
         ? Array.from(encoder.encode(data.organiser))
         : undefined,
+      eras: parseEras(data.eras as string | undefined),
     };
     raceInfo[raceId] = info;
     const hasGpx = fs.existsSync(path.join(raceDir, 'route.gpx'));

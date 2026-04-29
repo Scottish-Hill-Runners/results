@@ -3,13 +3,14 @@
 import { useEffect, useRef, useState, useMemo } from 'react';
 import { useVirtualizer } from '@tanstack/react-virtual';
 import Link from 'next/link';
-import { RaceResult, RaceInfo, ResultsFocusContext } from '@/types/datatable';
+import { RaceResult, RaceInfo, Era, ResultsFocusContext } from '@/types/datatable';
 import { normalizeResultYear } from '@/lib/results-correction-link';
 import { fetchGzipJson } from '@/lib/client-results-fetch';
 
 interface DataTableProps {
   data: Array<RaceResult>;
   races?: { [raceId: string]: RaceInfo };
+  eras?: Era[];
   showRaceColumn?: boolean;
   showRaceTitle?: boolean;
   showYearFilter?: boolean;
@@ -31,9 +32,16 @@ interface Filters {
 
 const FILTER_VISIBILITY_STORAGE_KEY = 'raceResults.showFilters';
 
+function eraContainsYear(era: Era, year: number): boolean {
+  if (era.from !== undefined && year < era.from) return false;
+  if (era.to !== undefined && year > era.to) return false;
+  return true;
+}
+
 export default function RaceResultsDataTable({
   data,
   races,
+  eras,
   showRaceColumn = false,
   showRaceTitle = false,
   showYearFilter = true,
@@ -91,9 +99,17 @@ export default function RaceResultsDataTable({
     let result = [...data];
 
     // Apply filters
+    const eraLabel = showYearFilter && filters.year.startsWith('era:') ? filters.year.slice(4) : null;
+    const activeEra = eraLabel != null ? (eras ?? []).find((e) => e.label === eraLabel) : null;
     result = result.filter((row) => {
+      const yearNum = parseInt(row.year.substring(0, 4), 10);
+      const yearMatch = !showYearFilter || filters.year === ''
+        ? true
+        : activeEra != null
+          ? eraContainsYear(activeEra, yearNum)
+          : row.year.toString().includes(filters.year);
       return (
-        (!showYearFilter || filters.year === '' || row.year.toString().includes(filters.year)) &&
+        yearMatch &&
         (filters.name === '' || row.name.toLowerCase().includes(filters.name.toLowerCase())) &&
         (filters.club === '' || row.club.toLowerCase().includes(filters.club.toLowerCase())) &&
         (filters.category === '' || (filters.category in row.categoryPos))
@@ -184,9 +200,17 @@ export default function RaceResultsDataTable({
     let result = [...data];
 
     // Apply all filters EXCEPT category
+    const eraLabelCat = showYearFilter && filters.year.startsWith('era:') ? filters.year.slice(4) : null;
+    const activeEraCat = eraLabelCat != null ? (eras ?? []).find((e) => e.label === eraLabelCat) : null;
     result = result.filter((row) => {
+      const yearNum = parseInt(row.year.substring(0, 4), 10);
+      const yearMatch = !showYearFilter || filters.year === ''
+        ? true
+        : activeEraCat != null
+          ? eraContainsYear(activeEraCat, yearNum)
+          : row.year.includes(filters.year);
       return (
-        (!showYearFilter || filters.year === '' || row.year.includes(filters.year)) &&
+        yearMatch &&
         (filters.name === '' || row.name.toLowerCase().includes(filters.name.toLowerCase())) &&
         (filters.club === '' || row.club.toLowerCase().includes(filters.club.toLowerCase()))
       );
@@ -286,11 +310,30 @@ export default function RaceResultsDataTable({
                   className="rounded border border-gray-300 bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-100"
                 >
                   <option value="">All Years</option>
-                  {availableYears.map((year) => (
-                    <option key={year} value={year.toString()}>
-                      {year}
-                    </option>
-                  ))}
+                  {eras && eras.length > 0 && (
+                    <optgroup label="Eras">
+                      {eras.map((era) => (
+                        <option key={`era:${era.label}`} value={`era:${era.label}`}>
+                          {era.label}
+                        </option>
+                      ))}
+                    </optgroup>
+                  )}
+                  {eras && eras.length > 0 ? (
+                    <optgroup label="Years">
+                      {availableYears.map((year) => (
+                        <option key={year} value={year.toString()}>
+                          {year}
+                        </option>
+                      ))}
+                    </optgroup>
+                  ) : (
+                    availableYears.map((year) => (
+                      <option key={year} value={year.toString()}>
+                        {year}
+                      </option>
+                    ))
+                  )}
                 </select>
               )}
               <input

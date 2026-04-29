@@ -103,6 +103,7 @@ export default function RaceDetailsTabs({ raceId, race, contents, hasGpx, hasRac
               <div className="space-y-4">
                 <RaceResultsDataTable
                   data={results}
+                  eras={race.eras}
                   enableRowFocus
                   initialYearFilter={pageDefaultYear ?? undefined}
                   onFocusContextChange={setFocusedResultContext}
