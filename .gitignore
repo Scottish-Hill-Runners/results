@@ -40,11 +40,10 @@ next-env.d.ts
 *.zip
 .vscode/
 public/
-convert_news.mjs
 *password*
 
 # local content
 /content
 
-scripts/club-frequency.ts
 .gitignore
+.env*

@@ -1,8 +1,18 @@
 'use client';
 
 import { useMemo, useState, useEffect } from 'react';
+import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import ReactMarkdown from 'react-markdown';
+
+const RouteMap = dynamic(() => import('@/components/RouteMap'), {
+  ssr: false,
+  loading: () => (
+    <div className="flex h-[480px] items-center justify-center rounded-xl border border-gray-200 bg-gray-100 dark:border-slate-700 dark:bg-slate-800">
+      <div className="h-9 w-9 animate-spin rounded-full border-4 border-gray-300 border-t-blue-600 dark:border-slate-600 dark:border-t-blue-400" />
+    </div>
+  ),
+});
 import remarkGfm from 'remark-gfm';
 import RaceResultsDataTable from '@/components/RaceResultsDataTable';
 import { buildResultsEditUrl, getLatestResultYear } from '@/lib/results-correction-link';
@@ -244,7 +254,10 @@ export default function RaceDetailsTabs({ raceId, race, contents, hasGpx, hasRac
         )}
 
         {activeTab === 'gpx' && hasRouteAssets && (
-          <div role="tabpanel" id="race-tab-panel-gpx" aria-labelledby="race-tab-gpx" className="space-y-3">
+          <div role="tabpanel" id="race-tab-panel-gpx" aria-labelledby="race-tab-gpx" className="space-y-4">
+            {hasGpx && (
+              <RouteMap raceId={raceId} raceName={race.title} />
+            )}
             {hasRaceMap && (
               <div className="space-y-2">
                 <p className="text-sm text-gray-700 dark:text-slate-300">Race map preview:</p>
