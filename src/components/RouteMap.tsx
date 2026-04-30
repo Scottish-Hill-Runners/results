@@ -3,7 +3,6 @@
 import { useEffect, useRef, useState } from 'react';
 import maplibregl from 'maplibre-gl';
 import { gpx } from '@tmcw/togeojson';
-import 'maplibre-gl/dist/maplibre-gl.css';
 import type { GeoJSON } from 'geojson';
 
 interface RouteMapProps {
