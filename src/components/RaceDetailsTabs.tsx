@@ -13,6 +13,10 @@ const RouteMap = dynamic(() => import('@/components/RouteMap'), {
     </div>
   ),
 });
+
+const ElevationProfile = dynamic(() => import('@/components/ElevationProfile'), {
+  ssr: false,
+});
 import remarkGfm from 'remark-gfm';
 import RaceResultsDataTable from '@/components/RaceResultsDataTable';
 import { buildResultsEditUrl, getLatestResultYear } from '@/lib/results-correction-link';
@@ -256,7 +260,10 @@ export default function RaceDetailsTabs({ raceId, race, contents, hasGpx, hasRac
         {activeTab === 'gpx' && hasRouteAssets && (
           <div role="tabpanel" id="race-tab-panel-gpx" aria-labelledby="race-tab-gpx" className="space-y-4">
             {hasGpx && (
-              <RouteMap raceId={raceId} raceName={race.title} />
+              <>
+                <RouteMap raceId={raceId} raceName={race.title} />
+                <ElevationProfile raceId={raceId} raceName={race.title} />
+              </>
             )}
             {hasRaceMap && (
               <div className="space-y-2">
