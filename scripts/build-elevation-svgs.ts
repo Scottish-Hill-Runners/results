@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
+import { contentPath } from './content-paths';
 import {
   buildElevationProfile,
   calcElevationStats,
@@ -121,7 +122,7 @@ export interface ElevationChartData {
 // ---------------------------------------------------------------------------
 // Main
 // ---------------------------------------------------------------------------
-const racesDir = path.join(process.cwd(), 'content', 'races');
+const racesDir = contentPath('races');
 const outDir = path.join(process.cwd(), 'public', 'results');
 fs.mkdirSync(outDir, { recursive: true });
 
