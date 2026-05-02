@@ -4,9 +4,7 @@ import matter from 'gray-matter';
 import {
   buildElevationProfile,
   calcElevationStats,
-  niceInterval,
   type ElevationPoint,
-  type ElevationStats,
 } from '@/lib/gpx-elevation';
 
 // ---------------------------------------------------------------------------
@@ -58,7 +56,7 @@ function buildPaths(
   totalDist: number,
   minEle: number,
   maxEle: number,
-): { area: string; line: string } {
+): { area: string; line: string; startX: number; startY: number; endX: number; endY: number } {
   const eleRange = maxEle - minEle || 1;
   const toX = (d: number) => PAD.left + (d / totalDist) * PLOT_W;
   const toY = (e: number) => PAD.top + PLOT_H - ((e - minEle) / eleRange) * PLOT_H;
@@ -83,100 +81,41 @@ function buildPaths(
   const areaPath =
     `${linePath} L ${fmt(xs[xs.length - 1])},${fmt(BASELINE)} L ${fmt(xs[0])},${fmt(BASELINE)} Z`;
 
-  return { area: areaPath, line: linePath };
+  return {
+    area: areaPath,
+    line: linePath,
+    startX: toX(0),
+    startY: toY(profile[0].ele),
+    endX: toX(totalDist),
+    endY: toY(profile[profile.length - 1].ele),
+  };
 }
 
 // ---------------------------------------------------------------------------
-// SVG renderer — embeds CSS media queries for dark mode support
+// Output type — consumed by ElevationProfile.tsx at runtime
 // ---------------------------------------------------------------------------
-function renderSvg(
-  profile: ElevationPoint[],
-  stats: ElevationStats,
-  totalDistKm: number,
-  raceName: string,
-): string {
-  const { area, line } = buildPaths(profile, totalDistKm, stats.minEle, stats.maxEle);
-  const eleRange = stats.maxEle - stats.minEle || 1;
-  const toX = (d: number) => PAD.left + (d / totalDistKm) * PLOT_W;
-  const toY = (e: number) => PAD.top + PLOT_H - ((e - stats.minEle) / eleRange) * PLOT_H;
-
-  // Y gridlines
-  const yInterval = niceInterval(stats.maxEle - stats.minEle, 4);
-  const yStart = Math.ceil(stats.minEle / yInterval) * yInterval;
-  const gridLines: number[] = [];
-  for (let v = yStart; v <= stats.maxEle; v += yInterval) gridLines.push(v);
-
-  // X distance ticks (in km)
-  const xInterval = niceInterval(totalDistKm, 5);
-  const distTicks: number[] = [];
-  for (let v = 0; v <= totalDistKm + xInterval * 0.01; v += xInterval) {
-    distTicks.push(Math.round(v * 10) / 10);
-  }
-
-  const startY = toY(profile[0].ele);
-  const endY = toY(profile[profile.length - 1].ele);
-  const startX = toX(0);
-  const endX = toX(totalDistKm);
-
-  const gridSvg = gridLines
-    .map(v => {
-      const y = fmt(toY(v));
-      return [
-        `<line class="grid" x1="${PAD.left}" y1="${y}" x2="${W - PAD.right}" y2="${y}" stroke-dasharray="3 3"/>`,
-        `<text class="axis" x="${PAD.left - 5}" y="${y}" text-anchor="end" dominant-baseline="middle" font-size="10">${Math.round(v)}</text>`,
-      ].join('\n    ');
-    })
-    .join('\n    ');
-
-  const tickSvg = distTicks
-    .map(v => {
-      const x = toX(v);
-      if (x < PAD.left - 1 || x > W - PAD.right + 1) return '';
-      return [
-        `<line class="tick" x1="${fmt(x)}" y1="${BASELINE}" x2="${fmt(x)}" y2="${BASELINE + 4}"/>`,
-        `<text class="axis" x="${fmt(x)}" y="${BASELINE + 13}" text-anchor="middle" font-size="10">${v}</text>`,
-      ].join('\n    ');
-    })
-    .join('\n    ');
-
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" role="img" aria-label="Elevation profile for ${raceName.replace(/"/g, '&quot;')}">
-  <title>Elevation profile for ${raceName.replace(/</g, '&lt;')}</title>
-  <style>
-    .bg { fill: #ffffff }
-    .grid { stroke: #e5e7eb; stroke-width: 0.5; fill: none }
-    .tick { stroke: #d1d5db; stroke-width: 0.8; fill: none }
-    .base { stroke: #d1d5db; stroke-width: 0.8 }
-    .axis { fill: #9ca3af; font-family: system-ui, sans-serif }
-    @media (prefers-color-scheme: dark) {
-      .bg { fill: #0f172a }
-      .grid { stroke: #334155 }
-      .tick { stroke: #475569 }
-      .base { stroke: #475569 }
-      .axis { fill: #64748b }
-    }
-  </style>
-  <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e63012" stop-opacity="0.30"/>
-      <stop offset="100%" stop-color="#e63012" stop-opacity="0.03"/>
-    </linearGradient>
-    <clipPath id="c">
-      <rect x="${PAD.left}" y="${PAD.top}" width="${PLOT_W}" height="${PLOT_H}"/>
-    </clipPath>
-  </defs>
-  <rect class="bg" width="${W}" height="${H}"/>
-  ${gridSvg}
-  <text class="axis" x="${PAD.left - 5}" y="${PAD.top - 6}" text-anchor="end" font-size="9">m</text>
-  ${tickSvg}
-  <text class="axis" x="${W - PAD.right + 4}" y="${BASELINE + 13}" font-size="9">km</text>
-  <line class="base" x1="${PAD.left}" y1="${BASELINE}" x2="${W - PAD.right}" y2="${BASELINE}"/>
-  <path d="${area}" fill="url(#g)" clip-path="url(#c)"/>
-  <path d="${line}" fill="none" stroke="#e63012" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" clip-path="url(#c)"/>
-  <circle cx="${fmt(startX)}" cy="${fmt(startY)}" r="5" fill="#16a34a" stroke="white" stroke-width="1.5"/>
-  <text x="${fmt(startX + 8)}" y="${fmt(startY)}" dominant-baseline="middle" font-size="9" font-weight="700" fill="#16a34a">S</text>
-  <circle cx="${fmt(endX)}" cy="${fmt(endY)}" r="5" fill="#1d4ed8" stroke="white" stroke-width="1.5"/>
-  <text x="${fmt(endX - 8)}" y="${fmt(endY)}" text-anchor="end" dominant-baseline="middle" font-size="9" font-weight="700" fill="#1d4ed8">F</text>
-</svg>`;
+export interface ElevationChartData {
+  // Pre-computed SVG paths (expensive Catmull-Rom work done once at build)
+  area: string;
+  line: string;
+  // Start/finish marker positions in viewBox coords
+  startX: number;
+  startY: number;
+  endX: number;
+  endY: number;
+  // Raw bounds in metres — component converts to any unit at runtime
+  minEle: number;
+  maxEle: number;
+  totalDistKm: number;
+  gain: number;
+  loss: number;
+  // ViewBox dimensions so the component can reconstruct coordinate transforms
+  W: number;
+  H: number;
+  padTop: number;
+  padBottom: number;
+  padLeft: number;
+  padRight: number;
 }
 
 // ---------------------------------------------------------------------------
@@ -210,28 +149,40 @@ for (const entry of entries) {
     continue;
   }
 
-  // Read race name for SVG aria-label (best-effort, fall back to raceId)
-  let raceName = entry.name;
+  // Read race title (best-effort, unused beyond this scope for now)
+  let _raceName = entry.name;
   try {
     const indexMd = path.join(racesDir, entry.name, 'index.md');
     if (fs.existsSync(indexMd)) {
       const { data } = matter.read(indexMd);
-      if (typeof data.title === 'string') raceName = data.title;
+      if (typeof data.title === 'string') _raceName = data.title;
     }
   } catch { /* no-op */ }
 
-  fs.writeFileSync(
-    path.join(outDir, `${entry.name}-elevation-stats.json`),
-    JSON.stringify({ ...stats, totalDistKm }),
-  );
+  const paths = buildPaths(profile, totalDistKm, stats.minEle, stats.maxEle);
+
+  const chartData: ElevationChartData = {
+    ...paths,
+    minEle: stats.minEle,
+    maxEle: stats.maxEle,
+    totalDistKm,
+    gain: stats.gain,
+    loss: stats.loss,
+    W,
+    H,
+    padTop: PAD.top,
+    padBottom: PAD.bottom,
+    padLeft: PAD.left,
+    padRight: PAD.right,
+  };
 
   fs.writeFileSync(
-    path.join(outDir, `${entry.name}-elevation.svg`),
-    renderSvg(profile, stats, totalDistKm, raceName),
+    path.join(outDir, `${entry.name}-elevation.json`),
+    JSON.stringify(chartData),
   );
 
   count++;
   console.log(`  ✓ ${entry.name}: ${coords.length} → ${profile.length} pts, ${totalDistKm} km`);
 }
 
-console.log(`\nGenerated elevation SVGs for ${count} race(s).`);
+console.log(`\nGenerated elevation data for ${count} race(s).`);
