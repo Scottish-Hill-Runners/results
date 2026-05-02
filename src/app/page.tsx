@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import NewsList from '@/components/NewsList';
 import { getRecentNewsItems } from '@/lib/news';
-import { getImageCollectionById } from '@/lib/imageCollections';
+import { getHomepageImages } from '@/lib/imageCollections';
 
 function shuffled<T>(arr: T[]): T[] {
   const a = [...arr];
@@ -23,11 +23,10 @@ function filenameToAltText(sourcePath: string): string {
 }
 
 export default async function Home() {
-  const [newsItems, heroCollection] = await Promise.all([
+  const [newsItems, heroImages] = await Promise.all([
     getRecentNewsItems(10),
-    getImageCollectionById('homepage-decorative'),
+    getHomepageImages().then((imgs) => shuffled(imgs).slice(0, 6)),
   ]);
-  const heroImages = shuffled(heroCollection?.items ?? []).slice(0, 6);
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-slate-950">

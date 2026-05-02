@@ -2,7 +2,9 @@ import { promises as fs } from 'node:fs';
 import path from 'node:path';
 import { gunzipSync } from 'node:zlib';
 
-export interface ImageCollectionItem {
+// ── Runtime item types ─────────────────────────────────────────────────────
+
+export interface HomepageImageItem {
   path: string;
   sourcePath: string;
   imageUrl: string;
@@ -10,27 +12,34 @@ export interface ImageCollectionItem {
   tags?: string[];
 }
 
-export interface ImageCollection {
-  id: string;
-  label: string;
-  status?: string;
-  usage?: string[];
-  doNotUseFor?: string[];
-  items: ImageCollectionItem[];
-}
-
 export interface RaceImageItem {
   path: string;
   sourcePath: string;
   imageUrl: string;
-  confidence?: string;
-  source?: string;
 }
 
 export interface RaceImagesBySlugEntry {
   hero: RaceImageItem[];
   gallery: RaceImageItem[];
 }
+
+export interface DocumentItem {
+  path: string;
+  sourcePath: string;
+  imageUrl: string;
+  title?: string;
+  description?: string;
+  tags?: string[];
+}
+
+export interface PortraitItem {
+  path: string;
+  sourcePath: string;
+  imageUrl: string;
+  tags?: string[];
+}
+
+// ── Payload shape (v3) ─────────────────────────────────────────────────────
 
 interface ImageCollectionsPayload {
   version: number;
@@ -41,59 +50,62 @@ interface ImageCollectionsPayload {
     baseUrl?: string;
     missing?: boolean;
   };
-  collections: ImageCollection[];
-  raceImagesBySlug?: Record<string, RaceImagesBySlugEntry>;
+  homepageImages: HomepageImageItem[];
+  raceImagesBySlug: Record<string, RaceImagesBySlugEntry>;
+  documents: DocumentItem[];
+  committeePortraits: PortraitItem[];
 }
+
+// ── Loader ─────────────────────────────────────────────────────────────────
 
 let cachedPayload: ImageCollectionsPayload | null = null;
 
-async function readImageCollectionsFromFile(): Promise<ImageCollectionsPayload> {
+const emptyPayload: ImageCollectionsPayload = {
+  version: 3,
+  homepageImages: [],
+  raceImagesBySlug: {},
+  documents: [],
+  committeePortraits: [],
+};
+
+async function readPayload(): Promise<ImageCollectionsPayload> {
   const filePath = path.join(process.cwd(), 'public', 'image-collections.json.gz');
   const compressed = await fs.readFile(filePath);
-  const file = gunzipSync(compressed).toString('utf8');
-  const payload = JSON.parse(file) as ImageCollectionsPayload;
-
-  if (!payload || !Array.isArray(payload.collections)) {
-    throw new Error('image-collections.json.gz format is invalid');
-  }
-
+  const payload = JSON.parse(gunzipSync(compressed).toString('utf8')) as ImageCollectionsPayload;
+  if (!payload || typeof payload !== 'object') throw new Error('image-collections.json.gz format is invalid');
   return payload;
 }
 
-export async function getImageCollectionsPayload(): Promise<ImageCollectionsPayload> {
+async function getPayload(): Promise<ImageCollectionsPayload> {
+  if (cachedPayload !== null) return cachedPayload;
   try {
-    if (cachedPayload !== null) {
-      return cachedPayload;
-    }
-
-    const payload = await readImageCollectionsFromFile();
-    cachedPayload = payload;
-    return payload;
+    cachedPayload = await readPayload();
+    return cachedPayload;
   } catch (error) {
     console.warn('Could not load image collections:', error);
-    return { version: 1, collections: [] };
+    return emptyPayload;
   }
 }
 
-export async function getImageCollectionById(id: string): Promise<ImageCollection | null> {
-  const payload = await getImageCollectionsPayload();
-  return payload.collections.find((collection) => collection.id === id) ?? null;
+// ── Public accessors ───────────────────────────────────────────────────────
+
+export async function getHomepageImages(): Promise<HomepageImageItem[]> {
+  return (await getPayload()).homepageImages ?? [];
 }
 
 export async function getRaceImagesBySlug(slug: string): Promise<RaceImagesBySlugEntry | null> {
-  const payload = await getImageCollectionsPayload();
-  const raceImagesBySlug = payload.raceImagesBySlug;
+  const { raceImagesBySlug } = await getPayload();
+  if (!raceImagesBySlug) return null;
+  if (raceImagesBySlug[slug]) return raceImagesBySlug[slug];
+  const lower = slug.toLowerCase();
+  const key = Object.keys(raceImagesBySlug).find((k) => k.toLowerCase() === lower);
+  return key ? raceImagesBySlug[key] : null;
+}
 
-  if (!raceImagesBySlug) {
-    return null;
-  }
+export async function getDocuments(): Promise<DocumentItem[]> {
+  return (await getPayload()).documents ?? [];
+}
 
-  if (raceImagesBySlug[slug]) {
-    return raceImagesBySlug[slug];
-  }
-
-  const lowerSlug = slug.toLowerCase();
-  const matchedKey = Object.keys(raceImagesBySlug).find((key) => key.toLowerCase() === lowerSlug);
-
-  return matchedKey ? raceImagesBySlug[matchedKey] : null;
+export async function getCommitteePortraits(): Promise<PortraitItem[]> {
+  return (await getPayload()).committeePortraits ?? [];
 }

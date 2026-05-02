@@ -5,37 +5,34 @@ import { parse as parseYaml } from 'yaml';
 import { contentPath, contentRoot } from './content-paths';
 import { writeGz, progress } from './write-gz-util';
 
-interface SourceItem {
+// ── Source schema types ────────────────────────────────────────────────────
+
+interface SourceImageItem {
   path: string;
   tier?: string;
   tags?: string[];
+  title?: string;
+  description?: string;
 }
 
-interface SourceCollection {
-  id: string;
-  label: string;
-  status?: string;
-  usage?: string[];
-  doNotUseFor?: string[];
-  items: SourceItem[];
+interface SourceRaceImagesFile {
+  hero?: Array<{ path: string }>;
+  gallery?: Array<{ path: string }>;
 }
 
-interface SourceRaceImageItem {
-  path: string;
-  confidence?: string;
-  source?: string;
+interface SourceHomepageFile {
+  images?: SourceImageItem[];
 }
 
-interface SourceRaceImagesBySlugEntry {
-  hero?: SourceRaceImageItem[];
-  gallery?: SourceRaceImageItem[];
+interface SourceDocumentsFile {
+  documents?: SourceImageItem[];
 }
 
-interface SourceCollectionsFile {
-  version?: number;
-  collections: SourceCollection[];
-  raceImagesBySlug?: Record<string, SourceRaceImagesBySlugEntry>;
+interface SourceCommitteeFile {
+  portraits?: SourceImageItem[];
 }
+
+// ── Utilities ──────────────────────────────────────────────────────────────
 
 function encodeRepoPath(repoPath: string): string {
   return repoPath
@@ -47,18 +44,15 @@ function encodeRepoPath(repoPath: string): string {
 
 function resolveRepo(repo: string): string {
   const trimmed = repo.trim();
-
   if (trimmed.startsWith('http://') || trimmed.startsWith('https://')) {
     try {
       const url = new URL(trimmed);
       const parts = url.pathname.replace(/^\//, '').replace(/\.git$/, '').split('/');
-      if (parts.length >= 2)
-        return `${parts[0]}/${parts[1]}`;
+      if (parts.length >= 2) return `${parts[0]}/${parts[1]}`;
     } catch {
-      // Fall through to return the original value.
+      // fall through
     }
   }
-
   return trimmed.replace(/\.git$/, '');
 }
 
@@ -72,71 +66,74 @@ function getContentSha(root: string): string {
   }
 }
 
+function readYaml<T>(filePath: string): T | null {
+  if (!fs.existsSync(filePath)) return null;
+  return parseYaml(fs.readFileSync(filePath, 'utf-8')) as T;
+}
+
+function resolveItem<T extends { path: string }>(item: T, baseUrl: string): T & { sourcePath: string; imageUrl: string } {
+  return { ...item, sourcePath: item.path, imageUrl: `${baseUrl}/${encodeRepoPath(item.path)}` };
+}
+
+// ── Main build ─────────────────────────────────────────────────────────────
+
 function buildImageCollections() {
-  const sourceFile = contentPath('collections.yaml');
   const outputDir = path.join(process.cwd(), 'public');
+  if (!fs.existsSync(outputDir)) fs.mkdirSync(outputDir, { recursive: true });
 
-  if (!fs.existsSync(outputDir))
-    fs.mkdirSync(outputDir, { recursive: true });
-
-  if (!fs.existsSync(sourceFile)) {
-    console.warn('collections.yaml not found at content root, creating empty image-collections.json.gz');
-    writeGz(outputDir, 'image-collections.json', JSON.stringify({
-      version: 1,
-      collections: [],
-      source: { missing: true },
-    }));
-    return;
-  }
-
-  progress(`Reading image collections from ${sourceFile} (CONTENT_ROOT=${contentRoot()})...`);
-
+  const root = contentRoot();
   const repo = resolveRepo(process.env.CONTENT_REPO || 'Scottish-Hill-Runners/contents');
-  const sha = getContentSha(contentRoot());
+  const sha = getContentSha(root);
   const baseUrl = `https://raw.githubusercontent.com/${repo}/${sha}`;
 
-  const sourceData = parseYaml(fs.readFileSync(sourceFile, 'utf-8')) as SourceCollectionsFile;
-  const collections = (sourceData.collections || []).map((collection) => ({
-    ...collection,
-    items: (collection.items || []).map((item) => ({
-      ...item,
-      sourcePath: item.path,
-      imageUrl: `${baseUrl}/${encodeRepoPath(item.path)}`,
-    })),
-  }));
+  progress(`Building image collections from distributed manifests (CONTENT_ROOT=${root})...`);
 
-  const raceImagesBySlug = Object.fromEntries(
-    Object.entries(sourceData.raceImagesBySlug || {}).map(([slug, entry]) => [
-      slug,
-      {
-        hero: (entry.hero || []).map((item) => ({
-          ...item,
-          sourcePath: item.path,
-          imageUrl: `${baseUrl}/${encodeRepoPath(item.path)}`,
-        })),
-        gallery: (entry.gallery || []).map((item) => ({
-          ...item,
-          sourcePath: item.path,
-          imageUrl: `${baseUrl}/${encodeRepoPath(item.path)}`,
-        })),
-      },
-    ]),
-  );
+  // 1. Homepage images
+  const homepageSrc = readYaml<SourceHomepageFile>(contentPath('homepage', 'images.yaml'));
+  const homepageImages = (homepageSrc?.images ?? []).map((item) => resolveItem(item, baseUrl));
+
+  // 2. Per-race images — scan races/*/images.yaml
+  const racesDir = contentPath('races');
+  const raceImagesBySlug: Record<string, { hero: ReturnType<typeof resolveItem>[]; gallery: ReturnType<typeof resolveItem>[] }> = {};
+
+  if (fs.existsSync(racesDir)) {
+    for (const entry of fs.readdirSync(racesDir, { withFileTypes: true })) {
+      if (!entry.isDirectory()) continue;
+      const imagesFile = path.join(racesDir, entry.name, 'images.yaml');
+      const src = readYaml<SourceRaceImagesFile>(imagesFile);
+      if (!src) continue;
+      raceImagesBySlug[entry.name] = {
+        hero:    (src.hero    ?? []).map((item) => resolveItem(item, baseUrl)),
+        gallery: (src.gallery ?? []).map((item) => resolveItem(item, baseUrl)),
+      };
+    }
+  }
+
+  // 3. Documents
+  const docsSrc = readYaml<SourceDocumentsFile>(contentPath('documents', 'manifest.yaml'));
+  const documents = (docsSrc?.documents ?? []).map((item) => resolveItem(item, baseUrl));
+
+  // 4. Committee portraits
+  const committeeSrc = readYaml<SourceCommitteeFile>(contentPath('committee', 'portraits.yaml'));
+  const committeePortraits = (committeeSrc?.portraits ?? []).map((item) => resolveItem(item, baseUrl));
 
   const payload = {
-    version: sourceData.version || 1,
+    version: 3,
     generatedAt: new Date().toISOString(),
-    source: {
-      repo,
-      sha,
-      baseUrl,
-    },
-    collections,
+    source: { repo, sha, baseUrl },
+    homepageImages,
     raceImagesBySlug,
+    documents,
+    committeePortraits,
   };
 
   writeGz(outputDir, 'image-collections.json', JSON.stringify(payload));
-  progress(`✓ Built ${collections.length} image collection(s) with external links`);
+  progress(
+    `✓ Built image collections: ${homepageImages.length} homepage, ` +
+    `${Object.keys(raceImagesBySlug).length} races, ` +
+    `${documents.length} documents, ` +
+    `${committeePortraits.length} portraits`,
+  );
 }
 
 buildImageCollections();
