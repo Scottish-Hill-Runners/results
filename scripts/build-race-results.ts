@@ -4,6 +4,7 @@ import matter from 'gray-matter';
 import path from 'path';
 import { writeGz, progress } from './write-gz-util';
 import { contentPath, contentRoot } from './content-paths';
+import { buildElevationChartData } from './elevation-chart';
 import { surnameHash } from '@/lib/runner-name';
 import { Era, RaceInfo, RaceResult } from '@/types/datatable';
 
@@ -300,11 +301,13 @@ function writeRaceData(allResults: RaceResult[]) {
     raceInfo[raceId] = info;
     const hasGpx = fs.existsSync(path.join(raceDir, 'route.gpx'));
     const hasRaceMap = fs.existsSync(path.join(raceDir, 'race-map.webp'));
-    if (hasGpx)
-      fs.copyFileSync(
-        path.join(raceDir, 'route.gpx'),
-        `${outputDir}/${raceId}.gpx`
-      );
+    if (hasGpx) {
+      const gpxSrc = path.join(raceDir, 'route.gpx');
+      fs.copyFileSync(gpxSrc, `${outputDir}/${raceId}.gpx`);
+      const elevationData = buildElevationChartData(fs.readFileSync(gpxSrc, 'utf-8'));
+      if (elevationData)
+        fs.writeFileSync(`${outputDir}/${raceId}-elevation.json`, JSON.stringify(elevationData));
+    }
     if (hasRaceMap)
       fs.copyFileSync(
         path.join(raceDir, 'race-map.webp'),

@@ -1,7 +1,3 @@
-import fs from 'fs';
-import path from 'path';
-import matter from 'gray-matter';
-import { contentPath } from './content-paths';
 import {
   buildElevationProfile,
   calcElevationStats,
@@ -120,49 +116,21 @@ export interface ElevationChartData {
 }
 
 // ---------------------------------------------------------------------------
-// Main
+// Pure entry point — called by build-race-results.ts for each race with a GPX
 // ---------------------------------------------------------------------------
-const racesDir = contentPath('races');
-const outDir = path.join(process.cwd(), 'public', 'results');
-fs.mkdirSync(outDir, { recursive: true });
-
-const entries = fs.readdirSync(racesDir, { withFileTypes: true });
-let count = 0;
-
-for (const entry of entries) {
-  if (!entry.isDirectory()) continue;
-  const gpxFile = path.join(racesDir, entry.name, 'route.gpx');
-  if (!fs.existsSync(gpxFile)) continue;
-
-  const xml = fs.readFileSync(gpxFile, 'utf-8');
-  const coords = parseGpxCoords(xml);
-  if (coords.length === 0) {
-    console.warn(`  ⚠ ${entry.name}: GPX contains no elevation data`);
-    continue;
-  }
+export function buildElevationChartData(gpxXml: string): ElevationChartData | null {
+  const coords = parseGpxCoords(gpxXml);
+  if (coords.length === 0) return null;
 
   const profile = buildElevationProfile(coords);
   const stats = calcElevationStats(profile);
   const totalDistKm = Math.round((profile.at(-1)?.d ?? 0) * 100) / 100;
 
-  if (stats.maxEle - stats.minEle < 1) {
-    console.log(`  – ${entry.name}: no meaningful elevation data (all zeros), skipping`);
-    continue;
-  }
-
-  // Read race title (best-effort, unused beyond this scope for now)
-  let _raceName = entry.name;
-  try {
-    const indexMd = path.join(racesDir, entry.name, 'index.md');
-    if (fs.existsSync(indexMd)) {
-      const { data } = matter.read(indexMd);
-      if (typeof data.title === 'string') _raceName = data.title;
-    }
-  } catch { /* no-op */ }
+  if (stats.maxEle - stats.minEle < 1) return null;
 
   const paths = buildPaths(profile, totalDistKm, stats.minEle, stats.maxEle);
 
-  const chartData: ElevationChartData = {
+  return {
     ...paths,
     minEle: stats.minEle,
     maxEle: stats.maxEle,
@@ -176,14 +144,4 @@ for (const entry of entries) {
     padLeft: PAD.left,
     padRight: PAD.right,
   };
-
-  fs.writeFileSync(
-    path.join(outDir, `${entry.name}-elevation.json`),
-    JSON.stringify(chartData),
-  );
-
-  count++;
-  console.log(`  ✓ ${entry.name}: ${coords.length} → ${profile.length} pts, ${totalDistKm} km`);
 }
-
-console.log(`\nGenerated elevation data for ${count} race(s).`);
