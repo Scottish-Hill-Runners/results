@@ -119,7 +119,6 @@ export default function RaceDetailsTabs({ raceId, race, contents, hasGpx, hasRac
                   data={results}
                   eras={race.eras}
                   enableRowFocus
-                  initialYearFilter={pageDefaultYear ?? undefined}
                   onFocusContextChange={setFocusedResultContext}
                 />
                 <div className="rounded-lg border border-blue-200 bg-blue-50 p-4 text-sm text-blue-900 dark:border-blue-900 dark:bg-blue-950/40 dark:text-blue-100">
