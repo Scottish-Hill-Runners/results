@@ -89,9 +89,11 @@ function readClubs(dir: string): ClubInfo[] {
 
 const clubs = readClubs(contentPath('clubs'));
 const clubAliases = new Map<string, string>();
-for (const club of clubs)
+for (const club of clubs) {
+  clubAliases.set(club.name.trim().toUpperCase(), club.name);
   for (const aka of club.aliases)
     clubAliases.set(aka.trim().toUpperCase(), club.name);
+}
 
 function likelySex(category: string): string {
   if (/W(OM[EA]N)?|F(EMALE)?|L(ADY)?|G(IRL)?/i.test(category))

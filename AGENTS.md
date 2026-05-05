@@ -20,9 +20,9 @@ Node requirement: **>=22 <25**. Next.js 16 hits heap OOM on Node 25; use `NODE_O
 ## Architecture
 
 | Layer | Location | Role |
-|-------|----------|------|
+| ----- | -------- | ---- |
 | Build scripts | `scripts/build-*.ts` | Parse `content/` → write `public/results/*.json.gz` |
-| App pages | `src/app/` | Next.js App Router pages (all statically prerendered) |
+| App pages | `src/app/` | Next.js App Router pages (all statically pre-rendered) |
 | Components | `src/components/` | React components (MapLibre maps, data tables, elevation profiles) |
 | Data loaders | `src/lib/` | Fetch + decompress `.json.gz` at runtime in the browser |
 | Types | `src/types/datatable.ts` | Core types: `RaceResult`, `RaceInfo`, `RaceData`, `AllRaceData` |
